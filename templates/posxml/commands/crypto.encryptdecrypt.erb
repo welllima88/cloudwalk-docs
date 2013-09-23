@@ -1,0 +1,47 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.crypto_encryptdecrypt.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>crypto.encryptdecrypt</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "02/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.crypto_encryptdecrypt.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.crypto_encryptdecrypt.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.crypto_encryptdecrypt.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.crypto_encryptdecrypt.parameters.parameter_3") %></li>
+  <li><%= I18n.t("posxml.commands.crypto_encryptdecrypt.parameters.parameter_4") %></li>
+  <li><%= I18n.t("posxml.commands.crypto_encryptdecrypt.parameters.parameter_5") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sEncrypted" /&gt;
+&lt;stringvariable value="" variable="sUnencrypted" /&gt;
+&lt;stringvariable value="297D6EEBBEE6D792AB2415CD" variable="sAscii" /&gt;
+&lt;stringvariable value="" variable="sHex" /&gt;
+
+&lt;string.tohex string="$(sAscii)" variablereturn="$(sHex)" /&gt;
+
+&lt;crypto.encryptdecrypt cryptotype="NEWDES" key="$(sHex)" message="3031323334353637" type="0" variablereturn="$(sEncrypted)" /&gt;
+
+&lt;display column="0" line="0" message="$(sEncrypted)" /&gt;
+
+&lt;crypto.encryptdecrypt cryptotype="NEWDES" key="$(sHex)" message="$(sEncrypted)" type="1" variablereturn="$(sUnencrypted)" /&gt;
+
+&lt;display column="0" line="1" message="$(sUnencrypted)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+<p><%= I18n.t("posxml.commands.crypto_encryptdecrypt.paragraph_2") %></p>
+<p><%= I18n.t("posxml.commands.crypto_encryptdecrypt.paragraph_3") %></p>
+<p><%= I18n.t("posxml.commands.crypto_encryptdecrypt.paragraph_4") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

@@ -1,0 +1,39 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.smartcard_startreader.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>smartcard.startreader</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "17/09/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.smartcard_startreader.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.smartcard_startreader.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.smartcard_startreader.parameters.parameter_2") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
+
+&lt;stringvariable value="0" variable="sBuf" /&gt;
+
+&lt;smartcard.startreader slot="1" variablereturn="$(iReturn)"/&gt;
+
+&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sBuf)" /&gt;
+
+&lt;display column="0" line="0" message="$(sBuf)"/&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+
+<p><%= I18n.t("posxml.commands.smartcard_startreader.paragraph_2") %></p>
+<p><%= I18n.t("posxml.commands.smartcard_startreader.paragraph_3") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

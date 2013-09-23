@@ -1,0 +1,712 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands_list.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "11/04/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#presentation"><%= I18n.t("posxml.commands_list.table_of_contents.presentation") %></a></li>
+  <li><a href="#commands-list"><%= I18n.t("posxml.commands_list.table_of_contents.commands_list") %></a></li>
+</ol>
+
+<h2 id="presentation"><%= I18n.t("posxml.commands_list.table_of_contents.presentation") %></h2>
+
+<p><%= I18n.t("posxml.commands_list.presentation.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands_list.presentation.paragraph_2") %></p>
+
+<h2 id="commands-list"><%= I18n.t("posxml.commands_list.table_of_contents.commands") %></h2>
+
+<p><%= I18n.t("posxml.commands_list.commands.paragraph_1") %></p>
+
+<ul class="group-of-commands">
+  <li><a href="javascript:void(0);" id="show-all" class="primary button pill"><%= I18n.t("posxml.commands_list.commands.groups.complete_list") %></a></li>
+  <li><a href="javascript:void(0);" id="show-flow" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.flow_control") %></a></li>
+  <li><a href="javascript:void(0);" id="show-readcard" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.card_reading") %></a></li>
+  <li><a href="javascript:void(0);" id="show-ui" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.user_interface") %></a></li>
+  <li><a href="javascript:void(0);" id="show-print" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.print") %></a></li>
+  <li><a href="javascript:void(0);" id="show-input" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.data_entry") %></a></li>
+  <li><a href="javascript:void(0);" id="show-crypto" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.cryptography") %></a></li>
+  <li><a href="javascript:void(0);" id="show-file" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.file_manipulation") %></a></li>
+  <li><a href="javascript:void(0);" id="show-iso" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.iso_8583") %></a></li>
+  <li><a href="javascript:void(0);" id="show-serialport" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.serial_port") %></a></li>
+  <li><a href="javascript:void(0);" id="show-datetime" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.date_time") %></a></li>
+  <li><a href="javascript:void(0);" id="show-conectivity" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.connectivity") %></a></li>
+  <li><a href="javascript:void(0);" id="show-pinpad" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.pinpad") %></a></li>
+  <li><a href="javascript:void(0);" id="show-emv" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.emv") %></a></li>
+  <li><a href="javascript:void(0);" id="show-variables" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.variables_conversions") %></a></li>
+  <li><a href="javascript:void(0);" id="show-string" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.string") %></a></li>
+  <li><a href="javascript:void(0);" id="show-smartcard" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.smartcard") %></a></li>
+  <li><a href="javascript:void(0);" id="show-utils" class="button pill"><%= I18n.t("posxml.commands_list.commands.groups.utils") %></a></li>
+</ul>
+
+<div id="flow-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short flow-commands">
+      <a href="commands/if">if</a>
+      <p><%= I18n.t("posxml.commands.if.description") %></p>
+    </div>
+    <div class="span4 command-short flow-commands">
+      <a href="commands/else">else</a>
+      <p><%= I18n.t("posxml.commands.else.description") %></p>
+    </div>
+    <div class="span4 command-short flow-commands">
+      <a href="commands/while">while</a>
+      <p><%= I18n.t("posxml.commands.while.description") %></p>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4 command-short flow-commands">
+      <a href="commands/break">break</a>
+      <p><%= I18n.t("posxml.commands.break.description") %></p>
+    </div>
+    <div class="span4 command-short flow-commands">
+      <a href="commands/function">function</a>
+      <p><%= I18n.t("posxml.commands.function.description") %></p>
+    </div>
+    <div class="span4 command-short flow-commands">
+      <a href="commands/callfunction">callfunction</a>
+      <p><%= I18n.t("posxml.commands.callfunction.description") %></p>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4 command-short flow-commands">
+      <a href="commands/execute">execute</a>
+      <p><%= I18n.t("posxml.commands.execute.description") %></p>
+    </div>
+    <div class="span4 command-short flow-commands">
+      <a href="commands/exit">exit</a>
+      <p><%= I18n.t("posxml.commands.exit.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="readcard-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short readcard-commands">
+      <a href="commands/getcardvariable">getcardvariable</a>
+      <p><%= I18n.t("posxml.commands.getcardvariable.description") %></p>
+    </div>
+    <div class="span4 command-short readcard-commands">
+      <a href="commands/system.readcard">system.readcard</a>
+      <p><%= I18n.t("posxml.commands.system_readcard.description") %></p>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4 command-short readcard-commands">
+      <a href="commands/system.inputtransaction">system.inputtransaction</a>
+      <p><%= I18n.t("posxml.commands.system_inputtransaction.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="ui-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/menu">menu</a>
+      <p><%= I18n.t("posxml.commands.menu.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/menuwithheader">menuwithheader</a>
+      <p><%= I18n.t("posxml.commands.menuwithheader.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/displaybitmap">displaybitmap</a>
+      <p><%= I18n.t("posxml.commands.displaybitmap.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/display">display</a>
+      <p><%= I18n.t("posxml.commands.display.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/cleandisplay">cleandisplay</a>
+      <p><%= I18n.t("posxml.commands.cleandisplay.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/system.gettouchscreen">system.gettouchscreen</a>
+      <p><%= I18n.t("posxml.commands.system_gettouchscreen.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="print-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/print">print</a>
+      <p><%= I18n.t("posxml.commands.print.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/printbig">printbig</a>
+      <p><%= I18n.t("posxml.commands.printbig.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/printbitmap">printbitmap</a>
+      <p><%= I18n.t("posxml.commands.printbitmap.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/printbarcode">printbarcode</a>
+      <p><%= I18n.t("posxml.commands.printbarcode.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/checkpaperout">checkpaperout</a>
+      <p><%= I18n.t("posxml.commands.checkpaperout.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/paperfeed">paperfeed</a>
+      <p><%= I18n.t("posxml.commands.paperfeed.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="input-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/inputfloat">inputfloat</a>
+      <p><%= I18n.t("posxml.commands.inputfloat.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/inputformat">inputformat</a>
+      <p><%= I18n.t("posxml.commands.inputformat.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/inputinteger">inputinteger</a>
+      <p><%= I18n.t("posxml.commands.inputinteger.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/inputoption">inputoption</a>
+      <p><%= I18n.t("posxml.commands.inputoption.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/inputmoney">inputmoney</a>
+      <p><%= I18n.t("posxml.commands.inputmoney.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="crypto-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/crypto.crc">crypto.crc</a>
+      <p><%= I18n.t("posxml.commands.crypto_crc.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/crypto.encryptdecrypt">crypto.encryptdecrypt</a>
+      <p><%= I18n.t("posxml.commands.crypto_encryptdecrypt.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/crypto.lrc">crypto.lrc</a>
+      <p><%= I18n.t("posxml.commands.crypto_lrc.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/crypto.xor">crypto.xor</a>
+      <p><%= I18n.t("posxml.commands.crypto_xor.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="file-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/downloadfile">downloadfile</a>
+      <p><%= I18n.t("posxml.commands.downloadfile.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/filesystem.filesize">filesystem.filesize</a>
+      <p><%= I18n.t("posxml.commands.filesystem_filesize.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/filesystem.listfiles">filesystem.listfiles</a>
+      <p><%= I18n.t("posxml.commands.filesystem_listfiles.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/filesystem.space">filesystem.space</a>
+      <p><%= I18n.t("posxml.commands.filesystem_space.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/file.open">file.open</a>
+      <p><%= I18n.t("posxml.commands.file_open.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/file.close">file.close</a>
+      <p><%= I18n.t("posxml.commands.file_close.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/file.read">file.read</a>
+      <p><%= I18n.t("posxml.commands.file_read.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/file.write">file.write</a>
+      <p><%= I18n.t("posxml.commands.file_write.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/readfile">readfile</a>
+      <p><%= I18n.t("posxml.commands.readfile.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/readfilebyindex">readfilebyindex</a>
+      <p><%= I18n.t("posxml.commands.readfilebyindex.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/editfile">editfile</a>
+      <p><%= I18n.t("posxml.commands.editfile.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/deletefile">deletefile</a>
+      <p><%= I18n.t("posxml.commands.deletefile.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="iso-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/iso8583.initfieldtable">iso8583.initfieldtable</a>
+      <p><%= I18n.t("posxml.commands.iso8583_initfieldtable.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/iso8583.initmessage">iso8583.initmessage</a>
+      <p><%= I18n.t("posxml.commands.iso8583_initmessage.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/iso8583.putfield">iso8583.putfield</a>
+      <p><%= I18n.t("posxml.commands.iso8583_putfield.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/iso8583.endmessage">iso8583.endmessage</a>
+      <p><%= I18n.t("posxml.commands.iso8583_endmessage.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/iso8583.transactmessage">iso8583.transactmessage</a>
+      <p><%= I18n.t("posxml.commands.iso8583_transactmessage.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/iso8583.analyzemessage">iso8583.analyzemessage</a>
+      <p><%= I18n.t("posxml.commands.iso8583_analyzemessage.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/iso8583.getfield">iso8583.getfield</a>
+      <p><%= I18n.t("posxml.commands.iso8583_getfield.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="serialport-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/openserialport">openserialport</a>
+      <p><%= I18n.t("posxml.commands.openserialport.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/writeserialport">writeserialport</a>
+      <p><%= I18n.t("posxml.commands.writeserialport.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/readserialport">readserialport</a>
+      <p><%= I18n.t("posxml.commands.readserialport.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/closeserialport">closeserialport</a>
+      <p><%= I18n.t("posxml.commands.closeserialport.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="datetime-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/getdatetime">getdatetime</a>
+      <p><%= I18n.t("posxml.commands.getdatetime.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/time.calculate">time.calculate</a>
+      <p><%= I18n.t("posxml.commands.time_calculate.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/adjustdatetime">adjustdatetime</a>
+      <p><%= I18n.t("posxml.commands.adjustdatetime.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="conectivity-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/predial">predial</a>
+      <p><%= I18n.t("posxml.commands.predial.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/preconnect">preconnect</a>
+      <p><%= I18n.t("posxml.commands.preconnect.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/shutdownmodem">shutdownmodem</a>
+      <p><%= I18n.t("posxml.commands.shutdownmodem.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/network.checkgprssignal">network.checkgprssignal</a>
+      <p><%= I18n.t("posxml.commands.network_checkgprssignal.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/network.hostdisconnect">network.hostdisconnect</a>
+      <p><%= I18n.t("posxml.commands.network_hostdisconnect.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/network.ping">network.ping</a>
+      <p><%= I18n.t("posxml.commands.network_ping.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/network.send">network.send</a>
+      <p><%= I18n.t("posxml.commands.network_send.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/network.receive">network.receive</a>
+      <p><%= I18n.t("posxml.commands.network_receive.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="pinpad-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/pinpad.open">pinpad.open</a>
+      <p><%= I18n.t("posxml.commands.pinpad_open.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/pinpad.loadipek">pinpad.loadipek</a>
+      <p><%= I18n.t("posxml.commands.pinpad_loadipek.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/pinpad.getkey">pinpad.getkey</a>
+      <p><%= I18n.t("posxml.commands.pinpad_getkey.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/pinpad.getpindukpt">pinpad.getpindukpt</a>
+      <p><%= I18n.t("posxml.commands.pinpad_getpindukpt.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/pinpad.display">pinpad.display</a>
+      <p><%= I18n.t("posxml.commands.pinpad_display.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/pinpad.close">pinpad.close</a>
+      <p><%= I18n.t("posxml.commands.pinpad_close.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="emv-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/emv.open">emv.open</a>
+      <p><%= I18n.t("posxml.commands.emv_open.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/emv.loadtables">emv.loadtables</a>
+      <p><%= I18n.t("posxml.commands.emv_loadtables.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/emv.cleanstructures">emv.cleanstructures</a>
+      <p><%= I18n.t("posxml.commands.emv_cleanstructures.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/emv.adddata">emv.adddata</a>
+      <p><%= I18n.t("posxml.commands.emv_adddata.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/emv.getinfo">emv.getinfo</a>
+      <p><%= I18n.t("posxml.commands.emv_getinfo.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/emv.inittransaction">emv.inittransaction</a>
+      <p><%= I18n.t("posxml.commands.emv_inittransaction.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/emv.processtransaction">emv.processtransaction</a>
+      <p><%= I18n.t("posxml.commands.emv_processtransaction.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/emv.finishtransaction">emv.finishtransaction</a>
+      <p><%= I18n.t("posxml.commands.emv_finishtransaction.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/emv.removecard">emv.removecard</a>
+      <p><%= I18n.t("posxml.commands.emv_removecard.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/emv.settimeout">emv.settimeout</a>
+      <p><%= I18n.t("posxml.commands.emv_settimeout.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/system.readcard">system.readcard</a>
+      <p><%= I18n.t("posxml.commands.system_readcard.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/system.inputtransaction">system.inputtransaction</a>
+      <p><%= I18n.t("posxml.commands.system_inputtransaction.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="variables-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/integervariable">integervariable</a>
+      <p><%= I18n.t("posxml.commands.integervariable.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/stringvariable">stringvariable</a>
+      <p><%= I18n.t("posxml.commands.stringvariable.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/integerconvert">integerconvert</a>
+      <p><%= I18n.t("posxml.commands.integerconvert.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/convert.toint">convert.toint</a>
+      <p><%= I18n.t("posxml.commands.convert_toint.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/inttostring">inttostring</a>
+      <p><%= I18n.t("posxml.commands.inttostring.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/stringtoint">stringtoint</a>
+      <p><%= I18n.t("posxml.commands.stringtoint.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/integeroperator">integeroperator</a>
+      <p><%= I18n.t("posxml.commands.integeroperator.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.tohex">string.tohex</a>
+      <p><%= I18n.t("posxml.commands.string_tohex.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.fromhex">string.fromhex</a>
+      <p><%= I18n.t("posxml.commands.string_fromhex.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="string-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/string.charat">string.charat</a>
+      <p><%= I18n.t("posxml.commands.string_charat.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.elementat">string.elementat</a>
+      <p><%= I18n.t("posxml.commands.string_elementat.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.elements">string.elements</a>
+      <p><%= I18n.t("posxml.commands.string_elements.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/string.find">string.find</a>
+      <p><%= I18n.t("posxml.commands.string_find.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.getvaluebykey">string.getvaluebykey</a>
+      <p><%= I18n.t("posxml.commands.string_getvaluebykey.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.trim">string.trim</a>
+      <p><%= I18n.t("posxml.commands.string_trim.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/string.insertat">string.insertat</a>
+      <p><%= I18n.t("posxml.commands.string_insertat.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.length">string.length</a>
+      <p><%= I18n.t("posxml.commands.string_length.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.pad">string.pad</a>
+      <p><%= I18n.t("posxml.commands.string_pad.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/string.removeat">string.removeat</a>
+      <p><%= I18n.t("posxml.commands.string_removeat.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.replace">string.replace</a>
+      <p><%= I18n.t("posxml.commands.string_replace.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/string.replaceat">string.replaceat</a>
+      <p><%= I18n.t("posxml.commands.string_replaceat.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/string.substring">string.substring</a>
+      <p><%= I18n.t("posxml.commands.string_substring.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/substring">substring</a>
+      <p><%= I18n.t("posxml.commands.substring.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/joinstring">joinstring</a>
+      <p><%= I18n.t("posxml.commands.joinstring.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/input.getvalue">input.getvalue</a>
+      <p><%= I18n.t("posxml.commands.input_getvalue.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="smartcard-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/smartcard.insertedcard">smartcard.insertedcard</a>
+      <p><%= I18n.t("posxml.commands.smartcard_insertedcard.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/smartcard.closereader">smartcard.closereader</a>
+      <p><%= I18n.t("posxml.commands.smartcard_closereader.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/smartcard.startreader">smartcard.startreader</a>
+      <p><%= I18n.t("posxml.commands.smartcard_startreader.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/smartcard.transmitapdu">smartcard.transmitapdu</a>
+      <p><%= I18n.t("posxml.commands.smartcard_transmitapdu.description") %></p>
+    </div>
+  </div>
+</div>
+
+<div id="utils-commands" class="posxml-commands">
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/mathematicaloperation">mathematicaloperation</a>
+      <p><%= I18n.t("posxml.commands.mathematicaloperation.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/system.backlight">system.backlight</a>
+      <p><%= I18n.t("posxml.commands.system_backlight.description") %></p>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/system.beep">system.beep</a>
+      <p><%= I18n.t("posxml.commands.system_beep.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/system.checkbattery">system.checkbattery</a>
+      <p><%= I18n.t("posxml.commands.system_checkbattery.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/system.info">system.info</a>
+      <p><%= I18n.t("posxml.commands.system_info.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/system.restart">system.restart</a>
+      <p><%= I18n.t("posxml.commands.system_restart.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/unzipfile">unzipfile</a>
+      <p><%= I18n.t("posxml.commands.unzipfile.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/waitkey">waitkey</a>
+      <p><%= I18n.t("posxml.commands.waitkey.description") %></p>
+    </div>
+  </div>
+
+  <div class="row-fluid">
+    <div class="span4 command-short">
+      <a href="commands/waitkeytimeout">waitkeytimeout</a>
+      <p><%= I18n.t("posxml.commands.waitkeytimeout.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/readkey">readkey</a>
+      <p><%= I18n.t("posxml.commands.readkey.description") %></p>
+    </div>
+    <div class="span4 command-short">
+      <a href="commands/wait">wait</a>
+      <p><%= I18n.t("posxml.commands.wait.description") %></p>
+    </div>
+  </div>
+</div>

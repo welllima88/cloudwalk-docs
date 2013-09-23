@@ -1,0 +1,47 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.emv_finishtransaction.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>emv.finishtransaction</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "18/09/2013") %></p>
+
+<p class="note"><%= I18n.t("posxml.commands.emv_finishtransaction.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands.emv_finishtransaction.paragraph_2") %></p>
+
+<p><%= I18n.t("posxml.commands.emv_finishtransaction.paragraph_3") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.emv_finishtransaction.parameters.parameter_1") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
+&lt;integervariable value="" variable="iReturn" /&gt;
+
+&lt;emv.adddata type="finish" parameter="bCommStatus" value="0" variablereturn="$(iReturn)"/&gt;
+&lt;emv.adddata type="finish" parameter="bIssuerType" value="00" variablereturn="$(iReturn)"/&gt;
+&lt;emv.adddata type="finish" parameter="baAuthRespCode" value="00" variablereturn="$(iReturn)"/&gt;
+
+&lt;!-- Finaliza o processamento do cartão com chip  --&gt;
+&lt;emv.finishtransaction variablereturn="$(iReturn)"/&gt;
+
+&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
+
+&lt;display column="0" line="0" message="$(sReturn)" /&gt;
+
+&lt;waitkey /&gt;
+
+</code></pre>
+<hr/>
+
+<p><%= I18n.t("posxml.commands.emv_finishtransaction.paragraph_4") %></p>
+<p><%= I18n.t("posxml.commands.emv_finishtransaction.paragraph_5") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

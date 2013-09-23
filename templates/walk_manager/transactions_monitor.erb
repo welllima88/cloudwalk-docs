@@ -1,0 +1,42 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('walk_manager.transactions_monitor.description') %>">
+<% end %>
+
+<h1><%= I18n.t("walk_manager.transactions_monitor.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/01/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#functionality"><%= I18n.t("walk_manager.transactions_monitor.table_of_contents.functionality") %></a></li>
+  <li><a href="#interface"><%= I18n.t("walk_manager.transactions_monitor.table_of_contents.interface") %></a></li>
+</ol>
+
+<h2 id="functionality"><%= I18n.t("walk_manager.transactions_monitor.table_of_contents.functionality") %></h2>
+
+<p><%= I18n.t("walk_manager.transactions_monitor.functionality.paragraph_1") %></p>
+
+<h2 id="interface"><%= I18n.t("walk_manager.transactions_monitor.table_of_contents.interface") %></h2>
+
+<img src="/img/walk-manager/transactions-monitor.png" class="img-tutorial img-polaroid" alt="WALK Manager - Transaction Monitor" />
+
+<p><%= I18n.t("walk_manager.transactions_monitor.interface.paragraph_1") %></p>
+
+<ol>
+  <li><%= I18n.t("walk_manager.transactions_monitor.interface.paragraph_2") %></li>
+  <li><%= I18n.t("walk_manager.transactions_monitor.interface.paragraph_3") %></li>
+  <li><%= I18n.t("walk_manager.transactions_monitor.interface.paragraph_4") %>
+    <ul class="fields">
+      <li><%= I18n.t("walk_manager.transactions_monitor.interface.paragraph_5") %></li>
+      <li><%= I18n.t("walk_manager.transactions_monitor.interface.paragraph_6") %></li>
+      <li><%= I18n.t("walk_manager.transactions_monitor.interface.paragraph_7") %></li>
+    </ul>
+  </li>
+</ol>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.walk_manager.assets"), "walk-manager/assets") %>
+  </li>
+</ul>

@@ -1,0 +1,289 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('walk_framework.configuration.description') %>">
+<% end %>
+
+<h1><%= I18n.t("walk_framework.configuration.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "17/09/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#pre-requisites"><%= I18n.t("walk_framework.configuration.table_of_contents.prerequisites") %></a></li>
+  <li><a href="#unlocking-serial-number"><%= I18n.t("walk_framework.configuration.table_of_contents.unlocking_serial_number") %></a></li>
+  <li><a href="#setting-up-communication"><%= I18n.t("walk_framework.configuration.table_of_contents.setting_up_communication") %></a></li>
+  <li><a href="#integration"><%= I18n.t("walk_framework.configuration.table_of_contents.integration") %></a></li>
+</ol>
+
+<h2 id="pre-requisites"><%= I18n.t("walk_framework.configuration.table_of_contents.prerequisites") %></h2>
+
+<ol>
+  <li><%= I18n.t("walk_framework.configuration.prerequisites.walk_framework") %></li>
+  <li><%= I18n.t("walk_framework.configuration.prerequisites.internet_access") %></li>
+</ol>
+
+<h2 id="unlocking-serial-number"><%= I18n.t("walk_framework.configuration.table_of_contents.unlocking_serial_number") %></h2>
+
+<p><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_1") %></p>
+
+<h3><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_2") %></h3>
+
+<p><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_3") %></p>
+
+<div class="pos evo"><pre>
+- POS SETTINGS -
+
+1 LOGICAL NUMBER
+2 COMMUNICATION
+3 CARD TYPES
+4 CLEAN TERMINAL
+5 CHECK S. NUMBER
+6 ABOUT
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_4") %></p>
+
+<div class="pos evo"><pre>
+- SERIAL NUMBER -
+
+525-526-527
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_5") %></p>
+
+<h3><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_6") %></h3>
+
+<ol>
+  <li><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_7") %></li>
+  <li><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_8") %></li>
+  <li><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_9") %></li>
+  <li><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_10") %></li>
+</ol>
+
+<p class="note"><%= I18n.t("walk_framework.configuration.unlocking_serial_number.paragraph_11") %></p>
+
+<h2 id="setting-up-communication"><%= I18n.t("walk_framework.configuration.table_of_contents.setting_up_communication") %></h2>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_1") %></p>
+
+<div class="pos evo"><pre>
+- POS SETTINGS -
+
+1 LOGICAL NUMBER
+2 COMMUNICATION
+3 CARD TYPES
+4 CLEAN TERMINAL
+5 CHECK S. NUMBER
+6 ABOUT
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_2") %></p>
+
+<div class="pos evo"><pre>
+- MODEM SETTINGS -
+
+1 LOCAL NETWORK
+2 LANDLINE (PPP)
+3 LANDLINE (SDLC)
+4 GPRS
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_3") %></p>
+
+<ul>
+  <li><strong>LOCAL NETWORK:</strong> <%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_4") %></li>
+  <li><strong>LANDLINE (PPP):</strong> <%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_5") %></li>
+  <li><strong>LANDLINE (SDLC):</strong> <%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_6") %></li>
+  <li><strong>GPRS:</strong> GPRS (Oi, Tim, Claro, etc)</li>
+</ul>
+
+<p class="note"><%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_7") %></p>
+
+<h3><%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_8") %></h3>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_9") %></p>
+
+<br/>
+
+<ul id="communication-tab" class="nav nav-tabs">
+  <li class="active"><a href="#communication-tab1">LOCAL NETWORK</a></li>
+  <li><a href="#communication-tab2">LANDLINE (PPP)</a></li>
+  <li><a href="#communication-tab3">LANDLINE (SDLC)</a></li>
+  <li><a href="#communication-tab4">GPRS</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="communication-tab1">
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ethernet.paragraph_1") %></p>
+
+<div class="pos evo"><pre>
+- NETWORK SETTINGS -
+
+TERMINAL IP
+:192.168.0.200
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ethernet.paragraph_2") %></p>
+
+<div class="pos evo"><pre>
+- NETWORK SETTINGS -
+
+SUBNET MASK
+:255.255.255.0
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ethernet.paragraph_3") %></p>
+
+<div class="pos evo"><pre>
+- NETWORK SETTINGS -
+
+ROUTER/GATEWAY
+:192.168.0.1
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ethernet.paragraph_4") %></p>
+
+<div class="pos evo"><pre>
+- NETWORK SETTINGS -
+
+DNS SERVER 1
+:192.168.0.1
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ethernet.paragraph_5") %></p>
+
+<div class="pos evo"><pre>
+- NETWORK SETTINGS -
+
+DNS SERVER 2
+:192.168.0.1
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ssl.paragraph_1", :num => "6") %></p>
+
+<div class="pos evo"><pre>
+- NETWORK SETTINGS -
+
+USE SSL ?
+(1-YES 0-NO)
+:0
+</pre></div>
+</div>
+
+<div class="tab-pane" id="communication-tab2">
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ppp.paragraph_1") %></p>
+
+<div class="pos evo"><pre>
+- LANDLINE SETTINGS -
+
+MODEM SPEED
+2400
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ppp.paragraph_2") %></p>
+
+<div class="pos evo"><pre>
+- LANDLINE SETTINGS -
+
+PROVIDER PHONE
+78551233
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ppp.paragraph_3") %></p>
+
+<div class="pos evo"><pre>
+- LANDLINE SETTINGS -
+
+USERNAME
+username
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ppp.paragraph_4") %></p>
+
+<div class="pos evo"><pre>
+- LANDLINE SETTINGS -
+
+PASSWORD
+123456
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ssl.paragraph_1", :num => "5") %></p>
+
+<div class="pos evo"><pre>
+- LANDLINE SETTINGS -
+
+USE SSL ?
+(1-YES 0-NO)
+:0
+</pre></div>
+</div>
+
+<div class="tab-pane" id="communication-tab3">
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.sdlc.paragraph_1") %></p>
+
+<div class="pos evo"><pre>
+- LANDLINE SETTINGS -
+
+MODEM SPEED
+2400
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.sdlc.paragraph_2") %></p>
+
+<div class="pos evo"><pre>
+- LANDLINE SETTINGS -
+
+PROVIDER PHONE
+78551233
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ssl.paragraph_1", :num => "3") %></p>
+
+<div class="pos evo"><pre>
+- LANDLINE SETTINGS -
+
+USE SSL ?
+(1-YES 0-NO)
+:0
+</pre></div>
+</div>
+
+<div class="tab-pane" id="communication-tab4">
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.gprs.paragraph_1") %></p>
+
+<div class="pos evo"><pre>
+- GPRS SETTINGS -
+
+1 CLARO
+2 TIM
+3 OI
+4 LYRA (CLARO)
+5 OTHER OPERATOR
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ssl.paragraph_1", :num => "2") %></p>
+
+<div class="pos evo"><pre>
+- GPRS SETTINGS -
+
+USE SSL ?
+(1-YES 0-NO)
+:0
+</pre></div>
+</div>
+</div>
+
+<h2 id="integration"><%= I18n.t("walk_framework.configuration.table_of_contents.integration") %></h2>
+
+<p><%= I18n.t("walk_framework.configuration.integration.paragraph_1") %></p>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to(I18n.t("menu.integration.http") + " &rarr;", "integration/http") %>
+  </li>
+</ul>
+
+<% content_for :javascripts do %>
+  $('#communication-tab a:first').tab('show');
+  $('#communication-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+<% end %>

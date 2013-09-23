@@ -1,0 +1,112 @@
+<% content_for :docs_description do %>
+	<meta name="docs:description" content="<%= I18n.t('walk_framework.ingenico_telium_1.description') %>">
+<% end %>
+
+<h1><%= I18n.t("walk_framework.ingenico_telium_1.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "19/09/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+	<li><a href="#pre-requisites"><%= I18n.t("walk_framework.ingenico_telium_1.table_of_contents.prerequisites") %></a></li>
+  <li><a href="#wiping-the-pos"><%= I18n.t("walk_framework.ingenico_telium_1.table_of_contents.wiping_the_device") %></a></li>
+  <li><a href="#preparing-the-pendrive"><%= I18n.t("walk_framework.ingenico_telium_1.table_of_contents.preparing_the_pendrive") %></a></li>
+  <li><a href="#loading-the-framework"><%= I18n.t("walk_framework.ingenico_telium_1.table_of_contents.loading_the_framework") %></a></li>
+  <li><a href="#configuration"><%= I18n.t("walk_framework.configuration.title") %></a></li>
+</ol>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.introduction") %></p>
+
+<h2 id="pre-requisites"><%= I18n.t("walk_framework.ingenico_telium_1.table_of_contents.prerequisites") %></h2>
+
+<ol>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.prerequisites.operating_system") %></li>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.prerequisites.packet") %></li>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.prerequisites.pendrive") %></li>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.prerequisites.adapter") %></li>
+</ol>
+
+<h2 id="wiping-the-pos"><%= I18n.t("walk_framework.ingenico_telium_1.table_of_contents.wiping_the_device") %></h2>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.wiping_the_device.paragraph_1") %></p>
+
+<div class="pos evo">
+<pre>
+---
+
+U44
+</pre>
+</div>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.wiping_the_device.paragraph_2") %></p>
+
+<div class="pos evo">
+<pre>
+Download menu
+Diagnosis menu
+&gt;&gt;Delete menu&lt;&lt;
+Parameters menu
+</pre>
+</div>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.wiping_the_device.paragraph_3") %></p>
+
+<div class="pos evo">
+<pre>
+&gt;&gt;Delete application&lt;&lt;
+Delete library
+Delete Data file
+</pre>
+</div>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.wiping_the_device.paragraph_4") %></p>
+
+<p class="note"><%= I18n.t("walk_framework.ingenico_telium_1.wiping_the_device.paragraph_5") %></p>
+
+<h2 id="preparing-the-pendrive"><%= I18n.t("walk_framework.ingenico_telium_1.table_of_contents.preparing_the_pendrive") %></h2>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.preparing_the_pendrive.paragraph_1") %></p>
+
+<ol>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.preparing_the_pendrive.paragraph_2") %></li>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.preparing_the_pendrive.paragraph_3") %></li>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.preparing_the_pendrive.paragraph_4") %></li>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.preparing_the_pendrive.paragraph_5") %></li>
+</ol>
+
+<h2 id="loading-the-framework"><%= I18n.t("walk_framework.ingenico_telium_1.table_of_contents.loading_the_framework") %></h2>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.loading_the_framework.paragraph_1") %></p>
+
+<img src="/img/ingenico-telium-1/sagem_eft930s.png" class="img-tutorial img-polaroid" alt="Ingenico Telium 1 EFT930S USB" />
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.loading_the_framework.paragraph_2") %></p>
+
+<ol>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.loading_the_framework.paragraph_3") %></li>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.loading_the_framework.paragraph_4") %></li>
+  <li><%= I18n.t("walk_framework.ingenico_telium_1.loading_the_framework.paragraph_5") %></li>
+</ol>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.loading_the_framework.paragraph_6") %></p>
+
+<div class="pos evo">
+<pre>
+WALK
+Software activate
+
+</pre>
+</div>
+
+<p><%= I18n.t("walk_framework.ingenico_telium_1.loading_the_framework.paragraph_7") %></p>
+
+<h2 id="configuration"><%= I18n.t("walk_framework.configuration.title") %></h2>
+
+<p><%= I18n.t("walk_framework.configuration.after_install") %></p>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to(I18n.t("menu.walk_framework.configuration") + " &rarr;", "walk-framework/configuration") %>
+  </li>
+</ul>

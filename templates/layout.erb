@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>CloudWalk Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentação detalhada do serviço de desenvolvimento de aplicações para Smartphones e terminais POS">
+    <meta name="author" content="Plano Be">
+
+    <%= yield_content(:docs_description).force_encoding("UTF-8") %>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/rainbow/github.css" rel="stylesheet">
+
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/flick/jquery-ui.css' rel='stylesheet'> 
+
+    <link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);mixpanel.init("69fcf8d502625d563ba589d3429fa4ad");</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-3586526-23', 'cloudwalk.io');
+	  ga('send', 'pageview');
+	</script>
+  </head>
+  <script type="text/javascript">mixpanel.track("Landing Page Loaded");</script>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="navbar-container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="https://www.cloudwalk.io"><%= I18n.t("main_menu.home") %></a></li>
+            <li><a href="https://manager.cloudwalk.io">CloudWalk Manager</a></li>
+            <li class="active"><a href="https://docs.cloudwalk.io/<%= I18n.locale %>/introduction"><%= I18n.t("main_menu.docs") %></a></li>
+            <li><a href="https://support.cloudwalk.io"><%= I18n.t("main_menu.support") %></a></li>
+            <li><a href="mailto:planobe@planobe.com.br"><%= I18n.t("main_menu.get_in_touch") %></a></li>
+            <li style="float: right">
+              <form action="<%= request.fullpath %>" method="get" class="navbar-form pull-right" style="float: right">
+                <% if params[:query] %>
+                  <input type="hidden" name="query" value="<%= params['query']%>" />
+                <% end %>
+                <select name="locale" class="input-medium" onchange="this.form.submit()">
+                  <%= option_select "pt-BR", "Português" %>
+                  <%= option_select "en", "English" %>
+                </select>
+              </form>
+            </li>
+            <li id="btn-signout" class="btn-account" style="float: right"><a href="https://manager.cloudwalk.io/users/sign_out?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_out") %></a></li>
+            <li id="btn-settings" class="btn-account" style="float: right"><a href="https://manager.cloudwalk.io/users/edit?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.settings") %></a></li>
+            <li id="btn-signup" class="btn-account" style="float: right"><a href="https://manager.cloudwalk.io/users/sign_up?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_up") %></a></li>
+            <li id="btn-signin" class="btn-account" style="float: right"><a href="https://manager.cloudwalk.io/users/sign_in?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_in") %></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="top">
+    <div class="row-fluid">
+      <div class="span3">
+        <%= erb :_menu %>
+      </div>
+      <div class="span9">
+        <div id="banner">
+          <form action="/<%= current_locale %>/search" class="navbar-form pull-right" method="GET" id="indextank_autocomplete">
+            <input name="query" id="query" class="input-medium search-query" placeholder="<%= I18n.t("general.search") %>" type="text" value="<%= params[:query]%>" />
+          </form>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+  <!-- begin olark code -->
+  <script data-cfasync="false" type='text/javascript'>/*{literal}<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+  f[z]=function(){
+  (a.s=a.s||[]).push(arguments)};var a=f[z]._={
+  },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+  f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+  0:+new Date};a.P=function(u){
+  a.p[u]=new Date-a.p[0]};function s(){
+  a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+  hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+  return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+  b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+  b.contentWindow[g].open()}catch(w){
+  c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+  var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+  b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+  loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+  /* custom configuration goes here (www.olark.com/documentation) */
+  olark.identify('8394-954-10-9343');/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/8394-954-10-9343/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+  </script>
+  <!-- end olark code -->
+
+  <% if session[:locale] == "pt-BR" %>
+    <script src="/js/olark-pt-BR.js"></script>
+  <% end %>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquery-ui.min.js"></script>
+  <script src="/js/jquery.indextank.ize.js"></script>
+  <script src="/js/jquery.indextank.autocomplete.js"></script>
+  <script src="/js/rainbow/rainbow-custom.min.js"></script>
+  <script src="/js/jquery.cookie.js"></script>
+
+  <% if session[:locale] == "pt-BR" %>
+    <script src="//cdn.moot.it/1/moot.pt-br.min.js"></script>
+  <% else %>
+    <script src="//cdn.moot.it/1/moot.min.js"></script>
+  <% end %>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+      $('a[href*=#]').not('.accordion a, .nav-tabs a').click(function() {if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {var $target = $(this.hash);$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');if ($target.length) {var targetOffset = $target.offset().top - 50;$('html,body').animate({scrollTop: targetOffset}, 500);return false;}}});
+
+      // commands
+      $(".group-of-commands a").each(function() { $(this).click(function() { showContent($(this).attr('id')); }); });
+      function showContent(caller){
+        var container = caller.split('-')[1];
+        $('.posxml-commands').fadeOut("fast");
+        if(container == 'all'){ $('.posxml-commands').fadeIn("slow"); } else { $('#' + container + '-commands').fadeIn("slow"); }
+        $('.group-of-commands a').removeClass('primary');
+        $('#' + caller).addClass('primary');
+      }
+
+      // set menu
+      if($.cookie('is_user_logged_in')){
+        $("#btn-signout").toggle();
+        $("#btn-settings").toggle();
+      } else {
+        $("#btn-signup").toggle();
+        $("#btn-signin").toggle();
+      }
+
+      // IndexTank
+      var publicApiUrl = "https://28z3j.api.searchify.com";
+      var indexName = "cloudwalk-docs";
+      $("#indextank_autocomplete").indextank_Ize(publicApiUrl, indexName);
+      $("#query").indextank_Autocomplete();
+
+      // Rainbow
+      Rainbow.extend('html', [{
+        'name': 'tag',
+        'pattern': /string.tohex|string.replace|string.substring|string.replaceat|string.removeat|string.insertat|string.find|string.elementat|string.elements|string.charat|string.length|string.pad|string.getvaluebykey|string.fromhex|network.send|network.receive|network.ping|network.checkgprssignal|network.hostdisconnect|system.readcard|system.restart|system.info|system.checkbattery|system.beep|file.open|file.read|file.write|file.close|filesystem.filesize|filesystem.space|crypto.xor|crypto.lrc|crypto.encryptdecrypt|crypto.crc|smartcard.insertedcard|input.getvalue|iso8583.initfieldtable|iso8583.initmessage|iso8583.putfield|iso8583.endmessage|iso8583.transactmessage|iso8583.analyzemessage|iso8583.getfield/g
+      },  {
+        'name': 'support',
+        'pattern': /buffer1|buffer2|element_index|new_substring|old_substring|original_string|new_element|string_to_be_inserted|character_index/g
+      }], true);
+
+      <%= yield_content(:javascripts) %>
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.configuration.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.configuration.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/01/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#presentation"><%= I18n.t("posxml.configuration.table_of_contents.presentation") %></a></li>
+  <li><a href="#parameters-list"><%= I18n.t("posxml.configuration.table_of_contents.parameters_list") %></a></li>
+</ol>
+
+<h2 id="presentation"><%= I18n.t("posxml.configuration.table_of_contents.presentation") %></h2>
+
+<p><%= I18n.t("posxml.configuration.presentation.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.configuration.presentation.paragraph_2") %></p>
+
+<p><%= I18n.t("posxml.configuration.presentation.paragraph_3") %></p>
+
+<h2 id="parameters-list"><%= I18n.t("posxml.configuration.table_of_contents.parameters_list") %></h2>
+
+<p><%= I18n.t("posxml.configuration.parameters_list.paragraph_1") %></p>
+
+<ol>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_1") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_2") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_3") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_4") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_5") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_6") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_7") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_8") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_9") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_10") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_11") %>
+    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover">
+    	<thead>
+        <tr>
+          <th><%= I18n.t("posxml.configuration.parameters_list.pos_model") %></th>
+          <th><%= I18n.t("posxml.configuration.parameters_list.config_dat_model") %></th>
+        </tr>
+    	</thead>
+      <tbody>
+        <tr>
+          <td>VeriFone Vx510</td>
+          <td>O5150</td>
+        </tr>
+        <tr>
+          <td>VeriFone Vx 510/610/670</td>
+          <td>VX510, VX610, VX670</td>
+        </tr>
+        <tr>
+          <td>VeriFone Vx520/Vx680</td>
+          <td>VX520, VX680</td>
+        </tr>
+        <tr>
+          <td>Ingenico ICT220/ICT250/IWL220/IWL250/IWL280</td>
+          <td>ICT220, ICT250, IWL220, IWL250, IWL280</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_12") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_13") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_14") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_15") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_16") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_17") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_18") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_19") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_20") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_21") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_22") %>
+    <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover">
+    	<thead>
+        <tr>
+          <th><%= I18n.t("posxml.configuration.parameters_list.option") %></th>
+          <th><%= I18n.t("posxml.configuration.parameters_list.tracks") %></th>
+          <th><%= I18n.t("posxml.configuration.parameters_list.reading_type") %></th>
+        </tr>
+    	</thead>
+      <tbody>
+        <tr>
+    			<td>0 (default)</td>
+    			<td><%= I18n.t("posxml.configuration.parameters_list.accepts_track_2") %></td>
+    			<td><%= I18n.t("posxml.configuration.parameters_list.manual_typing_or_swap") %></td>
+        </tr>
+        <tr>
+    			<td>2</td>
+    			<td><%= I18n.t("posxml.configuration.parameters_list.accepts_track_2") %></td>
+    			<td><%= I18n.t("posxml.configuration.parameters_list.manual_typing_not_allowed") %></td>
+        </tr>
+        <tr>
+    			<td>4</td>
+    			<td><%= I18n.t("posxml.configuration.parameters_list.accepts_track_1_and_2") %></td>
+    			<td><%= I18n.t("posxml.configuration.parameters_list.manual_typing_or_swap") %></td>
+        </tr>
+        <tr>
+    			<td>255</td>
+    			<td><%= I18n.t("posxml.configuration.parameters_list.accepts_track_1_and_2") %></td>
+    			<td><%= I18n.t("posxml.configuration.parameters_list.manual_typing_not_allowed") %></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_23") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_24") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_25") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_26") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_27") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_28") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_29") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_30") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_31") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_32") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_33") %></li>
+  <li><%= I18n.t("posxml.configuration.parameters_list.parameter_34") %></li>
+</ol>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.posxml.file_system"), "posxml/file-system") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("menu.posxml.commands_list") + " &rarr;", "posxml/commands") %>
+  </li>
+</ul>

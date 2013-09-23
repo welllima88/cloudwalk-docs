@@ -1,0 +1,441 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('api.v1.logs.description') %>">
+<% end %>
+
+<h1><%= I18n.t("api.v1.logs.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/08/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#attributes"><%= I18n.t("api.v1.logs.table_of_contents.attributes") %></a></li>
+  <li><a href="#index"><%= I18n.t("api.v1.logs.table_of_contents.index") %></a></li>
+  <li><a href="#search-by-status"><%= I18n.t("api.v1.logs.table_of_contents.search_by_status") %></a></li>
+  <li><a href="#search-by-transaction-type"><%= I18n.t("api.v1.logs.table_of_contents.search_by_transaction_type") %></a></li>
+  <li><a href="#search-by-serial-number"><%= I18n.t("api.v1.logs.table_of_contents.search_by_serial_number") %></a></li>
+  <li><a href="#search-by-multiple-params"><%= I18n.t("api.v1.logs.table_of_contents.search_by_multiple_params") %></a></li>
+</ol>
+
+<h2 id="attributes"><%= I18n.t("api.v1.logs.table_of_contents.attributes") %></h2>
+
+<p><%= I18n.t("api.v1.logs.attributes.paragraph_1") %></p>
+
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th><%= I18n.t("api.name") %></th>
+      <th><%= I18n.t("api.type") %></th>
+      <th><%= I18n.t("api.description") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>app_name</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.app_name") %></td>
+    </tr>
+    <tr>
+      <td>framework_version</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.framework_version") %></td>
+    </tr>
+    <tr>
+      <td>serial_number</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.serial_number") %></td>
+    </tr>
+    <tr>
+      <td>logical_number</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.logical_number") %></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.id") %></td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.status") %></td>
+    </tr>
+    <tr>
+      <td>transaction_type</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.transaction_type") %></td>
+    </tr>
+    <tr>
+      <td>started_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.started_at") %></td>
+    </tr>
+    <tr>
+      <td>finished_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.finished_at") %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="index"><%= I18n.t("api.v1.logs.table_of_contents.index") %></h2>
+
+<p><%= I18n.t("api.v1.logs.index.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="index-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#index-tab1">cURL</a></li>
+  <li><a href="#index-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="index-tab1">
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN"</code></pre>
+</div>
+
+<div class="tab-pane" id="index-tab2">
+<pre><code data-language="ruby">require 'net/http'
+
+token = 'API_TOKEN'
+
+uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+   "pagination":{
+      "page":1,
+      "total_pages":1,
+      "entries":2,
+      "total_entries":2
+   },
+   "logs":[
+      {
+         "log":{
+            "app_name":"main.posxml",
+            "finished_at":"2013-08-08T14:38:56Z",
+            "framework_version":"3.58",
+            "id":62946,
+            "logical_number":"1116",
+            "serial_number":"520-501-438",
+            "started_at":"2013-08-08T14:38:55Z",
+            "status":"success",
+            "transaction_type":"switch"
+         }
+      },
+      {
+         "log":{
+            "app_name":"main.posxml",
+            "finished_at":"2013-08-08T14:37:57Z",
+            "framework_version":"3.58",
+            "id":62945,
+            "logical_number":"1116",
+            "serial_number":"520-501-438",
+            "started_at":"2013-08-08T14:37:56Z",
+            "status":"success",
+            "transaction_type":"switch"
+         }
+      }
+   ]
+}
+</code></pre>
+
+<h2 id="search-by-status"><%= I18n.t("api.v1.logs.table_of_contents.search_by_status") %></h2>
+
+<p><%= I18n.t("api.v1.logs.search_by_status.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}&status={status}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="search-by-status-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#search-by-status-tab1">cURL</a></li>
+  <li><a href="#search-by-status-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="search-by-status-tab1">
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN&status=fail"</code></pre>
+</div>
+
+<div class="tab-pane" id="search-by-status-tab2">
+<pre><code data-language="ruby">require 'net/http'
+
+token = 'API_TOKEN'
+
+uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}&status=fail")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+   "pagination":{
+      "page":1,
+      "total_pages":1,
+      "entries":1,
+      "total_entries":1
+   },
+   "logs":[
+      {
+         "log":{
+            "app_name":"main.posxml",
+            "finished_at":"2013-08-08T13:17:14Z",
+            "framework_version":"3.58",
+            "id":62955,
+            "logical_number":"1116",
+            "serial_number":"520-541-412",
+            "started_at":"2013-08-08T13:17:12Z",
+            "status":"fail",
+            "transaction_type":"switch"
+         }
+      }
+   ]
+}
+</code></pre>
+
+<h2 id="search-by-transaction-type"><%= I18n.t("api.v1.logs.table_of_contents.search_by_transaction_type") %></h2>
+
+<p><%= I18n.t("api.v1.logs.search_by_transaction_type.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}&transaction_type={<%= I18n.t("api.v1.logs.search_by_transaction_type.transaction_type") %>}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="search-by-transaction-type-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#search-by-transaction-type-tab1">cURL</a></li>
+  <li><a href="#search-by-transaction-type-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="search-by-transaction-type-tab1">
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN&transaction_type=get_asset"</code></pre>
+</div>
+
+<div class="tab-pane" id="search-by-transaction-type-tab2">
+<pre><code data-language="ruby">require 'net/http'
+
+token = 'API_TOKEN'
+
+uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}&transaction_type=get_asset")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+   "pagination":{
+      "page":1,
+      "total_pages":1,
+      "entries":1,
+      "total_entries":1
+   },
+   "logs":[
+      {
+         "log":{
+            "app_name":"main.posxml",
+            "finished_at":"2013-08-08T13:18:37Z",
+            "framework_version":"3.58",
+            "id":63002,
+            "logical_number":"1234",
+            "serial_number":"531-445-314",
+            "started_at":"2013-08-08T13:18:32Z",
+            "status":"success",
+            "transaction_type":"get_asset"
+         }
+      }
+   ]
+}
+</code></pre>
+
+<h2 id="search-by-serial-number"><%= I18n.t("api.v1.logs.table_of_contents.search_by_serial_number") %></h2>
+
+<p><%= I18n.t("api.v1.logs.search_by_serial_number.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}&serial_number={<%= I18n.t("api.v1.logs.search_by_serial_number.serial_number") %>}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="search-by-serial-number-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#search-by-serial-number-tab1">cURL</a></li>
+  <li><a href="#search-by-serial-number-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="search-by-serial-number-tab1">
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN&serial_number=510-520-530"</code></pre>
+</div>
+
+<div class="tab-pane" id="search-by-serial-number-tab2">
+<pre><code data-language="ruby">require 'net/http'
+
+token = 'API_TOKEN'
+
+uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}&serial_number=510-520-530")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+   "pagination":{
+      "page":1,
+      "total_pages":1,
+      "entries":1,
+      "total_entries":1
+   },
+   "logs":[
+      {
+         "log":{
+            "app_name":"main.posxml",
+            "finished_at":"2013-08-08T14:21:14Z",
+            "framework_version":"3.58",
+            "id":63154,
+            "logical_number":"1122",
+            "serial_number":"510-520-530",
+            "started_at":"2013-08-08T14:21:11Z",
+            "status":"success",
+            "transaction_type":"switch"
+         }
+      }
+   ]
+}
+</code></pre>
+
+<p class="note"><%= I18n.t("api.v1.logs.search_by_serial_number.paragraph_2") %></p>
+
+<h2 id="search-by-multiple-params"><%= I18n.t("api.v1.logs.table_of_contents.search_by_multiple_params") %></h2>
+
+<p><%= I18n.t("api.v1.logs.search_by_multiple_params.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="search-by-multiple-params-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#search-by-multiple-params-tab1">cURL</a></li>
+  <li><a href="#search-by-multiple-params-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="search-by-multiple-params-tab1">
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN&serial_number=510-520-530&status=fail"</code></pre>
+</div>
+
+<div class="tab-pane" id="search-by-multiple-params-tab2">
+<pre><code data-language="ruby">require 'net/http'
+
+token = 'API_TOKEN'
+
+uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}&serial_number=510-520-530&status=fail")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+   "pagination":{
+      "page":1,
+      "total_pages":1,
+      "entries":1,
+      "total_entries":1
+   },
+   "logs":[
+      {
+         "log":{
+            "app_name":"main.posxml",
+            "finished_at":"2013-08-08T15:38:04Z",
+            "framework_version":"3.58",
+            "id":63231,
+            "logical_number":"1122",
+            "serial_number":"510-520-530",
+            "started_at":"2013-08-08T15:38:01Z",
+            "status":"fail",
+            "transaction_type":"switch"
+         }
+      }
+   ]
+}
+</code></pre>
+
+<% content_for :javascripts do %>
+  $('#index-view-tab a:first').tab('show');
+  $('#index-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#search-by-status-view-tab a:first').tab('show');
+  $('#search-by-status-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#search-by-transaction-type-view-tab a:first').tab('show');
+  $('#search-by-transaction-type-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#search-by-serial-number-view-tab a:first').tab('show');
+  $('#search-by-serial-number-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#search-by-multiple-params-view-tab a:first').tab('show');
+  $('#search-by-multiple-params-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+<% end %>

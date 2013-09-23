@@ -1,0 +1,70 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.iso8583_transactmessage.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>iso8583.transactmessage</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "29/08/2013") %></p>
+
+<p class="note"><%= I18n.t("posxml.commands.iso8583_transactmessage.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands.iso8583_transactmessage.paragraph_2") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.iso8583_transactmessage.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.iso8583_transactmessage.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.iso8583_transactmessage.parameters.parameter_3") %></li>
+  <li><%= I18n.t("posxml.commands.iso8583_transactmessage.parameters.parameter_4") %></li>
+  <li><%= I18n.t("posxml.commands.iso8583_transactmessage.parameters.parameter_5") %></li>
+  <li><%= I18n.t("posxml.commands.iso8583_transactmessage.parameters.parameter_6") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;function name="transactIsoMessage"&gt;
+  &lt;integervariable value="0" variable="iConexao"/&gt;
+  &lt;stringvariable value="" variable="sConexao"/&gt;
+
+  &lt;cleandisplay /&gt;
+  &lt;display column="0" line="3" message="   CONNECTING... "/&gt;
+  &lt;preconnect variablestatus="$(iConexao)"/&gt;
+
+  &lt;if variable="$(iConexao)" operator="notequalto" value="0"&gt;
+    &lt;inttostring variableinteger="$(iConexao)" variablestring="$(sConexao)"/&gt;
+    &lt;joinstring firstvalue="ERROR: " secondvalue="$(sConexao)" variabledestination="$(sConexao)"/&gt;
+    &lt;cleandisplay/&gt;
+    &lt;display column="0" line="2" message="   CONNECTION  "/&gt;
+    &lt;display column="0" line="3" message="     ERROR!    "/&gt;
+    &lt;display column="0" line="4" message="$(sConexao)"/&gt;
+    &lt;network.hostdisconnect /&gt;
+    &lt;waitkey/&gt;
+    &lt;exit/&gt;
+  &lt;/if&gt;
+
+  &lt;cleandisplay /&gt;
+  &lt;display column="0" line="3" message="   TRANSMITTING... "/&gt;
+
+  &lt;iso8583.transactmessage channel="NAC" header="$(sHeader)" isomsg="$(sMsgIso8583)" trailler=""
+         variableresponse="$(sReceiveMsgISO)" variablereturn="$(iRecvBytes)"/&gt;
+
+  &lt;cleandisplay/&gt;
+  &lt;if variable="$(iRecvBytes)" operator="lessthanorequalto" value="0"&gt;
+    &lt;cleandisplay /&gt;
+    &lt;display column="0" line="2" message="   TRANSMISSION  "/&gt;
+    &lt;display column="0" line="3" message="      ERROR!     "/&gt;
+    &lt;waitkey/&gt;
+    &lt;network.hostdisconnect /&gt;
+    &lt;exit/&gt;
+  &lt;/if&gt;
+&lt;/function&gt;
+</code></pre>
+
+<p><%= I18n.t("posxml.commands.iso8583_transactmessage.paragraph_3") %></p>
+<p><%= I18n.t("posxml.commands.iso8583_transactmessage.paragraph_4") %></p>
+<p><%= I18n.t("posxml.commands.iso8583_transactmessage.paragraph_5") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

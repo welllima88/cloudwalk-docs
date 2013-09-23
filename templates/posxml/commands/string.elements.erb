@@ -1,0 +1,40 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.string_elements.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>string.elements</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "07/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.string_elements.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.string_elements.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.string_elements.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.string_elements.parameters.parameter_3") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;integervariable value="" variable="iElements" /&gt;
+
+&lt;stringvariable value="Cloud;Walk" variable="sText" /&gt;
+&lt;stringvariable value="" variable="sElements" /&gt;
+
+&lt;string.elements delimiter=";" string="$(sText)" variablereturn="$(iElements)" /&gt;
+
+&lt;inttostring variableinteger="$(iElements)" variablestring="$(sElements)" /&gt;
+
+&lt;display column="0" line="0" message="$(sElements)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+<p><%= I18n.t("posxml.commands.string_elements.paragraph_2") %></p>
+<p><%= I18n.t("posxml.commands.string_elements.paragraph_3") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

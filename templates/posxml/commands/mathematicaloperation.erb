@@ -1,0 +1,112 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.mathematicaloperation.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>mathematicaloperation</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "02/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.mathematicaloperation.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.mathematicaloperation.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.mathematicaloperation.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.mathematicaloperation.parameters.parameter_3") %></li>
+  <li><%= I18n.t("posxml.commands.mathematicaloperation.parameters.parameter_4") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;integervariable value="200" variable="number_1"/&gt;
+&lt;integervariable value="100" variable="number_2"/&gt;
+
+&lt;integervariable value="" variable="result_1"/&gt;
+&lt;integervariable value="" variable="result_2"/&gt;
+&lt;integervariable value="" variable="result_3"/&gt;
+&lt;integervariable value="" variable="result_4"/&gt;
+&lt;integervariable value="" variable="result_5"/&gt;
+&lt;integervariable value="" variable="result_6"/&gt;
+
+&lt;mathematicaloperation firstvalue="$(number_1)" operator="+" secondvalue="$(number_2)" variabledestination="$(result_1)"/>
+
+&lt;mathematicaloperation firstvalue="$(number_1)" operator="-" secondvalue="$(number_2)" variabledestination="$(result_2)"/>
+
+&lt;mathematicaloperation firstvalue="$(number_1)" operator="*" secondvalue="$(number_2)" variabledestination="$(result_3)"/>
+
+&lt;mathematicaloperation firstvalue="$(number_1)" operator="/" secondvalue="$(number_2)" variabledestination="$(result_4)"/>
+
+&lt;mathematicaloperation firstvalue="$(number_1)" operator="%" secondvalue="$(number_2)" variabledestination="$(result_5)"/>
+
+&lt;mathematicaloperation firstvalue="$(number_1)" operator="^" secondvalue="$(number_2)" variabledestination="$(result_6)"/>
+
+&lt;stringvariable value="" variable="aux"/&gt;
+
+<!-- SOMA -->
+&lt;inttostring variableinteger="$(result_1)" variablestring="$(aux)"/&gt;
+
+&lt;display column="0" line="0" message="Operation +"/&gt;
+
+&lt;display column="0" line="1" message="$(aux)"/&gt;
+
+&lt;waitkey/&gt;
+<!-- /SOMA -->
+
+<!-- SUBTRAÇÃO -->
+&lt;inttostring variableinteger="$(result_2)" variablestring="$(aux)"/&gt;
+
+&lt;display column="0" line="0" message="Operation -"/&gt;
+
+&lt;display column="0" line="1" message="$(aux)"/&gt;
+
+&lt;waitkey/&gt;
+<!-- /SUBTRAÇÃO -->
+
+<!-- MULTIPLICAÇÃO -->
+&lt;inttostring variableinteger="$(result_3)" variablestring="$(aux)"/&gt;
+
+&lt;display column="0" line="0" message="Operation *"/&gt;
+
+&lt;display column="0" line="1" message="$(aux)"/&gt;
+
+&lt;waitkey/&gt;
+<!-- /MULTIPLICAÇÃO -->
+
+<!-- DIVISÃO -->
+&lt;inttostring variableinteger="$(result_4)" variablestring="$(aux)"/&gt;
+
+&lt;display column="0" line="0" message="Operation /"/&gt;
+
+&lt;display column="0" line="1" message="$(aux)"/&gt;
+
+&lt;waitkey/&gt;
+<!-- /DIVISÃO -->
+
+<!-- RESTO DE DIVISÃO -->
+&lt;inttostring variableinteger="$(result_5)" variablestring="$(aux)"/&gt;
+
+&lt;display column="0" line="0" message="Operation %"/&gt;
+
+&lt;display column="0" line="1" message="$(aux)"/&gt;
+
+&lt;waitkey/&gt;
+<!-- /RESTO DE DIVISÃO -->
+
+<!-- EXPONENCIAÇÃO -->
+&lt;inttostring variableinteger="$(result_6)" variablestring="$(aux)"/&gt;
+
+&lt;display column="0" line="0" message="Operation ^"/&gt;
+
+&lt;display column="0" line="1" message="$(aux)"/&gt;
+
+&lt;waitkey/&gt;
+<!-- /EXPONENCIAÇÃO -->
+</code></pre>
+<hr/>
+<p><%= I18n.t("posxml.commands.mathematicaloperation.paragraph_2") %></p>
+<p><%= I18n.t("posxml.commands.mathematicaloperation.paragraph_3") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

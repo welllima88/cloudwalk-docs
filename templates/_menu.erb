@@ -1,0 +1,120 @@
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><%= I18n.t("menu.understanding_the_service.group_name") %></a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse <%=is_group_active?("introduction") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("introduction") %>"><%= link_to(I18n.t("menu.understanding_the_service.overview"), "introduction") %></li>
+          <li class="<%=is_group_item_active?("introduction", "walk-framework") %>"><%= link_to(I18n.t("menu.understanding_the_service.walk_framework"), "introduction/walk-framework") %></li>
+          <li class="<%=is_group_item_active?("introduction", "walk-manager") %>"><%= link_to(I18n.t("menu.understanding_the_service.walk_manager"), "introduction/walk-manager") %></li>
+          <li class="<%=is_group_item_active?("introduction", "development-environment") %>"><%= link_to(I18n.t("menu.understanding_the_service.development_environment"), "introduction/development-environment") %></li>
+          <li class="<%=is_group_item_active?("introduction", "posxml") %>"><%= link_to(I18n.t("menu.understanding_the_service.posxml"), "introduction/posxml") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><%= I18n.t("menu.walk_framework.group_name") %></a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse <%=is_group_active?("walk-framework") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("walk-framework", "verifone-evo") %>"><%= link_to(I18n.t("menu.walk_framework.verifone_evo"), "walk-framework/verifone-evo") %></li>
+          <li class="<%=is_group_item_active?("walk-framework", "verifone-verix") %>"><%= link_to(I18n.t("menu.walk_framework.verifone_verix"), "walk-framework/verifone-verix") %></li>
+          <li class="<%=is_group_item_active?("walk-framework", "ingenico-telium-1") %>"><%= link_to(I18n.t("menu.walk_framework.ingenico_telium_1"), "walk-framework/ingenico-telium-1") %></li>
+          <li class="<%=is_group_item_active?("walk-framework", "ingenico-telium-2") %>"><%= link_to(I18n.t("menu.walk_framework.ingenico_telium_2"), "walk-framework/ingenico-telium-2") %></li>
+          <li class="<%=is_group_item_active?("walk-framework", "configuration") %>"><%= link_to(I18n.t("menu.walk_framework.configuration"), "walk-framework/configuration") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><%= I18n.t("menu.walk_manager.group_name") %></a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse <%=is_group_active?("walk-manager") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("walk-manager", "apps") %>"><%= link_to(I18n.t("menu.walk_manager.apps"), "walk-manager/apps") %></li>
+          <li class="<%=is_group_item_active?("walk-manager", "devices") %>"><%= link_to(I18n.t("menu.walk_manager.devices"), "walk-manager/devices") %></li>
+          <li class="<%=is_group_item_active?("walk-manager", "logical-numbers") %>"><%= link_to(I18n.t("menu.walk_manager.logical_numbers"), "walk-manager/logical-numbers") %></li>
+          <li class="<%=is_group_item_active?("walk-manager", "groups") %>"><%= link_to(I18n.t("menu.walk_manager.groups"), "walk-manager/groups") %></li>
+          <li class="<%=is_group_item_active?("walk-manager", "assets") %>"><%= link_to(I18n.t("menu.walk_manager.assets"), "walk-manager/assets") %></li>
+          <li class="<%=is_group_item_active?("walk-manager", "transactions-monitor") %>"><%= link_to(I18n.t("menu.walk_manager.transactions_monitor"), "walk-manager/transactions-monitor") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"><%= I18n.t("menu.development_environment.group_name") %></a>
+    </div>
+    <div id="collapseFour" class="accordion-body collapse <%=is_group_active?("development-environment") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("development-environment", "overview") %>"><%= link_to(I18n.t("menu.development_environment.overview"), "development-environment/overview") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive"><%= I18n.t("menu.posxml.group_name") %></a>
+    </div>
+    <div id="collapseFive" class="accordion-body collapse <%=is_group_active?("posxml") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("posxml", "structure") %>"><%= link_to(I18n.t("menu.posxml.structure"), "posxml/structure") %></li>
+          <li class="<%=is_group_item_active?("posxml", "memory-and-variables") %>"><%= link_to(I18n.t("menu.posxml.memory_and_variables"), "posxml/memory-and-variables") %></li>
+          <li class="<%=is_group_item_active?("posxml", "file-system") %>"><%= link_to(I18n.t("menu.posxml.file_system"), "posxml/file-system") %></li>
+          <li class="<%=is_group_item_active?("posxml", "configuration") %>"><%= link_to(I18n.t("menu.posxml.configuration"), "posxml/configuration") %></li>
+          <li class="<%=is_group_item_active?("posxml", "commands") %>"><%= link_to(I18n.t("menu.posxml.commands_list"), "posxml/commands") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseEight"><%= I18n.t("menu.integration.group_name") %></a>
+    </div>
+    <div id="collapseEight" class="accordion-body collapse <%=is_group_active?("integration") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("integration", "architecture") %>"><%= link_to(I18n.t("menu.integration.architecture"), "integration/architecture") %></li>
+          <li class="<%=is_group_item_active?("integration", "tcp") %>"><%= link_to(I18n.t("menu.integration.tcp"), "integration/tcp") %></li>
+          <li class="<%=is_group_item_active?("integration", "http") %>"><%= link_to(I18n.t("menu.integration.http"), "integration/http") %></li>
+          <li class="<%=is_group_item_active?("integration", "advanced-http") %>"><%= link_to(I18n.t("menu.integration.advanced_http"), "integration/advanced-http") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix"><%= I18n.t("menu.api.group_name") %></a>
+    </div>
+    <div id="collapseSix" class="accordion-body collapse <%=is_group_active?("api") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("api", "overview") %>"><%= link_to(I18n.t("menu.api.overview"), "api/overview") %></li>
+          <li class="<%=is_group_item_active?("api", "apps") %>"><%= link_to(I18n.t("menu.api.v1.apps"), "api/v1/apps") %></li>
+          <li class="<%=is_group_item_active?("api", "devices") %>"><%= link_to(I18n.t("menu.api.v1.devices"), "api/v1/devices") %></li>
+          <li class="<%=is_group_item_active?("api", "logical-numbers") %>"><%= link_to(I18n.t("menu.api.v1.logical_numbers"), "api/v1/logical-numbers") %></li>
+          <li class="<%=is_group_item_active?("api", "groups") %>"><%= link_to(I18n.t("menu.api.v1.groups"), "api/v1/groups") %></li>
+          <li class="<%=is_group_item_active?("api", "parameters") %>"><%= link_to(I18n.t("menu.api.v1.parameters"), "api/v1/parameters") %></li>
+          <li class="<%=is_group_item_active?("api", "assets") %>"><%= link_to(I18n.t("menu.api.v1.assets"), "api/v1/assets") %></li>
+          <li class="<%=is_group_item_active?("api", "users") %>"><%= link_to(I18n.t("menu.api.v1.users"), "api/v1/users") %></li>
+          <li class="<%=is_group_item_active?("api", "logs") %>"><%= link_to(I18n.t("menu.api.v1.logs"), "api/v1/logs") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

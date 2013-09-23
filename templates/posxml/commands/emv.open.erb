@@ -1,0 +1,42 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.emv_open.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>emv.open</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "01/09/2013") %></p>
+
+<p class="note"><%= I18n.t("posxml.commands.emv_open.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands.emv_open.paragraph_2") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.emv_open.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.emv_open.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.emv_open.parameters.parameter_3") %></li>
+  <li><%= I18n.t("posxml.commands.emv_open.parameters.parameter_4") %></li>
+  <li><%= I18n.t("posxml.commands.emv_open.parameters.parameter_5") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
+&lt;integervariable value="" variable="iReturn" /&gt;
+
+&lt;emv.open mkslot="0" pinpadtype="2" pinpadwk="0123456789ABCDEF" showamount="1" variablereturn="$(iReturn)" /&gt;
+
+&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
+
+&lt;display column="0" line="0" message="$(sReturn)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+
+<p><%= I18n.t("posxml.commands.emv_open.paragraph_3") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

@@ -1,0 +1,103 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('introduction.walk_framework.description') %>">
+<% end %>
+
+<h1><%= I18n.t("introduction.walk_framework.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "12/08/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#overview"><%= I18n.t("introduction.walk_framework.table_of_contents.overview") %></a></li>
+  <li><a href="#approved-equipments"><%= I18n.t("introduction.walk_framework.table_of_contents.approved_devices") %></a></li>
+  <li><a href="#contactless">Contactless</a></li>
+</ol>
+
+<h2 id="overview"><%= I18n.t("introduction.walk_framework.table_of_contents.overview") %></h2>
+
+<p><%= I18n.t("introduction.walk_framework.overview.paragraph_1") %></p>
+
+<h2 id="approved-equipments"><%= I18n.t("introduction.walk_framework.table_of_contents.approved_devices") %></h2>
+
+<p><%= I18n.t("introduction.walk_framework.approved_devices.paragraph_1") %></p>
+
+<p><%= I18n.t("introduction.walk_framework.approved_devices.paragraph_2") %></p>
+
+<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover">
+	<thead>
+    <tr>
+      <th><%= I18n.t("introduction.walk_framework.approved_devices.cloudwalk_reader") %></th>
+      <th>iPhone</th>
+      <th>Android</th>
+      <th><%= I18n.t("introduction.walk_framework.approved_devices.line_verix") %></th>
+      <th><%= I18n.t("introduction.walk_framework.approved_devices.line_evo") %></th>
+      <th><%= I18n.t("introduction.walk_framework.approved_devices.line_telium_2") %></th>
+    </tr>
+	</thead>
+  <tbody>
+		<tr>
+			<td>CloudWalk reader 0.1</td>
+      <td>IOS 5+</td>
+      <td>Android 2.3+</td>
+			<td>Vx510</td>
+			<td>Vx520</td>
+			<td>ICT220</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>Vx610</td>
+			<td>Vx675</td>
+			<td>ICT250</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>Vx670</td>
+			<td>Vx680</td>
+			<td>IWL220</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>Vx820</td>
+			<td>IWL250</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>Vx805</td>
+			<td>IWL280</td>
+		</tr>
+  </tbody>
+</table>
+
+<h2 id="contactless">Contactless</h2>
+
+<p><%= I18n.t("introduction.walk_framework.contactless.paragraph_1") %></p>
+
+<h3>Verifone</h3>
+
+<p><%= I18n.t("introduction.walk_framework.contactless.paragraph_2") %></p>
+
+<p class="note"><%= I18n.t("introduction.walk_framework.contactless.paragraph_3") %></p>
+
+<h3>Ingenico</h3>
+
+<p><%= I18n.t("introduction.walk_framework.contactless.paragraph_4") %></p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.understanding_the_service.overview"), "overview") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("menu.understanding_the_service.walk_manager") + " &rarr;", "introduction/walk-manager") %>
+  </li>
+</ul>

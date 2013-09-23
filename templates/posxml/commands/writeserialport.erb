@@ -1,0 +1,39 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.writeserialport.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>writeserialport</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "10/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.writeserialport.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.writeserialport.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.writeserialport.parameters.parameter_2") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;integervariable value="0" variable="iReturnHandle" /&gt;
+&lt;stringvariable value="" variable="sReturn" /&gt;
+
+&lt;openserialport port="COM1" rate="115200" configuration="A8N1" variablereturn="$(iReturnHandle)" /&gt;
+
+&lt;string.tohex string="CloudWalk" variablereturn="$(sReturn)" /&gt;
+&lt;writeserialport buffer="$(sReturn)" variablehandle="$(iReturnHandle)" /&gt;
+
+&lt;closeserialport variablehandle="$(iReturnHandle)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+<p><%= I18n.t("posxml.commands.writeserialport.paragraph_2") %></p>
+<p><%= I18n.t("posxml.commands.writeserialport.paragraph_3") %></p>
+<p><%= I18n.t("posxml.commands.writeserialport.paragraph_4") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

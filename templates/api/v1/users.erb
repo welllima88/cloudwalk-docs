@@ -1,0 +1,290 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('api.v1.users.description') %>">
+<% end %>
+
+<h1><%= I18n.t("api.v1.users.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/08/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#attributes"><%= I18n.t("api.v1.users.table_of_contents.attributes") %></a></li>
+  <li><a href="#index"><%= I18n.t("api.v1.users.table_of_contents.index") %></a></li>
+  <li><a href="#show"><%= I18n.t("api.v1.users.table_of_contents.show") %></a></li>
+  <li><a href="#token"><%= I18n.t("api.v1.users.table_of_contents.token") %></a></li>
+</ol>
+
+<h2 id="attributes"><%= I18n.t("api.v1.users.table_of_contents.attributes") %></h2>
+
+<p><%= I18n.t("api.v1.users.attributes.paragraph_1") %></p>
+
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th><%= I18n.t("api.name") %></th>
+      <th><%= I18n.t("api.type") %></th>
+      <th><%= I18n.t("api.description") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>created_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.created_at") %></td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.email") %></td>
+    </tr>
+    <tr>
+      <td>first_name</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.first_name") %></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.id") %></td>
+    </tr>
+    <tr>
+      <td>last_name</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.last_name") %></td>
+    </tr>
+    <tr>
+      <td>last_sign_in_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.last_sign_in_at") %></td>
+    </tr>
+    <tr>
+      <td>last_sign_in_ip</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.last_sign_in_ip") %></td>
+    </tr>
+    <tr>
+      <td>sign_in_count</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.sign_in_count") %></td>
+    </tr>
+    <tr>
+      <td>time_zone</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.time_zone") %></td>
+    </tr>
+    <tr>
+      <td>updated_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.updated_at") %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="index"><%= I18n.t("api.v1.users.table_of_contents.index") %></h2>
+
+<p><%= I18n.t("api.v1.users.index.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/users?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="index-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#index-tab1">cURL</a></li>
+  <li><a href="#index-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="index-tab1">
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/users?access_token=$TOKEN"</code></pre>
+</div>
+
+<div class="tab-pane" id="index-tab2">
+<pre><code data-language="ruby">require 'net/http'
+
+token = 'API_TOKEN'
+
+uri = URI("https://api.cloudwalk.io/v1/users?access_token=#{token}")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+   "pagination":{
+      "page":1,
+      "total_pages":1,
+      "entries":2,
+      "total_entries":2
+   },
+   "users":[
+      {
+         "user":{
+            "created_at":"2013-07-26T17:47:35Z",
+            "email":"hero@dccomics.com",
+            "first_name":"Clark",
+            "id":1,
+            "last_name":"Kent",
+            "last_sign_in_at":"2013-07-29T17:42:26Z",
+            "last_sign_in_ip":"127.0.0.1",
+            "sign_in_count":4,
+            "time_zone":"America/Chicago",
+            "updated_at":"2013-07-30T15:02:49Z"
+         }
+      },
+      {
+         "user":{
+            "created_at":"2013-07-30T15:04:27Z",
+            "email":"owner@wayneenterprises.com",
+            "first_name":"Bruce",
+            "id":3,
+            "last_name":"Wayne",
+            "last_sign_in_at":"2013-07-30T15:06:06Z",
+            "last_sign_in_ip":"127.0.0.1",
+            "sign_in_count":1,
+            "time_zone":"America/Chicago",
+            "updated_at":"2013-07-30T15:06:37Z"
+         }
+      }
+   ]
+}
+</code></pre>
+
+<h2 id="show"><%= I18n.t("api.v1.users.table_of_contents.show") %></h2>
+
+<p><%= I18n.t("api.v1.users.show.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/users/{user_id}?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="show-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#show-tab1">cURL</a></li>
+  <li><a href="#show-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="show-tab1">
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/users/3?access_token=$TOKEN"</code></pre>
+</div>
+
+<div class="tab-pane" id="show-tab2">
+<pre><code data-language="ruby">require 'net/http'
+
+token = 'API_TOKEN'
+
+uri = URI("https://api.cloudwalk.io/v1/users/3?access_token=#{token}")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+  "user":{
+    "created_at":"2013-07-30T15:04:27Z",
+    "email":"owner@wayneenterprises.com",
+    "first_name":"Bruce",
+    "id":3,
+    "last_name":"Wayne",
+    "last_sign_in_at":"2013-07-30T15:06:06Z",
+    "last_sign_in_ip":"127.0.0.1",
+    "sign_in_count":1,
+    "time_zone":"America/Chicago",
+    "updated_at":"2013-07-30T15:06:37Z"
+  }
+}
+</code></pre>
+
+<h2 id="token"><%= I18n.t("api.v1.users.table_of_contents.token") %></h2>
+
+<p><%= I18n.t("api.v1.users.token.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>POST https://api.cloudwalk.io/<%= I18n.t("api.version") %>/users/token</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="token-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#token-tab1">cURL</a></li>
+  <li><a href="#token-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="token-tab1">
+<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/users/token" \
+-d '{"email":"owner@wayneenterprises.com","password":"batman"}'
+</code></pre>
+</div>
+
+<div class="tab-pane" id="token-tab2">
+<pre><code data-language="ruby">require 'net/http'
+require 'json'
+
+payload = {
+  "email" => "owner@wayneenterprises.com",
+  "password" => "batman"
+}
+
+uri = URI("https://api.cloudwalk.io/v1/users/token")
+
+req = Net::HTTP::Post.new(uri.request_uri)
+
+req['Content-Type'] = "application/json"
+
+req.body = payload.to_json
+
+res = Net::HTTP.start(uri.hostname, uri.port) { |http|
+  http.request(req)
+}
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">[
+  {
+    "company_name":"Wayne Enterprises",
+    "company_id":1,
+    "api_token":"78562f2ba49ce71ae966f23922a7c3692e3b9ay2"
+  }
+]
+</code></pre>
+
+<% content_for :javascripts do %>
+  $('#index-view-tab a:first').tab('show');
+  $('#index-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#show-view-tab a:first').tab('show');
+  $('#show-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#token-view-tab a:first').tab('show');
+  $('#token-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+<% end %>

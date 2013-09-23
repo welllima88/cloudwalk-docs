@@ -1,0 +1,500 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('api.v1.parameters.description') %>">
+<% end %>
+
+<h1><%= I18n.t("api.v1.parameters.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/08/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#attributes"><%= I18n.t("api.v1.parameters.table_of_contents.attributes") %></a></li>
+  <li><a href="#index"><%= I18n.t("api.v1.parameters.table_of_contents.index") %></a></li>
+  <li><a href="#show"><%= I18n.t("api.v1.parameters.table_of_contents.show") %></a></li>
+  <li><a href="#create"><%= I18n.t("api.v1.parameters.table_of_contents.create") %></a></li>
+  <li><a href="#update"><%= I18n.t("api.v1.parameters.table_of_contents.update") %></a></li>
+  <li><a href="#destroy"><%= I18n.t("api.v1.parameters.table_of_contents.destroy") %></a></li>
+</ol>
+
+<h2 id="attributes"><%= I18n.t("api.v1.parameters.table_of_contents.attributes") %></h2>
+
+<p><%= I18n.t("api.v1.parameters.attributes.paragraph_1") %></p>
+
+<p><%= I18n.t("api.v1.parameters.attributes.paragraph_2") %></p>
+
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th><%= I18n.t("api.name") %></th>
+      <th><%= I18n.t("api.type") %></th>
+      <th><%= I18n.t("api.description") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>created_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.created_at") %></td>
+    </tr>
+    <tr>
+      <td>created_by</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.created_by") %></td>
+    </tr>
+    <tr>
+      <td>created_via</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.created_via") %></td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.description") %></td>
+    </tr>
+    <tr>
+      <td>id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.id") %></td>
+    </tr>
+    <tr>
+      <td>group_id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.group_id") %></td>
+    </tr>
+    <tr>
+      <td>logical_number_id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.logical_number_id") %></td>
+    </tr>
+    <tr>
+      <td>key</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.key") %></td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.value") %></td>
+    </tr>
+    <tr>
+      <td>updated_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.parameters.attributes.list.updated_at") %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="index"><%= I18n.t("api.v1.parameters.table_of_contents.index") %></h2>
+
+<p><%= I18n.t("api.v1.parameters.index.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/parameters?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="index-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#index-tab1">cURL</a></li>
+  <li><a href="#index-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="index-tab1">
+
+<h4><%= I18n.t("api.v1.parameters.group") %></h4>
+
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/parameters?access_token=$TOKEN" \
+-d '{"name":"Dev"}'
+</code></pre>
+
+<h4><%= I18n.t("api.v1.parameters.logical_number") %></h4>
+
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/parameters?access_token=$TOKEN" \
+-d '{"number":"778899"}'
+</code></pre>
+</div>
+
+<div class="tab-pane" id="index-tab2">
+<pre><code data-language="ruby">require 'net/http'
+require 'json'
+
+token = 'API_TOKEN'
+
+payload = {
+  # "name" => "Dev" # <%= I18n.t("api.v1.parameters.group") %>
+  "number" => "778899" # <%= I18n.t("api.v1.parameters.logical_number") %>
+}
+
+uri = URI("https://api.cloudwalk.io/v1/parameters?access_token=#{token}")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+request.body = payload.to_json
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+   "pagination":{
+      "page":1,
+      "total_pages":1,
+      "entries":2,
+      "total_entries":2
+   },
+   "parameters":[
+      {
+         "logical_number_parameter":{
+            "company_id":1,
+            "created_at":"2013-07-29T22:51:40Z",
+            "created_by":1,
+            "created_via":"api",
+            "description":"Host ip",
+            "group_id":null,
+            "id":2,
+            "key":"host_ip",
+            "logical_number_id":4,
+            "updated_at":"2013-07-29T22:51:40Z",
+            "value":"10.0.0.1"
+         }
+      },
+      {
+         "logical_number_parameter":{
+            "company_id":1,
+            "created_at":"2013-07-30T11:26:30Z",
+            "created_by":1,
+            "created_via":"interface",
+            "description":"Retry attempts",
+            "group_id":null,
+            "id":3,
+            "key":"retry",
+            "logical_number_id":4,
+            "updated_at":"2013-07-30T11:26:30Z",
+            "value":"2"
+         }
+      }
+   ]
+}
+</code></pre>
+
+<h2 id="show"><%= I18n.t("api.v1.parameters.table_of_contents.show") %></h2>
+
+<p><%= I18n.t("api.v1.parameters.show.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/parameters/{parameter_id}?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="show-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#show-tab1">cURL</a></li>
+  <li><a href="#show-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="show-tab1">
+
+<h4><%= I18n.t("api.v1.parameters.group") %></h4>
+
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/parameters/1?access_token=$TOKEN" \
+-d '{"name":"Dev"}'
+</code></pre>
+
+<h4><%= I18n.t("api.v1.parameters.logical_number") %></h4>
+
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/parameters/3?access_token=$TOKEN" \
+-d '{"number":"778899"}'
+</code></pre>
+</div>
+
+<div class="tab-pane" id="show-tab2">
+<pre><code data-language="ruby">require 'net/http'
+require 'json'
+
+token = 'API_TOKEN'
+
+payload = {
+  # "name" => "Dev" # <%= I18n.t("api.v1.parameters.group") %>
+  "number" => "778899" # <%= I18n.t("api.v1.parameters.logical_number") %>
+}
+
+uri = URI("https://api.cloudwalk.io/v1/parameters/1?access_token=#{token}")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+request.body = payload.to_json
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+  "logical_number_parameter":{
+    "company_id":1,
+    "created_at":"2013-07-30T11:26:30Z",
+    "created_by":1,
+    "created_via":"interface",
+    "description":"Retry attempts",
+    "group_id":null,
+    "id":3,
+    "key":"retry",
+    "logical_number_id":4,
+    "updated_at":"2013-07-30T11:26:30Z",
+    "value":"2"
+  }
+}
+</code></pre>
+
+<h2 id="create"><%= I18n.t("api.v1.parameters.table_of_contents.create") %></h2>
+
+<p><%= I18n.t("api.v1.parameters.create.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>POST https://api.cloudwalk.io/<%= I18n.t("api.version") %>/parameters?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="create-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#create-tab1">cURL</a></li>
+  <li><a href="#create-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="create-tab1">
+
+<h4><%= I18n.t("api.v1.parameters.group") %></h4>
+
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/parameters?access_token=$TOKEN" \
+-d '{"name":"Dev","key":"max_parcels","value":"6","description":"Max parcels allowed"}'
+</code></pre>
+
+<h4><%= I18n.t("api.v1.parameters.logical_number") %></h4>
+
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/parameters?access_token=$TOKEN" \
+-d '{"number":"778899","key":"min_value","value":"1.50","description":"Min value allowed"}'
+</code></pre>
+</div>
+
+<div class="tab-pane" id="create-tab2">
+<pre><code data-language="ruby">require 'net/http'
+require 'json'
+
+token = 'API_TOKEN'
+
+payload = {
+  # "name" => "Dev", # <%= I18n.t("api.v1.parameters.group") %>
+  "number" => "778899", # <%= I18n.t("api.v1.parameters.logical_number") %>
+  "key" => "min_value",
+  "value" => "1.50",
+  "description" => "Min value allowed"
+}
+
+uri = URI("https://api.cloudwalk.io/v1/parameters?access_token=#{token}")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Post.new(uri.request_uri)
+request.body = payload.to_json
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+  "logical_number_parameter":{
+    "company_id":1,
+    "created_at":"2013-07-30T11:58:53Z",
+    "created_by":1,
+    "created_via":"api",
+    "description":"Min value allowed",
+    "group_id":null,
+    "id":5,
+    "key":"min_value",
+    "logical_number_id":4,
+    "updated_at":"2013-07-30T11:58:53Z",
+    "value":"1.50"
+  }
+}
+</code></pre>
+
+<h2 id="update"><%= I18n.t("api.v1.parameters.table_of_contents.update") %></h2>
+
+<p><%= I18n.t("api.v1.parameters.update.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/parameters/{parameter_id}?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="update-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#update-tab1">cURL</a></li>
+  <li><a href="#update-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="update-tab1">
+
+<h4><%= I18n.t("api.v1.parameters.group") %></h4>
+
+<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/parameters/1?access_token=$TOKEN" \
+-d '{"name":"Dev","key":"host_port","value":"8088","description":"Host port"}'
+</code></pre>
+
+<h4><%= I18n.t("api.v1.parameters.logical_number") %></h4>
+
+<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/parameters/3?access_token=$TOKEN" \
+-d '{"number":"778899","key":"retry","value":"2","description":"Retry attempts"}'
+</code></pre>
+</div>
+
+<div class="tab-pane" id="update-tab2">
+<pre><code data-language="ruby">require 'net/http'
+require 'json'
+
+token = 'API_TOKEN'
+
+payload = {
+  # "name" => "Dev", # <%= I18n.t("api.v1.parameters.group") %>
+  "key" => "retry",
+  "number" => "778899",
+  "value" => "2",
+  "description" => "Retry attempts"
+}
+
+uri = URI("https://api.cloudwalk.io/v1/parameters/3?access_token=#{token}")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Put.new(uri.request_uri)
+request.body = payload.to_json
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+  "logical_number_parameter":{
+    "company_id":1,
+    "created_at":"2013-07-30T11:26:30Z",
+    "created_by":1,
+    "created_via":"interface",
+    "description":"Retry attempts",
+    "group_id":null,
+    "id":3,
+    "key":"retry",
+    "logical_number_id":4,
+    "updated_at":"2013-07-30T12:36:39Z",
+    "value":"2"
+  }
+}
+</code></pre>
+
+<h2 id="destroy"><%= I18n.t("api.v1.parameters.table_of_contents.destroy") %></h2>
+
+<p><%= I18n.t("api.v1.parameters.destroy.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/parameters/{parameter_id}?access_token={token}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="destroy-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#destroy-tab1">cURL</a></li>
+  <li><a href="#destroy-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="destroy-tab1">
+  
+<h4><%= I18n.t("api.v1.parameters.group") %></h4>
+
+<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/parameters/1?access_token=$TOKEN" \
+-d '{"name":"Dev"}'
+</code></pre>
+
+<h4><%= I18n.t("api.v1.parameters.logical_number") %></h4>
+
+<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/parameters/3?access_token=$TOKEN" \
+-d '{"number":"778899"}'
+</code></pre>
+</div>
+
+<div class="tab-pane" id="destroy-tab2">
+<pre><code data-language="ruby">require 'net/http'
+require 'json'
+
+token = 'API_TOKEN'
+
+payload = {
+  # "name" => "Dev" # <%= I18n.t("api.v1.parameters.group") %>
+  "number" => "778899" # <%= I18n.t("api.v1.parameters.logical_number") %>
+}
+
+uri = URI("https://api.cloudwalk.io/v1/parameters/1?access_token=#{token}")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Delete.new(uri.request_uri)
+request.body = payload.to_json
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{}
+</code></pre>
+
+<% content_for :javascripts do %>
+  $('#index-view-tab a:first').tab('show');
+  $('#index-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#show-view-tab a:first').tab('show');
+  $('#show-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#create-view-tab a:first').tab('show');
+  $('#create-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#update-view-tab a:first').tab('show');
+  $('#update-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#destroy-view-tab a:first').tab('show');
+  $('#destroy-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+<% end %>

@@ -1,0 +1,37 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.string_insertat.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>string.insertat</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "07/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.string_insertat.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.string_insertat.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.string_insertat.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.string_insertat.parameters.parameter_3") %></li>
+  <li><%= I18n.t("posxml.commands.string_insertat.parameters.parameter_4") %></li>
+  <li><%= I18n.t("posxml.commands.string_insertat.parameters.parameter_5") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
+&lt;stringvariable value="Cloud " variable="sText" /&gt;
+
+&lt;string.insertat delimiter=" " string="$(sText)" element_index="1" string_to_be_inserted="Walk" variablereturn="$(sReturn)" /&gt;
+
+&lt;display column="0" line="0" message="$(sReturn)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+<p><%= I18n.t("posxml.commands.string_insertat.paragraph_2") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

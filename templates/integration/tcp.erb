@@ -1,0 +1,259 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('integration.tcp.description') %>">
+<% end %>
+
+<h1><%= I18n.t("integration.tcp.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "18/09/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#understanding-the-comunication"><%= I18n.t("integration.tcp.table_of_contents.understanding_the_service") %></a></li>
+  <li><a href="#sample"><%= I18n.t("integration.tcp.table_of_contents.sample") %></a></li>
+  <li><a href="#pos-setup"><%= I18n.t("integration.tcp.table_of_contents.pos_setup") %></a></li>
+  <li><a href="#development-environment"><%= I18n.t("integration.tcp.table_of_contents.development_environment") %></a></li>
+  <li><a href="#walk-manager-setup"><%= I18n.t("integration.tcp.table_of_contents.walk_manager_setup") %></a></li>
+  <li><a href="#testing"><%= I18n.t("integration.tcp.table_of_contents.testing") %></a></li>
+</ol>
+
+<h2 id="understanding-the-comunication"><%= I18n.t("integration.tcp.table_of_contents.understanding_the_service") %></h2>
+
+<p><%= I18n.t("integration.tcp.understanding_the_service.paragraph_1") %></p>
+
+<img src="/img/<%= I18n.locale %>/cloudwalk-tcp.png" alt="CloudWalk" />
+
+<ol>
+  <br/>
+  <li><%= I18n.t("integration.tcp.understanding_the_service.list.item_1") %></li>
+  <li><%= I18n.t("integration.tcp.understanding_the_service.list.item_2") %></li>
+  <li><%= I18n.t("integration.tcp.understanding_the_service.list.item_3") %></li>
+  <li><%= I18n.t("integration.tcp.understanding_the_service.list.item_4") %></li>
+</ol>
+
+<p class="note"><%= I18n.t("integration.tcp.understanding_the_service.paragraph_2") %></p>
+
+<h2 id="sample"><%= I18n.t("integration.tcp.table_of_contents.sample") %></h2>
+
+<p><%= I18n.t("integration.tcp.sample.paragraph_1") %></p>
+
+<h3><%= I18n.t("integration.tcp.sample.prerequisites") %></h3>
+
+<ol>
+  <li><%= I18n.t("integration.tcp.sample.list.item_1") %></li>
+  <li><%= I18n.t("integration.tcp.sample.list.item_2") %></li>
+  <li><%= I18n.t("integration.tcp.sample.list.item_3") %></li>
+</ol>
+
+<h2 id="pos-setup"><%= I18n.t("integration.tcp.table_of_contents.pos_setup") %></h2>
+
+<p><%= I18n.t("integration.tcp.pos_setup.paragraph_1") %></p>
+
+<p class="note"><%= I18n.t("integration.tcp.pos_setup.paragraph_2", :configuration => I18n.t("walk_framework.configuration.title")) %></p>
+
+<h2 id="development-environment"><%= I18n.t("integration.tcp.table_of_contents.development_environment") %></h2>
+
+<ol>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_1") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_2") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_3") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_4") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_5") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_6") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_7") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_8") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_9") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_10") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_11") %></li>
+</ol>
+
+<pre><code data-language="html">&lt;integervariable value="0" variable="iConnect" /&gt;
+&lt;integervariable value="0" variable="iRet" /&gt;
+&lt;integervariable value="0" variable="iSize" /&gt;
+&lt;stringvariable value="" variable="sBuf" /&gt;
+
+&lt;display line="0" column="0" message="TCP socket test" /&gt;
+
+&lt;!-- O comando pré-conexão faz com que o terminal se conecte ao CloudWalk --&gt;
+&lt;display line="1" column="0" message="Connecting ..." /&gt;
+&lt;preconnect variablestatus="$(iConnect)" /&gt;
+
+&lt;!-- Realiza a transação ao se conectar --&gt;
+&lt;if variable="$(iConnect)" operator="igual" value="0" &gt;
+  &lt;display line="1" column="0" message="Connected!" /&gt;
+
+  &lt;!-- O conteúdo da variável buffer é no formato hexadecimal. No exemplo
+  abaixo, está sendo enviado o valor 0123456789. É possível utilizar o comando
+  string.tohex para converter qualquer string para o formato hexadecimal, e na
+  sequência, utilize o comando string.length para saber o tamanho da string --&gt;
+
+  &lt;!-- Para que o envio funcione corretamente, é necessário enviar
+  ao menos 7 bytes para o CloudWalk --&gt;
+
+  &lt;display line="3" column="0" message="Sending ..." /&gt;
+
+  &lt;stringvariable value="0123456789" variable="sBufSend" /&gt;
+  &lt;integervariable value="0" variable="iSzBufSend" /&gt;
+
+  &lt;string.tohex string="$(sBufSend)" variablereturn="$(sBufSend)" /&gt;
+  &lt;string.length value="$(sBufSend)" variablereturn="$(iSzBufSend)" /&gt;
+  &lt;network.send buffer="$(sBufSend)" size="$(iSzBufSend)" variablereturn="$(iRet)" /&gt;
+
+  &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
+    &lt;!-- A resposta também será armazenada em hexadecimal na variável variavelbuffer. Utilize
+    o comando string.fromhex para converter o conteúdo para ASCII --&gt;
+    &lt;network.receive variablebuffer="$(sBuf)" maxsize="20" variablereceivedbytes="$(iSize)" variablereturn="$(iRet)" /&gt;
+    &lt;string.fromhex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
+
+    &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
+      &lt;display line="5" column="0" message="Socket response:" /&gt;
+      &lt;display line="6" column="0" message="$(sBuf)" /&gt;
+    &lt;else/&gt;
+      &lt;display line="5" column="0" message="Receive failed!" /&gt;
+    &lt;/if&gt;
+  &lt;else/&gt;
+    &lt;display line="5" column="0" message="Send failed!" /&gt;
+  &lt;/if&gt;
+
+  &lt;!-- Sempre utilize o comando network.hostdisconnect antes de utilizar
+  novamente os comandos network.send e network.receive --&gt;
+  &lt;network.hostdisconnect /&gt;
+&lt;else /&gt;
+  &lt;display line="1" column="0" message="Connection failed!" /&gt;
+&lt;/if&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+
+<h2 id="walk-manager-setup"><%= I18n.t("integration.tcp.table_of_contents.walk_manager_setup") %></h2>
+
+<p><%= I18n.t("integration.tcp.walk_manager_setup.paragraph_1") %></p>
+
+<h3><%= I18n.t("integration.tcp.walk_manager_setup.create_group.header") %></h3>
+
+<ol>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_group.list.item_1") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_group.list.item_2") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_group.list.item_3") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_group.list.item_4") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_group.list.item_5") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_group.list.item_6") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_group.list.item_7") %></li>
+</ol>
+
+<h3><%= I18n.t("integration.tcp.walk_manager_setup.create_logical_number.header") %></h3>
+
+<p><%= I18n.t("integration.tcp.walk_manager_setup.create_logical_number.paragraph_1") %></p>
+
+<ol>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_logical_number.list.item_1") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_logical_number.list.item_2") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_logical_number.list.item_3") %></li>
+  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_logical_number.list.item_4") %></li>
+</ol>
+
+<h3><%= I18n.t("integration.tcp.walk_manager_setup.associate_logical_number.header") %></h3>
+
+<p><%= I18n.t("integration.tcp.walk_manager_setup.associate_logical_number.paragraph_1") %></p>
+
+<div class="pos evo"><pre>
+- POS SETTINGS -
+
+1 LOGICAL NUMBER
+2 COMMUNICATION
+3 CARD TYPES
+4 CLEAN TERMINAL
+5 CHECK S. NUMBER
+6 ABOUT
+</pre></div>
+
+<p><%= I18n.t("integration.tcp.walk_manager_setup.associate_logical_number.paragraph_2") %></p>
+
+<div class="pos evo"><pre>
+- LOGICAL NUMBER -
+
+:0001
+</pre></div>
+
+<p><%= I18n.t("integration.tcp.walk_manager_setup.associate_logical_number.paragraph_3") %></p>
+
+<h2 id="testing"><%= I18n.t("integration.tcp.table_of_contents.testing") %></h2>
+
+<p><%= I18n.t("integration.tcp.testing.paragraph_1") %></p>
+
+<h3><%= I18n.t("integration.tcp.testing.download_application") %></h3>
+
+<p><%= I18n.t("integration.tcp.testing.paragraph_2") %></p>
+
+<div class="pos evo">
+<pre>
+
+  DOWNLOADING ...
+</pre>
+</div>
+
+<p><%= I18n.t("integration.tcp.testing.paragraph_3") %></p>
+
+<div class="pos evo">
+<pre>
+
+  DOWNLOAD COMPLETE!
+     PRESS GREEN
+</pre>
+</div>
+
+<h3><%= I18n.t("integration.tcp.testing.run_application") %></h3>
+
+<p><%= I18n.t("integration.tcp.testing.paragraph_4") %></p>
+
+<div class="pos evo">
+<pre>
+TCP socket test
+Connecting ...
+</pre>
+</div>
+
+<div class="pos evo">
+<pre>
+TCP socket test
+Connected!
+</pre>
+</div>
+
+<div class="pos evo">
+<pre>
+TCP socket test
+Connected!
+
+Sending ...
+</pre>
+</div>
+
+<div class="pos evo">
+<pre>
+TCP socket test
+Connected!
+
+Sending ...
+
+Socket response:
+CLOUDWALK 0123456789
+</pre>
+</div>
+
+<h3><%= I18n.t("integration.tcp.testing.if_fail") %></h3>
+
+<p><%= I18n.t("integration.tcp.testing.paragraph_5") %></p>
+
+<div class="pos evo">
+<pre>
+TCP socket test
+Connection failed!
+</pre>
+</div>
+
+<h3><%= I18n.t("integration.tcp.testing.testing_post_request") %></h3>
+
+<p><%= I18n.t("integration.tcp.testing.paragraph_6") %></p>
+
+<img src="/img/telnet.png" class="img-polaroid" alt="telnet" />

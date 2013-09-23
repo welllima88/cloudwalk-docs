@@ -1,0 +1,66 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.if.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>if</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "02/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.if.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands.if.operators_list") %></p>
+
+<ul>
+  <li><%= I18n.t("posxml.commands.if.operators.operator_1") %></li>
+  <li><%= I18n.t("posxml.commands.if.operators.operator_2") %></li>
+  <li><%= I18n.t("posxml.commands.if.operators.operator_3") %></li>
+  <li><%= I18n.t("posxml.commands.if.operators.operator_4") %></li>
+  <li><%= I18n.t("posxml.commands.if.operators.operator_5") %></li>
+  <li><%= I18n.t("posxml.commands.if.operators.operator_6") %></li>
+</ul>
+
+<p><%= I18n.t("posxml.commands.if.operators_integer.paragraph_1") %></p>
+<p><%= I18n.t("posxml.commands.if.operators_integer.paragraph_2") %></p>
+
+<p><%= I18n.t("posxml.commands.if.operators_string.paragraph_1") %></p>
+<p><%= I18n.t("posxml.commands.if.operators_string.paragraph_2") %></p>
+
+<p><%= I18n.t("posxml.commands.if.other_operators") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.if.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.if.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.if.parameters.parameter_3") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="blue" variable="sColor"/&gt;
+&lt;integervariable value="123" variable="iNumber"/&gt;
+
+&lt;if variable="$(sColor)" operator="equalto" value="blue"&gt;
+  &lt;display column="0" line="0" message="blue equal to blue" /&gt;
+&lt;/if&gt;
+
+&lt;waitkey /&gt;
+
+&lt;if variable="$(iNumber)" operator="greaterthan" value="111"&gt;
+  &lt;display column="0" line="0" message="123 greater than 111" /&gt;
+&lt;/if&gt;
+
+&lt;waitkey /&gt;
+
+&lt;if variable="$(sColor)" operator="notequalto" value="Blue"&gt;
+  &lt;display column="0" line="0" message="Blue not equal to blue" /&gt;
+&lt;/if&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+<p><%= I18n.t("posxml.commands.if.paragraph_2") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

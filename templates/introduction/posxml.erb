@@ -1,0 +1,30 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('introduction.posxml.description') %>">
+<% end %>
+
+<h1><%= I18n.t("introduction.posxml.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/01/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#overview"><%= I18n.t("introduction.posxml.table_of_contents.overview") %></a></li>
+  <li><a href="#more-info"><%= I18n.t("introduction.posxml.table_of_contents.more_info") %></a></li>
+</ol>
+
+<h2 id="overview"><%= I18n.t("introduction.posxml.table_of_contents.overview") %></h2>
+
+<p><%= I18n.t("introduction.posxml.overview.paragraph_1") %></p>
+
+<p><%= I18n.t("introduction.posxml.overview.paragraph_2") %></p>
+
+<h2 id="more-info"><%= I18n.t("introduction.posxml.table_of_contents.more_info") %></h2>
+
+<p><%= I18n.t("introduction.posxml.more_info.paragraph_1") %></p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.understanding_the_service.development_environment"), "introduction/development-environment") %>
+  </li>
+</ul>

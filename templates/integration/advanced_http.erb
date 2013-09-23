@@ -1,0 +1,144 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('integration.advanced_http.description') %>">
+<% end %>
+
+<h1><%= I18n.t("integration.advanced_http.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/07/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#introduction"><%= I18n.t("integration.advanced_http.table_of_contents.introduction") %></a></li>
+  <li><a href="#http-samples"><%= I18n.t("integration.advanced_http.table_of_contents.http_samples") %></a></li>
+  <li><a href="#posxml-sample"><%= I18n.t("integration.advanced_http.table_of_contents.posxml_sample") %></a></li>
+</ol>
+
+<h2 id="introduction"><%= I18n.t("integration.advanced_http.table_of_contents.introduction") %></h2>
+
+<p><%= I18n.t("integration.advanced_http.introduction.paragraph_1") %></p>
+
+<pre><code>POST / buf=0123456789&anotherVariable=ABCDEF</code></pre>
+
+<p><%= I18n.t("integration.advanced_http.introduction.paragraph_2") %></p>
+
+<p><%= I18n.t("integration.advanced_http.introduction.paragraph_3") %></p>
+
+<h2 id="http-samples"><%= I18n.t("integration.advanced_http.table_of_contents.http_samples") %></h2>
+
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+      <th><%= I18n.t("integration.advanced_http.http_samples.http_verb") %></th>
+      <th><%= I18n.t("integration.advanced_http.http_samples.path") %></th>
+      <th><%= I18n.t("integration.advanced_http.http_samples.variables") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>POST</td>
+      <td>/</td>
+      <td>buf=0123456789&anotherVariable=ABCDEF</td>
+    </tr>
+    <tr>
+      <td>POST</td>
+      <td>/index.php</td>
+      <td>foo=1&bar=2</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/list.asp</td>
+      <td>id=123</td>
+    </tr>
+    <tr>
+      <td>GET</td>
+      <td>/</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>DELETE</td>
+      <td>/products/28</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="posxml-sample"><%= I18n.t("integration.advanced_http.table_of_contents.posxml_sample") %></h2>
+
+<p><%= I18n.t("integration.advanced_http.posxml_sample.paragraph_1") %></p>
+
+<pre><code data-language="html">&lt;!-- try to start the connection with CloudWalk --&gt;
+&lt;integervariable value="0" variable="iRet" /&gt;
+&lt;cleandisplay /&gt;
+&lt;display line="1" column="3" message=" CONNECTING " /&gt;
+&lt;preconnect variablestatus="$(iRet)" /&gt;
+&lt;if variable="$(iRet)" operator="notequalto" value="0"&gt;
+  &lt;cleandisplay /&gt;
+  &lt;display line="1" column="3" message="  CONNECTING " /&gt;
+  &lt;display line="2" column="3" message="     ERROR   " /&gt;
+  &lt;waitkeytimeout seconds="5" /&gt;
+  &lt;network.hostdisconnect /&gt;
+  &lt;exit /&gt;
+&lt;else /&gt;
+  &lt;display line="1" column="3" message=" SENDING " /&gt;    
+&lt;/if&gt;
+
+&lt;stringvariable value="POST / " variable="sVerbAndPath" /&gt;
+&lt;stringvariable value="buf=0123456789" variable="sBuf" /&gt;
+&lt;stringvariable value="&amp;" variable="sAmp" /&gt;
+&lt;stringvariable value="anotherVariable=ABCDEF" variable="sAnotherVariable" /&gt;
+
+&lt;!-- creating a string in the format "POST / buf=0123456789&anotherVariable=ABCDEF" --&gt;
+&lt;joinstring firstvalue="$(sVerbAndPath)" secondvalue="$(sBuf)" variabledestination="$(sBuf)" /&gt;
+&lt;joinstring firstvalue="$(sBuf)" secondvalue="$(sAmp)" variabledestination="$(sBuf)" /&gt;
+&lt;joinstring firstvalue="$(sBuf)" secondvalue="$(sAnotherVariable)" variabledestination="$(sBuf)" /&gt;
+
+&lt;!-- converting to HEXASCII to send using network.send --&gt;
+&lt;integervariable value="0" variable="iSize" /&gt;
+&lt;string.tohex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
+&lt;string.length value="$(sBuf)" variablereturn="$(iSize)" /&gt;
+
+&lt;!-- sending with network.send --&gt;
+&lt;integervariable value="0" variable="iRet" /&gt;
+&lt;network.send buffer="$(sBuf)" size="$(iSize)" variablereturn="$(iRet)" /&gt;
+
+&lt;!-- receiving with network.receive --&gt;
+&lt;stringvariable value="" variable="sBufReceive" /&gt;
+&lt;integervariable value="0" variable="iBytesReceive" /&gt;
+
+&lt;!-- receive the 4 bytes of size --&gt;
+&lt;network.receive variablebuffer="$(sBufReceive)" maxsize="4"
+                 variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+
+&lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
+  &lt;cleandisplay /&gt;
+  &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
+  &lt;display line="2" column="3" message="     ERROR     " /&gt;
+  &lt;waitkeytimeout seconds="5" /&gt;
+  &lt;network.hostdisconnect /&gt;
+  &lt;exit /&gt;
+&lt;/if&gt;
+
+&lt;!-- receive the message --&gt;
+&lt;string.fromhex string="$(sBufReceive)" variablereturn="$(sBufReceive)" /&gt;
+&lt;convert.toint base="16" number="$(sBufReceive)" variablereturn="$(iSize)" /&gt;
+&lt;network.receive variablebuffer="$(sBufReceive)" maxsize="$(iSize)"
+                 variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+
+&lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
+  &lt;cleandisplay /&gt;
+  &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
+  &lt;display line="2" column="3" message="     ERROR     " /&gt;
+  &lt;waitkeytimeout seconds="5" /&gt;
+  &lt;network.hostdisconnect /&gt;
+  &lt;exit /&gt;
+&lt;/if&gt;
+
+&lt;!-- convert from HEXASCII and show the msg on display --&gt;
+&lt;string.fromhex string="$(sBufReceive)" variablereturn="$(sBufReceive)" /&gt;
+&lt;cleandisplay /&gt;
+&lt;display line="1" column="3" message=" RECEIVED: " /&gt;
+&lt;display line="2" column="0" message="$(sBufReceive)" /&gt;
+&lt;waitkeytimeout seconds="5" /&gt;
+&lt;network.hostdisconnect /&gt;
+</code></pre>

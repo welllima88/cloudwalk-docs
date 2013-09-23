@@ -1,0 +1,83 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.structure.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.structure.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "22/05/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#structure"><%= I18n.t("posxml.structure.table_of_contents.structure") %></a></li>
+  <li><a href="#root-tag"><%= I18n.t("posxml.structure.table_of_contents.root_tag") %></a></li>
+  <li><a href="#case-sensitive"><%= I18n.t("posxml.structure.table_of_contents.case_sensitive") %></a></li>
+  <li><a href="#reserved-characters"><%= I18n.t("posxml.structure.table_of_contents.reserved_characters") %></a></li>
+  <li><a href="#comments"><%= I18n.t("posxml.structure.table_of_contents.comments") %></a></li>
+</ol>
+
+<p><%= I18n.t("posxml.structure.introduction") %></p>
+
+<h2 id="structure"><%= I18n.t("posxml.structure.table_of_contents.structure") %></h2>
+
+<p><%= I18n.t("posxml.structure.structure.paragraph_1") %></p>
+
+<h2 id="case-sensitive"><%= I18n.t("posxml.structure.table_of_contents.case_sensitive") %></h2>
+
+<p><%= I18n.t("posxml.structure.case_sensitive.paragraph_1") %></p>
+
+<p><strong><%= I18n.t("posxml.structure.case_sensitive.paragraph_2") %></strong></p>
+
+<pre><code data-language="html">&lt;callfunction name="showmessage" /&gt;
+
+&lt;function name="showmessage"&gt;
+  &lt;display line="0" column="0" message=" Message 1" /&gt;
+  &lt;waitkey /&gt;
+&lt;/function&gt;
+
+&lt;function name="showmessage"&gt;
+  &lt;display line="0" column="0" message=" Message 2" /&gt;
+  &lt;waitkey /&gt;
+&lt;/function&gt;
+</code></pre>
+
+<h2 id="reserved-characters"><%= I18n.t("posxml.structure.table_of_contents.reserved_characters") %></h2>
+
+<p><%= I18n.t("posxml.structure.reserved_characters.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.structure.reserved_characters.paragraph_2") %></p>
+
+<pre>
+< &amp;lt;
+> &amp;gt;
+& &amp;amp;
+' &amp;apos;
+" &amp;quot;
+</pre>
+
+<p><%= I18n.t("posxml.structure.reserved_characters.paragraph_3") %></p>
+
+<pre><code data-language="html">&lt;callfunction name="showmessage" /&gt;
+
+&lt;function name="showmessage"&gt;
+  &lt;display line="0" column="0" message="&amp;lt; = lower" /&gt;
+  &lt;waitkey /&gt;
+&lt;/function&gt;
+</code></pre>
+
+<h2 id="comments"><%= I18n.t("posxml.structure.table_of_contents.comments") %></h2>
+
+<p><%= I18n.t("posxml.structure.comments.paragraph_1") %></p>
+
+<pre><code data-language="html">&lt;function name="showmessage"&gt;
+  &lt;!-- Display --&gt;
+  &lt;display line="0" column="0" message="&lt; = lower" /&gt;
+  &lt;waitkey /&gt;
+&lt;/function&gt;
+</code></pre>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to(I18n.t("menu.posxml.memory_and_variables") + " &rarr;", "posxml/memory-and-variables") %>
+  </li>
+</ul>

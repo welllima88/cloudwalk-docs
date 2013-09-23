@@ -1,0 +1,50 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.deletefile.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>deletefile</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "06/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.deletefile.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.deletefile.parameters.parameter_1") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sPopulation" /&gt;
+
+&lt;integervariable value="" variable="iDownload" /&gt;
+
+&lt;downloadfile deleteafterdownload="0" filename="test.txt" remotepath="test.txt" variablereturn="$(iDownload)" /&gt;
+
+&lt;deletefile filename="test.txt" /&gt;
+
+&lt;readfile filename="test.txt" key="population" variabledestination="$(sPopulation)" /&gt;
+
+&lt;display column="0" line="3" message="Population: " /&gt;
+&lt;display column="0" line="4" message="$(sPopulation)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+
+<h2><%= I18n.t("posxml.commands.example") %> Walk DB</h2>
+
+<pre>
+country=USA
+state=California
+city=Los Angeles
+population=3.792.621
+</pre>
+
+<hr/>
+<p><%= I18n.t("posxml.commands.deletefile.paragraph_2") %></p>
+<p><%= I18n.t("posxml.commands.deletefile.paragraph_3") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

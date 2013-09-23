@@ -1,0 +1,24 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands_list.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands_list.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/01/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#presentation"><%= I18n.t("posxml.commands_list.table_of_contents.presentation") %></a></li>
+  <li><a href="#commands-list"><%= I18n.t("posxml.commands_list.table_of_contents.commands_list") %></a></li>
+</ol>
+
+<h2 id="presentation"><%= I18n.t("posxml.commands_list.table_of_contents.presentation") %></h2>
+
+<p><%= I18n.t("posxml.commands_list.presentation.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands_list.presentation.paragraph_2") %></p>
+
+<h2 id="commands-list">Comandos</h2>
+
+<%= erb :"posxml/_commands" %>

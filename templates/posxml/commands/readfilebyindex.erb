@@ -1,0 +1,54 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.readfilebyindex.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>readfilebyindex</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "06/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.readfilebyindex.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.readfilebyindex.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.readfilebyindex.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.readfilebyindex.parameters.parameter_3") %></li>
+  <li><%= I18n.t("posxml.commands.readfilebyindex.parameters.parameter_4") %></li>
+  <li><%= I18n.t("posxml.commands.readfilebyindex.parameters.parameter_5") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sKeyValue" /&gt;
+&lt;stringvariable value="" variable="sKeyName" /&gt;
+
+&lt;integervariable value="" variable="iReturn" /&gt;
+&lt;integervariable value="" variable="iDownload" /&gt;
+
+&lt;downloadfile deleteafterdownload="0" filename="test.txt" remotepath="test.txt" variablereturn="$(iDownload)" /&gt;
+
+&lt;readfilebyindex filename="test.txt" index="2" variablekey="$(sKeyName)" variablereturn="$(iReturn)" variablevalue="$(sKeyValue)" /&gt;
+
+&lt;display column="0" line="0" message="$(sKeyName)" /&gt;
+&lt;display column="0" line="1" message="$(sKeyValue)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+
+<a id="walk_db"></a>
+<h2><%= I18n.t("posxml.commands.example") %> Walk DB</h2>
+<pre>
+country=USA
+state=California
+city=Los Angeles
+population=3.792.621
+</pre>
+
+<hr/>
+<p><%= I18n.t("posxml.commands.readfilebyindex.paragraph_2") %></p>
+<p><%= I18n.t("posxml.commands.readfilebyindex.paragraph_3") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

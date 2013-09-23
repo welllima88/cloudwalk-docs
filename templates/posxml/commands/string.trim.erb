@@ -1,0 +1,37 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.string_trim.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>string.trim</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "07/05/2013") %></p>
+
+<p><%= I18n.t("posxml.commands.string_trim.paragraph_1") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.string_trim.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.string_trim.parameters.parameter_2") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="    CloudWalk    " variable="sText" /&gt;
+
+&lt;display column="0" line="0" message="Without TRIM:" /&gt;
+&lt;display column="0" line="1" message="$(sText)" /&gt;
+
+&lt;string.trim string="$(sText)" variablereturn="$(sText)" /&gt;
+
+&lt;display column="0" line="3" message="With TRIM:" /&gt;
+&lt;display column="0" line="4" message="$(sText)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+<p><%= I18n.t("posxml.commands.string_trim.paragraph_2") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

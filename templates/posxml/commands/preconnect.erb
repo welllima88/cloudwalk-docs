@@ -1,0 +1,39 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.preconnect.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>preconnect</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "13/05/2013") %></p>
+
+<p class="note"><%= I18n.t("posxml.commands.preconnect.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands.preconnect.paragraph_2") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.preconnect.parameters.parameter_1") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;integervariable variable="iConnect" value=""/&gt;
+&lt;stringvariable variable="sConnect" value=""/&gt;
+
+&lt;preconnect variablestatus="$(iConnect)" /&gt;
+
+&lt;inttostring variableinteger="$(iConnect)" variablestring="$(sConnect)" /&gt;
+
+&lt;display column="0" line="0" message="$(sConnect)"/&gt;
+
+&lt;waitkey/&gt;
+</code></pre>
+
+<hr/>
+<p><%= I18n.t("posxml.commands.preconnect.paragraph_3") %></p>
+<p><%= I18n.t("posxml.commands.preconnect.paragraph_4") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

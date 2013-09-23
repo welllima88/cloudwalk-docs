@@ -1,0 +1,56 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.emv_loadtables.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>emv.loadtables</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "13/09/2013") %></p>
+
+<p class="note"><%= I18n.t("posxml.commands.emv_loadtables.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands.emv_loadtables.paragraph_2") %></p>
+
+<p><%= I18n.t("posxml.commands.emv_loadtables.paragraph_3") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.emv_loadtables.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.emv_loadtables.parameters.parameter_2") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
+&lt;integervariable value="" variable="iReturn" /&gt;
+
+&lt;emv.open mkslot="0" pinpadtype="2" pinpadwk="0123456789ABCDEF" showamount="1" variablereturn="$(iReturn)" /&gt;
+
+&lt;!-- OBS: se a biblioteca já foi inicializada, o comando irá retornar 14, que não é um erro --&gt;
+
+&lt;if variable="$(iReturn)" operator="notequalto" value="0"&gt;
+
+  &lt;display column="1" line="1" message="not possible to open the EMV library"/&gt;
+  &lt;waitkey/&gt;
+  &lt;exit/&gt;
+
+&lt;/if&gt;
+
+&lt;emv.loadtables acquirer="04" variablereturn="$(iReturn)"&gt;
+
+&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
+
+&lt;display column="0" line="0" message="$(sReturn)" /&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+<hr/>
+
+<p><%= I18n.t("posxml.commands.emv_loadtables.paragraph_4") %></p>
+<p><%= I18n.t("posxml.commands.emv_loadtables.paragraph_5") %></p>
+<p><%= I18n.t("posxml.commands.emv_loadtables.paragraph_6") %></p>
+<p><%= I18n.t("posxml.commands.emv_loadtables.paragraph_7") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>

@@ -1,0 +1,64 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('api.overview.description') %>">
+<% end %>
+
+<h1><%= I18n.t("api.overview.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "08/08/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#functionality"><%= I18n.t("api.overview.table_of_contents.functionality") %></a></li>
+  <li><a href="#versioning"><%= I18n.t("api.overview.table_of_contents.versioning") %></a></li>
+  <li><a href="#pagination"><%= I18n.t("api.overview.table_of_contents.pagination") %></a></li>
+  <li><a href="#crud"><%= I18n.t("api.overview.table_of_contents.crud") %></a></li>
+  <li><a href="#api-token"><%= I18n.t("api.overview.table_of_contents.api_token") %></a></li>
+</ol>
+
+<h2 id="functionality"><%= I18n.t("api.overview.table_of_contents.functionality") %></h2>
+
+<p><%= I18n.t("api.overview.functionality.paragraph_1", :version => I18n.t("api.version")) %></p>
+
+<p class="note"><%= I18n.t("api.overview.functionality.paragraph_2") %></p>
+
+<p><%= I18n.t("api.overview.functionality.paragraph_3") %></p>
+
+<pre>
+YYYY-MM-DDTHH:MM:SSZ
+</pre>
+
+<h2 id="versioning"><%= I18n.t("api.overview.table_of_contents.versioning") %></h2>
+
+<p><%= I18n.t("api.overview.versioning.paragraph_1") %></p>
+
+<p><%= I18n.t("api.overview.versioning.paragraph_2") %></p>
+
+<h2 id="pagination"><%= I18n.t("api.overview.table_of_contents.pagination") %></h2>
+
+<p><%= I18n.t("api.overview.pagination.paragraph_1") %></p>
+
+<pre>https://api.cloudwalk.io/v1/devices?access_token=$TOKEN&page=2&per_page=50</pre>
+
+<h2 id="crud"><%= I18n.t("api.overview.table_of_contents.crud") %></h2>
+
+<p><%= I18n.t("api.overview.crud.paragraph_1") %></p>
+
+<p><%= I18n.t("api.overview.crud.paragraph_2") %></p>
+
+<ol>
+  <li><%= I18n.t("api.overview.crud.paragraph_3", :version => I18n.t("api.version")) %></li>
+  <li><%= I18n.t("api.overview.crud.paragraph_4", :version => I18n.t("api.version")) %></li>
+  <li><%= I18n.t("api.overview.crud.paragraph_5", :version => I18n.t("api.version")) %></li>
+  <li><%= I18n.t("api.overview.crud.paragraph_6", :version => I18n.t("api.version")) %></li>
+</ol>
+
+<h2 id="api-token"><%= I18n.t("api.overview.table_of_contents.api_token") %></h2>
+
+<p><%= I18n.t("api.overview.api_token.paragraph_1") %></p>
+
+<img src="/img/<%= I18n.locale %>/walk-manager/api-token.png" class="img-polaroid" alt="Developer API" />
+
+<p><%= I18n.t("api.overview.api_token.paragraph_2") %></p>
+
+<p><span class="code">https://api.cloudwalk.io/<%= I18n.t("api.version") %>/devices?access_token=6eb718f846c6d303ed8054cdf7ccdb18c821de18</span></p>

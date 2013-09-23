@@ -1,0 +1,45 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.file_system.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.file_system.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/01/2013") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#presentation"><%= I18n.t("posxml.file_system.table_of_contents.presentation") %></a></li>
+  <li><a href="#creating-and-editing-files"><%= I18n.t("posxml.file_system.table_of_contents.creating_and_editing_files") %></a></li>
+</ol>
+
+<h2 id="presentation"><%= I18n.t("posxml.file_system.table_of_contents.presentation") %></h2>
+
+<p><%= I18n.t("posxml.file_system.presentation.paragraph_1") %></p>
+
+<pre>key_1=buffer_2\nkey_2=buffer_2\n</pre>
+
+<p><%= I18n.t("posxml.file_system.presentation.paragraph_2") %></p>
+
+<h2 id="creating-and-editing-files"><%= I18n.t("posxml.file_system.table_of_contents.creating_and_editing_files") %></h2>
+
+<p><%= I18n.t("posxml.file_system.creating_and_editing_files.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.file_system.creating_and_editing_files.paragraph_2") %></p>
+
+<ol>
+  <li><%= I18n.t("posxml.file_system.creating_and_editing_files.paragraph_3") %></li>
+  <li><%= I18n.t("posxml.file_system.creating_and_editing_files.paragraph_4") %></li>
+  <li><%= I18n.t("posxml.file_system.creating_and_editing_files.paragraph_5") %></li>
+  <li><%= I18n.t("posxml.file_system.creating_and_editing_files.paragraph_6") %></li>
+  <li><%= I18n.t("posxml.file_system.creating_and_editing_files.paragraph_7") %></li>
+</ol>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.posxml.memory_and_variables"), "posxml/memory-and-variables") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("menu.posxml.configuration") + " &rarr;", "posxml/configuration") %>
+  </li>
+</ul>

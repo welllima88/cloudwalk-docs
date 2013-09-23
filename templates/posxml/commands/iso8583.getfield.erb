@@ -1,0 +1,44 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.iso8583_getfield.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.commands.title") %> <em>iso8583.getfield</em></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "08/05/2013") %></p>
+
+<p class="note"><%= I18n.t("posxml.commands.iso8583_getfield.paragraph_1") %></p>
+
+<p><%= I18n.t("posxml.commands.iso8583_getfield.paragraph_2") %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.iso8583_getfield.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.iso8583_getfield.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.iso8583_getfield.parameters.parameter_3") %></li>
+  <li><%= I18n.t("posxml.commands.iso8583_getfield.parameters.parameter_4") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;function name="Getfields"&gt;
+&lt;integervariable value="0" variable="iReturn"&gt;
+
+&lt;stringvariable value="" variable="sBIT39"&gt;
+&lt;stringvariable value="" variable="sBIT62"&gt;
+&lt;stringvariable value="" variable="sBIT64"&gt;
+
+&lt;iso8583.getfield fieldnumber="39" type="string" variablevalue="$(sBIT39)" variablereturn="$(iRet)"&gt;
+&lt;iso8583.getfield fieldnumber="62" type="string" variablevalue="$(sBIT62)" variablereturn="$(iRet)"&gt;
+&lt;iso8583.getfield fieldnumber="64" type="string" variablevalue="$(sBIT64)" variablereturn="$(iRet)"&gt;
+
+&lt;/function&gt;
+</code></pre>
+
+<p><%= I18n.t("posxml.commands.iso8583_getfield.paragraph_3") %></p>
+<p><%= I18n.t("posxml.commands.iso8583_getfield.paragraph_4") %></p>
+<p><%= I18n.t("posxml.commands.iso8583_getfield.paragraph_5") %></p>
+
+<h2><%= I18n.t("posxml.commands.comments") %></h2>
+
+<%= mootit %>
