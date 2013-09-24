@@ -155,12 +155,12 @@ p.more-info {
 
 .external{
   padding-right: 15px;
-  background: #fff url("../img/external.png") no-repeat right center;
+  background: transparent url("../img/external.png") no-repeat right center;
 }
 
 .command{
   padding-right: 18px;
-  background: #fff url("../img/command.png") no-repeat right center;
+  background: transparent url("../img/command.png") no-repeat right center;
 }
 
 .command-short {
