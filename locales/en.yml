@@ -873,14 +873,12 @@ en:
         paragraph_7: It is necessary to initialize the library EMV and load the tables only if the device is <strong>turned on</strong> or <strong>restarted</strong>, otherwise it is not necessary to use this command every time on an EMV transaction.
         parameters:
           parameter_1: <strong>acquirer</strong> <span class='data-type'>[integer]</span><br/> Acquirer network identification number.
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>10: Error while starting the tables</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>21: Error while trying to store records</li><li>30: Communication error, PIN-Pad serial port is probably busy</li></ul>
-
-'
+          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>10: Error while starting the tables</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>21: Error while trying to store records</li><li>30: Communication error, PIN-Pad serial port is probably busy</li></ul>'
       emv_open:
         description: Initializes EMV library
         paragraph_1: The command <span class='code'>emv.open</span> is used to initialize EMV library.
-        paragraph_2: 
-        paragraph_3: 
+        paragraph_2: The command <span class='code'>emv.open</span> is used to initialize the EMV library, allocating hardware and software resources necessary for the EMV Kernel operation. A successful call to this command is a prerequisite for all other EMV library calls.
+        paragraph_3: In the above example, the command <span class='code'>emv.open</span> was used to initialize the device's EMV library. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> was used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>mkslot</strong> <span class='data-type'>[integer]</span><br/> Device slot that the master key is stored.
           parameter_2: ! '<strong>pinpadtype</strong> <span class=''data-type''>[integer]</span><br/> PIN-Pad type: <br/><ul><li>1: Internal</li><li>2: External</li></ul>'
@@ -890,35 +888,31 @@ en:
       emv_processtransaction:
         description: Starts the execution of the EMV process
         paragraph_1: The command <span class='code'>emv.processtransaction</span> is used to initiate the execution of the EMV process.
-        paragraph_2: 
+        paragraph_2: The command <span class='code'>emv.processtransaction</span> continues the chip card handling process. If the command <a href='emv.inittransaction' class='command'>emv.inittransaction</a> returns that a magnetic card was swiped, then this command should not be executed.
         paragraph_3: This command uses the timeout when capturing the PIN if it was defined by <a href='emv.settimeout' class='command'>emv.settimeout</a>.
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
-        paragraph_5: 
+        paragraph_5: Then, the command <span class='code'>emv.processtransaction</span> is executed to continue the chip card handling process. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: ! '<strong>ctls</strong> <span class=''data-type''>[integer]</span><br/>Defines wether the transaction should be <em><strong>contact-less</strong></em>, where:<br/><ul><li>1: Contact-less transaction</li><li>0: Contact (standard) transaction</li></ul>'
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>19: Absence of data for the mandatory field 55, or mandatory data is not accessible (if that''s the case, pass the tag on baOptionalTags)</li><li>31: PIN-Pad communication error</li><li>40: Execution error</li><li>43: Card removed in the middle of the operation</li></ul>
-
-'
+          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>19: Absence of data for the mandatory field 55, or mandatory data is not accessible (if that''s the case, pass the tag on baOptionalTags)</li><li>31: PIN-Pad communication error</li><li>40: Execution error</li><li>43: Card removed in the middle of the operation</li></ul>'
       emv_removecard:
         description: Waits for card removal
         paragraph_1: The command <span class='code'>emv.removecard</span> is used to wait for the card removal.
         paragraph_2: The command <span class='code'>emv.removecard</span> awaits the chip card removal. It is advised to always use this command at the end of the operation flow, whether successful or unsuccessful.
         paragraph_3: This command uses the timeout to remove the card if it was defined by <a href='emv.settimeout' class='command'>emv.settimeout</a>.
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
-        paragraph_5: 
+        paragraph_5: Then, the command <span class='code'>emv.finishtransaction</span> is executed to finish the chip card handling process. After that, the command <span class='code'>emv.removecard</span> requests the user to remove the chip card. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: 
+          parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter set on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
       emv_settimeout:
         description: Define timeout (in seconds) of the library of the EMV process
         paragraph_1: The command <span class='code'>emv.settimeout</span> is used to set timeout (in seconds) of the library of the EMV processes.
         paragraph_2: The command <span class='code'>emv.settimeout</span> is used to set a timeout to be used be blocking commands.
         paragraph_3: This timeout can be changed before performing a command, that is, this statement can be called several times during the transaction cycle.
-        paragraph_4: 
+        paragraph_4: In the above example, the command <span class='code'>emv.settimeout</span> is executed passing 10 seconds to the parameter <em><strong>seconds</strong></em>, that is, when the next command <a href='emv.inittransaction' class='commands'>emv.inittransaction</a> is executed, the device will wait for 10 seconds until the user inserts or swipes the card.
         parameters:
           parameter_1: <strong>timeout</strong> <span class='data-type'>[integer]</span><br/>Timeout in seconds
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>15: Library EMV not initiated</li><li>16: Internal error</li></ul>
-
-'
+          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>15: Library EMV not initiated</li><li>16: Internal error</li></ul>'
       example: Example
       execute:
         app_name: ! 'Application name:'
@@ -981,7 +975,7 @@ en:
         description: Lists the files of a directory by saving them in a file
         paragraph_1: The command <span class='code'>filesystem.listfiles</span> is used to list the directory files by saving them in a file.
         paragraph_2: At this moment this commands is not supported by <strong>Telium 2</strong> terminals.
-        paragraph_3: 
+        paragraph_3: In the above example, a file called <em><strong>files.dat</strong></em> will be created, and this file will save the name and size of all files that are in the directory being analyzed, in this case the directory <strong>F</strong>.<br/> Since the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Directory which is going to be analyzed, that can be I or F (VeriFone).
           parameter_2: <strong>listfilename</strong> <span class='data-type'>[string]</span><br/>Name of the file that will store the name and size of the files in the specified directory.
@@ -1146,8 +1140,8 @@ en:
         description: Starts the process of analysis and decomposition of the fields of the message
         paragraph_1: The command <span class='code'>iso8583.analyzemessage</span> is used to start the process of analysis and decomposition of the fields of the message.
         paragraph_2: The command <span class='code'>iso8583.analyzemessage</span> is used to start the process of analysis and decomposition of the fields of the message.
-        paragraph_3: 
-        paragraph_4: 
+        paragraph_3: In the above example, after performing the transaction with the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>, the authorizer responds by sending another ISO message, which is stored on the variable <em><strong>ReceiveMsgISO</strong></em>, and the amount of bytes of the variable on <em><strong>iRecvBytes</strong></em>.
+        paragraph_4: The command <span class='code'>iso8583.analyzemessage</span> is executed to analyze the message returned by the authorizer, if executed successfully, then the <em><strong>function</strong></em> <em><strong>Getfields</strong></em> is executed to retrieve the fields of the reply message.
         parameters:
           parameter_1: <strong>format</strong> <span class='data-type'>[string]</span><br/> Format of the message to be analyzed, which can be ASCII or BCD.
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/> Size of the message being analyzed.
@@ -1159,7 +1153,7 @@ en:
         paragraph_1: The command <span class='code'>iso8583.endmessage</span> is used to finish the ISO8583 message being mounted.
         paragraph_2: In the above example, after starting the ISO8583 message through the command <a href='iso8583.initmessage' class='command'>iso8583.initmessage</a> and inserting the fields through the command <a href='iso8583.putfield' class='command'>iso8583.putfield</a> according to the bitmap (<strong>bitmap.dat</strong>), the command <a href='iso8583.endmessage' class='command'>iso8583.endmessage</a> will be responsible to finish the message, storing on the variable <strong>iSizeMessageISO</strong> the message size and also storing the complete message on the variable <strong>sMsgIso8583</strong>.
         paragraph_3: To visualize the data stored on the variable <strong>sMsgIso8583</strong>, the command <a href='print' class='command'>print</a> was used, where the command <span class='code'>print</span> receives the message as a parameter, letting the device print it. Now it is possible to begin the transaction through the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>.
-        paragraph_4: 
+        paragraph_4: To view the data stored on the variable <strong>sMsgIso8583</strong>, the command <a href='print' class='command'>print</a> was added, passing as a parameter the ISO8583 message, to get the message printed. Now it's possible to start the transaction with the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>.
         parameters:
           parameter_1: <strong>variablesize</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the size of the message.
           parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/> <span class=''data-type''> 0: message successfully finished <br/> -802: function error <br/> -803: buffer overrun </span>'
@@ -1167,14 +1161,14 @@ en:
         description: Extracts a field of the previously analyzed message
         paragraph_1: The command <span class='code'>iso8583.getfield</span> is used to extract a field from the message previously analyzed.
         paragraph_2: The command <span class='code'>iso8583.getfield</span> is used to extract a field from a message previously analyzed in ascending order.
-        paragraph_3: 
+        paragraph_3: In the above example, after processing the transaction and analyzing the ISO message returned by the authorizer, as shown in the example <a href='iso8583.analyzemessage' class='command'>iso8583.analyzemessage</a>, it is possible to start retrieving the field values of the message with the command <span class='code'>iso8583.getfield</span>.
         paragraph_4: <strong>ATTENTION!</strong>
         paragraph_5: The field extraction must be done in ascending order.
         parameters:
           parameter_1: <strong>fieldnumber</strong> <span class='data-type'>[integer]</span><br/> Number of the field to be extracted.
           parameter_2: <strong>type</strong> <span class='data-type'>[string]</span><br/> Field type to be extracted from the message, which can be <strong>string</strong> or <strong>integer</strong>.
           parameter_3: <strong>variablevalue</strong> <span class='data-type'>[string ou integer]</span><br/> Variable where the extracted value will be stored.
-          parameter_4: 
+          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class=''data-type''>0: Field extracted successfully<br/>-801: Invalid parameter<br/>-802: Function error<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error'
       iso8583_initfieldtable:
         description: Starts field table ISO8583 based on a specified file
         paragraph_1: The command <span class='code'>iso8583.initfieldtable</span> starts the ISO8583 field table according to the fields specified on the file defined on the parameter <strong>filename</strong>. This command must be executed before starting to use the ISO8583 messages.
@@ -1183,7 +1177,7 @@ en:
         paragraph_4: 2. <strong>startEngineISO8583</strong> that starts the table through the command <span class='code'>iso8583.initfieldtable</span>.
         paragraph_5: If the download has been successfully completed, the value 1 is defined on the parameter bitmap on file <span class='code'>params.dat</span>, only to indicate that the file is available on the device; Otherwise an error message (based on the command return) will be shown and the application will be closed after pressing the Enter key.
         paragraph_6: After downloading and being sure that file bitmap.dat is present, the function <strong>startEngineISO8583</strong> containing the command <span class='code'>iso8583.initfieldtable</span> is executed, in order to start the table. If the returned value on the variable <strong>iReturn</strong> is <strong>0</strong>, the table was successfully started; Otherwise, the error <strong>-802</strong> will be shown, indicating a problem while starting the table.
-        paragraph_7: 
+        paragraph_7: After downloading and verifying the existence of the file bitmap.dat, the function <strong>startEngineISO8583</strong> will be executed. The function references the command <span class='code'>iso8583.initfieldtable</span> that initializes the table. If the value returned on the variable <strong>iReturn</strong> is <strong>0</strong>, the table was successfully initiated; other else the error <strong>-802</strong> will be displayed, indicating failure at starting up the bitmap table.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the file containing the size and format of all 128 fields defined by the ISO8583 standard.
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
@@ -1279,7 +1273,7 @@ en:
         paragraph_2: The command <span class='code'>network.hostdisconnect</span> is used to disconnect the host terminal but remains connected to the network.
         paragraph_3: In the above example the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the host. The command <a href='network.hostdisconnect' class='command'>network.hostdisconnect</a> will close this connection but the device will be maintained with the network connection.
         paragraph_4: <strong>ATTENTION!</strong>
-        paragraph_5: 
+        paragraph_5: If a dial-up <strong>(PPP e SDLC)</strong> connection was used to perform the transaction, it's necessary to use the command <a href='shutdownmodem' class='command'>shutdownmodem</a> to close the <strong>socket</strong>, preventing the device to keeping the line busy.
         paragraph_6: The command <span class='code'>network.hostdisconnect</span> also closes the socket that was opened with the  <a href='preconnect' class='command'>preconnect</a>, but only for connection types <strong>ETHERNET and GPRS </strong>.
       network_ping:
         description: Checks the status of the connection with the host
@@ -1330,13 +1324,13 @@ en:
       pinpad_close:
         description: Terminates communication with the external or internal pinpad
         paragraph_1: The command <span class='code'>pinpad.close</span> is used to terminate the communication with the external or internal pinpad.
-        paragraph_2: 
+        paragraph_2: In the above example, firstly a connection is opened to the <strong>external PIN-Pad</strong>, then waits for a key to be pressed with the command <a href='waitkey' class='command'>waitkey</a>, and then the communication with the PIN-Pad is terminated with the command <span class='code'>pinpad.close</span>.
         parameters:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the PIN-Pad's display after closing the communication.
       pinpad_display:
         description: Displays a custom message on the display of the pinpad
         paragraph_1: The command <span class='code'>pinpad.display</span> is used to display a custom message on the display of the pinpad.
-        paragraph_2: 
+        paragraph_2: In the above example, firstly a connection is opened to the <strong>external PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>, and then the command <span class='code'>pinpad.display</span> is executed, displaying the message <strong><em>Hello World!</em></span>.
         paragraph_3: It is then expected that some <strong>POS terminal</strong> key is pressed, and after that the disconnection with the pinpad is done with the command <a href='pinpad.close' class='command'>pinpad.close</a>.
         paragraph_4: <strong>ATTENTION!</strong>
         paragraph_5: This command does not apply if the PIN-Pad used is an <strong>internal PIN-Pad</strong>
@@ -1353,7 +1347,7 @@ en:
         parameters:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the external PIN-Pad.
           parameter_2: <strong>timeout</strong> <span class='data-type'>[integer]</span> Timeout in seconds that the statement should wait before resuming the execution.
-          parameter_3: 
+          parameter_3: ! '<strong>variablereturn</strong> <span class=''data-type''>[string]</span> Return of the command, where: <br/><ul><li>-1: Timeout was reached and no action was taken</li></ul> If an action is taken, the PIN-Pad key that was pressed is returned: <strong>KEY_ENTER, KEY_CANCEL, KEY_CLEAR, KEY_EXTRAS</strong>.'
       pinpad_getpindukpt:
         description: Catches a PIN and encrypts it using DUKPT standard
         paragraph_1: The command <span class='code'>pinpad.getpindukpt</span> is used to capture a PIN and encrypts using standard DUKPT.
@@ -1481,7 +1475,7 @@ en:
       smartcard_closereader:
         description: Terminates communication process of with the smart card
         paragraph_1: The command <span class='code'>smartcard.closereader</span> is used to terminate the process of communication with the smart card.
-        paragraph_2: 
+        paragraph_2: In the above example, The command <a href='smartcard.startreader' class='command'>smartcard.startreader</a> is used to start the reader and try to read a card; after that the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable through the command <a href='display' class='command'>display</a>.
         paragraph_3: Then, the command <span class='code'>smartcard.closereader</span> is used to close the reader communication, and the result of the operation is displayed.
         parameters:
           parameter_1: <strong>slot</strong> <span class='data-type'>[integer]</span><br/> slot number that was opened with the command <a href='smartcard.startreader' class='command'>smartcard.startreader</a>.
@@ -1506,7 +1500,7 @@ en:
         paragraph_1: The command <span class='code'>smartcard.transmitAPDU</span> is used to send an APDU command to the smart card.
         paragraph_2: The parameters should receive only hexadecimal strings.
         paragraph_3: In the example above, firstly a loop with the command <a href='while' class='command'>while</a> is made waiting for the command <a href='smartcard.insertedcard' class='command'>smartcard.insertedcard</a> to identify a card insertion.
-        paragraph_4: 
+        paragraph_4: Once the card is inserted, the command <a href='smartcard.startreader' class='command'>smartcard.startreader</a> initializes the reader and the card by sending an ATR command; then the command <span class='code'>smartcard.transmitAPDU</span> is executed. In the end the result is displayed through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>datafield</strong> <span class='data-type'>[string]</span><br/>Hexadecimal datafield of an APDU command containing additional information. Optional field, but if not used, shall receive the value <strong>00</strong>
           parameter_2: <strong>header</strong> <span class='data-type'>[string]</span><br/>APDU hexadecimal header, composed by CLA + INS + P1 + P2. Required field.
@@ -1723,21 +1717,21 @@ en:
         description: Calculates time. Supports addition, subtraction and difference
         paragraph_1: The command <span class='code'>time.calculate</span> is used to calculate time. It supports addition, subtraction and difference.
         paragraph_2: ! 'In the above example, there are three operations: <strong><em>difference, sum and less</em></strong>.'
-        paragraph_3: 
-        paragraph_4: 
-        paragraph_5: 
+        paragraph_3: The first operation done is the <strong><em>difference</em></strong>, where the content of the variable <em><strong>sDate1</strong></em> is compared with the content of the variable <em><strong>sDate2</strong></em>, and the difference between them is returned in <strong><em>seconds</em></strong> and stored on <strong><em>variablereturn</em></strong>.
+        paragraph_4: The second operation done is <strong><em>sum</em></strong>, where <strong><em>10 hours</em></strong> is added on the date stored on <strong><em>sDate1</em></strong>. If the operation is successfully executed, the variable <strong><em>variablereturn</em></strong> receive 0, and the date stored on <strong><em>sDate1</em></strong> will be increased by <strong><em>10 hours</em></strong>.
+        paragraph_5: The third operation done is <strong><em>less</em></strong>, where <strong><em>10 minutes</em></strong> is subtracted from the date stored on <strong><em>sDate1</em></strong>. If the operation is successfully executed, the variable <strong><em>variablereturn</em></strong> receive 0, and the date stored on <strong><em>sDate1</em></strong> will be decreased by <strong><em>10 minutes</em></strong>.
         parameters:
           parameter_1: <strong>date</strong> <span class='data-type'>[string]</span><br/> Date that will be changed or that will be used in comparison by the operation <strong>difference</strong>.
-          parameter_2: 
+          parameter_2: <strong>greaterdate</strong> <span class='data-type'>[string]</span><br/> Greater date that will be used by the difference operation. On addition and subtraction operations this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might happen.
           parameter_3: ! '<strong>operation</strong> <span class=''data-type''>[string]</span><br/> Operation type, which can be: <br/><ul><li>sum</li><li>less</li><li>difference</li></ul>'
-          parameter_4: 
+          parameter_4: ! '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Unit of time to be calculated: <br/><ul><li>years</li><li>months</li><li>days</li><li>hours</li><li>minutes</li><li>seconds</li></ul>. On a difference operation this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might happen.'
           parameter_5: <strong>value</strong> <span class='data-type'>[integer]</span><br/> Value to be added or subtracted<strong> (only for operations plus and minus)</strong>.
-          parameter_6: 
+          parameter_6: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> If the operation is <strong>difference</strong>, the <strong>value</strong> of the difference is returned. Is case of an addition or subtraction operation the result is: <br/><em><strong>0:</strong></em> Success<br/><em><strong>-1:</strong></em> Error.'
       title: Command
       unzipfile:
         description: Unpacks a zip file
         paragraph_1: The command <span class='code'>unzipfile</span> is used to uncompress a file compressed in zip format.
-        paragraph_2: 
+        paragraph_2: In the above example, the command <span class='code'>unzipfile</span> was used to to decompress a file called <strong>teste.zip</strong>, that is stored on the device memory. After that the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the zip file stored on the device.
           parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the command, where:<br/><ul><li>0: File successfully uncompressed</li><li>-1: Error during decompression</li></ul>'
@@ -1849,20 +1843,22 @@ en:
         parameter_20: <strong>subnet</strong><br/> Netmask. It is necessary to set the mask to <strong>255.255.255.255</strong> if the communication protocol <strong>PPP</strong> is used, if used <strong>DHCP</strong> is necessary to set the mask to <strong>0.0.0.0</strong>
         parameter_21: <strong>timeoutinput</strong><br/> Timeout for all statements that use it
         parameter_22: ! '<strong>tiposcartao</strong><br/> Defines the rules for use of cards, according to the table below:'
-        parameter_23: ! "<strong>touchscreen</strong><br/>Enables or disables the virtual keyboard, if the device has touchscreen where: <pre>\n0 - Does not activate the virtual keyboard \n1 - Enables virtual keyboard</pre>"
+        parameter_23: ! "<strong>touchscreen</strong><br/>Enables or disables the virtual keyboard, if the device has touchscreen where: <pre>0 - Does not activate the virtual keyboard
+        
+        1 - Enables virtual keyboard</pre>"
         parameter_24: <strong>uclapn</strong><br/> APN of GPRS network
-        parameter_25: ! '<strong>uclmedia</strong><br/> Connection type to be used, and can be: <pre>
-
-          LANDLINE
-
-          ethernet
-
-          GPRS
-
-          Wifi</pre>'
+        parameter_25: ! '<strong>uclmedia</strong><br/> Connection type to be used, and can be: <pre>LANDLINE
+        
+        ETHERNET
+        
+        GPRS
+        
+        WIFI</pre>'
         parameter_26: <strong>uclpassword</strong><br/> User password of RAS or APN (PPP)
         parameter_27: <strong>uclphoneno</strong><br/>The number that the device is going to call;
-        parameter_28: ! "<strong>uclprotocol</strong><br/>Communication protocol to be used, and can be: <pre>\NTCP\nSDLC</pre>"
+        parameter_28: ! "<strong>uclprotocol</strong><br/>Communication protocol to be used, and can be: <pre>TCP
+        
+        SDLC</pre>"
         parameter_29: <strong>uclusername</strong><br/>Name of the user of RAS or APN (PPP);
         parameter_3: <strong>dnsprimario</strong><br/> primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_30: 0
@@ -1872,7 +1868,9 @@ en:
         parameter_34: <strong>versaoframework</strong><br/>WALK Framework version installed on the device
         parameter_4: <strong>dnssecundario</strong><br/> secondary DNS will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_5: <strong>gprs_pin</strong><br/> PIN of GPRS card
-        parameter_6: ! "<strong>iskeytimeout</strong><br/> Used to identify what <a href='/posxml/commands/readkey ' class='command'>readkey </a> will return in case of timeout, where: <pre>\n0 - Disabled, readkey returns KEY_CANCEL on timeout. \n1 - Enabled readkey returns -1 on timeout.</pre>"
+        parameter_6: ! "<strong>iskeytimeout</strong><br/> Used to identify what <a href='/posxml/commands/readkey ' class='command'>readkey </a> will return in case of timeout, where: <pre>0 - Disabled, readkey returns KEY_CANCEL on timeout.
+        
+        1 - Enabled readkey returns -1 on timeout.</pre>"
         parameter_7: <strong>keyalpha</strong><br/> Key that will be used to make <strong>alpha</strong> keyboard. Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
         parameter_8: <strong>keypaperfeed</strong><br/> Key that will be used to make the <a href='/posxml/commands/paperfeed' class='command'>paperfeed</a>
         parameter_9: <strong>keypound</strong><br/> Key that will be used to put the <strong>#</strong> (sharp). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
