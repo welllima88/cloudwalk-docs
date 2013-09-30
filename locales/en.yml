@@ -803,7 +803,7 @@ en:
         paragraph_6: POSXML is <strong>case-sensitive</strong>, so uppercase letters are different than lowercase letters.
       emv_adddata:
         description: Adds parameters to EMV process
-        paragraph_1: The command <span class='code'>emv.adddata</span> is used to add parameters to  the EMV process.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_10: For the type <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
         paragraph_11: In the above example was demonstrated an example for each parameter type, <span class='code'>init</span>, <span class='code'>process</span> and <span class='code'>finish</span>.
         paragraph_12: The example shown here is fictitious, since in order to succeed with a full EMV transaction is necessary several other factors such as an ISO-8583 answer from the card issuer, keys injected into the terminal and other requirements defined by the EMV standard.
@@ -822,13 +822,13 @@ en:
           parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn''t exist.'
       emv_cleanstructures:
         description: Clears all input and output parameters
-        paragraph_1: The command <span class='code'>emv.cleanstructures</span> is used to clear all input and output parameters.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.cleanstructures</span> is used to clean the data entry and search information structures. It's necessary to be executed when starting a transaction.
         paragraph_3: In the above example, the first command to be executed is <span class='code'>emv.cleanstructures</span>, to clean up the data structures for the new transaction, then the command <a href='emv.adddata' class='command'>emv.adddata</a> is executed to pass the parameters to the <em>Kernel EMV</em>, and then the command <a href='emv.inittransaction' class='command'>emv.inittransaction</a> initiates the transaction.
         paragraph_4: The command <a href='if' class='command'>if</a> should be used to evaluate the returning of the commands. In the process of developing an application, the commands <a href='inttostring' class='command'>inttostring</a> and <a href='print' class='command'>print</a> can be used to <strong>DEBUG</strong> and help the developer.
       emv_finishtransaction:
         description: Terminates the execution of the EMV process
-        paragraph_1: The command <span class='code'>emv.finishtransaction</span> is used to terminate the execution of the EMV process.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.finishtransaction</span> finishes chip processing, if <a href='emv.processtransaction' class='command'>emv.processtransaction</a> has requested online approval or if the transaction has already been approved offline.
         paragraph_3: A transaction denied in <a href='emv.processtransaction' class='command'>emv.processtransaction</a> does not require a call to this instruction.
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
@@ -837,7 +837,7 @@ en:
           parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp doesn''t match with the parameter''s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card<li>43: Card removed in the middle of the operation</li></ul>'
       emv_getinfo:
         description: Returns information parameters after the execution of the EMV process
-        paragraph_1: The command <span class='code'>emv.getinfo</span> is used to terminate execution of the EMV process.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_10: For the type <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
         paragraph_11: In the above example, the command <span class='code'>emv.getinfo</span> was used to fetch the parameters after the execution of the commands <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>. The command <a href='print' class='command'>print</a> was used to display the ticket information.
         paragraph_12: Note that before performing the commands <strong>init</strong>, <strong>process</strong> and <strong>finish</strong> it is necessary to pass parameters to the <em>Kernel EMV</em> with the command <a href='emv.adddata' class='command'>emv.adddata</a>.
@@ -855,7 +855,7 @@ en:
           parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/>Variable that will store the parameter value that will be returned by the <em>Kernel EMV</em>.
       emv_inittransaction:
         description: Initializes the EMV process with inserted parameters
-        paragraph_1: The command <span class='code'>emv.inittransaction</span> is used to initialize the process with the EMV parameters entered.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.inittransaction</span> begins processing the EMV card, either magnetic stripe or chip. At this time, the EMV library will ask the card <strong>insertion/swipe</strong> in order to choose and start the EMV application on the smartcard. The answer is the card data to be analyzed by the device application.
         paragraph_3: This instruction uses the timeout on the operation of card insertion and choice of application, if it has been defined by <a href='emv.settimeout' class='command'>emv.settimeout</a>.
         paragraph_4: In the above example, the command <a href='emv.cleanstructures' class='command'>emv.cleanstructures</a> was used to clean the data structures, and the command <a href='emv.adddata' class='command'>emv.adddata</a> was used pass the parameters to the <em>Kernel EMV</em>.
@@ -864,7 +864,7 @@ en:
           parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
       emv_loadtables:
         description: load tables EMV and PKI of the file for the buyer
-        paragraph_1: The command <span class='code'>emv.loadtables</span> is used to load tables EMV and PKI of the file for the buyer.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.loadtables</span> is used to load the tables of settings for each application by EMV acquirer network.
         paragraph_3: The loading of tables should be done in the device initialization. To load a table, a file should be sent to the device, with a standard name plus the number of the acquirer network.
         paragraph_4: In the above example, the command <a href='emv.open' class='command'>emv.open</a> is used to start the EMV library, and then the command <a href='if' class='command'>if</a> is used to evaluate the result of the operation.
@@ -876,7 +876,7 @@ en:
           parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>10: Error while starting the tables</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>21: Error while trying to store records</li><li>30: Communication error, PIN-Pad serial port is probably busy</li></ul>'
       emv_open:
         description: Initializes EMV library
-        paragraph_1: The command <span class='code'>emv.open</span> is used to initialize EMV library.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.open</span> is used to initialize the EMV library, allocating hardware and software resources necessary for the EMV Kernel operation. A successful call to this command is a prerequisite for all other EMV library calls.
         paragraph_3: In the above example, the command <span class='code'>emv.open</span> was used to initialize the device's EMV library. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> was used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
@@ -887,7 +887,7 @@ en:
           parameter_5: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>14: Library already started</li><li>16: Error</li></ul>'
       emv_processtransaction:
         description: Starts the execution of the EMV process
-        paragraph_1: The command <span class='code'>emv.processtransaction</span> is used to initiate the execution of the EMV process.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.processtransaction</span> continues the chip card handling process. If the command <a href='emv.inittransaction' class='command'>emv.inittransaction</a> returns that a magnetic card was swiped, then this command should not be executed.
         paragraph_3: This command uses the timeout when capturing the PIN if it was defined by <a href='emv.settimeout' class='command'>emv.settimeout</a>.
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
@@ -897,7 +897,7 @@ en:
           parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>19: Absence of data for the mandatory field 55, or mandatory data is not accessible (if that''s the case, pass the tag on baOptionalTags)</li><li>31: PIN-Pad communication error</li><li>40: Execution error</li><li>43: Card removed in the middle of the operation</li></ul>'
       emv_removecard:
         description: Waits for card removal
-        paragraph_1: The command <span class='code'>emv.removecard</span> is used to wait for the card removal.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.removecard</span> awaits the chip card removal. It is advised to always use this command at the end of the operation flow, whether successful or unsuccessful.
         paragraph_3: This command uses the timeout to remove the card if it was defined by <a href='emv.settimeout' class='command'>emv.settimeout</a>.
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
@@ -906,7 +906,7 @@ en:
           parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter set on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
       emv_settimeout:
         description: Define timeout (in seconds) of the library of the EMV process
-        paragraph_1: The command <span class='code'>emv.settimeout</span> is used to set timeout (in seconds) of the library of the EMV processes.
+        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.settimeout</span> is used to set a timeout to be used be blocking commands.
         paragraph_3: This timeout can be changed before performing a command, that is, this statement can be called several times during the transaction cycle.
         paragraph_4: In the above example, the command <span class='code'>emv.settimeout</span> is executed passing 10 seconds to the parameter <em><strong>seconds</strong></em>, that is, when the next command <a href='emv.inittransaction' class='commands'>emv.inittransaction</a> is executed, the device will wait for 10 seconds until the user inserts or swipes the card.
@@ -1843,22 +1843,22 @@ en:
         parameter_20: <strong>subnet</strong><br/> Netmask. It is necessary to set the mask to <strong>255.255.255.255</strong> if the communication protocol <strong>PPP</strong> is used, if used <strong>DHCP</strong> is necessary to set the mask to <strong>0.0.0.0</strong>
         parameter_21: <strong>timeoutinput</strong><br/> Timeout for all statements that use it
         parameter_22: ! '<strong>tiposcartao</strong><br/> Defines the rules for use of cards, according to the table below:'
-        parameter_23: ! "<strong>touchscreen</strong><br/>Enables or disables the virtual keyboard, if the device has touchscreen where: <pre>0 - Does not activate the virtual keyboard
-        
-        1 - Enables virtual keyboard</pre>"
+        parameter_23: ! '<strong>touchscreen</strong><br/>Enables or disables the virtual keyboard, if the device has touchscreen where: <pre>0 - Does not activate the virtual keyboard
+
+          1 - Enables virtual keyboard</pre>'
         parameter_24: <strong>uclapn</strong><br/> APN of GPRS network
         parameter_25: ! '<strong>uclmedia</strong><br/> Connection type to be used, and can be: <pre>LANDLINE
-        
-        ETHERNET
-        
-        GPRS
-        
-        WIFI</pre>'
+
+          ETHERNET
+
+          GPRS
+
+          WIFI</pre>'
         parameter_26: <strong>uclpassword</strong><br/> User password of RAS or APN (PPP)
         parameter_27: <strong>uclphoneno</strong><br/>The number that the device is going to call;
-        parameter_28: ! "<strong>uclprotocol</strong><br/>Communication protocol to be used, and can be: <pre>TCP
-        
-        SDLC</pre>"
+        parameter_28: ! '<strong>uclprotocol</strong><br/>Communication protocol to be used, and can be: <pre>TCP
+
+          SDLC</pre>'
         parameter_29: <strong>uclusername</strong><br/>Name of the user of RAS or APN (PPP);
         parameter_3: <strong>dnsprimario</strong><br/> primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_30: 0
@@ -1868,9 +1868,9 @@ en:
         parameter_34: <strong>versaoframework</strong><br/>WALK Framework version installed on the device
         parameter_4: <strong>dnssecundario</strong><br/> secondary DNS will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_5: <strong>gprs_pin</strong><br/> PIN of GPRS card
-        parameter_6: ! "<strong>iskeytimeout</strong><br/> Used to identify what <a href='/posxml/commands/readkey ' class='command'>readkey </a> will return in case of timeout, where: <pre>0 - Disabled, readkey returns KEY_CANCEL on timeout.
-        
-        1 - Enabled readkey returns -1 on timeout.</pre>"
+        parameter_6: ! '<strong>iskeytimeout</strong><br/> Used to identify what <a href=''/posxml/commands/readkey '' class=''command''>readkey </a> will return in case of timeout, where: <pre>0 - Disabled, readkey returns KEY_CANCEL on timeout.
+
+          1 - Enabled readkey returns -1 on timeout.</pre>'
         parameter_7: <strong>keyalpha</strong><br/> Key that will be used to make <strong>alpha</strong> keyboard. Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
         parameter_8: <strong>keypaperfeed</strong><br/> Key that will be used to make the <a href='/posxml/commands/paperfeed' class='command'>paperfeed</a>
         parameter_9: <strong>keypound</strong><br/> Key that will be used to put the <strong>#</strong> (sharp). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
@@ -2078,6 +2078,7 @@ en:
         paragraph_4: The next screen lists some applications installed on the device where <strong> M2OS </strong> refers to Telium Manager, that should not be deleted. To delete any other file, select the file to be deleted and press the <strong>GREEN</strong> button.
         paragraph_5: <strong>DO NOT </ strong> delete the contents of the menu <strong>Delete library</strong> or file <strong>M2OS</strong>, otherwise the device may be damaged.
     verifone_evo:
+      introduction_cable_terminals: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
       description: Step by step process of installing the WALK Framework for VeriFone Vx520 and Vx680.
       identify_os:
         os_version: Operating System Version
@@ -2085,7 +2086,7 @@ en:
         paragraph_2: Keep the operating system of your devices up to date. Devices with outdated operating system can be slow and may also have communication problems.
         paragraph_3: ! 'Minimum operating system requirements for installing the WALK Framework:'
         pos_model: Model POS
-      installing_vx805_and_vx820: To load the framework on terminals <strong>Vx805</strong> and <strong>Vx820</strong> <a href='/walk-framework/verifone-evo-vx805'>click here</a>
+      installing_vx805_and_vx820: To load the framework on terminals <strong>Vx805</strong> and <strong>Vx820</strong>, check out <a href='/walk-framework/verifone-evo-vx805'>this guide</a>.
       installing_vx805_and_vx820_intro: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx805</strong> and <strong>Vx820</strong>. Be aware of prerequisites and follow the installation process carefully.
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx520</strong> and <strong>Vx680</strong>. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:

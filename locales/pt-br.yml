@@ -1844,21 +1844,21 @@ pt-BR:
         parameter_21: <strong>timeoutinput</strong><br/> Timeout para todas as instruções que a utilizam
         parameter_22: ! '<strong>tiposcartao</strong><br/> Define as regras para utilização de cartões, conforme a tabela abaixo:'
         parameter_23: ! '<strong>touchscreen</strong><br/>Habilita ou não o teclado virtual, caso o dispositivo possua touchscreen, onde:<pre>0 – Não ativa o teclado virtual
-        
-        1 – Ativa o teclado virtual</pre>'
+
+          1 – Ativa o teclado virtual</pre>'
         parameter_24: <strong>uclapn</strong><br/> APN da rede GPRS
         parameter_25: ! '<strong>uclmedia</strong><br/>Tipo de conexão que será utilizada, podendo ser:<pre>LANDLINE
-        
-        ETHERNET
-        
-        GPRS
-        
-        WIFI</pre>'
+
+          ETHERNET
+
+          GPRS
+
+          WIFI</pre>'
         parameter_26: <strong>uclpassword</strong><br/>Senha do usuário do RAS ou APN (PPP)
         parameter_27: <strong>uclphoneno</strong><br/>Número que o dispositivo irá efetuar a discagem;
         parameter_28: ! '<strong>uclprotocol</strong><br/>Protocolo de comunicação que será utilizado, podendo ser:<pre>TCP
-        
-        SDLC</pre>'
+
+          SDLC</pre>'
         parameter_29: <strong>uclusername</strong><br/>Nome de usuário do RAS ou APN (PPP);
         parameter_3: <strong>dnsprimario</strong><br/> DNS primário que será utilizado pelo dispositivo. É necessário definir o DNS <strong>0.0.0.0</strong> se o protocolo de comunicação <strong>PPP</strong> for utilizado
         parameter_30: 0
@@ -1869,8 +1869,8 @@ pt-BR:
         parameter_4: <strong>dnssecundario</strong><br/> DNS secundário que será utilizado pelo dispositivo. É necessário definir o DNS <strong>0.0.0.0</strong> se o protocolo de comunicação <strong>PPP</strong> for utilizado
         parameter_5: <strong>gprs_pin</strong><br/> PIN do chip GPRS
         parameter_6: ! '<strong>iskeytimeout</strong><br/> Utilizado para identificar o que a função <a href=''/posxml/commands/readkey'' class=''command''>readkey</a> vai retornar em caso de timeout, onde:<pre>0 – Desativado, readkey retorna KEY_CANCEL em timeout.
-        
-        1 – Ativado, readkey retorna -1 em timeout.</pre>'
+
+          1 – Ativado, readkey retorna -1 em timeout.</pre>'
         parameter_7: <strong>keyalpha</strong><br/> Tecla que será utilizada para fazer o <strong>alpha</strong> do teclado. As teclas opcionais variam de dispositivo para dispositivo, e podem ir de KEY_EXTRA1 até KEY_EXTRA99
         parameter_8: <strong>keypaperfeed</strong><br/> Tecla que será utilizada para efetuar o <a href='/posxml/commands/paperfeed' class='command'>paperfeed</a>
         parameter_9: <strong>keypound</strong><br/> Tecla que será utilizada para colocar o <strong>#</strong> (sharp). As teclas opcionais variam de dispositivo para dispositivo, e podem ir de KEY_EXTRA1 até KEY_EXTRA99
@@ -2078,6 +2078,7 @@ pt-BR:
         paragraph_4: A próxima tela lista algumas aplicações instalados no terminal, onde <strong>M2OS</strong> refere-se ao Telium Manager, que não deve ser excluído. Para deletar qualquer outro arquivo, selecione o arquivo a ser excluído e pressione a tecla <strong>VERDE</strong>.
         paragraph_5: <strong>NÃO</strong> exclua o conteúdo do menu <strong>Delete library</strong> ou o arquivo <strong>M2OS</strong>, ou o terminal poderá ser danificado.
     verifone_evo:
+      introduction_cable_terminals: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone Vx805 e Vx820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       description: Processo passo a passo de instalação do WALK Framework em terminais VeriFone Vx520 e Vx680.
       identify_os:
         os_version: Versão do sistema operacional
@@ -2085,7 +2086,7 @@ pt-BR:
         paragraph_2: Mantenha o sistema operacional dos seus terminais POS sempre atualizados. Terminais POS com o sistema operacional desatualizado podem ficar lentos e podem também apresentar problemas de comunicação.
         paragraph_3: ! 'Requisitos mínimos de sistema operacional para a instalação do WALK Framework:'
         pos_model: Modelo POS
-      installing_vx805_and_vx820: Para realizar a carga em terminais <strong>Vx805</strong> e <strong> Vx820 </strong> <a href='/walk-framework/verifone-evo-vx805'>clique aqui</a>
+      installing_vx805_and_vx820: Para realizar a carga em terminais <strong>Vx805</strong> e <strong> Vx820 </strong>, confira <a href='/walk-framework/verifone-evo-vx805'>este guia</a>.
       installing_vx805_and_vx820_intro: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx805</strong> e <strong>Vx820</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx520</strong> e <strong>Vx680</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       loading_the_framework:
