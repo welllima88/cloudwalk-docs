@@ -86,6 +86,7 @@
 2 LANDLINE (PPP)
 3 LANDLINE (SDLC)
 4 GPRS
+5 WIFI
 </pre></div>
 
 <p><%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_3") %></p>
@@ -95,6 +96,7 @@
   <li><strong>LANDLINE (PPP):</strong> <%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_5") %></li>
   <li><strong>LANDLINE (SDLC):</strong> <%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_6") %></li>
   <li><strong>GPRS:</strong> GPRS (Oi, Tim, Claro, etc)</li>
+  <li><strong>WIFI:</strong> WIFI (wireless network)</li>
 </ul>
 
 <p class="note"><%= I18n.t("walk_framework.configuration.setting_up_communication.paragraph_7") %></p>
@@ -110,6 +112,7 @@
   <li><a href="#communication-tab2">LANDLINE (PPP)</a></li>
   <li><a href="#communication-tab3">LANDLINE (SDLC)</a></li>
   <li><a href="#communication-tab4">GPRS</a></li>
+  <li><a href="#communication-tab5">WIFI</a></li>
 </ul>
 
 <div class="tab-content">
@@ -265,6 +268,90 @@ USE SSL ?
 
 <div class="pos evo"><pre>
 - GPRS SETTINGS -
+
+USE SSL ?
+(1-YES 0-NO)
+:0
+</pre></div>
+</div>
+
+<div class="tab-pane" id="communication-tab5">
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.wifi.paragraph_1") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
+
+NETWORK NAME
+:
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.wifi.paragraph_2") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
+
+PASSWORD
+:
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.wifi.paragraph_3") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
+
+SECURITY PROTOCOL
+:
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.wifi.paragraph_4") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
+
+DEVICE IP
+:192.168.0.200
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.wifi.paragraph_5") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
+
+SUBNET MASK
+:192.168.0.200
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.wifi.paragraph_6") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
+
+ROUTER/GATEWAY
+:192.168.0.1
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.wifi.paragraph_7") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
+
+DNS SERVER 1
+:192.168.0.1
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.wifi.paragraph_8") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
+
+DNS SERVER 2
+:192.168.0.1
+</pre></div>
+
+<p><%= I18n.t("walk_framework.configuration.setting_up_communication.ssl.paragraph_1", :num => "9") %></p>
+
+<div class="pos evo"><pre>
+- WIFI SETTINGS -
 
 USE SSL ?
 (1-YES 0-NO)

@@ -1989,6 +1989,15 @@ en:
           paragraph_2: 2. Set the internet provider telephone number.
         ssl:
           paragraph_1: ! '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
+        wifi:
+          paragraph_1: ! '1. Set the name of the wireless network'
+          paragraph_2: 2. Set the password of the wireless network
+          paragraph_3: ! '3. Set the protocol of the wireless network(ex: WEP 128-104).'
+          paragraph_4: ! '4. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.'
+          paragraph_5: ! '5. Set the subnet mask for the defined IP address class (eg 255.255.255.0).'
+          paragraph_6: ! '6. Set the router/gateway IP address (eg 192.168.0.1).'
+          paragraph_7: ! '7. Set the primary DNS server (eg 192.168.0.1).'
+          paragraph_8: ! 'Set the secondary DNS server (eg 192.168.0.1).'
       table_of_contents:
         integration: Integration
         prerequisites: Prerequisites

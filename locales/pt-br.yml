@@ -1989,6 +1989,15 @@ pt-BR:
           paragraph_2: 2. Definir o número de telefone do provedor de internet.
         ssl:
           paragraph_1: ! '%{num}. Definir se o dispositivo deve ou não utilizar <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
+        wifi:
+          paragraph_1: ! '1. Definir nome da rede wireless.'
+          paragraph_2: ! '2. Definir a senha da rede wireless.'
+          paragraph_3: ! '3. Definir o protocolo de segurança da rede (ex: WEP 128-104).'
+          paragraph_4: ! '4. Definir o endereço IP do dispositivo (ex: 192.168.0.200). No caso de DHCP, definir <strong>0.0.0.0</strong>.'
+          paragraph_5: ! '5. Definir a máscara de sub-rede compatível com a classe de IP utilizada (ex: 255.255.255.0).'
+          paragraph_6: ! '6. Definir o endereço IP do router/gateway (ex: 192.168.0.1).'
+          paragraph_7: ! '7. Definir o endereço IP do servidor de DNS primário (ex: 192.168.0.1).'
+          paragraph_8: ! '8. Definir o endereço IP do servidor de DNS secundário (ex: 192.168.0.1).'
       table_of_contents:
         integration: Integração
         prerequisites: Pré-requisitos
