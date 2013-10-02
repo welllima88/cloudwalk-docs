@@ -46,6 +46,7 @@ en:
             description: Brief description
             displayable: Determine wether the application should be displayed in the services menu
             id: Record ID
+            uuid: Universally unique identifier
             name: Application name
             pos_display_label: POS exibition name (if displayable is true)
             posxml: POSXML souce, Base64 encoded

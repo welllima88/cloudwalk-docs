@@ -46,6 +46,7 @@ pt-BR:
             description: Breve descrição da aplicação
             displayable: Determina se a aplicação deve ou não ser exibida no menu de aplicativos
             id: ID do registro
+            uuid: Identificador Único Universal
             name: Nome da aplicação
             pos_display_label: Nome exibido no meu de aplicativos (se displayable for verdadeiro)
             posxml: Código POSXML da aplicação, codificado com Base64
