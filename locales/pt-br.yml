@@ -46,12 +46,12 @@ pt-BR:
             description: Breve descrição da aplicação
             displayable: Determina se a aplicação deve ou não ser exibida no menu de aplicativos
             id: ID do registro
-            uuid: Identificador Único Universal
             name: Nome da aplicação
             pos_display_label: Nome exibido no meu de aplicativos (se displayable for verdadeiro)
             posxml: Código POSXML da aplicação, codificado com Base64
             size: Tamanho da aplicação, em bytes
             updated_at: Timestamp da atualização do registro (ISO 8601)
+            uuid: Identificador Único Universal
           paragraph_1: ! 'Os seguintes atributos compõe uma aplicação POSXML:'
         create:
           paragraph_1: Cria uma nova aplicação POSXML.
@@ -1991,8 +1991,8 @@ pt-BR:
         ssl:
           paragraph_1: ! '%{num}. Definir se o dispositivo deve ou não utilizar <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
         wifi:
-          paragraph_1: ! '1. Definir nome da rede wireless.'
-          paragraph_2: ! '2. Definir a senha da rede wireless.'
+          paragraph_1: 1. Definir nome da rede wireless.
+          paragraph_2: 2. Definir a senha da rede wireless.
           paragraph_3: ! '3. Definir o protocolo de segurança da rede (ex: WEP 128-104).'
           paragraph_4: ! '4. Definir o endereço IP do dispositivo (ex: 192.168.0.200). No caso de DHCP, definir <strong>0.0.0.0</strong>.'
           paragraph_5: ! '5. Definir a máscara de sub-rede compatível com a classe de IP utilizada (ex: 255.255.255.0).'
@@ -2088,7 +2088,7 @@ pt-BR:
         paragraph_4: A próxima tela lista algumas aplicações instalados no terminal, onde <strong>M2OS</strong> refere-se ao Telium Manager, que não deve ser excluído. Para deletar qualquer outro arquivo, selecione o arquivo a ser excluído e pressione a tecla <strong>VERDE</strong>.
         paragraph_5: <strong>NÃO</strong> exclua o conteúdo do menu <strong>Delete library</strong> ou o arquivo <strong>M2OS</strong>, ou o terminal poderá ser danificado.
     verifone_evo:
-      introduction_cable_terminals: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone Vx805 e Vx820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      ! ' introduction_cable_terminals': Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone Vx805 e Vx820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       description: Processo passo a passo de instalação do WALK Framework em terminais VeriFone Vx520 e Vx680.
       identify_os:
         os_version: Versão do sistema operacional
@@ -2099,6 +2099,7 @@ pt-BR:
       installing_vx805_and_vx820: Para realizar a carga em terminais <strong>Vx805</strong> e <strong> Vx820 </strong>, confira <a href='/walk-framework/verifone-evo-vx805'>este guia</a>.
       installing_vx805_and_vx820_intro: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx805</strong> e <strong>Vx820</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx520</strong> e <strong>Vx680</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      introduction_cable_terminals: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone Vx805 e Vx820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       loading_the_framework:
         paragraph_1: Para dar início ao processo de carga, execute o arquivo carrega_na_flash.bat para carregar os certificados e o WALK Framework.
         paragraph_2: ! 'A seguinte tela do DOS será exibida:'

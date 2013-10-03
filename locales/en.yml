@@ -46,12 +46,12 @@ en:
             description: Brief description
             displayable: Determine wether the application should be displayed in the services menu
             id: Record ID
-            uuid: Universally unique identifier
             name: Application name
             pos_display_label: POS exibition name (if displayable is true)
             posxml: POSXML souce, Base64 encoded
             size: Application size (bytes)
             updated_at: Timestamp in ISO 8601 format
+            uuid: Universally unique identifier
           paragraph_1: ! 'An application POSXML have the following attributes:'
         create:
           paragraph_1: Create a new POSXML application.
@@ -1366,7 +1366,7 @@ en:
           parameter_7: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Variable that will store the return of the command, where: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Canceled</li>-3: PIN Error</li></ul>'
       pinpad_loadipek:
         description: Records an initial key and an initial ksn on the memory of pinpad
-        paragraph_1: The command <span class='code'>pinpad.loadipek</span> is used to record an initial key and an initial ksn on the memory of the pinpad.
+        paragraph_1: Knowledge about <strong>DUKPT</strong> is required to use this command.
         paragraph_2: The command <span class='code'>pinpad.loadipek</span> is used to store an initial and a ksn key on the internal or extenal PIN-Pad memory, in order to make is possible to perform password encryption using <strong><em>DUKPT</em></strong>.
         paragraph_3: In the above example, firstly a connection to the <strong>internal PIN-Pad</strong> is made with the command <a href='pinpad.open' class='command'>pinpad.open</a>; after that the keys ipek (initial) <strong><em>EA51888F7CF2EBA6BB80EF0D4267642E</em></strong> and ksn <strong><em>FFFF0123456789A00003</em></strong> are loaded to the PIN-Pad memory with the command <span class='code'>pinpad.loadipek</span>.
         paragraph_4: Then the connection with the PIN-Pad is closed with the command <a href='pinpad.close' class='command'>pinpad.close</a>, and then the variable is converted to para <a href='stringvariable' class='command'>stringvariable</a> so it can be displayed through the command <a href='display' class='command'>display</a>.
@@ -1991,14 +1991,14 @@ en:
         ssl:
           paragraph_1: ! '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
         wifi:
-          paragraph_1: ! '1. Set the name of the wireless network'
+          paragraph_1: 1. Set the name of the wireless network
           paragraph_2: 2. Set the password of the wireless network
           paragraph_3: ! '3. Set the protocol of the wireless network(ex: WEP 128-104).'
-          paragraph_4: ! '4. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.'
-          paragraph_5: ! '5. Set the subnet mask for the defined IP address class (eg 255.255.255.0).'
-          paragraph_6: ! '6. Set the router/gateway IP address (eg 192.168.0.1).'
-          paragraph_7: ! '7. Set the primary DNS server (eg 192.168.0.1).'
-          paragraph_8: ! 'Set the secondary DNS server (eg 192.168.0.1).'
+          paragraph_4: 4. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.
+          paragraph_5: 5. Set the subnet mask for the defined IP address class (eg 255.255.255.0).
+          paragraph_6: 6. Set the router/gateway IP address (eg 192.168.0.1).
+          paragraph_7: 7. Set the primary DNS server (eg 192.168.0.1).
+          paragraph_8: Set the secondary DNS server (eg 192.168.0.1).
       table_of_contents:
         integration: Integration
         prerequisites: Prerequisites
@@ -2088,7 +2088,7 @@ en:
         paragraph_4: The next screen lists some applications installed on the device where <strong> M2OS </strong> refers to Telium Manager, that should not be deleted. To delete any other file, select the file to be deleted and press the <strong>GREEN</strong> button.
         paragraph_5: <strong>DO NOT </ strong> delete the contents of the menu <strong>Delete library</strong> or file <strong>M2OS</strong>, otherwise the device may be damaged.
     verifone_evo:
-      introduction_cable_terminals: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
+      ! ' introduction_cable_terminals': This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
       description: Step by step process of installing the WALK Framework for VeriFone Vx520 and Vx680.
       identify_os:
         os_version: Operating System Version
@@ -2099,6 +2099,7 @@ en:
       installing_vx805_and_vx820: To load the framework on terminals <strong>Vx805</strong> and <strong>Vx820</strong>, check out <a href='/walk-framework/verifone-evo-vx805'>this guide</a>.
       installing_vx805_and_vx820_intro: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx805</strong> and <strong>Vx820</strong>. Be aware of prerequisites and follow the installation process carefully.
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx520</strong> and <strong>Vx680</strong>. Be aware of prerequisites and follow the installation process carefully.
+      introduction_cable_terminals: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
         paragraph_1: To start charging, run carrega_na_flash.bat to load the certificates and the WALK Framework.
         paragraph_2: ! 'The following DOS screen will appear:'
