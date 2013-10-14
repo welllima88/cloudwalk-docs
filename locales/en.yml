@@ -2071,6 +2071,7 @@ en:
         paragraph_3: Format the pendrive
         paragraph_4: Extract the WALK Framework downloaded at the beginning of this tutorial
         paragraph_5: In this folder you'll find another one named TELIUM, copy it to your pendrive
+        macosx: <strong>Mac OS X users:</strong> To avoid problems with hidden files when unzipping the WALK Framework package, it is recommended to use the free app <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external' target='_blank'>iZip Archiver</a> to uncompress the package.
       prerequisites:
         adapter: ! '<strong> USB Adapter: </strong> Required only for installation on IWL220, IWL250 and IWL280'
         operating_system: ! '<strong> Operating System: </strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)'
