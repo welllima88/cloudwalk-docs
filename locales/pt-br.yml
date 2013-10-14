@@ -1725,8 +1725,8 @@ pt-BR:
         parameters:
           parameter_1: <strong>date</strong> <span class='data-type'>[string]</span><br/> Data que será alterada ou utilizada como comparação no caso da operação <strong>diferença</strong>.
           parameter_2: <strong>greaterdate</strong> <span class='data-type'>[string]</span><br/> Data maior que será usada na comparação no caso de operação diferença. Para as operações de mais e menos, essa variável não é utilizada, porém <strong>não deve</strong> ser passado um valor em branco, pois isso pode causar um POSXML Error.
-          parameter_3: ! '<strong>operation</strong> <span class=''data-type''>[string]</span><br/> Tipo da operação, pode ser: <br/><ul><li>sum</li><li>less</li><li>difference</li></ul>'
-          parameter_4: ! '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Tipo de tempo a ser calculado: <br/><ul><li>years</li><li>months</li><li>days</li><li>hours</li><li>minutes</li><li>seconds</li></ul>. Para a operação de diferença essa variável não é utilizada, porém <strong>não deve</strong> ser passado um valor em branco, pois isso pode causar um POSXML Error.'
+          parameter_3: ! '<strong>operation</strong> <span class=''data-type''>[string]</span><br/> Tipo da operação, pode ser: sum, less ou difference.'
+          parameter_4: ! '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Tipo de tempo a ser calculado: years, months, days, hours, minutes ou seconds.<br/>Para a operação de diferença essa variável não é utilizada, porém <strong>não deve</strong> ser passado um valor em branco, pois isso pode causar um POSXML Error.'
           parameter_5: <strong>value</strong> <span class='data-type'>[integer]</span><br/> Valor a ser somado ou subtraído<strong> (somente para operações mais e menos)</strong>.
           parameter_6: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Caso a operação seja <strong>diferença</strong>, é retornado o <strong>valor</strong> da diferença. Caso seja operação mais ou menos retorna: <br/><em><strong>0:</strong></em> Sucesso<br/><em><strong>-1:</strong></em> Erro.'
       title: Comando

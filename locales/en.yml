@@ -1725,8 +1725,8 @@ en:
         parameters:
           parameter_1: <strong>date</strong> <span class='data-type'>[string]</span><br/> Date that will be changed or that will be used in comparison by the operation <strong>difference</strong>.
           parameter_2: <strong>greaterdate</strong> <span class='data-type'>[string]</span><br/> Greater date that will be used by the difference operation. On addition and subtraction operations this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might happen.
-          parameter_3: ! '<strong>operation</strong> <span class=''data-type''>[string]</span><br/> Operation type, which can be: <br/><ul><li>sum</li><li>less</li><li>difference</li></ul>'
-          parameter_4: ! '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Unit of time to be calculated: <br/><ul><li>years</li><li>months</li><li>days</li><li>hours</li><li>minutes</li><li>seconds</li></ul>. On a difference operation this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might happen.'
+          parameter_3: ! '<strong>operation</strong> <span class=''data-type''>[string]</span><br/> Operation type, which can be: sum, less or difference.'
+          parameter_4: ! '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Unit of time to be calculated: years, months, days, hours, minutes or seconds.<br/>On a difference operation this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might occur.'
           parameter_5: <strong>value</strong> <span class='data-type'>[integer]</span><br/> Value to be added or subtracted<strong> (only for operations plus and minus)</strong>.
           parameter_6: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> If the operation is <strong>difference</strong>, the <strong>value</strong> of the difference is returned. Is case of an addition or subtraction operation the result is: <br/><em><strong>0:</strong></em> Success<br/><em><strong>-1:</strong></em> Error.'
       title: Command
