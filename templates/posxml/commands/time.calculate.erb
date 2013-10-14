@@ -4,7 +4,7 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>time.calculate</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "29/08/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/10/2013") %></p>
 
 <p><%= I18n.t("posxml.commands.time_calculate.paragraph_1") %></p>
 
@@ -21,7 +21,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;!-- operação difference--/&gt;
+<pre><code data-language="html">&lt;!-- Difference operation --/&gt;
 &lt;integervariable value="0" variable="iDifference"/&gt;
 &lt;stringvariable value="" variable="sDifference"/&gt;
 
@@ -38,8 +38,7 @@
 &lt;print message="$(sDifference)"/&gt;
 
 
-&lt;!-- operação sum, soma 10 horas --/&gt;
-
+&lt;!-- Sum operation: adds 10 hours --/&gt;
 &lt;integervariable value="0" variable="iReturn"/&gt;
 &lt;stringvariable value="" variable="sReturn"/&gt;
 
@@ -49,15 +48,14 @@
 
 &lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
 
-&lt;print message="Nova data"/&gt;
+&lt;print message="New date"/&gt;
 &lt;print message="$(sDate1)"/&gt;
 
-&lt;print message="Retorno do comando"/&gt;
+&lt;print message="Command return"/&gt;
 &lt;print message="$(sDate1)"/&gt;
 
 
-&lt;!-- operação less, subtrai 10 minutos --/&gt;
-
+&lt;!-- Less operation: subtracts 10 minutes --/&gt;
 &lt;integervariable value="0" variable="iReturn"/&gt;
 &lt;stringvariable value="" variable="sReturn"/&gt;
 
@@ -67,10 +65,10 @@
 
 &lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
 
-&lt;print message="Nova data"/&gt;
+&lt;print message="New date"/&gt;
 &lt;print message="$(sDate1)"/&gt;
 
-&lt;print message="Retorno do comando"/&gt;
+&lt;print message="Command return"/&gt;
 &lt;print message="$(sDate1)"/&gt;
 
 </code></pre>
