@@ -665,6 +665,7 @@ en:
       transactions_monitor: Monitor of transactions
   posxml:
     commands:
+      description: "Listing with a brief description of all POSXML commands."
       adjustdatetime:
         description: Updates the device internal clock
         paragraph_1: Command <span class='code'>adjustdatetime</span> is used to update the date and time of the device.
