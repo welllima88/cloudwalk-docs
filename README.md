@@ -4,7 +4,7 @@
 
 ## Translation contributions
 
-- Edit the translations directly on the [cloudwalk-docs](http://www.localeapp.com/projects/public?search=open-docs) project on Locale.
+- Edit the translations directly on the [cloudwalk-docs](http://www.localeapp.com/projects/public?search=cloudwalk-docs) project on Locale.
 - **That's it!**
 - The maintainer will then pull translations from the Locale project and push to Github.
 
