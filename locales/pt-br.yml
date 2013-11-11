@@ -1689,7 +1689,8 @@ pt-BR:
         paragraph_1: O comando <span class='code'>system.checkbattery</span> é utilizado para retornar a porcentagem atual da bateria.
         paragraph_2: No exemplo acima, o comando <strong>system.checkbattery</strong> irá retornar para a variável <strong>$(battery_status)</strong> que é uma variável <a href='integervariable' class='command'>integervariable</a>. Como a propriedade <strong>variablestatus</strong> só aceita um valor integer, é preciso converter o valor para <a href='stringvariable' class='command'>stringvariable</a> para que o valor possa ser exibido no display.
         parameters:
-          parameter_1: <strong>variablestatus</strong> <span class='data-type'>[integer]</span></br>Variável que irá armazenar o retorno do comando. Caso este valor seja <strong>-1</strong>, significa que o dispositivo não tem bateria..
+          parameter_1: "<strong>variablestatus</strong> <span class='data-type'>[integer]</span></br>Variável que irá armazenar o retorno do comando. O valor retornado varia de 0 até 100, em uma escala de 1 em 1. Examplos: 0, 1, 2, 3, 4, 5 ... 95, 96, 97, 98, 99, 100."
+        paragraph_3: O valor <strong>-1</strong> significa que o dispositivo não possui bateria.
       system_gettouchscreen:
         description: Captura as coordenadas (x e y) de onde o display foi pressionado
         paragraph_1: O comando <span class='code'>system.gettouchscreen</span> é usado para capturar as coordenadas (x e y) de onde o display foi pressionado.

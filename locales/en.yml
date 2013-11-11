@@ -1689,7 +1689,8 @@ en:
         paragraph_1: The command <span class='code'>system.checkbattery</span> is used to return the current percentage of battery.
         paragraph_2: In the above example, the command <strong>system.checkbattery</strong> will return to the variable <strong>$( battery_status)</strong> which is a variable <a href='integervariable' class='command'>integervariable</a>. As the property <strong>variablestatus</strong> only accepts an integer value, it is necessary to convert the value to <a href='stringvariable' class='command'>stringvariable</a> so that the value can be shown on the display .
         parameters:
-          parameter_1: <strong>variablestatus</strong> <span class='data-type'>[integer]</span></br>Variable that will store the return of the command. If this value is <strong>-1</strong> means that the device has no battery.
+          parameter_1: "<strong>variablestatus</strong> <span class='data-type'>[integer]</span></br>Variable that will store the return of the command. The returned value ranges from 0 to 100, scaling 1 by 1. Examples: 0, 1, 2, 3, 4, 5 ... 95, 96, 97, 98, 99, 100."
+        paragraph_3: The value <strong>-1</strong> means that the device has no battery.
       system_gettouchscreen:
         description: Captures the coordinates (x and y) where the display was pressed
         paragraph_1: The command <span class='code'>system.gettouchscreen</span> is used to capture the coordinates (x and y) where the display was pressed.
