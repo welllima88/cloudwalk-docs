@@ -575,7 +575,7 @@ pt-BR:
         line_telium_1: Ingenico Telium 1
         line_telium_2: Ingenico Telium 2
         line_verix: VeriFone Verix
-        paragraph_1: O componente WALK Framework, que é instalado nos dispositivos, difere entre as diversas linhas de equipamentos, uma vez que, cada equipamento possui suas particularidades. Caso o equipamento que você pretende utilizar não conste na listagem abaixo, <a href='mailto:planobe@planobe.com.br'>entre em contato</a>, pois podemos considerar a homologação do mesmo.
+        paragraph_1: O componente WALK Framework, que é instalado nos dispositivos, difere entre as diversas linhas de equipamentos, uma vez que, cada equipamento possui suas particularidades. Caso o equipamento que você pretende utilizar não conste na listagem abaixo, <a href='mailto:cloudwalk@cloudwalk.io'>entre em contato</a>, pois podemos considerar a homologação do mesmo.
         paragraph_2: ! 'Atualmente, os seguintes dispositivos estão homologados para utilizarem o WALK Framework:'
       contactless:
         paragraph_1: ! 'O serviço CloudWalk também oferece a possibilidade de utilização da tecnologia <em>contactless</em> com os seguintes equipamentos:'
