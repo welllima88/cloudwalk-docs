@@ -221,7 +221,7 @@ helpers do
         title = doc['title']
         description = doc['description']
         url = doc['url']
-        result_erb << "<li><a href='#{url}'>#{title.upcase}</a><p class='muted'>#{description}</p></li>"
+        result_erb << "<li><a href='#{url}'>#{title}</a><p class='muted'>#{description}</p></li>"
       end
       result_erb << "</ul>"
     else
