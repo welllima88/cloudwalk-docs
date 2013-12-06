@@ -4,10 +4,10 @@ ruby '2.0.0'
 
 gem 'sinatra',         '~> 1.4.4'
 gem 'thin',            '~> 1.6.1'
-gem 'i18n',            '~> 0.6.5'
+gem 'i18n',            '~> 0.6.9'
 gem 'indextank',       '~> 1.0.13'
 gem 'nokogiri',        '~> 1.6.0'
-gem 'sinatra-contrib', '~> 1.4.1'
+gem 'sinatra-contrib', '~> 1.4.2'
 
 group :development do
   gem 'localeapp', '~> 0.6.14'
