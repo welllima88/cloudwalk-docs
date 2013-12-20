@@ -269,7 +269,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/devices/{device_id}?access_token={token}</code></pre>
+<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/devices/{serial_number}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -280,7 +280,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="update-tab1">
-<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/devices/3?access_token=$TOKEN" \
+<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/devices/444-555-666?access_token=$TOKEN" \
 -d '{"enabled":"false"}'
 </code></pre>
 </div>
@@ -295,7 +295,7 @@ payload = {
   "enabled" => "false"
 }
 
-uri = URI("https://api.cloudwalk.io/v1/devices/3?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/devices/444-555-666?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -332,7 +332,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/devices/{device_id}?access_token={token}</code></pre>
+<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/devices/{serial_number}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -343,7 +343,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="destroy-tab1">
-<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/devices/3?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/devices/444-555-666?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="destroy-tab2">
@@ -351,7 +351,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/devices/3?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/devices/444-555-666?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
