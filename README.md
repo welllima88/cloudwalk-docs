@@ -1,5 +1,7 @@
 # CloudWalk Docs
 
+[![Dependency Status](https://gemnasium.com/planobe/cloudwalk-docs.png)](https://gemnasium.com/planobe/cloudwalk-docs)
+
 [CloudWalk's](https://cloudwalk.io) open-source documentation project built on top of sinatra, with translation managed on [Locale](http://www.localeapp.com/).
 
 ## Translation contributions
@@ -16,9 +18,12 @@ Pull requests with other contributions are welcomed.
 
 ### Getting Started
 
-- $ gem install bundler
-- $ bundle install
-- $ bundle exec rackup
+Be sure Bundler is installed. After cloning the repo:
+
+```console
+$ bundle install
+$ bundle exec rackup
+```
 
 ## More information
 
