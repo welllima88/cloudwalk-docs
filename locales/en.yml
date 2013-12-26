@@ -1265,14 +1265,14 @@ en:
           parameter_5: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will receive the return command.
       network_checkgprssignal:
         description: Checks the status of the connection, if the POS supports GPRS
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.checkgprssignal</span> is used to check the GPRS signal level, if the device provides this type of communication.
         paragraph_3: In the above example the command <a href='network.checkgprssignal' class='command'>network.checkgprssignal</a> will check the GPRS signal level, storing the operation result on the integer variable $(iReturn).
         parameters:
           parameter_1: <strong>variablestatus</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the GPRS signal level.
       network_hostdisconnect:
         description: Disconnects the device from the host, keeping it connected to the network
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>.
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>.
         paragraph_2: The command <span class='code'>network.hostdisconnect</span> is used to disconnect the host terminal but remains connected to the network.
         paragraph_3: In the above example the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the host. The command <a href='network.hostdisconnect' class='command'>network.hostdisconnect</a> will close this connection but the device will be maintained with the network connection.
         paragraph_4: <strong>ATTENTION!</strong>
@@ -1280,7 +1280,7 @@ en:
         paragraph_6: The command <span class='code'>network.hostdisconnect</span> also closes the socket that was opened with the  <a href='preconnect' class='command'>preconnect</a>, but only for connection types <strong>ETHERNET and GPRS </strong>.
       network_ping:
         description: Checks the status of the connection with the host
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'> network.ping </span> is used to test connectivity with the host.
         paragraph_3: In the above example the command <a href='network.ping' class='command'>network.ping</a> will do a ping on the host, your return will be stored in the variable <strong>iReturn</strong> that should be transformed into <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
@@ -1288,7 +1288,7 @@ en:
           parameter_2: <strong>host</strong> <span class='data-type'>[string]</span> Hostname or IP address to perform the ping.
       network_receive:
         description: Receives from the host buffer previously connected
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.receive</span> is used to receive a message (hexadecimal) from the host.
         paragraph_3: In the above example the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server, your return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: The command <a href='network.send' class='command'>network.send</a> will send a message, hexadecimal for the host and its return will be stored in the variable <strong>iReturn</strong>.
@@ -1300,7 +1300,7 @@ en:
           parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>1: Message successfully received</li><li>0: Could not receive the message</li></ul>'
       network_send:
         description: Sends a buffer to the host previously connected
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.send</span> is used to send a message (hexadecimal) to the host.
         paragraph_3: In the above example the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server, your return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: The command <a href='network.send' class='command'>network.send</a> will send a message, hexadecimal to the host and its return will be stored in the variable <strong>iReturn</strong>.
@@ -1389,7 +1389,7 @@ en:
           parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Command return, where: <br/><ul><li>0: PIN-Pad connected</li><li>-1: PIN-Pad not connected</li></ul>'
       preconnect:
         description: Connects to the host authorizer
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>preconnect</span> is used to establish a connection with CloudWalk.
         paragraph_3: In the above example the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server, and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: Since the variable <strong>iConnect</strong> is of the type <a href='integervariable' class='command'>integervariable</a>, it must be transformed into <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
@@ -1397,7 +1397,7 @@ en:
           parameter_1: '<strong>variablestatus</strong> <span class=''data-type''>[integer]</span><br/>Return function:<ul><li>0: Connected successfully</li><li>-1: Error when trying to connect</li></ul> '
       predial:
         description: Performs a dial-up connection with the provider
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>predial</span> is used to perform a dial-up connection with the provider.
         paragraph_3: In the above example the first command <a href='predial' class='command'>predial</a> with <strong>option</strong> 1, will make a connection with the provider, and the return will be stored in the variable <strong>iReturn</strong>.
         paragraph_4: The second command <a href='predial' class='command'>predial</a> with <strong>option</strong> 2, will check if the dialing process was completed.
