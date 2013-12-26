@@ -5,32 +5,32 @@ en:
     name: Name
     overview:
       api_token:
-        paragraph_1: ! 'All operations available on the API interface should always use a valid token API. The API token management is done directly on the CloudWalk Manager, by simply accessing the menu <strong>API</strong>, as shown below:'
-        paragraph_2: ! 'Example of URL:'
+        paragraph_1: 'All operations available on the API interface should always use a valid token API. The API token management is done directly on the CloudWalk Manager, by simply accessing the menu <strong>API</strong>, as shown below:'
+        paragraph_2: 'Example of URL:'
       crud:
         paragraph_1: To perform an operation on a resource (app, logical number, group, etc), a HTTP request is made to the URL using the appropriate HTTP verb.
-        paragraph_2: ! 'The four HTTP verbs used in CRUD operations are:'
-        paragraph_3: ! '<strong>GET: </strong>Finds a specific resource or collection of resources from an URL. For example, <span class=''code''>GET /%{version}/devices</span> returns a list with all serial numbers, while a <span class=''code''>GET /%{version}/devices/135</span> returns only the serial number with the ID 135.'
-        paragraph_4: ! '<strong>POST: </strong>Creates a new resource. For example, <span class=''code''>POST /%{version}/devices</span> creates a new serial number. The information sent in the POST request would then be used to fill the properties of the serial number.'
-        paragraph_5: ! '<strong>PUT: </strong>Updates an existing resource. For example, <span class=''code''>PUT /%{version}/devices/135</span> updates the serial number with the ID 135. The information sent in the PUT request would then be used to update the properties of the serial number.'
-        paragraph_6: ! '<strong>DELETE: </strong>Deletes an existing resource. For example, <span class=''code''>DELETE /%{version}/devices/135</span> deletes the serial number with the ID 135.'
-      description: ! 'Access to the API must be done from the domain <a href=''https://manager.cloudwalk.io/api''>https://manager.cloudwalk.io/api</a>. CRUD: Create, Retrieve, Update and Destroy.'
+        paragraph_2: 'The four HTTP verbs used in CRUD operations are:'
+        paragraph_3: '<strong>GET: </strong>Finds a specific resource or collection of resources from an URL. For example, <span class=''code''>GET /%{version}/devices</span> returns a list with all serial numbers, while a <span class=''code''>GET /%{version}/devices/135</span> returns only the serial number with the ID 135.'
+        paragraph_4: '<strong>POST: </strong>Creates a new resource. For example, <span class=''code''>POST /%{version}/devices</span> creates a new serial number. The information sent in the POST request would then be used to fill the properties of the serial number.'
+        paragraph_5: '<strong>PUT: </strong>Updates an existing resource. For example, <span class=''code''>PUT /%{version}/devices/135</span> updates the serial number with the ID 135. The information sent in the PUT request would then be used to update the properties of the serial number.'
+        paragraph_6: '<strong>DELETE: </strong>Deletes an existing resource. For example, <span class=''code''>DELETE /%{version}/devices/135</span> deletes the serial number with the ID 135.'
+      description: 'Access to the API must be done from the domain <a href=''https://manager.cloudwalk.io/api''>https://manager.cloudwalk.io/api</a>. CRUD: Create, Retrieve, Update and Destroy.'
       functionality:
         paragraph_1: The access to the API must be done from the domain <span class='code'>https://api.cloudwalk.io/%{version}</span>.
         paragraph_2: The requests should be made using the <strong>HTTPS</strong> protocol.
-        paragraph_3: ! 'All date and time records are returned in ISO 8601 standard:'
+        paragraph_3: 'All date and time records are returned in ISO 8601 standard:'
       pagination:
         paragraph_1: Requests that return multiple records are paginated, where the default pagination size is 30 records. The sub-sequent pages are defined by the parameter <span class='code'>&page</span>. The default amount of returned records can be changed by defining the parameter <span class='code'>&per_page</span>, up to 100 records.
       table_of_contents:
         api_token: API Token
-        crud: ! 'CRUD: Create, Retrieve, Update and Destroy'
+        crud: 'CRUD: Create, Retrieve, Update and Destroy'
         functionality: Functionality
         pagination: Pagination
         versioning: Versioning
       title: Developer API
       versioning:
         paragraph_1: When using the CloudWalk API, it is necessary to provide the version being used. Currently only the version <strong>v1</strong> is available for use, but eventually new versions will become available.
-        paragraph_2: ! 'Example of URL: <span class=''code''>https://api.cloudwalk.io/v1/devices</span>'
+        paragraph_2: 'Example of URL: <span class=''code''>https://api.cloudwalk.io/v1/devices</span>'
     response: Example of response
     sample: Example of use
     type: Type
@@ -52,7 +52,7 @@ en:
             size: Application size (bytes)
             updated_at: Timestamp in ISO 8601 format
             uuid: Universally unique identifier
-          paragraph_1: ! 'An application POSXML have the following attributes:'
+          paragraph_1: 'An application POSXML have the following attributes:'
         create:
           paragraph_1: Create a new POSXML application.
         description: Check how CRUD operations for application should be performed.
@@ -86,7 +86,7 @@ en:
             name: File name
             size: File size (bytes)
             updated_at: Timestamp in ISO 8601 format
-          paragraph_1: ! 'Os seguintes atributos compõe um arquivo:'
+          paragraph_1: 'Os seguintes atributos compõe um arquivo:'
         create:
           paragraph_1: Create a new file.
         description: Check how CRUD operations for files should be performed.
@@ -116,7 +116,7 @@ en:
             id: Record ID
             serial_number: Equipment serial number
             updated_at: Timestamp in ISO 8601 format
-          paragraph_1: ! 'A device have the following attributes:'
+          paragraph_1: 'A device have the following attributes:'
         create:
           paragraph_1: Grant CloudWalk access to a new device.
         description: Check how CRUD operations for unlocking devices should be performed.
@@ -146,7 +146,7 @@ en:
             id: Record ID
             name: Group name
             updated_at: Timestamp in ISO 8601 format
-          paragraph_1: ! 'A group have the following attributes:'
+          paragraph_1: 'A group have the following attributes:'
         create:
           paragraph_1: Create a new group.
         description: Check how CRUD operations for groups should be performed.
@@ -178,7 +178,7 @@ en:
             id: Record ID
             number: Logical number
             updated_at: Timestamp in ISO 8601 format
-          paragraph_1: ! 'A logical number have the following attributes:'
+          paragraph_1: 'A logical number have the following attributes:'
         create:
           paragraph_1: Create a new logical number.
         description: Check how CRUD operations for logical numbers should be performed.
@@ -208,9 +208,9 @@ en:
             logical_number: Device logical number
             serial_number: Device serial number
             started_at: Timestamp in ISO 8601 format
-            status: ! 'Record status: Success <span class=''code''>success</span>, Processing <span class=''code''>running</span> or Error <span class=''code''>fail</span>'
-            transaction_type: ! 'Record type: Release <span class=''code''>company</span>, Transaction <span class=''code''>switch</span> or Download <span class=''code''>get_asset</span>'
-          paragraph_1: ! 'A log have the following attributes:'
+            status: 'Record status: Success <span class=''code''>success</span>, Processing <span class=''code''>running</span> or Error <span class=''code''>fail</span>'
+            transaction_type: 'Record type: Release <span class=''code''>company</span>, Transaction <span class=''code''>switch</span> or Download <span class=''code''>get_asset</span>'
+          paragraph_1: 'A log have the following attributes:'
         description: The log records have some acronyms in fields transaction_type, status and received. Check out the definition of all acronyms.
         index:
           paragraph_1: Return an array with all logs.
@@ -247,7 +247,7 @@ en:
             updated_at: Timestamp in ISO 8601 format
             value: Parameter value
           paragraph_1: A parameter can reference a <strong>logical number</strong> or a <strong>group</strong>. What defines the type of parameter being handled is the definition of the properties <strong>number</strong> (refer to a logical number) or <strong>name</strong> (refer to a group).
-          paragraph_2: ! 'A parameter have the following attributes:'
+          paragraph_2: 'A parameter have the following attributes:'
         create:
           paragraph_1: Create a new parameter.
         description: The parameters can be related to a logical number or a group. Check how CRUD operations for parameters should be performed.
@@ -282,7 +282,7 @@ en:
             sign_in_count: Sign in count
             time_zone: Time zone utilizado no CloudWalk Manager (padrão America/Sao_Paulo)
             updated_at: Timestamp in ISO 8601 format
-          paragraph_1: ! 'An user have the following attributes:'
+          paragraph_1: 'An user have the following attributes:'
         description: Check how CRUD operations for users should be performed.
         index:
           paragraph_1: Return an array with all users.
@@ -296,11 +296,11 @@ en:
         title: Developer API - Users
         token:
           paragraph_1: It is possible to get the API Token of a specific user, through its email and password.
-    version: ! '{version}'
+    version: '{version}'
   development_environment:
     overview:
       compilation_console:
-        paragraph_1: ! 'It is on the compilation console that important information is displayed, such as the return of the compilation proccess: ''Compilation Succeeded!'' and additional application details:'
+        paragraph_1: 'It is on the compilation console that important information is displayed, such as the return of the compilation proccess: ''Compilation Succeeded!'' and additional application details:'
         properties:
           base64: Compiled source code
           functions: Number of declared functions
@@ -312,10 +312,10 @@ en:
       description: The CloudWalk IDE enables the application development for mobile devices using POSXML language.
       introduction:
         paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment, also providing the innovative use of real-time collaboration, which means, multiple developers can work on the same application simultaneously.
-        paragraph_2: ! 'Meet the CloudWalk IDE interface:'
+        paragraph_2: 'Meet the CloudWalk IDE interface:'
       real_time_colaboration:
         paragraph_1: Always working to increase developers productivity, we have incorporated this feature in our IDE (development environment). To start real-time collaboration, simply copy the <strong>complete</strong> URL of the CloudWalk IDE and share it with the developers that are going to work together.
-        paragraph_2: ! 'The image below demonstrates an example URL:'
+        paragraph_2: 'The image below demonstrates an example URL:'
       table_of_contents:
         compilation_console: Compilation console
         introduction: Introduction
@@ -343,20 +343,20 @@ en:
         path: PATH
         variables: VARIABLES
       introduction:
-        paragraph_1: ! 'There is a way to integrate CloudWalk POSXML applications with <a href=''https://en.wikipedia.org/wiki/REST'' class=''external'' target=''blank''>REST</a> APIs. It can be done by using the command <a href=''/posxml/commands/network.send'' class=''command''>network.send</a> with a string in the following format:'
+        paragraph_1: 'There is a way to integrate CloudWalk POSXML applications with <a href=''https://en.wikipedia.org/wiki/REST'' class=''external'' target=''blank''>REST</a> APIs. It can be done by using the command <a href=''/posxml/commands/network.send'' class=''command''>network.send</a> with a string in the following format:'
         paragraph_2: The CloudWalk Switch will receive the request sent through the command <a href='/posxml/commands/network.send' class='command'>network.send</a> and will perform the HTTP request on the url defined on the application configured on <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
         paragraph_3: To receive the answer from CloudWalk Switch, it is necessary to use the command <a href='/posxml/commands/network.receive' class='command'>network.receive</a> to receive the first 4 bytes that indicates the size of the message, and then receive the rest of the message with a second <a href='/posxml/commands/network.receive' class='command'>network.receive</a> call. This approach avoid timeouts and long wait times to receive the response from your HTTP endpoint.
       posxml_sample:
-        paragraph_1: ! 'The following example can be used to test this kind of HTTP integration:'
+        paragraph_1: 'The following example can be used to test this kind of HTTP integration:'
       table_of_contents:
         http_samples: Examples of HTTP verbs and paths
         introduction: Introduction
         posxml_sample: Example of POSXML application
       title: Integration with host - REST HTTP
     architecture:
-      description: ! 'Simplified architecture of CloudWalk service, with all the components involved: mobile device, authorizer, transactional switch, etc.'
+      description: 'Simplified architecture of CloudWalk service, with all the components involved: mobile device, authorizer, transactional switch, etc.'
       service_architecture:
-        paragraph_1: ! 'The diagram below shows a simplified architecture of CloudWalk service, with all the components involved: A mobile device, an authorizer, the transactional switch, etc.'
+        paragraph_1: 'The diagram below shows a simplified architecture of CloudWalk service, with all the components involved: A mobile device, an authorizer, the transactional switch, etc.'
       table_of_contents:
         service_architecture: Service architecture
       title: Integration with host
@@ -367,9 +367,9 @@ en:
         paragraph_2: If you are unsure of the steps above, check the session <a href='/walk-framework/configuration'>%{configuration}</a>
       sample:
         list:
-          item_1: ! '<strong>Account at WALK Manager: </strong>Create free at <a href=''https://manager.cloudwalk.io'' class=''external'' target=''_blank''>https://manager.cloudwalk.io</a>'
-          item_2: ! '<strong>WALK Framework: </strong> Device properly installed and configured'
-          item_3: ! '<strong>Internet access: </strong> It is necessary that the device has internet access (Ethernet, Dial or GPRS)'
+          item_1: '<strong>Account at WALK Manager: </strong>Create free at <a href=''https://manager.cloudwalk.io'' class=''external'' target=''_blank''>https://manager.cloudwalk.io</a>'
+          item_2: '<strong>WALK Framework: </strong> Device properly installed and configured'
+          item_3: '<strong>Internet access: </strong> It is necessary that the device has internet access (Ethernet, Dial or GPRS)'
         paragraph_1: For testing purposes, we provide a host authorizer ready to use. The authorizer is extremely simple, used only for testing purposes.
         prerequisites: Prerequisites
       table_of_contents:
@@ -382,12 +382,12 @@ en:
       testing:
         download_application: 1. Download the application
         if_fail: If fail
-        paragraph_1: ! 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it''s time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
-        paragraph_2: ! 'Press the green button and the process of downloading previously configured on Manager WALK application will start:'
-        paragraph_3: ! 'At the end of the process, the following message appears:'
+        paragraph_1: 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it''s time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
+        paragraph_2: 'Press the green button and the process of downloading previously configured on Manager WALK application will start:'
+        paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
         paragraph_5: Check the device communication setup, cables and internet connection.
-        paragraph_6: ! 'Several tools and services can help you to test the return of their requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
+        paragraph_6: 'Several tools and services can help you to test the return of their requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
       title: Integration with host - Simple HTTP
@@ -397,22 +397,22 @@ en:
           item_2: The transactional switch receives the content sent and forwards it to the socket in the url/port and configured for the application in WALK Manager;
           item_3: The response of the socket is returned to the transactional switch;
           item_4: The device executes the command network.receive and receives the response.
-        paragraph_1: ! 'One way to establish communication between CloudWalk service and a host authorizer is through HTTP. The diagram below represents communication between the mobile device, the CloudWalk service and the host authorizer:'
+        paragraph_1: 'One way to establish communication between CloudWalk service and a host authorizer is through HTTP. The diagram below represents communication between the mobile device, the CloudWalk service and the host authorizer:'
         paragraph_2: <strong>Attention:</strong> After performing a network.send and network.receive, you must perform a network.hosdisconnect so you can make a new call (send).
       walk_manager_setup:
         associate_logical_number:
           header: Associate the logical number
-          paragraph_1: ! 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium). The following screen will appear:'
-          paragraph_2: ! 'Then select the option <strong>1 LOGICAL NUMBER</strong> and enter the newly registered logical number (0001):'
+          paragraph_1: 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium). The following screen will appear:'
+          paragraph_2: 'Then select the option <strong>1 LOGICAL NUMBER</strong> and enter the newly registered logical number (0001):'
           paragraph_3: After entering the logical number, press enter (green).
         create_application:
           list:
             item_1: Login to your WALK Manager account
             item_10: A message indicating that the application was successfully registered should be be shown
             item_11: Copy the POSXML source code below (CTRL + C), click <strong>Edit source code</strong>, paste the previously copied code (CTRL + V) and click on <strong>Compile</strong>
-            item_2: ! 'Select the first option: <strong>Applications</strong>'
+            item_2: 'Select the first option: <strong>Applications</strong>'
             item_3: Click the button <strong>New application</strong>
-            item_4: ! 'Fill in the application name, for example: <strong>httpapp</strong>'
+            item_4: 'Fill in the application name, for example: <strong>httpapp</strong>'
             item_5: Fill in the application description, for example <strong>Test with HTTP</strong>
             item_6: Fill in the authorizer with the URL <strong>http://http-echo.cloudwalk.io</strong>
             item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
@@ -421,9 +421,9 @@ en:
         create_group:
           header: Register a group
           list:
-            item_1: ! 'Select the option: <strong>Groups</strong>'
+            item_1: 'Select the option: <strong>Groups</strong>'
             item_2: Click the button <strong>New Group</strong>
-            item_3: ! 'Fill in the group name, for example: <strong>GROUP TEST</strong>'
+            item_3: 'Fill in the group name, for example: <strong>GROUP TEST</strong>'
             item_4: Click the button <strong>Register group</strong>
             item_5: Then click the button <strong>Update group</strong>
             item_6: Select the application previously registered by clicking the checkbox
@@ -431,12 +431,12 @@ en:
         create_logical_number:
           header: Register logical number
           list:
-            item_1: ! 'Select the option: <strong>Logical Numbers</strong>'
+            item_1: 'Select the option: <strong>Logical Numbers</strong>'
             item_2: Click the button <strong>New logical number</strong>
             item_3: Fill in a logical number, for example <strong>0001</strong>
             item_4: Select the previously registered group (GROUP TEST) and click the button <strong>Register logical number</strong>
-          paragraph_1: ! 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow the following steps:'
-        paragraph_1: ! 'The last step is to configure the WALK Manager. Follow the procedure:'
+          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow the following steps:'
+        paragraph_1: 'The last step is to configure the WALK Manager. Follow the procedure:'
     tcp:
       description: One way to establish communication between CloudWalk service and a host authorizer is through TCP/IP. Example of use, configuring the device, compiling the application, configuring the WALK Manager, testing the communication.
       pos_setup:
@@ -444,7 +444,7 @@ en:
         paragraph_2: If you are unsure of the steps above, check the session <a href='/walk-framework/configuration'>%{configuration}</a>
       sample:
         list:
-          item_1: ! '<strong>Account at WALK Manager: </strong>Create free at <a href=''https://manager.cloudwalk.io'' class=''external'' target=''_blank''>https://manager.cloudwalk.io</a>'
+          item_1: '<strong>Account at WALK Manager: </strong>Create free at <a href=''https://manager.cloudwalk.io'' class=''external'' target=''_blank''>https://manager.cloudwalk.io</a>'
           item_2: <strong>WALK Framework:</strong> Device properly installed and configured
           item_3: <strong>Internet access:</strong> It is necessary that the device has internet access (Ethernet, Dial or GPRS)
         paragraph_1: For testing purposes, we provide a host authorizer ready to use. The authorizer is extremely simple, used only for testing purposes.
@@ -459,12 +459,12 @@ en:
       testing:
         download_application: 1. Download the application
         if_fail: If fail
-        paragraph_1: ! 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it''s time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
-        paragraph_2: ! 'Press the green button and the process of downloading previously configured on Manager WALK application will start:'
-        paragraph_3: ! 'At the end of the process, the following message appears:'
+        paragraph_1: 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it''s time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
+        paragraph_2: 'Press the green button and the process of downloading previously configured on Manager WALK application will start:'
+        paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
         paragraph_5: Check the device communication setup, cables and internet connection.
-        paragraph_6: ! 'Several tools and services can help you to test the return of their requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
+        paragraph_6: 'Several tools and services can help you to test the return of their requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
       title: Integration with host - Plain TCP (socket tunnel)
@@ -474,22 +474,22 @@ en:
           item_2: The transactional switch receives the content sent and forwards it to the socket in the url and configured port for the application in WALK Manager;
           item_3: The response of the socket is returned to the transactional switch;
           item_4: The device executes the command network.receive and receives the response.
-        paragraph_1: ! 'One way to establish communication between CloudWalk service and a host authorizer is through TCP/IP. The diagram below represents communication between the mobile device, CloudWalk service and host authorizer:'
+        paragraph_1: 'One way to establish communication between CloudWalk service and a host authorizer is through TCP/IP. The diagram below represents communication between the mobile device, CloudWalk service and host authorizer:'
         paragraph_2: <strong>Attention:</strong> After performing a network.send and network.receive, you must perform a network.hosdisconnect so you can make a new call (send).
       walk_manager_setup:
         associate_logical_number:
           header: Associate the logical number
-          paragraph_1: ! 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium). The following screen will appear:'
-          paragraph_2: ! 'Then select the option <strong>1 LOGICAL NUMBER</strong> and enter the newly registered logical number (0001):'
+          paragraph_1: 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium). The following screen will appear:'
+          paragraph_2: 'Then select the option <strong>1 LOGICAL NUMBER</strong> and enter the newly registered logical number (0001):'
           paragraph_3: After entering the logical number, press enter (green).
         create_application:
           list:
             item_1: Login to your WALK Manager account
             item_10: A message indicating that the application was successfully registered should be be shown
             item_11: Copy the POSXML source code below (CTRL + C), click <strong>Edit source code</strong>, paste the previously copied code (CTRL + V) and click on <strong>Compile</strong>
-            item_2: ! 'Select the first option: <strong>Applications</strong>'
+            item_2: 'Select the first option: <strong>Applications</strong>'
             item_3: Click the button <strong>New application</strong>
-            item_4: ! 'Fill in the application name, for example: <strong>tcpapp</strong>'
+            item_4: 'Fill in the application name, for example: <strong>tcpapp</strong>'
             item_5: Fill in the application description, for example <strong>Test with TCP IP</strong>
             item_6: Fill in the authorizer with the URL <strong>tcp://tcp-echo.cloudwalk.io:800</strong>
             item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
@@ -498,9 +498,9 @@ en:
         create_group:
           header: Register a group
           list:
-            item_1: ! 'Select the option: <strong>Groups</strong>'
+            item_1: 'Select the option: <strong>Groups</strong>'
             item_2: Click the button <strong>New Group</strong>
-            item_3: ! 'Fill in the group name, for example: <strong>GROUP TEST</strong>'
+            item_3: 'Fill in the group name, for example: <strong>GROUP TEST</strong>'
             item_4: Click the button <strong>Register group</strong>
             item_5: Then click the button <strong>Update group</strong>
             item_6: Select the application previously registered by clicking the checkbox
@@ -508,18 +508,18 @@ en:
         create_logical_number:
           header: Register logical number
           list:
-            item_1: ! 'Select the option: <strong>Logical Numbers</strong>'
+            item_1: 'Select the option: <strong>Logical Numbers</strong>'
             item_2: Click the button <strong>New logical number</strong>
             item_3: Fill in a logical number, for example <strong>0001</strong>
             item_4: Select the previously registered group (GROUP TEST) and click the button <strong>Register logical number</strong>
-          paragraph_1: ! 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow the following steps:'
-        paragraph_1: ! 'The last step is to configure the WALK Manager. Follow the procedure:'
+          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow the following steps:'
+        paragraph_1: 'The last step is to configure the WALK Manager. Follow the procedure:'
   introduction:
     development_environment:
       description: The CloudWalk IDE enables the application development for mobile devices using POSXML language.
       more_info:
         overview: overview
-        paragraph_1: ! 'More information available at '
+        paragraph_1: 'More information available at '
       overview:
         paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment, also providing the innovative use of real-time collaboration, which means, multiple developers can work on the same application simultaneously.
       table_of_contents:
@@ -536,7 +536,7 @@ en:
         feature_6: — <em>Contactless</em> technology:</strong> innovation, agility and practicality using contactless payments.
         feature_7: — Rapid development:</strong> quickly and easily develop applications with POSXML.
         feature_8: — Remote update:</strong> update your devices remotely, without going into the field.
-        paragraph_1: ! 'The foundations of CloudWalk service are based on the quality of network services, cost minimization, agility in the applications development and logistical control of the devices updates, such as:'
+        paragraph_1: 'The foundations of CloudWalk service are based on the quality of network services, cost minimization, agility in the applications development and logistical control of the devices updates, such as:'
       description: CloudWalk is a SaaS based application platform for devices such as POS terminals and smartphones. The service offers hardware agnostic solution, which allows any application developed with CloudWalk to be compatible with all approved devices, offering many benefits, such as EMV and contactless technology.
       how_it_works:
         paragraph_1: CloudWalk is a <a href='http://en.wikipedia.org/wiki/Software_as_a_service' target='blank' class='external'>SaaS</a> based application platform for devices such as POS terminals and smartphones. The service offers a <em>hardware agnostic</em> solution, which allows any application developed with CloudWalk to be compatible with all approved devices, offering many benefits, such as EMV and contactless technology.
@@ -551,7 +551,7 @@ en:
         item_7: — Universities and Colleges
         item_8: — Payments companies
         item_9: — Public service companies (water, energy, gas, etc.)
-        paragraph_1: ! 'CloudWalk service is not limited to administration or processing credit or debit card, but it adheres to any market segment that might have a need to collect data in the field and issuing receipts and reports:'
+        paragraph_1: 'CloudWalk service is not limited to administration or processing credit or debit card, but it adheres to any market segment that might have a need to collect data in the field and issuing receipts and reports:'
       table_of_contents:
         benefits: Advantages and benefits
         how_it_works: How it works
@@ -576,13 +576,13 @@ en:
         line_telium_2: Ingenico Telium 2
         line_verix: VeriFone Verix Line
         paragraph_1: The component WALK Framework, which is installed on devices, differs between various lines of equipments, since each device has its own specifications. If the equipment you want to use does not appear on the list below, <a href='mailto:cloudwalk@cloudwalk.io'>contact us</a>, because we might consider the approval of it.
-        paragraph_2: ! 'Currently, the following devices are approved by WALK Framework:'
+        paragraph_2: 'Currently, the following devices are approved by WALK Framework:'
       contactless:
-        paragraph_1: ! 'The CloudWalk service also offers the possibility of using the contactless technology with the following equipments:'
+        paragraph_1: 'The CloudWalk service also offers the possibility of using the contactless technology with the following equipments:'
         paragraph_2: The contactless communication on Verifone terminals is done through the <strong>pinpad 1000 SE CTLS</strong>, together with the terminals Vx510 or Vx520.
         paragraph_3: The EVO contactless terminals have not been approved yet.
         paragraph_4: The contactless communication on Ingenico ICT terminals (ICT220 and ICT250) is done through the <strong>pinpad IPP220 CTLS</strong>. The IWL terminals (IWL220, IWL250 and IWL280) have a built-in native contactless communication interface.
-      description: ! 'The WALK Framework is a virtual machine that has the ability to interpret the commands of POSXML language. Currently, the following devices are approved by WALK Framework: VeriFone Verix Line, VeriFone Evo Line, Ingenico Telium 2 Line.'
+      description: 'The WALK Framework is a virtual machine that has the ability to interpret the commands of POSXML language. Currently, the following devices are approved by WALK Framework: VeriFone Verix Line, VeriFone Evo Line, Ingenico Telium 2 Line.'
       overview:
         paragraph_1: The WALK Framework, installed directly on the device, is a virtual machine that has the ability to interpret the commands of POSXML language.
       table_of_contents:
@@ -597,7 +597,7 @@ en:
       how_to_access:
         paragraph_1: Access to WALK Manager is done via Internet, using the address <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
       overview:
-        paragraph_1: ! 'WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. Also through WALK Manager are made: users management and monitoring of transactions performed by devices.'
+        paragraph_1: 'WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. Also through WALK Manager are made: users management and monitoring of transactions performed by devices.'
       table_of_contents:
         api: API
         how_to_access: How to access
@@ -665,7 +665,6 @@ en:
       transactions_monitor: Monitor of transactions
   posxml:
     commands:
-      description: "Listing with a brief description of all POSXML commands."
       adjustdatetime:
         description: Updates the device internal clock
         paragraph_1: Command <span class='code'>adjustdatetime</span> is used to update the date and time of the device.
@@ -710,7 +709,7 @@ en:
         paragraph_2: In the above example the binary <strong>1010</strong> will be converted to decimal.
         paragraph_3: To display the converted value on the <a href='display' class='command'>display</a>, you need to convert it using the command  <a href='inttostring' class='command'>inttostring</a>.
         parameters:
-          parameter_1: ! '<strong>base</strong> <span class=''data-type''>[integer]</span><br/>What base is used in the conversion:<ul><li>2: binary</li><li>10: decimal</li><li>16: hexadecimal</li></ul>'
+          parameter_1: '<strong>base</strong> <span class=''data-type''>[integer]</span><br/>What base is used in the conversion:<ul><li>2: binary</li><li>10: decimal</li><li>16: hexadecimal</li></ul>'
           parameter_2: <strong>number</strong> <span class='data-type'>[string]</span><br/>Binary, decimal or hexadecimal that will be converted.
           parameter_3: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will receive return of the command.
       crypto_crc:
@@ -731,9 +730,9 @@ en:
         paragraph_4: The second <a href='display' class='command'>display</a> shows the decrypted value.
         parameters:
           parameter_1: <strong>cryptotype</strong> <span class='data-type'>[string]</span><br/>Algorithm to be used:<ul><li>DES</li><li>3DES</li><li>3DESTripleLength</li><li>NEWDES</li></ul>
-          parameter_2: ! '<strong>key</strong> <span class=''data-type''>[string]</span><br/>Hexadecimal encryption key.<ul><li>DES: 8 bytes or 16 characters</li><li>3DES: 16 bytes or 32 characters</li><li>3DESTripleLength: 24 bytes or 48 characters</li><li>NEWDES: 15 bytes or 30 characters</li></ul>'
+          parameter_2: '<strong>key</strong> <span class=''data-type''>[string]</span><br/>Hexadecimal encryption key.<ul><li>DES: 8 bytes or 16 characters</li><li>3DES: 16 bytes or 32 characters</li><li>3DESTripleLength: 24 bytes or 48 characters</li><li>NEWDES: 15 bytes or 30 characters</li></ul>'
           parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Value, hexadecimal, which will be encrypted or decrypted. If the value has more than 8 bytes must be separated into blocks with the command <a href='string.elementat' class='command'>string.elementat</a>
-          parameter_4: ! '<strong>type</strong> <span class=''data-type''>[integer]</span><br/><ul><li>0: Encrypt</li><li>1: Decrypt</li></ul>'
+          parameter_4: '<strong>type</strong> <span class=''data-type''>[integer]</span><br/><ul><li>0: Encrypt</li><li>1: Decrypt</li></ul>'
           parameter_5: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
       crypto_lrc:
         description: Generates a LRC byte of the string in the buffer
@@ -760,6 +759,7 @@ en:
         paragraph_3: The command <a href='deletefile' class='command'>deletefile</a> deletes the file <strong>test.txt</strong> from the device's memory, making sure that the variable <strong>sPeople</strong> is empty and does not show anything on the <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
+      description: Listing with a brief description of all POSXML commands.
       display:
         description: Displays a custom message on device's display
         paragraph_1: The command <span class='code'>display</span> is used to display a customized message, considering the row and column passed as parameter to the command.
@@ -774,9 +774,9 @@ en:
         paragraph_2: In the above example, to display a bitmap with the command <strong>displaybitmap</strong>, first needs to be downloaded the file using <a href='downloadfile' class='command'>downloadfile</a>.
         paragraph_3: In this case it is not necessary to use the command <a href='display' class='command'>display</a> to view the image.
         paragraph_4: The variable <strong>iReturn</strong> will store the result of the command.
-        paragraph_5: ! 'The image dimensions that will be shown must be aligned according to the device model and specification. Check an example image: <a href=''https://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp'' class=''external'' target=''_blank''>CloudWalk_Wallpaper</a>'
+        paragraph_5: 'The image dimensions that will be shown must be aligned according to the device model and specification. Check an example image: <a href=''https://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp'' class=''external'' target=''_blank''>CloudWalk_Wallpaper</a>'
         parameters:
-          parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will receive return of the command.<ul><li>-2: Bitmap is monochrome</li><li>-1: invalid bitmap size</li><li>0: bitmap not found</li><li>1: bitmap successfully displayed</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will receive return of the command.<ul><li>-2: Bitmap is monochrome</li><li>-1: invalid bitmap size</li><li>0: bitmap not found</li><li>1: bitmap successfully displayed</li></ul>'
           parameter_2: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name with extension.
       downloadfile:
         description: Downloads a file previously registered on the WALK Manager
@@ -786,7 +786,7 @@ en:
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name with extension.
           parameter_2: <strong>remotepath</strong> <span class='data-type'>[string]</span><br/>File name with extension.
-          parameter_3: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return command. <ul><li>2: The file has the CRC of a file on the server </li><li>1: Download performed successfully </li><li>0: Error encode base 64 </li><li>-1: File not found or error on encode</li><li>-2: connection Error in buffer send</li><li>-4: error when receiving Walk Server package </li><li>-5: Error connecting to Walk Server</li><li>-6: Error message transfer</li><li>-7: Error sending confirmation of completed download</li><li>-8: number unauthorized</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return command. <ul><li>2: The file has the CRC of a file on the server </li><li>1: Download performed successfully </li><li>0: Error encode base 64 </li><li>-1: File not found or error on encode</li><li>-2: connection Error in buffer send</li><li>-4: error when receiving Walk Server package </li><li>-5: Error connecting to Walk Server</li><li>-6: Error message transfer</li><li>-7: Error sending confirmation of completed download</li><li>-8: number unauthorized</li></ul>'
       editfile:
         description: Allows write a file in WALK dbfile format (key/value)
         paragraph_1: The command <span class='code'>editfile</span> is used to edit a file in <a href='#walk_db' class='command'>Walk DB</a> format.
@@ -799,7 +799,7 @@ en:
       else:
         description: Logical condition in a block of the if statement
         paragraph_1: The <span class='code'>else</span> statement is used to specify a condition contrary to the <span class='code'>if</span> statement in an POSXML application. Other commands can be used within an <span class='code'>else</span> block, and these commands are executed if the logical expression of the <span class='code'>if</span> statement is not true.
-        paragraph_2: ! 'There are three conditions in the example above:'
+        paragraph_2: 'There are three conditions in the example above:'
         paragraph_3: 1st - comparison between two texts resulting in <strong>false</strong> because <strong>Blue</strong> is different from the value of the variable <strong>sColor</strong>;
         paragraph_4: 2nd - comparison between two numbers resulting in <strong>false</strong> because <strong>111</strong> isn't greater than the value of the variable <strong>iNumber</strong>;
         paragraph_5: 3rd - comparison between two texts resulting in <strong>false</strong> because <strong>blue</strong> is equal to the value of the variable <strong>$(sColor)</strong>;
@@ -811,7 +811,7 @@ en:
         paragraph_11: In the above example was demonstrated an example for each parameter type, <span class='code'>init</span>, <span class='code'>process</span> and <span class='code'>finish</span>.
         paragraph_12: The example shown here is fictitious, since in order to succeed with a full EMV transaction is necessary several other factors such as an ISO-8583 answer from the card issuer, keys injected into the terminal and other requirements defined by the EMV standard.
         paragraph_2: The command <span class='code'>emv.adddata</span> is used to pass parameters to the <em>Kernel EMV</em> on commands <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>.
-        paragraph_3: ! 'Allowed parameters:'
+        paragraph_3: 'Allowed parameters:'
         paragraph_4: Parameter
         paragraph_5: Description
         paragraph_6: Contact
@@ -820,9 +820,9 @@ en:
         paragraph_9: For the type <em><strong>'process'</strong> &lt;emv.processtransaction/&gt;</em>
         parameters:
           parameter_1: <strong>parameter</strong> <span class='data-type'>[string]</span><br/> Parameter name to be sent. <a href='#table-of-parameters'>(see table below)</a>
-          parameter_2: ! '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Possible types: <br/><ul><li>init</li><li>process</li><li>finish</li></ul>'
+          parameter_2: '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Possible types: <br/><ul><li>init</li><li>process</li><li>finish</li></ul>'
           parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/> Parameter value.
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn''t exist.'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn''t exist.'
       emv_cleanstructures:
         description: Clears all input and output parameters
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -837,7 +837,7 @@ en:
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
         paragraph_5: After that, the command <span class='code'>emv.finishtransaction</span> is executed to finish the chip processing; since the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp doesn''t match with the parameter''s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card<li>43: Card removed in the middle of the operation</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp doesn''t match with the parameter''s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card<li>43: Card removed in the middle of the operation</li></ul>'
       emv_getinfo:
         description: Returns information parameters after the execution of the EMV process
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -845,7 +845,7 @@ en:
         paragraph_11: In the above example, the command <span class='code'>emv.getinfo</span> was used to fetch the parameters after the execution of the commands <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>. The command <a href='print' class='command'>print</a> was used to display the ticket information.
         paragraph_12: Note that before performing the commands <strong>init</strong>, <strong>process</strong> and <strong>finish</strong> it is necessary to pass parameters to the <em>Kernel EMV</em> with the command <a href='emv.adddata' class='command'>emv.adddata</a>.
         paragraph_2: The command <span class='code'>emv.getinfo</span> is used to search for results in the instructions <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>.
-        paragraph_3: ! 'Allowed parameters:'
+        paragraph_3: 'Allowed parameters:'
         paragraph_4: Parameter
         paragraph_5: Description
         paragraph_6: Contact
@@ -864,7 +864,7 @@ en:
         paragraph_4: In the above example, the command <a href='emv.cleanstructures' class='command'>emv.cleanstructures</a> was used to clean the data structures, and the command <a href='emv.adddata' class='command'>emv.adddata</a> was used pass the parameters to the <em>Kernel EMV</em>.
         paragraph_5: After that, the command <span class='code'>emv.inittransaction</span> is executed to start the EMV processing. Since the return of command is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
       emv_loadtables:
         description: load tables EMV and PKI of the file for the buyer
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -876,7 +876,7 @@ en:
         paragraph_7: It is necessary to initialize the library EMV and load the tables only if the device is <strong>turned on</strong> or <strong>restarted</strong>, otherwise it is not necessary to use this command every time on an EMV transaction.
         parameters:
           parameter_1: <strong>acquirer</strong> <span class='data-type'>[integer]</span><br/> Acquirer network identification number.
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>10: Error while starting the tables</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>21: Error while trying to store records</li><li>30: Communication error, PIN-Pad serial port is probably busy</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>10: Error while starting the tables</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>21: Error while trying to store records</li><li>30: Communication error, PIN-Pad serial port is probably busy</li></ul>'
       emv_open:
         description: Initializes EMV library
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -884,10 +884,10 @@ en:
         paragraph_3: In the above example, the command <span class='code'>emv.open</span> was used to initialize the device's EMV library. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> was used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>mkslot</strong> <span class='data-type'>[integer]</span><br/> Device slot that the master key is stored.
-          parameter_2: ! '<strong>pinpadtype</strong> <span class=''data-type''>[integer]</span><br/> PIN-Pad type: <br/><ul><li>1: Internal</li><li>2: External</li></ul>'
+          parameter_2: '<strong>pinpadtype</strong> <span class=''data-type''>[integer]</span><br/> PIN-Pad type: <br/><ul><li>1: Internal</li><li>2: External</li></ul>'
           parameter_3: <strong>pinpadwk</strong> <span class='data-type'>[string]</span><br/> Working key used on the pinpad session.
-          parameter_4: ! '<strong>showamount</strong> <span class=''data-type''>[integer]</span><br/> Defines wether the library should show the amount: <br/><ul><li>1: Show the amount</li><li>0: Does not show the amount</li></ul>'
-          parameter_5: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>14: Library already started</li><li>16: Error</li></ul>'
+          parameter_4: '<strong>showamount</strong> <span class=''data-type''>[integer]</span><br/> Defines wether the library should show the amount: <br/><ul><li>1: Show the amount</li><li>0: Does not show the amount</li></ul>'
+          parameter_5: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>14: Library already started</li><li>16: Error</li></ul>'
       emv_processtransaction:
         description: Starts the execution of the EMV process
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -896,8 +896,8 @@ en:
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
         paragraph_5: Then, the command <span class='code'>emv.processtransaction</span> is executed to continue the chip card handling process. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: ! '<strong>ctls</strong> <span class=''data-type''>[integer]</span><br/>Defines wether the transaction should be <em><strong>contact-less</strong></em>, where:<br/><ul><li>1: Contact-less transaction</li><li>0: Contact (standard) transaction</li></ul>'
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>19: Absence of data for the mandatory field 55, or mandatory data is not accessible (if that''s the case, pass the tag on baOptionalTags)</li><li>31: PIN-Pad communication error</li><li>40: Execution error</li><li>43: Card removed in the middle of the operation</li></ul>'
+          parameter_1: '<strong>ctls</strong> <span class=''data-type''>[integer]</span><br/>Defines wether the transaction should be <em><strong>contact-less</strong></em>, where:<br/><ul><li>1: Contact-less transaction</li><li>0: Contact (standard) transaction</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>19: Absence of data for the mandatory field 55, or mandatory data is not accessible (if that''s the case, pass the tag on baOptionalTags)</li><li>31: PIN-Pad communication error</li><li>40: Execution error</li><li>43: Card removed in the middle of the operation</li></ul>'
       emv_removecard:
         description: Waits for card removal
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -906,7 +906,7 @@ en:
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
         paragraph_5: Then, the command <span class='code'>emv.finishtransaction</span> is executed to finish the chip card handling process. After that, the command <span class='code'>emv.removecard</span> requests the user to remove the chip card. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter set on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter set on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
       emv_settimeout:
         description: Define timeout (in seconds) of the library of the EMV process
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -915,10 +915,10 @@ en:
         paragraph_4: In the above example, the command <span class='code'>emv.settimeout</span> is executed passing 10 seconds to the parameter <em><strong>seconds</strong></em>, that is, when the next command <a href='emv.inittransaction' class='commands'>emv.inittransaction</a> is executed, the device will wait for 10 seconds until the user inserts or swipes the card.
         parameters:
           parameter_1: <strong>timeout</strong> <span class='data-type'>[integer]</span><br/>Timeout in seconds
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>15: Library EMV not initiated</li><li>16: Internal error</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>15: Library EMV not initiated</li><li>16: Internal error</li></ul>'
       example: Example
       execute:
-        app_name: ! 'Application name:'
+        app_name: 'Application name:'
         description: Execute a POSXML application stored on the device
         paragraph_1: The command <span class='code'>execute</span> executes a compiled POSXML file.
         paragraph_2: In the examples above, two POSXML applications were created; The first one with the name <strong>appone</strong> and the second one with the name <strong>apptwo</strong>.
@@ -943,8 +943,8 @@ en:
         paragraph_3: The command <a href='display' class='command'>display</a> will display <strong>-1</strong>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
-          parameter_2: ! '<strong>mode</strong> <span class=''data-type''>[string]</span><br/><ul><li>r: Reading</li><li>w: Writing</li></ul>'
-          parameter_3: ! '<strong>variablehandle</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command.<ul><li>-1: Could not open file</li><li>>-1: Open file</li></ul>'
+          parameter_2: '<strong>mode</strong> <span class=''data-type''>[string]</span><br/><ul><li>r: Reading</li><li>w: Writing</li></ul>'
+          parameter_3: '<strong>variablehandle</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command.<ul><li>-1: Could not open file</li><li>>-1: Open file</li></ul>'
       file_read:
         description: Reads a file that was previously opened by file.open
         paragraph_1: The command <span class='code'>file.read</span> is used to read a file open.
@@ -982,7 +982,7 @@ en:
         parameters:
           parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Directory which is going to be analyzed, that can be I or F (VeriFone).
           parameter_2: <strong>listfilename</strong> <span class='data-type'>[string]</span><br/>Name of the file that will store the name and size of the files in the specified directory.
-          parameter_3: ! '<strong>variablereturn</strong> <span class=''data-type''>[inteiro]</span><br/>Variable that will store the return of the command.<ul><li>0: File list created</li><li>-1: Empty directory</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[inteiro]</span><br/>Variable that will store the return of the command.<ul><li>0: File list created</li><li>-1: Empty directory</li></ul>'
       filesystem_space:
         description: Checks the space (free and used) and the number of files in memory
         paragraph_1: This command does not work on <strong>Telium</strong> terminals
@@ -991,7 +991,7 @@ en:
         paragraph_4: As the return of the command <strong>filesystem.filespace</strong> is an <a href='integervariable' class='command'>integervariable</a>, it must be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a> by the command <a href='inttostring' class='command'>inttostring</a>
         parameters:
           parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Unit.
-          parameter_2: ! '<strong>type</strong> <span class=''data-type''>[string]</span><br/><ul><li>total: Total space</li><li>used: Used space</li><li>free: Free space</li><li>countfiles: Number of files</li></ul>'
+          parameter_2: '<strong>type</strong> <span class=''data-type''>[string]</span><br/><ul><li>total: Total space</li><li>used: Used space</li><li>free: Free space</li><li>countfiles: Number of files</li></ul>'
           parameter_3: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
       function:
         description: Defines a block of code that can be executed later
@@ -1016,7 +1016,7 @@ en:
         paragraph_1: The command <span class='code'>getdatetime</span> is used to get the device date/time.
         paragraph_2: The command <a href='getdatetime' class='command'>getdatetime</a> receives the desired format and informs the variable that will hold your return which is then displayed on the device screen.
         parameters:
-          parameter_1: ! '<strong>format</strong> <span class=''data-type''>[string]</span><br/>Date format retrieved where:<ul><li>yy: four-digit year</li><li>y: two-digit year</li><li>M: two-digit month</li><li>d: two-digit day</li><li>h: two-digit hour</li><li>m: two-digit minute</li><li>second: two-digit second</li>separators / and : are added automatically.</ul>'
+          parameter_1: '<strong>format</strong> <span class=''data-type''>[string]</span><br/>Date format retrieved where:<ul><li>yy: four-digit year</li><li>y: two-digit year</li><li>M: two-digit month</li><li>d: two-digit day</li><li>h: two-digit hour</li><li>m: two-digit minute</li><li>second: two-digit second</li>separators / and : are added automatically.</ul>'
           parameter_2: <strong>returnvariable</strong> <span class='data-type'>[string]</span><br/> Store the returned date.
       if:
         description: Instruction of decision making or logical comparison
@@ -1039,7 +1039,7 @@ en:
         paragraph_2: In the example above, there are three conditions:<ul><li>1st - compares two texts causing it to be <em>true</em> as <em>Blue</em> is equal to the value of the variable <em>sColor</em></li><li>2nd - compares two numbers causing it to be <em>false</em> as <em>111</em> is not greater than the value of the variable <em>iNumber</em></li><li>3rd - compares two texts causing it to be <em>false</em> as <em>Blue</em> is different from the value of the variable <em>sColor</em>. POSXML considers uppercase and lowercase letters (<em>case-sensitive</em>)</li></ul> The command <a href='waitkey' class='command'>waitkey</a> awaits a click of any key to continue code execution.
         parameters:
           parameter_1: <strong>variable</strong> <span class='data-type'>[integer or string]</span><br/>Variable that will be used in the comparision.
-          parameter_2: ! '<strong>operator</strong> <span class=''data-type''>[string]</span><br/>Comparison operators: <span class=''code''>lessthan</span>, <span class=''code''>greaterthan</span>, <span class=''code''>equalto</span>, <span class=''code''>notequalto</span>, <span class=''code''>greaterthanorequalto</span> or <span class=''code''>lessthanorequalto</span>.'
+          parameter_2: '<strong>operator</strong> <span class=''data-type''>[string]</span><br/>Comparison operators: <span class=''code''>lessthan</span>, <span class=''code''>greaterthan</span>, <span class=''code''>equalto</span>, <span class=''code''>notequalto</span>, <span class=''code''>greaterthanorequalto</span> or <span class=''code''>lessthanorequalto</span>.'
           parameter_3: <strong>value</strong> <span class='data-type'>[string or integer]</span><br/>Value that will be used in the comparison.
       input_getvalue:
         description: Captures a string and displays it on the screen in any position
@@ -1073,7 +1073,7 @@ en:
           parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column that message appears.
           parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Custom message to be displayed.
           parameter_4: <strong>variable</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
-          parameter_5: ! '<strong>format</strong> <span class=''data-type''>[integer]</span><br/>Input format <ul><li>9: any numeric character</li><li>A: any non-numeric character</li><li>*: password</li></ul> You can use only one format for command.'
+          parameter_5: '<strong>format</strong> <span class=''data-type''>[integer]</span><br/>Input format <ul><li>9: any numeric character</li><li>A: any non-numeric character</li><li>*: password</li></ul> You can use only one format for command.'
       inputinteger:
         description: Allows the entry of an integer
         paragraph_1: The command <span class='code'>inputinteger</span> is used to allow entry of an integer, following a maximum and a minimum limit.
@@ -1110,7 +1110,7 @@ en:
         paragraph_1: The command <span class='code'>integerconvert</span> is used to convert an integer into binary, octal or hexadecimal.
         paragraph_2: In the above example number <strong>10</strong> will be converted to binary, octal and hexadecimal values and will be displayed on the <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: ! '<strong>base</strong> <span class=''data-type''>[integer]</span><br/>What base is used in the conversion:<ul><li>2: binary</li><li>8: octal</li><li>16: hexadecimal</li></ul>'
+          parameter_1: '<strong>base</strong> <span class=''data-type''>[integer]</span><br/>What base is used in the conversion:<ul><li>2: binary</li><li>8: octal</li><li>16: hexadecimal</li></ul>'
           parameter_2: <strong>number</strong> <span class='data-type'>[string]</span><br/>Decimal number to be converted.
           parameter_3: <strong>sizereturn</strong> <span class='data-type'>[integer]</span><br/>Size of the return, if the entered number is greater, there will be added 0 on the left.
           parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
@@ -1150,7 +1150,7 @@ en:
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/> Size of the message being analyzed.
           parameter_3: <strong>variableid</strong> <span class='data-type'>[string]</span><br/> Variable that stores the message ID.
           parameter_4: <strong>variablemessage</strong> <span class='data-type'>[string]</span><br/> Variable that has stored the message to be analyzed.
-          parameter_5: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/> <span class=''data-type''> 0: message successfully analyzed <br/> -806: error on the analyzed message</span>'
+          parameter_5: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/> <span class=''data-type''> 0: message successfully analyzed <br/> -806: error on the analyzed message</span>'
       iso8583_endmessage:
         description: Ends assembly of the ISO message
         paragraph_1: The command <span class='code'>iso8583.endmessage</span> is used to finish the ISO8583 message being mounted.
@@ -1159,7 +1159,7 @@ en:
         paragraph_4: To view the data stored on the variable <strong>sMsgIso8583</strong>, the command <a href='print' class='command'>print</a> was added, passing as a parameter the ISO8583 message, to get the message printed. Now it's possible to start the transaction with the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>.
         parameters:
           parameter_1: <strong>variablesize</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the size of the message.
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/> <span class=''data-type''> 0: message successfully finished <br/> -802: function error <br/> -803: buffer overrun </span>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/> <span class=''data-type''> 0: message successfully finished <br/> -802: function error <br/> -803: buffer overrun </span>'
       iso8583_getfield:
         description: Extracts a field of the previously analyzed message
         paragraph_1: The command <span class='code'>iso8583.getfield</span> is used to extract a field from the message previously analyzed.
@@ -1171,11 +1171,11 @@ en:
           parameter_1: <strong>fieldnumber</strong> <span class='data-type'>[integer]</span><br/> Number of the field to be extracted.
           parameter_2: <strong>type</strong> <span class='data-type'>[string]</span><br/> Field type to be extracted from the message, which can be <strong>string</strong> or <strong>integer</strong>.
           parameter_3: <strong>variablevalue</strong> <span class='data-type'>[string ou integer]</span><br/> Variable where the extracted value will be stored.
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class=''data-type''>0: Field extracted successfully<br/>-801: Invalid parameter<br/>-802: Function error<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class=''data-type''>0: Field extracted successfully<br/>-801: Invalid parameter<br/>-802: Function error<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error'
       iso8583_initfieldtable:
         description: Starts field table ISO8583 based on a specified file
         paragraph_1: The command <span class='code'>iso8583.initfieldtable</span> starts the ISO8583 field table according to the fields specified on the file defined on the parameter <strong>filename</strong>. This command must be executed before starting to use the ISO8583 messages.
-        paragraph_2: ! 'In the above example, two functions were created:'
+        paragraph_2: 'In the above example, two functions were created:'
         paragraph_3: 1. <strong>downloadBitmap</strong> that downloads the file <span class='code'>bitmap.dat</span> which contains the bitmap. The file should be stored on the <a href='/walk-manager/assets'>files</a> repository on <a href='https://manager.cloudwalk.io' class='external' target='_blank'>CloudWalk Manager</a>.
         paragraph_4: 2. <strong>startEngineISO8583</strong> that starts the table through the command <span class='code'>iso8583.initfieldtable</span>.
         paragraph_5: If the download has been successfully completed, the value 1 is defined on the parameter bitmap on file <span class='code'>params.dat</span>, only to indicate that the file is available on the device; Otherwise an error message (based on the command return) will be shown and the application will be closed after pressing the Enter key.
@@ -1187,7 +1187,7 @@ en:
       iso8583_initmessage:
         description: Initiates assembly of the ISO message
         paragraph_1: The command <span class='code'>iso8583.initmessager</span> is used to start mounting an ISO8583 message.
-        paragraph_2: ! 'In the above example, the function <strong>initISO8583Message</strong> was created in order to perform the following steps:'
+        paragraph_2: 'In the above example, the function <strong>initISO8583Message</strong> was created in order to perform the following steps:'
         paragraph_3: 1. Start mounting the ISO8583 message.
         paragraph_4: 2. Insert the value in the fields of each corresponding bit, according to the specification on the bitmap.
         paragraph_5: 3. Finish the ISO8583 message.
@@ -1197,9 +1197,9 @@ en:
         paragraph_9: If no error occurs while starting up the message or while inserting the fields, the message is finished using the command <a href='iso8583.endmessage' class='command'>iso8583.endmessage</a>
         parameters:
           parameter_1: <strong>format</strong> <span class='data-type'>[string]</span><br/>Format of the message to be mounted, which can be ASCII or BCD.
-          parameter_2: ! '<strong>id</strong> <span class=''data-type''>[string]</span><br/>Message identifier (4 digits), for example: 0800, 0200, 0400.'
+          parameter_2: '<strong>id</strong> <span class=''data-type''>[string]</span><br/>Message identifier (4 digits), for example: 0800, 0200, 0400.'
           parameter_3: <strong>variablemessage</strong> <span class='data-type'>[string]</span><br/>Variable that stores the message being mounted.
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Result of the operation, where:<br/> <span class=''data-type''> 0: message successfully started<br/> -801: invalid parameter<br/> -803: buffer overrun </span>'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Result of the operation, where:<br/> <span class=''data-type''> 0: message successfully started<br/> -801: invalid parameter<br/> -803: buffer overrun </span>'
       iso8583_putfield:
         description: Inserts a field in the message, necessarily in ascending order
         paragraph_1: The command <span class='code'>iso8583.putfield</span> is used to insert a field in the message, in ascending order (mandatorily).
@@ -1211,21 +1211,21 @@ en:
           parameter_1: <strong>fieldnumber</strong> <span class='data-type'>[integer]</span><br/>Field number of the message that the value should be inserted. It is possible to use from 2 to 128, according to the bitmap.
           parameter_2: <strong>type</strong> <span class='data-type'>[string]</span><br/>Inserted field type (<strong>string</strong> or <strong>integer</strong>).
           parameter_3: <strong>value</strong> <span class='data-type'>[string ou integer]</span><br/>Field content, formatted according to the specification.
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Result of the operation, where:<br/> <span class=''data-type''> 0: field successfully inserted <br/> -801: invalid parameter <br/> -802: function error <br/> -803: buffer overrun <br/> -804: invalid field</span>'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Result of the operation, where:<br/> <span class=''data-type''> 0: field successfully inserted <br/> -801: invalid parameter <br/> -802: function error <br/> -803: buffer overrun <br/> -804: invalid field</span>'
       iso8583_transactmessage:
         description: Adds size, header and trailer and sends the ISO message to the authorizer
         paragraph_1: The command <span class='code'>iso8583.transactmessage</span> is used to add size, header, trailer and send the ISO message to the authorizer.
         paragraph_2: In the above example, the function <strong>transactIsoMessage</strong> was created to handle the host communication through the command <a href='preconnect' class='command'>preconnect</a>, and also to send the ISO message to the authorizer through the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>.
         paragraph_3: The ISO8583 message is stored on the variable <strong>sMsgIso8583</strong> and ready to be sent. The information regarding the header and trailer are going to be stored on the variables to be defined, according to the parameters defined on the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>, assuming that the host authorizer is expecting this behavior.
         paragraph_4: When successfully finishing the transaction, the ISO8583 message received from the host will be stored on the variable <strong>sReceiveMsgISO</strong>, with the information defined on the bitmap.
-        paragraph_5: ! 'When successfully finishing the transaction, the ISO8583 message received from the host will be stored on the variable <strong>sReceiveMsgISO</strong>, with the data according to the bitmap specification. '
+        paragraph_5: 'When successfully finishing the transaction, the ISO8583 message received from the host will be stored on the variable <strong>sReceiveMsgISO</strong>, with the data according to the bitmap specification. '
         parameters:
-          parameter_1: ! '<strong>channel</strong> <span class=''data-type''>[string]</span><br/> Size that will be added. Available channels: <br/><span class=''data-type''> NONE: No size added <br/> NAC: 2 binary bytes (x01 x00 or 0000-0001 0000-0000) <br/> NCC: 2 bytes on the format BCD (x02 x56) <br/> RAW: 4 binary bytes (x00 x00 x01 x00 ou 0000-0000 0000-0000 0000-0001 0000-0000) <br/> ASCII: 4 ASCII bytes (x30 x32 x35 x36 or 0256)</span>'
+          parameter_1: '<strong>channel</strong> <span class=''data-type''>[string]</span><br/> Size that will be added. Available channels: <br/><span class=''data-type''> NONE: No size added <br/> NAC: 2 binary bytes (x01 x00 or 0000-0001 0000-0000) <br/> NCC: 2 bytes on the format BCD (x02 x56) <br/> RAW: 4 binary bytes (x00 x00 x01 x00 ou 0000-0000 0000-0000 0000-0001 0000-0000) <br/> ASCII: 4 ASCII bytes (x30 x32 x35 x36 or 0256)</span>'
           parameter_2: <strong>header</strong> <span class='data-type'>[string]</span><br/> Header used to route and ensure the message integrity, added on the beginning of the message.
           parameter_3: <strong>trailler</strong> <span class='data-type'>[string]</span><br/> Trailer used to route and ensure the message integrity, added on the end of the message.
           parameter_4: <strong>isomsg</strong> <span class='data-type'>[string]</span><br/> ISO8583 message including the ISO data (message fields).
           parameter_5: <strong>variableresponse</strong> <span class='data-type'>[string]</span><br/> ISO8583 message with the data sent by the host authorizer.
-          parameter_6: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where:<br/> <span class=''data-type''> 0: Size of the response message <br/> -1: Channel unknown or not implemented <br/> -2: Failed to connect to the host or while attempting to dial <br/> -3: Failed to send send the message to the host authorizer <br/> -4: Failed to receive the size of the response message <br/> -5: Failed to receive the response message</span>'
+          parameter_6: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where:<br/> <span class=''data-type''> 0: Size of the response message <br/> -1: Channel unknown or not implemented <br/> -2: Failed to connect to the host or while attempting to dial <br/> -3: Failed to send send the message to the host authorizer <br/> -4: Failed to receive the size of the response message <br/> -5: Failed to receive the response message</span>'
       joinstring:
         description: Concatenates in a string the value of another 2 strings
         paragraph_1: The command <span class='code'>joinstring</span> is used to join two strings.
@@ -1238,7 +1238,7 @@ en:
         description: Performs a mathematical operation between two values
         paragraph_1: The command <span class='code'>mathematicaloperation</span> is used to perform mathematical operations.
         paragraph_2: In the example above, with variables <strong>$(number_1)</strong> and <strong>$(number_2)</strong> has been performed 6 math operations.
-        paragraph_3: ! '<ul><li>1st operation: 200 + 100 = <strong>300</strong></li><li>2nd operation: 200 - 100 = <strong>100</strong></li><li>3rd operation: 200 * 100 = <strong>2000</strong></li><li>4th operation: 200 / 100 = <strong>2</strong></li><li>5th operation: 200 % 100 = <strong>0</strong></li><li>6th operation: 200 ^ 100 = <strong>2147483647</strong></li></ul>'
+        paragraph_3: '<ul><li>1st operation: 200 + 100 = <strong>300</strong></li><li>2nd operation: 200 - 100 = <strong>100</strong></li><li>3rd operation: 200 * 100 = <strong>2000</strong></li><li>4th operation: 200 / 100 = <strong>2</strong></li><li>5th operation: 200 % 100 = <strong>0</strong></li><li>6th operation: 200 ^ 100 = <strong>2147483647</strong></li></ul>'
         parameters:
           parameter_1: <strong>firstvalue</strong> <span class='data-type'>[integer or string]</span><br/>Variable that will make part of the operation.
           parameter_2: <strong>operator</strong> <span class='data-type'>[string]</span></br>Mathematical Operators:<span class='code'>+</span> sum <span class='code'>-</span> subtraction, <span class='code'>*</span> multiplication, <span class='code'>/</span> division <span class='code'>%</span> rest of the division, <span class='code'>^</span> exponentiation.
@@ -1284,7 +1284,7 @@ en:
         paragraph_2: The command <span class='code'> network.ping </span> is used to test connectivity with the host.
         paragraph_3: In the above example the command <a href='network.ping' class='command'>network.ping</a> will do a ping on the host, your return will be stored in the variable <strong>iReturn</strong> that should be transformed into <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>0: Success</li><li>-1: Error while connecting to the server</li><li>-2: Error while sending ping</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>0: Success</li><li>-1: Error while connecting to the server</li><li>-2: Error while sending ping</li></ul>'
           parameter_2: <strong>host</strong> <span class='data-type'>[string]</span> Hostname or IP address to perform the ping.
       network_receive:
         description: Receives from the host buffer previously connected
@@ -1297,7 +1297,7 @@ en:
           parameter_1: <strong>maxsize</strong> <span class='data-type'>[integer]</span><br/>Maximum message size that can be received.
           parameter_2: <strong>variablereceivedbytes</strong> <span class='data-type'>[integer]</span><br/>Number of received bytes.
           parameter_3: <strong>variablebuffer</strong> <span class='data-type'>[string]</span><br/>Variable that will receive the message from the host.
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>1: Message successfully received</li><li>0: Could not receive the message</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>1: Message successfully received</li><li>0: Could not receive the message</li></ul>'
       network_send:
         description: Sends a buffer to the host previously connected
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
@@ -1308,7 +1308,7 @@ en:
         parameters:
           parameter_1: <strong>buffer</strong> <span class='data-type'>[string]</span><br/>Message, hexadecimal, which will be sent to the host.
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/>Size of the message in bytes.
-          parameter_3: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>1: Message successfully sent</li><li>0: Unable to send the message</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>1: Message successfully sent</li><li>0: Unable to send the message</li></ul>'
       openserialport:
         description: Opens the serial port for communication with external peripherals
         paragraph_1: The command <span class='code'>openserialport</span> is used to open a connection to the serial port.
@@ -1318,7 +1318,7 @@ en:
           parameter_1: <strong>port</strong> <span class='data-type'>[string]</span><br/>Port where the connection is open.<ul><li>COM1, COM2, COM3, COM4, COM5, COM6</li></ul>
           parameter_2: <strong>rate</strong> <span class='data-type'>[integer]</span><br/>The serial port rate.<ul><li>300, 600, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 12000, 14400, 28800, 33600</li></ul>
           parameter_3: <strong>configuration</strong> <span class='data-type'>[string]</span><br/>The serial port configuration.<ul><li>A7E1, A7N1, A7O1, A8E1, A8N1, A8O1</li></ul>
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command. <ul><li>-2: Incorrect configuration</li><li>-1 or 0: Error opening serial port</li><li>0: Serial port successfully open</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command. <ul><li>-2: Incorrect configuration</li><li>-1 or 0: Error opening serial port</li><li>0: Serial port successfully open</li></ul>'
       paperfeed:
         description: Sends a signal to the printer by adding blank lines on the ticket
         paragraph_1: The command <span class='code'>paperfeed</span> is used to send a signal that the printer will add a blank line.
@@ -1350,7 +1350,7 @@ en:
         parameters:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the external PIN-Pad.
           parameter_2: <strong>timeout</strong> <span class='data-type'>[integer]</span> Timeout in seconds that the statement should wait before resuming the execution.
-          parameter_3: ! '<strong>variablereturn</strong> <span class=''data-type''>[string]</span> Return of the command, where: <br/><ul><li>-1: Timeout was reached and no action was taken</li></ul> If an action is taken, the PIN-Pad key that was pressed is returned: <strong>KEY_ENTER, KEY_CANCEL, KEY_CLEAR, KEY_EXTRAS</strong>.'
+          parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[string]</span> Return of the command, where: <br/><ul><li>-1: Timeout was reached and no action was taken</li></ul> If an action is taken, the PIN-Pad key that was pressed is returned: <strong>KEY_ENTER, KEY_CANCEL, KEY_CLEAR, KEY_EXTRAS</strong>.'
       pinpad_getpindukpt:
         description: Catches a PIN and encrypts it using DUKPT standard
         paragraph_1: The command <span class='code'>pinpad.getpindukpt</span> is used to capture a PIN and encrypts using standard DUKPT.
@@ -1362,10 +1362,10 @@ en:
           parameter_1: <strong>maxlen</strong> <span class='data-type'>[integer]</span> Maximum number of characters typed in the PIN.
           parameter_2: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the external PIN-Pad's display (or internal in the case of a POS terminal).
           parameter_3: <strong>pan</strong> <span class='data-type'>[string]</span> Card primary account number.
-          parameter_4: ! '<strong>type</strong> <span class=''data-type''>[integer]</span> Type of algorithm used in the encryption, which can be: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
+          parameter_4: '<strong>type</strong> <span class=''data-type''>[integer]</span> Type of algorithm used in the encryption, which can be: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
           parameter_5: <strong>variablereturnksn</strong> <span class='data-type'>[string]</span> Variable that will store the <strong>KSN</strong> returned by the encryption process.
           parameter_6: <strong>variablereturnpin</strong> <span class='data-type'>[string]</span> Variable that will store the encrypted <strong>PIN</strong>.
-          parameter_7: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Variable that will store the return of the command, where: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Canceled</li>-3: PIN Error</li></ul>'
+          parameter_7: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Variable that will store the return of the command, where: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Canceled</li>-3: PIN Error</li></ul>'
       pinpad_loadipek:
         description: Records an initial key and an initial ksn on the memory of pinpad
         paragraph_1: Knowledge about <strong>DUKPT</strong> is required to use this command.
@@ -1375,8 +1375,8 @@ en:
         parameters:
           parameter_1: <strong>ipek</strong> <span class='data-type'>[string]</span> Initial key on the format <strong>hex ascii 16</strong> or <strong>32</strong> characters.
           parameter_2: <strong>ksn</strong> <span class='data-type'>[string]</span> initial KSN on the format <strong>hex ascii 20</strong> characters.
-          parameter_3: ! '<strong>type</strong> <span class=''data-type''>[integer]</span> Type of algorithm used in the encryption, which can be: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[inteiro]</span> Return of the command, where: <br/><ul><li>0: OK</li><li>-1: Error</li></ul>'
+          parameter_3: '<strong>type</strong> <span class=''data-type''>[integer]</span> Type of algorithm used in the encryption, which can be: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[inteiro]</span> Return of the command, where: <br/><ul><li>0: OK</li><li>-1: Error</li></ul>'
       pinpad_open:
         description: Enables communication with the external or internal pinpad
         paragraph_1: The command <span class='code'>pinpad.open</span> is used to enable communication with external or internal pinpad.
@@ -1384,9 +1384,9 @@ en:
         paragraph_3: Then the command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, which is displayed through the command <a href='display' class='command'>display</a>, and finally the connection with the PIN-Pad is closed through the command <a href='pinpad.close' class='command'>pinpad.close</a>.
         paragraph_4: The same is applied for the <strong>external PIN-Pad</strong>, but in this case, the PIN-Pad serial number is stored on the variable <span class='code'>sSerialNumber</span>.
         parameters:
-          parameter_1: ! '<strong>type</strong> <span class=''data-type''>[integer]</span> PIN-Pad type to be enabled: <br/><ul><li>0: Internal PIN-Pad</li><li>1: External PIN-Pad</li></ul>'
+          parameter_1: '<strong>type</strong> <span class=''data-type''>[integer]</span> PIN-Pad type to be enabled: <br/><ul><li>0: Internal PIN-Pad</li><li>1: External PIN-Pad</li></ul>'
           parameter_2: <strong>variableserialnumber</strong> <span class='data-type'>[string]</span> Variable that will store the PIN-Pad's serial number that is being enabled.
-          parameter_3: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Command return, where: <br/><ul><li>0: PIN-Pad connected</li><li>-1: PIN-Pad not connected</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Command return, where: <br/><ul><li>0: PIN-Pad connected</li><li>-1: PIN-Pad not connected</li></ul>'
       preconnect:
         description: Connects to the host authorizer
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
@@ -1394,7 +1394,7 @@ en:
         paragraph_3: In the above example the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server, and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: Since the variable <strong>iConnect</strong> is of the type <a href='integervariable' class='command'>integervariable</a>, it must be transformed into <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: ! '<strong>variablestatus</strong> <span class=''data-type''>[integer]</span><br/>Return function:<ul><li>0: Connected successfully</li><li>-1: Error when trying to connect</li></ul> '
+          parameter_1: '<strong>variablestatus</strong> <span class=''data-type''>[integer]</span><br/>Return function:<ul><li>0: Connected successfully</li><li>-1: Error when trying to connect</li></ul> '
       predial:
         description: Performs a dial-up connection with the provider
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integration with host - Simple HTTP</a>
@@ -1402,7 +1402,7 @@ en:
         paragraph_3: In the above example the first command <a href='predial' class='command'>predial</a> with <strong>option</strong> 1, will make a connection with the provider, and the return will be stored in the variable <strong>iReturn</strong>.
         paragraph_4: The second command <a href='predial' class='command'>predial</a> with <strong>option</strong> 2, will check if the dialing process was completed.
         parameters:
-          parameter_1: ! '<strong>option</strong> <span class=''data-type''>[integer]</span><br/><ul><li>1: The command will perform a dialing</li><li>2: The command will check if the dialing was completed.</li></ul>'
+          parameter_1: '<strong>option</strong> <span class=''data-type''>[integer]</span><br/><ul><li>1: The command will perform a dialing</li><li>2: The command will check if the dialing was completed.</li></ul>'
           parameter_2: <strong>variablestatus</strong> <span class='data-type'>[integer]</span><br/>Variable that will store return of the function.
       print:
         description: Prints a custom message in the default font size
@@ -1429,7 +1429,7 @@ en:
         paragraph_2: In the above example, when the application runs, will print the image set in the property <strong>filename</strong> of the command <strong>printbitmap</strong>
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will receive the return of the command <ul><li>-2: bitmap is monochrome </li><li>-1: invalid bitmap size</li><li>0: bitmap not found </li><li>1: bitmap successfully printed</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will receive the return of the command <ul><li>-2: bitmap is monochrome </li><li>-1: invalid bitmap size</li><li>0: bitmap not found </li><li>1: bitmap successfully printed</li></ul>'
       readfile:
         description: Reads a dbfile WALK file (key/value)
         paragraph_1: The command <span class='code'>readfilebyindex</span> is used to read a file in the format <a href='#walk_db' class='command'>Walk</a> at a specified position. Each key should be on a separate line.
@@ -1448,7 +1448,7 @@ en:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
           parameter_2: <strong>index</strong> <span class='data-type'>[integer]</span><br/>Key position, the first position is 0 (zero).
           parameter_3: <strong>variablekey</strong> <span class='data-type'>[integer]</span><br/>Key name.
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store <ul><li>0: Item not found</li><li>1: found item</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store <ul><li>0: Item not found</li><li>1: found item</li></ul>'
           parameter_5: <strong>variablevalue</strong> <span class='data-type'>[string]</span><br/>Index value.
       readkey:
         description: Same as command waitkey, but holds the pressed key
@@ -1470,7 +1470,7 @@ en:
           parameter_2: <strong>variablehandle</strong> <span class='data-type'>[integer]</span><br/>Handle of the open door.
           parameter_3: <strong>variablebuffer</strong> <span class='data-type'>[string]</span><br/> Variable that will store the buffer captured from the serial port.
           parameter_4: <strong>variablehandle</strong> <span class='data-type'>[integer]</span><br/> Open serial port identifier.
-          parameter_5: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class=''data-type''>-1: Timeout was reached and nothing was captured from the serial port<br/>>0: Number of bytes that was read from the serial port. </span>'
+          parameter_5: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class=''data-type''>-1: Timeout was reached and nothing was captured from the serial port<br/>>0: Number of bytes that was read from the serial port. </span>'
       shutdownmodem:
         description: Turns off the modem and cancels the operations
         paragraph_1: The command <span class='code'>shutdownmodem</span> is used to disconnect the device from the host and the network.
@@ -1482,13 +1482,13 @@ en:
         paragraph_3: Then, the command <span class='code'>smartcard.closereader</span> is used to close the reader communication, and the result of the operation is displayed.
         parameters:
           parameter_1: <strong>slot</strong> <span class='data-type'>[integer]</span><br/> slot number that was opened with the command <a href='smartcard.startreader' class='command'>smartcard.startreader</a>.
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Return of the command, where:<br/><ul><li>-1: Invalid slot</li><li>1: Slot successfully closed</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Return of the command, where:<br/><ul><li>-1: Invalid slot</li><li>1: Slot successfully closed</li></ul>'
       smartcard_insertedcard:
         description: Checks if the card is inserted in the smart card reader
         paragraph_1: The command <span class='code'>smartcard.insertcard</span> is used to check if a smart card is inserted in a given slot.
         paragraph_2: In the above example, the command <strong>smartcard.insertedcard</strong> checks whether or not the card is inserted in the defined slot. If there is no card in the slot, the return will be <strong>-2</strong>, and <strong>1</strong> otherwise.
         parameters:
-          parameter_1: ! '<strong>slot</strong> <span class=''data-type''>[integer]</span><br/>Defines which slot is used by the command.<ul><li>1: principal</li><li>2: sam1</li><li>3: sam2</li><li>4: sam3</li><li>5: sam4</li></ul> '
+          parameter_1: '<strong>slot</strong> <span class=''data-type''>[integer]</span><br/>Defines which slot is used by the command.<ul><li>1: principal</li><li>2: sam1</li><li>3: sam2</li><li>4: sam3</li><li>5: sam4</li></ul> '
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer or string]</span><br/>Variable that will store the return of the command.
       smartcard_startreader:
         description: Starts the smart card reader and try to start the card
@@ -1496,8 +1496,8 @@ en:
         paragraph_2: In the above example, the command <span class='code'>smartcard.startreader</span> was used to start the reader and the smartcard, and the result of the operation was stored on the variable <strong>variablereturn</strong>.
         paragraph_3: The command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, and then to be displayed through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: ! '<strong>slot</strong> <span class=''data-type''>[integer]</span><br/> slot that will be started:<br/><ul><li>main: 1</li><li>sam1: 2</li><li>sam2: 3</li><li>sam3: 4</li><li>sam4: 5</li></ul>'
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the command, where:<br/><ul><li>-2: Error while starting the reader or while reading the card</li><li>-1: Invalid slot</li><li>Reader started abd command ATR successfully sent.</li></ul>'
+          parameter_1: '<strong>slot</strong> <span class=''data-type''>[integer]</span><br/> slot that will be started:<br/><ul><li>main: 1</li><li>sam1: 2</li><li>sam2: 3</li><li>sam3: 4</li><li>sam4: 5</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the command, where:<br/><ul><li>-2: Error while starting the reader or while reading the card</li><li>-1: Invalid slot</li><li>Reader started abd command ATR successfully sent.</li></ul>'
       smartcard_transmitapdu:
         description: Sends an APDU command to the smart card
         paragraph_1: The command <span class='code'>smartcard.transmitAPDU</span> is used to send an APDU command to the smart card.
@@ -1512,7 +1512,7 @@ en:
           parameter_5: <strong>slot</strong> <span class='data-type'>[string]</span><br/>slot that was opened with <span class='code'>smartcard.startreader</span>
           parameter_6: <strong>variabledatafieldresponse</strong> <span class='data-type'>[string]</span><br/>Variable that will store the hexadecimal return of the APDU command.
           parameter_7: <strong>variableSW</strong> <span class='data-type'>[string]</span><br/>Variable that will store the obligatory 2 hexadecimal bytes from the APDU command.
-          parameter_8: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the command, where:<br/><ul><li>-2: Error while sending the command to the card</li><li>-1: Invalid slot</li><li>1: Command successfully sent</li></ul>'
+          parameter_8: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the command, where:<br/><ul><li>-2: Error while sending the command to the card</li><li>-1: Invalid slot</li><li>1: Command successfully sent</li></ul>'
       string_charat:
         description: Extracts specified string character
         paragraph_1: The command <span class='code'>string.charat</span> is used to return a character string from a specific position.
@@ -1539,7 +1539,7 @@ en:
         parameters:
           parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>Content delimiter.
           parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text to be separated.
-          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the result of the command.
+          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the result of the command.
       string_find:
         description: Searches for a substring in the specified string
         paragraph_1: The command <span class='code'>string.find</span> is used to return the position of a substring in a string.
@@ -1549,7 +1549,7 @@ en:
           parameter_1: <strong>start</strong> <span class='data-type'>[string]</span><br/>Set start of the search.
           parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Where the text search will be made.
           parameter_3: <strong>substring</strong> <span class='data-type'>[string]</span><br/>Text to be found.
-          parameter_4: ! '<strong>variablereturn</strong> <span class=''data-type''>[string]</span><br/>Variable that will store the result of the command <ul><li>-1: Text not found</li><li>>-1: position of the found text</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[string]</span><br/>Variable that will store the result of the command <ul><li>-1: Text not found</li><li>>-1: position of the found text</li></ul>'
       string_fromhex:
         description: Converts a hexadecimal representation to a string
         paragraph_1: The command <span class='code'>string.fromhex</span> is used to convert a hexadecimal string to ASCII.
@@ -1679,7 +1679,7 @@ en:
         paragraph_4: Since the return of the command is an <a href='integervariable' class='commands'>integervariable</a>, the command <a href='inttostring' class='commands'>inttostring</a> was used to convert and display the variable throught the command <a href='display' class='commands'>display</a>.
         parameters:
           parameter_1: <strong>level</strong> <span class='data-type'>[integer]</span><br/>Backlight level percentage.
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>-1: Error when defining the new value</li><li>0: OK</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>-1: Error when defining the new value</li><li>0: OK</li></ul>'
       system_beep:
         description: Produces a short beep
         paragraph_1: The command <span class='code'>system.beep</span> is used to beep.
@@ -1688,9 +1688,9 @@ en:
         description: Checks the device battery status
         paragraph_1: The command <span class='code'>system.checkbattery</span> is used to return the current percentage of battery.
         paragraph_2: In the above example, the command <strong>system.checkbattery</strong> will return to the variable <strong>$( battery_status)</strong> which is a variable <a href='integervariable' class='command'>integervariable</a>. As the property <strong>variablestatus</strong> only accepts an integer value, it is necessary to convert the value to <a href='stringvariable' class='command'>stringvariable</a> so that the value can be shown on the display .
-        parameters:
-          parameter_1: "<strong>variablestatus</strong> <span class='data-type'>[integer]</span></br>Variable that will store the return of the command. The returned value ranges from 0 to 100, scaling 1 by 1. Examples: 0, 1, 2, 3, 4, 5 ... 95, 96, 97, 98, 99, 100."
         paragraph_3: The value <strong>-1</strong> means that the device has no battery.
+        parameters:
+          parameter_1: '<strong>variablestatus</strong> <span class=''data-type''>[integer]</span></br>Variable that will store the return of the command. The returned value ranges from 0 to 100, scaling 1 by 1. Examples: 0, 1, 2, 3, 4, 5 ... 95, 96, 97, 98, 99, 100.'
       system_gettouchscreen:
         description: Captures the coordinates (x and y) where the display was pressed
         paragraph_1: The command <span class='code'>system.gettouchscreen</span> is used to capture the coordinates (x and y) where the display was pressed.
@@ -1720,17 +1720,17 @@ en:
       time_calculate:
         description: Calculates time. Supports addition, subtraction and difference
         paragraph_1: The command <span class='code'>time.calculate</span> is used to calculate time. It supports addition, subtraction and difference.
-        paragraph_2: ! 'In the above example, there are three operations: <strong><em>difference, sum and less</em></strong>.'
+        paragraph_2: 'In the above example, there are three operations: <strong><em>difference, sum and less</em></strong>.'
         paragraph_3: The first operation done is the <strong><em>difference</em></strong>, where the content of the variable <em><strong>sDate1</strong></em> is compared with the content of the variable <em><strong>sDate2</strong></em>, and the difference between them is returned in <strong><em>seconds</em></strong> and stored on <strong><em>variablereturn</em></strong>.
         paragraph_4: The second operation done is <strong><em>sum</em></strong>, where <strong><em>10 hours</em></strong> is added on the date stored on <strong><em>sDate1</em></strong>. If the operation is successfully executed, the variable <strong><em>variablereturn</em></strong> receive 0, and the date stored on <strong><em>sDate1</em></strong> will be increased by <strong><em>10 hours</em></strong>.
         paragraph_5: The third operation done is <strong><em>less</em></strong>, where <strong><em>10 minutes</em></strong> is subtracted from the date stored on <strong><em>sDate1</em></strong>. If the operation is successfully executed, the variable <strong><em>variablereturn</em></strong> receive 0, and the date stored on <strong><em>sDate1</em></strong> will be decreased by <strong><em>10 minutes</em></strong>.
         parameters:
           parameter_1: <strong>date</strong> <span class='data-type'>[string]</span><br/> Date that will be changed or that will be used in comparison by the operation <strong>difference</strong>.
           parameter_2: <strong>greaterdate</strong> <span class='data-type'>[string]</span><br/> Greater date that will be used by the difference operation. On addition and subtraction operations this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might happen.
-          parameter_3: ! '<strong>operation</strong> <span class=''data-type''>[string]</span><br/> Operation type, which can be: sum, less or difference.'
-          parameter_4: ! '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Unit of time to be calculated: years, months, days, hours, minutes or seconds.<br/>On a difference operation this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might occur.'
+          parameter_3: '<strong>operation</strong> <span class=''data-type''>[string]</span><br/> Operation type, which can be: sum, less or difference.'
+          parameter_4: '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Unit of time to be calculated: years, months, days, hours, minutes or seconds.<br/>On a difference operation this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might occur.'
           parameter_5: <strong>value</strong> <span class='data-type'>[integer]</span><br/> Value to be added or subtracted<strong> (only for operations plus and minus)</strong>.
-          parameter_6: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> If the operation is <strong>difference</strong>, the <strong>value</strong> of the difference is returned. Is case of an addition or subtraction operation the result is: <br/><em><strong>0:</strong></em> Success<br/><em><strong>-1:</strong></em> Error.'
+          parameter_6: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> If the operation is <strong>difference</strong>, the <strong>value</strong> of the difference is returned. Is case of an addition or subtraction operation the result is: <br/><em><strong>0:</strong></em> Success<br/><em><strong>-1:</strong></em> Error.'
       title: Command
       unzipfile:
         description: Unpacks a zip file
@@ -1738,7 +1738,7 @@ en:
         paragraph_2: In the above example, the command <span class='code'>unzipfile</span> was used to to decompress a file called <strong>teste.zip</strong>, that is stored on the device memory. After that the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the zip file stored on the device.
-          parameter_2: ! '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the command, where:<br/><ul><li>0: File successfully uncompressed</li><li>-1: Error during decompression</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the command, where:<br/><ul><li>0: File successfully uncompressed</li><li>-1: Error during decompression</li></ul>'
       wait:
         description: Pauses execution for a set time
         paragraph_1: The command <span class='code'>wait</span> is used to pause the execution of the application for a certain time.
@@ -1775,12 +1775,12 @@ en:
           paragraph_2: Operators <span class='code'>greaterthan</span>, <span class='code'>lessthan</span>, <span class='code'>greaterthanorequalto</span> <span class = 'code'>lessthanorequalto</span>, in the case of variables of type string, convert the variable that it is compared to floating point, and then performs the comparison.
         other_operators: Operators <span class='code'>equalto</span> and <span class='code'>notequalto</span> follow the same logic of comparison that any programming language.
         paragraph_1: The command <span class='code'>while</span> is used to repeat block of code until condition is met.
-        paragraph_2: ! 'In the example above, there are three conditions: <ul><li>1st - compare two texts causing it to be <em>true</em> as <em>Blue</em> is equal to the value of the variable <em>sColor</em> </li><li>2nd - compare two numbers causing it to be <em>false</em> as <em>111</em> is not greater than the value of the variable <em>iNumber</em></li><li>3rd - compare two texts is causing it <em>false</em> as <em>Blue</em> is different from the value of the variable <em>sColor</em>. POSXML considers uppercase and lowercase letters (<em>case-sensitive</em>) </li></ul> The command <a href=''waitkey'' class=''command''>waitkey</a> awaits click any key to continue code execution.'
+        paragraph_2: 'In the example above, there are three conditions: <ul><li>1st - compare two texts causing it to be <em>true</em> as <em>Blue</em> is equal to the value of the variable <em>sColor</em> </li><li>2nd - compare two numbers causing it to be <em>false</em> as <em>111</em> is not greater than the value of the variable <em>iNumber</em></li><li>3rd - compare two texts is causing it <em>false</em> as <em>Blue</em> is different from the value of the variable <em>sColor</em>. POSXML considers uppercase and lowercase letters (<em>case-sensitive</em>) </li></ul> The command <a href=''waitkey'' class=''command''>waitkey</a> awaits click any key to continue code execution.'
         paragraph_3: The code inside the block <strong>while</strong> will run <em>6</em> times (the variable number has the initial value = 0) showing on the <a href='display' class='command'>display</a> text 'Message'.
         paragraph_4: The command <a href='integeroperator' class='command'>integeroperator</a> is used to increase, one by one, the value of the variable <em>$(iNumber)</em> on each execution of the <strong>while</strong> block until the condition is met, leaving the block.
         parameters:
           parameter_1: <strong>variable</strong> <span class='data-type'>[integer or string]</span><br/>Variable that will be used in the comparison.
-          parameter_2: ! '<strong>operator</strong> <span class=''data-type''>[string]</span><br/>Comparison operator: <span class=''code''>lessthan</span>, <span class=''code''>greaterthan</span>, <span class=''code''>equalto</span>, <span class=''code''>notequalto</span>, <span class=''code''>greaterthanorequalto</span> or <span class=''code''>lessthanorequalto</span>.'
+          parameter_2: '<strong>operator</strong> <span class=''data-type''>[string]</span><br/>Comparison operator: <span class=''code''>lessthan</span>, <span class=''code''>greaterthan</span>, <span class=''code''>equalto</span>, <span class=''code''>notequalto</span>, <span class=''code''>greaterthanorequalto</span> or <span class=''code''>lessthanorequalto</span>.'
           parameter_3: <strong>value</strong> <span class='data-type'>[string or integer]</span><br/>Value that will be used in the comparison.
       writeserialport:
         description: Writes a buffer on the serial port
@@ -1816,7 +1816,7 @@ en:
       description: List of available commands on the CloudWalk IDE.
       presentation:
         paragraph_1: List of available commands on the CloudWalk IDE.
-        paragraph_2: ! 'If you run any application containing a command not supported by the version of WALK Framework installed on the device, an error occurs <span class=''code''>WALK: Byte Mode Error</span>, stating that the Byte Code command does not exist in the version of WALK Framework installed.'
+        paragraph_2: 'If you run any application containing a command not supported by the version of WALK Framework installed on the device, an error occurs <span class=''code''>WALK: Byte Mode Error</span>, stating that the Byte Code command does not exist in the version of WALK Framework installed.'
       table_of_contents:
         commands: Commands List
         commands_list: Commands List
@@ -1831,10 +1831,10 @@ en:
         manual_typing_not_allowed: Does not allow manual entry
         manual_typing_or_swap: Manual typing or pass
         option: Option
-        paragraph_1: ! 'Below variables of configuration config.dat file:'
+        paragraph_1: 'Below variables of configuration config.dat file:'
         parameter_1: <strong>autooffmodem</strong><br/> off the modem automatically after a connection
         parameter_10: <strong>keystar</strong><br/> Key that will be used to put the <strong>*</strong> (asterisk). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
-        parameter_11: ! '<strong>model</strong><br/> Model of the device, as shown below:'
+        parameter_11: '<strong>model</strong><br/> Model of the device, as shown below:'
         parameter_12: <strong>mygateway</strong><br/> Gateway which will be used by the device. You need to set the Gateway to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used
         parameter_13: <strong>myip</strong><br/> Device IP address. You must set the IP to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used
         parameter_14: <strong>nomeaplicativo</strong><br/> Name of the application that will be pursued in WALK Manager
@@ -1846,23 +1846,21 @@ en:
         parameter_2: <strong>crcpaginawalkserver</strong><br/> the application CRC on the WALK Manager
         parameter_20: <strong>subnet</strong><br/> Netmask. It is necessary to set the mask to <strong>255.255.255.255</strong> if the communication protocol <strong>PPP</strong> is used, if used <strong>DHCP</strong> is necessary to set the mask to <strong>0.0.0.0</strong>
         parameter_21: <strong>timeoutinput</strong><br/> Timeout for all statements that use it
-        parameter_22: ! '<strong>tiposcartao</strong><br/> Defines the rules for use of cards, according to the table below:'
-        parameter_23: ! '<strong>touchscreen</strong><br/>Enables or disables the virtual keyboard, if the device has touchscreen where: <pre>0 - Does not activate the virtual keyboard
-
-          1 - Enables virtual keyboard</pre>'
+        parameter_22: '<strong>tiposcartao</strong><br/> Defines the rules for use of cards, according to the table below:'
+        parameter_23: |-
+          <strong>touchscreen</strong><br/>Enables or disables the virtual keyboard, if the device has touchscreen where: <pre>0 - Does not activate the virtual keyboard
+          1 - Enables virtual keyboard</pre>
         parameter_24: <strong>uclapn</strong><br/> APN of GPRS network
-        parameter_25: ! '<strong>uclmedia</strong><br/> Connection type to be used, and can be: <pre>LANDLINE
-
+        parameter_25: |-
+          <strong>uclmedia</strong><br/> Connection type to be used, and can be: <pre>LANDLINE
           ETHERNET
-
           GPRS
-
-          WIFI</pre>'
+          WIFI</pre>
         parameter_26: <strong>uclpassword</strong><br/> User password of RAS or APN (PPP)
         parameter_27: <strong>uclphoneno</strong><br/>The number that the device is going to call;
-        parameter_28: ! '<strong>uclprotocol</strong><br/>Communication protocol to be used, and can be: <pre>TCP
-
-          SDLC</pre>'
+        parameter_28: |-
+          <strong>uclprotocol</strong><br/>Communication protocol to be used, and can be: <pre>TCP
+          SDLC</pre>
         parameter_29: <strong>uclusername</strong><br/>Name of the user of RAS or APN (PPP);
         parameter_3: <strong>dnsprimario</strong><br/> primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_30: 0
@@ -1872,9 +1870,9 @@ en:
         parameter_34: <strong>versaoframework</strong><br/>WALK Framework version installed on the device
         parameter_4: <strong>dnssecundario</strong><br/> secondary DNS will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_5: <strong>gprs_pin</strong><br/> PIN of GPRS card
-        parameter_6: ! '<strong>iskeytimeout</strong><br/> Used to identify what <a href=''/posxml/commands/readkey '' class=''command''>readkey </a> will return in case of timeout, where: <pre>0 - Disabled, readkey returns KEY_CANCEL on timeout.
-
-          1 - Enabled readkey returns -1 on timeout.</pre>'
+        parameter_6: |-
+          <strong>iskeytimeout</strong><br/> Used to identify what <a href='/posxml/commands/readkey ' class='command'>readkey </a> will return in case of timeout, where: <pre>0 - Disabled, readkey returns KEY_CANCEL on timeout.
+          1 - Enabled readkey returns -1 on timeout.</pre>
         parameter_7: <strong>keyalpha</strong><br/> Key that will be used to make <strong>alpha</strong> keyboard. Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
         parameter_8: <strong>keypaperfeed</strong><br/> Key that will be used to make the <a href='/posxml/commands/paperfeed' class='command'>paperfeed</a>
         parameter_9: <strong>keypound</strong><br/> Key that will be used to put the <strong>#</strong> (sharp). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
@@ -1892,7 +1890,7 @@ en:
     file_system:
       creating_and_editing_files:
         paragraph_1: The commands <a href='/posxml/commands/editfile' class='command'>editfile</a>, <a href='/posxml/commands/readfile' class='command'>readfile</a> and <a href='/posxml/commands/readfilebyindex' class='command'>readfilebyindex</a> can be used to work with this file type, based on keys and values, enabling a fast and efficient way to store static data on the device.
-        paragraph_2: ! 'We recommend using the utility EditDBFile to manipulate your WALK dbfile files. Follow the following procedure:'
+        paragraph_2: 'We recommend using the utility EditDBFile to manipulate your WALK dbfile files. Follow the following procedure:'
         paragraph_3: Download the utility from  <a href='https://dl.cloudwalk.io/edit_db_file.zip'>https://dl.cloudwalk.io/edit_db_file.zip</a>
         paragraph_4: Unzip and run the package <strong>EditDbFileWalk.exe</strong>
         paragraph_5: Enter the path to the dat file and press the button <strong>Load</strong>
@@ -1900,7 +1898,7 @@ en:
         paragraph_7: Register the <a href='/walk-manager/assets'>file in WALK Manager</a> and your devices can download it with command <a href='/posxml/commands/downloadfile' class='command'>downloadfile</a>
       description: The WALK Framework has a file system that can handle files of type WALK dbfile (text file in UNIX environments). Creating and editing files. Use the utility EditDBFile to manipulate WALK dbfile files.
       presentation:
-        paragraph_1: ! 'The WALK Framework has a file system that can handle files of type WALK dbfile, where you can create and work with files in the following format:'
+        paragraph_1: 'The WALK Framework has a file system that can handle files of type WALK dbfile, where you can create and work with files in the following format:'
         paragraph_2: Basically, it would be the format of text files in UNIX environments, where <span class='code'>\n</span> represents a newline. The configuration file itself (config.dat) is a WALK dbfile file.
       table_of_contents:
         creating_and_editing_files: Creating and editing files
@@ -1915,12 +1913,12 @@ en:
         paragraph_3: Currently there is a limit of 32K memory for loading compiled POSXML pages.
       parameters:
         paragraph_1: Every POSXML command owning a parameter whose name contains the word <span class='code'>variable</span>, for example, <span class='code'>variablereturn</span>, is required to pass a variable to that parameter.
-        paragraph_2: ! 'The assignment of variables is made with nomenclature <span class=''code''>$(VariableName)</span>, as can be seen below:'
-        paragraph_3: ! 'When the name of the parameter does not have the word variable, you can pass either a constant or a variable. The assignment is taken as constant in every programming language:'
+        paragraph_2: 'The assignment of variables is made with nomenclature <span class=''code''>$(VariableName)</span>, as can be seen below:'
+        paragraph_3: 'When the name of the parameter does not have the word variable, you can pass either a constant or a variable. The assignment is taken as constant in every programming language:'
         paragraph_4: In variables string, it is still possible to pass to the command only a snippet of the indexed variable, as in other programming languages, using pointers to variables.
-        paragraph_5: ! 'In the example below, the following string would be displayed: <strong>H</strong>'
-        paragraph_6: ! 'In the example below, the following string would be displayed: <strong>e</strong>'
-        paragraph_7: ! 'In the example below, the following string would be displayed: <strong>ello World</strong>'
+        paragraph_5: 'In the example below, the following string would be displayed: <strong>H</strong>'
+        paragraph_6: 'In the example below, the following string would be displayed: <strong>e</strong>'
+        paragraph_7: 'In the example below, the following string would be displayed: <strong>ello World</strong>'
         paragraph_8: In the last example was specified <span class='code'>!</span> symbol so that it displays the characters from the position defined in <span class='code'>intIndex</span> till the end of the string. When the symbol <span class='code'>!</span> is omitted, only the character set in position <span class='code'>intIndex</span> is displayed on device's display.
       table_of_contents:
         limitations: Limitations
@@ -1934,18 +1932,18 @@ en:
     structure:
       case_sensitive:
         paragraph_1: The POSXML is <em>case sensitive</em>, so there are differences between the lowercase and uppercase words. You need to pay attention, especially when naming functions and variables.
-        paragraph_2: ! 'Example:'
+        paragraph_2: 'Example:'
       comments:
-        paragraph_1: ! 'Comments blocks should be used with tags <span class=''code''>&lt;!--</span> and <span class=''code''>--&gt;</span> as below:'
+        paragraph_1: 'Comments blocks should be used with tags <span class=''code''>&lt;!--</span> and <span class=''code''>--&gt;</span> as below:'
       description: Organization and Structure, Parent tag or root tags, Case sensitive, Reserved characters, Comments.
       introduction: The POSXML follows the open standard <a href='http://en.wikipedia.org/wiki/XML' class='external'>XML</a>, widespread in the software industry. The XML standard is totally flexible and allows rapid expansion. All formatting rules applied to XML still exist in POSXML.
       reserved_characters:
         paragraph_1: All reserved characters in XML are also reserved in POSXML and should be written in a right way.
-        paragraph_2: ! 'The following symbols should be written:'
-        paragraph_3: ! 'To display a message with the symbol <span class=''code''>&lt;</span> (less than), the code would be like:'
+        paragraph_2: 'The following symbols should be written:'
+        paragraph_3: 'To display a message with the symbol <span class=''code''>&lt;</span> (less than), the code would be like:'
       structure:
         paragraph_1: The POSXML is organized and structured in the form of tags with levels and sublevels of commands that form the logical structure of the application POSXML. A tag can be identified when is located between the signs <span class='code'>&lt;</span> (less than) and <span class='code'>></span> (greater than), where they shall be opened and closed.
-        paragraph_2: ! 'Example:'
+        paragraph_2: 'Example:'
       table_of_contents:
         case_sensitive: Case sensitive
         comments: Comments
@@ -1954,7 +1952,7 @@ en:
         structure: Organization and Structure
       tag_root:
         paragraph_1: Every POSXML application has to have a parent tag or a root tag, and a valid name, following the criteria for opening and closing tags. Below the root tag, the tag <span class='code'>&lt;pagina nome="principal"&gt;</span> must be created, which is where all the application logic should be done.
-        paragraph_2: ! 'Example:'
+        paragraph_2: 'Example:'
       title: POSXML - Language structure
   walk_framework:
     configuration:
@@ -1974,15 +1972,15 @@ en:
           paragraph_5: 5. Set the secondary DNS server (eg 192.168.0.1).
         gprs:
           paragraph_1: 1. Set the mobile operator.
-        paragraph_1: ! 'Now that the serial number of the device has already been registered on WALK Manager, the next step is to setup the communication. To do so, open the configuration menu (<strong>F1</strong> or <strong>F</strong>):'
-        paragraph_2: ! 'Then select the option <strong>2 COMMUNICATION</strong>. The following screen will be shown:'
-        paragraph_3: ! 'As can be seen, there are the following types of communication:'
+        paragraph_1: 'Now that the serial number of the device has already been registered on WALK Manager, the next step is to setup the communication. To do so, open the configuration menu (<strong>F1</strong> or <strong>F</strong>):'
+        paragraph_2: 'Then select the option <strong>2 COMMUNICATION</strong>. The following screen will be shown:'
+        paragraph_3: 'As can be seen, there are the following types of communication:'
         paragraph_4: Common local network (ethernet)
         paragraph_5: Landline/dial-up (PPP)
         paragraph_6: Landline/dial-up (SDLC)
         paragraph_7: If your device does not show an option, for example, GPRS, it means that your device does not support that specific type of communication.
         paragraph_8: Details of the communication types
-        paragraph_9: ! 'Each type of communication has a particular configuration process, as shown below:'
+        paragraph_9: 'Each type of communication has a particular configuration process, as shown below:'
         ppp:
           paragraph_1: 1. Set the modem speed (eg 2400).
           paragraph_2: 2. Set the internet provider telephone number.
@@ -1992,11 +1990,11 @@ en:
           paragraph_1: 1. Set the modem speed (eg 2400).
           paragraph_2: 2. Set the internet provider telephone number.
         ssl:
-          paragraph_1: ! '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
+          paragraph_1: '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
         wifi:
           paragraph_1: 1. Set the name of the wireless network
           paragraph_2: 2. Set the password of the wireless network
-          paragraph_3: ! '3. Set the protocol of the wireless network(ex: WEP 128-104).'
+          paragraph_3: '3. Set the protocol of the wireless network(ex: WEP 128-104).'
           paragraph_4: 4. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.
           paragraph_5: 5. Set the subnet mask for the defined IP address class (eg 255.255.255.0).
           paragraph_6: 6. Set the router/gateway IP address (eg 192.168.0.1).
@@ -2009,12 +2007,12 @@ en:
         unlocking_serial_number: Unlocking the serial number
       title: Initial device configuration
       unlocking_serial_number:
-        paragraph_1: ! 'In order to access the CloudWalk service, a device need to have its serial number registered on WALK Manager. It can be accomplish by following the follow steps:'
+        paragraph_1: 'In order to access the CloudWalk service, a device need to have its serial number registered on WALK Manager. It can be accomplish by following the follow steps:'
         paragraph_10: Enter the serial number exactly as it appears on the screen of the device and click the button <strong>Grant access</strong>
         paragraph_11: It is necessary to enter the numbers, letters and other characters, <strong>exactly</strong> as it appears on the screen of the device.
         paragraph_2: Getting the device serial number
-        paragraph_3: ! 'To get a device serial number, open the configuration menu by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium):'
-        paragraph_4: ! 'And then select the option <strong>5 CHECK S. NUMBER</strong>. The following screen will be shown:'
+        paragraph_3: 'To get a device serial number, open the configuration menu by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium):'
+        paragraph_4: 'And then select the option <strong>5 CHECK S. NUMBER</strong>. The following screen will be shown:'
         paragraph_5: The number <strong>525-526-527</strong> represents a fictitious serial number (an example), which would be used on WALK Manager's Device management section.
         paragraph_6: Unlocking the serial number on WALK Manager
         paragraph_7: Access the WALK Managet through <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
@@ -2024,15 +2022,15 @@ en:
       description: Step by step process of installing the WALK Framework on terminals Ingenico EFT930G and EFT930S.
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals Ingenico <strong>EFT930G</strong> and <strong>EFT930S</strong>. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
-        paragraph_1: ! 'The models <strong>EFT930G</strong> and <strong>EFT930S</strong> have an entry for an USB adapter on the left side of the terminal. Connect the USB adapter on the entry and then connect the USB stick on the other end, as the picture below:'
-        paragraph_2: ! 'Then follow the following procedure:'
+        paragraph_1: 'The models <strong>EFT930G</strong> and <strong>EFT930S</strong> have an entry for an USB adapter on the left side of the terminal. Connect the USB adapter on the entry and then connect the USB stick on the other end, as the picture below:'
+        paragraph_2: 'Then follow the following procedure:'
         paragraph_3: Restart the terminal holding the key <strong>F4</strong>. The terminal should display the message <strong>USB MASS STORAGE</strong>
         paragraph_4: Wait a few seconds until the terminal show the directory WALK on display
         paragraph_5: Wait for the WALK Framework loading process
-        paragraph_6: ! 'When finished, the terminal will display the following screen:'
+        paragraph_6: 'When finished, the terminal will display the following screen:'
         paragraph_7: Then appears the welcome screen with the logo of the CloudWalk service.
       preparing_the_pendrive:
-        paragraph_1: ! 'To build the WALK Framework setup on an USB stick, follow the following procedure:'
+        paragraph_1: 'To build the WALK Framework setup on an USB stick, follow the following procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the USB stick
         paragraph_4: Extract the WALK Framework package that was downloaded at the beginning of this tutorial
@@ -2049,36 +2047,36 @@ en:
         wiping_the_device: Cleaning the device
       title: Installing the WALK Framework - Ingenico Telium 1
       wiping_the_device:
-        paragraph_1: ! 'Access the OS menu restarting the terminal and pressing the key <strong>f2</strong> quickly as soon as the screen below appears:'
-        paragraph_2: ! 'On the main menu, choose the option <strong>Delete menu</strong>:'
-        paragraph_3: ! 'And then choose the option <strong>Delete application</strong>:'
+        paragraph_1: 'Access the OS menu restarting the terminal and pressing the key <strong>f2</strong> quickly as soon as the screen below appears:'
+        paragraph_2: 'On the main menu, choose the option <strong>Delete menu</strong>:'
+        paragraph_3: 'And then choose the option <strong>Delete application</strong>:'
         paragraph_4: The next screen lists some application installed on the terminal, where <strong>M2OS</strong> is the Telium Manager, which should not be deleted. To delete any other file, select the file to be deleted and press the <strong>GREEN</strong>.
         paragraph_5: <strong>DO NOT</strong> delete the content of the menu <strong>Delete library</strong> or the file <strong>M2OS</strong>, since it could harm the terminal.
     ingenico_telium_2:
       description: Step by step process of installing the WALK Framework for Ingenico iCT220, iCT250, iWL220, iWL250 and iWL280.
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals Ingenico <strong>ICT220</strong>, <strong>ICT250</strong>, <strong>IWL220</strong>, <strong>IWL250</strong> and <strong>IWL280</strong>. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
-        paragraph_1: ! '<strong>ICT220 </strong> and <strong>ICT250</strong> Models contain a USB input located on the bottom of the device, plug in your USB stick as in the picture:'
-        paragraph_2: ! 'IWL220, IWL250 and IWL280 models already have an entry for an USB adapter on the left side of the device. Connect the USB and then connect the USB on the other end, as the image below:'
-        paragraph_3: ! 'Then follow the following procedure:'
+        paragraph_1: '<strong>ICT220 </strong> and <strong>ICT250</strong> Models contain a USB input located on the bottom of the device, plug in your USB stick as in the picture:'
+        paragraph_2: 'IWL220, IWL250 and IWL280 models already have an entry for an USB adapter on the left side of the device. Connect the USB and then connect the USB on the other end, as the image below:'
+        paragraph_3: 'Then follow the following procedure:'
         paragraph_4: Restart the device and hold <strong>F4</strong> button. The device will display the message <strong>USB MASS STORAGE</strong>
         paragraph_5: Wait a few seconds until the device show the WALK directory on display
         paragraph_6: Select the WALK directory pressing <strong>GREEN</strong>
         paragraph_7: Wait for the process to load WALK Framework package
-        paragraph_8: ! 'When finished, the device will display the following screen:'
+        paragraph_8: 'When finished, the device will display the following screen:'
         paragraph_9: Then appears Welcome screen with the logo of Cloudwalk service.
       preparing_the_pendrive:
-        paragraph_1: ! 'To mount WALK Framework package on pendrive, follow the following procedure:'
+        macosx: <strong>Mac OS X users:</strong> To avoid problems with hidden files when unzipping the WALK Framework package, it is recommended to use the free app <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external' target='_blank'>iZip Archiver</a> to uncompress the package.
+        paragraph_1: 'To mount WALK Framework package on pendrive, follow the following procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the pendrive
         paragraph_4: Extract the WALK Framework downloaded at the beginning of this tutorial
         paragraph_5: In this folder you'll find another one named TELIUM, copy it to your pendrive
-        macosx: <strong>Mac OS X users:</strong> To avoid problems with hidden files when unzipping the WALK Framework package, it is recommended to use the free app <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external' target='_blank'>iZip Archiver</a> to uncompress the package.
       prerequisites:
-        adapter: ! '<strong> USB Adapter: </strong> Required only for installation on IWL220, IWL250 and IWL280'
-        operating_system: ! '<strong> Operating System: </strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)'
+        adapter: '<strong> USB Adapter: </strong> Required only for installation on IWL220, IWL250 and IWL280'
+        operating_system: '<strong> Operating System: </strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)'
         packet: <strong>WALK Framework and production OS:</strong> <em>Paytec</em> <a href='https://dl.cloudwalk.io/cloudwalk_framework_telium2/cloudwalk_iCT2xx_sdk9.6_prod_paytec.zip'>ICT2xx</a> or <a href='https://dl.cloudwalk.io/cloudwalk_framework_telium2/cloudwalk_iWL2xx_sdk9.6_prod_paytec.zip'>IWL2xx</a>. <em>TEFTI</em> <a href='https://dl.cloudwalk.io/cloudwalk_framework_telium2/cloudwalk_iCT2xx_sdk9.6_prod_tefi.zip'>ICT2xx</a> or <a href='https://dl.cloudwalk.io/cloudwalk_framework_telium2/cloudwalk_iWL2xx_sdk9.6_prod_tefi.zip'>IWL2xx</a>
-        pendrive: ! '<strong> Pendrive: </strong> A common pendrive'
+        pendrive: '<strong> Pendrive: </strong> A common pendrive'
       table_of_contents:
         loading_the_framework: Loading the framework on the device
         preparing_the_pendrive: Preparing pendrive
@@ -2086,19 +2084,19 @@ en:
         wiping_the_device: Cleaning the device
       title: Installing the WALK Framework - Ingenico Telium 2
       wiping_the_device:
-        paragraph_1: ! 'Access the menu of the OS restarting the device and pressing <strong>F</strong> and the screen below will appear:'
-        paragraph_2: ! 'From the main menu, select the <strong>Delete menu</strong> option:'
-        paragraph_3: ! 'Then select the menu <strong>Delete application</strong>:'
+        paragraph_1: 'Access the menu of the OS restarting the device and pressing <strong>F</strong> and the screen below will appear:'
+        paragraph_2: 'From the main menu, select the <strong>Delete menu</strong> option:'
+        paragraph_3: 'Then select the menu <strong>Delete application</strong>:'
         paragraph_4: The next screen lists some applications installed on the device where <strong> M2OS </strong> refers to Telium Manager, that should not be deleted. To delete any other file, select the file to be deleted and press the <strong>GREEN</strong> button.
         paragraph_5: <strong>DO NOT </ strong> delete the contents of the menu <strong>Delete library</strong> or file <strong>M2OS</strong>, otherwise the device may be damaged.
     verifone_evo:
-      ! ' introduction_cable_terminals': This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
+      ' introduction_cable_terminals': This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
       description: Step by step process of installing the WALK Framework for VeriFone Vx520 and Vx680.
       identify_os:
         os_version: Operating System Version
         paragraph_1: To identify the version of the operating system that is installed on your device, note the second line of the display screen, considering the last two characters. This screen is displayed when the device is connected.
         paragraph_2: Keep the operating system of your devices up to date. Devices with outdated operating system can be slow and may also have communication problems.
-        paragraph_3: ! 'Minimum operating system requirements for installing the WALK Framework:'
+        paragraph_3: 'Minimum operating system requirements for installing the WALK Framework:'
         pos_model: Model POS
       installing_vx805_and_vx820: To load the framework on terminals <strong>Vx805</strong> and <strong>Vx820</strong>, check out <a href='/walk-framework/verifone-evo-vx805'>this guide</a>.
       installing_vx805_and_vx820_intro: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx805</strong> and <strong>Vx820</strong>. Be aware of prerequisites and follow the installation process carefully.
@@ -2106,28 +2104,28 @@ en:
       introduction_cable_terminals: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
         paragraph_1: To start charging, run carrega_na_flash.bat to load the certificates and the WALK Framework.
-        paragraph_2: ! 'The following DOS screen will appear:'
+        paragraph_2: 'The following DOS screen will appear:'
         paragraph_3: This screen shows the continuation of downloading the framework to the device. No action is required, since the commands are executed automatically.
-        paragraph_4: ! 'While the charge is made, the device displays the progress of the case:'
+        paragraph_4: 'While the charge is made, the device displays the progress of the case:'
         paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and then displays Welcome screen with the logo of CloudWalk service.
       loading_the_framework_usb:
-        paragraph_1: ! 'On terminals <strong>Vx520</strong>, connect the USB stick on the back of the terminal as shown below:'
-        paragraph_2: ! 'On terminals <strong>Vx680</strong>, the place to connect the USB stick is located on the recharge cable, as shown below:'
-        paragraph_3: ! 'The terminal will detect the connected stick, and the following screen is displayed:'
+        paragraph_1: 'On terminals <strong>Vx520</strong>, connect the USB stick on the back of the terminal as shown below:'
+        paragraph_2: 'On terminals <strong>Vx680</strong>, the place to connect the USB stick is located on the recharge cable, as shown below:'
+        paragraph_3: 'The terminal will detect the connected stick, and the following screen is displayed:'
         paragraph_4: Choose the option 1, Yes, to begin the loading process
         paragraph_5: After loading all the files, the terminal will request to remove the stick
         paragraph_6: Remove the pendrive and press Enter (green). The terminal will restart a few times, and then will be presented the display screen with the CloudWalk logo.
       preparing_the_device:
         paragraph_1: Unpack the WALK Framework downloaded into directory of your choice.
         paragraph_2: This directory must be local directory (eg C:\temp\dir), and not network directory (\\)
-        paragraph_3: ! 'Before performing any file, you must prepare your device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port of your computer and the <strong>RS 232</strong> port of the device as the image below:'
+        paragraph_3: 'Before performing any file, you must prepare your device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port of your computer and the <strong>RS 232</strong> port of the device as the image below:'
         paragraph_4: <strong>Attention!</strong>
         paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port of the PC, if it has two COM ports.
         paragraph_6: Another important point is that the COM1 of your computer may be being used by another process, causing error in the load time of the WALK Framework, and because download is only possible through COM1, it must be correctly configured in Windows.
       preparing_the_device_usb:
-        paragraph_1: ! 'After turning on the terminal and after displaying the splash screen that displays the version of the operating system, the following screen should be shown:'
+        paragraph_1: 'After turning on the terminal and after displaying the splash screen that displays the version of the operating system, the following screen should be shown:'
       preparing_the_pendrive:
-        paragraph_1: ! 'To mount WALK Framework package on pendrive, follow the following procedure:'
+        paragraph_1: 'To mount WALK Framework package on pendrive, follow the following procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the pendrive
         paragraph_4: Copy the downloaded WALK Framework package to the pendrive (on root)
@@ -2148,19 +2146,19 @@ en:
         wiping_the_device: Cleaning the device
       title: Installing the WALK Framework - VeriFone EVO
       wiping_the_device:
-        paragraph_1: ! 'With the cable properly connected, turn the device on the power cord. In the model Vx520 press the F2 and F4 at the top right of the device. In the model Vx680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
+        paragraph_1: 'With the cable properly connected, turn the device on the power cord. In the model Vx520 press the F2 and F4 at the top right of the device. In the model Vx680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
         paragraph_10: Press 1 to see the next screen.
         paragraph_11: Press 2, then press 2 again to choose the COM1, so that the device will be awaiting the execution of any file from the directory WALK Framework, which was previously uncompressed.
         paragraph_12: The first file to be executed is <strong>limpa_terminal.bat</strong>. This file clears any information that is in the device, so there is no 'junk' in the device memory when it loads new framework.
-        paragraph_13: ! 'When you run the file limpa_terminal.bat you will see the following DOS screen:'
+        paragraph_13: 'When you run the file limpa_terminal.bat you will see the following DOS screen:'
         paragraph_14: This screen shows that the device is being cleaned. No action is required, since the commands are executed automatically. At the end the screen closes and the device will reboot.
-        paragraph_15: ! 'After being restarted, the following screen appears:'
+        paragraph_15: 'After being restarted, the following screen appears:'
         paragraph_16: This screen indicates that the device is waiting for the execution of the file (WALK Framework).
         paragraph_2: This is the first screen of the device before receiving the package. You must enter a password to access the configuration menu.
         paragraph_3: If you do not know the password, contact your device supplier.
-        paragraph_4: ! 'After entering the password, press the green button (OK) to access the next screen:'
-        paragraph_5: ! 'The menu option to download the WALK Framework is the DOWNLOAD option. Press 3 in the setup menu. The following screen appears:'
-        paragraph_6: ! 'Press the green button (OK) to move to the next screen:'
+        paragraph_4: 'After entering the password, press the green button (OK) to access the next screen:'
+        paragraph_5: 'The menu option to download the WALK Framework is the DOWNLOAD option. Press 3 in the setup menu. The following screen appears:'
+        paragraph_6: 'Press the green button (OK) to move to the next screen:'
         paragraph_7: Enter the password again.
         paragraph_8: Press the green button (OK) to select the type of download.
         paragraph_9: Press 1 to select Single App and move to the option screen.
@@ -2170,19 +2168,19 @@ en:
         os_version: Operating System Version
         paragraph_1: To identify the version of the operating system that is installed on your device, note the second line of the display screen, considering the last two characters. This screen is displayed when the device is connected.
         paragraph_2: Keep the operating system of your devices up to date. Devices with outdated operating system can be slow and may also have communication problems.
-        paragraph_3: ! 'Minimum system requirements for installing the operating WALK Framework:'
+        paragraph_3: 'Minimum system requirements for installing the operating WALK Framework:'
         pos_model: Model POS
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx510</strong>, <strong>Vx610</strong> and <strong>Vx670</strong>. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
         paragraph_1: To start charging, run carrega_na_flash.bat to load the certificates and the WALK Framework.
-        paragraph_2: ! 'The following DOS screen will appear:'
+        paragraph_2: 'The following DOS screen will appear:'
         paragraph_3: This screen shows the continuation of downloading the framework to the device. No action is required, since the commands are executed automatically.
-        paragraph_4: ! 'While the charge is made, the device displays the progress of the case:'
+        paragraph_4: 'While the charge is made, the device displays the progress of the case:'
         paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and then displays Welcome screen with the logo of the CloudWalk service.
       preparing_the_device:
         paragraph_1: Unpack the WALK Framework downloaded into directory of your choice.
         paragraph_2: This directory must be a local directory (eg C:\temp\dir), and not a network directory (\\)
-        paragraph_3: ! 'Before performing any file, you must prepare the device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port of your computer and the <strong>RS 232</strong> port from the device as the image below:'
+        paragraph_3: 'Before performing any file, you must prepare the device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port of your computer and the <strong>RS 232</strong> port from the device as the image below:'
         paragraph_4: <strong>Attention!</strong>
         paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port of the PC, if it has two COM ports.
         paragraph_6: Another important point is that the COM1 of your computer may be being used by another process, causing error in the load time of the WALK Framework, and how the download is only possible through COM1, it must be correctly configured in Windows.
@@ -2199,21 +2197,21 @@ en:
         wiping_the_device: Cleaning the device
       title: Installing the WALK Framework - VeriFone Verix
       wiping_the_device:
-        paragraph_1: ! 'With the cable properly connected, turn the device on the power cord. In the model Vx520 press the F2 and F4 at the top right of the device. In the model Vx680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
-        paragraph_10: ! 'Press F3 to select FULL option and move to the screen of the selection of the transfer mode:'
-        paragraph_11: ! 'Press F3 to choose  COM1, so that the device will be awaiting the execution of any file from WALK Framework directory, which was earlier unzipped:'
+        paragraph_1: 'With the cable properly connected, turn the device on the power cord. In the model Vx520 press the F2 and F4 at the top right of the device. In the model Vx680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
+        paragraph_10: 'Press F3 to select FULL option and move to the screen of the selection of the transfer mode:'
+        paragraph_11: 'Press F3 to choose  COM1, so that the device will be awaiting the execution of any file from WALK Framework directory, which was earlier unzipped:'
         paragraph_12: The first file to be executed is <strong>limpa_terminal.bat</strong>. This file clears any information that is in the device, so it is no 'junk' in the device memory when it loads new framework.
-        paragraph_13: ! 'When you run the file limpa_terminal.bat you will see the following DOS screen:'
+        paragraph_13: 'When you run the file limpa_terminal.bat you will see the following DOS screen:'
         paragraph_14: This screen shows that the device is being cleaned. No action is required, since the commands are executed automatically.
         paragraph_15: At the end of execution, the screen closes and the device will reboot.
-        paragraph_16: ! 'After being restarted, the following screen appears:'
+        paragraph_16: 'After being restarted, the following screen appears:'
         paragraph_17: This screen indicates that the device is waiting for the execution of the file (WALK Framework).
         paragraph_2: This is the first screen of the device before receiving the package. You must enter a password to access the configuration menu.
         paragraph_3: If you do not know the password, contact your device supplier.
-        paragraph_4: ! 'After entering the password, press the green button (OK) to access the next screen:'
-        paragraph_5: ! 'Press the red buttons just below the little arrow that appears on the display to scroll the menu and access more options, as shown below:'
-        paragraph_6: ! 'The menu option to download the WALK Framework is the DOWNLOAD option. Press 3 in the setup menu. The following screen appears:'
-        paragraph_7: ! 'Press the green button (OK) to move to the next screen:'
+        paragraph_4: 'After entering the password, press the green button (OK) to access the next screen:'
+        paragraph_5: 'Press the red buttons just below the little arrow that appears on the display to scroll the menu and access more options, as shown below:'
+        paragraph_6: 'The menu option to download the WALK Framework is the DOWNLOAD option. Press 3 in the setup menu. The following screen appears:'
+        paragraph_7: 'Press the green button (OK) to move to the next screen:'
         paragraph_8: Enter the password again.
         paragraph_9: Press the green button (OK) to select the type of download.
   walk_manager:
@@ -2223,10 +2221,10 @@ en:
         paragraph_1: The concept of <strong>Application</strong> in WALK Manager, as its name suggests, defines the applications available for use by devices.
         paragraph_2: These applications in practice are generated by the <a href='/introduction/development-environment'>CloudWalk IDE</a>, whenever a <a href='/introduction/posxml'>POSXML</a> application is compiled.
       interface:
-        paragraph_1: ! 'To submit an application, just follow the following procedure:'
+        paragraph_1: 'To submit an application, just follow the following procedure:'
         paragraph_2: Click the menu <strong>Applications</strong>.
         paragraph_3: Click the <strong>New Application</strong> button.
-        paragraph_4: ! 'Fill in the form:'
+        paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Name</strong> is a unique reference on the system (attention to naming rule)
         paragraph_6: <strong>Brief Description</strong> is a name used to identify the application in WALK Manager
         paragraph_7: <strong>Authorizer IP address or URL</strong> is the address of the authorization server
@@ -2236,18 +2234,18 @@ en:
         interface: Interface presentation
       title: WALK Manager - Applications
     assets:
-      description: ! 'Any file that is different from a POSXML application can be sent to the device. Examples of files that can be sent: Pictures, Texts, Zips.'
+      description: 'Any file that is different from a POSXML application can be sent to the device. Examples of files that can be sent: Pictures, Texts, Zips.'
       functionality:
-        paragraph_1: ! 'Any file that is different from a POSXML application can be sent to the device through this functionality, using the command <a href=''/posxml/commands/downloadfile'' class=''command''>downloadfile</a>. Examples of files that can be sent:'
+        paragraph_1: 'Any file that is different from a POSXML application can be sent to the device through this functionality, using the command <a href=''/posxml/commands/downloadfile'' class=''command''>downloadfile</a>. Examples of files that can be sent:'
         paragraph_2: <strong>Pictures:</strong> Logo for the device screen or for the printed ticket
         paragraph_3: <strong>Texts:</strong> message files, names, etc.
         paragraph_4: What can be unzipped directly on the POS
         paragraph_5: Before updating a file, <strong>clean your browser's cache</strong>, to prevent sending old version of the file (maintained by the browser).
       interface:
-        paragraph_1: ! 'To submit a file, just follow the following procedure:'
+        paragraph_1: 'To submit a file, just follow the following procedure:'
         paragraph_2: Click the menu <strong>File</strong>.
         paragraph_3: Click the <strong>New File</strong> button.
-        paragraph_4: ! 'Fill in the form:'
+        paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Brief Description</strong> is a name used for internal reference
         paragraph_6: <strong>Choose the file</strong> to be stored on CloudWalk which can later be downloaded to devices
       table_of_contents:
@@ -2259,11 +2257,11 @@ en:
       functionality:
         paragraph_1: For safety reasons, by default, a device cannot access CloudWalk. To allow a particular device to connect with CloudWalk servers, it is first necessary to grant access to this device, and this proccess is made through this feature.
       interface:
-        paragraph_1: ! 'To grant access to a device, just follow the following procedure:'
+        paragraph_1: 'To grant access to a device, just follow the following procedure:'
         paragraph_2: Click the menu <strong>Devices</strong>.
         paragraph_3: Click the <strong>Grant access to a new device</strong> button.
-        paragraph_4: ! 'Fill in the form:'
-        paragraph_5: ! '<strong>Serial Number</strong> is the number found on the back of the device, usually defined as: <strong>Serial N</strong>, <strong>S/N</strong> or <strong>Serial Number</strong>.'
+        paragraph_4: 'Fill in the form:'
+        paragraph_5: '<strong>Serial Number</strong> is the number found on the back of the device, usually defined as: <strong>Serial N</strong>, <strong>S/N</strong> or <strong>Serial Number</strong>.'
         paragraph_6: (Optional) Click the tab <strong>release batch (file)</strong> to release many serial numbers at once.
         paragraph_7: Enter the file (.txt) containing a list of serial numbers (one per line).
       table_of_contents:
@@ -2273,14 +2271,14 @@ en:
     groups:
       description: Group is the association of one or more logical numbers with one or more applications. How to register a group and add parameters to it.
       functionality:
-        paragraph_1: ! '<strong>Group</strong> is the association of one or more logical numbers with one or more applications. The group is referenced in two distinct stages, which are:'
+        paragraph_1: '<strong>Group</strong> is the association of one or more logical numbers with one or more applications. The group is referenced in two distinct stages, which are:'
         paragraph_2: <strong>Interface of Logical Numbers:</strong> Where logical numbers are registered and associated in groups;
         paragraph_3: <strong>Interface of Groups:</strong> Where applications are associated.
       interface:
-        paragraph_1: ! 'To register a group, please follow the following procedure:'
+        paragraph_1: 'To register a group, please follow the following procedure:'
         paragraph_2: Click the menu <strong>Groups</strong>.
         paragraph_3: Click the <strong>New Group</strong> button.
-        paragraph_4: ! 'Fill in the form:'
+        paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Group Name</strong> is the group identification
       parameters:
         paragraph_1: It is possible to add parameters to a group. For example, the group <strong>AREA 51</strong> has several logical numbers and sales application. This group then has a parameter called <strong>SPECIAL_TICKET</strong>, with the value <strong>1</strong>. Thus, all devices belonging to this group inherit this parameter.
@@ -2295,15 +2293,15 @@ en:
     logical_numbers:
       description: Logical Number is the device ID, and is directly associated with a Group. How to register a logical number and add parameters to it.
       functionality:
-        paragraph_1: ! 'The logical <strong>Number</strong> is the ID of the device, and is directly associated with a <strong>Group</strong>. The logical number is referenced in two distinct stages, which are:'
+        paragraph_1: 'The logical <strong>Number</strong> is the ID of the device, and is directly associated with a <strong>Group</strong>. The logical number is referenced in two distinct stages, which are:'
         paragraph_2: <strong>Interface of Logical Numbers:</strong> where logical numbers are registered and associated in groups.
         paragraph_3: <strong>Device:</strong> Accessing the setup menu of the POS, on the option <strong>Logical Number</strong>
         paragraph_4: Do not confuse <strong>Logical Number</strong> with <strong>Serial Number</strong>. The logical number is used to identify the POS while the serial number is used to release access to the POS.
       interface:
-        paragraph_1: ! 'To register a logical number, just follow the following procedure:'
+        paragraph_1: 'To register a logical number, just follow the following procedure:'
         paragraph_2: Click the menu <strong>Logical Numbers</strong>.
         paragraph_3: Click the <strong>New logical number</strong> button.
-        paragraph_4: ! 'Fill in the form:'
+        paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Logical number</strong> is the ID of the device
       parameters:
         paragraph_1: You can add parameters to a logical number. For example, the logical number <strong>100022</strong> is used on the device on restaurant 'Chop Suey' of Mr. Li Hanzo. This logical number then has a parameter called <strong>NUM_PARCELS</strong>, with the value <strong>1</strong>.
@@ -2319,10 +2317,10 @@ en:
       functionality:
         paragraph_1: The transaction monitor displays all the operations that have been performed by devices. Just specify the record type in the search filters.
       interface:
-        paragraph_1: ! 'To access the transaction monitor, just follow the following procedure:'
+        paragraph_1: 'To access the transaction monitor, just follow the following procedure:'
         paragraph_2: Click the menu <strong>Monitor transactions</strong>.
         paragraph_3: Click the <strong>Filters</strong> button.
-        paragraph_4: ! 'Specify the type of record:'
+        paragraph_4: 'Specify the type of record:'
         paragraph_5: <strong>Requests -</strong> delimit the time interval of the query
         paragraph_6: <strong>Record Type -</strong> define the type of record to be consulted (download, transaction, etc.)
         paragraph_7: <strong>Status -</strong> define the status of the records (successful, error, etc.)
