@@ -1579,7 +1579,7 @@ pt-BR:
         description: Retorna o tamanho da string especificada
         paragraph_1: O comando <span class='code'>string.length</span> é utilizado para retornar o tamanho de uma string.
         paragraph_2: No exemplo acima o comando <a href='string.length' class='command'>string.length</a> irá retornar o tamanho do texto da variável <strong>sText</strong>.
-        paragraph_3: O retorno do comando <a href='string.length' class='command'>string.length</a> é um <a href='integervariable' class='command'>integervariable</a> e será convertido para <a href='stringvaribale' class='command'>stringvaribale</a> para ser exibido no <a href='display' class='command'>display</a>.
+        paragraph_3: O retorno do comando <a href='string.length' class='command'>string.length</a> é um <a href='integervariable' class='command'>integervariable</a> e será convertido para <a href='stringvariable' class='command'>stringvariable</a> para ser exibido no <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>value</strong> <span class='data-type'>[string]</span><br/>A string que será contada.
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variável que irá armazenar o retorno do comando, tamanho da string.

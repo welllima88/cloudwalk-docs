@@ -1579,7 +1579,7 @@ en:
         description: Returns length of the specified string
         paragraph_1: The command <span class='code'>string.length</span> is used to return the length of a string.
         paragraph_2: In the above example the command <a href='string.length' class='command'>string.length</a> will return the size of the text in the variable <strong>sText</strong>.
-        paragraph_3: The return of the command <a href='string.length' class='command'>string.length</a> is a <a href='integervariable' class='command'>integervariable</a> and will be converted to <a href='stringvaribale' class='command'>stringvaribale</a> to be displayed in <a href='display' class='command'>display</a>.
+        paragraph_3: The return of the command <a href='string.length' class='command'>string.length</a> is a <a href='integervariable' class='command'>integervariable</a> and will be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed in <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>value</strong> <span class='data-type'>[string]</span><br/>Text that will be used by the command.
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the converted value.
