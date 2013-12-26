@@ -324,7 +324,7 @@ pt-BR:
   errors:
     not_found:
       description: Não foi possível encontrar a página solicitada.
-      title: Página não econtrada
+      title: Página não encontrada
   footer:
     get_in_touch: Entre em contato
     paragraph_1: Os nomes e logotipos WALK são marcas registradas da Plano Bê. Todos os direitos reservados.
