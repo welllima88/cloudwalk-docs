@@ -51,6 +51,7 @@ get "/" do redirect "/#{current_locale}/introduction" end
   { "url" => "walk-framework/verifone-verix",        "view_path" => "walk_framework/verifone_verix"},
   { "url" => "walk-framework/ingenico-telium-1",     "view_path" => "walk_framework/ingenico_telium_1"},
   { "url" => "walk-framework/ingenico-telium-2",     "view_path" => "walk_framework/ingenico_telium_2"},
+  { "url" => "walk-framework/first-launch",          "view_path" => "walk_framework/first-launch"},
   { "url" => "walk-framework/configuration",         "view_path" => "walk_framework/configuration"},
   # WALK MANAGER
   { "url" => "walk-manager/apps",                    "view_path" => "walk_manager/apps"},

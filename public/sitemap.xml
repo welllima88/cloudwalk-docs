@@ -10,6 +10,7 @@
 <url><loc>https://docs.cloudwalk.io/pt-BR/walk-framework/verifone-verix</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/pt-BR/walk-framework/ingenico-telium-1</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/pt-BR/walk-framework/ingenico-telium-2</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+<url><loc>https://docs.cloudwalk.io/pt-BR/walk-framework/first-launch</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/pt-BR/walk-framework/configuration</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/pt-BR/walk-manager/apps</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/pt-BR/walk-manager/devices</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
@@ -167,6 +168,7 @@
 <url><loc>https://docs.cloudwalk.io/en/walk-framework/verifone-verix</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/en/walk-framework/ingenico-telium-1</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/en/walk-framework/ingenico-telium-2</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+<url><loc>https://docs.cloudwalk.io/en/walk-framework/first-launch</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/en/walk-framework/configuration</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/en/walk-manager/apps</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://docs.cloudwalk.io/en/walk-manager/devices</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
