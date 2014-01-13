@@ -8,6 +8,7 @@ gem 'i18n',            '~> 0.6.9'
 gem 'indextank',       '~> 1.0.13'
 gem 'nokogiri',        '~> 1.6.1'
 gem 'sinatra-contrib', '~> 1.4.2'
+gem 'sinatra-partial', '~> 0.4.0'
 
 group :development do
   gem 'localeapp', '~> 0.6.14'
