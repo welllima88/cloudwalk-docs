@@ -7,6 +7,7 @@ require "open-uri"
 require "nokogiri"
 require "rack-ssl-enforcer"
 require "sinatra/content_for"
+require 'sinatra/partial'
 
 configure do
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
@@ -23,6 +24,7 @@ if production?
                              :expire_after => 2592000 # In seconds
 end
 
+set :partial_template_engine, :erb
 set :views, File.dirname(__FILE__) + '/templates'
 
 before do
