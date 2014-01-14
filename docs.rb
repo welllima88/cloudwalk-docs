@@ -226,12 +226,12 @@ helpers do
   end
 
   def build_search_url
-    # http://domain.com/en?query=something&access-token=secret
+    # http://domain.com/en?query=something&access_token=secret
 
     search_url = ENV["SEARCH_API_URL"].dup
     search_url << current_locale
     search_url << "?query=#{params[:query]}"
-    search_url << "&access-token=#{ENV["SEARCH_API_TOKEN"].dup}"
+    search_url << "&access_token=#{ENV["SEARCH_API_TOKEN"].dup}"
   end
 
   def parse_search_results(response)
