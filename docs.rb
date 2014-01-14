@@ -144,17 +144,13 @@ end
 get "/:locale/search" do |locale|
   validate_locale(locale)
 
-  client = IndexTank::Client.new(ENV["SEARCHIFY_API_URL"])
-  index = client.indexes("cloudwalk-docs")
-
   if params[:query]
-    query = "(title:('#{params[:query]}')^5 OR text:('#{params[:query]}')) AND language:#{current_locale}"
+    @results = search
   else
     redirect "/#{current_locale}/introduction", 301
   end
 
-  @results = index.search(query, :fetch => 'title, description, url')
-  erb "search".to_sym
+  erb :search
 end
 
 helpers do
@@ -215,60 +211,49 @@ helpers do
     "<a class='moot' data-label='#{I18n.t("posxml.commands.comments_message")}' href='https://moot.it/i/cloudwalk/docs/#{command}'></a>"
   end
 
-  def search_result(results)
-    result_erb = ""
-    if results["matches"] > 0
-      result_erb = "<ul class='search-listing'>"
-      results['results'].each do |doc|
-        docid = doc['docid']
-        title = doc['title']
-        description = doc['description']
-        url = doc['url']
-        result_erb << "<li><a href='#{url}'>#{title}</a><p class='muted'>#{description}</p></li>"
+  def search
+    require 'json'
+
+    uri = URI.parse(URI.encode(build_search_url))
+    http = Net::HTTP.new(uri.host, uri.port)
+    request = Net::HTTP::Get.new(uri.request_uri)
+    res = http.request(request)
+
+    raise unless res.code == "200"
+
+    JSON.parse(res.body)
+  rescue
+    return false
+  end
+
+  def build_search_url
+    # http://domain.com/en?query=something&access-token=secret
+
+    search_url = ENV["SEARCH_API_URL"].dup
+    search_url << current_locale
+    search_url << "?query=#{params[:query]}"
+    search_url << "&access-token=#{ENV["SEARCH_API_TOKEN"].dup}"
+  end
+
+  def parse_search_results(response)
+    markup = ""
+
+    if response["results"].count > 0
+      # Open a list
+      markup = "<ul class='search-listing'>"
+
+      # Iterate on entries
+      response['results'].each do |entry|
+        # Add a list item
+        markup << "<li><a href='#{entry["url"]}'>#{entry["title"]}</a><p class='muted'>#{entry["description"]}</p></li>"
       end
-      result_erb << "</ul>"
+
+      # Close the list
+      markup << "</ul>"
     else
-      result_erb = "<br/><p>#{I18n.t("general.search_with_no_results", :query => params[:query])}</p>"
+      # Not found
+      markup = "<br/><p>#{I18n.t("general.search_with_no_results", :query => params[:query])}</p>"
     end
-    result_erb
+    markup
   end
-end
-
-def searchify
-  client = IndexTank::Client.new(ENV['SEARCHIFY_API_URL'])
-  @index = client.indexes('cloudwalk-docs')
-
-  @commands.each do |command|
-    puts "Command en #{command}\n"
-    response = load_page("en", command, "commands")
-
-    puts "Command pt-BR #{command}\n"
-    load_page("pt-BR", command, "commands")
-  end
-
-  @navigation.each do |nav|
-    puts "Navigation en #{nav['url']}\n"
-    load_page("en", nav['url'])
-
-    puts "Navigation pt-BR #{nav['url']}\n"
-    load_page("pt-BR", nav['url'])
-  end
-
-end
-
-def load_page(language, item, block = nil)
-  url = block == "commands" ? "https://docs.cloudwalk.io/#{language}/posxml/commands/#{item}" : "https://docs.cloudwalk.io/#{language}/#{item}"
-
-  page = Nokogiri::HTML(open(url))
-  description = page.css("meta[name='docs:description']").first
-
-  item = block == "commands" ? item.gsub(".", "") : item.gsub("-", " ").gsub("/", " ")
-
-  @index.document("#{item} #{language}").add({
-    text: "#{page.css("div.span9").first}",
-    title: "#{page.css("h1:first").inner_html}",
-    description: "#{description["content"]}",
-    url: "#{url}",
-    language: "#{language}"
-  })
 end
