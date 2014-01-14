@@ -336,7 +336,7 @@ pt-BR:
     placeholder: "Pesquisar..."
     success:
       title: "Resultado da pesquisa"
-      no_results: "Desculpe mas a pesquisa por <strong>%{query}</strong> não retornou nada."
+      no_results: "Nenhum registro encontrado. Não foi possível encontrar nada relevante."
     error:
       title: "Ocorreu um erro ao efetuar a pesquisa"
       paragraph_1: "Recebemos uma notificação e em breve o formulário de pesquisa estará funcionando corretamente."

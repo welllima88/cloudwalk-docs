@@ -251,7 +251,7 @@ helpers do
       markup << "</ul>"
     else
       # Not found
-      markup = "<br/><p>#{I18n.t("general.search_with_no_results", :query => params[:query])}</p>"
+      markup = "<br/><p>#{I18n.t("search.success.no_results")}</p>"
     end
     markup
   end

@@ -336,7 +336,7 @@ en:
     placeholder: "Search..."
     success:
       title: "Search results"
-      no_results: "Sorry but the search for <strong>%{query}</strong> returned nothing."
+      no_results: "No search results found. We couldn't find anything relevant."
     error:
       title: "An error occurred while performing the search"
       paragraph_1: "We've received a notification and the search form will soon be functioning properly."

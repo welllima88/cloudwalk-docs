@@ -1,5 +1,5 @@
 <% if @results %>
-  <h1><%= I18n.t("success.success.title") %></h1>
+  <h1><%= I18n.t("search.success.title") %></h1>
   <%= parse_search_results @results %>
 <% else %>
   <%= partial("search_error") %>
