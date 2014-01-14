@@ -331,10 +331,16 @@ pt-BR:
     terms: Termos de Responsabilidade
   general:
     index: Índice
-    search: Pesquisar...
-    search_results: Resultado da pesquisa
-    search_with_no_results: Desculpe mas a pesquisa por <strong>%{query}</strong> não retornou nada.
     updated_at: Atualizado em %{date}
+  search:
+    placeholder: "Pesquisar..."
+    success:
+      title: "Resultado da pesquisa"
+      no_results: "Desculpe mas a pesquisa por <strong>%{query}</strong> não retornou nada."
+    error:
+      title: "Ocorreu um erro ao efetuar a pesquisa"
+      paragraph_1: "Recebemos uma notificação e em breve o formulário de pesquisa estará funcionando corretamente."
+      paragraph_2: "Desculpe pelo inconveniente."
   integration:
     advanced_http:
       description: É possível integrar aplicações CloudWalk escritas em POSXML com APIs REST utilizando o comando network.send.

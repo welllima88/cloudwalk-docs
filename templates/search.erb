@@ -1,3 +1,6 @@
-<h1><%= I18n.t("general.search_results") %></h1>
-
-<%= search_result @results %>
+<% if @results %>
+  <h1><%= I18n.t("success.success.title") %></h1>
+  <%= parse_search_results @results %>
+<% else %>
+  <%= partial("search_error") %>
+<% end %>

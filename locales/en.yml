@@ -331,10 +331,16 @@ en:
     terms: Terms of Responsability
   general:
     index: Index
-    search: Search...
-    search_results: Search results
-    search_with_no_results: Sorry but the search for <strong>%{query}</strong> returned nothing.
-    updated_at: Updated on %{date}
+    updated_at: Updated at %{date}
+  search:
+    placeholder: "Search..."
+    success:
+      title: "Search results"
+      no_results: "Sorry but the search for <strong>%{query}</strong> returned nothing."
+    error:
+      title: "An error occurred while performing the search"
+      paragraph_1: "We've received a notification and the search form will soon be functioning properly."
+      paragraph_2: "Sorry for the inconvenience."
   integration:
     advanced_http:
       description: There is a way to integrate CloudWalk POSXML applications with REST APIs using the command network.send.
