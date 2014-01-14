@@ -1,18 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    backports (3.3.5)
+    backports (3.4.0)
     daemons (1.1.9)
     eventmachine (1.0.3)
-    faraday (0.8.8)
-      multipart-post (~> 1.2.0)
-    faraday_middleware (0.9.0)
-      faraday (>= 0.7.4, < 0.9)
     gli (2.8.1)
     i18n (0.6.9)
-    indextank (1.0.13)
-      faraday_middleware (>= 0.9.0)
-      yajl-ruby (>= 0.7.7)
     json (1.8.1)
     localeapp (0.6.14)
       gli
@@ -22,11 +15,7 @@ GEM
       rest-client
       ya2yaml
     mime-types (2.0)
-    mini_portile (0.5.2)
-    multi_json (1.8.2)
-    multipart-post (1.2.0)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    multi_json (1.8.4)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -54,16 +43,13 @@ GEM
       rack (>= 1.0.0)
     tilt (1.4.1)
     ya2yaml (0.31)
-    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   i18n (~> 0.6.9)
-  indextank (~> 1.0.13)
   localeapp (~> 0.6.14)
-  nokogiri (~> 1.6.1)
   rack-ssl-enforcer (~> 0.2.6)
   sinatra (~> 1.4.4)
   sinatra-contrib (~> 1.4.2)
