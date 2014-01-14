@@ -371,7 +371,7 @@ h2.command-header{
 
 .pos pre{
   margin: 8px 15px 0 15px;
-  line-height:1.1;  /* 40px baseline */
+  line-height:1.2;
 }
 
 .pos div{
@@ -407,7 +407,7 @@ h2.command-header{
   background-color: #709D52;
   text-shadow: #94BF77 1px 1px 1px;
   color: #333;
-  font-size: 16px;
+  font-size: 19px;
 }
 
 /* Note */
