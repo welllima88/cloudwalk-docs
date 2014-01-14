@@ -1,10 +1,12 @@
 require "rubygems"
 require "sinatra"
+require "sinatra/content_for"
+require 'sinatra/partial'
 require "i18n"
 require "i18n/backend/fallbacks"
 require "rack-ssl-enforcer"
-require "sinatra/content_for"
-require 'sinatra/partial'
+require "json"
+require "pony"
 
 configure do
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
@@ -210,8 +212,6 @@ helpers do
   end
 
   def search
-    require 'json'
-
     uri = URI.parse(URI.encode(build_search_url))
     http = Net::HTTP.new(uri.host, uri.port)
     request = Net::HTTP::Get.new(uri.request_uri)
@@ -221,6 +221,7 @@ helpers do
 
     JSON.parse(res.body)
   rescue
+    send_mail("Search error", "Could not perform search.\n\n#{$!.class}: #{$!.message}")
     return false
   end
 
@@ -253,5 +254,12 @@ helpers do
       markup = "<br/><p>#{I18n.t("general.search_with_no_results", :query => params[:query])}</p>"
     end
     markup
+  end
+
+  def send_mail(subject, body)
+    Pony.mail :to => ENV["ADMIN_CONTACT_EMAIL"].dup,
+              :from => "docs@cloudwalk.io",
+              :subject => subject,
+              :body => body
   end
 end
