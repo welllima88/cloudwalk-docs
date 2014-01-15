@@ -1,7 +1,6 @@
 require "rubygems"
 require "sinatra"
 require "sinatra/content_for"
-require 'sinatra/partial'
 require "i18n"
 require "i18n/backend/fallbacks"
 require "rack-ssl-enforcer"
@@ -24,7 +23,6 @@ if production?
                              :expire_after => 2592000 # In seconds
 end
 
-set :partial_template_engine, :erb
 set :views, File.dirname(__FILE__) + '/templates'
 
 before do
