@@ -364,13 +364,13 @@ h2.command-header{
 
 /* POS Box */
 .pos{
-  width: 330px;
+  width: 290px;
   letter-spacing: 2.5px;
   margin: 25px 0;
 }
 
 .pos pre{
-  margin: 8px 15px 0 15px;
+  margin: 8px 0 0 5px;
   line-height:1.2;
 }
 
@@ -395,7 +395,7 @@ h2.command-header{
 
 /* Models */
 .verix, .evo{
-  height: 210px;
+  height: 200px;
   border: 8px solid #597F3F;
   background-color: #709D52;
   text-shadow: #94BF77 1px 1px 1px;
