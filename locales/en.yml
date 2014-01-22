@@ -655,7 +655,8 @@ en:
       walk_framework: WALK Framework
       walk_manager: WALK Manager
     walk_framework:
-      configuration: Initial setup
+      configuration: Device configuration
+      first_launch: 'First launch'
       group_name: WALK Framework
       ingenico_telium_1: Ingenico Telium 1
       ingenico_telium_2: Ingenico Telium 2
@@ -1961,61 +1962,96 @@ en:
         paragraph_2: 'Example:'
       title: POSXML - Language structure
   walk_framework:
+    communication:
+      paragraph_1: Common local network (ethernet)
+      paragraph_2: Landline/dial-up (PPP)
+      paragraph_3: Landline/dial-up (SDLC)
+      paragraph_4: If your device does not show an option, for example, GPRS, it means that your device does not support that specific type of communication.
+      paragraph_5: Details of the communication types
+      paragraph_6: 'Each type of communication has a particular configuration process, as shown below:'
+      ethernet:
+        paragraph_1: 1. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.
+        paragraph_2: 2. Set the subnet mask for the defined IP address class (eg 255.255.255.0).
+        paragraph_3: 3. Set the router/gateway IP address (eg 192.168.0.1).
+        paragraph_4: 4. Set the primary DNS server (eg 192.168.0.1).
+        paragraph_5: 5. Set the secondary DNS server (eg 192.168.0.1).
+      gprs:
+        paragraph_1: 1. Set the mobile operator.
+      ppp:
+        paragraph_1: 1. Set the modem speed (eg 2400).
+        paragraph_2: 2. Set the internet provider telephone number.
+        paragraph_3: 3. Set the internet username. Some providers might require the complete username (eg user@provider.com), while others might require only the short username.
+        paragraph_4: 4. Set the internet password.
+      sdlc:
+        paragraph_1: 1. Set the modem speed (eg 2400).
+        paragraph_2: 2. Set the internet provider telephone number.
+      ssl:
+        paragraph_1: '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
+      wifi:
+        paragraph_1: 1. Set the name of the wireless network
+        paragraph_2: 2. Set the password of the wireless network
+        paragraph_3: '3. Set the protocol of the wireless network(ex: WEP 128-104).'
+        paragraph_4: 4. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.
+        paragraph_5: 5. Set the subnet mask for the defined IP address class (eg 255.255.255.0).
+        paragraph_6: 6. Set the router/gateway IP address (eg 192.168.0.1).
+        paragraph_7: 7. Set the primary DNS server (eg 192.168.0.1).
+        paragraph_8: Set the secondary DNS server (eg 192.168.0.1).
     configuration:
-      after_install: Now that WALK Framework has already been installed on the device, the next step is to perform the a <a href='/walk-framework/configuration'>initial setup</a> do dispositivo. Click <a href='/walk-framework/configuration'>here</a> to start the process.
       description: Procedure for setting up the device after installing the WALK Framework.
-      integration:
-        paragraph_1: Now that the device was created on WALK Manager and the communication has been set, the next step is to perform an HTTP integration test. Click <a href='/integration/http'>here</a> to start the process.
-      prerequisites:
-        internet_access: <strong>Computer with internet access:</strong> Necessary to grant access to the device on CloudWalk
-        walk_framework: <strong>WALK Framework:</strong> Device with WALK Framework properly installed
-      setting_up_communication:
-        ethernet:
-          paragraph_1: 1. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.
-          paragraph_2: 2. Set the subnet mask for the defined IP address class (eg 255.255.255.0).
-          paragraph_3: 3. Set the router/gateway IP address (eg 192.168.0.1).
-          paragraph_4: 4. Set the primary DNS server (eg 192.168.0.1).
-          paragraph_5: 5. Set the secondary DNS server (eg 192.168.0.1).
-        gprs:
-          paragraph_1: 1. Set the mobile operator.
-        paragraph_1: 'Now that the serial number of the device has already been registered on WALK Manager, the next step is to setup the communication. To do so, open the configuration menu (<strong>F1</strong> or <strong>F</strong>):'
-        paragraph_2: 'Then select the option <strong>2 COMMUNICATION</strong>. The following screen will be shown:'
-        paragraph_3: 'As can be seen, there are the following types of communication:'
-        paragraph_4: Common local network (ethernet)
-        paragraph_5: Landline/dial-up (PPP)
-        paragraph_6: Landline/dial-up (SDLC)
-        paragraph_7: If your device does not show an option, for example, GPRS, it means that your device does not support that specific type of communication.
-        paragraph_8: Details of the communication types
-        paragraph_9: 'Each type of communication has a particular configuration process, as shown below:'
-        ppp:
-          paragraph_1: 1. Set the modem speed (eg 2400).
-          paragraph_2: 2. Set the internet provider telephone number.
-          paragraph_3: 3. Set the internet username. Some providers might require the complete username (eg user@provider.com), while others might require only the short username.
-          paragraph_4: 4. Set the internet password.
-        sdlc:
-          paragraph_1: 1. Set the modem speed (eg 2400).
-          paragraph_2: 2. Set the internet provider telephone number.
-        ssl:
-          paragraph_1: '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
-        wifi:
-          paragraph_1: 1. Set the name of the wireless network
-          paragraph_2: 2. Set the password of the wireless network
-          paragraph_3: '3. Set the protocol of the wireless network(ex: WEP 128-104).'
-          paragraph_4: 4. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.
-          paragraph_5: 5. Set the subnet mask for the defined IP address class (eg 255.255.255.0).
-          paragraph_6: 6. Set the router/gateway IP address (eg 192.168.0.1).
-          paragraph_7: 7. Set the primary DNS server (eg 192.168.0.1).
-          paragraph_8: Set the secondary DNS server (eg 192.168.0.1).
+      title: Device configuration
       table_of_contents:
-        integration: Integration
-        prerequisites: Prerequisites
-        setting_up_communication: Setting up communication
-        unlocking_serial_number: Unlocking the serial number
-      title: Initial device configuration
-      unlocking_serial_number:
+        logical_number: 'LOGICAL NUMBER'
+        communication: 'COMMUNICATION'
+        magstripe_settings: 'MAGSTRIPE SETTINGS'
+        clear_this_device: 'CLEAR THIS DEVICE'
+        check_serial_number: 'CHECK S. NUMBER'
+        cloudwalk_update: 'CLOUDWALK UPDATE'
+        about: 'ABOUT'
+      logical_number:
+        paragraph_1: "This option is used to define the device logical number."
+        paragraph_2: "More information regarding the use of logical numbers can be found at:"
+        integration: "Integration"
+      communication:
+        paragraph_1: "This option is used to setup the device communication."
+        paragraph_2: "The following types of communication can be used (options may vary depending on device):"
+      magstripe_settings:
+        paragraph_1: "This option defines the parameters while swiping a magnetic stripe card."
+        paragraph_2: "The following parameters can be used:"
+        types:
+          t0: "Returns the track 2 and allow card swiping and manual entering"
+          t2: "Returns the track 2 and allow only card swiping"
+          t4: "Returns the tracks 1 and 2 and allow card swiping and manual entering"
+          t255: "Returns the tracks 1 and 2 and allow only card swiping"
+      clear_this_device:
+        paragraph_1: "This option is used to delete the device's applications and the parameters file."
+      check_serial_number:
+        paragraph_1: "Displays the device serial number."
+      cloudwalk_update:
+        paragraph_1: "This options is used to remotely update the WALK Framework."
+      about:
+        paragraph_1: "Displays some device information, such as model and WALK Framework version."
+    first_launch:
+      description: "Procedure for setting up the device after installing the WALK Framework."
+      title: "Device's first launch"
+      after_install: "Now that WALK Framework has already been installed on the device, the next step is to perform the a <a href='/walk-framework/configuration'>initial setup</a> do dispositivo. Click <a href='/walk-framework/configuration'>here</a> to start the process."
+      integration:
+        paragraph_1: "Now that the device was created on WALK Manager and the communication has been set, the next step is to perform an HTTP integration test. Click <a href='/integration/http'>here</a> to start the process."
+      prerequisites:
+        internet_access: "<strong>Computer with internet access:</strong> Necessary to register the logical number and to grant access to the device on CloudWalk"
+        walk_framework: "<strong>WALK Framework:</strong> Device with WALK Framework properly installed"
+      table_of_contents:
+        prerequisites: "Prerequisites"
+        language_settings: "Language settings"
+        step_1: "Step 1 - Unlocking the serial number"
+        step_2: "Step 2 - Register the logical number"
+        step_3: "Step 3 - Setting up communication"
+        step_4: "Step 4 - Activation"
+        integration: "Integration"
+      language_settings:
+        paragraph_1: "With the newly installed device in hand, the home screen will offer the option to choose the language that will be used during the device activation process:"
+        paragraph_2: "Press <strong>1</strong> to use the Portuguese or <strong>2</strong> to use the English"
+      step_1:
         paragraph_1: 'In order to access the CloudWalk service, a device need to have its serial number registered on WALK Manager. It can be accomplish by following the follow steps:'
-        paragraph_10: Enter the serial number exactly as it appears on the screen of the device and click the button <strong>Grant access</strong>
-        paragraph_11: It is necessary to enter the numbers, letters and other characters, <strong>exactly</strong> as it appears on the screen of the device.
         paragraph_2: Getting the device serial number
         paragraph_3: 'To get a device serial number, open the configuration menu by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium):'
         paragraph_4: 'And then select the option <strong>5 CHECK S. NUMBER</strong>. The following screen will be shown:'
@@ -2024,6 +2060,12 @@ en:
         paragraph_7: Access the WALK Managet through <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
         paragraph_8: Select the section <a href='https://manager.cloudwalk.io/devices' target='_blank' class='external'>Devices</a>
         paragraph_9: Click the button <strong>Grant access to a new device</strong>
+        paragraph_10: Enter the serial number exactly as it appears on the screen of the device and click the button <strong>Grant access</strong>
+        paragraph_11: It is necessary to enter the numbers, letters and other characters, <strong>exactly</strong> as it appears on the screen of the device.
+      setting_up_communication:
+        paragraph_1: 'Now that the serial number of the device has already been registered on WALK Manager, the next step is to setup the communication. To do so, open the configuration menu (<strong>F1</strong> or <strong>F</strong>):'
+        paragraph_2: 'Then select the option <strong>2 COMMUNICATION</strong>. The following screen will be shown:'
+        paragraph_3: 'As can be seen, there are the following types of communication:'
     ingenico_telium_1:
       description: Step by step process of installing the WALK Framework on terminals Ingenico EFT930G and EFT930S.
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals Ingenico <strong>EFT930G</strong> and <strong>EFT930S</strong>. Be aware of prerequisites and follow the installation process carefully.
@@ -2302,7 +2344,7 @@ en:
         paragraph_1: 'The logical <strong>Number</strong> is the ID of the device, and is directly associated with a <strong>Group</strong>. The logical number is referenced in two distinct stages, which are:'
         paragraph_2: <strong>Interface of Logical Numbers:</strong> where logical numbers are registered and associated in groups.
         paragraph_3: <strong>Device:</strong> Accessing the setup menu of the POS, on the option <strong>Logical Number</strong>
-        paragraph_4: Do not confuse <strong>Logical Number</strong> with <strong>Serial Number</strong>. The logical number is used to identify the POS while the serial number is used to release access to the POS.
+        paragraph_4: Do not confuse <strong>Logical Number</strong> with <strong>Serial Number</strong>. The logical number is used to identify the device while the serial number is used to grant access to the device on the CloudWalk network.
       interface:
         paragraph_1: 'To register a logical number, just follow the following procedure:'
         paragraph_2: Click the menu <strong>Logical Numbers</strong>.
