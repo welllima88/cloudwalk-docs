@@ -29,4 +29,4 @@ $ bundle exec rackup
 
 [https://docs.cloudwalk.io](https://docs.cloudwalk.io)
 
-© 2013 Plano Bê
+© 2014 CloudWalk
