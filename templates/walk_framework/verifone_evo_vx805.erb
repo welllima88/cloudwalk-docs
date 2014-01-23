@@ -3,7 +3,7 @@
 <% end %>
 <h1><%= I18n.t("walk_framework.verifone_evo.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "23/08/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "23/01/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
@@ -13,6 +13,7 @@
   <li><a href="#preparing-the-pos"><%= I18n.t("walk_framework.verifone_evo.table_of_contents.preparing_the_device") %></a></li>
   <li><a href="#wiping-the-device"><%= I18n.t("walk_framework.verifone_evo.table_of_contents.wiping_the_device") %></a></li>
   <li><a href="#loading-the-framework"><%= I18n.t("walk_framework.verifone_evo.table_of_contents.loading_the_framework") %></a></li>
+  <li><a href="#first-launch"><%= I18n.t("walk_framework.first_launch.title") %></a></li>
 </ol>
 
 <p><%= I18n.t("walk_framework.verifone_evo.introduction_cable_terminals") %></p>
@@ -47,16 +48,16 @@
 <p><%= I18n.t("walk_framework.verifone_evo.identify_os.paragraph_3") %></p>
 
 <table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover">
-	<thead>
+  <thead>
     <tr>
       <th><%= I18n.t("walk_framework.verifone_evo.identify_os.pos_model") %></th>
       <th><%= I18n.t("walk_framework.verifone_evo.identify_os.os_version") %></th>
     </tr>
-	</thead>
+  </thead>
   <tbody>
     <tr>
-    	<td>Vx805</td>
-    	<td>QT850104</td>
+      <td>Vx805</td>
+      <td>QT850104</td>
     <tr>
       <td>Vx820</td>
       <td>QT820109</td>
@@ -103,14 +104,12 @@ Please Enter Password
 <div class="pos evo">
 <pre>
 VERIX TERMINAL MGR
-
 1) Restart
 2) Edit Parameters
 3) Download
 4) Memory Usage
 5) Ram Directory
 6) Flash Directory
-
   ⬇ ↓ ↑
 </pre>
 </div>
@@ -176,7 +175,6 @@ Cleared From Group 1
 
 1) Cancel Download
 2) Continue
-
               ↓ ↑
 </pre>
 </div>
@@ -224,3 +222,13 @@ DOWNLOADING NOW
 </div>
 
 <p><%= I18n.t("walk_framework.verifone_evo.loading_the_framework.paragraph_5") %></p>
+
+<h2 id="first-launch"><%= I18n.t("walk_framework.first_launch.title") %></h2>
+
+<p><%= I18n.t("walk_framework.first_launch.after_install") %></p>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to(I18n.t("menu.walk_framework.first_launch") + " &rarr;", "walk-framework/first-launch") %>
+  </li>
+</ul>

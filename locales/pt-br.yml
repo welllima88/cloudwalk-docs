@@ -2237,7 +2237,7 @@ pt-BR:
         paragraph_2: 'A seguinte tela do DOS será exibida:'
         paragraph_3: Esta tela mostra o prosseguimento do download do Framework para o terminal. Nenhuma ação é necessária, já que os comandos são executados automaticamente.
         paragraph_4: 'Enquanto a carga é efetuada, o terminal exibe o andamento do processo:'
-        paragraph_5: Ao finalizar o processo de carga, a tela do DOS será fechada e o terminal será reiniciado algumas vezes, e em seguida será exibido a tela de boas vindas, com o logotipo do serviço CloudWalk.
+        paragraph_5: Ao finalizar o processo de carga, a tela do DOS será fechada e o terminal será reiniciado algumas vezes, e em seguida será apresentado a tela de configuração da primeira execução.
       loading_the_framework_usb:
         paragraph_1: 'Em terminais <strong>Vx520</strong>, conecte o pendrive no terminal na parte traseira conforme a figura abaixo:'
         paragraph_2: 'Já os terminais <strong>Vx680</strong>, o local para conexão do pendrive se localiza no cabo que é utilizado para carregar a bateria do mesmo, conforme mostra a figura abaixo:'
