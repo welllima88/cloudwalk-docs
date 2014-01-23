@@ -2035,7 +2035,7 @@ pt-BR:
       title: "Primeira execução do dispositivo"
       after_install: "Agora que o dispositivo já possui o WALK Framework instalado, o próximo passo é realizar a <a href='/walk-framework/configuration'>configuração inicial</a> do dispositivo. Clique <a href='/walk-framework/configuration'>aqui</a> para iniciar o procedimento."
       integration:
-        paragraph_1: "Agora que o dispositivo já está liberado no WALK Manager e com a comunicação configurada, o próximo passo é realizar um teste de integração HTTP. Clique <a href='/integration/http'>aqui</a> para iniciar o processo."
+        paragraph_1: "Agora que o dispositivo já está ativado, o próximo passo é realizar um teste de integração HTTP. Clique <a href='/integration/http'>aqui</a> para iniciar o processo."
       prerequisites:
         internet_access: "<strong>Computador com acesso à internet:</strong> Necessário para cadastrar o número lógico e liberar o dispositivo no serviço CloudWalk"
         walk_framework: "<strong>WALK Framework:</strong> Dispositivo com WALK Framework devidamente instalado"
@@ -2051,21 +2051,104 @@ pt-BR:
         paragraph_1: "Com o dispositivo recém instalado em mãos, a tela inicial irá oferecer a opção para escolher o idioma que será utilizado durante a ativação do dispositivo:"
         paragraph_2: "Basta então pressionar <strong>1</strong> para utilizar o idioma Português ou <strong>2</strong> para utilizar o idioma Inglês."
       step_1:
-        paragraph_1: 'Para que um dispositivo tenha acesso ao serviço CloudWalk, é necessário que o número de série do mesmo seja cadastrado no WALK Manager. Para realizar este procedimento, siga os seguintes passos:'
-        paragraph_2: Obtendo o número de série do dispositivo
-        paragraph_3: 'Para obter o número de série do dispositivo, basta acessar o menu de configuração, pressionando <strong>F1</strong> (VeriFone) ou <strong>F</strong> (Telium):'
-        paragraph_4: 'Em seguida, a opção <strong>5 CHECK S. NUMBER</strong> deve ser selecionada. Será exibida então a seguinte tela:'
-        paragraph_5: O número <strong>525-526-527</strong> representa o número de série do dispositivo (fictício), e deverá ser utilizado na tela de liberação de dispositivos no WALK Manager.
-        paragraph_6: Liberando o número de série no WALK Manager
-        paragraph_7: Acesse o WALK Manager em <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
-        paragraph_8: Acesse o menu <a href='https://manager.cloudwalk.io/devices' target='_blank' class='external'>Dispositivos</a>
-        paragraph_9: Clique no botão <strong>Liberar um novo dispositivo</strong>
-        paragraph_10: Informe o número de série exatamente como exibido na tela do dispositivo (ou impresso) e clique no botão <strong>Liberar acesso</strong>
-        paragraph_11: É necessário informar todos os números, letras e demais caracteres, <strong>exatamente</strong> como exibido na tela do dispositivo.
-      setting_up_communication:
-        paragraph_1: 'Agora que o número de série do dispositivo já foi cadastrado no WALK Manager, o próximo passo é configurar a comunicação. Para isso, basta acessar o menu de configuração (<strong>F1</strong> ou <strong>F</strong>):'
-        paragraph_2: 'Em seguida, selecionar a opção <strong>2 COMMUNICATION</strong>. Será exibida então a seguinte tela:'
+        posxml:
+          screen_1:
+            line_1: "PASSO 1 DE 4\n"
+            line_2: "\n"
+            line_3: "PRIMEIRAMENTE SERÁ\n"
+            line_4: "NECESSÁRIO CADASTRAR\n"
+            line_5: "O NÚMERO DE SÉRIE DO\n"
+            line_6: "SEU DISPOSITIVO.\n"
+            line_7: "\n"
+            line_8: "OK PARA CONTINUAR"
+          screen_2:
+            line_1: "LIBERE ESTE NÚMERO DE\n"
+            line_2: "SÉRIE NO SEU MANAGER:\n"
+            line_3: "\n"
+            line_4: "123-456-789\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "PRECISA DE AJUDA?\n"
+            line_8: "www.cloudwalk.io/1"
+        paragraph_1: 'Após selecionar o idioma (assumindo que você tenha selecionado <strong>Português</strong>), a seguinte tela será exibida:'
+        paragraph_2: 'Este passo é importante, pois para que um dispositivo tenha acesso ao serviço CloudWalk, é necessário que o número de série do mesmo seja cadastrado no WALK Manager. Pressione <strong>OK</strong> para passar para a próxima tela:'
+        paragraph_3: 'O número <strong>123-456-789</strong> representa o número de série do dispositivo (fictício), e deverá ser utilizado na tela de liberação de dispositivos no WALK Manager. Siga então o seguinte procedimento:'
+        paragraph_4: Acesse o WALK Manager em <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
+        paragraph_5: Acesse o menu <a href='https://manager.cloudwalk.io/devices' target='_blank' class='external'>Dispositivos</a>
+        paragraph_6: Clique no botão <strong>Liberar um novo dispositivo</strong>
+        paragraph_7: Informe o número de série exatamente como exibido na tela do dispositivo (ou impresso) e clique no botão <strong>Liberar acesso</strong>
+        paragraph_8: "É necessário informar todos os números, letras e demais caracteres, <strong>exatamente</strong> como exibido na tela do dispositivo."
+        paragraph_9: "Ao finalizar a liberação do número de série no WALK Manager, pressione <strong>OK</strong> no dispositivo para iniciar o próximo passo."
+      step_2:
+        posxml:
+          screen_1:
+            line_1: "PASSO 2 DE 4\n"
+            line_2: "\n"
+            line_3: "AGORA SERÁ NECESSÁRIO\n"
+            line_4: "CADASTRAR O NÚMERO\n"
+            line_5: "LÓGICO DO SEU\n"
+            line_6: "DISPOSITIVO.\n"
+            line_7: "\n"
+            line_8: "OK PARA CONTINUAR"
+          screen_2:
+            line_1: "CADASTRE UM NÚMERO\n"
+            line_2: "LÓGICO NO SEU MANAGER\n"
+            line_3: "E O INFORME AQUI\n"
+            line_4: "\n"
+            line_5: ":\n"
+            line_6: "\n"
+            line_7: "PRECISA DE AJUDA?\n"
+            line_8: "www.cloudwalk.io/2"
+        paragraph_1: "O segundo passo refere-se ao cadastramento do número lógico do dispositivo:"
+        paragraph_2: Acesse o WALK Manager em <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
+        paragraph_3: Acesse o menu <a href='https://manager.cloudwalk.io/logical_numbers' target='_blank' class='external'>Números lógicos</a>
+        paragraph_4: Clique no botão <strong>Novo número lógico</strong>
+        paragraph_5: Informe o número lógico (por exemplo 0001) e clique no botão <strong>Cadastrar número lógico</strong>
+      step_3:
+        posxml:
+          screen_1:
+            line_1: "PASSO 3 DE 4\n"
+            line_2: "\n"
+            line_3: "AGORA SERÁ NECESSÁRIO\n"
+            line_4: "CONFIGURAR O TIPO DE\n"
+            line_5: "COMUNICAÇÃO QUE SERÁ\n"
+            line_6: "UTILIZADO.\n"
+            line_7: "\n"
+            line_8: "OK PARA CONTINUAR"
+          screen_2:
+            line_1: "1 REDE LOCAL\n"
+            line_2: "2 DISCADO (PPP)\n"
+            line_3: "3 DISCADO (SDLC)\n"
+            line_4: "4 GPRS\n"
+            line_5: "5 WIFI\n"
+            line_6: "\n"
+            line_7: "PRECISA DE AJUDA?\n"
+            line_8: "www.cloudwalk.io/3"
+        paragraph_1: 'Agora que o número de série e o número lógico do dispositivo já foram cadastrados no WALK Manager, o próximo passo é configurar a comunicação:'
+        paragraph_2: 'Pressione <strong>OK</strong> para iniciar o processo de configuração:'
         paragraph_3: 'Como pode ser observado, existem os seguintes tipos de comunicação:'
+      step_4:
+        posxml:
+          screen_1:
+            line_1: "PASSO 4 DE 4\n"
+            line_2: "\n"
+            line_3: "AGORA SEU DISPOSITIVO\n"
+            line_4: "SERÁ ATIVADO EM NOSSA\n"
+            line_5: "REDE E ESTARÁ PRONTO\n"
+            line_6: "PARA SER UTILIZADO.\n"
+            line_7: "\n"
+            line_8: "OK PARA CONTINUAR"
+          screen_2:
+            line_1: "PROCESSO DE ATIVAÇÃO\n"
+            line_2: "EM ANDAMENTO.\n"
+            line_3: "\n"
+            line_4: "AGUARDE ...\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+        paragraph_1: "Com o dispositivo devidamente preparado, o último passo é a ativação do dispositivo."
+        paragraph_2: "Pressione o botão <strong>OK</strong> para iniciar o processo de ativação:"
     ingenico_telium_1:
       description: Processo passo a passo de instalação do WALK Framework em terminais Ingenico EFT930G e EFT930S.
       introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais Ingenico <strong>EFT930G</strong> e <strong>EFT930S</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
