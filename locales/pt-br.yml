@@ -2306,7 +2306,7 @@ pt-BR:
         paragraph_2: 'A seguinte tela do DOS será exibida:'
         paragraph_3: Esta tela mostra o prosseguimento do download do Framework para o terminal. Nenhuma ação é necessária, já que os comandos são executados automaticamente.
         paragraph_4: 'Enquanto a carga é efetuada, o terminal exibe o andamento do processo:'
-        paragraph_5: Ao finalizar o processo de carga, a tela do DOS será fechada e o terminal será reiniciado algumas vezes, e em seguida será exibido a tela de boas vindas, com o logotipo do serviço CloudWalk.
+        paragraph_5: Ao finalizar o processo de carga, a tela do DOS será fechada e o terminal será reiniciado algumas vezes, e em seguida será apresentado a tela de configuração da primeira execução.
       preparing_the_device:
         paragraph_1: Descompacte o pacote do WALK Framework baixado em um diretório de sua preferência.
         paragraph_2: Este diretório precisa ser um diretório local (por exemplo C:\temp\dir), e não um diretório de rede (\\)

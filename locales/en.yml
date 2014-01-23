@@ -2237,7 +2237,7 @@ en:
         paragraph_2: 'The following DOS screen will appear:'
         paragraph_3: This screen shows the continuation of downloading the framework to the device. No action is required, since the commands are executed automatically.
         paragraph_4: 'While the charge is made, the device displays the progress of the case:'
-        paragraph_5: At the end of the charging process, the DOS screen will close and the device wwill restart a few times, and then will be presented the first launch setup.
+        paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and then will be presented the first launch setup.
       loading_the_framework_usb:
         paragraph_1: 'On terminals <strong>Vx520</strong>, connect the USB stick on the back of the terminal as shown below:'
         paragraph_2: 'On terminals <strong>Vx680</strong>, the place to connect the USB stick is located on the recharge cable, as shown below:'
@@ -2306,7 +2306,7 @@ en:
         paragraph_2: 'The following DOS screen will appear:'
         paragraph_3: This screen shows the continuation of downloading the framework to the device. No action is required, since the commands are executed automatically.
         paragraph_4: 'While the charge is made, the device displays the progress of the case:'
-        paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and then displays Welcome screen with the logo of the CloudWalk service.
+        paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and then will be presented the first launch setup.
       preparing_the_device:
         paragraph_1: Unpack the WALK Framework downloaded into directory of your choice.
         paragraph_2: This directory must be a local directory (eg C:\temp\dir), and not a network directory (\\)
