@@ -2159,7 +2159,7 @@ en:
         paragraph_4: Wait a few seconds until the terminal show the directory WALK on display
         paragraph_5: Wait for the WALK Framework loading process
         paragraph_6: 'When finished, the terminal will display the following screen:'
-        paragraph_7: Then appears the welcome screen with the logo of the CloudWalk service.
+        paragraph_7: Then will be presented the first launch setup.
       preparing_the_pendrive:
         paragraph_1: 'To build the WALK Framework setup on an USB stick, follow the following procedure:'
         paragraph_2: Connect the USB stick to the computer

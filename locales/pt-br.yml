@@ -2159,7 +2159,7 @@ pt-BR:
         paragraph_4: Aguarde alguns instantes até que o terminal mostre o diretório WALK no display
         paragraph_5: Aguarde a execução do processo de carga do WALK Framework
         paragraph_6: 'Ao finalizar, o terminal irá exibir a seguinte tela:'
-        paragraph_7: Em seguida será exibido a tela de boas vindas, com o logotipo do serviço CloudWalk.
+        paragraph_7: Em seguida será apresentado a tela de configuração da primeira execução.
       preparing_the_pendrive:
         paragraph_1: 'Para montar a carga do WALK Framework no pendrive, siga o seguinte procedimento:'
         paragraph_2: Conecte o pendrive no computador
