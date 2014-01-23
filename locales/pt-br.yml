@@ -2033,7 +2033,7 @@ pt-BR:
     first_launch:
       description: "Procedimento de configuração do dispositivo após a instalação do WALK Framework."
       title: "Primeira execução do dispositivo"
-      after_install: "Agora que o dispositivo já possui o WALK Framework instalado, o próximo passo é realizar a <a href='/walk-framework/configuration'>configuração inicial</a> do dispositivo. Clique <a href='/walk-framework/configuration'>aqui</a> para iniciar o procedimento."
+      after_install: "Agora que o dispositivo já possui o WALK Framework instalado, o próximo passo é realizar a <a href='/walk-framework/first-launch'>configuração inicial</a> do dispositivo."
       integration:
         paragraph_1: "Agora que o dispositivo já está ativado, o próximo passo é realizar um teste de integração HTTP. Clique <a href='/integration/http'>aqui</a> para iniciar o processo."
       prerequisites:
@@ -2221,7 +2221,6 @@ pt-BR:
         paragraph_4: A próxima tela lista algumas aplicações instalados no terminal, onde <strong>M2OS</strong> refere-se ao Telium Manager, que não deve ser excluído. Para deletar qualquer outro arquivo, selecione o arquivo a ser excluído e pressione a tecla <strong>VERDE</strong>.
         paragraph_5: <strong>NÃO</strong> exclua o conteúdo do menu <strong>Delete library</strong> ou o arquivo <strong>M2OS</strong>, ou o terminal poderá ser danificado.
     verifone_evo:
-      ' introduction_cable_terminals': Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone Vx805 e Vx820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       description: Processo passo a passo de instalação do WALK Framework em terminais VeriFone Vx520 e Vx680.
       identify_os:
         os_version: Versão do sistema operacional
@@ -2245,7 +2244,7 @@ pt-BR:
         paragraph_3: 'O terminal detectará o pendrive conectado, e exibirá a seguinte tela no display:'
         paragraph_4: Escolha a opção 1, Sim, para começar o processo de carga
         paragraph_5: Após carregar todos os arquivos, o terminal solicitará a retirada do pendrive
-        paragraph_6: Retire o pendrive e pressione a tecla enter(verde). O terminal reiniciará algumas vezes, e em seguida será apresentado a tela de exibição com o logotipo do serviço CloudWalk.
+        paragraph_6: Retire o pendrive e pressione a tecla enter(verde). O terminal reiniciará algumas vezes, e em seguida será apresentado a tela de configuração da primeira execução.
       preparing_the_device:
         paragraph_1: Descompacte o pacote do WALK Framework baixado em um diretório de sua preferência.
         paragraph_2: Este diretório precisa ser um diretório local (por exemplo C:\temp\dir), e não um diretório de rede (\\)

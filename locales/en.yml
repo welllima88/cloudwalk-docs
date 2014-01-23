@@ -2033,7 +2033,7 @@ en:
     first_launch:
       description: "Procedure for setting up the device after installing the WALK Framework."
       title: "Device's first launch"
-      after_install: "Now that WALK Framework has already been installed on the device, the next step is to perform the a <a href='/walk-framework/configuration'>initial setup</a> do dispositivo. Click <a href='/walk-framework/configuration'>here</a> to start the process."
+      after_install: "Now that WALK Framework has already been installed on the device, the next step is to perform the a <a href='/walk-framework/first-launch'>first launch</a> configuration."
       integration:
         paragraph_1: "Now that the device is activated, the next step is to perform an HTTP integration test. Click <a href='/integration/http'>here</a> to start the process."
       prerequisites:
@@ -2221,7 +2221,6 @@ en:
         paragraph_4: The next screen lists some applications installed on the device where <strong> M2OS </strong> refers to Telium Manager, that should not be deleted. To delete any other file, select the file to be deleted and press the <strong>GREEN</strong> button.
         paragraph_5: <strong>DO NOT </ strong> delete the contents of the menu <strong>Delete library</strong> or file <strong>M2OS</strong>, otherwise the device may be damaged.
     verifone_evo:
-      ' introduction_cable_terminals': This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
       description: Step by step process of installing the WALK Framework for VeriFone Vx520 and Vx680.
       identify_os:
         os_version: Operating System Version
@@ -2245,7 +2244,7 @@ en:
         paragraph_3: 'The terminal will detect the connected stick, and the following screen is displayed:'
         paragraph_4: Choose the option 1, Yes, to begin the loading process
         paragraph_5: After loading all the files, the terminal will request to remove the stick
-        paragraph_6: Remove the pendrive and press Enter (green). The terminal will restart a few times, and then will be presented the display screen with the CloudWalk logo.
+        paragraph_6: Remove the pendrive and press Enter (green). The terminal will restart a few times, and then will be presented the first launch setup.
       preparing_the_device:
         paragraph_1: Unpack the WALK Framework downloaded into directory of your choice.
         paragraph_2: This directory must be local directory (eg C:\temp\dir), and not network directory (\\)
