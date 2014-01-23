@@ -2195,7 +2195,7 @@ en:
         paragraph_6: Select the WALK directory pressing <strong>GREEN</strong>
         paragraph_7: Wait for the process to load WALK Framework package
         paragraph_8: 'When finished, the device will display the following screen:'
-        paragraph_9: Then appears Welcome screen with the logo of Cloudwalk service.
+        paragraph_9: Then will be presented the first launch setup.
       preparing_the_pendrive:
         macosx: <strong>Mac OS X users:</strong> To avoid problems with hidden files when unzipping the WALK Framework package, it is recommended to use the free app <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external' target='_blank'>iZip Archiver</a> to uncompress the package.
         paragraph_1: 'To mount WALK Framework package on pendrive, follow the following procedure:'

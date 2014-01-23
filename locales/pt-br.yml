@@ -2195,7 +2195,7 @@ pt-BR:
         paragraph_6: Selecione o diretório WALK pressionando a tecla <strong>VERDE</strong>
         paragraph_7: Aguarde a execução do processo de carga do WALK Framework
         paragraph_8: 'Ao finalizar, o terminal irá exibir a seguinte tela:'
-        paragraph_9: Em seguida será exibido a tela de boas vindas, com o logotipo do serviço CloudWalk.
+        paragraph_9: Em seguida será apresentado a tela de configuração da primeira execução.
       preparing_the_pendrive:
         macosx: <strong>Usuários Mac OS X:</strong> Para evitar problemas com arquivos ocultos no momento de descompactar o pacote do WALK Framework, recomenda-se que o aplicativo gratuito <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external' target='_blank'>iZip Archiver</a> seja utilizado para descompactar o pacote.
         paragraph_1: 'Para montar a carga do WALK Framework no pendrive, siga o seguinte procedimento:'
