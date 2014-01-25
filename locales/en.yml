@@ -1970,24 +1970,212 @@ en:
       paragraph_5: Details of the communication types
       paragraph_6: 'Each type of communication has a particular configuration process, as shown below:'
       ethernet:
+        media: "NETWORK SETTINGS"
+        posxml:
+          screen_1:
+            line_1: "NETWORK SETTINGS\n"
+            line_2: "\n"
+            line_3: "TERMINAL IP\n"
+            line_4: ":192.168.0.200\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_2:
+            line_1: "NETWORK SETTINGS\n"
+            line_2: "\n"
+            line_3: "SUBNET MASK\n"
+            line_4: ":255.255.255.0\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_3:
+            line_1: "NETWORK SETTINGS\n"
+            line_2: "\n"
+            line_3: "ROUTER/GATEWAY\n"
+            line_4: ":192.168.0.1\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_4:
+            line_1: "NETWORK SETTINGS\n"
+            line_2: "\n"
+            line_3: "DNS SERVER 1\n"
+            line_4: ":192.168.0.1\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_5:
+            line_1: "NETWORK SETTINGS\n"
+            line_2: "\n"
+            line_3: "DNS SERVER 2\n"
+            line_4: ":192.168.0.1\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
         paragraph_1: 1. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.
         paragraph_2: 2. Set the subnet mask for the defined IP address class (eg 255.255.255.0).
         paragraph_3: 3. Set the router/gateway IP address (eg 192.168.0.1).
         paragraph_4: 4. Set the primary DNS server (eg 192.168.0.1).
         paragraph_5: 5. Set the secondary DNS server (eg 192.168.0.1).
       gprs:
+        media: "GPRS SETTINGS"
+        posxml:
+          screen_1:
+            line_1: "GPRS SETTINGS\n"
+            line_2: "\n"
+            line_3: "1 CLARO\n"
+            line_4: "2 TIM\n"
+            line_5: "3 OI\n"
+            line_6: "4 LYRA\n"
+            line_7: "5 OTHER OPERATOR\n"
+            line_8: ""
         paragraph_1: 1. Set the mobile operator.
       ppp:
+        media: "DIAL SETTINGS"
+        posxml:
+          screen_1:
+            line_1: "LANDLINE SETTINGS\n"
+            line_2: "\n"
+            line_3: "MODEM SPEED\n"
+            line_4: "2400\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_2:
+            line_1: "LANDLINE SETTINGS\n"
+            line_2: "\n"
+            line_3: "PROVIDER PHONE\n"
+            line_4: "78551233\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_3:
+            line_1: "LANDLINE SETTINGS\n"
+            line_2: "\n"
+            line_3: "USERNAME\n"
+            line_4: "username\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_4:
+            line_1: "LANDLINE SETTINGS\n"
+            line_2: "\n"
+            line_3: "PASSWORD\n"
+            line_4: "123456\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
         paragraph_1: 1. Set the modem speed (eg 2400).
         paragraph_2: 2. Set the internet provider telephone number.
         paragraph_3: 3. Set the internet username. Some providers might require the complete username (eg user@provider.com), while others might require only the short username.
         paragraph_4: 4. Set the internet password.
       sdlc:
+        media: "DIAL SETTINGS"
+        posxml:
+          screen_1:
+            line_1: "LANDLINE SETTINGS\n"
+            line_2: "\n"
+            line_3: "MODEM SPEED\n"
+            line_4: "2400\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_2:
+            line_1: "LANDLINE SETTINGS\n"
+            line_2: "\n"
+            line_3: "PROVIDER PHONE\n"
+            line_4: "78551233\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
         paragraph_1: 1. Set the modem speed (eg 2400).
         paragraph_2: 2. Set the internet provider telephone number.
-      ssl:
-        paragraph_1: '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
       wifi:
+        media: "WIFI SETTINGS"
+        posxml:
+          screen_1:
+            line_1: "WIFI SETTINGS\n"
+            line_2: "\n"
+            line_3: "NETWORK NAME\n"
+            line_4: ":\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_2:
+            line_1: "WIFI SETTINGS\n"
+            line_2: "\n"
+            line_3: "PASSWORD\n"
+            line_4: ":\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_3:
+            line_1: "WIFI SETTINGS\n"
+            line_2: "\n"
+            line_3: "SECURITY PROTOCOL\n"
+            line_4: ":\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_4:
+            line_1: "WIFI SETTINGS\n"
+            line_2: "\n"
+            line_3: "DEVICE IP\n"
+            line_4: ":192.168.0.200\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_5:
+            line_1: "WIFI SETTINGS\n"
+            line_2: "\n"
+            line_3: "SUBNET MASK\n"
+            line_4: ":255.255.255.0\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_6:
+            line_1: "WIFI SETTINGS\n"
+            line_2: "\n"
+            line_3: "ROUTER/GATEWAY\n"
+            line_4: ":192.168.0.1\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_7:
+            line_1: "WIFI SETTINGS\n"
+            line_2: "\n"
+            line_3: "DNS SERVER 1\n"
+            line_4: ":192.168.0.1\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+          screen_8:
+            line_1: "WIFI SETTINGS\n"
+            line_2: "\n"
+            line_3: "DNS SERVER 2\n"
+            line_4: ":192.168.0.1\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
         paragraph_1: 1. Set the name of the wireless network
         paragraph_2: 2. Set the password of the wireless network
         paragraph_3: '3. Set the protocol of the wireless network(ex: WEP 128-104).'
@@ -1996,6 +2184,18 @@ en:
         paragraph_6: 6. Set the router/gateway IP address (eg 192.168.0.1).
         paragraph_7: 7. Set the primary DNS server (eg 192.168.0.1).
         paragraph_8: Set the secondary DNS server (eg 192.168.0.1).
+      ssl:
+        posxml:
+          screen_1:
+            line_1: "%{media}\n"
+            line_2: "\n"
+            line_3: "USE SSL ?\n"
+            line_4: "(1-YES 0-NO)\n"
+            line_5: ":0\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: ""
+        paragraph_1: '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
     configuration:
       description: Procedure for setting up the device after installing the WALK Framework.
       title: Device configuration
