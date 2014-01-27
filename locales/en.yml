@@ -1975,7 +1975,7 @@ en:
           screen_1:
             line_1: "NETWORK SETTINGS\n"
             line_2: "\n"
-            line_3: "TERMINAL IP\n"
+            line_3: "DEVICE IP\n"
             line_4: ":192.168.0.200\n"
             line_5: "\n"
             line_6: "\n"
@@ -2031,18 +2031,18 @@ en:
             line_3: "1 CLARO\n"
             line_4: "2 TIM\n"
             line_5: "3 OI\n"
-            line_6: "4 LYRA\n"
-            line_7: "5 OTHER OPERATOR\n"
-            line_8: ""
+            line_6: "4 VIVO\n"
+            line_7: "5 LYRA\n"
+            line_8: "6 OTHER OPERATOR"
         paragraph_1: 1. Set the mobile operator.
       ppp:
-        media: "DIAL SETTINGS"
+        media: "LANDLINE SETTINGS"
         posxml:
           screen_1:
             line_1: "LANDLINE SETTINGS\n"
             line_2: "\n"
             line_3: "MODEM SPEED\n"
-            line_4: "2400\n"
+            line_4: ":2400\n"
             line_5: "\n"
             line_6: "\n"
             line_7: "\n"
@@ -2051,7 +2051,7 @@ en:
             line_1: "LANDLINE SETTINGS\n"
             line_2: "\n"
             line_3: "PROVIDER PHONE\n"
-            line_4: "78551233\n"
+            line_4: ":11223344\n"
             line_5: "\n"
             line_6: "\n"
             line_7: "\n"
@@ -2060,7 +2060,7 @@ en:
             line_1: "LANDLINE SETTINGS\n"
             line_2: "\n"
             line_3: "USERNAME\n"
-            line_4: "username\n"
+            line_4: ":username\n"
             line_5: "\n"
             line_6: "\n"
             line_7: "\n"
@@ -2069,7 +2069,7 @@ en:
             line_1: "LANDLINE SETTINGS\n"
             line_2: "\n"
             line_3: "PASSWORD\n"
-            line_4: "123456\n"
+            line_4: ":123456\n"
             line_5: "\n"
             line_6: "\n"
             line_7: "\n"
@@ -2079,13 +2079,13 @@ en:
         paragraph_3: 3. Set the internet username. Some providers might require the complete username (eg user@provider.com), while others might require only the short username.
         paragraph_4: 4. Set the internet password.
       sdlc:
-        media: "DIAL SETTINGS"
+        media: "LANDLINE SETTINGS"
         posxml:
           screen_1:
             line_1: "LANDLINE SETTINGS\n"
             line_2: "\n"
             line_3: "MODEM SPEED\n"
-            line_4: "2400\n"
+            line_4: ":2400\n"
             line_5: "\n"
             line_6: "\n"
             line_7: "\n"
@@ -2094,7 +2094,7 @@ en:
             line_1: "LANDLINE SETTINGS\n"
             line_2: "\n"
             line_3: "PROVIDER PHONE\n"
-            line_4: "78551233\n"
+            line_4: ":11223344\n"
             line_5: "\n"
             line_6: "\n"
             line_7: "\n"
@@ -2126,11 +2126,11 @@ en:
             line_1: "WIFI SETTINGS\n"
             line_2: "\n"
             line_3: "SECURITY PROTOCOL\n"
-            line_4: ":\n"
-            line_5: "\n"
-            line_6: "\n"
+            line_4: "\n"
+            line_5: "1.WEP-128\n"
+            line_6: "2.WEP-64\n"
             line_7: "\n"
-            line_8: ""
+            line_8: "STATUS: WEP-128"
           screen_4:
             line_1: "WIFI SETTINGS\n"
             line_2: "\n"
@@ -2189,12 +2189,12 @@ en:
           screen_1:
             line_1: "%{media}\n"
             line_2: "\n"
-            line_3: "USE SSL ?\n"
-            line_4: "(1-YES 0-NO)\n"
-            line_5: ":0\n"
-            line_6: "\n"
+            line_3: "ENABLE SSL?\n"
+            line_4: "\n"
+            line_5: "1.YES\n"
+            line_6: "2.NO\n"
             line_7: "\n"
-            line_8: ""
+            line_8: "STATUS: DISABLED"
         paragraph_1: '%{num}. Set whether the device should use or not use <a href=''http://en.wikipedia.org/wiki/Secure_Socket_Layer'' class=''external''>SSL</a>.'
     configuration:
       description: Procedure for setting up the device after installing the WALK Framework.
@@ -2263,7 +2263,7 @@ en:
             line_8: "OK TO CONTINUE"
           screen_2:
             line_1: "RELEASE THIS SERIAL\n"
-            line_2: "NUM. ON YOUR MANAGER\n"
+            line_2: "NUM. ON YOUR MANAGER:\n"
             line_3: "\n"
             line_4: "123-456-789\n"
             line_5: "\n"
@@ -2317,8 +2317,8 @@ en:
             line_8: "OK TO CONTINUE"
           screen_2:
             line_1: "1 LOCAL NETWORK\n"
-            line_2: "2 DIAL (PPP)\n"
-            line_3: "3 DIAL (SDLC)\n"
+            line_2: "2 LANDLINE (PPP)\n"
+            line_3: "3 LANDLINE (SDLC)\n"
             line_4: "4 GPRS\n"
             line_5: "5 WIFI\n"
             line_6: "\n"
