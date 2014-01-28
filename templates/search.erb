@@ -2,5 +2,5 @@
   <h1><%= I18n.t("search.success.title") %></h1>
   <%= parse_search_results @results %>
 <% else %>
-  <%= partial("search_error") %>
+  <%= erb :search_error %>
 <% end %>
