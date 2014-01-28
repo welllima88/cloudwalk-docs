@@ -7,6 +7,19 @@ require "rack-ssl-enforcer"
 require "json"
 require "pony"
 
+Pony.options = {
+  :via => :smtp,
+  :via_options => {
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :domain => 'cloudwalk.io',
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+}
+
 configure do
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
   Dir.glob('locales/*.yml').each { |locale| I18n.load_path << locale}
