@@ -223,6 +223,8 @@ helpers do
   end
 
   def search
+    require 'net/http'
+
     uri = URI.parse(URI.encode(build_search_url))
     http = Net::HTTP.new(uri.host, uri.port)
     request = Net::HTTP::Get.new(uri.request_uri)
