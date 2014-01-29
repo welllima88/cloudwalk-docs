@@ -2354,6 +2354,18 @@ en:
             line_8: ""
         paragraph_1: "With the device properly prepared, the last step is the activation process."
         paragraph_2: "Press the button <strong>OK</strong> to start the activation process:"
+      finish:
+        posxml:
+          screen_1:
+            line_1: "CONGRATULATIONS!\n"
+            line_2: "\n"
+            line_3: "DEVICE ACTIVATED\n"
+            line_4: "SUCCESSFULLY!\n"
+            line_5: "\n"
+            line_6: "\n"
+            line_7: "\n"
+            line_8: "OK TO CONTINUE"
+        paragraph_1: "At the end of the activation process, the following message should be displayed:"
     ingenico_telium_1:
       description: Step by step process of installing the WALK Framework on terminals Ingenico EFT930G and EFT930S.
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals Ingenico <strong>EFT930G</strong> and <strong>EFT930S</strong>. Be aware of prerequisites and follow the installation process carefully.
