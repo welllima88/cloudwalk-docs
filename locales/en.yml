@@ -1970,6 +1970,7 @@ en:
       paragraph_5: Details of the communication types
       paragraph_6: 'Each type of communication has a particular configuration process, as shown below:'
       ethernet:
+        name: "LOCAL NETWORK"
         media: "NETWORK SETTINGS"
         posxml:
           screen_1:
@@ -2023,6 +2024,7 @@ en:
         paragraph_4: 4. Set the primary DNS server (eg 192.168.0.1).
         paragraph_5: 5. Set the secondary DNS server (eg 192.168.0.1).
       gprs:
+        name: "GPRS"
         media: "GPRS SETTINGS"
         posxml:
           screen_1:
@@ -2036,6 +2038,7 @@ en:
             line_8: "6 OTHER OPERATOR"
         paragraph_1: 1. Set the mobile operator.
       ppp:
+        name: "LANDLINE (PPP)"
         media: "LANDLINE SETTINGS"
         posxml:
           screen_1:
@@ -2079,6 +2082,7 @@ en:
         paragraph_3: 3. Set the internet username. Some providers might require the complete username (eg user@provider.com), while others might require only the short username.
         paragraph_4: 4. Set the internet password.
       sdlc:
+        name: "LANDLINE (SDLC)"
         media: "LANDLINE SETTINGS"
         posxml:
           screen_1:
@@ -2102,6 +2106,7 @@ en:
         paragraph_1: 1. Set the modem speed (eg 2400).
         paragraph_2: 2. Set the internet provider telephone number.
       wifi:
+        name: "WIFI"
         media: "WIFI SETTINGS"
         posxml:
           screen_1:

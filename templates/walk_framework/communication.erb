@@ -1,9 +1,9 @@
 <ul>
-  <li><strong>LOCAL NETWORK:</strong> <%= I18n.t("walk_framework.communication.paragraph_1") %></li>
-  <li><strong>LANDLINE (PPP):</strong> <%= I18n.t("walk_framework.communication.paragraph_2") %></li>
-  <li><strong>LANDLINE (SDLC):</strong> <%= I18n.t("walk_framework.communication.paragraph_3") %></li>
-  <li><strong>GPRS:</strong> GPRS (Claro, Tim, Oi, etc)</li>
-  <li><strong>WIFI:</strong> WIFI (wireless)</li>
+  <li><strong><%= I18n.t("walk_framework.communication.ethernet.name") %>:</strong> <%= I18n.t("walk_framework.communication.paragraph_1") %></li>
+  <li><strong><%= I18n.t("walk_framework.communication.ppp.name") %>:</strong> <%= I18n.t("walk_framework.communication.paragraph_2") %></li>
+  <li><strong><%= I18n.t("walk_framework.communication.sdlc.name") %>:</strong> <%= I18n.t("walk_framework.communication.paragraph_3") %></li>
+  <li><strong><%= I18n.t("walk_framework.communication.gprs.name") %>:</strong> GPRS (Claro, Tim, Oi, etc)</li>
+  <li><strong><%= I18n.t("walk_framework.communication.wifi.name") %>:</strong> WIFI (wireless)</li>
 </ul>
 
 <p class="note"><%= I18n.t("walk_framework.communication.paragraph_4") %></p>
@@ -15,11 +15,11 @@
 <br/>
 
 <ul id="communication-tab" class="nav nav-tabs">
-  <li class="active"><a href="#communication-tab1">LOCAL NETWORK</a></li>
-  <li><a href="#communication-tab2">LANDLINE (PPP)</a></li>
-  <li><a href="#communication-tab3">LANDLINE (SDLC)</a></li>
-  <li><a href="#communication-tab4">GPRS</a></li>
-  <li><a href="#communication-tab5">WIFI</a></li>
+  <li class="active"><a href="#communication-tab1"><%= I18n.t("walk_framework.communication.ethernet.name") %></a></li>
+  <li><a href="#communication-tab2"><%= I18n.t("walk_framework.communication.ppp.name") %></a></li>
+  <li><a href="#communication-tab3"><%= I18n.t("walk_framework.communication.sdlc.name") %></a></li>
+  <li><a href="#communication-tab4"><%= I18n.t("walk_framework.communication.gprs.name") %></a></li>
+  <li><a href="#communication-tab5"><%= I18n.t("walk_framework.communication.wifi.name") %></a></li>
 </ul>
 
 <div class="tab-content">

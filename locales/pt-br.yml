@@ -1964,12 +1964,13 @@ pt-BR:
   walk_framework:
     communication:
       paragraph_1: Rede local (ethernet)
-      paragraph_2: Discado (PPP)
-      paragraph_3: Discado (SDLC)
+      paragraph_2: Linha discada (PPP)
+      paragraph_3: Linha discada (SDLC)
       paragraph_4: Caso seu dispositivo não apresente alguma opção, por exemplo, GPRS, significa que o seu dispositivo não suporta o tipo de comunicação em questão.
       paragraph_5: Detalhes dos tipos de comunicação
       paragraph_6: 'Cada tipo de comunicação possui uma forma específica de configuração, a saber:'
       ethernet:
+        name: "REDE LOCAL"
         media: "REDE LOCAL"
         posxml:
           screen_1:
@@ -2023,6 +2024,7 @@ pt-BR:
         paragraph_4: '4. Definir o endereço IP do servidor de DNS primário (ex: 192.168.0.1).'
         paragraph_5: '5. Definir o endereço IP do servidor de DNS secundário (ex: 192.168.0.1).'
       gprs:
+        name: "GPRS"
         media: "CONFIGURAÇÃO GPRS"
         posxml:
           screen_1:
@@ -2036,6 +2038,7 @@ pt-BR:
             line_8: "6 DEFINIR OPERADORA"
         paragraph_1: 1. Definir a operadora.
       ppp:
+        name: "LINHA DISCADA PPP"
         media: "LINHA DISCADA PPP"
         posxml:
           screen_1:
@@ -2079,6 +2082,7 @@ pt-BR:
         paragraph_3: '3. Definir o nome de usuário utilizado para se conectar à internet. Alguns provedores requerem que seja um nome de usuário completo, com e-mail (ex: user@provider.com), enquanto outros requerem somente o nome de usuário.'
         paragraph_4: 4. Definir a senha do provedor de internet.
       sdlc:
+        name: "LINHA DISCADA SDLC"
         media: "LINHA DISCADA SDLC"
         posxml:
           screen_1:
@@ -2102,6 +2106,7 @@ pt-BR:
         paragraph_1: '1. Definir a velocidade de comunicação do modem (ex: 2400).'
         paragraph_2: 2. Definir o número de telefone do provedor de internet.
       wifi:
+        name: "WIFI"
         media: "CONFIGURAÇÃO WIFI"
         posxml:
           screen_1:
@@ -2317,8 +2322,8 @@ pt-BR:
             line_8: "OK PARA CONTINUAR"
           screen_2:
             line_1: "1 REDE LOCAL\n"
-            line_2: "2 DISCADO (PPP)\n"
-            line_3: "3 DISCADO (SDLC)\n"
+            line_2: "2 LINHA DISCADA PPP\n"
+            line_3: "3 LINHA DISCADA SDLC\n"
             line_4: "4 GPRS\n"
             line_5: "5 WIFI\n"
             line_6: "\n"
