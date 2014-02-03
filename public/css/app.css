@@ -267,7 +267,7 @@ p.more-info {
 /* Banner */
 div#banner{
   margin: 20px 0;
-  background: #fff url("/img/cloudwalk-logo-blue.png") no-repeat;
+  background: #fff url("/img/cloudwalk-logo.png") no-repeat;
   border-bottom: 1px solid #ddd;
   height: 80px;
 
