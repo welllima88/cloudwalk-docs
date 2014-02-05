@@ -14,16 +14,16 @@
 .navbar-container{ margin: 0 6px; }
 
 .navbar .nav {
- float: none;
- margin: 0;
+  float: none;
+  margin: 0;
 }
 
 .btn-account {display: none; }
 
 .navbar-fixed-top{
- -webkit-box-shadow:0 1px 5px rgba(0,0,0,.45);
- -moz-box-shadow:0 1px 5px rgba(0,0,0,.45);
- box-shadow:0 1px 5px rgba(0,0,0,.45);
+  -webkit-box-shadow:0 1px 5px rgba(0,0,0,.45);
+  -moz-box-shadow:0 1px 5px rgba(0,0,0,.45);
+  box-shadow:0 1px 5px rgba(0,0,0,.45);
 }
 
 nav#topics {
@@ -187,7 +187,6 @@ p.more-info {
 }
 
 .commands-group{
-/*  border: 1px solid #777;*/
   padding: 6px 12px;
   font-size: 13px;
 }
@@ -254,9 +253,7 @@ p.more-info {
 .group-of-commands li{
   display: inline;
   margin-right: 10px;
-/*  border: 1px solid #ccc;*/
   padding: 5px;
-
   line-height: 50px;
 }
 
@@ -276,8 +273,6 @@ div#banner{
 
 /* Search */
 #query { margin-top: 21px; }
-
-/* Sidebar */
 
 /* Menu */
 .accordion{
@@ -415,11 +410,11 @@ p.note {
   background: #eef url(/img/note.png) no-repeat center left;
   border:1px solid #dde;
   color:#223;
-    padding: 1.2em 1em 1.2em 55px;
+  padding: 1.2em 1em 1.2em 55px;
   margin: 20px 0;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
 #next-section{
@@ -431,66 +426,66 @@ p.note {
 
 /* GITHUB BUTTON */
 .button {
-    position: relative;
-    overflow: visible;
-    display: inline-block;
-    padding: 0.5em 1em;
-    border: 1px solid #d4d4d4;
-    margin: 0;
-    text-decoration: none;
-    text-shadow: 1px 1px 0 #fff;
-    font:13px/normal sans-serif;
-    color: #333;
-    white-space: nowrap;
-    cursor: pointer;
-    outline: none;
-    background-color: #ececec;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
-    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
-    background-image: -o-linear-gradient(#f4f4f4, #ececec);
-    background-image: linear-gradient(#f4f4f4, #ececec);
-    -webkit-background-clip: padding;
-    -moz-background-clip: padding;
-    -o-background-clip: padding-box;
-    -webkit-border-radius: 0.2em;
-    -moz-border-radius: 0.2em;
-    border-radius: 0.2em;
-    /* IE hacks */
-    zoom: 1;
-    *display: inline;
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #d4d4d4;
+  margin: 0;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff;
+  font:13px/normal sans-serif;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+  background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+  background-image: -o-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
 }
 
 .button:hover,
 .button:focus,
 .button:active {
-    border-color: #3072b3;
-    border-bottom-color: #2a65a0;
-    text-decoration: none;
-    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
-    color: #fff;
-    background-color: #3072b3;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
-    background-image: -moz-linear-gradient(#599bdc, #3072b3);
-    background-image: -o-linear-gradient(#599bdc, #3072b3);
-    background-image: linear-gradient(#599bdc, #3072b3);
+  border-color: #3072b3;
+  border-bottom-color: #2a65a0;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+  color: #fff;
+  background-color: #3072b3;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+  background-image: -moz-linear-gradient(#599bdc, #3072b3);
+  background-image: -o-linear-gradient(#599bdc, #3072b3);
+  background-image: linear-gradient(#599bdc, #3072b3);
 }
 
 .button:active,
 .button.active {
-    border-color: #2a65a0;
-    border-bottom-color: #3884CF;
-    color: #fff;
-    background-color: #3072b3;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3072b3), to(#599bdc));
-    background-image: -moz-linear-gradient(#3072b3, #599bdc);
-    background-image: -o-linear-gradient(#3072b3, #599bdc);
-    background-image: linear-gradient(#3072b3, #599bdc);
+  border-color: #2a65a0;
+  border-bottom-color: #3884CF;
+  color: #fff;
+  background-color: #3072b3;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3072b3), to(#599bdc));
+  background-image: -moz-linear-gradient(#3072b3, #599bdc);
+  background-image: -o-linear-gradient(#3072b3, #599bdc);
+  background-image: linear-gradient(#3072b3, #599bdc);
 }
 
 /* overrides extra padding on button elements in Firefox */
 .button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+  padding: 0;
+  border: 0;
 }
 
 .button.primary {
@@ -507,9 +502,9 @@ p.note {
 }
 
 .button.pill {
-    -webkit-border-radius: 50em;
-    -moz-border-radius: 50em;
-    border-radius: 50em;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
 }
 
 /*MOOT.IT*/
@@ -541,12 +536,19 @@ p.note {
   background-position: 5px -73px;
 }
 
-
 /* Override Bootstrap .close class */
 .rainbow .close {
-    float: none;
-    font-size: 13px;
-    font-weight: normal;
-    text-shadow: none;
-    opacity: 1;
+  float: none;
+  font-size: 13px;
+  font-weight: normal;
+  text-shadow: none;
+  opacity: 1;
+}
+
+@media print {
+  h1, h2, h3, h4 { page-break-after: avoid; }
+  div.pos { page-break-inside: avoid; }
+  #banner, #query, .pager, .side-navigation, .navbar { display: none;}
+  .external{padding-right: 0; }
+  p.note { padding: 1em; }
 }
