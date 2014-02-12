@@ -1,6 +1,7 @@
 require "rubygems"
 require "sinatra"
 require "sinatra/content_for"
+require "sinatra/partial"
 require "i18n"
 require "i18n/backend/fallbacks"
 require "rack-ssl-enforcer"

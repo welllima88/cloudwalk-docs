@@ -6,6 +6,7 @@ gem 'i18n',            '~> 0.6.9'
 gem 'pony',            '~> 1.6.2'
 gem 'sinatra',         '~> 1.4.4'
 gem 'sinatra-contrib', '~> 1.4.2'
+gem 'sinatra-partial', '~> 0.4.0'
 gem 'thin',            '~> 1.6.1'
 
 group :development do
