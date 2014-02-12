@@ -223,6 +223,18 @@ helpers do
     session[:locale] == value ? ' selected' : ''
   end
 
+  def check_param(params, name, default=nil, valid_options=nil)
+    return default if params.empty?
+
+    param = if valid_options
+      valid_options.member?(params[name]) ? params[name] : nil
+    else
+      params[name]
+    end
+
+    param || default
+  end
+
   def mootit
     command = uri.split('/').last
     "<a class='moot' data-label='#{I18n.t("posxml.commands.comments_message")}' href='https://moot.it/i/cloudwalk/docs/#{command}'></a>"
