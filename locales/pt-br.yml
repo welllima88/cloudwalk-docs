@@ -501,6 +501,13 @@ pt-BR:
             item_7: Marque <strong>Sim</strong> na opção 'Aplicação deve ser exibida no menu de serviços?'
             item_8: Preencha <strong>TCP IP</strong> no nome de exibição no POS
             item_9: Clique no botão <strong>Cadastrar aplicação</strong>
+          posxml:
+            comment_01: "O comando preconnect faz com que o dispositivo se conecte ao CloudWalk"
+            comment_02: "Realiza a transação ao se conectar"
+            comment_03: "O conteúdo da variável buffer é no formato hexadecimal. No exemplo\n  abaixo, está sendo enviado o valor 0123456789. É possível utilizar o comando\n  string.tohex para converter qualquer string para o formato hexadecimal, e na\n  sequência, utilize o comando string.length para saber o tamanho da string"
+            comment_04: "Para que o envio funcione corretamente, é necessário enviar\n  ao menos 7 bytes para o CloudWalk"
+            comment_05: "A resposta também será armazenada em hexadecimal na variável variablebuffer. Utilize\n    o comando string.fromhex para converter o conteúdo para ASCII"
+            comment_06: "Sempre utilize o comando network.hostdisconnect antes de utilizar\n  novamente os comandos network.send e network.receive"
         create_group:
           header: Cadastre um grupo
           list:

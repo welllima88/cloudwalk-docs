@@ -501,6 +501,13 @@ en:
             item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
             item_8: Fill <strong>TCP IP</strong> in the display name in POS
             item_9: Click the button <strong>Register application</strong>
+          posxml:
+            comment_01: "The preconnect command attempts to connect the device on CloudWalk"
+            comment_02: "Performs the transaction after connecting"
+            comment_03: "The content of the variable buffer should be hexadecimal. In the example\n  below, the value 0123456789 is being sent. It is possible to use command\n  string.tohex to convert any string to hexadecimal format, and then\n  use the command string.length to get the string size"
+            comment_04: "In order to send data properly, it is necessary to send\n  at least 7 bytes to CloudWalk"
+            comment_05: "The answer will also be stored in hexadecimal on the variable variablebuffer. Use\n    the command string.fromhex to convert the content to ASCII"
+            comment_06: "Always use the network.hostdisconnect command before using\n  again the commands network.send and network.receive"
         create_group:
           header: Register a group
           list:
