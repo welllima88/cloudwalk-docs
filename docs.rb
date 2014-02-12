@@ -38,6 +38,7 @@ if production?
 end
 
 set :views, File.dirname(__FILE__) + '/templates'
+set :partial_template_engine, :erb
 
 before do
   set_locale
@@ -102,6 +103,7 @@ get "/" do redirect "/#{current_locale}/introduction" end
     redirect "/#{current_locale}/#{item["url"]}", 301
   end
   get "/:locale/#{item["url"]}" do |locale|
+    @params = request.env['rack.request.query_hash']
     validate_locale(locale)
     erb "#{item["view_path"]}".to_sym
   end
