@@ -4,7 +4,7 @@
 
 <h1><%= I18n.t("integration.http.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "18/09/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "12/02/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
@@ -74,21 +74,17 @@
 
 &lt;display line="0" column="0" message="HTTP Post test" /&gt;
 
-&lt;!-- O comando pré-conexão faz com que o terminal se conecte ao CloudWalk --&gt;
+&lt;!-- <%= I18n.t("integration.http.walk_manager_setup.create_application.posxml.comment_01") %> --&gt;
 &lt;display line="1" column="0" message="Connecting ..." /&gt;
 &lt;preconnect variablestatus="$(iConnect)" /&gt;
 
-&lt;!-- Realiza a transação ao se conectar --&gt;
+&lt;!-- <%= I18n.t("integration.http.walk_manager_setup.create_application.posxml.comment_02") %> --&gt;
 &lt;if variable="$(iConnect)" operator="igual" value="0" &gt;
   &lt;display line="1" column="0" message="Connected!" /&gt;
 
-  &lt;!-- O conteúdo da variável buffer é no formato hexadecimal. No exemplo
-  abaixo, está sendo enviado o valor 0123456789. É possível utilizar o comando
-  string.tohex para converter qualquer string para o formato hexadecimal, e na
-  sequência, utilize o comando string.length para saber o tamanho da string --&gt;
+  &lt;!-- <%= I18n.t("integration.http.walk_manager_setup.create_application.posxml.comment_03") %> --&gt;
 
-  &lt;!-- Para que o POST funcione corretamente, é necessário enviar
-  ao menos 7 bytes para o CloudWalk --&gt;
+  &lt;!-- <%= I18n.t("integration.http.walk_manager_setup.create_application.posxml.comment_04") %> --&gt;
 
   &lt;display line="3" column="0" message="Posting ..." /&gt;
 
@@ -100,8 +96,7 @@
   &lt;network.send buffer="$(sBufSend)" size="$(iSzBufSend)" variablereturn="$(iRet)" /&gt;
 
   &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
-    &lt;!-- A resposta também será armazenada em hexadecimal na variável variavelbuffer. Utilize
-    o comando string.fromhex para converter o conteúdo para ASCII --&gt;
+    &lt;!-- <%= I18n.t("integration.http.walk_manager_setup.create_application.posxml.comment_05") %> --&gt;
     &lt;network.receive variablebuffer="$(sBuf)" maxsize="20" variablereceivedbytes="$(iSize)" variablereturn="$(iRet)" /&gt;
     &lt;string.fromhex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
 
@@ -115,8 +110,7 @@
     &lt;display line="5" column="0" message="Send failed!" /&gt;
   &lt;/if&gt;
 
-  &lt;!-- Sempre utilize o comando network.hostdisconnect antes de utilizar
-  novamente os comandos network.send e network.receive --&gt;
+  &lt;!-- <%= I18n.t("integration.http.walk_manager_setup.create_application.posxml.comment_06") %> --&gt;
   &lt;network.hostdisconnect /&gt;
 &lt;else /&gt;
   &lt;display line="1" column="0" message="Connection failed!" /&gt;
