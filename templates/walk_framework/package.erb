@@ -1,0 +1,173 @@
+<div class="package">
+  <div>
+    <label class="control-label" for="brand"><%= I18n.t("walk_framework.package.device.brand") %></label>
+    <select name="brand" id="brand" class="input-medium">
+      <%= option_select "verifone", "VeriFone", device_brand %>
+      <%= option_select "ingenico", "Ingenico", device_brand %>
+    </select>
+  </div>
+
+  <div>
+    <label class="control-label" for="model"><%= I18n.t("walk_framework.package.device.model") %></label>
+    <select name="model" id="model" class="input-medium">
+
+    </select>
+  </div>
+
+  <div id="signature-container" class="disabled">
+    <label class="control-label" for="signature"><%= I18n.t("walk_framework.package.device.signature") %></label>
+    <select name="signature" id="signature" class="input-medium" disabled>
+      <%= option_select "none", "", device_signature %>
+      <%= option_select "paytec", "Paytec", device_signature %>
+      <%= option_select "tefti", "TEFTI", device_signature %>
+    </select>
+  </div>
+
+  <br/>
+
+  <p><%= I18n.t("walk_framework.package.selected") %> <span id="package-info"></span></p>
+
+  <a href="#" id="file-request" class="btn btn-success"><%= I18n.t("walk_framework.package.download") %></a>
+  <a href="#" id="open-guide" class="btn btn-info" style="display: none"><%= I18n.t("walk_framework.package.open_url") %></a>
+</div>
+
+<% content_for :javascripts do %>
+  var brand = '<%= device_brand %>';
+  var model = '<%= device_model %>';
+  var signature = '<%= device_signature %>';
+
+  fill_device_model_options(brand, model);
+  $('#file-request').prop('href', select_framework_package(brand, model, signature));
+  validate_signature(brand, signature);
+
+  $('#file-request, #open-guide').click(function (e) {
+    if(!validate_selection($(this))){
+      e.preventDefault();
+    }
+  });
+
+  function validate_selection(button){
+    if(button.data('disabled')){
+      return false
+    }
+    return true;
+  }
+
+  $('#brand').change(function(){
+    fill_device_model_options($(this).find(':selected').val(), null);
+  });
+
+  $('#brand, #model, #signature').change(function(){
+    toggle_elements();
+    set_package_info();
+    $(this).blur();
+  });
+
+  function toggle_elements(){
+    sbrand = $('#brand').find(':selected').val();
+    smodel = $('#model').find(':selected').val();
+    ssignature = $('#signature').find(':selected').val();
+
+    if(smodel == "none"){
+      $('#open-guide').data('disabled', true);
+      $('#open-guide').attr('disabled', 'disabled');
+    } else {
+      $('#open-guide').data('disabled', false);
+      $('#open-guide').removeAttr('disabled');
+    }
+
+    if((brand == sbrand) && (model == smodel)){
+      toggle_action('file-request', 'open-guide');
+      $('#file-request').prop('href', select_framework_package(sbrand, smodel, ssignature));
+    } else {
+      toggle_action('open-guide', 'file-request');
+      $('#open-guide').prop('href', select_framework_guide(sbrand, smodel, ssignature));
+    }
+
+    validate_signature(sbrand, ssignature);
+  }
+
+  function validate_signature(sbrand, ssignature){
+    if((sbrand == 'ingenico') && (ssignature == '' || ssignature == 'none')){
+      $('#file-request').data('disabled', true);
+      $('#file-request').attr('disabled', 'disabled');
+    } else {
+      $('#file-request').data('disabled', false);
+      $('#file-request').removeAttr('disabled');
+    }
+  }
+
+  function fill_device_model_options(sbrand, smodel){
+    $('#model option').each(function() {
+      $(this).remove();
+    });
+
+    $('#model').append(new Option('', 'none'));
+
+    if(sbrand == 'verifone'){
+      $('#model').append(new Option('Evo', 'evo'));
+      $('#model').append(new Option('Verix', 'verix'));
+    } else {
+      $('#model').append(new Option('Telium 1', 'telium-1'));
+      $('#model').append(new Option('Telium 2', 'telium-2'));
+    }
+
+    if(smodel){
+      $("#model").val(smodel).attr("selected", "selected");
+    }
+
+    toggle_signature(sbrand);
+  }
+
+  function toggle_action(show, hide){
+    $('#' + hide).hide();
+    $('#' + show).show();
+  }
+
+  function select_framework_guide(sbrand, smodel, ssignature){
+    if(sbrand == 'ingenico' && ssignature != 'none'){
+      return '/<%= I18n.locale %>/walk-framework/' + sbrand + '-' + smodel + '?signature=' + ssignature;
+    } else {
+      return '/<%= I18n.locale %>/walk-framework/' + sbrand + '-' + smodel;
+    }
+  }
+
+  function select_framework_package(sbrand, smodel, ssignature){
+    var sig = '';
+
+    set_package_info();
+
+    if(ssignature != 'none'){
+      sig = "_" + ssignature;
+    }
+
+    return 'https://dl.cloudwalk.io/framework_' + sbrand + '_' + smodel + sig + '.zip';
+  }
+
+  function set_package_info(){
+    package = $('#brand').find(':selected').text();
+    smodel = $('#model').find(':selected').text();
+    ssignature = $('#signature').find(':selected').text();
+
+    if(smodel != ""){
+      package = package + " " + smodel;
+
+      if(ssignature != ""){
+        package = package + " <%= I18n.t("walk_framework.package.with_signature") %> " + ssignature;
+      }
+    }
+
+    $('#package-info').html(package);
+  }
+
+  function toggle_signature(sbrand){
+    if(sbrand == 'ingenico'){
+      $('#signature-container').removeClass('disabled');
+      $('#signature').removeAttr('disabled');
+    } else {
+      $('#signature-container').addClass('disabled');
+      $('#signature').attr('disabled', 'disabled');
+      $('#signature').val('none');
+    }
+  }
+<% end %>

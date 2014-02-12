@@ -1963,6 +1963,14 @@ pt-BR:
   walk_framework:
     package:
       select: "<strong>Pacote do WALK Framework:</strong> Selecione a marca, modelo e assinatura (se aplicável) do seu dispositivo:"
+      device:
+        brand: "Marca do dispositivo"
+        model: "Modelo"
+        signature: "Assinatura"
+      selected: "Pacote selecionado: "
+      with_signature: "assinado por"
+      download: "Fazer download"
+      open_url: "Acessar processo de instalação"
     communication:
       paragraph_1: Rede local (ethernet)
       paragraph_2: Linha discada (PPP)

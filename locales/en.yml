@@ -1963,6 +1963,14 @@ en:
   walk_framework:
     package:
       select: "<strong>WALK Framework package:</strong> Select your device brand, model and signature (if applicable):"
+      device:
+        brand: "Device brand"
+        model: "Model"
+        signature: "Signature"
+      selected: "Selected package: "
+      with_signature: "signed by"
+      download: "Download"
+      open_url: "Go to installation process"
     communication:
       paragraph_1: Common local network (ethernet)
       paragraph_2: Landline/dial-up (PPP)

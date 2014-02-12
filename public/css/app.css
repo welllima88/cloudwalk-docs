@@ -261,6 +261,24 @@ p.more-info {
   margin-bottom: 22px;
 }
 
+/* Package download */
+.disabled {
+  color: #aaa;
+}
+.package div{
+  float: left;
+  margin-right: 25px;
+}
+
+.package br{
+  clear: both;
+  display: block;
+}
+
+.package p{
+  margin-top: 15px;
+}
+
 /* Banner */
 div#banner{
   margin: 20px 0;
