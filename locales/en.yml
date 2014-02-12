@@ -1961,6 +1961,8 @@ en:
         paragraph_2: 'Example:'
       title: POSXML - Language structure
   walk_framework:
+    package:
+      select: "<strong>WALK Framework package:</strong> Select your device brand, model and signature (if applicable):"
     communication:
       paragraph_1: Common local network (ethernet)
       paragraph_2: Landline/dial-up (PPP)
@@ -2385,7 +2387,6 @@ en:
       prerequisites:
         adapter: <strong>USB adapter:</strong> Required for installation. It is possible to purchase one with your supplier.
         operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or newer (Vista, Seven, etc)
-        packet: <strong>WALK Framework:</strong> For customers outside Brazil, please fill in a <a href="https://support.cloudwalk.io" target="_blank">ticket</a> so we can help you out.
         pendrive: <strong>USB sticker:</strong> A common USB sticker (4GB max).
       table_of_contents:
         loading_the_framework: Loading the framework on the device
@@ -2422,7 +2423,6 @@ en:
       prerequisites:
         adapter: '<strong> USB Adapter: </strong> Required only for installation on IWL220, IWL250 and IWL280'
         operating_system: '<strong> Operating System: </strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)'
-        packet: <strong>WALK Framework and production OS:</strong> <em>Paytec</em> <a href='https://dl.cloudwalk.io/cloudwalk_framework_telium2/cloudwalk_iCT2xx_sdk9.6_prod_paytec.zip'>ICT2xx</a> or <a href='https://dl.cloudwalk.io/cloudwalk_framework_telium2/cloudwalk_iWL2xx_sdk9.6_prod_paytec.zip'>IWL2xx</a>. <em>TEFTI</em> <a href='https://dl.cloudwalk.io/cloudwalk_framework_telium2/cloudwalk_iCT2xx_sdk9.6_prod_tefi.zip'>ICT2xx</a> or <a href='https://dl.cloudwalk.io/cloudwalk_framework_telium2/cloudwalk_iWL2xx_sdk9.6_prod_tefi.zip'>IWL2xx</a>
         pendrive: '<strong> Pendrive: </strong> A common pendrive'
       table_of_contents:
         loading_the_framework: Loading the framework on the device
@@ -2479,8 +2479,6 @@ en:
       prerequisites:
         cable: <strong>Charge cable USB or Serial</strong>
         operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)
-        packet: <strong>WALK Framework Package:</strong> <a href='https://dl.dropboxusercontent.com/u/436039/cloudwalk/cloudwalk_framework_evo_pendrive/paytec/verifone.zip'>verifone.zip</a>
-        packet_cable: <strong>WALK Framework Package:</strong> <a href='https://dl.cloudwalk.io/framework_evo.zip'>framework_evo.zip</a>
         pendrive: <strong>Pendrive:</strong> A common pendrive (4GB)
         serial_port: <strong>Serial port or USB:</strong> available and configured as <strong>COM1</strong>
       table_of_contents:
@@ -2533,7 +2531,6 @@ en:
       prerequisites:
         cable: <strong>Charge Cable for VeriFone Verix 510 and 610:</strong> If you are using the device Verix 670, it will require a special adapter which can be requested with your device supplier.
         operating_system: <strong> Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)
-        packet: <strong>WALK Framework Package:</strong> <a href='https://dl.cloudwalk.io/framework_verix.zip'> https://dl.cloudwalk.io/framework_verix.zip</a>
         serial_port: <strong>Serial port or USB:</strong> available and configured as <strong>COM1</strong>
       table_of_contents:
         identify_os: Checking the OS version of the POS
