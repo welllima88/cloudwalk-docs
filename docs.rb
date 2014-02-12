@@ -213,9 +213,14 @@ helpers do
     end
   end
 
-  def option_select(value, text)
-    selected = session[:locale] == value ? ' selected' : ''
+  def option_select(value, text, current=nil)
+    selected = validate_option_value(value, current)
     "<option value=#{value}#{selected}>#{text}</option>"
+  end
+
+  def validate_option_value(value, current)
+    return ' selected' if value == current
+    session[:locale] == value ? ' selected' : ''
   end
 
   def mootit
