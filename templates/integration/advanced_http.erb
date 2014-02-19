@@ -4,7 +4,7 @@
 
 <h1><%= I18n.t("integration.advanced_http.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/07/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "19/02/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
@@ -67,10 +67,11 @@
 
 <p><%= I18n.t("integration.advanced_http.posxml_sample.paragraph_1") %></p>
 
-<pre><code data-language="html">&lt;!-- try to start the connection with CloudWalk --&gt;
-&lt;integervariable value="0" variable="iRet" /&gt;
+<pre><code data-language="html">&lt;integervariable value="0" variable="iRet" /&gt;
 &lt;cleandisplay /&gt;
 &lt;display line="1" column="3" message=" CONNECTING " /&gt;
+
+&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_01") %> --&gt;
 &lt;preconnect variablestatus="$(iRet)" /&gt;
 &lt;if variable="$(iRet)" operator="notequalto" value="0"&gt;
   &lt;cleandisplay /&gt;
@@ -88,25 +89,25 @@
 &lt;stringvariable value="&amp;" variable="sAmp" /&gt;
 &lt;stringvariable value="anotherVariable=ABCDEF" variable="sAnotherVariable" /&gt;
 
-&lt;!-- creating a string in the format "POST / buf=0123456789&anotherVariable=ABCDEF" --&gt;
+&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_02") %> --&gt;
 &lt;joinstring firstvalue="$(sVerbAndPath)" secondvalue="$(sBuf)" variabledestination="$(sBuf)" /&gt;
 &lt;joinstring firstvalue="$(sBuf)" secondvalue="$(sAmp)" variabledestination="$(sBuf)" /&gt;
 &lt;joinstring firstvalue="$(sBuf)" secondvalue="$(sAnotherVariable)" variabledestination="$(sBuf)" /&gt;
 
-&lt;!-- converting to HEXASCII to send using network.send --&gt;
+&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_03") %> --&gt;
 &lt;integervariable value="0" variable="iSize" /&gt;
 &lt;string.tohex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
 &lt;string.length value="$(sBuf)" variablereturn="$(iSize)" /&gt;
 
-&lt;!-- sending with network.send --&gt;
+&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_04") %> --&gt;
 &lt;integervariable value="0" variable="iRet" /&gt;
 &lt;network.send buffer="$(sBuf)" size="$(iSize)" variablereturn="$(iRet)" /&gt;
 
-&lt;!-- receiving with network.receive --&gt;
+&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_05") %> --&gt;
 &lt;stringvariable value="" variable="sBufReceive" /&gt;
 &lt;integervariable value="0" variable="iBytesReceive" /&gt;
 
-&lt;!-- receive the 4 bytes of size --&gt;
+&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_06") %> --&gt;
 &lt;network.receive variablebuffer="$(sBufReceive)" maxsize="4"
                  variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
 
@@ -119,7 +120,7 @@
   &lt;exit /&gt;
 &lt;/if&gt;
 
-&lt;!-- receive the message --&gt;
+&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_07") %> --&gt;
 &lt;string.fromhex string="$(sBufReceive)" variablereturn="$(sBufReceive)" /&gt;
 &lt;convert.toint base="16" number="$(sBufReceive)" variablereturn="$(iSize)" /&gt;
 &lt;network.receive variablebuffer="$(sBufReceive)" maxsize="$(iSize)"
@@ -134,7 +135,7 @@
   &lt;exit /&gt;
 &lt;/if&gt;
 
-&lt;!-- convert from HEXASCII and show the msg on display --&gt;
+&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_08") %> --&gt;
 &lt;string.fromhex string="$(sBufReceive)" variablereturn="$(sBufReceive)" /&gt;
 &lt;cleandisplay /&gt;
 &lt;display line="1" column="3" message=" RECEIVED: " /&gt;

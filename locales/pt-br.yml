@@ -354,6 +354,15 @@ pt-BR:
         paragraph_3: Para receber a resposta do Switch do CloudWalk, é necessário utilizar o comando <a href='/posxml/commands/network.receive' class='command'>network.receive</a> para receber os primeiros 4 bytes, que indicam o tamanho da mensagem, e em seguida fazer uma nova chamada com comando <a href='/posxml/commands/network.receive' class='command'>network.receive</a>, recebendo o restante da mensagem. Esta abordagem evita possíveis <em>timeouts</em> e longos períodos de espera para receber a resposta do servidor HTTP.
       posxml_sample:
         paragraph_1: 'O seguinte exemplo pode ser utilizado para testar esse tipo de ingração:'
+        posxml:
+          comment_01: "O comando preconnect faz com que o dispositivo se conecte ao CloudWalk"
+          comment_02: "Criando uma string no formato 'POST / buf=0123456789&anotherVariable=ABCDEF\'"
+          comment_03: "Convertendo a string para o formato hexadecimal"
+          comment_04: "Enviando a string hexadecimal com o comando network.send"
+          comment_05: "Recebendo a resposta do host com o comando network.receive"
+          comment_06: "Recebendo os 4 bytes com o tamanho"
+          comment_07: "Recebendo a mensagem"
+          comment_08: "Convertendo a reposta hexadecimal e exibindo a mensagem"
       table_of_contents:
         http_samples: Exemplos de verbos HTTP e paths
         introduction: Introdução
