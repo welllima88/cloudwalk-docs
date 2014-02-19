@@ -407,6 +407,8 @@ h2.command-header{
 }
 
 /* Models */
+.models {color: #999; margin-top: 5px; }
+
 .verix, .evo{
   height: 200px;
   border: 8px solid #597F3F;

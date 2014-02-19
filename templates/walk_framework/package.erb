@@ -27,9 +27,10 @@
   <br/>
 
   <p><%= I18n.t("walk_framework.package.selected") %> <span id="package-info"></span></p>
-
+  <br/>
   <a href="#" id="file-request" class="btn btn-success"><%= I18n.t("walk_framework.package.download") %></a>
   <a href="#" id="open-guide" class="btn btn-info" style="display: none"><%= I18n.t("walk_framework.package.open_url") %></a>
+  <p class="models">Modelos suportados: Vx510, Vx610 e Vx670</p>
 </div>
 
 <% content_for :javascripts do %>
@@ -40,6 +41,7 @@
   fill_device_model_options(brand, model);
   $('#file-request').prop('href', select_framework_package(brand, model, signature));
   validate_signature(brand, signature);
+  set_models_list();
 
   $('#file-request, #open-guide').click(function (e) {
     if(!validate_selection($(this))){
@@ -123,6 +125,33 @@
   function toggle_action(show, hide){
     $('#' + hide).hide();
     $('#' + show).show();
+
+    if(show == 'file-request'){
+      set_models_list();
+    } else {
+      $('.models').html('&nbsp;');
+    }
+  }
+
+  function set_models_list(){
+    var list = '<%= I18n.t("walk_framework.package.models.list") %>';
+
+    switch($('#model').val()){
+    case 'verix':
+      list += '<%= I18n.t("walk_framework.package.models.verix") %>';
+      break;
+    case 'evo':
+      list += '<%= I18n.t("walk_framework.package.models.evo") %>';
+      break;
+    case 'telium-1':
+      list += '<%= I18n.t("walk_framework.package.models.telium_1") %>';
+      break;
+    case 'telium-2':
+      list += '<%= I18n.t("walk_framework.package.models.telium_2") %>';
+      break;
+    }
+
+    $('.models').html(list);
   }
 
   function select_framework_guide(sbrand, smodel, ssignature){
