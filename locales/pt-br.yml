@@ -1983,8 +1983,14 @@ pt-BR:
         signature: "Assinatura"
       selected: "Pacote selecionado: "
       with_signature: "assinado por"
+      binary: "Binário do WALK Framework para"
+      unsigned: "sem assinatura"
       download: "Fazer download"
       open_url: "Acessar processo de instalação"
+      supplier:
+        tefti: "BRASIL - TEFTI"
+        paytec: "BRASIL - Paytec"
+        other: "Outro fornecedor"
     communication:
       paragraph_1: Rede local (ethernet)
       paragraph_2: Linha discada (PPP)

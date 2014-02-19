@@ -1983,8 +1983,14 @@ en:
         signature: "Signature"
       selected: "Selected package: "
       with_signature: "signed by"
+      binary: "WALK Framework binary for"
+      unsigned: "unsigned"
       download: "Download"
       open_url: "Go to installation process"
+      supplier:
+        tefti: "BRAZIL - TEFTI"
+        paytec: "BRAZIL - Paytec"
+        other: "Other supplier"
     communication:
       paragraph_1: Common local network (ethernet)
       paragraph_2: Landline/dial-up (PPP)

@@ -18,8 +18,9 @@
     <label class="control-label" for="signature"><%= I18n.t("walk_framework.package.device.signature") %></label>
     <select name="signature" id="signature" class="input-medium" disabled>
       <%= option_select "none", "", device_signature %>
-      <%= option_select "paytec", "Paytec", device_signature %>
-      <%= option_select "tefti", "TEFTI", device_signature %>
+      <%= option_select "paytec", I18n.t("walk_framework.package.supplier.paytec"), device_signature %>
+      <%= option_select "tefti", I18n.t("walk_framework.package.supplier.tefti"), device_signature %>
+      <%= option_select "bin", I18n.t("walk_framework.package.supplier.other"), device_signature %>
     </select>
   </div>
 
@@ -153,11 +154,24 @@
       package = package + " " + smodel;
 
       if(ssignature != ""){
-        package = package + " <%= I18n.t("walk_framework.package.with_signature") %> " + ssignature;
+        package = signature_info(package);
       }
     }
 
     $('#package-info').html(package);
+  }
+
+  function signature_info(package){
+    switch($('#signature').val()){
+    case 'tefti':
+      return package + ' <%= I18n.t("walk_framework.package.with_signature") %> ' + 'TEFTI (Brasil)';
+      break;
+    case 'paytec':
+      return package + ' <%= I18n.t("walk_framework.package.with_signature") %> ' + 'Paytec (Brasil)';
+      break;
+    default:
+      return '<%= I18n.t("walk_framework.package.binary") %> ' + package + ' (<%= I18n.t("walk_framework.package.unsigned") %>)';
+    }
   }
 
   function toggle_signature(sbrand){
