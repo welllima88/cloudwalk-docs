@@ -62,6 +62,8 @@ body > .navbar {
   margin-bottom: 85px;
 }
 
+.smooth{ display: none; }
+
 .img-polaroid {margin-bottom: 15px;}
 
 h1 {
