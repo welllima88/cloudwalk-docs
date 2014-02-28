@@ -231,11 +231,6 @@ helpers do
     param || default
   end
 
-  def mootit
-    command = uri.split('/').last
-    "<a class='moot' data-label='#{I18n.t("posxml.commands.comments_message")}' href='https://moot.it/i/cloudwalk/docs/#{command}'></a>"
-  end
-
   def search
     require 'net/http'
 

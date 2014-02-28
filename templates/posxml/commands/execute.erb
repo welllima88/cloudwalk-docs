@@ -28,10 +28,10 @@
 &lt;if variable="$(iReturn)" operator="equalto" value="0">
   &lt;display line="3" column="0" message="    DOWNLOADING      " /&gt;
   &lt;display line="4" column="0" message="   APPLICATION 2...  " /&gt;
-  
+
   &lt;downloadfile filename="apptwo.posxml" remotepath="apptwo.posxml" variablereturn="$(iReturn)" /&gt;
   &lt;network.hostdisconnect /&gt;
-  
+
   &lt;if variable="$(iReturn)" operator="equalto" value="1"&gt;
     &lt;execute filename="apptwo.posxml" /&gt;
   &lt;else /&gt;
@@ -63,7 +63,3 @@
 </code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.execute.paragraph_2") %></p>
-<p><%= I18n.t("posxml.commands.execute.paragraph_3") %></p>
-<h2><%= I18n.t("posxml.commands.comments") %></h2>
-
-<%= mootit %>
