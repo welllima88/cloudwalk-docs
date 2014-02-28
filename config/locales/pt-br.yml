@@ -14,7 +14,7 @@ pt-BR:
         paragraph_4: '<strong>POST: </strong>Cria um novo recurso. Por exemplo, <span class=''code''>POST /%{version}/devices</span> criaria um novo número de série. A informação enviada na requisição POST seria então utilizada para preencher as propriedades do número de série.'
         paragraph_5: '<strong>PUT: </strong>Atualiza um recurso já existente. Por exemplo, <span class=''code''>PUT /%{version}/devices/135</span> atualizaria o número de série com o ID 135. A informação enviada na requisição PUT seria então utilizada para atualizar as propriedades do número de série.'
         paragraph_6: '<strong>DELETE: </strong>Exclui um recurso já existente. Por exemplo, <span class=''code''>DELETE /%{version}/devices/135</span> excluiria o número de série com o ID 135.'
-      description: 'Acesso a API feita através do endereço <a href=''https://manager.cloudwalk.io/api''>https://manager.cloudwalk.io/api</a>. CRUD: Create, Retrieve, Update and Destroy.'
+      description: 'O Acesso a API deve ser feito através do endereço https://manager.cloudwalk.io/api. CRUD: Create, Retrieve, Update and Destroy.'
       functionality:
         paragraph_1: O acesso a API deve ser feito a partir do domínio <span class='code'>https://api.cloudwalk.io/%{version}</span>.
         paragraph_2: As requisições devem ser feitas utilizando o protocolo <strong>HTTPS</strong>.

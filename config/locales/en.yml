@@ -14,7 +14,7 @@ en:
         paragraph_4: '<strong>POST: </strong>Creates a new resource. For example, <span class=''code''>POST /%{version}/devices</span> creates a new serial number. The information sent in the POST request would then be used to fill the properties of the serial number.'
         paragraph_5: '<strong>PUT: </strong>Updates an existing resource. For example, <span class=''code''>PUT /%{version}/devices/135</span> updates the serial number with the ID 135. The information sent in the PUT request would then be used to update the properties of the serial number.'
         paragraph_6: '<strong>DELETE: </strong>Deletes an existing resource. For example, <span class=''code''>DELETE /%{version}/devices/135</span> deletes the serial number with the ID 135.'
-      description: 'Access to the API must be done from the domain <a href=''https://manager.cloudwalk.io/api''>https://manager.cloudwalk.io/api</a>. CRUD: Create, Retrieve, Update and Destroy.'
+      description: 'Access to the API must be done from the domain https://manager.cloudwalk.io/api. CRUD: Create, Retrieve, Update and Destroy.'
       functionality:
         paragraph_1: The access to the API must be done from the domain <span class='code'>https://api.cloudwalk.io/%{version}</span>.
         paragraph_2: The requests should be made using the <strong>HTTPS</strong> protocol.
