@@ -29,14 +29,7 @@ configure do
   I18n.enforce_available_locales = false
 end
 
-if production?
-  use Rack::SslEnforcer
-  use Rack::Session::Cookie, :key => ENV["SESSION_KEY"],
-                             :secret => ENV["SESSION_SECRET"],
-                             :domain => 'cloudwalk.io',
-                             :path => '/',
-                             :expire_after => 2592000 # In seconds
-end
+use Rack::SslEnforcer if production?
 
 set :views, File.dirname(__FILE__) + '/templates'
 set :partial_template_engine, :erb

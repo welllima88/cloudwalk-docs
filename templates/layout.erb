@@ -5,7 +5,7 @@
     <title>CloudWalk Docs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Documentação detalhada do serviço de desenvolvimento de aplicações para Smartphones e terminais POS">
-    <meta name="author" content="Plano Be">
+    <meta name="author" content="CloudWalk">
 
     <%= yield_content(:docs_description).force_encoding("UTF-8") %>
 
@@ -14,16 +14,12 @@
     <link href="/css/app.css" rel="stylesheet" media="all">
     <link href="/css/rainbow/github.css" rel="stylesheet" media="all">
 
-    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/flick/jquery-ui.css' rel='stylesheet'>
-
     <link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);mixpanel.init("69fcf8d502625d563ba589d3429fa4ad");</script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -34,7 +30,6 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <script type="text/javascript">mixpanel.track("Landing Page Loaded");</script>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
@@ -79,7 +74,7 @@
       </div>
       <div class="span9">
         <div id="banner">
-          <form action="/<%= current_locale %>/search" class="navbar-form pull-right" method="GET" id="indextank_autocomplete">
+          <form action="/<%= current_locale %>/search" class="navbar-form pull-right" method="GET">
             <input name="query" id="query" class="input-medium search-query" placeholder="<%= I18n.t("search.placeholder") %>" type="text" value="<%= params[:query]%>" />
           </form>
         </div>
@@ -118,11 +113,7 @@
 
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/jquery-ui.min.js"></script>
-  <script src="/js/jquery.indextank.ize.js"></script>
-  <script src="/js/jquery.indextank.autocomplete.js"></script>
   <script src="/js/rainbow/rainbow-custom.min.js"></script>
-  <script src="/js/jquery.cookie.js"></script>
 
   <% if session[:locale] == "pt-BR" %>
     <script src="//cdn.moot.it/1/moot.pt-br.min.js"></script>
@@ -132,9 +123,11 @@
 
   <script type="text/javascript">
     jQuery(document).ready(function(){
+      $(".smooth").fadeIn();
+
       $('a[href*=#]').not('.accordion a, .nav-tabs a').click(function() {if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {var $target = $(this.hash);$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');if ($target.length) {var targetOffset = $target.offset().top - 50;$('html,body').animate({scrollTop: targetOffset}, 500);return false;}}});
 
-      // commands
+      // POSXML Commands
       $(".group-of-commands a").each(function() { $(this).click(function() { showContent($(this).attr('id')); }); });
       function showContent(caller){
         var container = caller.split('-')[1];
@@ -144,21 +137,6 @@
         $('#' + caller).addClass('primary');
       }
 
-      // set menu
-      if($.cookie('is_user_logged_in')){
-        $("#btn-signout").toggle();
-        $("#btn-settings").toggle();
-      } else {
-        $("#btn-signup").toggle();
-        $("#btn-signin").toggle();
-      }
-
-      // IndexTank
-      var publicApiUrl = "https://28z3j.api.searchify.com";
-      var indexName = "cloudwalk-docs";
-      $("#indextank_autocomplete").indextank_Ize(publicApiUrl, indexName);
-      $("#query").indextank_Autocomplete();
-
       // Rainbow
       Rainbow.extend('html', [{
         'name': 'tag',
@@ -167,11 +145,8 @@
         'name': 'support',
         'pattern': /buffer1|buffer2|element_index|new_substring|old_substring|original_string|new_element|string_to_be_inserted|character_index/g
       }], true);
+
       <%= yield_content(:javascripts) %>
-    })
-    
-    jQuery(document).ready(function(){
-      $(".smooth").fadeIn();
     });
   </script>
 </body>
