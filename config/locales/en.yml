@@ -636,10 +636,7 @@ en:
     docs: Documentation
     get_in_touch: Get in touch
     home: Home
-    settings: My account
     sign_in: Log in
-    sign_out: Logout
-    sign_up: Create account
     support: Support
   menu:
     api:

@@ -18,8 +18,6 @@
   margin: 0;
 }
 
-.btn-account {display: none; }
-
 .navbar-fixed-top{
   -webkit-box-shadow:0 1px 5px rgba(0,0,0,.45);
   -moz-box-shadow:0 1px 5px rgba(0,0,0,.45);
