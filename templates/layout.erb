@@ -23,7 +23,6 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
     ga('create', 'UA-3586526-23', 'cloudwalk.io');
     ga('send', 'pageview');
   </script>
@@ -31,32 +30,34 @@
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-      <div class="navbar-container">
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <li><a href="https://www.cloudwalk.io"><%= I18n.t("main_menu.home") %></a></li>
-            <li><a href="https://manager.cloudwalk.io">CloudWalk Manager</a></li>
-            <li class="active"><a href="https://docs.cloudwalk.io/<%= I18n.locale %>/introduction"><%= I18n.t("main_menu.docs") %></a></li>
-            <li><a href="https://support.cloudwalk.io"><%= I18n.t("main_menu.support") %></a></li>
-            <li><a href="https://www.cloudwalk.io/contact"><%= I18n.t("main_menu.get_in_touch") %></a></li>
-            <li style="float: right">
-              <form action="<%= request.fullpath %>" method="get" class="navbar-form pull-right" style="float: right">
-                <% if params[:query] %>
-                  <input type="hidden" name="query" value="<%= params['query']%>" />
-                <% end %>
-                <select name="locale" class="input-medium" onchange="this.form.submit()">
-                  <%= option_select "pt-BR", "Português" %>
-                  <%= option_select "en", "English" %>
-                </select>
-              </form>
-            </li>
-            <li id="btn-signin" style="float: right"><a href="https://manager.cloudwalk.io/users/sign_in?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_in") %></a></li>
-          </ul>
+      <div class="container">
+        <div class="navbar-container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="https://www.cloudwalk.io"><%= I18n.t("main_menu.home") %></a></li>
+              <li><a href="https://manager.cloudwalk.io">CloudWalk Manager</a></li>
+              <li class="active"><a href="https://docs.cloudwalk.io/<%= I18n.locale %>/introduction"><%= I18n.t("main_menu.docs") %></a></li>
+              <li><a href="https://support.cloudwalk.io"><%= I18n.t("main_menu.support") %></a></li>
+              <li><a href="https://www.cloudwalk.io/contact"><%= I18n.t("main_menu.get_in_touch") %></a></li>
+              <li style="float: right">
+                <form action="<%= request.fullpath %>" method="get" class="navbar-form pull-right" style="float: right">
+                  <% if params[:query] %>
+                    <input type="hidden" name="query" value="<%= params['query']%>" />
+                  <% end %>
+                  <select name="locale" class="input-medium" onchange="this.form.submit()">
+                    <%= option_select "pt-BR", "Português" %>
+                    <%= option_select "en", "English" %>
+                  </select>
+                </form>
+              </li>
+              <li id="btn-signin" style="float: right"><a href="https://manager.cloudwalk.io/users/sign_in?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_in") %></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -81,7 +82,7 @@
   </div>
 
   <!-- begin olark code -->
-  <script data-cfasync="false" type='text/javascript'>/*{literal}<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+  <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
   f[z]=function(){
   (a.s=a.s||[]).push(arguments)};var a=f[z]._={
   },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
@@ -98,8 +99,7 @@
   b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
   loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
   /* custom configuration goes here (www.olark.com/documentation) */
-  olark.identify('8394-954-10-9343');/*]]>{/literal}*/</script><noscript><a href="https://www.olark.com/site/8394-954-10-9343/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-  </script>
+  olark.identify('8394-954-10-9343');/*]]>*/</script><noscript><a href="https://www.olark.com/site/8394-954-10-9343/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
   <!-- end olark code -->
 
   <% if I18n.locale == :"pt-BR" %>
