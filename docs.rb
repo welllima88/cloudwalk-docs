@@ -24,7 +24,7 @@ Pony.options = {
 
 configure do
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
-  Dir.glob('locales/*.yml').each { |locale| I18n.load_path << locale}
+  Dir.glob('config/locales/*.yml').each { |locale| I18n.load_path << locale}
   I18n.backend.load_translations
   I18n.enforce_available_locales = false
 end
