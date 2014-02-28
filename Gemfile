@@ -15,4 +15,5 @@ end
 
 group :production do
   gem 'rack-ssl-enforcer', '~> 0.2.6'
+  gem 'newrelic_rpm',      '~> 3.7.2.195'
 end

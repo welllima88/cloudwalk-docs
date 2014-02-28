@@ -1,5 +1,6 @@
 require "rubygems"
 require "sinatra"
+require "newrelic_rpm"
 require "sinatra/content_for"
 require "sinatra/partial"
 require "i18n"
