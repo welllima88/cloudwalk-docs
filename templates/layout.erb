@@ -29,34 +29,32 @@
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-      <div class="container">
-        <div class="navbar-container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li><a href="https://www.cloudwalk.io"><%= I18n.t("main_menu.home") %></a></li>
-              <li><a href="https://manager.cloudwalk.io">CloudWalk Manager</a></li>
-              <li class="active"><a href="https://docs.cloudwalk.io/<%= I18n.locale %>/introduction"><%= I18n.t("main_menu.docs") %></a></li>
-              <li><a href="https://support.cloudwalk.io"><%= I18n.t("main_menu.support") %></a></li>
-              <li><a href="https://www.cloudwalk.io/contact"><%= I18n.t("main_menu.get_in_touch") %></a></li>
-              <li style="float: right">
-                <form action="<%= request.fullpath %>" method="get" class="navbar-form pull-right" style="float: right">
-                  <% if params[:query] %>
-                    <input type="hidden" name="query" value="<%= params['query']%>" />
-                  <% end %>
-                  <select name="locale" class="input-medium" onchange="this.form.submit()">
-                    <%= option_select "pt-BR", "Português" %>
-                    <%= option_select "en", "English" %>
-                  </select>
-                </form>
-              </li>
-              <li id="btn-signin" style="float: right"><a href="https://manager.cloudwalk.io/users/sign_in?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_in") %></a></li>
-            </ul>
-          </div>
+      <div class="navbar-container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="https://www.cloudwalk.io"><%= I18n.t("main_menu.home") %></a></li>
+            <li><a href="https://manager.cloudwalk.io">CloudWalk Manager</a></li>
+            <li class="active"><a href="https://docs.cloudwalk.io/<%= I18n.locale %>/introduction"><%= I18n.t("main_menu.docs") %></a></li>
+            <li><a href="https://support.cloudwalk.io"><%= I18n.t("main_menu.support") %></a></li>
+            <li><a href="https://www.cloudwalk.io/contact"><%= I18n.t("main_menu.get_in_touch") %></a></li>
+            <li style="float: right">
+              <form action="<%= request.fullpath %>" method="get" class="navbar-form pull-right" style="float: right">
+                <% if params[:query] %>
+                  <input type="hidden" name="query" value="<%= params['query']%>" />
+                <% end %>
+                <select name="locale" class="input-medium" onchange="this.form.submit()">
+                  <%= option_select "pt-BR", "Português" %>
+                  <%= option_select "en", "English" %>
+                </select>
+              </form>
+            </li>
+            <li id="btn-signin" style="float: right"><a href="https://manager.cloudwalk.io/users/sign_in?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_in") %></a></li>
+          </ul>
         </div>
       </div>
     </div>
