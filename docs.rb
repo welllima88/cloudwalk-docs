@@ -138,7 +138,7 @@ end
   # smartcard
   "smartcard.insertedcard", "smartcard.closereader", "smartcard.startreader", "smartcard.transmitapdu",
   # utils
-  "mathematicaloperation", "system.beep", "system.backlight", "system.checkbattery", "system.info", "system.restart", "unzipfile", "waitkey", "waitkeytimeout", "readkey", "wait"
+  "mathematicaloperation", "system.beep", "system.backlight", "system.checkbattery", "system.info", "system.qrcode", "system.restart", "unzipfile", "waitkey", "waitkeytimeout", "readkey", "wait"
 ]
 
 @commands.each do |command|

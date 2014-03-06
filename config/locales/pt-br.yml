@@ -1699,7 +1699,7 @@ pt-BR:
           parameter_4: <strong>variablesource</strong> <span class='data-type'>[string]</span><br/>Texto que será separado.
           parameter_5: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variável que irá armazenar o retorno do comando. Se nada for encontrado irá retornar <strong>-1</strong>.
       system_backlight:
-        description: Permite controlar o nível de intensidade do backlight do dispositivo.
+        description: Permite controlar o nível de intensidade do backlight do dispositivo
         paragraph_1: O comando <span class='code'>system.backlight</span> permite controlar o nível do backlight do dispositivo.
         paragraph_2: Este comando é bastante utilizado quando o dispositivo possui uma bateria (não é conectado diretamente na energia elétrica), pois há um consumo considerável de bateria quando o backlight esta em 100%.
         paragraph_3: No exemplo acima, o comando <span class='code'>system.backlight</span> foi utilizado para modificar o nível de intensidade do backlight para 50%.
@@ -1724,10 +1724,19 @@ pt-BR:
       system_info:
         description: Busca de informações no sistema do POS (MAC Address, SIM ID, etc)
         paragraph_1: O comando <span class='code'>system.info</span> é usado para retornar informações do dispositivo.
-        paragraph_2: No exemplo acima , o comando <strong>system.infor</strong> irá retorar o macaddress do dispositivo.
+        paragraph_2: No exemplo acima, o comando <strong>system.infor</strong> irá retorar o macaddress do dispositivo.
         parameters:
           parameter_1: <strong>type</strong> <span class='data-type'>[string]</span><br/>Informação que deseja retornar, simid ou macaddress.
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variável que irá armazenar o retorno do comando.
+      system_qrcode:
+        description: Gera um QR Code com base nos dados informados
+        paragraph_1: O comando <span class='code'>system.qrcode</span> é usado para gerar um QR Code com base nos dados do parâmetro <strong>input</strong>. O QR Code gerado pode ser exibido no display do dispositivo ou impresso, caso o dispositivo possua uma impressora.
+        paragraph_2: "No exemplo acima, o comando <strong>system.qrcode</strong> irá gerar o seguinte bitmap:"
+        paragraph_3: Este bitmap pode agora ser utilizado para ser exibido no display do dispositivo, através do comando <a href='displaybitmap' class='command'>displaybitmap</a>. O bitmap pode também ser impresso através do comando <a href='printbitmap' class='command'>printbitmap</a> (caso o dispositivo possua uma impressora).
+        parameters:
+          parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Nome do bitmap que será criado.
+          parameter_2: <strong>input</strong> <span class='data-type'>[string]</span><br/>Conteúdo que será utilizado para gerar o QR Code.
+          parameter_3: <strong>size</strong> <span class='data-type'>[string]</span><br/>x1 (ideal para exibir no display) ou x2 e x3 (ideal para imprimir).
       system_inputtransaction:
         description: Instrução para receber os dados do cartão em uma transação contactless
         paragraph_1: O comando <span class='code'>system.inputtransaction</span> é um instrução para receber os dados do cartão em uma transação contactless.

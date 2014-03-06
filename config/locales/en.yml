@@ -1728,6 +1728,15 @@ en:
         parameters:
           parameter_1: <strong>type</strong> <span class='data-type'>[string]</span><br/>Information you want to return, simid or macaddress.
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+      system_qrcode:
+        description: Generate a QR Code based on the entered data
+        paragraph_1: The command <span class='code'>system.qrcode</span> is used to generate a QR Code based on the content of the parameter <strong>input</strong>. The generated QR Code can be displayed or printed (if the device has a printer).
+        paragraph_2: "In the above example, the command <strong>system.qrcode</strong> will generate the following bitmap:"
+        paragraph_3: This bitmap can now be displayed through the command <a href='displaybitmap' class='command'>displaybitmap</a>. The bitmap can also be printed through the command <a href='printbitmap' class='command'>printbitmap</a> (if the device has a printer).
+        parameters:
+          parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the bitmap that will created.
+          parameter_2: <strong>input</strong> <span class='data-type'>[string]</span><br/>Content that will be used to generate the QR Code.
+          parameter_3: <strong>size</strong> <span class='data-type'>[string]</span><br/>x1 (ideal for displaying) or x2 and x3 (ideal for printing).
       system_inputtransaction:
         description: Instruction to receive the data card on a contactless transaction
         paragraph_1: The command <span class='code'>system.inputtransaction</span> is an instruction to receive the data card on a contactless transaction.
