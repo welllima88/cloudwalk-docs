@@ -1,25 +1,16 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.0.3)
-      i18n (~> 0.6, >= 0.6.4)
-      minitest (~> 4.2)
-      multi_json (~> 1.3)
-      thread_safe (~> 0.1)
-      tzinfo (~> 0.3.37)
-    atomic (1.1.14)
     backports (3.6.0)
     daemons (1.1.9)
     eventmachine (1.0.3)
     i18n (0.6.9)
-    mail (2.2.7)
-      activesupport (>= 2.3.6)
-      mime-types
-      treetop (>= 1.4.5)
-    mime-types (2.1)
-    minitest (4.7.5)
-    multi_json (1.8.4)
-    newrelic_rpm (3.7.2.195)
+    mail (2.5.4)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.25.1)
+    multi_json (1.9.0)
+    newrelic_rpm (3.7.3.204)
     polyglot (0.3.4)
     pony (1.8)
       mail (>= 2.0)
@@ -42,27 +33,24 @@ GEM
       tilt (~> 1.3)
     sinatra-partial (0.4.0)
       sinatra
-    thin (1.6.1)
+    thin (1.6.2)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
       rack (>= 1.0.0)
-    thread_safe (0.1.3)
-      atomic
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.38)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   i18n (~> 0.6.9)
-  newrelic_rpm (~> 3.7.2.195)
+  newrelic_rpm (~> 3.7.3.204)
   pony (~> 1.8)
   rack-ssl-enforcer (~> 0.2.6)
   sinatra (~> 1.4.4)
   sinatra-contrib (~> 1.4.2)
   sinatra-partial (~> 0.4.0)
-  thin (~> 1.6.1)
+  thin (~> 1.6.2)
