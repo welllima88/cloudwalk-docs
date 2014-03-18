@@ -23,7 +23,7 @@
     <div id="collapseTwo" class="accordion-body collapse <%=is_group_active?("walk-framework") %>">
       <div class="accordion-inner">
         <ul>
-          <li class="<%=is_group_item_active?("walk-framework", "verifone-evo") %>"><%= link_to(I18n.t("menu.walk_framework.verifone_evo"), "walk-framework/verifone-evo") %></li>
+          <li class="<%=is_group_item_active?("walk-framework", "verifone-evo") %> <%=is_group_item_active?("walk-framework", "verifone-evo-vx805") %>"><%= link_to(I18n.t("menu.walk_framework.verifone_evo"), "walk-framework/verifone-evo") %></li>
           <li class="<%=is_group_item_active?("walk-framework", "verifone-verix") %>"><%= link_to(I18n.t("menu.walk_framework.verifone_verix"), "walk-framework/verifone-verix") %></li>
           <li class="<%=is_group_item_active?("walk-framework", "ingenico-telium-1") %>"><%= link_to(I18n.t("menu.walk_framework.ingenico_telium_1"), "walk-framework/ingenico-telium-1") %></li>
           <li class="<%=is_group_item_active?("walk-framework", "ingenico-telium-2") %>"><%= link_to(I18n.t("menu.walk_framework.ingenico_telium_2"), "walk-framework/ingenico-telium-2") %></li>
