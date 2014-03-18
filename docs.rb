@@ -69,6 +69,7 @@ get "/" do redirect "/#{current_locale}/introduction" end
   { "url" => "walk-manager/transactions-monitor",    "view_path" => "walk_manager/transactions_monitor"},
   # DEVELOPMENT ENVIRONMENT
   { "url" => "development-environment/overview",     "view_path" => "development_environment/overview"},
+  { "url" => "development-environment/emulator",     "view_path" => "development_environment/emulator"},
   # POSXML
   { "url" => "posxml/structure",                     "view_path" => "posxml/structure"},
   { "url" => "posxml/memory-and-variables",          "view_path" => "posxml/memory_and_variables"},

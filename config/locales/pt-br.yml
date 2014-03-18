@@ -321,6 +321,25 @@ pt-BR:
         introduction: Introdução
         real_time_colaboration: Colaboração em tempo real
       title: Ambiente de desenvolvimento
+    emulator:
+      description: "Emulador web utilizado para visualizar e testar as aplicações em tempo de desenvolvimento"
+      title: "Ambiente de desenvolvimento - Emulador"
+      table_of_contents:
+        introduction: Introdução
+        workflow: Testando workflows
+        printing: Impressão
+      introduction:
+        paragraph_1: Com o intuito de facilitar o desenvolvimento de aplicações POSXML e aumentar a produtividade dos desenvolvedores, criamos um emulador que reproduz com exatidão o comportamento de um dispositivo, seja ele um terminal POS ou um smartphone.
+        paragraph_2: O emulador é executado diretamente no CloudWalk IDE, ou seja, diretamente em um browser web, dispensando a necessidade de qualquer tipo de instalação ou configuração.
+        paragraph_3: Nunca foi tão fácil desenvolver para terminais POS e smartphones!
+      workflow:
+        paragraph_1: Uma tarefa bastante comum em qualquer tipo de desenvolvimento é testar o workflow da aplicação que está sendo desenvolvida. Com o CloudWalk IDE você pode a qualquer momento pressionar o botão <strong>Compile</strong> e em seguida pressionar o botão <strong>Emulator</strong> para inciar a emulação da aplicação.
+        paragraph_2: "Preparamos um vídeo para fins de demonstração, um simples Hello World com uma pausa entre as mensagens que são exibidas:"
+      printing:
+        paragraph_1: Uma outra tarefa bastante comum é a impressão de tickets e comprovantes. Em um desenvolvimento convensional a definição e a customização dos tickets de impressão pode levar vários dias e ainda consumir diversas bobinas de papél, que irão diretamente para o lixo.
+        paragraph_2: Com o CloudWalk IDE é possível definir, testar, visualizar e modificar os comprovantes e tickets de impressão em uma interface virtual, simples e rápida.
+        paragraph_3: "Confira o vídeo abaixo onde demonstramos alguns comandos básicos de impressão:"
+        paragraph_4: "Diga adeus as pilhas de papéis de impressão :)"
   errors:
     not_found:
       description: Não foi possível encontrar a página solicitada.
@@ -654,6 +673,7 @@ pt-BR:
     development_environment:
       group_name: Ambiente de desenvolvimento
       overview: Visão geral
+      emulator: Emulador
     integration:
       advanced_http: REST HTTP
       architecture: Arquitetura do serviço

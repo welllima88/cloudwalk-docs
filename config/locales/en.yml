@@ -321,6 +321,26 @@ en:
         introduction: Introduction
         real_time_colaboration: Real time colaboration
       title: Development environment
+    emulator:
+      description: "Web emulator used to view and test applications being developed"
+      title: "Development environment - Emulator"
+      table_of_contents:
+        introduction: Introduction
+        workflow: Testing workflows
+        printing: Printing
+      introduction:
+        paragraph_1: In order to increase productivity and to facilitate the development of POSXML applications, we have created an emulator that precisely reproduces the behavior of a POS terminal or a smartphone.
+        paragraph_2: The emulator runs directly on CloudWalk IDE, ie directly in a web browser, eliminating the need of any kind of installation or configuration.
+        paragraph_3: It's never been easier to develop for POS terminals and smarphones!
+      workflow:
+        paragraph_1: Uma tarefa bastante comum em qualquer tipo de desenvolvimento é testar o workflow da aplicação que está sendo desenvolvida. Com o CloudWalk IDE você pode a qualquer momento pressionar o botão <strong>Compile</strong> e em seguida pressionar o botão <strong>Emulator</strong> para inciar a emulação da aplicação.
+        paragraph_1: A common task in any kind of development is to test the workflow of the application being developed. With CloudWalk IDE you can at any time press the <strong>Compile</strong> button, and then press the <strong>Emulator</strong> button to start the emulation.
+        paragraph_2: "We have prepared a video for demonstration purposes, a simple Hello World with a pause between the messages that are displayed:"
+      printing:
+        paragraph_1: Another very common task is to print tickets and vouchers. In a convensional development environment, the definition and customization of vouchers and printing tickets might take several days and also consume several rolls of paper, which go straight to trash.
+        paragraph_2: With CloudWalk IDE you can define, test, view and modify the vouchers and printing tickets in a virtual, simple and fast interface.
+        paragraph_3: "Check out the video below where we demonstrate some basic printing commands:"
+        paragraph_4: "Say goodbye to those stacks of printing paper :)"
   errors:
     not_found:
       description: Sorry we could not find the requested page.
@@ -654,6 +674,7 @@ en:
     development_environment:
       group_name: Development environment
       overview: Overview
+      emulator: Emulator
     integration:
       advanced_http: REST HTTP
       architecture: Service architecture
