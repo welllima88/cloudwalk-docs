@@ -4,7 +4,7 @@
 
 <h1><%= I18n.t("development_environment.overview.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "12/08/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "18/03/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
@@ -37,4 +37,10 @@
   <li><strong>maxvars:</strong> <%= I18n.t("development_environment.overview.compilation_console.properties.maxvars") %></li>
   <li><strong>functions:</strong> <%= I18n.t("development_environment.overview.compilation_console.properties.functions") %></li>
   <li><strong>maxfuncs:</strong> <%= I18n.t("development_environment.overview.compilation_console.properties.maxfuncs") %></li>
+</ul>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to(I18n.t("menu.development_environment.emulator") + " &rarr;", "development-environment/emulator") %>
+  </li>
 </ul>
