@@ -77,6 +77,10 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
+  <loc>https://docs.cloudwalk.io/pt-BR/development-environment/emulator</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
   <loc>https://docs.cloudwalk.io/pt-BR/posxml/structure</loc>
   <changefreq>monthly</changefreq>
 </url>
@@ -714,6 +718,10 @@
 </url>
 <url>
   <loc>https://docs.cloudwalk.io/en/development-environment/overview</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://docs.cloudwalk.io/en/development-environment/emulator</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
