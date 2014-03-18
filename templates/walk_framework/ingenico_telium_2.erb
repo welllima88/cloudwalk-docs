@@ -27,7 +27,7 @@
   <li><%= I18n.t("walk_framework.package.select") %></li>
 </ol>
 
-<%= partial :'walk_framework/package', :locals => { :device_brand => "ingenico", :device_model => "telium-2", :device_signature => check_param(@params, "signature", "none", ["paytec", "tefti"]) } %>
+<%= partial :'walk_framework/package', :locals => { :device_brand => "ingenico", :device_model => "telium-2", :device_interface => "default", :device_signature => check_param(@params, "signature", "none", ["paytec", "tefti"]) } %>
 
 <h2 id="wiping-the-pos"><%= I18n.t("walk_framework.ingenico_telium_2.table_of_contents.wiping_the_device") %></h2>
 

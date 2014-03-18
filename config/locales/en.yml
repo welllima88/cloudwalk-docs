@@ -2030,7 +2030,8 @@ en:
       models:
         list: "Supported models: "
         verix: "Vx510, Vx610 and Vx670"
-        evo: "Vx520, Vx675, Vx680, Vx805 and Vx820"
+        evo_usb: "Vx520, Vx675 and Vx680"
+        evo_serial: "Vx805 and Vx820"
         telium_1: "EFT930G and EFT930S"
         telium_2: "ICT220, ICT250, IWL220, IWL250 and IWL280"
     communication:

@@ -36,6 +36,7 @@
 <% content_for :javascripts do %>
   var brand = '<%= device_brand %>';
   var model = '<%= device_model %>';
+  var interface = '<%= device_interface %>';
   var signature = '<%= device_signature %>';
 
   fill_device_model_options(brand, model);
@@ -141,7 +142,10 @@
       list += '<%= I18n.t("walk_framework.package.models.verix") %>';
       break;
     case 'evo':
-      list += '<%= I18n.t("walk_framework.package.models.evo") %>';
+      if(interface == 'usb')
+        list += '<%= I18n.t("walk_framework.package.models.evo_usb") %>';
+      else
+        list += '<%= I18n.t("walk_framework.package.models.evo_serial") %>';
       break;
     case 'telium-1':
       list += '<%= I18n.t("walk_framework.package.models.telium_1") %>';
@@ -164,14 +168,20 @@
 
   function select_framework_package(sbrand, smodel, ssignature){
     var sig = '';
+    var via = '';
 
     set_package_info();
 
     if(ssignature != 'none'){
-      sig = "_" + ssignature;
+      sig = '_' + ssignature;
     }
 
-    return 'https://dl.cloudwalk.io/framework/' + sbrand + '_' + smodel + sig + '.zip';
+    if(interface != 'default'){
+      via = '_' + interface;
+    }
+
+    return 'https://dl.cloudwalk.io/framework/' + sbrand + '_' + smodel + sig + via + '.zip';
+
   }
 
   function set_package_info(){
