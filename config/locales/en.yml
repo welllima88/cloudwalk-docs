@@ -2545,7 +2545,7 @@ en:
         paragraph_1: 'To mount WALK Framework package on pendrive, follow the following procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the pendrive (format FAT32)
-        paragraph_4: Unzip the downloaded WALK Framework package and copy the file: <strong>VERIFONE.zip</strong> to the pendrive (on root)
+        paragraph_4: 'Unzip the downloaded WALK Framework package and copy the file: <strong>VERIFONE.zip</strong> to the pendrive (on root)'
       prerequisites:
         cable: <strong>Charge cable USB or Serial</strong>
         operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)
