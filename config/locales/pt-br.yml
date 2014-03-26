@@ -2543,9 +2543,8 @@ pt-BR:
       preparing_the_pendrive:
         paragraph_1: 'Para montar a carga do WALK Framework no pendrive, siga o seguinte procedimento:'
         paragraph_2: Conecte o pendrive no computador
-        paragraph_3: Formate o pendrive
-        paragraph_4: Copie o pacote do WALK Framework baixado para a raiz do pendrive
-        paragraph_5: <STRONG>NÃO</STRONG> descompacte o pacote baixado, ele deve ser copiado para o pendrive <STRONG>compactado</STRONG>
+        paragraph_3: Formate o pendrive (formato FAT32)
+        paragraph_4: Descompacte o pacote WALK Framework baixado e copie apenas o arquivo <strong>VERIFONE.zip</strong> para a raiz do pendrive
       prerequisites:
         cable: <strong>Cabo de carga Serial</strong>
         operating_system: <strong>Sistema operacional:</strong> Microsoft Windows XP SP3 ou superior (Vista, Seven, etc)
