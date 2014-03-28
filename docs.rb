@@ -127,7 +127,7 @@ end
   # datetime
   "getdatetime", "time.calculate", "adjustdatetime",
   # conectivity
-  "predial", "preconnect", "shutdownmodem", "network.checkgprssignal", "network.hostdisconnect", "network.ping", "network.send", "network.receive",
+  "predial", "preconnect", "shutdownmodem", "network.checkgprssignal", "network.hostdisconnect", "network.ping", "network.start", "network.send", "network.receive",
   # pinpad
   "pinpad.open", "pinpad.loadipek", "pinpad.getkey", "pinpad.getpindukpt", "pinpad.display", "pinpad.close",
   # emv

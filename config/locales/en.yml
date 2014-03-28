@@ -1334,6 +1334,14 @@ en:
         parameters:
           parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>0: Success</li><li>-1: Error while connecting to the server</li><li>-2: Error while sending ping</li></ul>'
           parameter_2: <strong>host</strong> <span class='data-type'>[string]</span> Hostname or IP address to perform the ping.
+      network_start:
+        description: Starts the device's modem.
+        paragraph_1: The command <span class='code'>network.start</span> is used to starts the device's modem.
+        paragraph_2: In the example above, the command <span class='code'>network.start</span> will start the device's modem and the value of return will be displayed.
+        paragraph_3: '<strong>Differences between the commands <a href=''preconnect'' class=''command''>preconnect</a> and <a href=''network.start'' class=''command''>network.start</a> </strong> :'
+        paragraph_4: The POSXML command <a href='preconnect' class='command'>preconnect</a> starts the device's modem and connect to host. The command <a href='network.start' class='command'>network.start</a> starts the device's modem but <strong>NOT</strong> connect to host.
+        parameters:
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>1: Modem initialized</li><li><1: Error, modem not initialized</li></ul>'
       network_receive:
         description: Receives from the host buffer previously connected
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>

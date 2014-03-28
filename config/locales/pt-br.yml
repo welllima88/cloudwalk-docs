@@ -1333,6 +1333,14 @@ pt-BR:
         parameters:
           parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Retorno da função:<ul><li>0: Sucesso</li><li>-1: Erro na conexão com o servidor</li><li>-2: Erro ao enviar ping</li></ul>'
           parameter_2: <strong>host</strong> <span class='data-type'>[string]</span> Hostname ou IP que será efetuado o ping.
+      network_start:
+        description: Inicia o modem do dispositivo.
+        paragraph_1: O comando <span class='code'>network.start</span> é usado para iniciar o modem do dispositivo.
+        paragraph_2: No exemplo acima o comando <span class='code'>network.start</span> irá iniciar o modem do dispositivo, em seguida o retorno do comando é exibido no display.
+        paragraph_3: '<strong>Diferenças entre os comandos <a href=''preconnect'' class=''command''>preconnect</a> e <a href=''network.start'' class=''command''>network.start</a> </strong> :'
+        paragraph_4: O comando POSXML <a href='preconnect' class='command'>preconnect</a> inicia o modem do dispositivo e estabelece uma nova conexão com o host, já o comando <a href='network.start' class='command'>network.start</a> apenas inicia o modem do dispositivo, <strong>NÃO</strong> será estabelecido uma nova conexão com o host.
+        parameters:
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Retorno da função:<ul><li>1: Modem inicializado</li><li><1: Erro, modem não inicializado</li></ul>'
       network_receive:
         description: Recebe um buffer do serviço CloudWalk previamente conectado
         paragraph_1: Saiba mais sobre <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integração com o host - Simple HTTP</a>
