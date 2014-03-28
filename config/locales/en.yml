@@ -2324,7 +2324,6 @@ en:
       prerequisites:
         internet_access: "<strong>Computer with internet access:</strong> Necessary to register the logical number and to grant access to the device on CloudWalk"
         walk_framework: "<strong>WALK Framework:</strong> Device with WALK Framework properly installed"
-        paragraph_1: "Para instalar o <strong>WALK Framework</strong> no dispositivo, acesse e siga atentamente as instruções dos links à seguir, de acordo com o modelo desejado: <strong><a href='verifone-evo'>Verifone EVO</a></strong>, <strong><a href='verifone-verix'>Verifone Verix</a></strong>, <strong><a href='ingenico-telium-1'>Ingenico Telium 1</a></strong>, <strong><a href='/walk-framework/ingenico-telium-2'>Ingenico Telium 2</a></strong>"
         paragraph_1: "To install the <strong>WALK Framework</strong> on the device, please follow the links: <strong><a href='verifone-evo'>Verifone EVO</a></strong>, <strong><a href='verifone-verix'>Verifone Verix</a></strong>, <strong><a href='ingenico-telium-1'>Ingenico Telium 1</a></strong>, <strong><a href='/walk-framework/ingenico-telium-2'>Ingenico Telium 2</a></strong>"
       table_of_contents:
         prerequisites: "Prerequisites"
