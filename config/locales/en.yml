@@ -1794,7 +1794,7 @@ en:
           parameter_2: <strong>greaterdate</strong> <span class='data-type'>[string]</span><br/> Greater date that will be used by the difference operation. On addition and subtraction operations this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might happen.
           parameter_3: '<strong>operation</strong> <span class=''data-type''>[string]</span><br/> Operation type, which can be: sum, less or difference.'
           parameter_4: '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Unit of time to be calculated: years, months, days, hours, minutes or seconds.<br/>On a difference operation this variable is not used, but an empty value <strong>should not</strong> be used, or a POSXML Error might occur.'
-          parameter_5: <strong>value</strong> <span class='data-type'>[integer]</span><br/> Value to be added or subtracted<strong> (only for operations plus and minus)</strong>.
+          parameter_5: <strong>value</strong> <span class='data-type'>[integer]</span><br/> Value to be added or subtracted<strong> (only for operations sum and less)</strong>.
           parameter_6: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> If the operation is <strong>difference</strong>, the <strong>value</strong> of the difference is returned. Is case of an addition or subtraction operation the result is: <br/><em><strong>0:</strong></em> Success<br/><em><strong>-1:</strong></em> Error.'
       title: Command
       unzipfile:
