@@ -43,13 +43,14 @@
             <li><a href="https://support.cloudwalk.io"><%= I18n.t("main_menu.support") %></a></li>
             <li><a href="https://www.cloudwalk.io/contact"><%= I18n.t("main_menu.get_in_touch") %></a></li>
             <li style="float: right">
-              <form action="<%= request.fullpath %>" method="get" class="navbar-form pull-right" style="float: right">
+              <form action="/" method="post" class="navbar-form pull-right" style="float: right">
+                <input type="hidden" name="url" value="<%= request.path_info %>">
                 <% if params[:query] %>
                   <input type="hidden" name="query" value="<%= params['query']%>" />
                 <% end %>
                 <select name="locale" class="input-medium" onchange="this.form.submit()">
-                  <%= option_select "pt-BR", "Português" %>
-                  <%= option_select "en", "English" %>
+                  <%= option_select "pt-BR", "Português", I18n.locale %>
+                  <%= option_select "en", "English", I18n.locale %>
                 </select>
               </form>
             </li>
@@ -67,7 +68,7 @@
       </div>
       <div class="span9">
         <div id="banner">
-          <form action="/<%= current_locale %>/search" class="navbar-form pull-right" method="GET">
+          <form action="/<%= I18n.locale %>/search" class="navbar-form pull-right" method="GET">
             <input name="query" id="query" class="input-medium search-query" placeholder="<%= I18n.t("search.placeholder") %>" type="text" value="<%= params[:query]%>" />
           </form>
         </div>

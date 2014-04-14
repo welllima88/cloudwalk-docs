@@ -24,26 +24,40 @@ Pony.options = {
 
 configure do
   I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
-  Dir.glob('config/locales/*.yml').each { |locale| I18n.load_path << locale}
+  I18n.load_path = Dir[File.join(settings.root, 'config/locales', '*.yml')]
   I18n.backend.load_translations
   I18n.enforce_available_locales = false
+
+  use Rack::SslEnforcer if production?
+
+  enable :sessions
+
+  use Rack::Session::Cookie, :key => ENV['SESSION_KEY'],
+                             :domain => 'cloudwalk.io',
+                             :path => '/',
+                             :expire_after => 2592000, # In seconds
+                             :secret => ENV['SESSION_SECRET'] if production?
+
+  set :views, File.dirname(__FILE__) + '/templates'
+  set :partial_template_engine, :erb
 end
 
-use Rack::SslEnforcer if production?
-
-set :views, File.dirname(__FILE__) + '/templates'
-set :partial_template_engine, :erb
-
-before do
-  set_locale
+before '/:locale/*' do
+  I18n.locale = params[:locale]
 end
 
 not_found do
   erb :not_found
 end
 
+# LOCALE
+post '/' do
+  old_locale = params["url"].split("/")[1]
+  redirect params["url"].gsub(old_locale, params["locale"]), 301
+end
+
 # HOME
-get "/" do redirect "/#{current_locale}/introduction" end
+get "/" do redirect "/#{I18n.locale}/introduction" end
 
 @navigation = [
   # OVERVIEW
@@ -95,11 +109,10 @@ get "/" do redirect "/#{current_locale}/introduction" end
 
 @navigation.each do |item|
   get "/#{item["url"]}" do
-    redirect "/#{current_locale}/#{item["url"]}", 301
+    redirect "/#{I18n.locale}/#{item["url"]}", 301
   end
   get "/:locale/#{item["url"]}" do |locale|
     @params = request.env['rack.request.query_hash']
-    validate_locale(locale)
     erb "#{item["view_path"]}".to_sym
   end
 end
@@ -143,60 +156,25 @@ end
 ]
 
 @commands.each do |command|
-  get "/posxml/commands/#{command}" do redirect "/#{current_locale}/posxml/commands/#{command}", 301 end
+  get "/posxml/commands/#{command}" do redirect "/#{I18n.locale}/posxml/commands/#{command}", 301 end
   get "/:locale/posxml/commands/#{command}" do |locale|
-    validate_locale(locale)
     erb "posxml/commands/#{command}".to_sym
   end
 end
 
 get "/:locale/search" do |locale|
-  validate_locale(locale)
-
   if params[:query]
     @results = search
   else
-    redirect "/#{current_locale}/introduction", 301
+    redirect "/#{I18n.locale}/introduction", 301
   end
 
   erb :search
 end
 
 helpers do
-  def validate_locale(url_locale)
-    set_locale(url_locale) if url_locale != current_locale
-  end
-
-  def set_locale(locale = nil)
-    if locale
-      # Store the locale on session
-      session[:locale] = locale
-    elsif params[:locale]
-      # Change the URL and remove last character (if ? or &)
-      new_url = request.fullpath.gsub("/#{current_locale}/", "/#{params[:locale]}/").split("locale=")[0]
-      new_url = new_url.chop if new_url[-1, 1] == "?" || new_url[-1, 1] == "&"
-
-      # Store the locale on session
-      session[:locale] = params[:locale]
-
-      # Set the new locale
-      I18n.locale = params[:locale]
-
-      # Redirect to the new URL, with the new locale
-      return redirect new_url
-    end
-
-    return I18n.locale = session[:locale] if session[:locale]
-
-    I18n.locale = "pt-BR"
-  end
-
-  def current_locale
-    session[:locale].nil? ? "pt-BR" : session[:locale]
-  end
-
   def link_to(name, url)
-    "<a href='/#{current_locale}/#{url}'>#{name}</a>"
+    "<a href='/#{I18n.locale}/#{url}'>#{name}</a>"
   end
 
   def is_group_active?(group)
@@ -216,8 +194,7 @@ helpers do
   end
 
   def validate_option_value(value, current)
-    return ' selected' if value == current
-    session[:locale] == value ? ' selected' : ''
+    ' selected' if value == current.to_s
   end
 
   def check_param(params, name, default=nil, valid_options=nil)
@@ -252,7 +229,7 @@ helpers do
     # http://domain.com/en?query=something&access_token=secret
 
     search_url = ENV["SEARCH_API_URL"].dup
-    search_url << current_locale
+    search_url << I18n.locale
     search_url << "?query=#{params[:query]}"
     search_url << "&access_token=#{ENV["SEARCH_API_TOKEN"].dup}"
   end
