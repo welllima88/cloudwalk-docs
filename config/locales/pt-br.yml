@@ -1932,7 +1932,7 @@ pt-BR:
         parameter_32: |- 
           <strong>uclwifisecurity</strong><br/>Tipo de criptografia da rede <pre>WEP64-40
           WEP128-104
-          WPA2-PSK <strong>(somente para Vx680 )</strong></pre>
+          WPA2-PSK <strong>(somente para Vx680)</strong></pre>
         parameter_33: <strong>versaoframework</strong><br/>Versão do WALK Framework instalado no dispositivo
         parameter_4: <strong>dnssecundario</strong><br/> DNS secundário que será utilizado pelo dispositivo. É necessário definir o DNS <strong>0.0.0.0</strong> se o protocolo de comunicação <strong>PPP</strong> for utilizado
         parameter_5: <strong>gprs_pin</strong><br/> PIN do chip GPRS
