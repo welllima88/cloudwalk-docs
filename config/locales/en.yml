@@ -1930,7 +1930,10 @@ en:
         parameter_3: <strong>dnsprimario</strong><br/> primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_30: <strong>uclwifikey</strong><br/>Password for the WIFI network we want to connect (hexadecimal)
         parameter_31: <strong>uclwifinetwork</strong><br/>Name of the WIFI network we want to connect
-        parameter_32: <strong>uclwifisecurity</strong><br/>Type of encryption (WEP)
+        parameter_32: |- 
+          <strong>uclwifisecurity</strong><br/>Types of encryption <pre>WEP64-40
+          WEP128-104
+          WPA2-PSK <strong>(for Vx680 only)</strong></pre>
         parameter_33: <strong>versaoframework</strong><br/>WALK Framework version installed on the device
         parameter_4: <strong>dnssecundario</strong><br/> secondary DNS will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_5: <strong>gprs_pin</strong><br/> PIN of GPRS card
