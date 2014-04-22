@@ -221,7 +221,7 @@ helpers do
 
     JSON.parse(res.body)
   rescue
-    send_mail("Search error", "Could not perform search.\n\n#{$!.class}: #{$!.message}")
+    send_mail("Search error", "Could not perform search.\n\n#{$!.class}: #{$!.message}\n\nQuery: #{params[:query]}")
     return false
   end
 
@@ -229,7 +229,7 @@ helpers do
     # http://domain.com/en?query=something&access_token=secret
 
     search_url = ENV["SEARCH_API_URL"].dup
-    search_url << I18n.locale
+    search_url << I18n.locale.to_s
     search_url << "?query=#{params[:query]}"
     search_url << "&access_token=#{ENV["SEARCH_API_TOKEN"].dup}"
   end
