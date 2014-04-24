@@ -86,7 +86,7 @@ en:
             name: File name
             size: File size (bytes)
             updated_at: Timestamp in ISO 8601 format
-          paragraph_1: 'Os seguintes atributos compõe um arquivo:'
+          paragraph_1: 'A file have the following attributes:'
         create:
           paragraph_1: Create a new file.
           paragraph_2: "<strong>@file.dat</strong> is the file being registered, so in this example, there is a file called <strong>file.dat</strong> in the current directory, where the command curl is being executed."
@@ -98,12 +98,12 @@ en:
         show:
           paragraph_1: Return the details of a specific file.
         table_of_contents:
-          attributes: Atributos de um arquivo
-          create: Cadastro de um novo arquivo
-          destroy: Exclusão de um arquivo
-          index: Listagem de todos arquivos
-          show: Busca de um arquivo específico
-          update: Atualização de um arquivo
+          attributes: File attributes
+          create: Create a new file
+          destroy: Delete a file
+          index: List of all files
+          show: Find a specific file
+          update: Update a file
         title: Developer API - Files
         update:
           paragraph_1: Update an existing file.
