@@ -89,6 +89,7 @@ pt-BR:
           paragraph_1: 'Os seguintes atributos compõe um arquivo:'
         create:
           paragraph_1: Cria um novo arquivo.
+          paragraph_2: "<strong>@file.dat</strong> é o arquivo que está sendo cadastrado, portanto, neste exemplo, existe um arquivo chamado <strong>file.dat</strong> no diretório corrente, em que se está executando o comando curl."
         description: Confira como as operações CRUD para arquivos devem ser usadas.
         destroy:
           paragraph_1: Exclui um arquivo.
@@ -1929,7 +1930,7 @@ pt-BR:
         parameter_3: <strong>dnsprimario</strong><br/> DNS primário que será utilizado pelo dispositivo. É necessário definir o DNS <strong>0.0.0.0</strong> se o protocolo de comunicação <strong>PPP</strong> for utilizado
         parameter_30: <strong>uclwifikey</strong><br/>Senha para a rede WIFI que desejamos conectar (hexadecimal)
         parameter_31: <strong>uclwifinetwork</strong><br/>Nome da rede WIFI que desejamos conectar
-        parameter_32: |- 
+        parameter_32: |-
           <strong>uclwifisecurity</strong><br/>Tipo de criptografia da rede <pre>WEP64-40
           WEP128-104
           WPA2-PSK <strong>(somente para Vx680)</strong></pre>

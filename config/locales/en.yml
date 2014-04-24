@@ -89,6 +89,7 @@ en:
           paragraph_1: 'Os seguintes atributos compõe um arquivo:'
         create:
           paragraph_1: Create a new file.
+          paragraph_2: "<strong>@file.dat</strong> is the file being registered, so in this example, there is a file called <strong>file.dat</strong> in the current directory, where the command curl is being executed."
         description: Check how CRUD operations for files should be performed.
         destroy:
           paragraph_1: Delete a file.
@@ -1930,7 +1931,7 @@ en:
         parameter_3: <strong>dnsprimario</strong><br/> primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
         parameter_30: <strong>uclwifikey</strong><br/>Password for the WIFI network we want to connect (hexadecimal)
         parameter_31: <strong>uclwifinetwork</strong><br/>Name of the WIFI network we want to connect
-        parameter_32: |- 
+        parameter_32: |-
           <strong>uclwifisecurity</strong><br/>Types of encryption <pre>WEP64-40
           WEP128-104
           WPA2-PSK <strong>(for Vx680 only)</strong></pre>

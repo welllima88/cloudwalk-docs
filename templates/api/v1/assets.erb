@@ -4,7 +4,7 @@
 
 <h1><%= I18n.t("api.v1.assets.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/08/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "24/04/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
@@ -238,8 +238,11 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <div class="tab-pane active" id="create-tab1">
 <pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/assets?access_token=$TOKEN" \
 -F "file=@file.dat" \
--F "description=CloudWalk DAT"  
+-F "description=CloudWalk DAT"
 </code></pre>
+
+<p class="note"><%= I18n.t("api.v1.assets.create.paragraph_2") %></p>
+
 </div>
 
 <div class="tab-pane" id="create-tab2">
