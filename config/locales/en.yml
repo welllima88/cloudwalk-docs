@@ -1065,7 +1065,7 @@ en:
         paragraph_1: The command <span class='code'>getdatetime</span> is used to get the device date/time.
         paragraph_2: The command <a href='getdatetime' class='command'>getdatetime</a> receives the desired format and informs the variable that will hold your return which is then displayed on the device screen.
         parameters:
-          parameter_1: '<strong>format</strong> <span class=''data-type''>[string]</span><br/>Date format retrieved where:<ul><li>yy: four-digit year</li><li>y: two-digit year</li><li>M: two-digit month</li><li>d: two-digit day</li><li>h: two-digit hour</li><li>m: two-digit minute</li><li>second: two-digit second</li>separators / and : are added automatically.</ul>'
+          parameter_1: '<strong>format</strong> <span class=''data-type''>[string]</span><br/>Date format retrieved where:<ul><li>yy: four-digit year</li><li>y: two-digit year</li><li>M: two-digit month</li><li>d: two-digit day</li><li>h: two-digit hour</li><li>m: two-digit minute</li><li>s: two-digit second</li>separators / and : are added automatically.</ul>'
           parameter_2: <strong>returnvariable</strong> <span class='data-type'>[string]</span><br/> Store the returned date.
       if:
         description: Instruction of decision making or logical comparison
