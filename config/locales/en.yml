@@ -1761,12 +1761,12 @@ en:
       system_qrcode:
         description: Generate a QR Code based on the entered data
         paragraph_1: The command <span class='code'>system.qrcode</span> is used to generate a QR Code based on the content of the parameter <strong>input</strong>. The generated QR Code can be displayed or printed (if the device has a printer).
-        paragraph_2: "In the above example, the command <strong>system.qrcode</strong> will generate the following bitmap:"
-        paragraph_3: This bitmap can now be displayed through the command <a href='displaybitmap' class='command'>displaybitmap</a>. The bitmap can also be printed through the command <a href='printbitmap' class='command'>printbitmap</a> (if the device has a printer).
+        paragraph_2: "In the above example, the command <strong>system.qrcode</strong> will generate a new bitmap on size: <strong>x1</strong> and version: <strong>4</strong> and a second bitmap on size: <strong>x5</strong> and version: <strong>4</strong>. Then, the <strong>x1</strong> QR Code will be displayed through the command <a href='displaybitmap' class='command'>displaybitmap</a> and the <strong>x5</strong> QR Code will be printed through the command <a href='printbitmap' class='command'>printbitmap</a> (if the device has a printer)."
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the bitmap that will created.
           parameter_2: <strong>input</strong> <span class='data-type'>[string]</span><br/>Content that will be used to generate the QR Code.
-          parameter_3: <strong>size</strong> <span class='data-type'>[string]</span><br/>x1 (ideal for displaying) or x2 and x3 (ideal for printing).
+          parameter_3: "<strong>size</strong> <span class='data-type'>[string]</span><br/>Size of bitmap image. Supported size: <strong>x1, x2, x3, x4 e x5</strong>."
+          parameter_4: "<strong>version</strong> <span class='data-type'>[string]</span><br/>Symbol version of QR Code. Each version has a different module configuration or number of modules). Supported versions: <strong>1, 2, 3, 4, 5 e 6</strong>."
       system_inputtransaction:
         description: Instruction to receive the data card on a contactless transaction
         paragraph_1: The command <span class='code'>system.inputtransaction</span> is an instruction to receive the data card on a contactless transaction.
