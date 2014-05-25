@@ -1,20 +1,12 @@
 # CloudWalk Docs
 
-[![Dependency Status](https://gemnasium.com/planobe/cloudwalk-docs.png)](https://gemnasium.com/planobe/cloudwalk-docs)
+[![Dependency Status](https://gemnasium.com/cloudwalkio/cloudwalk-docs.png)](https://gemnasium.com/cloudwalkio/cloudwalk-docs)
 
 [CloudWalk's](https://cloudwalk.io) open-source documentation project built on top of sinatra, with translation managed on [Locale](http://www.localeapp.com/).
 
-## Translation contributions
+## Contributions
 
-- Edit the translations directly on the [cloudwalk-docs](http://www.localeapp.com/projects/public?search=cloudwalk-docs) project on Locale.
-- **That's it!**
-- The maintainer will then pull translations from the Locale project and push to Github.
-
-Happy translating!
-
-## Other contributions
-
-Pull requests with other contributions are welcomed.
+Pull requests are welcomed.
 
 ### Getting Started
 
