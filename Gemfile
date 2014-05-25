@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'i18n',            '~> 0.6.9'
 gem 'pony',            '~> 1.8'
@@ -10,6 +10,6 @@ gem 'sinatra-partial', '~> 0.4.0'
 gem 'thin',            '~> 1.6.2'
 
 group :production do
-  gem 'rack-ssl-enforcer', '~> 0.2.6'
-  gem 'newrelic_rpm',      '~> 3.7.3.204'
+  gem 'rack-ssl-enforcer', '~> 0.2.7'
+  gem 'newrelic_rpm',      '~> 3.8.1.221'
 end
