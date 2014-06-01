@@ -4,7 +4,7 @@
 
 <h1><%= I18n.t("api.v1.assets.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "24/04/2014") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/05/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
@@ -89,7 +89,7 @@
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/assets?access_token={token}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/files?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -100,7 +100,7 @@
 
 <div class="tab-content">
 <div class="tab-pane active" id="index-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/assets?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/files?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="index-tab2">
@@ -108,7 +108,7 @@
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/assets?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/files?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -131,9 +131,9 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
       "entries":2,
       "total_entries":2
    },
-   "assets":[
+   "files":[
       {
-         "asset":{
+         "file":{
             "crc":"B446",
             "created_at":"2013-07-30T15:47:34Z",
             "created_by":1,
@@ -146,7 +146,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
          }
       },
       {
-         "asset":{
+         "file":{
             "crc":"416C",
             "created_at":"2013-07-30T15:52:23Z",
             "created_by":1,
@@ -168,7 +168,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/assets/{asset_id}?access_token={token}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/files/{file_id}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -179,7 +179,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="show-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/assets/6?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/files/6?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="show-tab2">
@@ -187,7 +187,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/assets/6?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/files/6?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -204,7 +204,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "asset":{
+  "file":{
     "content":"MT0yCjM9NAo0PTUKNj03Cjg9OQ==",
     "crc":"B446",
     "created_at":"2013-07-30T15:47:34Z",
@@ -225,7 +225,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>POST https://api.cloudwalk.io/<%= I18n.t("api.version") %>/assets?access_token={token}</code></pre>
+<pre><code>POST https://api.cloudwalk.io/<%= I18n.t("api.version") %>/files?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -236,7 +236,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="create-tab1">
-<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/assets?access_token=$TOKEN" \
+<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/files?access_token=$TOKEN" \
 -F "file=@file.dat" \
 -F "description=CloudWalk DAT"
 </code></pre>
@@ -250,7 +250,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/assets?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/files?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -270,7 +270,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "asset":{
+  "file":{
     "company_id":1,
     "content":"YT1iCmM9ZAplPWY=",
     "crc":"416C",
@@ -292,7 +292,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/assets/{asset_id}?access_token={token}</code></pre>
+<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/files/{file_id}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -303,7 +303,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="update-tab1">
-<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/assets/3?access_token=$TOKEN" \
+<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/files/3?access_token=$TOKEN" \
 -F "file=@file.dat" \
 -F "description=New CloudWalk DAT"
 </code></pre>
@@ -314,7 +314,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/assets/10?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/files/10?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -334,7 +334,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "asset":{
+  "file":{
     "company_id":1,
     "content":"YT1iCmM9ZAplPWYKZz1o",
     "crc":"1E15",
@@ -356,7 +356,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/assets/{asset_id}?access_token={token}</code></pre>
+<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/files/{file_id}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -367,7 +367,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="destroy-tab1">
-<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/assets/10?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/files/10?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="destroy-tab2">
@@ -375,7 +375,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/assets/10?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/files/10?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
