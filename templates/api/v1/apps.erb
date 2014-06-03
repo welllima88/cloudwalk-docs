@@ -4,7 +4,7 @@
 
 <h1><%= I18n.t("api.v1.apps.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/08/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "03/06/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
@@ -81,9 +81,14 @@
       <td><%= I18n.t("api.v1.apps.attributes.list.pos_display_label") %></td>
     </tr>
     <tr>
-      <td>posxml</td>
+      <td>language</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.posxml") %></td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.language") %></td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>Binary</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.binary") %></td>
     </tr>
     <tr>
       <td>size</td>
@@ -97,7 +102,7 @@
     </tr>
     <tr>
       <td>uuid</td>
-      <td>string</td>
+      <td>String</td>
       <td><%= I18n.t("api.v1.apps.attributes.list.uuid") %></td>
     </tr>
   </tbody>
@@ -164,6 +169,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "id":172,
             "name":"helloworld.posxml",
             "pos_display_label":"HELLO WORLD",
+            "language":"posxml",
+            "binary":"ZDAKMApoZWxsb3dvcmxkLnBvc3htbAoNdQ0=",
             "size":18,
             "updated_at":"2013-07-24T12:09:49-03:00",
             "uuid":"2ca44bb6567747f8a3b0eed5dfe714f0"
@@ -181,6 +188,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "id":173,
             "name":"sample.posxml",
             "pos_display_label":"SAMPLE APP",
+            "language":"posxml",
+            "binary":"ZDAKMApzYW1wbGUucG9zeG1sCg11DQ==",
             "size":17,
             "updated_at":"2013-07-24T12:13:26-03:00",
             "uuid":"34809a19bc192aa901823c911230ff0a"
@@ -243,7 +252,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
     "id":172,
     "name":"helloworld.posxml",
     "pos_display_label":"HELLO WORLD",
-    "posxml":"ZDAKMApIZWxsbyBXb3JsZAoN",
+    "language":"posxml",
+    "binary":"ZDAKMApIZWxsbyBXb3JsZAoN",
     "size":18,
     "updated_at":"2013-07-24T12:09:49-03:00",
     "uuid":"2ca44bb6567747f8a3b0eed5dfe714f0"
@@ -307,7 +317,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
   "app":{
     "authorizer_url":"http://auth.io",
     "company_id":1,
-    "crc":null,
+    "crc":"EFBD",
     "created_at":"2013-07-26T20:33:31Z",
     "created_by":218,
     "created_via":"api",
@@ -316,8 +326,9 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
     "id":173,
     "name":"newapp.posxml",
     "pos_display_label":"",
-    "posxml":null,
-    "size":null,
+    "language":"posxml",
+    "binary":"ZDAKMApuZXdhcHAucG9zeG1sCg0=",
+    "size":20,
     "updated_at":"2013-07-26T20:33:31Z",
     "uuid":"763f25a891924e0d974d5df871381b11"
   }
@@ -344,7 +355,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <div class="tab-content">
 <div class="tab-pane active" id="update-tab1">
 <pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/apps/173?access_token=$TOKEN" \
--d '{"posxml":"ZDAKMApDbG91ZFdhbGsKDQ=="}'
+-d '{"binary":"ZDAKMApDbG91ZFdhbGsKDQ=="}'
 </code></pre>
 </div>
 
@@ -355,7 +366,7 @@ require 'json'
 token = 'API_TOKEN'
 
 payload = {
-  "posxml" => "ZDAKMApDbG91ZFdhbGsKDQ=="
+  "binary" => "ZDAKMApDbG91ZFdhbGsKDQ=="
 }
 
 uri = URI("https://api.cloudwalk.io/v1/apps/173?access_token=#{token}")
@@ -386,7 +397,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
     "id":173,
     "name":"newapp.posxml",
     "pos_display_label":"",
-    "posxml":"ZDAKMApDbG91ZFdhbGsKDQ==",
+    "language":"posxml",
+    "binary":"ZDAKMApDbG91ZFdhbGsKDQ==",
     "size":16,
     "updated_at":"2013-07-26T21:50:21Z",
     "uuid":"6828c8d4b01242158243b797ae10df4b"

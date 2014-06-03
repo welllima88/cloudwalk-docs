@@ -39,7 +39,7 @@ pt-BR:
         attributes:
           list:
             authorizer_url: URL do autorizador que a aplicação irá se conectar
-            crc: <a href='http://en.wikipedia.org/wiki/Cyclic_redundancy_check' class='external'>CRC</a> do POSXML da aplicação
+            crc: <a href='http://en.wikipedia.org/wiki/Cyclic_redundancy_check' class='external'>CRC</a> da aplicação
             created_at: Timestamp da criação do registro (ISO 8601)
             created_by: ID do usuário que criou o registro
             created_via: Canal utilizado para criar o registro (Interface ou API)
@@ -48,16 +48,17 @@ pt-BR:
             id: ID do registro
             name: Nome da aplicação
             pos_display_label: Nome exibido no meu de aplicativos (se displayable for verdadeiro)
-            posxml: Código POSXML da aplicação, codificado com Base64
+            language: Linguagem de programação utilizada no desenvolvimento da aplicação
+            binary: Binário da aplicação
             size: Tamanho da aplicação, em bytes
             updated_at: Timestamp da atualização do registro (ISO 8601)
             uuid: Identificador Único Universal
-          paragraph_1: 'Os seguintes atributos compõe uma aplicação POSXML:'
+          paragraph_1: 'Os seguintes atributos compõe uma aplicação:'
         create:
-          paragraph_1: Cria uma nova aplicação POSXML.
+          paragraph_1: Cria uma nova aplicação.
         description: Confira como as operações CRUD para aplicações devem ser usadas.
         destroy:
-          paragraph_1: Exclui uma aplicação POSXML.
+          paragraph_1: Exclui uma aplicação.
         index:
           paragraph_1: Retorna um array com todas as aplicações.
         show:
@@ -72,7 +73,7 @@ pt-BR:
         title: Developer API - Aplicações
         update:
           paragraph_1: Modifica uma aplicação já existente.
-          paragraph_2: O bytecode enviado no parâmetro <strong>posxml</strong> precisa estar encodado com Base64.
+          paragraph_2: O bytecode enviado no parâmetro <strong>binary</strong> precisa estar encodado com Base64.
       assets:
         attributes:
           list:
