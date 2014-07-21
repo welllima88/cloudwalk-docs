@@ -282,13 +282,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h4><%= I18n.t("api.v1.parameters.group") %></h4>
 
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/parameters?access_token=$TOKEN" \
+<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/parameters?access_token=$TOKEN" \
 -d '{"name":"Dev","key":"max_parcels","value":"6","description":"Max parcels allowed"}'
 </code></pre>
 
 <h4><%= I18n.t("api.v1.parameters.logical_number") %></h4>
 
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/parameters?access_token=$TOKEN" \
+<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/parameters?access_token=$TOKEN" \
 -d '{"number":"778899","key":"min_value","value":"1.50","description":"Min value allowed"}'
 </code></pre>
 </div>
@@ -437,7 +437,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="destroy-tab1">
-  
+
 <h4><%= I18n.t("api.v1.parameters.group") %></h4>
 
 <pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/parameters/1?access_token=$TOKEN" \
