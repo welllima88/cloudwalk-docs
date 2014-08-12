@@ -824,7 +824,7 @@ en:
         paragraph_2: In the above example, to display a bitmap with the command <strong>displaybitmap</strong>, first needs to be downloaded the file using <a href='downloadfile' class='command'>downloadfile</a>.
         paragraph_3: In this case it is not necessary to use the command <a href='display' class='command'>display</a> to view the image.
         paragraph_4: The variable <strong>iReturn</strong> will store the result of the command.
-        paragraph_5: 'The image dimensions that will be shown must be aligned according to the device model and specification. Check an example image: <a href=''https://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp'' class=''external'' target=''_blank''>CloudWalk_Wallpaper</a>'
+        paragraph_5: 'The image dimensions that will be shown must be aligned according to the device model and specification. Check an example image: <a href=''http://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp'' class=''external'' target=''_blank''>CloudWalk_Wallpaper</a>'
         parameters:
           parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will receive return of the command.<ul><li>-2: Bitmap is monochrome</li><li>-1: invalid bitmap size</li><li>0: bitmap not found</li><li>1: bitmap successfully displayed</li></ul>'
           parameter_2: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name with extension.
@@ -1960,7 +1960,7 @@ en:
       creating_and_editing_files:
         paragraph_1: The commands <a href='/posxml/commands/editfile' class='command'>editfile</a>, <a href='/posxml/commands/readfile' class='command'>readfile</a> and <a href='/posxml/commands/readfilebyindex' class='command'>readfilebyindex</a> can be used to work with this file type, based on keys and values, enabling a fast and efficient way to store static data on the device.
         paragraph_2: 'We recommend using the utility EditDBFile to manipulate your WALK dbfile files. Follow the following procedure:'
-        paragraph_3: Download the utility from  <a href='https://dl.cloudwalk.io/edit_db_file.zip'>https://dl.cloudwalk.io/edit_db_file.zip</a>
+        paragraph_3: Download the utility from  <a href='http://dl.cloudwalk.io/edit_db_file.zip'>http://dl.cloudwalk.io/edit_db_file.zip</a>
         paragraph_4: Unzip and run the package <strong>EditDbFileWalk.exe</strong>
         paragraph_5: Enter the path to the dat file and press the button <strong>Load</strong>
         paragraph_6: Make the necessary changes and press the button <strong>Save</strong>

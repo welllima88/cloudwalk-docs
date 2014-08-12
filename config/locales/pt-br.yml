@@ -823,7 +823,7 @@ pt-BR:
         paragraph_2: No exemplo acima, será alterado a imagem referente ao plano de fundo da aplicação principal do dispositivo. Para exibir uma imagem no formato .bmp (bitmap monocromático) utilizando o comando <strong>displaybitmap</strong>, é necessário baixar o respectivo arquivo usando o comando <a href='downloadfile' class='command'>downloadfile</a>. O campo <strong>filename</strong>, deve conter o nome da imagem que ficará armazenada no dispositivo, já no campo <strong>remotepath</strong>, deve ser informado o nome da imagem ou arquivo armazenado no <a href='https://manager.cloudwalk.io' class='external' target='_blank'>CloudWalk Manager</a>.
         paragraph_3: Neste caso não é preciso utilizar o comando <a href='display' class='command'>display</a> para exibir a imagem.
         paragraph_4: A variável <strong>iReturn</strong> irá armazenar o resultado do comando.
-        paragraph_5: 'As dimensões da imagem que será exibida, devem ser alinhados de acordo com a especificação e modelo do dispositvo utilizado. Confira uma imagem exemplo: <a href=''https://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp'' class=''external'' target=''_blank''>CloudWalk_Wallpaper</a>'
+        paragraph_5: 'As dimensões da imagem que será exibida, devem ser alinhados de acordo com a especificação e modelo do dispositvo utilizado. Confira uma imagem exemplo: <a href=''http://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp'' class=''external'' target=''_blank''>CloudWalk_Wallpaper</a>'
         parameters:
           parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variável que irá receber o retorno do comando.<ul><li>-2: bitmap não é monocromático</li><li>-1: tamanho de bitmap inválido</li><li>0: bitmap não encontrado</li><li>1: bitmap exibido com sucesso</li></ul>'
           parameter_2: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Nome do arquivo, com extensão.
@@ -1959,7 +1959,7 @@ pt-BR:
       creating_and_editing_files:
         paragraph_1: Os comandos <a href='/posxml/commands/editfile' class='command'>editfile</a>, <a href='/posxml/commands/readfile' class='command'>readfile</a> e <a href='/posxml/commands/readfilebyindex' class='command'>readfilebyindex</a> podem ser utilizados para trabalhar com este tipo de arquivo, baseado em chaves e valores, possibilitando um meio rápido e eficiente para armazenar dados estáticos no dispositivo.
         paragraph_2: 'Recomendamos a utilização do utilitário EditDBFile para manipular seus arquivos WALK dbfile. Siga o seguinte procedimento:'
-        paragraph_3: Baixe o utilitário em <a href='https://dl.cloudwalk.io/edit_db_file.zip'>https://dl.cloudwalk.io/edit_db_file.zip</a>
+        paragraph_3: Baixe o utilitário em <a href='http://dl.cloudwalk.io/edit_db_file.zip'>http://dl.cloudwalk.io/edit_db_file.zip</a>
         paragraph_4: Descompacte o pacote e execute o arquivo <strong>EditDbFileWalk.exe</strong>
         paragraph_5: Digite o caminho do arquivo dat e pressione o botão <strong>Load</strong>
         paragraph_6: Faça as devidas alterações e pressione o botão <strong>Save</strong>
