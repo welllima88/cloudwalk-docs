@@ -11,5 +11,5 @@ gem 'thin',            '~> 1.6.2'
 
 group :production do
   gem 'rack-ssl-enforcer', '~> 0.2.8'
-  gem 'newrelic_rpm',      '~> 3.9.0.229'
+  gem 'newrelic_rpm',      '~> 3.9.3.241'
 end
