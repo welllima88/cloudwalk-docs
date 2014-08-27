@@ -53,7 +53,7 @@ end
 # LOCALE
 post '/' do
   old_locale = params["url"].split("/")[1]
-  redirect params["url"].gsub(old_locale, params["locale"]), 301
+  redirect params["url"].sub(old_locale, params["locale"]), 301
 end
 
 # HOME
