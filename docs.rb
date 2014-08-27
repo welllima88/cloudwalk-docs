@@ -132,7 +132,7 @@ end
   # crypto
   "crypto.crc", "crypto.encryptdecrypt", "crypto.lrc", "crypto.xor",
   # file
-  "downloadfile", "filesystem.filesize", "filesystem.listfiles", "filesystem.space", "file.open", "file.close", "file.read", "file.write", "readfile", "readfilebyindex", "editfile", "deletefile",
+  "filesystem.listfiles", "filesystem.renamefile", "filesystem.filesize", "filesystem.space", "file.open", "file.read", "file.write", "file.close", "readfile", "readfilebyindex", "editfile", "deletefile", "downloadfile",
   # iso
   "iso8583.initfieldtable", "iso8583.initmessage", "iso8583.putfield", "iso8583.endmessage", "iso8583.transactmessage", "iso8583.analyzemessage", "iso8583.getfield",
   # serialport
