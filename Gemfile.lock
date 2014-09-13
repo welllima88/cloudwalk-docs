@@ -3,6 +3,7 @@ GEM
   specs:
     backports (3.6.0)
     daemons (1.1.9)
+    docile (1.1.5)
     eventmachine (1.0.3)
     i18n (0.6.11)
     mail (2.6.1)
@@ -18,6 +19,11 @@ GEM
     rack-ssl-enforcer (0.2.8)
     rack-test (0.6.2)
       rack (>= 1.0)
+    simplecov (0.9.0)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -45,6 +51,8 @@ DEPENDENCIES
   newrelic_rpm (~> 3.9.4.245)
   pony (~> 1.11)
   rack-ssl-enforcer (~> 0.2.8)
+  rack-test (~> 0.6.2)
+  simplecov (~> 0.9.0)
   sinatra (~> 1.4.5)
   sinatra-contrib (~> 1.4.2)
   sinatra-partial (~> 0.4.0)
