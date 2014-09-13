@@ -14,7 +14,7 @@ pt-BR:
         paragraph_4: '<strong>POST: </strong>Cria um novo recurso. Por exemplo, <span class=''code''>POST /%{version}/devices</span> criaria um novo número de série. A informação enviada na requisição POST seria então utilizada para preencher as propriedades do número de série.'
         paragraph_5: '<strong>PUT: </strong>Atualiza um recurso já existente. Por exemplo, <span class=''code''>PUT /%{version}/devices/135</span> atualizaria o número de série com o ID 135. A informação enviada na requisição PUT seria então utilizada para atualizar as propriedades do número de série.'
         paragraph_6: '<strong>DELETE: </strong>Exclui um recurso já existente. Por exemplo, <span class=''code''>DELETE /%{version}/devices/135</span> excluiria o número de série com o ID 135.'
-      description: 'O Acesso a API deve ser feito através do endereço https://manager.cloudwalk.io/api. CRUD: Create, Retrieve, Update and Destroy.'
+      description: 'O Acesso a API deve ser feito através do endereço https://manager.cloudwalk.io/api.'
       functionality:
         paragraph_1: O acesso a API deve ser feito a partir do domínio <span class='code'>https://api.cloudwalk.io/%{version}</span>.
         paragraph_2: As requisições devem ser feitas utilizando o protocolo <strong>HTTPS</strong>.
@@ -63,7 +63,7 @@ pt-BR:
           paragraph_1: Retorna um array com todas as aplicações.
         show:
           paragraph_1: Retorna os detalhes de uma aplicação específica.
-        table_of_contents:
+        table_ofntents:
           attributes: Atributos de uma aplicação
           create: Criação de uma nova aplicação
           destroy: Exclusão de uma aplicação
@@ -2462,6 +2462,7 @@ pt-BR:
     ingenico_telium_1:
       description: Processo passo a passo de instalação do WALK Framework em terminais Ingenico EFT930G e EFT930S.
       introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais Ingenico <strong>EFT930G</strong> e <strong>EFT930S</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      deprecated: "Os terminais <strong>Telium 1</strong> (EFT930G e EFT930S) foram descontinuados, e portanto estes terminais não mais suportam EMV. Os mesmos ainda podem ser utilizados, mas não podem realizar transações financeiras (Visa, Master, etc)."
       loading_the_framework:
         paragraph_1: 'Os modelos <strong>EFT930G</strong> e <strong>EFT930S</strong> dispõem de uma entrada para um adaptador USB localizada no lado esquerdo do terminal. Conecte o adaptador USB na entrada e em seguida conecte o pendrive na outra extremidade, conforme a imagem abaixo:'
         paragraph_2: 'Siga então o seguinte procedimento:'

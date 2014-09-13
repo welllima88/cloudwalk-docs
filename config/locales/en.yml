@@ -14,7 +14,7 @@ en:
         paragraph_4: '<strong>POST: </strong>Creates a new resource. For example, <span class=''code''>POST /%{version}/devices</span> creates a new serial number. The information sent in the POST request would then be used to fill the properties of the serial number.'
         paragraph_5: '<strong>PUT: </strong>Updates an existing resource. For example, <span class=''code''>PUT /%{version}/devices/135</span> updates the serial number with the ID 135. The information sent in the PUT request would then be used to update the properties of the serial number.'
         paragraph_6: '<strong>DELETE: </strong>Deletes an existing resource. For example, <span class=''code''>DELETE /%{version}/devices/135</span> deletes the serial number with the ID 135.'
-      description: 'Access to the API must be done from the domain https://manager.cloudwalk.io/api. CRUD: Create, Retrieve, Update and Destroy.'
+      description: 'Access to the API must be done from the domain https://manager.cloudwalk.io/api.'
       functionality:
         paragraph_1: The access to the API must be done from the domain <span class='code'>https://api.cloudwalk.io/%{version}</span>.
         paragraph_2: The requests should be made using the <strong>HTTPS</strong> protocol.
@@ -335,7 +335,6 @@ en:
         paragraph_2: The emulator runs directly on CloudWalk IDE, ie directly in a web browser, eliminating the need of any kind of installation or configuration.
         paragraph_3: It's never been easier to develop for POS terminals and smarphones!
       workflow:
-        paragraph_1: Uma tarefa bastante comum em qualquer tipo de desenvolvimento é testar o workflow da aplicação que está sendo desenvolvida. Com o CloudWalk IDE você pode a qualquer momento pressionar o botão <strong>Compile</strong> e em seguida pressionar o botão <strong>Emulator</strong> para inciar a emulação da aplicação.
         paragraph_1: A common task in any kind of development is to test the workflow of the application being developed. With CloudWalk IDE you can at any time press the <strong>Compile</strong> button, and then press the <strong>Emulator</strong> button to start the emulation.
         paragraph_2: "We have prepared a video for demonstration purposes, a simple Hello World with a pause between the messages that are displayed:"
       printing:
@@ -2463,6 +2462,7 @@ en:
     ingenico_telium_1:
       description: Step by step process of installing the WALK Framework on terminals Ingenico EFT930G and EFT930S.
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals Ingenico <strong>EFT930G</strong> and <strong>EFT930S</strong>. Be aware of prerequisites and follow the installation process carefully.
+      deprecated: "<strong>Telium 1</strong> (EFT930G and EFT930S) has been deprecated and therefore has no EMV support anymore. The POS terminals can still be used, but they are not allowed to perform financial transactions (Visa, Master, etc)."
       loading_the_framework:
         paragraph_1: 'The models <strong>EFT930G</strong> and <strong>EFT930S</strong> have an entry for an USB adapter on the left side of the terminal. Connect the USB adapter on the entry and then connect the USB stick on the other end, as the picture below:'
         paragraph_2: 'Then follow the following procedure:'
