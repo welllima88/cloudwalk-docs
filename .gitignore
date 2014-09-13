@@ -1,5 +1,5 @@
 .bundle
 .DS_Store
 tmp
-.localeapp
 log/*
+coverage/*
