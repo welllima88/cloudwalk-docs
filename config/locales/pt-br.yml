@@ -2462,7 +2462,7 @@ pt-BR:
     ingenico_telium_1:
       description: Processo passo a passo de instalação do WALK Framework em terminais Ingenico EFT930G e EFT930S.
       introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais Ingenico <strong>EFT930G</strong> e <strong>EFT930S</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
-      deprecated: "Os terminais <strong>Telium 1</strong> (EFT930G e EFT930S) foram descontinuados, e portanto estes terminais não mais suportam EMV. Os mesmos ainda podem ser utilizados, mas não podem realizar transações financeiras (Visa, Master, etc)."
+      deprecated: "Os terminais <strong>Telium 1</strong> (EFT930G e EFT930S) foram descontinuados, e não mais suportam EMV. Os mesmos ainda podem ser utilizados, mas não podem realizar transações financeiras (Visa, Master, etc). <a href='http://www.emvco.com/approvals.aspx?id=215#I'>Mais informações ≫</a>"
       loading_the_framework:
         paragraph_1: 'Os modelos <strong>EFT930G</strong> e <strong>EFT930S</strong> dispõem de uma entrada para um adaptador USB localizada no lado esquerdo do terminal. Conecte o adaptador USB na entrada e em seguida conecte o pendrive na outra extremidade, conforme a imagem abaixo:'
         paragraph_2: 'Siga então o seguinte procedimento:'

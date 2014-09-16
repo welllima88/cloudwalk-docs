@@ -2462,7 +2462,7 @@ en:
     ingenico_telium_1:
       description: Step by step process of installing the WALK Framework on terminals Ingenico EFT930G and EFT930S.
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals Ingenico <strong>EFT930G</strong> and <strong>EFT930S</strong>. Be aware of prerequisites and follow the installation process carefully.
-      deprecated: "<strong>Telium 1</strong> (EFT930G and EFT930S) has been deprecated and therefore has no EMV support anymore. The POS terminals can still be used, but they are not allowed to perform financial transactions (Visa, Master, etc)."
+      deprecated: "<strong>Telium 1</strong> (EFT930G and EFT930S) has been deprecated and therefore has no EMV support anymore. The POS terminals can still be used, but they are not allowed to perform financial transactions (Visa, Master, etc). <a href='http://www.emvco.com/approvals.aspx?id=215#I'>More ≫</a>"
       loading_the_framework:
         paragraph_1: 'The models <strong>EFT930G</strong> and <strong>EFT930S</strong> have an entry for an USB adapter on the left side of the terminal. Connect the USB adapter on the entry and then connect the USB stick on the other end, as the picture below:'
         paragraph_2: 'Then follow the following procedure:'
