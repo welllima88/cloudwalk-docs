@@ -45,7 +45,11 @@ class Routes
       { "url" => "integration/architecture",             "view_path" => "integration/architecture"},
       { "url" => "integration/tcp",                      "view_path" => "integration/tcp"},
       { "url" => "integration/http",                     "view_path" => "integration/http"},
-      { "url" => "integration/advanced-http",            "view_path" => "integration/advanced_http"}
+      { "url" => "integration/advanced-http",            "view_path" => "integration/advanced_http"},
+      # GUIDES
+      { "url" => "guides/logs-patterns",                 "view_path" => "guides/logs_patterns/intro"},
+      { "url" => "guides/logs-patterns/1",               "view_path" => "guides/logs_patterns/1"},
+      { "url" => "guides/logs-patterns/2",               "view_path" => "guides/logs_patterns/2"}
     ]
   end
 
