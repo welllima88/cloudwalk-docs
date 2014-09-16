@@ -2,29 +2,32 @@
   <meta name="docs:description" content="short page description">
 <% end %>
 
-<h1>Logs Patterns, Intro</h1>
+<h1>Logs Patterns - Introduction</h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
-  <li><a href="#first">First</a></li>
-  <li><a href="#second">Second</a></li>
-  <li><a href="#third">Third</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#how-it-works">How it works</a></li>
 </ol>
 
-<h2 id="first">First</h2>
+<h2 id="introduction">Introduction</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>You can see your transactions logs in real-time in CloudWalk Manager <span class="todo">Insert link</span>, but it is too difficult to detect any pattern just by looking at the scrolling lines.</p> 
 
-<h2 id="second">Second</h2>
+<p>To help us, only humans, in this task, we created an artificial intelligence service that watch, in real-time, each log line of your applications looking for patterns and anomalies.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>In the next section will briefly describe the core algorithm of our service, but if you are only interested in how to <em>use</em> it, you can go ahead and start our tutorial <span class="todo">Insert link</span>.</p>
 
-<h2 id="third">Third</h2>
+<h2 id="how-it-works">How it works</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>At the core of the service there is an algorithm called <em>density-based spatial clustering of applications with noise</em> (DBSCAN), which we modified to work efficiently with discrete data, as those extracted from your logs, calling it <em>discrete density-based spatial clustering of applications with noise</em> (DDBSCAN). Our DDBSCAN implementation is <a href="https://github.com/cloudwalkio/ddbscan">open-sourced</a>, even though our full application is not.</p>
+
+<p>The DDBSCAN algorithm is a <em>clustering</em> algorithm, meaning that it tries to find transactions that looks similar in some precise mathematical sense. If anything happens outside our previously learnt patterns, it will flag the transaction as anomalous.</p>
+
+<p>In order to identify what transactions do constitute a pattern and what does not, we must set two parameters for the algorithm.</p>
 
 <ul class="pager">
   <li class="next">
