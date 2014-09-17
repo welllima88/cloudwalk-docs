@@ -2,6 +2,15 @@
   <meta name="docs:description" content="short page description">
 <% end %>
 
+<style type="text/css">
+  .todo {
+    font-size: 28px;
+    color: red;
+    font-family: monospace;
+  }
+
+</style>
+
 <h1>Logs Patterns - Introduction</h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
@@ -10,27 +19,35 @@
 
 <ol class="table-of-contents">
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#how-it-works">How it works</a></li>
+  <li><a href="#pattern">What is a pattern</a></li>
+  <li><a href="#anomaly">What is an anomaly</a></li>
+  <li><a href="#algorithm">The core algorithm</a></li>
 </ol>
 
 <h2 id="introduction">Introduction</h2>
 
 <p>You can see your transactions logs in real-time in CloudWalk Manager <span class="todo">Insert link</span>, but it is too difficult to detect any pattern just by looking at the scrolling lines.</p> 
 
-<p>To help us, only humans, in this task, we created an artificial intelligence service that watch, in real-time, each log line of your applications looking for patterns and anomalies.</p>
+<p>To help us, only humans, in this task, we created an artificial intelligence service that watch, in real-time, each log line generate by your transactions, looking for patterns and anomalies in them.</p>
 
-<p>In the next section will briefly describe the core algorithm of our service, but if you are only interested in how to <em>use</em> it, you can go ahead and start our tutorial <span class="todo">Insert link</span>.</p>
+<h2 id="pattern">What is a pattern</h2>
 
-<h2 id="how-it-works">How it works</h2>
+<p>Our algorithm looks for patterns, but what is a pattern?</p>
 
-<p>At the core of the service there is an algorithm called <em>density-based spatial clustering of applications with noise</em> (DBSCAN), which we modified to work efficiently with discrete data, as those extracted from your logs, calling it <em>discrete density-based spatial clustering of applications with noise</em> (DDBSCAN). Our DDBSCAN implementation is <a href="https://github.com/cloudwalkio/ddbscan">open-sourced</a>, even though our full application is not.</p>
+<p> For our purposes, a pattern is a set of somewhat similar transactions. To find which transactions are similar, our algorithm keep an eye at the sizes of messages sent by your POS to your authorizer and at the sizes of messages received in response. A pattern is them a set of transactions with similar sized messages. It's the algorithm's job to find those similar transactions.</p>
 
-<p>The DDBSCAN algorithm is a <em>clustering</em> algorithm, meaning that it tries to find transactions that looks similar in some precise mathematical sense. If anything happens outside our previously learnt patterns, it will flag the transaction as anomalous.</p>
+<h2 id="anomaly">What is an anomaly</h2>
 
-<p>In order to identify what transactions do constitute a pattern and what does not, we must set two parameters for the algorithm.</p>
+<p>An anomaly is a transaction that does not fit in any previously seen pattern. So an anomalous transaction has messages with unusual (until now) sizes. As our algorithm keeps learning from your transactions, it will eventually recognize a recurring anomaly as a new pattern, and will stop giving you any warnings about it.</p>
+
+<p class="alert alert-warning" role="alert">Be cautious when giving meaning to an anomalous transaction. It does not necessarily means something bad has happened. As an example, when you start testing a new application, you will probably see a lot of anomalous transactions, as they won't fit any previously seen pattern.</p>
+
+<h2 id="algorithm">The core algorithm</h2>
+
+<p>At the core of the service there is an algorithm called <em>density-based spatial clustering of applications with noise</em> (<a href='http://www.wikiwand.com/en/DBSCAN' class='external'>DBSCAN</a>), which we modified to work efficiently with discrete streaming data (as those from your logs), calling it <em>discrete density-based spatial clustering of applications with noise</em> (DDBSCAN). Our DDBSCAN implementation is available as a <a href='https://pypi.python.org/pypi/ddbscan/' class='external'>Python package</a> and its source code is open on <a href='https://github.com/cloudwalkio/ddbscan' class='external'>Github</a>.</p>
 
 <ul class="pager">
   <li class="next">
-    <%= link_to("Primeiro passo" + " &rarr;", "guides/logs-patterns/1") %>
+    <%= link_to("Tutorial, Part 1" + " &rarr;", "guides/logs-patterns/1") %>
   </li>
 </ul>

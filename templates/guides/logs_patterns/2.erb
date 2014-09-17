@@ -2,6 +2,15 @@
   <meta name="docs:description" content="short page description">
 <% end %>
 
+<style type="text/css">
+  .todo {
+    font-size: 28px;
+    color: red;
+    font-family: monospace;
+  }
+
+</style>
+
 <h1>Logs Patterns - Tutorial, Part 2</h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
@@ -9,8 +18,17 @@
 <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
+  <li><a href="#patterns-chart">Patterns chart</a></li>
   <li><a href="#setting-parameters">Setting parameters</a></li>
 </ol>
+
+<h2 id="setting-parameters">Patterns chart</h2>
+
+<p>When you access the Patterns tab, you see a chart with your transactions patterns that may look like this:</p>
+
+<span class="todo">Insert manager.cloudwalk.io/transactions/patterns?tab=2 screenshot</span>
+
+<p>Of course yours will be different, as the chart is constructed from yours transactions.</p>
 
 <h2 id="setting-parameters">Setting parameters</h2>
 
