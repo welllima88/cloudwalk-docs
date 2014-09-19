@@ -48,8 +48,10 @@ class Routes
       { "url" => "integration/advanced-http",            "view_path" => "integration/advanced_http"},
       # GUIDES
       { "url" => "guides/logs-patterns",                 "view_path" => "guides/logs_patterns/intro"},
-      { "url" => "guides/logs-patterns/1",               "view_path" => "guides/logs_patterns/1"},
-      { "url" => "guides/logs-patterns/2",               "view_path" => "guides/logs_patterns/2"}
+      { "url" => "guides/logs-patterns/1",               "view_path" => "guides/logs_patterns/tutorial_1_overview"},
+      { "url" => "guides/logs-patterns/2",               "view_path" => "guides/logs_patterns/tutorial_2_anomalies_report"},
+      { "url" => "guides/logs-patterns/3",               "view_path" => "guides/logs_patterns/tutorial_3_patterns_chart"},
+      { "url" => "guides/logs-patterns/4",               "view_path" => "guides/logs_patterns/tutorial_4_notifications_settings"},
     ]
   end
 
