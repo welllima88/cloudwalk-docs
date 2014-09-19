@@ -1,0 +1,58 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
+<% end %>
+
+<style type="text/css">
+  .todo {
+    font-size: 28px;
+    color: red;
+    font-family: monospace;
+  }
+
+</style>
+
+<h1>Logs Patterns - Tutorial, Notifications Settings</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+   <li><a href="#setting-notifications">Notifications Settings</a></li>
+</ol>
+
+<h2 id="setting-notifications">Notifications Settings</h2>
+
+<p>Here you can set an e-mail that will receive notifications when a new anomaly is found.</p>
+
+<p>There is also an option to configure a webhook that will receive HTTP Posts of new anomalies. The payload will be a JSON with structure similar to this example:</p>
+
+<pre><code data-language="javascript">{
+    "notification_type": "anomaly",
+    "sent_at": "2014-09-17T21:35:17.136707",
+    "description": {
+        "url": "http://http-echo.cloudwalk.io",
+        "count": 359098,
+        "model_params": {
+            "min_pts": 40,
+            "eps": 20
+        },
+        "request": {
+            "buffer": "\"012345678\"",
+            "timestamp": "2014-09-17T21:35:02",
+            "size": "9"
+        },
+        "response": {
+            "buffer": "\"CLOUDWALK 012345678\" ",
+            "timestamp": "2014-09-17T21:35:02",
+            "size": "19"
+        }
+    }
+}
+</code></pre>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "Tutorial, Patterns Chart", "guides/logs-patterns/3") %>
+  </li>
+</ul>

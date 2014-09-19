@@ -1,0 +1,64 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
+<% end %>
+
+<style type="text/css">
+  .todo {
+    font-size: 28px;
+    color: red;
+    font-family: monospace;
+  }
+
+</style>
+
+<h1>Logs Patterns - Tutorial, Patterns Chart</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+   <li><a href="#interface">Interface presentation</a></li>
+   <li><a href="#parameters">Understanding the parameters</a></li>
+</ol>
+
+<h2 id="interface">Interface presentation</h2>
+
+<p>When accessing the patterns tab, you'll see a screen similar to this:</p>
+
+<span class="todo">Insert manager.cloudwalk.io/transactions/patterns?tab=2 screenshot</span>
+
+<p>This nice colorful chart is a representation of your transactions. The horizontal axis corresponds to the size of the message sent by your POS and vertical axis corresponds to the size of the message received in response. </p>
+
+<p>The colorful circles represents patterns: same color transactions belongs to same pattern.</p>
+
+<p>The little gray circles are all anomalous transactions and don't belong to any pattern. The little gray squares represents the last ten anomalies.</p>
+
+<p>The big square is your latest transaction, and if it is grey, it's an anomalous transaction.</p>
+
+<p>You can interact with the chart:
+<ul>
+  <li>You can hover your mouse over any point to see more details about the transaction.</li>
+  <li>You can click on the point to see even more information: it will show the message's buffers.</li>
+  <li>You can drag the graph panel to see transactions other regions.</li>
+  <li> You can also use your mousewheel to zoom in/out.</li>
+</ul>
+
+</p>
+
+<p>The parameters on the right side of the screen are really important, so we will explain everything you need to know about them in the next section.</p>
+
+<h2 id="parameters">Understanding the parameters</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<span class="todo">Insert static figures showing the effect of each parameter in the chart</span>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "Tutorial, Anomalies Report", "guides/logs-patterns/2") %>
+  </li>
+  <li class="next">
+    <%= link_to("Tutorial, Notifications Settings" + " &rarr;", "guides/logs-patterns/4") %>
+  </li>
+</ul>

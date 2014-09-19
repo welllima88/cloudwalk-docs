@@ -38,16 +38,16 @@
 
 <h2 id="anomaly">What is an anomaly</h2>
 
-<p>An anomaly is a transaction that does not fit in any previously seen pattern. So an anomalous transaction has messages with unusual (until now) sizes. As our algorithm keeps learning from your transactions, it will eventually recognize a recurring anomaly as a new pattern, and will stop giving you any warnings about it.</p>
+<p>An anomaly is a transaction that does not fit in any previously seen pattern. So an anomalous transaction has messages with unusual (until then) sizes. As our algorithm keeps learning from your transactions, it will eventually recognize a recurring anomaly as a new pattern, and will stop giving you any warnings about it.</p>
 
 <p class="alert alert-warning" role="alert">Be cautious when giving meaning to an anomalous transaction. It does not necessarily means something bad has happened. As an example, when you start testing a new application, you will probably see a lot of anomalous transactions, as they won't fit any previously seen pattern.</p>
 
 <h2 id="algorithm">The core algorithm</h2>
 
-<p>At the core of the service there is an algorithm called <em>density-based spatial clustering of applications with noise</em> (<a href='http://www.wikiwand.com/en/DBSCAN' class='external'>DBSCAN</a>), which we modified to work efficiently with discrete streaming data (as those from your logs), calling it <em>discrete density-based spatial clustering of applications with noise</em> (DDBSCAN). Our DDBSCAN implementation is available as a <a href='https://pypi.python.org/pypi/ddbscan/' class='external'>Python package</a> and its source code is open on <a href='https://github.com/cloudwalkio/ddbscan' class='external'>Github</a>.</p>
+<p>At the core of the service there is an algorithm called <em>density-based spatial clustering of applications with noise</em> (<a href='http://www.wikiwand.com/en/DBSCAN' class='external'>DBSCAN</a>), which we modified to work efficiently with discrete streaming data (as those from your logs), calling it <em>discrete density-based spatial clustering of applications with noise</em> (DDBSCAN). Our DDBSCAN implementation is available as a <a href='https://pypi.python.org/pypi/ddbscan/' class='external'>Python package</a> and its source code is open at <a href='https://github.com/cloudwalkio/ddbscan' class='external'>Github</a>.</p>
 
 <ul class="pager">
   <li class="next">
-    <%= link_to("Tutorial, Part 1" + " &rarr;", "guides/logs-patterns/1") %>
+    <%= link_to("Tutorial, Overview" + " &rarr;", "guides/logs-patterns/1") %>
   </li>
 </ul>
