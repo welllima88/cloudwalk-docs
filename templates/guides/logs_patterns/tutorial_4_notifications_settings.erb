@@ -11,21 +11,37 @@
 
 </style>
 
-<h1>Logs Patterns - Tutorial, Notifications Settings</h1>
+<h1>Logs Patterns - Notifications Settings</h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
-   <li><a href="#setting-notifications">Notifications Settings</a></li>
+  <li><a href="#interface">Interface presentation</a></li>
+  <li><a href="#setting-email">Setting an e-mail</a></li>
+  <li><a href="#setting-webhook">Setting a webhook</a></li>
 </ol>
 
-<h2 id="setting-notifications">Notifications Settings</h2>
+<h2 id="interface">Interface presentation</h2>
 
-<p>Here you can set an e-mail that will receive notifications when a new anomaly is found.</p>
+<p>This is what you'll find when accessing the settings page:</p>
 
-<p>There is also an option to configure a webhook that will receive HTTP Posts of new anomalies. The payload will be a JSON with structure similar to this example:</p>
+<span class="todo">Insert manager.cloudwalk.io/transactions/patterns?tab=3 screenshot</span>
+
+<p>In this screen you can setup notifications to be sent by us in case anomalous transactions are caught. Currently, there is two notifications mechanisms: e-mail and webhook (via HTTP POST). You can activate one, another or both.</p>
+
+<h2 id="setting-email">Setting an e-mail</h2>
+
+<p>To set an e-mail, just select the notification type as e-mail and type your e-mail in the e-mail address field. If you are registered in more than one company, you can subscribe to receive notifications for each one, just having to access this settings while logged in each account.</p>
+
+<p>To keep things simple, we only allow subscrition of one e-mail per company, so if you want we to send notifications to a group of people, you can create an e-mail group with your provider.</p>
+
+<h2 id="setting-webhook">Setting a webhook</h2>
+
+<p>To set a webhook, just select the notification type as HTTP Post and type your webhook's URL in the URL field.</p>
+
+<p>If we catch any anamolous transaction, we will send you a JSON payload with structure similar to this:</p>
 
 <pre><code data-language="javascript">{
     "notification_type": "anomaly",
@@ -53,6 +69,6 @@
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Tutorial, Patterns Chart", "guides/logs-patterns/3") %>
+    <%= link_to("&larr; " + "Patterns Chart", "guides/logs-patterns/3") %>
   </li>
 </ul>
