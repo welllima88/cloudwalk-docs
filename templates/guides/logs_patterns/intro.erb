@@ -2,15 +2,6 @@
   <meta name="docs:description" content="short page description">
 <% end %>
 
-<style type="text/css">
-  .todo {
-    font-size: 28px;
-    color: red;
-    font-family: monospace;
-  }
-
-</style>
-
 <h1>Logs Patterns - Introduction</h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
@@ -26,7 +17,7 @@
 
 <h2 id="introduction">Introduction</h2>
 
-<p>You can see your transactions logs in real-time in CloudWalk Manager <span class="todo">Insert link</span>, but it is too difficult to detect any pattern just by looking at the scrolling lines.</p> 
+<p>You can see your transactions logs in real-time in CloudWalk Manager at <a href='https://manager.cloudwalk.io/realtime' class='external'>manager.cloudwalk.io/realtime</a>, but it is too difficult to detect any pattern just by looking at the scrolling lines.</p> 
 
 <p>To help us, only humans, in this task, we created an artificial intelligence service that watch, in real-time, each log line generate by your transactions, looking for patterns and anomalies in them.</p>
 
@@ -34,7 +25,7 @@
 
 <p>Our algorithm looks for patterns, but what is a pattern?</p>
 
-<p> For our purposes, a pattern is a set of somewhat similar transactions. To find which transactions are similar, our algorithm keep an eye at the sizes of messages sent by your POS to your authorizer and at the sizes of messages received in response. A pattern is them a set of transactions with similar sized messages. It's the algorithm's job to find those similar transactions.</p>
+<p> For our purposes, a pattern is a set of somewhat similar transactions. To find which transactions are similar, our algorithm keep an eye at the sizes of messages sent by your POS to your authorizer and at the sizes of messages received in response. A pattern is then a set of transactions with similar sized messages. It's the algorithm's job to find those similar transactions.</p>
 
 <h2 id="anomaly">What is an anomaly</h2>
 
@@ -48,6 +39,6 @@
 
 <ul class="pager">
   <li class="next">
-    <%= link_to("Tutorial, Overview" + " &rarr;", "guides/logs-patterns/1") %>
+    <%= link_to("Tutorial Overview" + " &rarr;", "guides/logs-patterns/1") %>
   </li>
 </ul>
