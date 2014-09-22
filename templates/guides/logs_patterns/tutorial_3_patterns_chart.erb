@@ -8,8 +8,13 @@
     color: red;
     font-family: monospace;
   }
-
+#ex1Slider .slider-selection {
+  background: #FFFFFF;
+}
 </style>
+
+<script src="/js/bootstrap-slider.min.js"></script>
+
 
 <h1>Logs Patterns - Patterns Chart</h1>
 
@@ -59,9 +64,49 @@
 </ol>
 </p>
 
-<p>To give you more sense of the effect of each parameter in the algorithm, we provide an interactive simluation which you can play with:</p>
+<p>To give you more sense of the effect of each parameter in the algorithm, we created a simulation which you can play with:<br></p>
 
-<span class="todo">Insert static figures showing the effect of each parameter in the chart</span>
+<table>
+  <tbody>
+    <tr>
+      <td><img id="chart" src="/img/clusters-simulation/image_5_5.svg"></td>
+      <td>
+        <table style="margin-bottom: 0%;">
+          <thead>
+            <tr><h2>Set parameters</h2></tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="2"><h3 style="margin-top: 5%;">Minimum neighbors to create a cluster</h3></td></tr> 
+            <tr>
+              <td><input type="range"  min="1" max="10" value="5" step="1" onchange="showChartMinPts(this.value)"/></td>
+            </tr>
+            <tr><td colspan="2"><h3 style="margin-top: 10%;">Distance to search for neighbors</h3></td></tr>
+            <tr>
+              <td><input type="range"  min="1" max="10" value="5" step="1" onchange="showChartEps(this.value)"/></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+
+<div>
+<script type="text/javascript">
+function showChartMinPts(eps)
+{
+
+  var minPts = document.getElementById("chart").src.split("_")[1];
+  document.getElementById("chart").src = "/img/clusters-simulation/image_" + minPts + "_" + eps + ".svg"
+}
+function showChartEps(minPts)
+{
+  var eps = document.getElementById("chart").src.split("_")[2].split(".")[0];
+  document.getElementById("chart").src = "/img/clusters-simulation/image_" + minPts + "_" + eps + ".svg"
+}
+</script>
+</div>
 
 <ul class="pager">
   <li class="previous">
