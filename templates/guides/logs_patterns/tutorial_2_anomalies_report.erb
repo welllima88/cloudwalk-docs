@@ -15,27 +15,31 @@
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<h4><%= I18n.t("general.index") %></h4>
+<!-- <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
    <li><a href="#interface">Interface presentation</a></li>
 </ol>
 
-<h2 id="interface">Interface presentation</h2>
+<h2 id="interface">Interface presentation</h2> -->
 
 <p>When accessing the patterns tab, you'll see a screen similar to this:</p>
 
 <span class="todo">Insert manager.cloudwalk.io/transactions/patterns?tab=1 screenshot</span>
 
-<p>This is the default tab you arrive when you access the transactions patterns URL. As you can see in the above image, we highlight the time when we detected the last anomaly (3).</p>
+<p>This is the default tab you arrive when you access the transactions patterns URL.</p> 
 
-<p> Down the screen (4) you can see a table with the 10 last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction, like time, size and message buffers for the sent data and the received one.</p>
+<p>As you can see in the above image, we highlight the time when we detected the last anomaly (1).</p>
+
+<p>Down the screen (2) you can see a table with the 10 last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the cross (3). The details for the transaction includes time, size and message buffers for the sent data and the received one.</p>
+
+<p>This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further.</p>
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Tutorial, Overview", "guides/logs-patterns/1") %>
+    <%= link_to("&larr; " + "Tutorial Overview", "guides/logs-patterns/1") %>
   </li>
   <li class="next">
-    <%= link_to("Tutorial, Patterns Chart" + " &rarr;", "guides/logs-patterns/3") %>
+    <%= link_to("Patterns Chart" + " &rarr;", "guides/logs-patterns/3") %>
   </li>
 </ul>
