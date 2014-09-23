@@ -8,9 +8,46 @@
     color: red;
     font-family: monospace;
   }
-#ex1Slider .slider-selection {
-  background: #FFFFFF;
-}
+</style>
+
+<style>
+  input[type='range'] {
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #333;
+    background-color: #FFF;
+    height: 10px;
+    width: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  input[type='range']::-moz-range-track {
+    -moz-appearance: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #333;
+    background-color: #999;
+    height: 10px;
+  }
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow:inset 0 0 10px rgba(000,048,255,0.5);
+    border: 1px solid #999;
+    height: 20px;
+    width: 20px;
+  }
+  input[type='range']::-moz-range-thumb {
+    -moz-appearance: none;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow:inset 0 0 10px rgba(000,000,000,0.5);
+    border: 1px solid #999;
+    height: 20px;
+    width: 20px;
+  }
 </style>
 
 <script src="/js/bootstrap-slider.min.js"></script>
@@ -33,7 +70,7 @@
 
 <span class="todo">Insert manager.cloudwalk.io/transactions/patterns?tab=2 screenshot</span>
 
-<p>This nice colorful chart is a representation of your transactions. The horizontal axis corresponds to the size of the message sent by your POS and vertical axis corresponds to the size of the message received in response. </p>
+<p>This nice colorful chart (1) is a representation of your transactions. The horizontal axis corresponds to the size of the message sent by your POS and vertical axis corresponds to the size of the message received in response. Each circle represents a transaction with specific size for the sent and received messages.</p>
 
 <p>The colorful circles represents patterns: same color transactions belongs to same pattern.</p>
 
@@ -41,17 +78,18 @@
 
 <p>The big square is your latest transaction, and if it is grey, it's an anomalous transaction.</p>
 
-<p>You can interact with the chart:
+<p>Notice that it can happen that one single circle represents more than one transaction. As an example, if you are sending pings from your POS to your server, you expect the same messages being sent and received each time, so their circles get stacked. When having this situation, you can hover the mouse over the circle representing the transaction to see how many times a transaction with same messages sizes was seen, along with other information, like the time of it's last occurrence. You can also click on it to see the message's buffer of its last ocurrence.</p>
+
+<p>Here is all the ways you can interact with the chart:
 <ul>
   <li>You can hover your mouse over any point to see more details about the transaction.</li>
   <li>You can click on the point to see even more information: it will show the message's buffers.</li>
   <li>You can drag the graph panel to see transactions other regions.</li>
   <li> You can also use your mousewheel to zoom in/out.</li>
 </ul>
-
 </p>
 
-<p>The parameters on the right side of the screen are really important, so we will explain everything you need to know about them in the next section.</p>
+<p>The parameters on the right side of the screen (2) are really important, so we will explain everything you need to know about them in the next section.</p>
 
 <h2 id="parameters">Understanding the parameters</h2>
 
@@ -71,36 +109,39 @@
     <tr>
       <td><img id="chart" src="/img/clusters-simulation/image_5_5.svg"></td>
       <td>
-        <table style="margin-bottom: 0%;">
+        <table style="margin-bottom: 75%;" valign="top" >
           <thead>
             <tr><h2>Set parameters</h2></tr>
           </thead>
           <tbody>
-            <tr><td colspan="2"><h3 style="margin-top: 5%;">Minimum neighbors to create a cluster</h3></td></tr> 
+            <tr><td colspan="2"><p style="margin-top: 0%;">What amount of similar transactions defines a pattern?</p></td></tr>
             <tr>
-              <td><input type="range"  min="1" max="10" value="5" step="1" onchange="showChartMinPts(this.value)"/></td>
+              <td>Few<input type="range"  min="1" max="10" value="5" step="1" width="100%" oninput="showChartEps(this.value)"/>Many</td>
             </tr>
-            <tr><td colspan="2"><h3 style="margin-top: 10%;">Distance to search for neighbors</h3></td></tr>
+            <tr><td colspan="2"><p style="margin-top: 10%;">How similar transactions should be to define a pattern?</p></td></tr> 
             <tr>
-              <td><input type="range"  min="1" max="10" value="5" step="1" onchange="showChartEps(this.value)"/></td>
+              <td>Little<input type="range"  min="1" max="10" value="5" step="1" oninput="showChartMinPts(this.value)"/> Very</td>
             </tr>
           </tbody>
         </table>
       </td>
     </tr>
   </tbody>
-
 </table>
+
+<p>If you are having trouble understanding it, remember that each circle in this chart represents one transaction, each pattern being represented by its unique color: circles with same color pertains to same pattern. The small sized gray circles represents anomalous transactions and don't belong to any pattern.</p>
+
+<p>Notice that when the parameters are somewhere in the middle of the scale we get reasonably patterns, so this may be the best setting for you. In fact, this is our default settings.</p>
 
 <div>
 <script type="text/javascript">
-function showChartMinPts(eps)
+function showChartEps(eps)
 {
 
   var minPts = document.getElementById("chart").src.split("_")[1];
   document.getElementById("chart").src = "/img/clusters-simulation/image_" + minPts + "_" + eps + ".svg"
 }
-function showChartEps(minPts)
+function showChartMinPts(minPts)
 {
   var eps = document.getElementById("chart").src.split("_")[2].split(".")[0];
   document.getElementById("chart").src = "/img/clusters-simulation/image_" + minPts + "_" + eps + ".svg"
