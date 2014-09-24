@@ -13,6 +13,8 @@ GEM
     newrelic_rpm (3.9.4.245)
     pony (1.11)
       mail (>= 2.0)
+    puma (2.9.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -50,6 +52,7 @@ DEPENDENCIES
   i18n
   newrelic_rpm
   pony
+  puma
   rack-ssl-enforcer
   rack-test
   simplecov
