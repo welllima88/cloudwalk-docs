@@ -2304,6 +2304,7 @@ pt-BR:
         check_serial_number: 'CHECK S. NUMBER'
         cloudwalk_update: 'CLOUDWALK UPDATE'
         about: 'ABOUT'
+      password: "Para acessar o menu de configuração, é necessário informar a senha <strong>5555</strong>."
       logical_number:
         paragraph_1: "Opção utilizada para definir o número lógico do dispositivo."
         paragraph_2: "Mais informações sobre a utilização de números lógicos podem ser encontradas em:"

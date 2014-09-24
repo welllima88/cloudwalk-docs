@@ -2304,6 +2304,7 @@ en:
         check_serial_number: 'CHECK S. NUMBER'
         cloudwalk_update: 'CLOUDWALK UPDATE'
         about: 'ABOUT'
+      password: "To access the configuration menu, the password <strong>5555</strong> must be entered."
       logical_number:
         paragraph_1: "This option is used to define the device logical number."
         paragraph_2: "More information regarding the use of logical numbers can be found at:"
