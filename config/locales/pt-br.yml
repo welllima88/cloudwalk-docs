@@ -1762,8 +1762,8 @@ pt-BR:
         parameters:
           parameter_1: <strong>axisx</strong> <span class='data-type'>[integer]</span><br/>Coordenada do eixo X do visor, onde o visor foi pressionado.
           parameter_2: <strong>axisy</strong> <span class='data-type'>[integer]</span><br/>Coordenada do eixo Y do visor, onde o visor foi pressionado.
-          parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/> <span class=''data-type''> 1: visor foi pressionado<br/> 2: visor não foi pressionado</span>'
-        paragraph_2: No exemplo acima, o comando <strong>system.gettouchscreen</strong> retornará em iXaxis a coordenada X e em iYaxis a coordenada Y do ponto pressionado no display. 
+          parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/> <span class=''data-type''> 1: visor foi pressionado<br/> 0: visor não foi pressionado</span>'
+        paragraph_2: No exemplo acima, o comando <strong>system.gettouchscreen</strong> retornará em iXaxis a coordenada X e em iYaxis a coordenada Y do ponto pressionado no display.
         paragraph_3: O laço de repetição é para garantir que o display foi pressionado.
       system_info:
         description: Busca de informações no sistema do POS (MAC Address, SIM ID, etc)
