@@ -2540,6 +2540,7 @@ en:
       description: Step by step process of installing the WALK Framework for VeriFone Vx520 and Vx680.
       identify_os:
         os_version: Operating System Version
+        eos_version: Extended Operating System Version
         paragraph_1: To identify the version of the operating system that is installed on your device, note the second line of the display screen, considering the last two characters. This screen is displayed when the device is connected.
         paragraph_2: Keep the operating system of your devices up to date. Devices with outdated operating system can be slow and may also have communication problems.
         paragraph_3: 'Minimum operating system requirements for installing the WALK Framework:'

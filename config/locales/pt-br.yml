@@ -2540,6 +2540,7 @@ pt-BR:
       description: Processo passo a passo de instalação do WALK Framework em terminais VeriFone Vx520 e Vx680.
       identify_os:
         os_version: Versão do sistema operacional
+        eos_version: Extended Operating System Version
         paragraph_1: Para identificar a versão do sistema operacional que está instalado em seu terminal, observe a segunda linha no visor da tela inicial, considerando os últimos 2 caracteres. Esta tela é exibida quando o terminal é ligado.
         paragraph_2: Mantenha o sistema operacional dos seus terminais POS sempre atualizados. Terminais POS com o sistema operacional desatualizado podem ficar lentos e podem também apresentar problemas de comunicação.
         paragraph_3: 'Requisitos mínimos de sistema operacional para a instalação do WALK Framework:'
