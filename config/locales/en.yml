@@ -355,6 +355,7 @@ en:
     updated_at: Updated at %{date}
   search:
     placeholder: "Search..."
+    helper: "Please add at least one search parameter"
     success:
       title: "Search results"
       no_results: "No search results found. We couldn't find anything relevant."
