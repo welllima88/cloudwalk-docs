@@ -2,7 +2,7 @@
 
 [![Dependency Status](https://gemnasium.com/cloudwalkio/cloudwalk-docs.png)](https://gemnasium.com/cloudwalkio/cloudwalk-docs)
 
-[CloudWalk's](https://cloudwalk.io) open-source documentation project built on top of sinatra, with translation managed on [Locale](http://www.localeapp.com/).
+[CloudWalk's](https://cloudwalk.io) open-source documentation project built on top of Sinatra.
 
 ## Contributions
 
