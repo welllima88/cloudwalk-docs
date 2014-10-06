@@ -292,6 +292,7 @@ p.more-info {
 
 /* Search */
 #query { margin-top: 21px; }
+.query-help { float: right; margin: 28px 10px 0 0; display: none; }
 
 /* Menu */
 .accordion{

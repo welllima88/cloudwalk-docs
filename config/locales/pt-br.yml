@@ -355,6 +355,7 @@ pt-BR:
     updated_at: Atualizado em %{date}
   search:
     placeholder: "Pesquisar..."
+    helper: "Por favor insira ao menos um parâmetro de pesquisa"
     success:
       title: "Resultado da pesquisa"
       no_results: "Nenhum registro encontrado. Não foi possível encontrar nada relevante."
