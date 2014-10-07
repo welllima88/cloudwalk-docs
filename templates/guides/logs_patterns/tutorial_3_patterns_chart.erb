@@ -51,11 +51,14 @@
 <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
-  <li><a href="#interface">Interface presentation</a></li>
+  <li><a href="#interface-presentation">Interface presentation</a></li>
+  <li><a href="#chart-interaction">Chart interaction</a></li>
+  <li><a href="#transactions-stacks">Transactions stacks</a></li>
   <li><a href="#parameters">Understanding the parameters</a></li>
+  <li><a href="#play-with-it">Play with it!</a></li>
 </ol>
 
-<h2 id="interface">Interface presentation</h2>
+<h2 id="interface-presentation">Interface presentation</h2>
 
 <p>When accessing the patterns tab, you'll see a screen similar to this:</p>
 
@@ -69,7 +72,7 @@
 
 <p>The big square is your latest transaction, and if it is grey, it's an anomalous transaction.</p>
 
-<p>Notice that it can happen that one single circle represents more than one transaction. As an example, if you are sending pings from your POS to your server, you expect the same messages being sent and received each time, so their circles get stacked. When having this situation, you can hover the mouse over the circle representing the transaction to see how many times a transaction with same messages sizes was seen, along with other information, like the time of it's last occurrence. You can also click on it to see the message's buffer of its last ocurrence.</p>
+<h2 id="chart-interaction">Chart interaction</h2>
 
 <p>Here is all the ways you can interact with the chart:
 <ul>
@@ -82,18 +85,24 @@
 
 <p>The parameters on the right side of the screen (2) are really important, so we will explain everything you need to know about them in the next section.</p>
 
+<h2 id="transactions-stacks">Transactions stacks</h2>
+
+<p>Notice that it can happen that one single circle represents more than one transaction. As an example, if you are sending pings from your POS to your server, you expect the same messages being sent and received each time, so their circles get stacked. When having this situation, you can hover the mouse over the circle representing the transaction to see how many times a transaction with same messages sizes was seen, along with other information, like the time of it's last occurrence. You can also click on it to see the message's buffer of its last ocurrence.</p>
+
 <h2 id="parameters">Understanding the parameters</h2>
 
 <p>In the area at the right side of your chart, you have two sliders you can use to change some parameters of your detector.</p>
 
 <p>Our algorithm relies on two parameters that effectively setup its sensitiveness, one of them controlling how easy/hard it is to flag two transactions as similar and the other controlling how many of these similar transactions we need to define a new pattern:
 <ol>
-  <li><strong>Amount of similar transactions to define a pattern:</strong> this parameters controls how easy/hard it is for the algorithm to define a new pattern. If we say a few amount of similar transactions defines a pattern (slider to the left), then the algorithm will create new patterns after seeing few similar transactions. On the other extreme, setting this parameter to many similar transactions definning a pattern (slider to the right), the algorithm will have to see many similar transactions occuring before saying they form a pattern. In summmary, as the slider goes left to right you will be detecting less to more anomalies, or alternatively, more to less patterns.</li>
+  <li><strong>Amount of similar transactions to define a pattern:</strong> this parameter controls how easy/hard it is for the algorithm to define a new pattern. If we say a few amount of similar transactions defines a pattern (slider to the left), then the algorithm will create new patterns after seeing few similar transactions. On the other extreme, setting this parameter to many similar transactions definning a pattern (slider to the right), the algorithm will have to see many similar transactions occuring before saying they form a pattern. In summary, as the slider goes left to right you will be detecting less to more anomalies, or alternatively, more to less patterns.</li>
   <li><strong>How similar transactions should be to define a pattern:</strong> this parameter controls how easy/hard it is for two transactions to be considered as similar. If we say they need to be little similar (slider to left), then it will flag transactions as similar more easily, i.e, it will flag transactions with messages sizes not so similar as similar. On the other extreme, saying the transactions need to be very similar (slider to right), means the algorithm will be more selectful when flaging transactions as similar, i.e., it will only flag as similar transactions with close messages sizes. Oversimplifying, as the slider goes left to right you will be detecting less to more anomalies, or alternatively, more to less patterns.</li>
 </ol>
 </p>
 
-<p>To give you more sense of the effect of each parameter in the algorithm, we created a simulation which you can play with:<br></p>
+<h2 id="play-with-it">Play with it!</h2>
+
+<p>To get a better sense of the effect of each parameter in the algorithm, we created a simulation which you can interact with. Just play with the sliders:<br></p>
 
 <table>
   <tbody>
