@@ -535,7 +535,7 @@ en:
             item_3: Click the button <strong>New application</strong>
             item_4: 'Fill in the application name, for example: <strong>tcpapp</strong>'
             item_5: Fill in the application description, for example <strong>Test with TCP IP</strong>
-            item_6: Fill in the authorizer with the URL <strong>tcp://tcp-echo.cloudwalk.io:800</strong>
+            item_6: Fill in the authorizer with the URL <strong>tcp://tcp-echo.cloudwalk.io:8000</strong>
             item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
             item_8: Fill <strong>TCP IP</strong> in the display name in POS
             item_9: Click the button <strong>Register application</strong>

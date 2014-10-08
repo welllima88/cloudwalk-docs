@@ -535,7 +535,7 @@ pt-BR:
             item_3: Clique no botão <strong>Nova aplicação</strong>
             item_4: 'Preencha o nome da aplicação, por exemplo: <strong>tcpapp</strong>'
             item_5: 'Preencha a descrição da aplicação, por exemplo: <strong>Teste com TCP IP</strong>'
-            item_6: Preencha o autorizador com a URL <strong>tcp://tcp-echo.cloudwalk.io:800</strong>
+            item_6: Preencha o autorizador com a URL <strong>tcp://tcp-echo.cloudwalk.io:8000</strong>
             item_7: Marque <strong>Sim</strong> na opção 'Aplicação deve ser exibida no menu de serviços?'
             item_8: Preencha <strong>TCP IP</strong> no nome de exibição no POS
             item_9: Clique no botão <strong>Cadastrar aplicação</strong>
