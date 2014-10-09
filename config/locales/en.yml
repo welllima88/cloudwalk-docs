@@ -2031,7 +2031,6 @@ en:
         case_sensitive: Case sensitive
         comments: Comments
         reserved_characters: Reserved characters
-        root_tag: Parent tag or root tags
         structure: Organization and Structure
       tag_root:
         paragraph_1: Every POSXML application has to have a parent tag or a root tag, and a valid name, following the criteria for opening and closing tags. Below the root tag, the tag <span class='code'>&lt;pagina nome="principal"&gt;</span> must be created, which is where all the application logic should be done.

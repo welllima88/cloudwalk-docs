@@ -2031,7 +2031,6 @@ pt-BR:
         case_sensitive: Case sensitive
         comments: Comentários
         reserved_characters: Caracteres reservados
-        root_tag: Tag pai ou Tag root
         structure: Organização e Estrutura
       tag_root:
         paragraph_1: Todo aplicativo POSXML deve obrigatoriamente possuir uma tag pai ou tag root, e possuir um nome válido, obedecendo ao critério de abertura e fechamento da mesma. Abaixo da tag root, deve ser criada a tag <span class='code'>&lt;pagina nome="principal"&gt;</span>, que é onde deve ser feita toda a lógica da aplicação.
