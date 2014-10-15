@@ -2,38 +2,29 @@
   <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
 <% end %>
 
-<style type="text/css">
-  .todo {
-    font-size: 28px;
-    color: red;
-    font-family: monospace;
-  }
-
-</style>
-
-<h1>Logs Patterns - Anomalies Report</h1>
+<h1><%= I18n.t("guides.logs_patterns.anomalies_report.title") %></h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p>When accessing the anomalies tab, you'll see a screen similar to this:</p>
+<p><%= I18n.t("guides.logs_patterns.anomalies_report.paragraph_1") %></p>
 
 <img src="/img/en/guides/logs_patterns/report.png" class="img-tutorial img-polaroid" alt="Anomalies tab" />
 
-<p>This is the default tab you arrive when you access the transactions patterns URL.</p> 
+<p><%= I18n.t("guides.logs_patterns.anomalies_report.paragraph_2") %></p>
 
-<p>As you can see in the above image, we highlight the time when we detected the last anomaly.</p>
+<p><%= I18n.t("guides.logs_patterns.anomalies_report.paragraph_3") %></p>
 
-<p>Down the screen you can see a table with the 10 last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the cross. The details for the transaction includes time, size and message buffers for the sent data and the received one.</p>
+<p><%= I18n.t("guides.logs_patterns.anomalies_report.paragraph_4") %></p>
 
 <img src="/img/en/guides/logs_patterns/report.gif" class="img-tutorial img-polaroid" alt="Anomalies tab" />
 
-<p>This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further.</p>
+<p><%= I18n.t("guides.logs_patterns.anomalies_report.paragraph_5") %></p>
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Tutorial Overview", "guides/logs-patterns/1") %>
+    <%= link_to("&larr; " + "Tutorial Overview", "guides/logs-patterns/overview") %>
   </li>
   <li class="next">
-    <%= link_to("Patterns Chart" + " &rarr;", "guides/logs-patterns/3") %>
+    <%= link_to("Patterns Chart" + " &rarr;", "guides/logs-patterns/patterns-chart") %>
   </li>
 </ul>

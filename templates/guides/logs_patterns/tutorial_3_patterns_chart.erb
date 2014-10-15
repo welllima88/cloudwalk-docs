@@ -2,14 +2,6 @@
   <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
 <% end %>
 
-<style type="text/css">
-  .todo {
-    font-size: 28px;
-    color: red;
-    font-family: monospace;
-  }
-</style>
-
 <style>
   input[type='range'] {
     outline: none;
@@ -44,65 +36,65 @@
   }
 </style>
 
-<h1>Logs Patterns - Patterns Chart</h1>
+<h1><%= I18n.t("guides.logs_patterns.patterns_chart.title") %></h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
-  <li><a href="#interface-presentation">Interface presentation</a></li>
-  <li><a href="#chart-interaction">Chart interaction</a></li>
-  <li><a href="#transactions-stacks">Transactions stacks</a></li>
-  <li><a href="#parameters">Understanding the parameters</a></li>
-  <li><a href="#play-with-it">Play with it!</a></li>
+  <li><a href="#interface-presentation"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.interface_presentation") %></a></li>
+  <li><a href="#chart-interaction"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.chart_interaction") %></a></li>
+  <li><a href="#transactions-stacks"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.transactions_stacks") %></a></li>
+  <li><a href="#parameters"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.parameters") %></a></li>
+  <li><a href="#play-with-it"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.play_with_it") %></a></li>
 </ol>
 
-<h2 id="interface-presentation">Interface presentation</h2>
+<h2 id="interface-presentation"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.interface_presentation") %></h2>
 
-<p>When accessing the patterns tab, you'll see a screen similar to this:</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.interface_presentation.paragraph_1") %></p>
 
 <img src="/img/en/guides/logs_patterns/patterns.gif" class="img-tutorial img-polaroid" alt="Patterns tab" />
 
-<p>This nice colorful chart is a representation of your transactions. The horizontal axis corresponds to the size of the message sent by your POS and vertical axis corresponds to the size of the message received in response. Each circle represents a transaction with specific size for the sent and received messages.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.interface_presentation.paragraph_2") %></p>
 
-<p>The colorful circles represents patterns: same color transactions belongs to same pattern. You can see some smaller circles the same color the greater ones: they also belong to same pattern, but they barely made into it.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.interface_presentation.paragraph_3") %></p>
 
-<p>The little gray circles are all anomalous transactions and don't belong to any pattern. The little gray squares represents the last ten anomalies.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.interface_presentation.paragraph_4") %></p>
 
-<p>The big square is your latest transaction, and if it is grey, it's an anomalous transaction.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.interface_presentation.paragraph_5") %></p>
 
-<h2 id="chart-interaction">Chart interaction</h2>
+<h2 id="chart-interaction"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.chart_interaction") %></h2>
 
-<p>Here is all the ways you can interact with the chart:
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.chart_interaction.paragraph_1") %></p>
+
 <ul>
-  <li>You can hover your mouse over any point to see more details about the transaction.</li>
-  <li>You can click on the point to see even more information: it will show the message's buffers.</li>
-  <li>You can drag the graph panel to see transactions other regions.</li>
-  <li> You can also use your mousewheel to zoom in/out.</li>
+  <li><%= I18n.t("guides.logs_patterns.patterns_chart.chart_interaction.list.item_1") %></li>
+  <li><%= I18n.t("guides.logs_patterns.patterns_chart.chart_interaction.list.item_2") %></li>
+  <li><%= I18n.t("guides.logs_patterns.patterns_chart.chart_interaction.list.item_3") %></li>
+  <li><%= I18n.t("guides.logs_patterns.patterns_chart.chart_interaction.list.item_4") %></li>
 </ul>
-</p>
 
-<p>The parameters on the right side of the screen are really important, so we will explain everything you need to know about them in the next section.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.chart_interaction.paragraph_2") %></p>
 
-<h2 id="transactions-stacks">Transactions stacks</h2>
+<h2 id="transactions-stacks"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.transactions_stacks") %></h2>
 
-<p>Notice that it can happen that one single circle represents more than one transaction. As an example, if you are sending pings from your POS to your server, you expect the same messages being sent and received each time, so their circles get stacked. When having this situation, you can hover the mouse over the circle representing the transaction to see how many times a transaction with same messages sizes was seen, along with other information, like the time of it's last occurrence. You can also click on it to see the message's buffer of its last ocurrence.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.transactions_stacks.paragraph_1") %></p>
 
-<h2 id="parameters">Understanding the parameters</h2>
+<h2 id="parameters"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.parameters") %></h2>
 
-<p>In the area at the right side of your chart, you have two sliders you can use to change some parameters of your detector.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.parameters.paragraph_1") %></p>
 
-<p>Our algorithm relies on two parameters that effectively setup its sensitiveness, one of them controlling how easy/hard it is to flag two transactions as similar and the other controlling how many of these similar transactions we need to define a new pattern:
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.parameters.paragraph_2") %></p>
+
 <ol>
-  <li><strong>Amount of similar transactions to define a pattern:</strong> this parameter controls how easy/hard it is for the algorithm to define a new pattern. If we say a few amount of similar transactions defines a pattern (slider to the left), then the algorithm will create new patterns after seeing few similar transactions. On the other extreme, setting this parameter to many similar transactions definning a pattern (slider to the right), the algorithm will have to see many similar transactions occuring before saying they form a pattern. In summary, as the slider goes left to right you will be detecting less to more anomalies, or alternatively, more to less patterns.</li>
-  <li><strong>How similar transactions should be to define a pattern:</strong> this parameter controls how easy/hard it is for two transactions to be considered as similar. If we say they need to be little similar (slider to left), then it will flag transactions as similar more easily, i.e, it will flag transactions with messages sizes not so similar as similar. On the other extreme, saying the transactions need to be very similar (slider to right), means the algorithm will be more selectful when flaging transactions as similar, i.e., it will only flag as similar transactions with close messages sizes. Oversimplifying, as the slider goes left to right you will be detecting less to more anomalies, or alternatively, more to less patterns.</li>
+  <li><%= I18n.t("guides.logs_patterns.patterns_chart.parameters.list.item_1") %></li>
+  <li><%= I18n.t("guides.logs_patterns.patterns_chart.parameters.list.item_2") %></li>
 </ol>
-</p>
 
-<h2 id="play-with-it">Play with it!</h2>
+<h2 id="play-with-it"><%= I18n.t("guides.logs_patterns.patterns_chart.table_of_contents.play_with_it") %></h2>
 
-<p>To get a better sense of the effect of each parameter in the algorithm, we created a simulation which you can interact with. Just play with the sliders:<br></p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.paragraph_1") %></p>
 
 <table>
   <tbody>
@@ -111,16 +103,16 @@
       <td>
         <table style="margin-bottom: 75%;" valign="top" >
           <thead>
-            <tr><h2>Set parameters</h2></tr>
+            <tr><h2><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.simulation.title") %></h2></tr>
           </thead>
           <tbody>
-            <tr><td colspan="2"><p style="margin-top: 0%;">What amount of similar transactions defines a pattern?</p></td></tr>
+            <tr><td colspan="2"><p style="margin-top: 0%;"><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.simulation.parameter_1.title") %></p></td></tr>
             <tr>
-              <td>Few<input type="range"  min="1" max="10" value="5" step="1" width="100%" oninput="showChartEps(this.value)"/>Many</td>
+              <td><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.simulation.parameter_1.left") %><input type="range"  min="1" max="10" value="5" step="1" width="100%" oninput="showChartEps(this.value)"/><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.simulation.parameter_1.right") %></td>
             </tr>
-            <tr><td colspan="2"><p style="margin-top: 10%;">How similar transactions should be to define a pattern?</p></td></tr>
+            <tr><td colspan="2"><p style="margin-top: 10%;"><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.simulation.parameter_2.title") %></p></td></tr>
             <tr>
-              <td>Little<input type="range"  min="1" max="10" value="5" step="1" oninput="showChartMinPts(this.value)"/> Very</td>
+              <td><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.simulation.parameter_2.left") %><input type="range"  min="1" max="10" value="5" step="1" oninput="showChartMinPts(this.value)"/> <%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.simulation.parameter_2.right") %></td>
             </tr>
           </tbody>
         </table>
@@ -129,9 +121,9 @@
   </tbody>
 </table>
 
-<p>If you are having trouble understanding it, remember that each circle in this chart represents one transaction, each pattern being represented by its unique color: circles with same color belongs to same pattern. The small sized gray circles represents anomalous transactions and don't belong to any pattern.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.paragraph_2") %></p>
 
-<p>Notice that when the parameters are somewhere in the middle of the scale we get reasonably patterns, so this may be the best setting for you. In fact, this is our default settings.</p>
+<p><%= I18n.t("guides.logs_patterns.patterns_chart.play_with_it.paragraph_3") %></p>
 
 <div>
 <script type="text/javascript">
@@ -151,9 +143,9 @@ function showChartMinPts(minPts)
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Anomalies Report", "guides/logs-patterns/2") %>
+    <%= link_to("&larr; " + "Anomalies Report", "guides/logs-patterns/anomalies-report") %>
   </li>
   <li class="next">
-    <%= link_to("Notifications Settings" + " &rarr;", "guides/logs-patterns/4") %>
+    <%= link_to("Notifications Settings" + " &rarr;", "guides/logs-patterns/notifications-settings") %>
   </li>
 </ul>

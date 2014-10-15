@@ -2,48 +2,39 @@
   <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
 <% end %>
 
-<style type="text/css">
-  .todo {
-    font-size: 28px;
-    color: red;
-    font-family: monospace;
-  }
-
-</style>
-
-<h1>Logs Patterns - Notifications Settings</h1>
+<h1><%= I18n.t("guides.logs_patterns.notifications_settings.title") %></h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
-  <li><a href="#interface">Interface presentation</a></li>
-  <li><a href="#setting-email">Setting an e-mail</a></li>
-  <li><a href="#setting-webhook">Setting a webhook</a></li>
+  <li><a href="#interface"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.interface") %></a></li>
+  <li><a href="#setting-email"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.setting_email") %></a></li>
+  <li><a href="#setting-webhook"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.setting_webhook") %></a></li>
 </ol>
 
-<h2 id="interface">Interface presentation</h2>
+<h2 id="interface"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.interface") %></h2>
 
-<p>This is what you'll find when accessing the settings page:</p>
+<p><%= I18n.t("guides.logs_patterns.notifications_settings.interface.paragraph_1") %></p>
 
 <img src="/img/en/guides/logs_patterns/settings.gif" class="img-tutorial img-polaroid" alt="Notifications tab" />
 
-<p>In this screen you can setup notifications to be sent by us in case anomalous transactions are caught.</p> 
+<p><%= I18n.t("guides.logs_patterns.notifications_settings.interface.paragraph_2") %></p>
 
-<p>Currently, there are two notifications mechanisms: e-mail and webhook (via HTTP POST). You can activate one, another or both.</p>
+<p><%= I18n.t("guides.logs_patterns.notifications_settings.interface.paragraph_3") %></p>
 
-<h2 id="setting-email">Setting an e-mail</h2>
+<h2 id="setting-email"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.setting_email") %></h2>
 
-<p>To set an e-mail, just select the notification type as e-mail and type your e-mail in the e-mail address field. If you are registered in more than one company, you can subscribe to receive notifications for each one, just having to access this settings while logged in each account.</p>
+<p><%= I18n.t("guides.logs_patterns.notifications_settings.setting_email.paragraph_1") %></p>
 
-<p>To keep things simple, we only allow subscrition of one e-mail per company, so if you want we to send notifications to a group of people, you can create an e-mail group with your provider.</p>
+<p><%= I18n.t("guides.logs_patterns.notifications_settings.setting_email.paragraph_2") %></p>
 
-<h2 id="setting-webhook">Setting a webhook</h2>
+<h2 id="setting-webhook"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.setting_webhook") %></h2>
 
-<p>To set a webhook, just select the notification type as HTTP Post and type your webhook's URL in the URL field.</p>
+<p><%= I18n.t("guides.logs_patterns.notifications_settings.setting_webhook.paragraph_1") %></p>
 
-<p>If we catch any anamolous transaction, we will send you a JSON payload with structure similar to this:</p>
+<p><%= I18n.t("guides.logs_patterns.notifications_settings.setting_webhook.paragraph_2") %></p>
 
 <pre><code data-language="javascript">{
     "notification_type": "anomaly",
@@ -71,6 +62,6 @@
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Patterns Chart", "guides/logs-patterns/3") %>
+    <%= link_to("&larr; " + "Patterns Chart", "guides/logs-patterns/patterns-chart") %>
   </li>
 </ul>

@@ -2,35 +2,26 @@
   <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
 <% end %>
 
-<style type="text/css">
-  .todo {
-    font-size: 28px;
-    color: red;
-    font-family: monospace;
-  }
-
-</style>
-
-<h1>Logs Patterns - Tutorial Overview</h1>
+<h1><%= I18n.t("guides.logs_patterns.overview.title") %></h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p>In this tutorial you will learn how to access a report with your latest anomalous transactions, how to see all your transactions patterns and anomalies in a nice chart and how to receive notifications via email or webhooks when something anomalous happens.</p>
+<p><%= I18n.t("guides.logs_patterns.overview.paragraph_1") %></p>
 
 <img src="/img/en/guides/logs_patterns/overview.gif" class="img-tutorial img-polaroid" alt="Anomalies tab" />
 
-<p>This is a service integrated into CloudWalk Manager and you can access it at <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>.</p>
+<p><%= I18n.t("guides.logs_patterns.overview.paragraph_2") %></p>
 
-<p class="alert alert-warning" role="alert">You won't see anything at this location unless you have done at least one transaction using your CloudWalk account.</p>
+<p class="alert alert-warning" role="alert"><%= I18n.t("guides.logs_patterns.overview.paragraph_3") %></p>
 
 
-<p>Let's get started!</p>
+<p><%= I18n.t("guides.logs_patterns.overview.paragraph_4") %></p>
 
 <ul class="pager">
   <li class="previous">
     <%= link_to("&larr; " + "Introduction", "guides/logs-patterns") %>
   </li>
   <li class="next">
-    <%= link_to("Anomalies Report" + " &rarr;", "guides/logs-patterns/2") %>
+    <%= link_to("Anomalies Report" + " &rarr;", "guides/logs-patterns/anomalies-report") %>
   </li>
 </ul>
