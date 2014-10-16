@@ -2,26 +2,26 @@
   <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
 <% end %>
 
-<h1><%= I18n.t("guides.logs_patterns.overview.title") %></h1>
+<h1><%= I18n.t("guides.transactions_patterns.overview.title") %></h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p><%= I18n.t("guides.logs_patterns.overview.paragraph_1") %></p>
+<p><%= I18n.t("guides.transactions_patterns.overview.paragraph_1") %></p>
 
-<img src="/img/en/guides/logs_patterns/overview.gif" class="img-tutorial img-polaroid" alt="Anomalies tab" />
+<%= I18n.t("guides.transactions_patterns.overview.image_1") %>
 
-<p><%= I18n.t("guides.logs_patterns.overview.paragraph_2") %></p>
+<p><%= I18n.t("guides.transactions_patterns.overview.paragraph_2") %></p>
 
-<p class="alert alert-warning" role="alert"><%= I18n.t("guides.logs_patterns.overview.paragraph_3") %></p>
+<p class="alert alert-warning" role="alert"><%= I18n.t("guides.transactions_patterns.overview.paragraph_3") %></p>
 
 
-<p><%= I18n.t("guides.logs_patterns.overview.paragraph_4") %></p>
+<p><%= I18n.t("guides.transactions_patterns.overview.paragraph_4") %></p>
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Introduction", "guides/logs-patterns") %>
+    <%= link_to("&larr; " + I18n.t("guides.transactions_patterns.overview.previous"), "guides/logs-patterns") %>
   </li>
   <li class="next">
-    <%= link_to("Anomalies Report" + " &rarr;", "guides/logs-patterns/anomalies-report") %>
+    <%= link_to(I18n.t("guides.transactions_patterns.overview.next") + " &rarr;", "guides/logs-patterns/anomalies-report") %>
   </li>
 </ul>

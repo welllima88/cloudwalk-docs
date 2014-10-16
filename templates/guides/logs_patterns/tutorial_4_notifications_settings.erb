@@ -2,39 +2,39 @@
   <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
 <% end %>
 
-<h1><%= I18n.t("guides.logs_patterns.notifications_settings.title") %></h1>
+<h1><%= I18n.t("guides.transactions_patterns.notifications_settings.title") %></h1>
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
-  <li><a href="#interface"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.interface") %></a></li>
-  <li><a href="#setting-email"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.setting_email") %></a></li>
-  <li><a href="#setting-webhook"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.setting_webhook") %></a></li>
+  <li><a href="#interface"><%= I18n.t("guides.transactions_patterns.notifications_settings.table_of_contents.interface") %></a></li>
+  <li><a href="#setting-email"><%= I18n.t("guides.transactions_patterns.notifications_settings.table_of_contents.setting_email") %></a></li>
+  <li><a href="#setting-webhook"><%= I18n.t("guides.transactions_patterns.notifications_settings.table_of_contents.setting_webhook") %></a></li>
 </ol>
 
-<h2 id="interface"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.interface") %></h2>
+<h2 id="interface"><%= I18n.t("guides.transactions_patterns.notifications_settings.table_of_contents.interface") %></h2>
 
-<p><%= I18n.t("guides.logs_patterns.notifications_settings.interface.paragraph_1") %></p>
+<p><%= I18n.t("guides.transactions_patterns.notifications_settings.interface.paragraph_1") %></p>
 
-<img src="/img/en/guides/logs_patterns/settings.gif" class="img-tutorial img-polaroid" alt="Notifications tab" />
+<p><%= I18n.t("guides.transactions_patterns.notifications_settings.interface.image_1") %></p>
 
-<p><%= I18n.t("guides.logs_patterns.notifications_settings.interface.paragraph_2") %></p>
+<p><%= I18n.t("guides.transactions_patterns.notifications_settings.interface.paragraph_2") %></p>
 
-<p><%= I18n.t("guides.logs_patterns.notifications_settings.interface.paragraph_3") %></p>
+<p><%= I18n.t("guides.transactions_patterns.notifications_settings.interface.paragraph_3") %></p>
 
-<h2 id="setting-email"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.setting_email") %></h2>
+<h2 id="setting-email"><%= I18n.t("guides.transactions_patterns.notifications_settings.table_of_contents.setting_email") %></h2>
 
-<p><%= I18n.t("guides.logs_patterns.notifications_settings.setting_email.paragraph_1") %></p>
+<p><%= I18n.t("guides.transactions_patterns.notifications_settings.setting_email.paragraph_1") %></p>
 
-<p><%= I18n.t("guides.logs_patterns.notifications_settings.setting_email.paragraph_2") %></p>
+<p><%= I18n.t("guides.transactions_patterns.notifications_settings.setting_email.paragraph_2") %></p>
 
-<h2 id="setting-webhook"><%= I18n.t("guides.logs_patterns.notifications_settings.table_of_contents.setting_webhook") %></h2>
+<h2 id="setting-webhook"><%= I18n.t("guides.transactions_patterns.notifications_settings.table_of_contents.setting_webhook") %></h2>
 
-<p><%= I18n.t("guides.logs_patterns.notifications_settings.setting_webhook.paragraph_1") %></p>
+<p><%= I18n.t("guides.transactions_patterns.notifications_settings.setting_webhook.paragraph_1") %></p>
 
-<p><%= I18n.t("guides.logs_patterns.notifications_settings.setting_webhook.paragraph_2") %></p>
+<p><%= I18n.t("guides.transactions_patterns.notifications_settings.setting_webhook.paragraph_2") %></p>
 
 <pre><code data-language="javascript">{
     "notification_type": "anomaly",
@@ -62,6 +62,6 @@
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Patterns Chart", "guides/logs-patterns/patterns-chart") %>
+    <%= link_to("&larr; " + I18n.t("guides.transactions_patterns.notifications_settings.previous"), "guides/logs-patterns/patterns-chart") %>
   </li>
 </ul>
