@@ -2795,7 +2795,7 @@ pt-BR:
       overview:
         title: "Padrões nas Transações - Visão Geral do Tutorial"
         paragraph_1: "Neste tutorial, você aprenderá: como acessar um relatório com suas últimas transações anômalas, como visualizar todos os padrões e anomalias de suas transações em um gráfico e como receber notificações via e-mail ou webhook quando algo anômalo ocorrer."
-        image_1: "<img src='/img/pt-BR/guides/logs_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        image_1: "<img src='/img/pt-BR/guides/transactions_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Este é um serviço integrado ao CloudWalk Manager e você pode accessá-lo em <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "Você não conseguirá visualizar nada nesse link a menos que tenha realizado pelo menos uma transação utilizando sua conta CloudWalk."
         paragraph_4: "Vamos começar!"
@@ -2804,11 +2804,11 @@ pt-BR:
       anomalies_report:
         title: "Padrões nas Transações - Relatório de Anomalias"
         paragraph_1: "Ao acessar a aba de anomalias, você verá uma tela similar a esta:"
-        image_1: "<img src='/img/pt-BR/guides/logs_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        image_1: "<img src='/img/pt-BR/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Esta é a aba padrão ativada quando você acessa a URL dos padrões de transações."
         paragraph_3: "Como você pode observar na imagem acima, destacamos o momento em que detectamos a última transação anômala."
         paragraph_4: "Mais abaixo na tela, você pode ver uma tabela contendo as dez últimas transações anômalas detectadas. Você pode expandir cada linha da tabela para obter mais detalhes sobre a transação correspondente, basta clicar no sinal de mais. Os detalhes da transação incluem data e hora, assim como tamanho e conteúdo das mensagens enviadas e recebidas. Isto é útil para observarmos exatamente o que ativou o detector de anomalias, de modo que você possa conduzir investigações posteriores."
-        image_2: "<img src='/img/pt-BR/guides/logs_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        image_2: "<img src='/img/pt-BR/guides/transactions_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Agora, vamos dar uma olhada em uma representação gráfica de nossas transações!"
         previous: "Visão Geral do Tutorial"
         next: "Gráfico dos padrões  "
@@ -2822,7 +2822,7 @@ pt-BR:
           play_with_it: "Tente você mesmo!"
         interface_presentation:
           paragraph_1: "Ao acessar a aba de padrões, você verá uma tela similar a esta:"
-          image_1: "<img src='/img/pt-BR/guides/logs_patterns/patterns.gif' class='img-tutorial img-polaroid' alt='Patterns tab' />"
+          image_1: "<img src='/img/pt-BR/guides/transactions_patterns/patterns.gif' class='img-tutorial img-polaroid' alt='Patterns tab' />"
           paragraph_2: "Este gráfico todo colorido é uma representação de suas transações. O eixo horizontal corresponde ao tamanho da mensagem enviada por seu POS  e o eixo vertical corresponde ao tamanho da mensagem recebida em resposta. Cada círculo representa uma transação com tamanhos específicos para as mensagens enviadas e recebidas."
           paragraph_3: "Os círculos coloridos representam padrões: transações de mesma cor pertencem ao mesmo padrão. Você pode ver que há alguns círculos menores com a mesma cor de alguns círculos maiores: eles também pertencem ao mesmo padrão, mas quase foram deixados de fora."
           paragraph_4: "Os pequenos círculos cinzas representam transações anômalas e não pertencem a nenhum padrão. Os pequenos quadrados cinzas representam as últimas dez anomalias."
@@ -2869,7 +2869,7 @@ pt-BR:
           setting_webhook: "Configurando um webhook"
         interface:
           paragraph_1: "Isto é o que você encontrará ao acessar a aba de configurações:"
-          image_1: "<img src='/img/pt-BR/guides/logs_patterns/settings.gif' class='img-tutorial img-polaroid' alt='Notifications tab' />"
+          image_1: "<img src='/img/pt-BR/guides/transactions_patterns/settings.gif' class='img-tutorial img-polaroid' alt='Notifications tab' />"
           paragraph_2: "Nesta tela você pode configurar notificações a serem enviadas por nós caso transações anômalas sejam detectas."
           paragraph_3: "Atualmente, existem dois mecanismos de notificação: e-mail e webhook (via HTTP Post). Você pode ativar um, outro ou ambos."
         setting_email:

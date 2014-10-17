@@ -2795,7 +2795,7 @@ en:
       overview:
         title: "Transactions Patterns - Tutorial Overview"
         paragraph_1: "In this tutorial you will learn: how to access a report with your latest anomalous transactions, how to see all your transactions patterns and anomalies in a nice chart and how to receive notifications via email or webhook when something anomalous happens."
-        image_1: "<img src='/img/en/guides/logs_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        image_1: "<img src='/img/en/guides/transactions_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is a service integrated into CloudWalk Manager and you can access it at <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "You won't see anything at this location unless you have done at least one transaction using your CloudWalk account."
         paragraph_4: "Let's get started!"
@@ -2804,11 +2804,11 @@ en:
       anomalies_report:
         title: "Transactions Patterns - Anomalies Report"
         paragraph_1: "When accessing the anomalies tab, you'll see a screen similar to this:"
-        image_1: "<img src='/img/en/guides/logs_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        image_1: "<img src='/img/en/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is the default tab you arrive when you access the transactions patterns URL."
         paragraph_3: "As you can see in the above image, we highlight the time when we detected the last anomaly."
         paragraph_4: "Down the screen you can see a table with the ten last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the plus sign. The details for the transaction includes time, size and message buffers for the sent data and the received one. This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further."
-        image_2: "<img src='/img/en/guides/logs_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        image_2: "<img src='/img/en/guides/transactions_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Now, let's take a look at a graphical representation of our transactions!"
         previous: "Tutorial Overview"
         next: "Patterns Chart"
@@ -2822,7 +2822,7 @@ en:
           play_with_it: "Play with it!"
         interface_presentation:
           paragraph_1: "When accessing the patterns tab, you'll see a screen similar to this:"
-          image_1: "<img src='/img/en/guides/logs_patterns/patterns.gif' class='img-tutorial img-polaroid' alt='Patterns tab' />"
+          image_1: "<img src='/img/en/guides/transactions_patterns/patterns.gif' class='img-tutorial img-polaroid' alt='Patterns tab' />"
           paragraph_2: "This nice colorful chart is a representation of your transactions. The horizontal axis corresponds to the size of the message sent by your POS and vertical axis corresponds to the size of the message received in response. Each circle represents a transaction with specific sizes for the sent and received messages."
           paragraph_3: "The colorful circles represents patterns: same color transactions belongs to same pattern. You can see some smaller circles the same color the greater ones: they also belong to same pattern, but they barely made into it."
           paragraph_4: "The little gray circles are all anomalous transactions and don't belong to any pattern. The little gray squares represents the last ten anomalies."
@@ -2869,7 +2869,7 @@ en:
           setting_webhook: "Setting a webhook"
         interface:
           paragraph_1: "This is what you'll find when accessing the settings tab:"
-          image_1: "<img src='/img/en/guides/logs_patterns/settings.gif' class='img-tutorial img-polaroid' alt='Notifications tab' />"
+          image_1: "<img src='/img/en/guides/transactions_patterns/settings.gif' class='img-tutorial img-polaroid' alt='Notifications tab' />"
           paragraph_2: "In this screen you can setup notifications to be sent by us in case anomalous transactions are caught."
           paragraph_3: "Currently, there are two notifications mechanisms: e-mail and webhook (via HTTP Post). You can activate one, another or both."
         setting_email:
