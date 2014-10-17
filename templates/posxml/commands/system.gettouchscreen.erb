@@ -4,6 +4,35 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>system.gettouchscreen</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "08/05/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "26/09/2014") %></p>
 
-<p><%= I18n.t("posxml.commands.system_gettouchscreen.paragraph_1") %></p>
+<p><%= I18n.t('posxml.commands.system_gettouchscreen.paragraph_1') %></p>
+
+<h2><%= I18n.t("posxml.commands.parameters") %></h2>
+
+<ol class="parameters">
+  <li><%= I18n.t("posxml.commands.system_gettouchscreen.parameters.parameter_1") %></li>
+  <li><%= I18n.t("posxml.commands.system_gettouchscreen.parameters.parameter_2") %></li>
+  <li><%= I18n.t("posxml.commands.system_gettouchscreen.parameters.parameter_3") %></li>
+</ol>
+
+<h2><%= I18n.t("posxml.commands.example") %></h2>
+
+<pre><code data-language="html">&lt;editfile filename="config.dat" key="touchscreen" value="1"/&gt;
+
+&lt;integervariable value="0" variable="iTouch" /&gt;
+
+&lt;integervariable value="0" variable="iXaxis" /&gt;
+
+&lt;integervariable value="0" variable="iYaxis" /&gt;
+
+&lt;while variable="$(iTouch)" operator="notequalto" value="1"&gt;
+
+  &lt;system.gettouchscreen axisx="$(iXaxis)" axisy="$(iYaxis)" variablereturn="$(iTouch)" /&gt;
+
+&lt;/while&gt;
+</code></pre>
+
+<p><%= I18n.t('posxml.commands.system_gettouchscreen.paragraph_2') %></p>
+
+<p><%= I18n.t('posxml.commands.system_gettouchscreen.paragraph_3') %></p>

@@ -355,6 +355,7 @@ en:
     updated_at: Updated at %{date}
   search:
     placeholder: "Search..."
+    helper: "Please add at least one search parameter"
     success:
       title: "Search results"
       no_results: "No search results found. We couldn't find anything relevant."
@@ -423,7 +424,7 @@ en:
         paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
         paragraph_5: Check the device communication setup, cables and internet connection.
-        paragraph_6: 'Several tools and services can help you to test the return of their requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
+        paragraph_6: 'Several tools and services can help you to test the return of their requests. An example is <a href=''http://hurl.it'' class=''external''>hurl.it</a>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
       title: Integration with host - Simple HTTP
@@ -534,7 +535,7 @@ en:
             item_3: Click the button <strong>New application</strong>
             item_4: 'Fill in the application name, for example: <strong>tcpapp</strong>'
             item_5: Fill in the application description, for example <strong>Test with TCP IP</strong>
-            item_6: Fill in the authorizer with the URL <strong>tcp://tcp-echo.cloudwalk.io:800</strong>
+            item_6: Fill in the authorizer with the URL <strong>tcp://tcp-echo.cloudwalk.io:8000</strong>
             item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
             item_8: Fill <strong>TCP IP</strong> in the display name in POS
             item_9: Click the button <strong>Register application</strong>
@@ -1758,7 +1759,13 @@ en:
           parameter_1: '<strong>variablestatus</strong> <span class=''data-type''>[integer]</span></br>Variable that will store the return of the command. The returned value ranges from 0 to 100, scaling 1 by 1. Examples: 0, 1, 2, 3, 4, 5 ... 95, 96, 97, 98, 99, 100.'
       system_gettouchscreen:
         description: Captures the coordinates (x and y) where the display was pressed
-        paragraph_1: The command <span class='code'>system.gettouchscreen</span> is used to capture the coordinates (x and y) where the display was pressed.
+        paragraph_1: The command <span class='code'>system.gettouchscreen</span> is used to capture the coordinates (x, y) where the display is pressed. The file config.dat must be changed in order to enable the use of the touchscreen in the application.
+        parameters:
+          parameter_1: <strong>axisx</strong> <span class='data-type'>[integer]</span><br/>X-axis coordinate of the display, where the display was pressed.
+          parameter_2: <strong>axisy</strong> <span class='data-type'>[integer]</span><br/>Y-axis coordinate of the display, where the display was pressed.
+          parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/> <span class=''data-type''> 1: display was pressed<br/> 0: display was not pressed</span>'
+        paragraph_2: In the above example, the command <strong>system.gettouchscreen</strong> will return in iXaxis the X coordinate and in iYaxis the Y coordenate of the point pressed on the display.
+        paragraph_3: The loop is to ensure that the display will pressed.
       system_info:
         description: Gets device information (MAC Address, SIM ID, etc)
         paragraph_1: The command <span class='code'>system.info</span> is used to return information from the device.
@@ -2024,7 +2031,6 @@ en:
         case_sensitive: Case sensitive
         comments: Comments
         reserved_characters: Reserved characters
-        root_tag: Parent tag or root tags
         structure: Organization and Structure
       tag_root:
         paragraph_1: Every POSXML application has to have a parent tag or a root tag, and a valid name, following the criteria for opening and closing tags. Below the root tag, the tag <span class='code'>&lt;pagina nome="principal"&gt;</span> must be created, which is where all the application logic should be done.
@@ -2304,6 +2310,7 @@ en:
         check_serial_number: 'CHECK S. NUMBER'
         cloudwalk_update: 'CLOUDWALK UPDATE'
         about: 'ABOUT'
+      password: "To access the configuration menu, the password <strong>5555</strong> must be entered."
       logical_number:
         paragraph_1: "This option is used to define the device logical number."
         paragraph_2: "More information regarding the use of logical numbers can be found at:"
@@ -2533,6 +2540,7 @@ en:
       description: Step by step process of installing the WALK Framework for VeriFone Vx520 and Vx680.
       identify_os:
         os_version: Operating System Version
+        eos_version: Extended Operating System Version
         paragraph_1: To identify the version of the operating system that is installed on your device, note the second line of the display screen, considering the last two characters. This screen is displayed when the device is connected.
         paragraph_2: Keep the operating system of your devices up to date. Devices with outdated operating system can be slow and may also have communication problems.
         paragraph_3: 'Minimum operating system requirements for installing the WALK Framework:'

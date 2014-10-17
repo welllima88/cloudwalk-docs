@@ -112,16 +112,9 @@ helpers do
     ' selected' if value == current.to_s
   end
 
-  def check_param(params, name, default=nil, valid_options=nil)
-    return default if params.empty?
-
-    param = if valid_options
-      valid_options.member?(params[name]) ? params[name] : nil
-    else
-      params[name]
-    end
-
-    param || default
+  def check_param(params, name, valid_options=nil)
+    return "none" if params.empty?
+    valid_options.member?(params[name]) ? params[name] : nil
   end
 
   def search

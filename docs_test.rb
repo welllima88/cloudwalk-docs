@@ -33,6 +33,16 @@ describe "Docs" do
     end
   end
 
+  it "should pre-select the signature paytec" do
+    get '/en/walk-framework/ingenico-telium-2?signature=paytec'
+    assert last_response.ok?
+  end
+
+  it "should pre-select another signature" do
+    get '/en/walk-framework/ingenico-telium-2?something=else'
+    assert last_response.ok?
+  end
+
   it "should get a not found message" do
     get '/cloudwalk'
     assert last_response.not_found?, "404 failed"
@@ -46,5 +56,45 @@ describe "Docs" do
   it "should get a en title" do
     get '/en/introduction'
     assert last_response.body.include?('CloudWalk Service Overview'), "I18n failed"
+  end
+
+  it "should change locale to en" do
+    post '/', {:url => "/pt-BR/introduction", :locale => "en"}
+
+    follow_redirect!
+
+    assert_equal "http://example.org/en/introduction", last_request.url
+    assert last_response.ok?, "Could not change locale"
+  end
+
+  it "should change locale to pt-BR" do
+    post '/', {:url => "/en/introduction", :locale => "pt-BR"}
+
+    follow_redirect!
+
+    assert_equal "http://example.org/pt-BR/introduction", last_request.url
+    assert last_response.ok?, "Could not change locale"
+  end
+
+  it "should get a portuguese search result" do
+    get '/pt-BR/search?query=posxml'
+    assert last_response.ok?, "Portuguese search failed"
+  end
+
+  it "should get an english search result" do
+    get '/en/search?query=posxml'
+    assert last_response.ok?, "English search failed"
+  end
+
+  it "should get an empty search result" do
+    query = 'kamehameha'
+
+    get "/en/search?query=#{query}"
+    assert last_response.ok?, "What? The word #{query} was found?"
+  end
+
+  it "should redirect to index due empty query" do
+    get '/en/search'
+    assert last_response.redirect?
   end
 end
