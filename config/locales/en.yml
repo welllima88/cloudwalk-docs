@@ -2786,7 +2786,7 @@ en:
         next: "Tutorial Overview"
       overview:
         title: "Transactions Patterns - Tutorial Overview"
-        paragraph_1: "In this tutorial you will learn: how to access a report with your latest anomalous transactions, how to see all your transactions patterns and anomalies in a nice chart and how to receive notifications via email or webhooks when something anomalous happens."
+        paragraph_1: "In this tutorial you will learn: how to access a report with your latest anomalous transactions, how to see all your transactions patterns and anomalies in a nice chart and how to receive notifications via email or webhook when something anomalous happens."
         image_1: "<img src='/img/en/guides/logs_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is a service integrated into CloudWalk Manager and you can access it at <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "You won't see anything at this location unless you have done at least one transaction using your CloudWalk account."
@@ -2799,7 +2799,7 @@ en:
         image_1: "<img src='/img/en/guides/logs_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is the default tab you arrive when you access the transactions patterns URL."
         paragraph_3: "As you can see in the above image, we highlight the time when we detected the last anomaly."
-        paragraph_4: "Down the screen you can see a table with the 10 last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the cross. The details for the transaction includes time, size and message buffers for the sent data and the received one. This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further."
+        paragraph_4: "Down the screen you can see a table with the ten last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the plus sign. The details for the transaction includes time, size and message buffers for the sent data and the received one. This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further."
         image_2: "<img src='/img/en/guides/logs_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Now, let's take a look at a graphical representation of our transactions!"
         previous: "Tutorial Overview"
@@ -2821,20 +2821,22 @@ en:
           paragraph_5: "The big square is your latest transaction, and if it is grey, it's an anomalous transaction."
         chart_interaction:
           paragraph_1: "Here is all the ways you can interact with the chart:"
-          paragraph_2: "The parameters on the right side of the screen are really important, so we will explain everything you need to know about them in the next section."
+          paragraph_2: "The parameters on the right side of the screen are really important, so we will explain everything you need to know about them in a later section."
           list:
             item_1: "You can hover your mouse over any point to see more details about the transaction."
             item_2: "You can click on the point to see even more information: it will show the message's buffers."
             item_3: "You can drag the graph panel to see transactions outside the default region represented."
             item_4: "You can also use your mousewheel to zoom in/out."
         transactions_stacks:
-          paragraph_1: "Notice that it can happen that one single circle represents more than one transaction. As an example, if you are sending pings from your POS to your server, you expect the same messages being sent and received each time, so their circles get stacked in the graph. When having this situation, you can hover the mouse over the circle representing the transaction to see how many times a transaction with same messages sizes was seen, along with other information, like the time of it's last occurrence. You can also click on it to see the message's buffer of its last ocurrence."
+          paragraph_1: "Notice that it can happen that one single circle represents more than one transaction."
+          paragraph_2: "As an example, if you are sending pings from your POS to your server, you expect the same messages being sent and received each time, so their circles get stacked in the graph."
+          paragraph_3: "When having this situation, you can hover the mouse over the circle representing the transaction to see how many times a transaction with same messages sizes was seen, along with other information, like the time of it's last occurrence. You can also click on it to see the message's buffer of its last ocurrence."
         parameters:
           paragraph_1: "In the area at the right side of the chart, we have two sliders you can use to change some parameters of your detector."
           paragraph_2: "Our algorithm relies on two parameters that effectively setup its sensitiveness, one of them controlling how easy/hard it is to flag two transactions as similar and the other controlling how many of these similar transactions we need to define a new pattern:"
           list:
-            item_1: "<strong>Which amount of similar transactions defines a pattern:</strong> this parameter controls how easy/hard it is for the algorithm to define a new pattern. If we say a few amount of similar transactions defines a pattern (slider to the left), then the algorithm will create new patterns after seeing few similar transactions. On the other extreme, setting this parameter to many similar transactions definning a pattern (slider to the right), the algorithm will have to see many similar transactions occuring before saying they form a pattern. In summary, as the slider goes left to right you will be detecting less to more anomalies, or alternatively, more to less patterns."
-            item_2: "<strong>How similar a set of transactions should be in order to define a pattern:</strong> this parameter controls how easy/hard it is for two transactions to be considered as similar. If we say they need to be little similar (slider to left), then it will flag transactions as similar more easily, i.e., it will flag transactions with messages sizes not so similar as similar. On the other extreme, saying the transactions need to be very similar (slider to right), means the algorithm will be more selectful when flaging transactions as similar, i.e., it will only flag as similar transactions with close messages sizes. Oversimplifying, as the slider goes left to right you will be detecting less to more anomalies, or alternatively, more to less patterns."
+            item_1: "<strong>Which amount of similar transactions defines a pattern:</strong> this parameter controls how easy/hard it is for the algorithm to define a new pattern. If we say a few amount of similar transactions defines a pattern (slider to the left), then the algorithm will create new patterns after seeing few similar transactions. On the other extreme, setting this parameter to many similar transactions definning a pattern (slider to the right), the algorithm will have to see many similar transactions occuring before saying they form a pattern. In summary, as the slider goes left to right we will be detecting less to more anomalies, or alternatively, more to less patterns."
+            item_2: "<strong>How similar a set of transactions should be in order to define a pattern:</strong> this parameter controls how easy/hard it is for two transactions to be considered as similar. If we say they need to be little similar (slider to left), then it will flag transactions as similar more easily, i.e., it will flag transactions with messages sizes not so similar as similar. On the other extreme, saying the transactions need to be very similar (slider to right), means the algorithm will be more selectful when flaging transactions as similar, i.e., it will only flag as similar transactions with close messages sizes. Oversimplifying, as the slider goes left to right we will be detecting less to more anomalies, or alternatively, more to less patterns."
         play_with_it:
           paragraph_1: "To you get a better sense of the effect of each parameter in the algorithm, we created a simulation which you can interact with. Just play with the sliders:<br>"
           paragraph_2: "If you are having trouble understanding it, remember that each circle in this chart represents one transaction, each pattern being represented by its unique color: circles with same color belongs to same pattern. The small sized gray circles represents anomalous transactions and don't belong to any pattern."
@@ -2861,7 +2863,7 @@ en:
           paragraph_1: "This is what you'll find when accessing the settings tab:"
           image_1: "<img src='/img/en/guides/logs_patterns/settings.gif' class='img-tutorial img-polaroid' alt='Notifications tab' />"
           paragraph_2: "In this screen you can setup notifications to be sent by us in case anomalous transactions are caught."
-          paragraph_3: "Currently, there are two notifications mechanisms: e-mail and webhook (via HTTP POST). You can activate one, another or both."
+          paragraph_3: "Currently, there are two notifications mechanisms: e-mail and webhook (via HTTP Post). You can activate one, another or both."
         setting_email:
           paragraph_1: "To set an e-mail, just select the notification type as e-mail and type your e-mail in the appropriate field. If you are registered in more than one company, you can subscribe to receive notifications for each one, just having to access this settings while logged in each account."
           paragraph_2: "To keep things simple, we only allow subscrition of one e-mail per company, so if you want we to send notifications to a group of people, you can create an e-mail group with your provider."
