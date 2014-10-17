@@ -2791,18 +2791,18 @@ en:
           paragraph_2: "Be cautious when giving meaning to an anomalous transaction. It does not necessarily means something bad has happened. As an example, when you start testing a new application, you will probably see a lot of anomalous transactions, as they won't fit any previously seen pattern."
         algorithm:
           paragraph_1: "At the core of the service there is an algorithm called <em>density-based spatial clustering of applications with noise</em> (<a href='http://www.wikiwand.com/en/DBSCAN' class='external'>DBSCAN</a>), which we modified to work efficiently with discrete streaming data (as those from your logs), calling it <em>discrete density-based spatial clustering of applications with noise</em> (DDBSCAN). Our DDBSCAN implementation is available as a <a href='https://pypi.python.org/pypi/ddbscan/' class='external'>Python package</a> and its source code is open at <a href='https://github.com/cloudwalkio/ddbscan' class='external'>Github</a>."
-        next: "Tutorial Overview"
+        next: "Tutorial overview"
       overview:
-        title: "Transactions Patterns - Tutorial Overview"
+        title: "Transactions patterns - Tutorial overview"
         paragraph_1: "In this tutorial you will learn: how to access a report with your latest anomalous transactions, how to see all your transactions patterns and anomalies in a nice chart and how to receive notifications via email or webhook when something anomalous happens."
         image_1: "<img src='/img/en/guides/transactions_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is a service integrated into CloudWalk Manager and you can access it at <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "You won't see anything at this location unless you have done at least one transaction using your CloudWalk account."
         paragraph_4: "Let's get started!"
         previous: "Introduction"
-        next: "Anomalies Report"
+        next: "Anomalies report"
       anomalies_report:
-        title: "Transactions Patterns - Anomalies Report"
+        title: "Transactions patterns - Anomalies report"
         paragraph_1: "When accessing the anomalies tab, you'll see a screen similar to this:"
         image_1: "<img src='/img/en/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is the default tab you arrive when you access the transactions patterns URL."
@@ -2810,10 +2810,10 @@ en:
         paragraph_4: "Down the screen you can see a table with the ten last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the plus sign. The details for the transaction includes time, size and message buffers for the sent data and the received one. This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further."
         image_2: "<img src='/img/en/guides/transactions_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Now, let's take a look at a graphical representation of our transactions!"
-        previous: "Tutorial Overview"
-        next: "Patterns Chart"
+        previous: "Tutorial overview"
+        next: "Patterns chart"
       patterns_chart:
-        title: "Transactions Patterns - Patterns Chart"
+        title: "Transactions patterns - Patterns chart"
         table_of_contents:
           interface_presentation: "Interface presentation"
           chart_interaction: "Chart interaction"
@@ -2859,10 +2859,10 @@ en:
               title: "How similar transactions should be to define a pattern?"
               right: "Very"
               left: "Little"
-        previous: "Anomalies Report"
-        next: "Setting Notifications"
+        previous: "Anomalies report"
+        next: "Setting notifications"
       notifications_settings:
-        title: "Transactions Patterns - Setting Notifications"
+        title: "Transactions patterns - Setting notifications"
         table_of_contents:
           interface: "Interface presentation"
           setting_email: "Setting an e-mail"
@@ -2878,4 +2878,4 @@ en:
         setting_webhook:
           paragraph_1: "To set a webhook, just select the notification type as HTTP Post and type your webhook's URL in the URL field."
           paragraph_2: "If we catch any anamolous transaction, we will send you a JSON payload with structure similar to this:"
-        previous: "Patterns Chart"
+        previous: "Patterns chart"

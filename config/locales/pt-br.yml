@@ -2774,7 +2774,7 @@ pt-BR:
   guides:
     transactions_patterns:
       intro:
-        title: "Padrões de Transações"
+        title: "Padrões de transações"
         table_of_contents:
           introduction: "Introdução"
           pattern: "O que é um padrão?"
@@ -2791,18 +2791,18 @@ pt-BR:
           paragraph_2: "Tenha cuidado ao atribuir qualquer significado a uma transação anômala. Isso não significa necessariamente que algo ruim tenha ocorrido. Como exemplo, quando você começar a testar uma nova aplicação, você provavelmente verá muitas transações anômalas, na medida em que elas não se encaixam em nenhum padrão visto anteriormente."
         algorithm:
           paragraph_1: "Na essência do serviço está um algoritmo chamado <em>density-based spatial clustering of applications with noise</em> (<a href='http://www.wikiwand.com/en/DBSCAN' class='external'>DBSCAN</a>), o qual modificamos para trabalhar eficientemente com séries de dados discretos (como aqueles dos seus logs), chamando-o <em>discrete density-based spatial clustering of applications with noise</em> (DDBSCAN). Nossa implementação do DDBSCAN está disponível como um <a href='https://pypi.python.org/pypi/ddbscan/' class='external'>package Python</a> e seu código fonte é aberto, podendo ser acessado no <a href='https://github.com/cloudwalkio/ddbscan' class='external'>Github</a>."
-        next: "Visão Geral do Tutorial"
+        next: "Visão geral do tutorial"
       overview:
-        title: "Padrões de Transações - Visão Geral do Tutorial"
+        title: "Padrões de transações - Visão geral do tutorial"
         paragraph_1: "Neste tutorial, você aprenderá: como acessar um relatório com suas últimas transações anômalas, como visualizar todos os padrões e anomalias de suas transações em um gráfico e como receber notificações via e-mail ou webhook quando algo anômalo ocorrer."
         image_1: "<img src='/img/pt-BR/guides/transactions_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Este é um serviço integrado ao CloudWalk Manager e você pode accessá-lo em <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "Você não conseguirá visualizar nada nesse link a menos que tenha realizado pelo menos uma transação utilizando sua conta CloudWalk."
         paragraph_4: "Vamos começar!"
-        previous: "introdução"
-        next: "Relatório de Anomalias"
+        previous: "Introdução"
+        next: "Relatório de anomalias"
       anomalies_report:
-        title: "Padrões de Transações - Relatório de Anomalias"
+        title: "Padrões de transações - Relatório de anomalias"
         paragraph_1: "Ao acessar a aba de anomalias, você verá uma tela similar a esta:"
         image_1: "<img src='/img/pt-BR/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Esta é a aba padrão ativada quando você acessa a URL dos padrões de transações."
@@ -2810,10 +2810,10 @@ pt-BR:
         paragraph_4: "Mais abaixo na tela, você pode ver uma tabela contendo as dez últimas transações anômalas detectadas. Você pode expandir cada linha da tabela para obter mais detalhes sobre a transação correspondente, basta clicar no sinal de mais. Os detalhes da transação incluem data e hora, assim como tamanho e conteúdo das mensagens enviadas e recebidas. Isto é útil para observarmos exatamente o que ativou o detector de anomalias, de modo que você possa conduzir investigações posteriores."
         image_2: "<img src='/img/pt-BR/guides/transactions_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Agora, vamos dar uma olhada em uma representação gráfica de nossas transações!"
-        previous: "Visão Geral do Tutorial"
+        previous: "Visão geral do tutorial"
         next: "Gráfico dos padrões  "
       patterns_chart:
-        title: "Padrões de Transações - Gráfico dos padrões"
+        title: "Padrões de transações - Gráfico dos padrões"
         table_of_contents:
           interface_presentation: "Apresentação da interface"
           chart_interaction: "Interações com o gráfico"
@@ -2859,10 +2859,10 @@ pt-BR:
               title: "Quão similar as transações devem ser para definir um padrão?"
               right: "Muito"
               left: "Pouco"
-        previous: "Relatório de Anomalias"
-        next: "Configurando Notificações"
+        previous: "Relatório de anomalias"
+        next: "Configurando notificações"
       notifications_settings:
-        title: "Padrões de Transações - Configurando Notificações"
+        title: "Padrões de transações - Configurando notificações"
         table_of_contents:
           interface: "Apresentação da interface"
           setting_email: "Configurando um e-mail"
@@ -2878,4 +2878,4 @@ pt-BR:
         setting_webhook:
           paragraph_1: "Para configurar um webhook, basta selecionar o tipo de notificação como sendo HTTP Post e digitar a URL de seu webhook no campo correspondente."
           paragraph_2: "Se encontrarmos qualquer transação anômala, enviaremos para você uma mensagem JSON com estrutura similar a esta:"
-        previous: "Gráfico dos Padrões"
+        previous: "Gráfico dos padrões"
