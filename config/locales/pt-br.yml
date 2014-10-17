@@ -2786,7 +2786,7 @@ pt-BR:
         next: "Visão Geral do Tutorial"
       overview:
         title: "Padrões nas Transações - Visão Geral do Tutorial"
-        paragraph_1: "Neste tutorial, você aprenderá: como acessar um relatório com suas últimas transações anômalas, como visualizar todos os padrões e anomalias de suas transações em um gráfico e como receber notificações via e-mail ou webhooks quando algo anômalo ocorrer."
+        paragraph_1: "Neste tutorial, você aprenderá: como acessar um relatório com suas últimas transações anômalas, como visualizar todos os padrões e anomalias de suas transações em um gráfico e como receber notificações via e-mail ou webhook quando algo anômalo ocorrer."
         image_1: "<img src='/img/pt-BR/guides/logs_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Este é um serviço integrado ao CloudWalk Manager e você pode accessá-lo em <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "Você não conseguirá visualizar nada nesse link a menos que tenha realizado pelo menos uma transação utilizando sua conta CloudWalk."
@@ -2797,9 +2797,9 @@ pt-BR:
         title: "Padrões nas Transações - Relatório de Anomalias"
         paragraph_1: "Ao acessar a aba de anomalias, você verá uma tela similar a esta:"
         image_1: "<img src='/img/pt-BR/guides/logs_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
-        paragraph_2: "Essa é a aba padrão ativada quando você acessa a URL dos padrões de transações."
-        paragraph_3: "Como você pode observar na imagem acima, destacamos o momento em que ocorreu a última transação."
-        paragraph_4: "Mais abaixo na tela, você pode ver uma tabela contendo as 10 últimas transações anômalas detectadas. Você pode expandir cada linha da tabela para obter mais detalhes sobre a transação correspondente, basta clicar no sinal de mais. Os detalhes da transação incluem data e hora, assim como tamanho e conteúdo das mensagens enviadas e recebidas. Isto é útil para observarmos exatamente o que ativou o detector de anomalias, de modo que você possa conduzir investigações posteriores."
+        paragraph_2: "Esta é a aba padrão ativada quando você acessa a URL dos padrões de transações."
+        paragraph_3: "Como você pode observar na imagem acima, destacamos o momento em que detectamos a última transação anômala."
+        paragraph_4: "Mais abaixo na tela, você pode ver uma tabela contendo as dez últimas transações anômalas detectadas. Você pode expandir cada linha da tabela para obter mais detalhes sobre a transação correspondente, basta clicar no sinal de mais. Os detalhes da transação incluem data e hora, assim como tamanho e conteúdo das mensagens enviadas e recebidas. Isto é útil para observarmos exatamente o que ativou o detector de anomalias, de modo que você possa conduzir investigações posteriores."
         image_2: "<img src='/img/pt-BR/guides/logs_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Agora, vamos dar uma olhada em uma representação gráfica de nossas transações!"
         previous: "Visão Geral do Tutorial"
@@ -2815,29 +2815,31 @@ pt-BR:
         interface_presentation:
           paragraph_1: "Ao acessar a aba de padrões, você verá uma tela similar a esta:"
           image_1: "<img src='/img/pt-BR/guides/logs_patterns/patterns.gif' class='img-tutorial img-polaroid' alt='Patterns tab' />"
-          paragraph_2: "Esse gráfico todo colorido é uma representação de suas transações. O eixo horizontal corresponde ao tamanho da mensagem enviada por seu POS  e o eixo vertical corresponde ao tamanho da mensagem recebida em resposta. Cada círculo representa uma transação com tamanhos específicos para as mensagens enviadas e recebidas."
+          paragraph_2: "Este gráfico todo colorido é uma representação de suas transações. O eixo horizontal corresponde ao tamanho da mensagem enviada por seu POS  e o eixo vertical corresponde ao tamanho da mensagem recebida em resposta. Cada círculo representa uma transação com tamanhos específicos para as mensagens enviadas e recebidas."
           paragraph_3: "Os círculos coloridos representam padrões: transações de mesma cor pertencem ao mesmo padrão. Você pode ver que há alguns círculos menores com a mesma cor de alguns círculos maiores: eles também pertencem ao mesmo padrão, mas quase foram deixados de fora."
-          paragraph_4: "Os pequenos círculos cinza representam transações anômalas e não pertencem a nenhum padrão. Os pequenos quadrados cinza representam as últimas 10 anomalias."
+          paragraph_4: "Os pequenos círculos cinzas representam transações anômalas e não pertencem a nenhum padrão. Os pequenos quadrados cinzas representam as últimas dez anomalias."
           paragraph_5: "O quadrado grande representa sua última transação e, se for cinza, é uma transação anômala."
         chart_interaction:
           paragraph_1: "Aqui estão todas as formas pelas quais você pode interagir com o gráfico:"
-          paragraph_2: "Os parâmetros no lado direito da tela são realmente importantes, então explicaremos tudo que você precisa saber sobre eles na próxima seção."
+          paragraph_2: "Os parâmetros no lado direito da tela são realmente importantes, então explicaremos tudo que você precisa saber sobre eles em uma seção posterior."
           list:
             item_1: "Você pode mover o mouse sobre qualquer ponto para ver mais detalhes sobre a transação."
             item_2: "Você pode clicar no ponto para ver ainda mais informação: serão mostrados os conteúdos das mensagens."
             item_3: "Você pode arrastar o gráfico para ver transações fora da região padrão representada."
             item_4: "Você pode utilizar a roda do mouse para aproximar/afastar a visualização."
         transactions_stacks:
-          paragraph_1: "Observe que pode acontecer de um único círculo representar mais de uma transação. Como exemplo, se você ficar enviando pings do seu POS ao seu servidor, você espera que as mesmas mensagens serão enviadas e recebidas todas as vezes, de modo que seus círculos serão empilhados no gráfico. Nesta situação, você pode passar o mouse sobre o círculo representando as transações para ver quantas vezes uma transação com mensagens deste mesmo tamanho ocorreu, juntamente com outras informações, como a hora da última ocorrência. Você pode também clicar no círculo para ver o conteúdo da última transação."
+          paragraph_1: "Observe que pode acontecer de um único círculo representar mais de uma transação."
+          paragraph_2: "Como exemplo, se você ficar enviando pings do seu POS ao seu servidor, você espera que as mesmas mensagens sejam enviadas e recebidas todas as vezes, de modo que os círculos representando essas transações estarão empilhados no gráfico."
+          paragraph_3: "Nesta situação, você pode passar o mouse sobre o círculo representando as transações para ver quantas vezes uma transação com mensagens deste mesmo tamanho ocorreu, juntamente com outras informações, como a hora da última ocorrência. Você pode também clicar no círculo para ver o conteúdo da última transação."
         parameters:
           paragraph_1: "Na área à direita do gráfico, temos dois sliders que você pode utilizar para modificar alguns parâmetros de seu detector."
           paragraph_2: "Nosso algoritmo depende de dois parâmetros que efetivamente configuram sua sensibilidade, um deles controlando quão fácil/difícil é para marcar duas transações como similares e o outro controlando quantas destas transações similares são necessárias para definir-se um novo padrão:"
           list:
-            item_1: "<strong>Quantas transações similares definem um padrão:</strong> esse parâmetro controla o quão fácil/difícil é para o algoritmo definir um novo padrão. Se dissermos que poucas transações similares definem um padrão (slider para a esquerda), o algoritmo criará novos padrões após observar poucas transações similares. No outro extremo, configurando este parâmetro para que muitas transações similares definam um padrão (slider para a direita), o algoritmo terá que observar muitas transações similares ocorrendo antes de dizer que elas formam um padrão. Em resumo, quando o slider for da esquerda para a direita você estará detectando menos para mais anomalias, ou, alternativamente, mais para menos padrões."
-            item_2: "<strong>Quão similar um conjunto de transações deve ser para definir um padrão:</strong> esse parâmetro controla o quão fácil/difícil é para duas transações serem consideradas similares. Se dissermos que elas precisam ser pouco similares (slider para a esquerda), o algoritmo considerará transações como similares mais facilmente, i.e., ele considerará transações com mensagens de tamanhos não muito parecidos como similares. No outro extremo, dizer que as transações precisam ser muito similares (slider para a direita), significa que o algoritmo será mais seletivo ao considerar transações como similares, i.e., ele considerará como similares apenas transações com tamanhos de mensagens parecidos. Simplificando, quando o slider for da esquerda para a direita você estará detectando menos para mais anomalias, ou, alternativamente, mais para menos padrões."
+            item_1: "<strong>Quantas transações similares definem um padrão:</strong> este parâmetro controla o quão fácil/difícil é para o algoritmo definir um novo padrão. Se dissermos que poucas transações similares definem um padrão (slider para a esquerda), o algoritmo criará novos padrões após observar poucas transações similares. No outro extremo, configurando este parâmetro para que muitas transações similares definam um padrão (slider para a direita), o algoritmo terá que observar muitas transações similares ocorrendo antes de dizer que elas formam um padrão. Em resumo, quando o slider for da esquerda para a direita estaremos detectando menos para mais anomalias, ou, alternativamente, mais para menos padrões."
+            item_2: "<strong>Quão similar um conjunto de transações deve ser para definir um padrão:</strong> este parâmetro controla o quão fácil/difícil é para duas transações serem consideradas similares. Se dissermos que elas precisam ser pouco similares (slider para a esquerda), o algoritmo considerará transações como similares mais facilmente, ou seja, ele considerará transações com mensagens de tamanhos não muito parecidos como similares. No outro extremo, dizer que as transações precisam ser muito similares (slider para a direita), significa que o algoritmo será mais seletivo ao considerar transações como similares, ou seja, ele considerará como similares apenas transações com tamanhos de mensagens parecidos. Simplificando, quando o slider for da esquerda para a direita estaremos detectando menos para mais anomalias, ou, alternativamente, mais para menos padrões."
         play_with_it:
           paragraph_1: "Para que você tenha uma noção melhor do efeito de cada parâmetro sobre o algoritmo, criamos uma simulação com a qual você pode interagir. Basta ajustar os sliders:<br>"
-          paragraph_2: "Se você está tendo dificuldades em entender a simulação, lembre-se que cada círculo nesse gráfico representa uma transação, cada padrão sendo representada por sua cor única: círculos de mesma cor pertencem ao mesmo padrão. Os pequenos círculos cinzas representam transações anômalas e não pertencem a nenhum padrão."
+          paragraph_2: "Se você está tendo dificuldades em entender a simulação, lembre-se que cada círculo nesse gráfico representa uma transação, cada padrão sendo representado por sua cor única: círculos de mesma cor pertencem ao mesmo padrão. Os pequenos círculos cinzas representam transações anômalas e não pertencem a nenhum padrão."
           paragraph_3: "Observe que quando os parâmetros estão em algum lugar no meio das escalas, obtemos padrões razoáveis, de modo que esta pode ser a melhor configuração para você. De fato, esta é nossa configuração padrão."
           simulation:
             title: "Configure os parâmetros"
@@ -2860,10 +2862,10 @@ pt-BR:
         interface:
           paragraph_1: "Isto é o que você encontrará ao acessar a aba de configurações:"
           image_1: "<img src='/img/pt-BR/guides/logs_patterns/settings.gif' class='img-tutorial img-polaroid' alt='Notifications tab' />"
-          paragraph_2: "Nessa tela você pode configurar notificações a serem enviadas por nós caso transações anômalas sejam detectas."
-          paragraph_3: "Atualmente, existem dois mecanismos de notificação: e-mail e webhook (via HTTP POST). Você pode ativar um, outro ou ambos."
+          paragraph_2: "Nesta tela você pode configurar notificações a serem enviadas por nós caso transações anômalas sejam detectas."
+          paragraph_3: "Atualmente, existem dois mecanismos de notificação: e-mail e webhook (via HTTP Post). Você pode ativar um, outro ou ambos."
         setting_email:
-          paragraph_1: "Para configurar um e-mail, basta selecionar o tipo da notificaçao como e-mail e digitar o endereço de seu e-mail no campo apropriado. Se você está registrado em mais de uma companhia, você pode se inscrever para receber notificações de cada uma delas, tendo apenas que acessar essas configurações logado em cada uma das contas."
+          paragraph_1: "Para configurar um e-mail, basta selecionar o tipo da notificação como e-mail e digitar o endereço de seu e-mail no campo apropriado. Se você está registrado em mais de uma companhia, você pode se inscrever para receber notificações de cada uma delas, tendo apenas que acessar essas configurações após o login em cada uma das contas."
           paragraph_2: "Para manter as coisas simples, permitimos o cadastro de apenas um e-mail por companhia. Assim, se você quiser que enviemos notificações para um grupo de pessoas, você pode criar um grupo de e-mail com seu provedor."
         setting_webhook:
           paragraph_1: "Para configurar um webhook, basta selecionar o tipo de notificação como sendo HTTP Post e digitar a URL de seu webhook no campo correspondente."
