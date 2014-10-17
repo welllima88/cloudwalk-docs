@@ -567,3 +567,8 @@ p.note {
   .external{padding-right: 0; }
   p.note { padding: 1em; }
 }
+
+/* Style from transactions patterns simulation */
+.transactions-patterns-slider {
+  cursor: pointer
+}
