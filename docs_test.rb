@@ -5,6 +5,7 @@ SimpleCov.start
 
 require 'minitest/autorun'
 require 'rack/test'
+require 'mocha/mini_test'
 require_relative 'docs.rb'
 
 include Rack::Test::Methods
@@ -14,6 +15,11 @@ def app
 end
 
 describe "Docs" do
+  before do
+    # Do not deliver emails
+    Pony.stubs(:deliver)
+  end
+
   it "should redirect to index" do
     get '/'
     assert last_response.redirect?
@@ -96,5 +102,13 @@ describe "Docs" do
   it "should redirect to index due empty query" do
     get '/en/search'
     assert last_response.redirect?
+  end
+
+  it "should send a notification due a search error" do
+    Net::HTTPOK.any_instance.stubs(:code).returns('500')
+
+    get "/en/search?query=posxml"
+    last_response.body.include?('Sorry for the inconvenience.')
+    assert last_response.ok?
   end
 end
