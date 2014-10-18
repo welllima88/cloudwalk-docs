@@ -1,14 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    backports (3.6.2)
+    backports (3.6.3)
     daemons (1.1.9)
     docile (1.1.5)
     eventmachine (1.0.3)
     i18n (0.6.11)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
-    mime-types (2.3)
+    metaclass (0.0.4)
+    mime-types (2.4.2)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     multi_json (1.10.1)
     newrelic_rpm (3.9.5.251)
     pony (1.11)
@@ -50,6 +53,7 @@ PLATFORMS
 
 DEPENDENCIES
   i18n
+  mocha
   newrelic_rpm
   pony
   puma

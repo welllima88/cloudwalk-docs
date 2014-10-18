@@ -10,6 +10,7 @@ gem 'sinatra-partial'
 gem 'thin'
 
 group :test do
+  gem 'mocha'
   gem 'rack-test'
   gem 'simplecov'
 end
