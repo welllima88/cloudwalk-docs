@@ -125,7 +125,7 @@ helpers do
     request = Net::HTTP::Get.new(uri.request_uri)
     res = http.request(request)
 
-    raise unless res.code == "200"
+    raise res.body unless res.code == "200"
 
     JSON.parse(res.body)
   rescue
