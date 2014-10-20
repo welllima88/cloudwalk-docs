@@ -1,0 +1,27 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
+<% end %>
+
+<h1><%= I18n.t("guides.transactions_patterns.overview.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p><%= I18n.t("guides.transactions_patterns.overview.paragraph_1") %></p>
+
+<%= I18n.t("guides.transactions_patterns.overview.image_1") %>
+
+<p><%= I18n.t("guides.transactions_patterns.overview.paragraph_2") %></p>
+
+<p class="alert alert-warning" role="alert"><%= I18n.t("guides.transactions_patterns.overview.paragraph_3") %></p>
+
+
+<p><%= I18n.t("guides.transactions_patterns.overview.paragraph_4") %></p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("guides.transactions_patterns.overview.previous"), "guides/transactions-patterns") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("guides.transactions_patterns.overview.next") + " &rarr;", "guides/transactions-patterns/anomalies-report") %>
+  </li>
+</ul>

@@ -1,0 +1,121 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
+<% end %>
+
+<h1><%= I18n.t("guides.transactions_patterns.patterns_chart.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#interface-presentation"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.interface_presentation") %></a></li>
+  <li><a href="#chart-interaction"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.chart_interaction") %></a></li>
+  <li><a href="#transactions-stacks"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.transactions_stacks") %></a></li>
+  <li><a href="#parameters"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.parameters") %></a></li>
+  <li><a href="#play-with-it"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.play_with_it") %></a></li>
+</ol>
+
+<h2 id="interface-presentation"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.interface_presentation") %></h2>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.interface_presentation.paragraph_1") %></p>
+
+<%= I18n.t("guides.transactions_patterns.patterns_chart.interface_presentation.image_1") %>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.interface_presentation.paragraph_2") %></p>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.interface_presentation.paragraph_3") %></p>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.interface_presentation.paragraph_4") %></p>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.interface_presentation.paragraph_5") %></p>
+
+<h2 id="chart-interaction"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.chart_interaction") %></h2>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.paragraph_1") %></p>
+
+<ul>
+  <li><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.list.item_1") %></li>
+  <li><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.list.item_2") %></li>
+  <li><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.list.item_3") %></li>
+  <li><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.list.item_4") %></li>
+</ul>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.paragraph_2") %></p>
+
+<h2 id="transactions-stacks"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.transactions_stacks") %></h2>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.transactions_stacks.paragraph_1") %></p>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.transactions_stacks.paragraph_2") %></p>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.transactions_stacks.paragraph_3") %></p>
+
+<h2 id="parameters"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.parameters") %></h2>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.parameters.paragraph_1") %></p>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.parameters.paragraph_2") %></p>
+
+<ol>
+  <li><%= I18n.t("guides.transactions_patterns.patterns_chart.parameters.list.item_1") %></li>
+  <li><%= I18n.t("guides.transactions_patterns.patterns_chart.parameters.list.item_2") %></li>
+</ol>
+
+<h2 id="play-with-it"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.play_with_it") %></h2>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.paragraph_1") %></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><img id="chart" src="/img/clusters-simulation/image_6_5.svg"></td>
+      <td>
+        <table style="margin-bottom: 75%;" valign="top" >
+          <thead>
+            <tr><h2><%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.simulation.title") %></h2></tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="2"><p style="margin-top: 0%;"><%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.simulation.parameter_1.title") %></p></td></tr>
+            <tr>
+              <td><%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.simulation.parameter_1.left") %> <input class="transactions-patterns-slider" type="range"  min="1" max="10" value="5" step="1" width="100%" oninput="showChartEps(this.value)"/> <%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.simulation.parameter_1.right") %></td>
+            </tr>
+            <tr><td colspan="2"><p style="margin-top: 10%;"><%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.simulation.parameter_2.title") %></p></td></tr>
+            <tr>
+              <td><%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.simulation.parameter_2.left") %> <input class="transactions-patterns-slider" type="range"  min="1" max="10" value="5" step="1" oninput="showChartMinPts(this.value)"/> <%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.simulation.parameter_2.right") %></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.paragraph_2") %></p>
+
+<p><%= I18n.t("guides.transactions_patterns.patterns_chart.play_with_it.paragraph_3") %></p>
+
+<div>
+<script type="text/javascript">
+function showChartEps(eps)
+{
+  var minPts = document.getElementById("chart").src.split("_")[1];
+  document.getElementById("chart").src = "/img/clusters-simulation/image_" + minPts + "_" + eps + ".svg"
+}
+function showChartMinPts(minPts)
+{
+  var eps = document.getElementById("chart").src.split("_")[2].split(".")[0];
+  document.getElementById("chart").src = "/img/clusters-simulation/image_" + (11-minPts) + "_" + eps + ".svg"
+  console.log(document.getElementById("chart").src)
+}
+</script>
+</div>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("guides.transactions_patterns.patterns_chart.previous"), "guides/transactions-patterns/anomalies-report") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("guides.transactions_patterns.patterns_chart.next") + " &rarr;", "guides/transactions-patterns/notifications-settings") %>
+  </li>
+</ul>
