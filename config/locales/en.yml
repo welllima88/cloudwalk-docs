@@ -2778,7 +2778,7 @@ en:
   guides:
     transactions_patterns:
       intro:
-        title: "Transactions Patterns"
+        title: "Transactions patterns"
         table_of_contents:
           introduction: "Introduction"
           pattern: "What is a pattern?"
