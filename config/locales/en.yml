@@ -677,6 +677,10 @@ en:
       group_name: Development environment
       overview: Overview
       emulator: Emulator
+    guides:
+      group_name: Guides
+      patterns:
+        sub_group_name: "Transactions patterns"
     integration:
       advanced_http: REST HTTP
       architecture: Service architecture

@@ -119,4 +119,17 @@
       </div>
     </div>
   </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseNine"><%= I18n.t("menu.guides.group_name") %></a>
+    </div>
+    <div id="collapseNine" class="accordion-body collapse <%=is_group_active?("guides") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("guides", "Anomalies and patterns") %>"><%= link_to(I18n.t("menu.guides.patterns.sub_group_name"), "guides/transactions-patterns") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
