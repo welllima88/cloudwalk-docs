@@ -677,6 +677,10 @@ pt-BR:
       group_name: Ambiente de desenvolvimento
       overview: Visão geral
       emulator: Emulador
+    guides:
+      group_name: Tutoriais
+      patterns:
+        sub_group_name: "Padrões de transações"
     integration:
       advanced_http: REST HTTP
       architecture: Arquitetura do serviço
