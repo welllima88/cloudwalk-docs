@@ -99,7 +99,7 @@ helpers do
   def is_group_item_active?(group=nil, item=nil)
     if group == request.path_info.split("/")[2]
       return "active" if request.path_info.split("/").length == 3 && item.nil?
-      return "active" if item == request.path_info.split("/").last
+      return "active" if request.path_info.split("/").include? item
     end
   end
 
