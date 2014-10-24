@@ -132,7 +132,7 @@ pt-BR:
           attributes: Atributos de um dispositivo
           create: Liberação de um novo dispositivo
           destroy: Exclusão de um dispositivo
-          index: Listagem de todos dispositivo
+          index: Listagem de todos dispositivos
           show: Busca de um dispositivo específico
           update: Atualização de um dispositivo
         title: Developer API - Dispositivos
