@@ -13,6 +13,7 @@ group :test do
   gem 'mocha'
   gem 'rack-test'
   gem 'simplecov'
+  gem 'coveralls', require: false
 end
 
 group :production do
