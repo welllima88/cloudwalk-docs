@@ -622,17 +622,10 @@ pt-BR:
     walk_framework:
       approved_devices:
         cloudwalk_reader: Dispositivos CloudWalk
-        line_evo: VeriFone Evo
-        line_telium_1: Ingenico Telium 1
-        line_telium_2: Ingenico Telium 2
-        line_verix: VeriFone Verix
-        paragraph_1: O componente WALK Framework, que é instalado nos dispositivos, difere entre as diversas linhas de equipamentos, uma vez que, cada equipamento possui suas particularidades. Caso o equipamento que você pretende utilizar não conste na listagem abaixo, <a href='mailto:cloudwalk@cloudwalk.io'>entre em contato</a>, pois podemos considerar a homologação do mesmo.
+        paragraph_1: O componente WALK Framework, que é instalado nos dispositivos, difere entre as diversas linhas de equipamentos, uma vez que, cada equipamento possui suas particularidades. Caso o equipamento que você pretende utilizar não conste na listagem abaixo, <a href='https://www.cloudwalk.io/contact'>entre em contato</a>, pois podemos considerar a homologação do mesmo.
         paragraph_2: 'Atualmente, os seguintes dispositivos estão homologados para utilizarem o WALK Framework:'
       contactless:
-        paragraph_1: 'O serviço CloudWalk também oferece a possibilidade de utilização da tecnologia <em>contactless</em> com os seguintes equipamentos:'
-        paragraph_2: A comunicação contactless dos terminais Verifone é feita através do <strong>pinpad 1000 SE CTLS</strong>, em conjunto com os terminais Vx510 ou Vx520.
-        paragraph_3: Os terminais Contactless da linha EVO ainda não foram homologados.
-        paragraph_4: A comunicação contactless dos terminais Ingenico da linha ICT (ICT220 e ICT250) é feita através do <strong>pinpad IPP220 CTLS</strong>. Já os terminais da linha IWL (IWL220, IWL250 e IWL280) oferecem uma interface nativa de comunicação contactless.
+        paragraph_1: 'O serviço CloudWalk também oferece a possibilidade de utilização da tecnologia <em>contactless</em> com todos os equipamentos que possuem o módulo de comunicação <em>contactless</em> nativo, e também através dos pinpads <strong>1000 SE CTLS</strong> (VeriFone) e <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
       description: 'O WALK Framework, instalado diretamente nos terminais POS, é uma máquina virtual que possui a capacidade de interpretar os comandos da linguagem POSXML. Atualmente, os seguintes terminais estão homologados para utilizarem o WALK Framework: Linha VeriFone Verix, Linha VeriFone Evo, Linha Ingenico Telium 2.'
       overview:
         paragraph_1: O WALK Framework, instalado diretamente nos dispositivos, é uma máquina virtual que possui a capacidade de interpretar os comandos da linguagem POSXML.

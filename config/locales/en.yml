@@ -622,17 +622,10 @@ en:
     walk_framework:
       approved_devices:
         cloudwalk_reader: CloudWalk devices
-        line_evo: VeriFone Evo Line
-        line_telium_1: Ingenico Telium 1
-        line_telium_2: Ingenico Telium 2
-        line_verix: VeriFone Verix Line
-        paragraph_1: The component WALK Framework, which is installed on devices, differs between various lines of equipments, since each device has its own specifications. If the equipment you want to use does not appear on the list below, <a href='mailto:cloudwalk@cloudwalk.io'>contact us</a>, because we might consider the approval of it.
+        paragraph_1: The component WALK Framework, which is installed on devices, differs between various lines of equipments, since each device has its own specifications. If the equipment you want to use does not appear on the list below, <a href='https://www.cloudwalk.io/contact'>contact us</a>, because we might consider the approval of it.
         paragraph_2: 'Currently, the following devices are approved by WALK Framework:'
       contactless:
-        paragraph_1: 'The CloudWalk service also offers the possibility of using the contactless technology with the following equipments:'
-        paragraph_2: The contactless communication on Verifone terminals is done through the <strong>pinpad 1000 SE CTLS</strong>, together with the terminals Vx510 or Vx520.
-        paragraph_3: The EVO contactless terminals have not been approved yet.
-        paragraph_4: The contactless communication on Ingenico ICT terminals (ICT220 and ICT250) is done through the <strong>pinpad IPP220 CTLS</strong>. The IWL terminals (IWL220, IWL250 and IWL280) have a built-in native contactless communication interface.
+        paragraph_1: 'CloudWalk also offers the possibility of using the contactless technology with all devices with built-in native contactless, and also through the pinpads <strong>1000 SE CTLS</strong> (VeriFone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
       description: 'The WALK Framework is a virtual machine that has the ability to interpret the commands of POSXML language. Currently, the following devices are approved by WALK Framework: VeriFone Verix Line, VeriFone Evo Line, Ingenico Telium 2 Line.'
       overview:
         paragraph_1: The WALK Framework, installed directly on the device, is a virtual machine that has the ability to interpret the commands of POSXML language.
