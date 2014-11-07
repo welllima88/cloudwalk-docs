@@ -1,4 +1,5 @@
 pt-BR:
+  description: "Aprenda a criar, publicar e gerenciar aplicações CloudWalk."
   api:
     description: Descrição
     method: Método e formato da URL
