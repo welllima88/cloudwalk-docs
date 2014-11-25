@@ -21,7 +21,7 @@ pt-BR:
         paragraph_2: As requisições devem ser feitas utilizando o protocolo <strong>HTTPS</strong>.
         paragraph_3: 'Todos os registros de data e hora são retornados no formato padrão ISO 8601:'
       pagination:
-        paragraph_1: Requisições que retornam múltiplos registros são paginadas, onde a paginação padrão são 30 registros por vez. As páginas sub-sequentes são definidas pelo parâmetro <span class='code'>&page</span>. A quantidade padrão de registros retornados pode ser alterada pelo parâmetro <span class='code'>&per_page</span>, onde o máximo permitido é 100.
+        paragraph_1: Requisições que retornam múltiplos registros são paginadas, onde a paginação padrão são 30 registros por vez. As páginas sub-sequentes são definidas pelo parâmetro <span class='code'>&page</span>, que se inicia em 1. A quantidade padrão de registros retornados pode ser alterada pelo parâmetro <span class='code'>&per_page</span>, onde o máximo permitido é 100.
       table_of_contents:
         api_token: API Token
         crud: 'CRUD: Create, Retrieve, Update e Destroy'

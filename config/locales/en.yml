@@ -21,7 +21,7 @@ en:
         paragraph_2: The requests should be made using the <strong>HTTPS</strong> protocol.
         paragraph_3: 'All date and time records are returned in ISO 8601 standard:'
       pagination:
-        paragraph_1: Requests that return multiple records are paginated, where the default pagination size is 30 records. The sub-sequent pages are defined by the parameter <span class='code'>&page</span>. The default amount of returned records can be changed by defining the parameter <span class='code'>&per_page</span>, up to 100 records.
+        paragraph_1: Requests that return multiple records are paginated, where the default pagination size is 30 records. The sub-sequent pages are defined by the parameter <span class='code'>&page</span>, which starts on 1. The default amount of returned records can be changed by defining the parameter <span class='code'>&per_page</span>, up to 100 records.
       table_of_contents:
         api_token: API Token
         crud: 'CRUD: Create, Retrieve, Update and Destroy'
