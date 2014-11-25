@@ -22,7 +22,7 @@ GEM
     newrelic_rpm (3.9.7.266)
     pony (1.11)
       mail (>= 2.0)
-    puma (2.9.2)
+    puma (2.10.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.3)
