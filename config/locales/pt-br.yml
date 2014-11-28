@@ -1296,9 +1296,9 @@ pt-BR:
         paragraph_2: No exemplo acima foram realizadas as 6 operações matemáticas com as variáveis <strong>$(number_1)</strong> e <strong>$(number_2)</strong>.
         paragraph_3: '<ul><li>1ª operação: 200 + 100 = <strong>300</strong></li><li>2ª operação: 200 - 100 = <strong>100</strong></li><li>3ª operação: 200 * 100 = <strong>2000</strong></li><li>4ª operação: 200 / 100 = <strong>2</strong></li><li>5ª operação: 200 % 100 = <strong>0</strong></li><li>6ª operação: 200 ^ 100 = <strong>2147483647</strong></li></ul>'
         parameters:
-          parameter_1: <strong>firstvalue</strong> <span class='data-type'>[string ou integer]</span><br/>Variável que fara parte da operação.
+          parameter_1: <strong>firstvalue</strong> <span class='data-type'>[string ou integer]</span><br/>Primeira variável da operação.
           parameter_2: '<strong>operator</strong> <span class=''data-type''>[string]</span></br>Operadores matemáticos: <span class=''code''>+</span> soma, <span class=''code''>-</span> subtração, <span class=''code''>*</span> multiplicação, <span class=''code''>/</span> divisão, <span class=''code''>%</span> resto da divisão, <span class=''code''>^</span> exponenciação.'
-          parameter_3: <strong>secondvalue</strong> <span class='data-type'>[string ou integer]</span><br/>Variável que fara parte da operação.
+          parameter_3: <strong>secondvalue</strong> <span class='data-type'>[string ou integer]</span><br/>Segunda variável da operação.
           parameter_4: <strong>variabledestination</strong> <span class='data-type'>[string ou integer]</span><br/>Variável onde o valor da operação será armazenado.
       menu:
         description: Monta um menu na tela do dispositivo, baseado no número de linhas do equipamento
