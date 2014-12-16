@@ -4,7 +4,7 @@ olark.configure('locale.unavailable_title', "Dúvidas? Entre em contato!");
 olark.configure('locale.busy_title', "Live chat: Ocupado");
 olark.configure('locale.away_message', "Nosso Live chat está offline no momento. Informe seu nome, e-mail e dúvida que entraremos em contato.");
 olark.configure('locale.loading_title', "Carregando ...");
-olark.configure('locale.welcome_message', "Olá! Seja bem vindo! Meu nome é Gustavo e estou a disposição para tirar suas dúvidas.");
+olark.configure('locale.welcome_message', "Olá! Seja bem vindo! Meu nome é Gabriel e estou a disposição para tirar suas dúvidas.");
 olark.configure('locale.busy_message', "Todos os nossos analistas estão conversando com outros clientes. Aguarde um momento que em instântes falaremos com você!");
 olark.configure('locale.chat_input_text', "Digite aqui para começar a conversar");
 olark.configure('locale.name_input_text', " e o seu nome");
