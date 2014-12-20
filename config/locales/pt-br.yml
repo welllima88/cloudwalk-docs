@@ -610,20 +610,17 @@ pt-BR:
         markets: Possíveis mercados e aplicações
       title: Visão geral do serviço CloudWalk
     authorizer:
-      auth_functions:
-          item_1: Receber as parâmetrizações necessárias
-          item_2: Rotear as mensagens originadas nos diversos terminais
-          item_3: Controlar o fluxo de mensagens de solicitação e resposta entre os terminais e a rede
-          item_4: Identificar as mensagens padronizadas recebidas e respondendo adequadamente conforme parametrizado. 
-      description: DESCRIÇÃO DO AUTORIZADOR
       more_info:
         paragraph_1: Saiba mais sobre <a href='http://en.wikipedia.org/wiki/Authorization_hold' target='_blank' class='external'>Autorizador de transação</a>
       overview:
-        paragraph_1: Para que as transações originadas de um POS sejam validas, o terminal deve trocar informações com um servidor <strong>Autorizador</strong>, a qual se dá através de um protocolo de comunicação, que por sua vez é uma linguagem padronizada de troca de dados que possa ser estendia por todos os módulos envolvidos, já existem padrões específicos no mercado para facilitar a integração, como por exemplo o padrão ISO8583.
-        paragraph_2: O servidor de autorização é responsabilidade do contratante, caso o cliente não possua um servidor, o mesmo deverá ser desenvolvido pelo sua equipe de desenvolvimento.
+        paragraph_1: Para que as transações originadas de um POS sejam validas, o terminal deve trocar informações com um servidor Autorizador, a qual se dá através de um protocolo de comunicação, que por sua vez é uma linguagem padronizada de troca de dados que possa ser estendia por todos os módulos envolvidos, já existem padrões específicos no mercado para facilitar a integração, como por exemplo o padrão ISO8583
+        paragraph_2: A validação de transações é um passo importante porque permite que um Emissor consiga verificar se o modo de pagamento utilizado é autêntico e que os dados (valor, data da transação, entre outros) recebidos pelo autorizador são os mesmos dados utilizados pelo cartão durante a realização da operação no terminal
+        paragraph_3: Além de validar os dados gerados pela forma de pagamento, um autorizador também pode assinar a mensagem de resposta (por exemplo, “transação autorizada”) antes de enviá-la para o cartão. Assim, não só o Autorizador pode autenticar o cartão mas o cartão também pode autenticar seu Emissor, o que garante ainda mais segurança a todo o processo
+      integration:
+        paragraph_1: A CloudWalk oferece todos os recursos e ferramentas necessárias para o desenvolvimento de aplicações para os principais modelos de terminais POS do mercado, de forma ágil e prática, porém não desenvolve ou disponibiliza servidores de autorização baseados em regras de negócio específicas, este por sua vez, deve ser fonecido por cada cliente que deseja integrar o seu serviço com a plataforma CloudWalk.
       table_of_contents:
         how_it_works: Sobre
-        auth_functions: Funções do Autorizador
+        integration: Integração com a plataforma CloudWalk
         more_info : Mais informações
       title: Autorizador
     posxml:

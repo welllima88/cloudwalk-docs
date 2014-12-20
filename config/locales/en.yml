@@ -609,6 +609,20 @@ en:
         how_it_works: How it works
         markets: Potential markets and applications
       title: CloudWalk Service Overview
+    authorizer:
+      more_info:
+        paragraph_1: Learn more about <a href='http://en.wikipedia.org/wiki/Authorization_hold' target='_blank' class='external'>Transaction Authorizer</a>
+      overview:
+        paragraph_1: To a transction originated from a POS be valid, the terminal must exchange information with a Authorizer server, which takes place through a communications protocol, which in turn is a standardized language of data exchange that can be extended by all the modules involved, are already on the market specific patterns to facilitate integration, such as the standard ISO8583
+        paragraph_2: The transaction validation is an important step because it allows an Issuer to check if the method of payment used is authentic and that the data (value, the transaction date, etc.) received by the authorizer is the same data used by the card during the performance operation in the terminal
+        paragraph_3: 
+      integration:
+        paragraph_1:
+      table_of_contents:
+        how_it_works: About
+        integration:
+        more_info : More Information
+      title: Authorizer
     posxml:
       description: Programming language that is used to create applications for mobile devices.
       more_info:
@@ -692,6 +706,7 @@ en:
       development_environment: Development environment
       group_name: Understanding the service
       overview: Overview
+      authorizer: Authorizer
       posxml: POSXML language
       walk_framework: WALK Framework
       walk_manager: WALK Manager

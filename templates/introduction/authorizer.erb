@@ -10,7 +10,7 @@
 
 <ol class="table-of-contents">
   <li><a href="#how-it-works"><%= I18n.t("introduction.authorizer.table_of_contents.how_it_works") %></a></li>
-  <li><a href="#auth-functions"><%= I18n.t("introduction.authorizer.table_of_contents.auth_functions") %></a></li>
+  <li><a href="#integration"><%= I18n.t("introduction.authorizer.table_of_contents.integration")%>
   <li><a href="#more-info"><%= I18n.t("introduction.authorizer.table_of_contents.more_info") %></a></li>
 </ol>
 
@@ -18,16 +18,13 @@
 
 <p><%= I18n.t("introduction.authorizer.overview.paragraph_1") %></p>
 
-<p><%= I18n.t("introduction.authorizer.overview.paragraph_2") %><p>
+<p><%= I18n.t("introduction.authorizer.overview.paragraph_2") %></p>
 
-<h2 id="auth-functions"><%= I18n.t("introduction.authorizer.table_of_contents.auth_functions") %></h2>
+<p><%= I18n.t("introduction.authorizer.overview.paragraph_3") %></p>
 
-<ul class="auth_functions">
-  <li><strong><%= I18n.t("introduction.authorizer.auth_functions.item_1") %></li>
-  <li><strong><%= I18n.t("introduction.authorizer.auth_functions.item_2") %></li>
-  <li><strong><%= I18n.t("introduction.authorizer.auth_functions.item_3") %></li>
-  <li><strong><%= I18n.t("introduction.authorizer.auth_functions.item_4") %></li>
-</ul>
+<h2 id="integration"><%= I18n.t("introduction.authorizer.table_of_contents.integration") %></h2>
+
+<p><%= I18n.t("introduction.authorizer.integration.paragraph_1") %></p>
 
 <h2 id="more-info"><%= I18n.t("introduction.authorizer.table_of_contents.more_info") %></h2>
 
@@ -35,9 +32,6 @@
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + I18n.t("menu.understanding_the_service.overview"), "introduction") %>
-  </li>
-  <li class="next">
-    <%= link_to(I18n.t("menu.understanding_the_service.walk_framework") + " &rarr;", "introduction/walk-framework") %>
+    <%= link_to("&larr; " + I18n.t("menu.understanding_the_service.posxml"), "introduction/posxml") %>
   </li>
 </ul>
