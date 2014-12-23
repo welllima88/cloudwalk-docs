@@ -44,7 +44,7 @@ configure do
 end
 
 before '/:locale/*' do
-  I18n.locale = params[:locale]
+  I18n.locale = params[:locale] if ["en", "pt-BR"].include?(params[:locale])
 end
 
 not_found do
