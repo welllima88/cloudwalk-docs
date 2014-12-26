@@ -2784,6 +2784,7 @@ pt-BR:
         pattern:
           paragraph_1: "Nosso algoritmo busca por padrões, mas o que é um padrão?"
           paragraph_2: "Para nossos propósitos, um padrão é um conjunto de transações similares de algum modo. Para encontrar quais transações são similares, nosso algoritmo fica de olho nos tamanhos das mensagens enviadas por seu POS ao seu autorizador e nas mensagengs recebidas em resposta. Um padrão é, portanto, um conjunto de transações com mensagens de tamanhos similares. É trabalho do algoritmo identificar estas transações similares."
+          paragraph_3: "Para ajudar o algoritmo, separamos todas as suas transações por aplicação, de modo que os padrões formados são padrões de transação em uma aplicação específica. Mais sobre isso depois!"
         anomaly:
           paragraph_1: "Uma anomalia é uma transação que não se encaixa em nenhum padrão previamente encontrado. Portanto, uma transação anômala possui mensagens com tamanhos não usuais (até então). Enquanto nosso algoritmo continua aprendendo com suas transações, ele eventualmente irá reconhecer uma anomalia recorrente como um novo padrão e cessará o envio de quaisquer avisos sobre isso."
           paragraph_2: "Tenha cuidado ao atribuir qualquer significado a uma transação anômala. Isso não significa necessariamente que algo ruim tenha ocorrido. Como exemplo, quando você começar a testar uma nova aplicação, você provavelmente verá muitas transações anômalas, na medida em que elas não se encaixam em nenhum padrão visto anteriormente."

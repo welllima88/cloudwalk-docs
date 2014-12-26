@@ -2784,6 +2784,7 @@ en:
         pattern:
           paragraph_1: "Our algorithm looks for patterns, but what is a pattern?"
           paragraph_2: "For our purposes, a pattern is a set of somewhat similar transactions. To find which transactions are similar, our algorithm keep an eye at the sizes of messages sent by your POS to your authorizer and at the sizes of messages received in response. A pattern is then a set of transactions with similar sized messages. It's the algorithm's job to find those similar transactions."
+          paragraph_3: "To help the algorithm, we separate all your transactions by application, meaning that any pattern created is a transaction pattern for a specific application. More on that later!"
         anomaly:
           paragraph_1: "An anomaly is a transaction that does not fit in any previously seen pattern. So an anomalous transaction has messages with unusual (until then) sizes. As our algorithm keeps learning from your transactions, it will eventually recognize a recurring anomaly as a new pattern, and will stop giving you any warnings about it."
           paragraph_2: "Be cautious when giving meaning to an anomalous transaction. It does not necessarily means something bad has happened. As an example, when you start testing a new application, you will probably see a lot of anomalous transactions, as they won't fit any previously seen pattern."
