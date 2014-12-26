@@ -2805,7 +2805,7 @@ en:
         image_1: "<img src='/img/en/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is the default tab you arrive when you access the transactions patterns URL."
         paragraph_3: "As you can see in the above image, we highlight the time when we detected the last anomaly."
-        paragraph_4: "Down the screen you can see a table with the ten last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the plus sign. The details for the transaction includes time, size and message buffers for the sent data and the received one. This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further."
+        paragraph_4: "Down the screen you can see a table with the ten last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the plus sign. The details for the transaction includes time, application name, serial number, size and message buffers for the sent data and the received one. This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further."
         image_2: "<img src='/img/en/guides/transactions_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Now, let's take a look at a graphical representation of our transactions!"
         previous: "Tutorial overview"

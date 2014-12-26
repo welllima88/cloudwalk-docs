@@ -2805,7 +2805,7 @@ pt-BR:
         image_1: "<img src='/img/pt-BR/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Esta é a aba padrão ativada quando você acessa a URL dos padrões de transações."
         paragraph_3: "Como você pode observar na imagem acima, destacamos o momento em que detectamos a última transação anômala."
-        paragraph_4: "Mais abaixo na tela, você pode ver uma tabela contendo as dez últimas transações anômalas detectadas. Você pode expandir cada linha da tabela para obter mais detalhes sobre a transação correspondente, basta clicar no sinal de mais. Os detalhes da transação incluem data e hora, assim como tamanho e conteúdo das mensagens enviadas e recebidas. Isto é útil para observarmos exatamente o que ativou o detector de anomalias, de modo que você possa conduzir investigações posteriores."
+        paragraph_4: "Mais abaixo na tela, você pode ver uma tabela contendo as dez últimas transações anômalas detectadas. Você pode expandir cada linha da tabela para obter mais detalhes sobre a transação correspondente, basta clicar no sinal de mais. Os detalhes da transação incluem data e hora, assim como o nome da aplicação, número de série do terminal POS, tamanho e conteúdo das mensagens enviadas e recebidas. Isto é útil para observarmos exatamente o que ativou o detector de anomalias, de modo que você possa conduzir investigações posteriores."
         image_2: "<img src='/img/pt-BR/guides/transactions_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Agora, vamos dar uma olhada em uma representação gráfica de nossas transações!"
         previous: "Visão geral do tutorial"
