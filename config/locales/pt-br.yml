@@ -2876,4 +2876,10 @@ pt-BR:
         setting_webhook:
           paragraph_1: "Para configurar um webhook, basta selecionar o tipo de notificação como sendo HTTP Post e digitar a URL de seu webhook no campo correspondente."
           paragraph_2: "Se encontrarmos qualquer transação anômala, enviaremos para você uma mensagem JSON com estrutura similar a esta:"
+          slack_webhook:
+            title: "Recebendo notificações no Slack"
+            paragraph_1: "Se você utiliza o <a href='https://slack.com/' class='external'>Slack</a>, podemos enviar notificações de anomalias para um canal configurado em sua conta."
+            paragraph_2: "Para usar esse serviço, você deve configurar um <a href='https://cloudwalk.slack.com/services/new/incoming-webhook' class='external'>Incoming WebHook</a> em sua conta no Slack. Nesse processo você receberá uma URL para o webhook, algo como <code>https://hooks.slack.com/services/BUnCh0F/A1PhaNUMERIC/ChARAcT3RSHErE</code>."
+            paragraph_3: "O último passo é configurar essa URL no CloudWalk Manager, conforme explicado acima."
+            paragraph_4: "Agora você está pronto para receber nossas notificações!"
         previous: "Gráfico dos padrões"

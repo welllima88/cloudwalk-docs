@@ -2876,4 +2876,10 @@ en:
         setting_webhook:
           paragraph_1: "To set a webhook, just select the notification type as HTTP Post and type your webhook's URL in the URL field."
           paragraph_2: "If we catch any anamolous transaction, we will send you a JSON payload with structure similar to this:"
+          slack_webhook:
+            title: "Receiving Slack notifications"
+            paragraph_1: "If you use <a href='https://slack.com/' class='external'>Slack</a>, we can send anomalies notifications to a configured channel in your account."
+            paragraph_2: "To use this service, you must setup a <a href='https://cloudwalk.slack.com/services/new/incoming-webhook' class='external'>Incoming WebHook</a> in your Slack account. In the process you will receive a URL for the webhook, something like <code>https://hooks.slack.com/services/BUnCh0F/A1PhaNUMERIC/ChARAcT3RSHErE</code>."
+            paragraph_3: "The last step is to set this URL in CloudWalker Manager, as explained above."
+            paragraph_4: "Now you are ready to receive our notifications!"
         previous: "Patterns chart"
