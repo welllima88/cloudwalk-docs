@@ -3,6 +3,7 @@ class Routes
     [
       # OVERVIEW
       { "url" => "introduction",                                         "view_path" => "introduction/index"},
+      { "url" => "introduction/authorizer",                              "view_path" => "introduction/authorizer"},
       { "url" => "introduction/walk-framework",                          "view_path" => "introduction/walk_framework"},
       { "url" => "introduction/walk-manager",                            "view_path" => "introduction/walk_manager"},
       { "url" => "introduction/development-environment",                 "view_path" => "introduction/development_environment"},

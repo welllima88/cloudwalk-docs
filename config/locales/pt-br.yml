@@ -609,6 +609,24 @@ pt-BR:
         how_it_works: Funcionamento do serviço
         markets: Possíveis mercados e aplicações
       title: Visão geral do serviço CloudWalk
+    authorizer:
+      description: Componente responsável pela validação das informações enviadas pelos terminais POS.
+      overview:
+        paragraph_1: 'O autorizador é o componente responsável pela verificação e validação das informações enviadas pelos terminais POS. A informação trafegada na rede CloudWalk segue o seguinte fluxo:'
+        item_1: O <strong>Dispositivo</strong> captura os dados e os envia para o <strong>Serviço CloudWalk</strong>;
+        item_2: O <strong>Serviço CloudWalk</strong> recebe os dados e os repassa ao <strong>Autorizador</strong>;
+        item_3: O <strong>Autorizador</strong> valida os dados e envia uma resposta ao <strong>Serviço CloudWalk</strong>;
+        item_4: Por fim o <strong>Serviço CloudWalk</strong> repassa a resposta ao <strong>Dispositivo</strong>.
+      more_info:
+        paragraph_1: O serviço CloudWalk é extremamente flexível quanto à comunicação entre os terminais POS e o autorizador. Aplicações financeiras utilizam por padrão o protocolo de comunicação <a href='http://pt.wikipedia.org/wiki/ISO_8583' target="blank" class="external">ISO 8583</a>, porém outros padrões podem ser utilizados.
+        paragraph_2: A validação de transações é um passo importante, porque permite que um Emissor consiga verificar se o modo de pagamento utilizado é autêntico e se os dados (valor, data da transação, entre outros) recebidos pelo autorizador são os mesmos dados utilizados pelo meio de pagamento durante a realização da operação no dispositivo.
+        paragraph_3: Além da validação dos dados gerados pela forma de pagamento, um autorizador também pode assinar a mensagem de resposta (por exemplo, “transação autorizada”) antes de enviá-la para o dispositivo. Assim, não só o autorizador pode autenticar o POS mas o POS também pode autenticar seu Emissor, o que garante ainda mais segurança ao longo deste processo.
+        paragraph_4: O serviço CloudWalk oferece todas as ferramentas necessárias para o desenvolvimento de aplicações para os principais modelos de terminais POS do mercado, porém não desenvolve ou disponibiliza servidores de autorização.
+        paragraph_5: O desenvolvimento e a manutenção do autorizador é de responsabilidade do cliente.
+      table_of_contents:
+        more_info: Mais informações
+        overview: Apresentação
+      title: Autorizador
     posxml:
       description: Linguagem de programação usada para criar aplicações para um dispositivo.
       more_info:
@@ -692,6 +710,7 @@ pt-BR:
       development_environment: Ambiente de desenvolvimento
       group_name: Entendendo o serviço
       overview: Visão geral
+      authorizer: Autorizador
       posxml: Linguagem POSXML
       walk_framework: WALK Framework
       walk_manager: WALK Manager
@@ -2571,9 +2590,11 @@ pt-BR:
         paragraph_1: 'Ao ligar o terminal com o cabo de força, após exibir a tela inicial que exibe a versão do sistema operacional, ele permanecerá na seguinte tela:'
       preparing_the_pendrive:
         paragraph_1: 'Para montar a carga do WALK Framework no pendrive, siga o seguinte procedimento:'
-        paragraph_2: Conecte o pendrive no computador
-        paragraph_3: Formate o pendrive (formato FAT32)
-        paragraph_4: Descompacte o pacote WALK Framework baixado e copie apenas o arquivo <strong>VERIFONE.zip</strong> para a raiz do pendrive
+        paragraph_2: 'Conecte o pendrive no computador'
+        paragraph_3: 'Formate o pendrive (Formato FAT32)'
+        paragraph_4: 'Descompacte o pacote WALK Framework baixado'
+        paragraph_5: 'Copie o arquivo: verifone_evo_usb/lib_cless/modelo(VX520 ou VX680)/<strong>VERIFONE.zip</strong> para a raiz do pendrive'
+        paragraph_6: 'Repita o processo com o arquivo: verifone_evo_usb/cw_framework_version/<strong>VERIFONE.zip</strong>'
       prerequisites:
         cable: <strong>Cabo de carga Serial</strong>
         operating_system: <strong>Sistema operacional:</strong> Microsoft Windows XP SP3 ou superior (Vista, Seven, etc)
