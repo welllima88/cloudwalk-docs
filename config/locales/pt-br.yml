@@ -611,14 +611,12 @@ pt-BR:
       title: Visão geral do serviço CloudWalk
     authorizer:
       overview:
-        paragraph_1: Para que as transações originadas de um POS sejam validas, o terminal deve trocar informações com um servidor Autorizador, a qual se dá através de um protocolo de comunicação, que por sua vez é uma linguagem padronizada de troca de dados que possa ser estendia por todos os módulos envolvidos, já existem padrões específicos no mercado para facilitar a integração, como por exemplo o padrão ISO8583.
-        paragraph_2: A validação de transações é um passo importante porque permite que um Emissor consiga verificar se o modo de pagamento utilizado é autêntico e que os dados (valor, data da transação, entre outros) recebidos pelo autorizador são os mesmos dados utilizados pelo cartão durante a realização da operação no terminal.
-        paragraph_3: Além de validar os dados gerados pela forma de pagamento, um autorizador também pode assinar a mensagem de resposta (por exemplo, “transação autorizada”) antes de enviá-la para o terminal de venda. Assim, não só o Autorizador pode autenticar o POS mas o POS também pode autenticar seu Emissor, o que garante ainda mais segurança a todo o processo.
-      integration:
-        paragraph_1: A CloudWalk oferece todos os recursos e ferramentas necessárias para o desenvolvimento de aplicações para os principais modelos de terminais POS do mercado, de forma ágil e prática, porém não desenvolve ou disponibiliza servidores de autorização baseados em regras de negócio específicas, este por sua vez, deve ser fonecido pelo cliente que deseja integrar o seu serviço com a plataforma CloudWalk.
+        paragraph_1: Para que as transações originadas de um dispositivo sejam verificadas e validadas com êxito, o terminal deve trocar informações com um servidor autorizador de transações, que por sua vez será realizado através de um protocolo de comunicação, trata-se de uma linguagem padronizada de troca de dados que possa ser estendia por todos os módulos envolvidos, já existem padrões específicos no mercado para facilitar a integração, como por exemplo o padrão para realizar transações financeiras, ISO8583.
+        paragraph_2: A validação de transações é um passo importante, porque permite que um Emissor consiga verificar se o modo de pagamento utilizado é autêntico e se os dados (valor, data da transação, entre outros) recebidos pelo autorizador são os mesmos dados utilizados pelo meio de pagamento durante a realização da operação no dispositivo.
+        paragraph_3: Além da validação dos dados gerados pela forma de pagamento, um autorizador também pode assinar a mensagem de resposta (por exemplo, “transação autorizada”) antes de enviá-la para o dispositivo. Assim, não só o autorizador pode autenticar o POS mas o POS também pode autenticar seu Emissor, o que garante ainda mais segurança ao longo deste processo.
+        note: A CloudWalk oferece todos os recursos e ferramentas necessárias para o desenvolvimento de aplicações para os principais modelos de terminais POS do mercado, de forma ágil e prática, porém não desenvolve ou disponibiliza servidores de autorização baseados em regras de negócio específicas, este por sua vez, deve ser fonecido pelo cliente que deseja integrar o seu serviço com a plataforma CloudWalk.
       table_of_contents:
         how_it_works: Sobre
-        integration: Integração com a plataforma CloudWalk
       title: Autorizador
     posxml:
       description: Linguagem de programação usada para criar aplicações para um dispositivo.
@@ -2570,9 +2568,8 @@ pt-BR:
         paragraph_2: 'Já os terminais <strong>Vx680</strong>, o local para conexão do pendrive se localiza no cabo que é utilizado para carregar a bateria do mesmo, conforme mostra a figura abaixo:'
         paragraph_3: 'O terminal detectará o pendrive conectado, e exibirá a seguinte tela no display:'
         paragraph_4: Escolha a opção 1, Sim, para começar o processo de carga
-        paragraph_5: 'Repita o processo com o arquivo: verifone_evo_usb/cw_framework_version/<strong>VERIFONE.zip</strong>'
-        paragraph_6: Após carregar todos os arquivos, o terminal solicitará a retirada do pendrive
-        paragraph_7: Retire o pendrive e pressione a tecla enter(verde). O terminal reiniciará algumas vezes, e em seguida será apresentado a tela de configuração da primeira execução.
+        paragraph_5: Após carregar todos os arquivos, o terminal solicitará a retirada do pendrive
+        paragraph_6: Retire o pendrive e pressione a tecla enter(verde). O terminal reiniciará algumas vezes, e em seguida será apresentado a tela de configuração da primeira execução.
       preparing_the_device:
         paragraph_1: Descompacte o pacote do WALK Framework baixado em um diretório de sua preferência.
         paragraph_2: Este diretório precisa ser um diretório local (por exemplo C:\temp\dir), e não um diretório de rede (\\)
@@ -2584,9 +2581,11 @@ pt-BR:
         paragraph_1: 'Ao ligar o terminal com o cabo de força, após exibir a tela inicial que exibe a versão do sistema operacional, ele permanecerá na seguinte tela:'
       preparing_the_pendrive:
         paragraph_1: 'Para montar a carga do WALK Framework no pendrive, siga o seguinte procedimento:'
-        paragraph_2: '<strong>VX520</strong>: Copie o arquivo: verifone_evo_usb/lib_cless/VX520/<strong>VERIFONE.zip</strong> para a raiz do pendrive'
-        paragraph_3: '<strong>VX680</strong>: Copie o arquivo: verifone_evo_usb/lib_cless/VX680/<strong>VERIFONE.zip</strong> para a raiz do pendrive'
-        paragraph_4: 'Conecte o pendrive '
+        paragraph_2: 'Conecte o pendrive no computador'
+        paragraph_3: 'Formate o pendrive (Formato FAT32)'
+        paragraph_4: 'Descompacte o pacote WALK Framework baixado'
+        paragraph_5: 'Copie o arquivo: verifone_evo_usb/lib_cless/modelo(VX520 ou VX680)/<strong>VERIFONE.zip</strong> para a raiz do pendrive'
+        paragraph_6: 'Repita o processo com o arquivo: verifone_evo_usb/cw_framework_version/<strong>VERIFONE.zip</strong>'
       prerequisites:
         cable: <strong>Cabo de carga Serial</strong>
         operating_system: <strong>Sistema operacional:</strong> Microsoft Windows XP SP3 ou superior (Vista, Seven, etc)
