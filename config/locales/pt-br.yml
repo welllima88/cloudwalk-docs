@@ -610,13 +610,22 @@ pt-BR:
         markets: Possíveis mercados e aplicações
       title: Visão geral do serviço CloudWalk
     authorizer:
+      description: Componente responsável pela validação das informações enviadas pelos terminais POS.
       overview:
-        paragraph_1: Para que as transações originadas de um dispositivo sejam verificadas e validadas com êxito, o terminal deve trocar informações com um servidor autorizador de transações, que por sua vez será realizado através de um protocolo de comunicação, trata-se de uma linguagem padronizada de troca de dados que possa ser estendia por todos os módulos envolvidos, já existem padrões específicos no mercado para facilitar a integração, como por exemplo o padrão para realizar transações financeiras, ISO8583.
+        paragraph_1: 'O autorizador é o componente responsável pela verificação e validação das informações enviadas pelos terminais POS. A informação trafegada na rede CloudWalk segue o seguinte fluxo:'
+        item_1: O <strong>Dispositivo</strong> captura os dados e os envia para o <strong>Serviço CloudWalk</strong>;
+        item_2: O <strong>Serviço CloudWalk</strong> recebe os dados e os repassa ao <strong>Autorizador</strong>;
+        item_3: O <strong>Autorizador</strong> valida os dados e envia uma resposta ao <strong>Serviço CloudWalk</strong>;
+        item_4: Por fim o <strong>Serviço CloudWalk</strong> repassa a resposta ao <strong>Dispositivo</strong>.
+      more_info:
+        paragraph_1: O serviço CloudWalk é extremamente flexível quanto à comunicação entre os terminais POS e o autorizador. Aplicações financeiras utilizam por padrão o protocolo de comunicação <a href='http://pt.wikipedia.org/wiki/ISO_8583' target="blank" class="external">ISO 8583</a>, porém outros padrões podem ser utilizados.
         paragraph_2: A validação de transações é um passo importante, porque permite que um Emissor consiga verificar se o modo de pagamento utilizado é autêntico e se os dados (valor, data da transação, entre outros) recebidos pelo autorizador são os mesmos dados utilizados pelo meio de pagamento durante a realização da operação no dispositivo.
         paragraph_3: Além da validação dos dados gerados pela forma de pagamento, um autorizador também pode assinar a mensagem de resposta (por exemplo, “transação autorizada”) antes de enviá-la para o dispositivo. Assim, não só o autorizador pode autenticar o POS mas o POS também pode autenticar seu Emissor, o que garante ainda mais segurança ao longo deste processo.
-        note: A CloudWalk oferece todos os recursos e ferramentas necessárias para o desenvolvimento de aplicações para os principais modelos de terminais POS do mercado, de forma ágil e prática, porém não desenvolve ou disponibiliza servidores de autorização baseados em regras de negócio específicas, este por sua vez, deve ser fonecido pelo cliente que deseja integrar o seu serviço com a plataforma CloudWalk.
+        paragraph_4: O serviço CloudWalk oferece todas as ferramentas necessárias para o desenvolvimento de aplicações para os principais modelos de terminais POS do mercado, porém não desenvolve ou disponibiliza servidores de autorização.
+        paragraph_5: O desenvolvimento e a manutenção do autorizador é de responsabilidade do cliente.
       table_of_contents:
-        how_it_works: Sobre
+        more_info: Mais informações
+        overview: Apresentação
       title: Autorizador
     posxml:
       description: Linguagem de programação usada para criar aplicações para um dispositivo.
