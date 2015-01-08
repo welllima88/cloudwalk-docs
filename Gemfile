@@ -10,10 +10,11 @@ gem 'sinatra-partial'
 gem 'thin'
 
 group :test do
+  gem 'coveralls'
+  gem 'minitest'
   gem 'mocha'
   gem 'rack-test'
   gem 'simplecov'
-  gem 'coveralls', require: false
 end
 
 group :production do
