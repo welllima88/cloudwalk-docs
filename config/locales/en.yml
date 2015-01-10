@@ -2805,6 +2805,7 @@ en:
         pattern:
           paragraph_1: "Our algorithm looks for patterns, but what is a pattern?"
           paragraph_2: "For our purposes, a pattern is a set of somewhat similar transactions. To find which transactions are similar, our algorithm keep an eye at the sizes of messages sent by your POS to your authorizer and at the sizes of messages received in response. A pattern is then a set of transactions with similar sized messages. It's the algorithm's job to find those similar transactions."
+          paragraph_3: "To help the algorithm, we separate all your transactions by application, meaning that any pattern created is a transaction pattern for a specific application. More on that later!"
         anomaly:
           paragraph_1: "An anomaly is a transaction that does not fit in any previously seen pattern. So an anomalous transaction has messages with unusual (until then) sizes. As our algorithm keeps learning from your transactions, it will eventually recognize a recurring anomaly as a new pattern, and will stop giving you any warnings about it."
           paragraph_2: "Be cautious when giving meaning to an anomalous transaction. It does not necessarily means something bad has happened. As an example, when you start testing a new application, you will probably see a lot of anomalous transactions, as they won't fit any previously seen pattern."
@@ -2826,7 +2827,7 @@ en:
         image_1: "<img src='/img/en/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is the default tab you arrive when you access the transactions patterns URL."
         paragraph_3: "As you can see in the above image, we highlight the time when we detected the last anomaly."
-        paragraph_4: "Down the screen you can see a table with the ten last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the plus sign. The details for the transaction includes time, size and message buffers for the sent data and the received one. This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further."
+        paragraph_4: "Down the screen you can see a table with the ten last anomalies detected. You can expand each line of the table to see more details about the corresponding transaction by clicking at the plus sign. The details for the transaction includes time, application name, serial number, size and message buffers for the sent data and the received one. This is helpful to see exactly what triggered the anomaly detector, so that you can investigate it further."
         image_2: "<img src='/img/en/guides/transactions_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Now, let's take a look at a graphical representation of our transactions!"
         previous: "Tutorial overview"
@@ -2897,4 +2898,10 @@ en:
         setting_webhook:
           paragraph_1: "To set a webhook, just select the notification type as HTTP Post and type your webhook's URL in the URL field."
           paragraph_2: "If we catch any anamolous transaction, we will send you a JSON payload with structure similar to this:"
+          slack_webhook:
+            title: "Receiving Slack notifications"
+            paragraph_1: "If you use <a href='https://slack.com/' class='external'>Slack</a>, we can send anomalies notifications to a configured channel in your account."
+            paragraph_2: "To use this service, you must setup a <a href='https://cloudwalk.slack.com/services/new/incoming-webhook' class='external'>Incoming WebHook</a> in your Slack account. In the process you will receive a URL for the webhook, something like <code>https://hooks.slack.com/services/BUnCh0F/A1PhaNUMERIC/ChARAcT3RSHErE</code>."
+            paragraph_3: "The last step is to set this URL in CloudWalker Manager, as explained above."
+            paragraph_4: "Now you are ready to receive our notifications!"
         previous: "Patterns chart"

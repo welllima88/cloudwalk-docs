@@ -2805,6 +2805,7 @@ pt-BR:
         pattern:
           paragraph_1: "Nosso algoritmo busca por padrões, mas o que é um padrão?"
           paragraph_2: "Para nossos propósitos, um padrão é um conjunto de transações similares de algum modo. Para encontrar quais transações são similares, nosso algoritmo fica de olho nos tamanhos das mensagens enviadas por seu POS ao seu autorizador e nas mensagengs recebidas em resposta. Um padrão é, portanto, um conjunto de transações com mensagens de tamanhos similares. É trabalho do algoritmo identificar estas transações similares."
+          paragraph_3: "Para ajudar o algoritmo, separamos todas as suas transações por aplicação, de modo que os padrões formados são padrões de transação em uma aplicação específica. Mais sobre isso depois!"
         anomaly:
           paragraph_1: "Uma anomalia é uma transação que não se encaixa em nenhum padrão previamente encontrado. Portanto, uma transação anômala possui mensagens com tamanhos não usuais (até então). Enquanto nosso algoritmo continua aprendendo com suas transações, ele eventualmente irá reconhecer uma anomalia recorrente como um novo padrão e cessará o envio de quaisquer avisos sobre isso."
           paragraph_2: "Tenha cuidado ao atribuir qualquer significado a uma transação anômala. Isso não significa necessariamente que algo ruim tenha ocorrido. Como exemplo, quando você começar a testar uma nova aplicação, você provavelmente verá muitas transações anômalas, na medida em que elas não se encaixam em nenhum padrão visto anteriormente."
@@ -2826,7 +2827,7 @@ pt-BR:
         image_1: "<img src='/img/pt-BR/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Esta é a aba padrão ativada quando você acessa a URL dos padrões de transações."
         paragraph_3: "Como você pode observar na imagem acima, destacamos o momento em que detectamos a última transação anômala."
-        paragraph_4: "Mais abaixo na tela, você pode ver uma tabela contendo as dez últimas transações anômalas detectadas. Você pode expandir cada linha da tabela para obter mais detalhes sobre a transação correspondente, basta clicar no sinal de mais. Os detalhes da transação incluem data e hora, assim como tamanho e conteúdo das mensagens enviadas e recebidas. Isto é útil para observarmos exatamente o que ativou o detector de anomalias, de modo que você possa conduzir investigações posteriores."
+        paragraph_4: "Mais abaixo na tela, você pode ver uma tabela contendo as dez últimas transações anômalas detectadas. Você pode expandir cada linha da tabela para obter mais detalhes sobre a transação correspondente, basta clicar no sinal de mais. Os detalhes da transação incluem data e hora, assim como o nome da aplicação, número de série do terminal POS, tamanho e conteúdo das mensagens enviadas e recebidas. Isto é útil para observarmos exatamente o que ativou o detector de anomalias, de modo que você possa conduzir investigações posteriores."
         image_2: "<img src='/img/pt-BR/guides/transactions_patterns/report.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_5: "Agora, vamos dar uma olhada em uma representação gráfica de nossas transações!"
         previous: "Visão geral do tutorial"
@@ -2897,4 +2898,10 @@ pt-BR:
         setting_webhook:
           paragraph_1: "Para configurar um webhook, basta selecionar o tipo de notificação como sendo HTTP Post e digitar a URL de seu webhook no campo correspondente."
           paragraph_2: "Se encontrarmos qualquer transação anômala, enviaremos para você uma mensagem JSON com estrutura similar a esta:"
+          slack_webhook:
+            title: "Recebendo notificações no Slack"
+            paragraph_1: "Se você utiliza o <a href='https://slack.com/' class='external'>Slack</a>, podemos enviar notificações de anomalias para um canal configurado em sua conta."
+            paragraph_2: "Para usar esse serviço, você deve configurar um <a href='https://cloudwalk.slack.com/services/new/incoming-webhook' class='external'>Incoming WebHook</a> em sua conta no Slack. Nesse processo você receberá uma URL para o webhook, algo como <code>https://hooks.slack.com/services/BUnCh0F/A1PhaNUMERIC/ChARAcT3RSHErE</code>."
+            paragraph_3: "O último passo é configurar essa URL no CloudWalk Manager, conforme explicado acima."
+            paragraph_4: "Agora você está pronto para receber nossas notificações!"
         previous: "Gráfico dos padrões"
