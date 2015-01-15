@@ -54,6 +54,8 @@ class Routes
       { "url" => "guides/transactions-patterns/anomalies-report",        "view_path" => "guides/transactions_patterns/tutorial_2_anomalies_report"},
       { "url" => "guides/transactions-patterns/patterns-chart",          "view_path" => "guides/transactions_patterns/tutorial_3_patterns_chart"},
       { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_4_notifications_settings"},
+      #HELP
+      { "url" => "help/faq",                                             "view_path" => "help/faq"},
     ]
   end
 
