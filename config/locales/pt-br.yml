@@ -702,6 +702,10 @@ pt-BR:
       group_name: Tutoriais
       patterns:
         sub_group_name: "Padrões de transações"
+    help:
+      group_name: Ajuda
+      faq:
+        sub_group_name: "Perguntas Frequentes"
     integration:
       advanced_http: REST HTTP
       architecture: Arquitetura do serviço
@@ -2927,3 +2931,40 @@ pt-BR:
             paragraph_3: "O último passo é configurar essa URL no CloudWalk Manager, conforme explicado acima."
             paragraph_4: "Agora você está pronto para receber nossas notificações!"
         previous: "Gráfico dos padrões"
+  help:
+    faq:
+      description: Documento online com as perguntas mais frequentes e suas respectivas respostas
+      title: "CloudWalk F.A.Q"
+      table_of_contents:
+        device: Dispositivo
+        posxml: POSXML
+        comm:    Comunicação
+        config: Configuração
+        business: CloudWalk
+      device_questions:
+        question_1: Como resetar o certificado já instalado nos terminais POS referente à linha Verifone Evo?
+        answer_1: Para fazer este reset é necessário entrar em contato com o seu fornecedor de Terminais Verifione EVO, para que eles possam assinar um arquivo de reset que será utilizado para resetar o certificado.
+        question_2: "Como podemos adicionar novos arquivos em nossos dispositivos, exemplo: imagens, texto, etc?"
+        answer_2: Compacte as imagens e arquivos desejados (<strong>atenção</strong>, os arquivos e imagens devem estar na raiz do arquivo zip e a extenxão deve ser .zip e não .rar). Feito isso, vá para a área de arquivos no seu ambiente CloudWalk manager e faça o upload do arquivo zipado. Agora selecione a opção editar na aplicação que usará os arquivos e selecione o arquivo que deverá ser baixando juntamente com a aplicação.
+        question_3: Realizamos novas alterações na aplicação que estamos desenvolvendo e gostaríamos de atualiza-la no dispositivo, como podemos proceder?
+        answer_3: Para realizar a atualização é necessário entrar no menu de configurações, que é acessado através do botão F em dispositivos ingenico, F1 em dispositivos Verifone e a opção Menu na tela do modelo VX680 da Verifone, entre com a senha, tecle 1 para a opção CloudWalk, em seguida tecle 2 para a opção Delete Apps, Confirme e pressione ENTER para baixar a aplicação atualizada.
+      posxml_questions:
+        question_1:
+        answer_1:
+        question_2:
+        answer_2:
+      comm_questins::
+        question_1:
+        answer_1:
+        question_2:
+        answer_2:
+      config_questions:
+        question_1:
+        answer_1:
+        question_2:
+        answer_2:
+      business_questions:
+        question_1:
+        answer_1:
+        question_2:
+        answer_2:

@@ -702,6 +702,10 @@ en:
       group_name: Guides
       patterns:
         sub_group_name: "Transactions patterns"
+    help:
+      group_name: Help
+      faq:
+        sub_group_name: "Frequently asked questions"
     integration:
       advanced_http: REST HTTP
       architecture: Service architecture
@@ -2927,3 +2931,40 @@ en:
             paragraph_3: "The last step is to set this URL in CloudWalker Manager, as explained above."
             paragraph_4: "Now you are ready to receive our notifications!"
         previous: "Patterns chart"
+  help:
+    faq:
+      description: FAQ is an online document that poses a series of common questions and answers on a specific topic.
+      title: "CloudWalk F.A.Q"
+      table_of_contents:
+        device: Device
+        posxml: POSXML
+        comm:    Communication
+        config: Configuration
+        business: CloudWalk
+      device_questions:
+        question_1: How I can reset the certificate that is already installed on the Verifone EVO POS terminals?
+        answer_1: To do this reset you must get in touch with your terminal supplier, so they can send you a reset file that will be used to reset the certificate.
+        question_2: "How i can add new files on my device, for exemple: imagens, text, etc?"
+        answer_2: First compress the images and files that you want(<strong>atention</strong>, the files and images must be on the root of the zip file and the extension must be .zip, not .rar). After this, go to the files section on your CloudWalk manager environment and upload the zip file. Now select the Edit option on the application that will use the files and select the file that must be downloaded along with the application.
+        question_3: I just finished some alterations on my application, and I would like to updated on the device, How should I proceed?
+        answer_3: To accomplish the update, you need to go to the configuration menu, that its accessed through the button F on ingenico devices, F1 on Verifone Devices and the menu option on the screen of the model VX680 from Verifone, type the password, type 1 for the CloudWalk option, next type 2 for the Delete Apps option, Confirm then press ENTER to download the updated application
+      posxml_questions:
+        question_1:
+        answer_1:
+        question_2:
+        answer_2:
+      comm_questins::
+        question_1:
+        answer_1:
+        question_2:
+        answer_2:
+      config_questions:
+        question_1:
+        answer_1:
+        question_2:
+        answer_2:
+      business_questions:
+        question_1:
+        answer_1:
+        question_2:
+        answer_2:
