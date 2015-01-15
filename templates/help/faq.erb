@@ -1,0 +1,66 @@
+<% content_for :docs_description do %>
+<meta name="docs:description" content="<%= I18n.t('help.faq.description') %>">
+<% end %>
+
+<h1><%= I18n.t("help.faq.title") %></h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "15/01/2015") %></p>
+
+<h4><%= I18n.t("general.index")%></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#device"><%= I18n.t("help.faq.table_of_contents.device") %></a></li>
+  <li><a href="#posxml"><%= I18n.t("help.faq.table_of_contents.posxml") %></a></li>
+  <li><a href="#comm"  ><%= I18n.t("help.faq.table_of_contents.comm")   %></a></li>
+  <li><a href="#config" ><%= I18n.t("help.faq.table_of_contents.config")%></a></li>
+  <li><a href="#business"><%= I18n.t("help.faq.table_of_contents.business")%></a></li>
+</ol>
+
+<h2 id="device"><%= I18n.t("help.faq.table_of_contents.device") %></h2>
+
+<div class="accordion" id="accordion-device">
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_device" href="#collapse_One"><%= I18n.t("help.faq.device_questions.question_1") %></p>
+    </div>
+    <div id="collapse_One" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <p><%= I18n.t("help.faq.device_questions.answer_1") %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_device" href="#collapse_Two"><%= I18n.t("help.faq.device_questions.question_2") %></p>
+    </div>
+    <div id="collapse_Two" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <p><%= I18n.t("help.faq.device_questions.answer_2") %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_device" href="#collapse_Three"><%= I18n.t("help.faq.device_questions.question_3") %></p>
+    </div>
+    <div id="collapse_Three" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <p><%= I18n.t("help.faq.device_questions.answer_3") %></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<h2 id="posxml"><%= I18n.t("help.faq.table_of_contents.posxml") %></h2>
+
+<h2 id="comm"><%= I18n.t("help.faq.table_of_contents.comm") %></h2>
+
+<h2 id="config"><%= I18n.t("help.faq.table_of_contents.config") %></h2>
+
+<h2 id="business"><%= I18n.t("help.faq.table_of_contents.business") %></h2>
