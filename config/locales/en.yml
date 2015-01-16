@@ -2948,11 +2948,22 @@ en:
         answer_2: First compress the images and files that you want(<strong>atention</strong>, the files and images must be on the root of the zip file and the extension must be .zip, not .rar). After this, go to the files section on your CloudWalk manager environment and upload the zip file. Now select the Edit option on the application that will use the files and select the file that must be downloaded along with the application.
         question_3: I just finished some alterations on my application, and I would like to updated on the device, How should I proceed?
         answer_3: To accomplish the update, you need to go to the configuration menu, that its accessed through the button F on ingenico devices, F1 on Verifone Devices and the menu option on the screen of the model VX680 from Verifone, type the password, type 1 for the CloudWalk option, next type 2 for the Delete Apps option, Confirm then press ENTER to download the updated application
+        question_4: What’s the best device model that I have to buy and use?
+        answer_4: "That depends on your project planning, must be verified if the devices that will be purchased, attend all the needs and requiriments of the project, for exemple: If you wish to process credit and debit transactions on establishments that need more mobility during the payment process, e.g gas station, you should acquire the model IWL280(Ingenico) or Vx680(Verifone), with 'GPRS' communication support, and that are also among the compatible and approved devices to operate with full compatibility with CloudWalk Framework."
+        question_5: I’m trying to perform the CloudWalk framework load through the pendrive, but when connect to the device, the load doesn’t start.
+        answer_5: "Check if the pendrive is formated as FAT32. Now verify is the folder and the file package was correctly copy to the device, in case you are using a POS terminal from Verifone: Evo, justo the file VERIFONE.zip must be present on the pendrive root, in case you are using a device from Ingenico: Telium 1/ Telium 2, verify if just the TELIUM folder is on the root of the pendrive."
+        question_6: It’s possible to use multi applications on the devices?
+        answer_6: Yes, for that, your applications must be develop on the CloudWalk IDE. Then on the applications groups on CloudWalk Manager, mark the desire applications to belong on the same group, when you clear the app on the device and download them again, the menu will show to the user the list of apps.
       posxml_questions:
-        question_1:
-        answer_1:
-        question_2:
-        answer_2:
+        question_1: What's POSXML?
+        answer_1: POSXML (acronym for Point Of Sale extended Markup Language) is a programming language that is used to create applications for a POS terminal. Normally the programming language used to develop such applications is C or C++. This development requires an in-depth knowledge of both the technical specifications of the machine (Hardware) and the programming language. The main purpose of POSXML is to simplify the development of applications for POS terminals. It contains a set of instructions and pre-programmed commands, which allow direct interaction with the machine, resulting in a large reduction in application development time.
+        question_2: What's the max. size supported by a string type variable in POSXML language?
+        answer_2: 1024 bytes.
+        question_3: Are there reserved characters or words in the POSXML language?
+        answer_3: "Yes, following the reserved characters:"
+        answer_3-1: "Here, you can read more information about the structure of POSXML language: <a href='https://docs.cloudwalk.io/en/posxml/structure ' target='blank' class='external'>POSXML Structure</a>"
+        question_4: It’s possible to develop a new application and perform the integration using the standard ISO8583?
+        answer_4: Yes, the POSXML language has all the necessary commands to perform an integration using the standard ISO8583
       comm_questins::
         question_1:
         answer_1:

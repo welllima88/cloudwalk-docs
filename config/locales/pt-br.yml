@@ -2948,11 +2948,22 @@ pt-BR:
         answer_2: Compacte as imagens e arquivos desejados (<strong>atenção</strong>, os arquivos e imagens devem estar na raiz do arquivo zip e a extenxão deve ser .zip e não .rar). Feito isso, vá para a área de arquivos no seu ambiente CloudWalk manager e faça o upload do arquivo zipado. Agora selecione a opção editar na aplicação que usará os arquivos e selecione o arquivo que deverá ser baixando juntamente com a aplicação.
         question_3: Realizamos novas alterações na aplicação que estamos desenvolvendo e gostaríamos de atualiza-la no dispositivo, como podemos proceder?
         answer_3: Para realizar a atualização é necessário entrar no menu de configurações, que é acessado através do botão F em dispositivos ingenico, F1 em dispositivos Verifone e a opção Menu na tela do modelo VX680 da Verifone, entre com a senha, tecle 1 para a opção CloudWalk, em seguida tecle 2 para a opção Delete Apps, Confirme e pressione ENTER para baixar a aplicação atualizada.
+        question_4: Qual o melhor modelo de dispositivo que devemos comprar e utilizar?
+        answer_4: "Isso irá depender do planejamento do seu projeto, deve ser verificado se os dispositivos que serão adquiridos atendem a necessidade, requisitos e exigências do seu projeto, por exemplo: caso deseje processar transações de crédito e débito em estabelecimentos que necessitam uma maior mobilidade durante o pagamento, como nos posto de gasolina, você poderá adquirir o modelo iWL280 (Ingenico) ou Vx680 (Verifone) com suporte ao tipo de comunicação 'GPRS' e que também estão entre os modelos compatíveis e homologados pra funcionar com total compatibilidade com o CloudWalk Framework."
+        question_5: Estamos tentando realizar a carga do framework CloudWalk via pendrive, mas quando tentamos conecta-lo ao dispositivo, a carga não inícia.
+        answer_5: "Certifique-se que o pendrive foi formatado no respectivo formato FAT32. Verifique também se a pasta ou pacote de arquivos foi corretamente copiado para o dispositivo, caso esteja utilizando um terminal POS referente à linha Verifone: Evo, apenas o arquivo <strong>VERIFONE.zip</strong> deve estar presente na raiz do pendrive, caso esteja utilizando um dispositivo referente à linha Ingenico: Telium 1 / Telium 2 , certifique-se que apenas a pasta <strong>TELIUM</strong> encontra-se presente na raiz do seu pendrive."
+        question_6: É possível utilizar multi-aplicativos em nossos dispositivos?
+        answer_6: Sim, desde que as suas aplicações sejam desenvolvidas no ambiente de desenvolvimento CloudWalk. No grupo de aplicações no CloudWalk Manager, marque as aplicações desejadas que pertencem ao respectivo grupo, logo quando limpar as aplicações e arquivos em seu dispositivo e baixar novamente, um menu será exibido para que o usuário decida qual aplicação deseja acessar.
       posxml_questions:
-        question_1:
-        answer_1:
-        question_2:
-        answer_2:
+        question_1: O que é POSXML?
+        answer_1: POSXML (acrônimo para ponto de venda extendido linguagem de marcação) é uma linguagem para criar aplicações para um terminal POS.Normalmente a linguagem de programação usada para desenvolver estas aplicações são C ou C++. Para realizar este desenvolvimento é necessário um amplo conhecimento da especificação do SDK do fabricante referente à cada modelo de terminal POS e também uma grande experiência em programação e linguagens mencionadas. A principal proposta da linguagem POSXML é simplificar o desenvolvimento de aplicações para terminais POS. A linguagem contém instruções e comandos pré-definidos que permitem interagir diretamente com o dispositivo, resultando em uma grande redução do tempo de desenvolvimento.
+        question_2: Qual o tamanho máximo em bytes suportado em uma varíavel do tipo string na linguagem POSXML?
+        answer_2: 1024 bytes.
+        question_3: Existem palavras ou caracteres reservados na linguagem POSXML?
+        answer_3: "Sim, segue abaixo os caracteres reservados:"
+        answer_3-1: Para mais informações sobre a estrutura da linguagem POSXML, acesse <a href='https://docs.cloudwalk.io/pt-BR/posxml/structure' target='blank' class='external'>Estrutura POSXML</a>
+        question_4: É possível desenvolver uma nova aplicação e realizar a integração utilizando o padrão ISO8583?
+        answer_4: Sim, a linguagem POSXML possui todos os comandos necessários para que seja realizada uma integração no padrão ISO8583.
       comm_questins::
         question_1:
         answer_1:
