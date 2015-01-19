@@ -2940,7 +2940,7 @@ en:
         posxml: POSXML
         comm:    Communication
         config: Configuration
-        business: CloudWalk
+        cloudwalk: CloudWalk
       device_questions:
         question_1: How I can reset the certificate that is already installed on the Verifone EVO POS terminals?
         answer_1: To do this reset you must get in touch with your terminal supplier, so they can send you a reset file that will be used to reset the certificate.
@@ -2964,17 +2964,52 @@ en:
         answer_3-1: "Here, you can read more information about the structure of POSXML language: <a href='https://docs.cloudwalk.io/en/posxml/structure ' target='blank' class='external'>POSXML Structure</a>"
         question_4: It’s possible to develop a new application and perform the integration using the standard ISO8583?
         answer_4: Yes, the POSXML language has all the necessary commands to perform an integration using the standard ISO8583
-      comm_questins::
-        question_1:
-        answer_1:
-        question_2:
-        answer_2:
+      comm_questions:
+        question_1: What types of communication can I use to make the transaction?
+        answer_1: Ethernet, GPRS and Dialed
+        question_2: What types of integrations are available in the CloudWalk platform?
+        answer_2: TCP, HTTP, Simple and Rest
+        question_3: I’m using the Ethernet communication type, and I would like to configure my device to work on a DHCP network, how can I do that?
+        answer_3: "When setting up the ethernet network, set the IP to '0.0.0.0', after the device restarts the IP is assigned automatically (alvez have to set some parameters manually, eg IP: 0.0.0.0, Network Mask: 255.255.255.0 , Gateway: 192.168.1.1, DNS 1: 8.8.8.8, DNS 2: 8.8.4.4, SSL: 0-No)."
+        question_4: I’m using the GPRS communication type, which APN, user and password I must set?
+        answer_4: "First you must verify if your GPRS chip uses privete or public APN, you can verify this information with your GPRS chip supplier or provider. In case you acquired the chip through a Telecommunication enterprise, for exemple, Lyra Network, probably it will use an private APN, if the the chip its a regular one, use the public APN, then you must enter the user and password according to each provider. CloudWalk provides an configuration menu intuitive and simple, you just have to select the provider, then the parameters: user, password and APN will be set automatically on the background. If you don’t find your provider, you can set the parameters manually selecting the option ‘Other operator’"
+        question_5: "It’s possible to define the communications type 'Dialed/Landline' SDLC or PPP to perform transactions?"
+        answer_5: "Yes, it is, first verify if the device has the support for this kind of communication, next with the configurations paramters in hand, access the POS terminal menu by pressing 'F'(Ingenico) or 'F1'(Verifone) on the main screen(in case you use the default password, type: '55555' to access the configuration menu), select the option 'COMMUNICATION', now select the type: 'SDLC' or 'PPP' and inform the line data."
+        question_6: The device does not connect, what might be happening?
+        answer_6:
+          paragraph_1: "First identify the error code and message displayed on the device screen after the connection attempt. For each type of connection used, must be carried out some basic checks to identify what is happening when you try to connect:"
+          ethernet:
+            title:  "<strong>ETHERNET</strong>"
+            step_1: "—</strong> Make sure the network cable is properly connected to the device or if it is damaged."
+            step_2: "—</strong> Check the device's network settings, parameters: IP, Gateway, Subnet mask, DNS 1, DNS 2 and SSL must necessarily be completed in accordance with the default configuration of your network (if you have doubts about your network configuration, ask your network administrator for your company or establishment)."
+            step_3: "—</strong> Make sure that there are no restrictions and rules on the network that may block the connection to the target host."
+            step_4: "—</strong> If your network accepted DHCP connections, set the ip '0.0.0.0' to your device, to restart it, an IP is automatically assigned to it, then be able to connect normally (you may need to set some parameters manually, example : IP: 0.0.0.0, Network Mask: 255.255.255.0, Gateway: 192.168.1.1, DNS 1: 8.8.8.8, DNS 2: 8.8.4.4, SSL: 0-no)."
+            step_5: "—</strong> Make sure there is really connectivity in this particular point network, that is, ensure that another device is able to contact perfectly, you can test with another device or a closer notebook for example, so that confirm that the problem is not the point network"
+            step_6: "—</strong> Make sure the destination host (your authorizer server or API) is responding successfully and is active"
+            step_7: "—</strong> Make sure that your device has been registered in CloudWalk platform, i.e, the serial number of the same must be properly released in CloudWalk Manager."
+            step_8: "—</strong> Make sure that the logical number assigned to your device was registered correctly in CloudWalk Manager and if it is related to a group of applications."
+          gprs:
+            title: <strong>GPRS:</strong>
+            step_1: —</strong> Make sure the chip is operating normally in more than one device.
+            step_2: —</strong> If the SIM card is prepaid, check if it has credit.
+            step_3: —</strong> Verify if the chip has been unlocked.
+            step_4: —</strong> Check the APN configuration, if it is public or private.
+            step_5: —</strong> Check the Signal
+          dialed:
+            title: <strong>DIALED:</strong>
+            step_1: —</strong> Check the cable
+            step_2: —</strong> Check for interference
+            step_3: —</strong> Get in touch with your provider
       config_questions:
-        question_1:
-        answer_1:
-        question_2:
-        answer_2:
-      business_questions:
+        question_1: I would like to change the "background" image on the home screen and place the logo of my company, it is possible?
+        answer_1: Yes, you only need to upload the image (on bmp format with the name walk.bmp) you desire on the manager and associate with your application, to do this you just update your application selecting the image that you have uploaded.
+        question_2: What’s a Authorizer Server?
+        answer_2: For all transaction originated from a POS be valid, the terminal must exchange informations with a Authorizer Server, which can be accomplished through a communication protocol, which is a standardized language for exchange data that can be extended  to all involved modules. In addition to validating the data generated by the payment method, the authorizer is also able to sign a response message before sending it to the sale terminal. So not only the authorizer can authenticate the POS, but the POS can also authenticate your Issuer, which guarantees even more safety to the whole process.
+        question_3: How to set the address of the authorizing server of our company that the transactions will be sent?
+        answer_3: On the application registration is required to inform the authorizer, you must fill the form with its address. With this simple step the authorizer of your company is set.
+        question_4: Can we use more than one address host to an application?
+        answer_4: No! Actually, only one host can be set for an application, all modules of this application will use the same host to transact.
+      cloudwalk_questions:
         question_1:
         answer_1:
         question_2:

@@ -2940,7 +2940,7 @@ pt-BR:
         posxml: POSXML
         comm:    Comunicação
         config: Configuração
-        business: CloudWalk
+        cloudwalk: CloudWalk
       device_questions:
         question_1: Como resetar o certificado já instalado nos terminais POS referente à linha Verifone Evo?
         answer_1: Para fazer este reset é necessário entrar em contato com o seu fornecedor de Terminais Verifione EVO, para que eles possam assinar um arquivo de reset que será utilizado para resetar o certificado.
@@ -2964,17 +2964,52 @@ pt-BR:
         answer_3-1: Para mais informações sobre a estrutura da linguagem POSXML, acesse <a href='https://docs.cloudwalk.io/pt-BR/posxml/structure' target='blank' class='external'>Estrutura POSXML</a>
         question_4: É possível desenvolver uma nova aplicação e realizar a integração utilizando o padrão ISO8583?
         answer_4: Sim, a linguagem POSXML possui todos os comandos necessários para que seja realizada uma integração no padrão ISO8583.
-      comm_questins::
-        question_1:
-        answer_1:
-        question_2:
-        answer_2:
+      comm_questions:
+        question_1: "Quais tipos de comunicação poderei utilizar para realizar a transação?"
+        answer_1: Ethernet, GPRS e Discada
+        question_2: Quais os tipos de integração disponíveis que podemos realizar entre o nosso host e a plataforma CloudWalk?
+        answer_2: TCP, HTTP Simples e Rest.
+        question_3: Estou utilizando o tipo de comunicação Ethernet e gostaria de configurar o dispositivo para que funcione em uma rede DHCP, como devo realizar configuração?
+        answer_3: "Ao configurar a rede ethernet, defina o IP para ‘0.0.0.0’, após a reinicialização do dispositivo o IP será atríbuido automáticamente(alvez seja necessário definir alguns parâmetros manualmente, exemplo: IP: 0.0.0.0, Máscara de Rede: 255.255.255.0, Gateway: 192.168.1.1, DNS 1: 8.8.8.8, DNS 2: 8.8.4.4, SSL: 0-Não)."
+        question_4: Estou utilizando o tipo de comunicação GPRS, qual APN, usuário e senha devemos definir?
+        answer_4: "Primeiramente será necessário verificar se o chip GPRS que você está utilizando utiliza APN pública ou privada. Você poderá verificar esta informação com o seu fornecedor de chips GPRS ou operadora. Caso tenha adquirido o seu chip através de uma empresa de telecomunicações, como a Lyra Network, provavelmente irá utilizar uma APN privada, caso o seu chip for comum e utilize APN pública, deverá ser definido o usuário, senha e APN de acordo com cada operadora. O CloudWalk proporciona um menu de configuração de comunicação simples e intuitivo, basta você selecionar a operadora que irá utilizar, de acordo com chip inserido, então os parâmetros referente ao usuário, senha e APN serão definidos automaticamente em background, caso não encontre a operadora desejada, você poderá parametrizar manualmente, selecionando a opção 'Outra operadora'. "
+        question_5: É possível definir o tipo de comunicação "Discado/Landline" SDLC ou PPP para realizar as transações?
+        answer_5: "Sim, é possível. Primeiramente verifique se o seu dispositivo possui suporte ao respectivo tipo de comunicação, em seguida, já com os parâmetros de configuração em mãos, acesse o menu do terminal POS pressionando a tecla 'F'(Ingenico) ou 'F1'(Verifone) na tela principal do terminal POS (caso utilize a senha padrão, digite: '55555' para acessar o menu de configurações), selecione a opção: 'COMMUNICATION', agora selecioe o tipo de comunicação: 'SDLC' ou 'PPP' e informe os dados referente à sua linha previamente contratada através da empresa de telecomunicação."
+        question_6: O dispositivo não conecta, o que pode estar acontecendo?
+        answer_6:
+          paragraph_1: "Primeiramente identifique o código do erro e mensagem exibidos na tela do dispositivo após a tentativa de conexão. Para cada tipo de conexão utilizado, deve ser realizado algumas verificações básicas para identificar o que está ocorrendo ao tentar conectar-se:"
+          ethernet:
+            title:  "<strong>ETHERNET</strong>"
+            step_1: "—</strong> Verifique se o cabo de rede está conectado corretamente ao dispositivo ou se o mesmo encontra-se danificado."
+            step_2: "—</strong> Verifique as configurações de rede do dispositivo, os parâmetros: IP, Gateway, Máscara de Rede, DNS 1, DNS 2 e SSL devem obrigatoriamente estar preenchidos de acordo com a configuração padrão da sua rede (caso tenha dúvidas quanto a configuração da sua rede, consulte o administrador de rede da sua empresa ou estabelecimento)."
+            step_3: "—</strong> Certifique-se que não há restrições ou regras na rede que possam bloquear a conexão com o host de destino."
+            step_4: "—</strong> Caso a sua rede aceite conexões DHCP, defina o ip '0.0.0.0' para o seu dispositivo, ao reiniciá-lo, um IP será automaticamente atribuído ao mesmo, então conseguirá conectar-se normalmente (talvez seja necessário definir alguns parâmetros manualmente, exemplo: IP: 0.0.0.0, Máscara de Rede: 255.255.255.0, Gateway: 192.168.1.1, DNS 1: 8.8.8.8, DNS 2: 8.8.4.4, SSL: 0-Não)."
+            step_5: "—</strong> Verifique se há realmente há conectividade neste ponto específico de rede, ou seja, verifique se outro dispositivo consegue contactar-se perfeitamente, você pode testar com outro device ou um notebook mais próximo por exemplo, para que assim confirme que o problema não seja o ponto de rede."
+            step_6: "—</strong> Verifique se o host destino (o seu servidor autorizador ou API) está respondendo com sucesso e encontra-se ativo."
+            step_7: "—</strong> Certifique-se que o seu dispositivo foi cadastrado na plataforma CloudWalk, ou seja, o serial number do mesmo deve estar liberado corretamente no CloudWalk Manager."
+            step_8: "—</strong> Verifique se o número lógico atribuído ao seu dispositivo foi cadastrado corretamente no CloudWalk Manager e se o mesmo está relacionado à um grupo de aplicações."
+          gprs:
+            title: <strong>GPRS:</strong>
+            step_1: —</strong> Verifique se o chip está funcionando normalmente em mais de um dispositivo.
+            step_2: —</strong> Caso o chip for pré pago, verificar se o mesmo ainda possui crédito.
+            step_3: —</strong> Verifique se o chip já foi desbloqueado.
+            step_4: —</strong> Verificar a configuração da APN, se é pública ou privada.
+            step_5: —</strong> Verificar Sinal.
+          dialed:
+            title: <strong>DISCADO:</strong>
+            step_1: —</strong> Verificar cabo.
+            step_2: —</strong> Verificar interferência.
+            step_3: —</strong> Entrar em contato com a operadora.
       config_questions:
-        question_1:
-        answer_1:
-        question_2:
-        answer_2:
-      business_questions:
+        question_1: Gostaria de alterar a imagem "background" referente à tela inicial e colocar o logo da minha empresa, seria possível?
+        answer_1: Sim, só é necessário fazer o upload de imagem (em formato bmp com o nome de walk.bmp) desejada no manager e associar com sua aplicação, para isso é necessário atualizar a aplicação selecionando o arquivo que foi adicionado no manager.
+        question_2: O que é servidor autorizador?
+        answer_2: Para que as transações originadas de um POS sejam válidas, o terminal deve trocar informações com um servidor Autorizador, a qual se da através de um protocolo de comunicação, que por sua vez é uma linguagem padronizada de troca de dados que possa ser estendida por todos os módulos envolvidos. Além de validar os dados gerados pela forma de pagamento, um autorizador também é capaz de assinar um mensagem de resposta, antes de enviá-la para o terminal de venda. Assim, não só o Autorizador pode autenticar o POS mas o POS também pode autenticar seu Emissor, o que garante ainda mais segurança a todo o processo.
+        question_3: Como definir o endereço do servidor autorizador da nossa empresa, que por sua vez, serão enviadas as transações?
+        answer_3: Ao cadastrar um aplicação será solicitado o Autorizador, é necessário preencher o campo do formulário com o endereço do mesmo. Com esse simples passo o autorizador de sua empresa esta configurado.
+        question_4: É possível utilizar mais de um endereço host em uma única aplicação?
+        answer_4: Não, atualmente apenas um endereço host pode ser definido para cada aplicação, lembrando que os módulos relacionados à aplicação, utilizarão o mesmo endereço host da aplicação previamente definido.
+      cloudwalk_questions:
         question_1:
         answer_1:
         question_2:
