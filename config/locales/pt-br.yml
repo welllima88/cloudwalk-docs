@@ -2940,46 +2940,46 @@ pt-BR:
         posxml: POSXML
         comm:    Comunicação
         config: Configuração
-        cloudwalk: CloudWalk
+        manager: CloudWalk Manager
       device_questions:
-        question_1: Como resetar o certificado já instalado nos terminais POS referente à linha Verifone Evo?
+        question_1: 1. Como resetar o certificado já instalado nos terminais POS referente à linha Verifone Evo?
         answer_1: Para fazer este reset é necessário entrar em contato com o seu fornecedor de Terminais Verifione EVO, para que eles possam assinar um arquivo de reset que será utilizado para resetar o certificado.
-        question_2: "Como podemos adicionar novos arquivos em nossos dispositivos, exemplo: imagens, texto, etc?"
+        question_2: "2. Como podemos adicionar novos arquivos em nossos dispositivos, exemplo: imagens, texto, etc?"
         answer_2: Compacte as imagens e arquivos desejados (<strong>atenção</strong>, os arquivos e imagens devem estar na raiz do arquivo zip e a extenxão deve ser .zip e não .rar). Feito isso, vá para a área de arquivos no seu ambiente CloudWalk manager e faça o upload do arquivo zipado. Agora selecione a opção editar na aplicação que usará os arquivos e selecione o arquivo que deverá ser baixando juntamente com a aplicação.
-        question_3: Realizamos novas alterações na aplicação que estamos desenvolvendo e gostaríamos de atualiza-la no dispositivo, como podemos proceder?
+        question_3: 3. Realizamos novas alterações na aplicação que estamos desenvolvendo e gostaríamos de atualiza-la no dispositivo, como podemos proceder?
         answer_3: Para realizar a atualização é necessário entrar no menu de configurações, que é acessado através do botão F em dispositivos ingenico, F1 em dispositivos Verifone e a opção Menu na tela do modelo VX680 da Verifone, entre com a senha, tecle 1 para a opção CloudWalk, em seguida tecle 2 para a opção Delete Apps, Confirme e pressione ENTER para baixar a aplicação atualizada.
-        question_4: Qual o melhor modelo de dispositivo que devemos comprar e utilizar?
+        question_4: 4. Qual o melhor modelo de dispositivo que devemos comprar e utilizar?
         answer_4: "Isso irá depender do planejamento do seu projeto, deve ser verificado se os dispositivos que serão adquiridos atendem a necessidade, requisitos e exigências do seu projeto, por exemplo: caso deseje processar transações de crédito e débito em estabelecimentos que necessitam uma maior mobilidade durante o pagamento, como nos posto de gasolina, você poderá adquirir o modelo iWL280 (Ingenico) ou Vx680 (Verifone) com suporte ao tipo de comunicação 'GPRS' e que também estão entre os modelos compatíveis e homologados pra funcionar com total compatibilidade com o CloudWalk Framework."
-        question_5: Estamos tentando realizar a carga do framework CloudWalk via pendrive, mas quando tentamos conecta-lo ao dispositivo, a carga não inícia.
+        question_5: 5. Estamos tentando realizar a carga do framework CloudWalk via pendrive, mas quando tentamos conecta-lo ao dispositivo, a carga não inícia.
         answer_5: "Certifique-se que o pendrive foi formatado no respectivo formato FAT32. Verifique também se a pasta ou pacote de arquivos foi corretamente copiado para o dispositivo, caso esteja utilizando um terminal POS referente à linha Verifone: Evo, apenas o arquivo <strong>VERIFONE.zip</strong> deve estar presente na raiz do pendrive, caso esteja utilizando um dispositivo referente à linha Ingenico: Telium 1 / Telium 2 , certifique-se que apenas a pasta <strong>TELIUM</strong> encontra-se presente na raiz do seu pendrive."
-        question_6: É possível utilizar multi-aplicativos em nossos dispositivos?
+        question_6: 6. É possível utilizar multi-aplicativos em nossos dispositivos?
         answer_6: Sim, desde que as suas aplicações sejam desenvolvidas no ambiente de desenvolvimento CloudWalk. No grupo de aplicações no CloudWalk Manager, marque as aplicações desejadas que pertencem ao respectivo grupo, logo quando limpar as aplicações e arquivos em seu dispositivo e baixar novamente, um menu será exibido para que o usuário decida qual aplicação deseja acessar.
       posxml_questions:
-        question_1: O que é POSXML?
+        question_1: 1. O que é POSXML?
         answer_1: POSXML (acrônimo para ponto de venda extendido linguagem de marcação) é uma linguagem para criar aplicações para um terminal POS.Normalmente a linguagem de programação usada para desenvolver estas aplicações são C ou C++. Para realizar este desenvolvimento é necessário um amplo conhecimento da especificação do SDK do fabricante referente à cada modelo de terminal POS e também uma grande experiência em programação e linguagens mencionadas. A principal proposta da linguagem POSXML é simplificar o desenvolvimento de aplicações para terminais POS. A linguagem contém instruções e comandos pré-definidos que permitem interagir diretamente com o dispositivo, resultando em uma grande redução do tempo de desenvolvimento.
-        question_2: Qual o tamanho máximo em bytes suportado em uma varíavel do tipo string na linguagem POSXML?
+        question_2: 2. Qual o tamanho máximo em bytes suportado em uma varíavel do tipo string na linguagem POSXML?
         answer_2: 1024 bytes.
-        question_3: Existem palavras ou caracteres reservados na linguagem POSXML?
+        question_3: 3. Existem palavras ou caracteres reservados na linguagem POSXML?
         answer_3: "Sim, segue abaixo os caracteres reservados:"
         answer_3-1: Para mais informações sobre a estrutura da linguagem POSXML, acesse <a href='https://docs.cloudwalk.io/pt-BR/posxml/structure' target='blank' class='external'>Estrutura POSXML</a>
-        question_4: É possível desenvolver uma nova aplicação e realizar a integração utilizando o padrão ISO8583?
+        question_4: 4. É possível desenvolver uma nova aplicação e realizar a integração utilizando o padrão ISO8583?
         answer_4: Sim, a linguagem POSXML possui todos os comandos necessários para que seja realizada uma integração no padrão ISO8583.
       comm_questions:
-        question_1: "Quais tipos de comunicação poderei utilizar para realizar a transação?"
+        question_1: "1. Quais tipos de comunicação poderei utilizar para realizar a transação?"
         answer_1: Ethernet, GPRS e Discada
-        question_2: Quais os tipos de integração disponíveis que podemos realizar entre o nosso host e a plataforma CloudWalk?
+        question_2: 2. Quais os tipos de integração disponíveis que podemos realizar entre o nosso host e a plataforma CloudWalk?
         answer_2: TCP, HTTP Simples e Rest.
-        question_3: Estou utilizando o tipo de comunicação Ethernet e gostaria de configurar o dispositivo para que funcione em uma rede DHCP, como devo realizar configuração?
+        question_3: 3. Estou utilizando o tipo de comunicação Ethernet e gostaria de configurar o dispositivo para que funcione em uma rede DHCP, como devo realizar configuração?
         answer_3: "Ao configurar a rede ethernet, defina o IP para ‘0.0.0.0’, após a reinicialização do dispositivo o IP será atríbuido automáticamente(alvez seja necessário definir alguns parâmetros manualmente, exemplo: IP: 0.0.0.0, Máscara de Rede: 255.255.255.0, Gateway: 192.168.1.1, DNS 1: 8.8.8.8, DNS 2: 8.8.4.4, SSL: 0-Não)."
-        question_4: Estou utilizando o tipo de comunicação GPRS, qual APN, usuário e senha devemos definir?
+        question_4: 4. Estou utilizando o tipo de comunicação GPRS, qual APN, usuário e senha devemos definir?
         answer_4: "Primeiramente será necessário verificar se o chip GPRS que você está utilizando utiliza APN pública ou privada. Você poderá verificar esta informação com o seu fornecedor de chips GPRS ou operadora. Caso tenha adquirido o seu chip através de uma empresa de telecomunicações, como a Lyra Network, provavelmente irá utilizar uma APN privada, caso o seu chip for comum e utilize APN pública, deverá ser definido o usuário, senha e APN de acordo com cada operadora. O CloudWalk proporciona um menu de configuração de comunicação simples e intuitivo, basta você selecionar a operadora que irá utilizar, de acordo com chip inserido, então os parâmetros referente ao usuário, senha e APN serão definidos automaticamente em background, caso não encontre a operadora desejada, você poderá parametrizar manualmente, selecionando a opção 'Outra operadora'. "
-        question_5: É possível definir o tipo de comunicação "Discado/Landline" SDLC ou PPP para realizar as transações?
+        question_5: 5. É possível definir o tipo de comunicação "Discado/Landline" SDLC ou PPP para realizar as transações?
         answer_5: "Sim, é possível. Primeiramente verifique se o seu dispositivo possui suporte ao respectivo tipo de comunicação, em seguida, já com os parâmetros de configuração em mãos, acesse o menu do terminal POS pressionando a tecla 'F'(Ingenico) ou 'F1'(Verifone) na tela principal do terminal POS (caso utilize a senha padrão, digite: '55555' para acessar o menu de configurações), selecione a opção: 'COMMUNICATION', agora selecioe o tipo de comunicação: 'SDLC' ou 'PPP' e informe os dados referente à sua linha previamente contratada através da empresa de telecomunicação."
-        question_6: O dispositivo não conecta, o que pode estar acontecendo?
+        question_6: 6. O dispositivo não conecta, o que pode estar acontecendo?
         answer_6:
           paragraph_1: "Primeiramente identifique o código do erro e mensagem exibidos na tela do dispositivo após a tentativa de conexão. Para cada tipo de conexão utilizado, deve ser realizado algumas verificações básicas para identificar o que está ocorrendo ao tentar conectar-se:"
           ethernet:
-            title:  "<strong>ETHERNET</strong>"
+            title:  "<strong>ETHERNET:</strong>"
             step_1: "—</strong> Verifique se o cabo de rede está conectado corretamente ao dispositivo ou se o mesmo encontra-se danificado."
             step_2: "—</strong> Verifique as configurações de rede do dispositivo, os parâmetros: IP, Gateway, Máscara de Rede, DNS 1, DNS 2 e SSL devem obrigatoriamente estar preenchidos de acordo com a configuração padrão da sua rede (caso tenha dúvidas quanto a configuração da sua rede, consulte o administrador de rede da sua empresa ou estabelecimento)."
             step_3: "—</strong> Certifique-se que não há restrições ou regras na rede que possam bloquear a conexão com o host de destino."
@@ -3001,16 +3001,37 @@ pt-BR:
             step_2: —</strong> Verificar interferência.
             step_3: —</strong> Entrar em contato com a operadora.
       config_questions:
-        question_1: Gostaria de alterar a imagem "background" referente à tela inicial e colocar o logo da minha empresa, seria possível?
+        question_1: 1. Gostaria de alterar a imagem "background" referente à tela inicial e colocar o logo da minha empresa, seria possível?
         answer_1: Sim, só é necessário fazer o upload de imagem (em formato bmp com o nome de walk.bmp) desejada no manager e associar com sua aplicação, para isso é necessário atualizar a aplicação selecionando o arquivo que foi adicionado no manager.
-        question_2: O que é servidor autorizador?
+        question_2: 2. O que é servidor autorizador?
         answer_2: Para que as transações originadas de um POS sejam válidas, o terminal deve trocar informações com um servidor Autorizador, a qual se da através de um protocolo de comunicação, que por sua vez é uma linguagem padronizada de troca de dados que possa ser estendida por todos os módulos envolvidos. Além de validar os dados gerados pela forma de pagamento, um autorizador também é capaz de assinar um mensagem de resposta, antes de enviá-la para o terminal de venda. Assim, não só o Autorizador pode autenticar o POS mas o POS também pode autenticar seu Emissor, o que garante ainda mais segurança a todo o processo.
-        question_3: Como definir o endereço do servidor autorizador da nossa empresa, que por sua vez, serão enviadas as transações?
+        question_3: 3. Como definir o endereço do servidor autorizador da nossa empresa, que por sua vez, serão enviadas as transações?
         answer_3: Ao cadastrar um aplicação será solicitado o Autorizador, é necessário preencher o campo do formulário com o endereço do mesmo. Com esse simples passo o autorizador de sua empresa esta configurado.
-        question_4: É possível utilizar mais de um endereço host em uma única aplicação?
+        question_4: 4. É possível utilizar mais de um endereço host em uma única aplicação?
         answer_4: Não, atualmente apenas um endereço host pode ser definido para cada aplicação, lembrando que os módulos relacionados à aplicação, utilizarão o mesmo endereço host da aplicação previamente definido.
-      cloudwalk_questions:
-        question_1:
-        answer_1:
-        question_2:
+      manager_questions:
+        question_1: 1. O que é CloudWalk Manager?
+        answer_1: "O Walk manager é a ferramenta utilizada para liberar dispositivos, cadastrar as aplicações, arquivos, números lógicos e grupos. É também através do WALK Manager que é feita a gestão de usuários e por onde é realizado o monitoramento de transações efetuadas."
+        question_2: 2. O que é número lógico e como utiliza-lo?
         answer_2:
+          paragraph_1: "O número lógico é a identificação do dispositivo, e é diretamente associado a um Grupo. O número lógico é referenciado em dois momentos distintos:"
+          paragraph_2: "—</strong> Interface de números lógicos: onde os números lógicos são cadastrados e associados aos grupos"
+          paragraph_3: "—</strong> Dispositivo: Acessando o menu de configuração do POS, na opção Número lógico."
+        question_3: 3. A plataforma CloudWalk possui uma API?
+        answer_3:
+          paragraph_1: "Sim, a plataforma CloudWalk possui uma API, na qual o desenvolvedor poderá interagir através do seu sistema, realizando configurações básicas e avançadas em sua conta no CloudWalk Manager, utilizando o token de acesso gerado em sua conta através do link: <a href='https://manager.cloudwalk.io/api' target='blank' class='external'>Token</a>"
+          paragraph_2: "A especificação da API CloudWalk está disponível no CloudWalk Docs., acesse o link: <a href='https://docs.cloudwalk.io/pt-BR/api/overview' target='blank' class='external'>API</a>"
+        question_4: "4. Gostaríamos de saber um pouco mais sobre o ambiente de desenvolvimento CloudWalk e como acessá-lo?"
+        answer_4: "O ambiente de desenvolvimento do serviço CloudWalk oferece uma interface simples, rápide e intuitiva, contando com o inovador recurso de colaboração em tempos real, ou seja, múltiplos desenvolvedores podem trabalhar na mesma aplicação simultaneamente, além de possuir um emulador que reproduz com exatidão o comportamento de um dispositivo, seja ele um terminal POS ou um smartphone. O ambiente de desenvolvimento CloudWalk é acessado a partir do Walk Manager, ao selecionar a opção Código Fonte em qualquer aplicação cadastrada."
+        question_5: "5. Para que serve a opção 'Grupos' no CloudWalk Manger?"
+        answer_5: Para que possa agrupar as aplicações e números lógicos cadastrados, dessa forma você poderá selecionar todas as aplicações que correspondem à um determinado grupo e ao cadastrar um número lógico, poderá selecionar o grupo correspondente. Ao configurar o número lógico no seu dispositivo, as aplicações existentes neste grupo serão baixadas.
+        question_6: 6. Como posso utilizar o Emulador CloudWalk?
+        answer_6: "Acesse a sua conta CloudWalk Manager, selecione a aplicação desejada e clique em 'Editar código fonte'. Assim que abrir o CloudWalk IDE em seu browser, você poderá ver o ícone referente ao Emulador CloudWalk na barra lateral à esquerda, para iniciar clique no botão verde 'Power' para ligá-lo, o mesmo já irá iniciar emulando a sua app na qual está codificando."
+        question_7: "7. É possível consultar o histórico das transação já processadas na plataforma CloudWalk?"
+        answer_7:
+          paragraph_1: "Para verificar o histórico de transações, basta acessar a sua conta no CloudWalk Manager e selecionar o menu 'Transações' ou através do link: <a href='https://manager.cloudwalk.io/transactions' target='blank' class='external'>Transações</a>"
+          paragraph_2: Por segurança, o conteúdo das informações transicionadas na plataforma CloudWalk, não serão armazenadas, apenas o status, tipo, dispositivo, entre outras informações relevantes para verificação.
+        question_8: 8. Como podemos consultar o log em tempo real das transações processadas na plataforma CloudWalk?
+        answer_8: "Para verificar o log em tempo real das transações que estão sendo processadas, basta acessar a sua conta no CloudWalk Manager e selecionar o menu 'Tempo Real', ou através do link: <a href='https://manager.cloudwalk.io/realtime' target='blank' class='external'>Log em tempo real</a>"
+        question_9: 9. Estamos baixando a aplicação com novas features implementadas, mas a mesma não atualiza, o que pode estar acontecendo?
+        answer_9: Verifique se após compilar e realizar o deploy da sua aplicação, não ocorreu erros e foi concluído com sucesso, em seguida tente baixar a aplicação novamente em seu dispositivo.
