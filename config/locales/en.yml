@@ -2954,6 +2954,22 @@ en:
         answer_5: "Check if the pendrive is formated as FAT32. Now verify is the folder and the file package was correctly copy to the device, in case you are using a POS terminal from Verifone: Evo, justo the file VERIFONE.zip must be present on the pendrive root, in case you are using a device from Ingenico: Telium 1/ Telium 2, verify if just the TELIUM folder is on the root of the pendrive."
         question_6: 6. It’s possible to use multi applications on the devices?
         answer_6: Yes, for that, your applications must be develop on the CloudWalk IDE. Then on the applications groups on CloudWalk Manager, mark the desire applications to belong on the same group, when you clear the app on the device and download them again, the menu will show to the user the list of apps.
+        question_7: 7. What POS terminals are compatible with CloudWalk?
+        answer_7: "The compatible models are:"
+        question_8: 8. How to create a new application and install it on the POS terminal?
+        answer_8: First you need to register the application on the CloudWalk manager, next select the option Source Code, which will open the IDE, after the development and deploy of the application and with the framework installed on the terminal you only need to download the application.
+        question_9: 9. What’s the password to access the function menu on the devices that I installed CloudWalk?
+        answer_9: The default password is “55555”
+        question_10: 10. I would like to alter the default password used to access the configuration menu on the device, how can I do that?
+        answer_10: "Yes, it’s possible to define the password you wan on one or more devices, or to all devices on the same group, to do this access your account on CloudWalk Manager, edit the group configuration or the logical number then define a new parameter, called: 'devicepassword'  , type a new password of 4 to 8 digits on the 'value' field. Now you just need to download the application again, after that these parameters will be updated and the new password will be in place."
+        question_11: 11. I haven't installed Cloudwalk on the ingenico terminals, but I’m trying to access the functionalities menu of the terminal, but asked for a password. Could tell me the password?
+        answer_11: When installing the Telium Manager and the OS on the POS terminal by default no password is set automatically. If your POS terminal is requesting password to access the setup menu and parameters of  the device, certainly this password was previously defined manually  by the supplier of POS terminals. Therefore. please ask that you contact your supplier in order to clarify this issue.
+        question_12: 12. How can I check the device serial number and where do I register it?
+        answer_12: "The serial number must be registered through the CloudWalk Manager, on the menu select 'Devices' then select 'Grant access to a new device'. To check the device serial number, go to the configuration menu accessed through the Function button, select the option 'DEVICE SETTINGS', next the option 'SERIAL NUMBER'."
+        question_13: "13. What's the main functionality of option: 'MAGSTRIPE SETTINGS' on the configuration menu in 'POS SETTINGS'?"
+        answer_13: "Define the 'Track' of magstripe card that should be read when the customer pass the card on merchant's POS terminal."
+        question_14: 14. How can I define the type of communication that the device will use?
+        answer_14: "Press the Function button on the device, exemple: 'F'(Ingenico) 'F1'(Verifone), next type the password '55555'(if you are using the default password). On the configurations menu, select the option 'DEVICE SETTINGS', then the option 'COMMUNICATION', now you just have to select the type of communication that you want and inform the respectives parameters to finish the configuration."
       posxml_questions:
         question_1: 1. What's POSXML?
         answer_1: POSXML (acronym for Point Of Sale extended Markup Language) is a programming language that is used to create applications for a POS terminal. Normally the programming language used to develop such applications is C or C++. This development requires an in-depth knowledge of both the technical specifications of the machine (Hardware) and the programming language. The main purpose of POSXML is to simplify the development of applications for POS terminals. It contains a set of instructions and pre-programmed commands, which allow direct interaction with the machine, resulting in a large reduction in application development time.
@@ -2964,6 +2980,10 @@ en:
         answer_3-1: "Here, you can read more information about the structure of POSXML language: <a href='https://docs.cloudwalk.io/en/posxml/structure ' target='blank' class='external'>POSXML Structure</a>"
         question_4: 4. It’s possible to develop a new application and perform the integration using the standard ISO8583?
         answer_4: Yes, the POSXML language has all the necessary commands to perform an integration using the standard ISO8583
+        question_5: "5. What's the 'Walk Framework' means?"
+        answer_5: The WALK Framework, is a virtual machine installed directly in the sale of devices, that has the ability to interpret the commands of the POSXML language.
+        question_6: 6. Is there any documentation that may assist us in developing our applications on the CloudWalk development environment?
+        answer_6: "Yes, the documentation is available On line, just access this link: <a href='https://docs.cloudwalk.io' target='blank' class='external'>CloudWalk - Docs</a>, on this documentation you will have access to all the details of the CloudWalk platform, for example: complete descriptions of each command of the POSXML language and code samples related to each command: <a href='https://docs.cloudwalk.io/en/posxml/commands' target='blank' class='external'>POSXML Commands</a>, in case you don’t find what you are looking for on the docs or if specific questions arise about some topic of documentation, visit our support environment and send your questions or suggestions: <a href='https://cloudwalk.zendesk.com' target='blank' class='external'>Support</a>, It will be a pleasure help you."
       comm_questions:
         question_1: 1. What types of communication can I use to make the transaction?
         answer_1: Ethernet, GPRS and Dialed
@@ -3009,6 +3029,8 @@ en:
         answer_3: On the application registration is required to inform the authorizer, you must fill the form with its address. With this simple step the authorizer of your company is set.
         question_4: 4. Can we use more than one address host to an application?
         answer_4: No, actually, only one host can be set for an application, all modules of this application will use the same host to transact.
+        question_5: 5. We're developing a new POSXML application using the ISO8583 protocol for financials transactions, so we would like to know how we can create the bitmap.dat file?
+        answer_5: "Following below the download link about the bitmap.dat file, check it out: <a href='https://dl.dropboxusercontent.com/u/436039/cloudwalk/util/iso8583/bitmap.dat' target='blank' class='external'>Bitmap</a>. You must check and update the parameters and type of each bit according with the specification about the customer's ISO8583 authorizer system before download it on your device."
       manager_questions:
         question_1: 1. What’s the CloudWalk Manager?
         answer_1: "The Walk Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. Also through WALK manager are made: users management and monitoring of transactions performed by the devices"
@@ -3035,3 +3057,5 @@ en:
         answer_8: "To check the real-time log of the transactions being processed, simply log into your account in CloudWalk Manager and select the menu 'Real-time', or through the link: <a href='https://manager.cloudwalk.io/realtime' target='blank' class='external'>Real-time log</a>"
         question_9: 9. I'm trying download my developed application with new changes, but it didn't update, I can't see the last changes, so what's happening?
         answer_9: After develop your application and make your changes, you should compile and deploy it, when the deploy of your application finished, try download it again.
+        question_10: 10. I’m using GPRS communication and private APN, what’s the information that I need to send to the Telecommunication company for the routing and other settings be done?
+        answer_10: "Following the information: CloudWalk DNS: switch.cloudwalk.io, port (with SSL): 31416 and port (without SSL): 31415."

@@ -2954,6 +2954,22 @@ pt-BR:
         answer_5: "Certifique-se que o pendrive foi formatado no respectivo formato FAT32. Verifique também se a pasta ou pacote de arquivos foi corretamente copiado para o dispositivo, caso esteja utilizando um terminal POS referente à linha Verifone: Evo, apenas o arquivo <strong>VERIFONE.zip</strong> deve estar presente na raiz do pendrive, caso esteja utilizando um dispositivo referente à linha Ingenico: Telium 1 / Telium 2 , certifique-se que apenas a pasta <strong>TELIUM</strong> encontra-se presente na raiz do seu pendrive."
         question_6: 6. É possível utilizar multi-aplicativos em nossos dispositivos?
         answer_6: Sim, desde que as suas aplicações sejam desenvolvidas no ambiente de desenvolvimento CloudWalk. No grupo de aplicações no CloudWalk Manager, marque as aplicações desejadas que pertencem ao respectivo grupo, logo quando limpar as aplicações e arquivos em seu dispositivo e baixar novamente, um menu será exibido para que o usuário decida qual aplicação deseja acessar.
+        question_7: 7. Quais modelos de terminais POS compatíveis com o serviço de pagamentos CloudWalk?
+        answer_7: "Os modelos compatíves com a CloudWalk são:"
+        question_8: 8. Como criar uma nova aplicação e instalar em meu terminal POS?
+        answer_8: Primeiro é necessário cadastrar a aplicação no CloudWalk manager, depois de criado selecione a opção Código Fonte, a qual irá abrir a IDE , após o desenvolvimento e o deploy da aplicação e com o framework instalado no terminal é necessário somente baixar a aplicação.
+        question_9: 9. Qual a senha para acessar o menu de função dos dispositivos, no qual instalei o CloudWalk?
+        answer_9: A senha padrão é "55555".
+        question_10: 10. Gostaríamos de alterar a senha padrão do dispositivo usada para acessar as configurações do mesmo, como podemos realizar este procedimento?
+        answer_10: "Sim, é possível definir a senha que desejar para um ou mais dispositivos em específico ou para todos os dispositivos em um determinado grupo de aplicações, para isso basta acessar a sua conta no CloudWalk Manager, editar as configurações de um grupo ou número lógico e então definir um novo parâmetro, chamado: 'devicepassword', digite uma nova senha de 4 à 8 digitos no campo 'valor' deste parâmetro. Pronto, agora quando atualizar a aplicação do seu dispositivo e baixá-la novamente, estes mesmos parâmetros serão atualizados e já estará em vigor a sua nova configuração de senha."
+        question_11: 11. Ainda não instalamos o CloudWalk em nossos terminais da linha Ingenico, mas estamos tentando acessar o menu de funcionalidades do próprio terminal, porém solicitado uma senha. Poderiam nos dizer a senha por favor?
+        answer_11: Ao instalar o Telium Manager e o Sistema Operacional no respectivo terminal POS, por padrão nenhuma senha é definida automaticamente. Caso o seu terminal POS esteja solicitando senha para acessar o menu de configuração e parâmetros do próprio dispositivo, certamente esta senha foi previamente definida manualmente por algum técnico ou pelo seu próprio fornecedor de terminais POS. Sendo assim. pedimos por favor que entre em contato com o seu fornecedor, afim de esclarecer esta questão.
+        question_12: 12. Como podemos verificar o número de série do dispositivo e onde devemos cadastrá-lo?
+        answer_12: "O número de série do dispositivo deve ser cadastrado e habilitado no CloudWalk Manager, especificamente no menu 'Dispositivos' e selecione 'Liberar um novo dispositivo'. Para verificar qual o número de série correspondente ao seu dispositivo, basta acessar as configurações do mesmo, através da tecla de função, selecionar a opção 'DEVICE SETTINGS' e logo em seguida, selecionar a opção 'SERIAL NUMBER'."
+        question_13: "13. Qual a funcionalidade da opção 'MAGSTRIPE SETTINGS' no menu acessado através da tecla de função?"
+        answer_13: "Definir qual será a 'Track' do cartão magstripe que deverá ser lido ao passá-lo no terminal POS."
+        question_14: 14. Como definir o tipo de comunicação que queremos utilizar no dispositivo?
+        answer_14: "Pressione a tecla de função do seu dispositivo, exemplo: 'F'(Ingenico) 'F1'(Verifone), em seguida digite a senha '55555' (caso esteja utilizando a senha padrão do dispositivo). No menu de configurações, selecione a opção 'DEVICE SETTINGS' e logo na sequência a opção: 'COMMUNICATION', agora basta selecionar o tipo de comunicação que deseja utilizar e informar os respectivos parâmetros de configuração de acordo com cada tipo."
       posxml_questions:
         question_1: 1. O que é POSXML?
         answer_1: POSXML (acrônimo para ponto de venda extendido linguagem de marcação) é uma linguagem para criar aplicações para um terminal POS.Normalmente a linguagem de programação usada para desenvolver estas aplicações são C ou C++. Para realizar este desenvolvimento é necessário um amplo conhecimento da especificação do SDK do fabricante referente à cada modelo de terminal POS e também uma grande experiência em programação e linguagens mencionadas. A principal proposta da linguagem POSXML é simplificar o desenvolvimento de aplicações para terminais POS. A linguagem contém instruções e comandos pré-definidos que permitem interagir diretamente com o dispositivo, resultando em uma grande redução do tempo de desenvolvimento.
@@ -2964,6 +2980,10 @@ pt-BR:
         answer_3-1: Para mais informações sobre a estrutura da linguagem POSXML, acesse <a href='https://docs.cloudwalk.io/pt-BR/posxml/structure' target='blank' class='external'>Estrutura POSXML</a>
         question_4: 4. É possível desenvolver uma nova aplicação e realizar a integração utilizando o padrão ISO8583?
         answer_4: Sim, a linguagem POSXML possui todos os comandos necessários para que seja realizada uma integração no padrão ISO8583.
+        question_5: "5. O que é 'Walk Framework'?"
+        answer_5: O WALK Framework, é uma máquina virtual instalada diretamente nos dispositivos de venda e tem a finalidade de interpretar os comandos da linguagem POSXML.
+        question_6: 6. Existe alguma documentação que possa nos auxiliar no desenvolvimento das nossas aplicações no ambiente de desenvolvimento CloudWalk?
+        answer_6: "Sim, esta documentação está disponível online, basta acessar o link: <a href='https://docs.cloudwalk.io' target='blank' class='external'>CloudWalk - Docs</a>, nesta documentação você terá acesso à todos os detalhes da plataforma CloudWalk, como por exemplo: descrições completas sobre cada comando da linguagem POSXML e códigos de exemplo referente à cada comando: <a href='https://docs.cloudwalk.io/en/posxml/commands' target='blank' class='external'>Comandos POSXML</a>, caso não encontre o que esteja procurando na documentação ou caso surgir dúvidas específicas sobre algum tópico da documentação, acesse o nosso ambiente de suporte e envie a sua dúvida ou sugestão para: <a href='https://cloudwalk.zendesk.com' target='blank' class='external'>Suporte</a>, será um prazer auxiliá-lo."
       comm_questions:
         question_1: "1. Quais tipos de comunicação poderei utilizar para realizar a transação?"
         answer_1: Ethernet, GPRS e Discada
@@ -3009,6 +3029,8 @@ pt-BR:
         answer_3: Ao cadastrar um aplicação será solicitado o Autorizador, é necessário preencher o campo do formulário com o endereço do mesmo. Com esse simples passo o autorizador de sua empresa esta configurado.
         question_4: 4. É possível utilizar mais de um endereço host em uma única aplicação?
         answer_4: Não, atualmente apenas um endereço host pode ser definido para cada aplicação, lembrando que os módulos relacionados à aplicação, utilizarão o mesmo endereço host da aplicação previamente definido.
+        question_5: 5. Estamos desenvolvendo uma nova aplicação POSXML utilizando o protocolo ISO8583 para realizar transações financeiras e gostaríamos de saber como podemos criar o arquivo bitmap.dat?
+        answer_5: "Segue abaixo o link para download de um exemplo referente ao arquivo bitmap.dat: <a href='https://dl.dropboxusercontent.com/u/436039/cloudwalk/util/iso8583/bitmap.dat' target='blank' class='external'>Bitmap</a>. Os parâmetros e tipagem de cada bit deste arquivo, devem ser verificados e alterados de acordo com a especifiação do sistema autorizador ISO8583 de cada cliente antes de ser baixado em seu dispositivo."
       manager_questions:
         question_1: 1. O que é CloudWalk Manager?
         answer_1: "O Walk manager é a ferramenta utilizada para liberar dispositivos, cadastrar as aplicações, arquivos, números lógicos e grupos. É também através do WALK Manager que é feita a gestão de usuários e por onde é realizado o monitoramento de transações efetuadas."
@@ -3035,3 +3057,6 @@ pt-BR:
         answer_8: "Para verificar o log em tempo real das transações que estão sendo processadas, basta acessar a sua conta no CloudWalk Manager e selecionar o menu 'Tempo Real', ou através do link: <a href='https://manager.cloudwalk.io/realtime' target='blank' class='external'>Log em tempo real</a>"
         question_9: 9. Estamos baixando a aplicação com novas features implementadas, mas a mesma não atualiza, o que pode estar acontecendo?
         answer_9: Verifique se após compilar e realizar o deploy da sua aplicação, não ocorreu erros e foi concluído com sucesso, em seguida tente baixar a aplicação novamente em seu dispositivo.
+        question_10: 10. Estamos utilizando o tipo de comunicação GPRS e uma APN privada, quais os dados que devemos passar para a empresa de telecomunicações para que seja realizado o roteamento e demais configurações?
+        answer_10: "Os dados são: DNS CloudWalk: switch.cloudwalk.io, porta (SSL): 31416 e porta (sem SSL): 31415."
+#TODO modificar section POSXMl para Development
