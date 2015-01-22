@@ -4,16 +4,16 @@
 
 <h1><%= I18n.t("help.faq.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "21/01/2015") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "22/01/2015") %></p>
 
 <h4><%= I18n.t("general.index")%></h4>
 
 <ol class="table-of-contents">
   <li><a href="#device"><%= I18n.t("help.faq.table_of_contents.device") %></a></li>
-  <li><a href="#posxml"><%= I18n.t("help.faq.table_of_contents.posxml") %></a></li>
+  <li><a href="#development"><%= I18n.t("help.faq.table_of_contents.development") %></a></li>
   <li><a href="#comm"  ><%= I18n.t("help.faq.table_of_contents.comm")   %></a></li>
-  <li><a href="#config" ><%= I18n.t("help.faq.table_of_contents.config")%></a></li>
   <li><a href="#manager"><%= I18n.t("help.faq.table_of_contents.manager")%></a></li>
+  <li><a href="#cloudwalk"><%= I18n.t("help.faq.table_of_contents.cloudwalk")%></a></li>
 </ol>
 
 <h2 id="device"><%= I18n.t("help.faq.table_of_contents.device") %></h2>
@@ -226,78 +226,144 @@
   </ul>
 </div>
 
-<h2 id="posxml"><%= I18n.t("help.faq.table_of_contents.posxml") %></h2>
+<h2 id="development"><%= I18n.t("help.faq.table_of_contents.development") %></h2>
 
-<div class="accordion" id="accordion-posxml">
+<div class="accordion" id="accordion-development">
   <ul>
     <div class="accordion-group">
       <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-posxml" href="#pxml-collapse-1"><%= I18n.t("help.faq.posxml_questions.question_1") %></p>
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-1"><%= I18n.t("help.faq.development_questions.question_1") %></p>
       </div>
-      <div id="pxml-collapse-1" class="accordion-body collapse">
+      <div id="collapse-1" class="accordion-body collapse">
         <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.posxml_questions.answer_1") %></p>
+          <p><%= I18n.t("help.faq.development_questions.answer_1") %></p>
         </div>
       </div>
     </div>
 
     <div class="accordion-group">
       <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-posxml" href="#pxml-collapse-2"><%= I18n.t("help.faq.posxml_questions.question_2") %></p>
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-2"><%= I18n.t("help.faq.development_questions.question_2") %></p>
       </div>
-      <div id="pxml-collapse-2" class="accordion-body collapse">
+      <div id="collapse-2" class="accordion-body collapse">
         <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.posxml_questions.answer_2") %></p>
+          <p><%= I18n.t("help.faq.development_questions.answer_2") %></p>
         </div>
       </div>
     </div>
 
     <div class="accordion-group">
       <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-posxml" href="#pxml-collapse-3"><%= I18n.t("help.faq.posxml_questions.question_3") %></p>
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-3"><%= I18n.t("help.faq.development_questions.question_3") %></p>
       </div>
-      <div id="pxml-collapse-3" class="accordion-body collapse">
+      <div id="collapse-3" class="accordion-body collapse">
         <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.posxml_questions.answer_3") %></p>
+          <p><%= I18n.t("help.faq.development_questions.answer_3") %></p>
           <p>< &amp;lt;</p>
           <p>> &amp;gt;</p>
           <p>& &amp;amp;</p>
           <p>&amp;apos;</p>
           <p>&amp;quot;</p>
-          <p><%= I18n.t("help.faq.posxml_questions.answer_3-1")%></p>
+          <p><%= I18n.t("help.faq.development_questions.answer_3-1")%></p>
         </div>
       </div>
     </div>
 
     <div class="accordion-group">
       <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-posxml" href="#pxml-collapse-4"><%= I18n.t("help.faq.posxml_questions.question_4") %></p>
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-4"><%= I18n.t("help.faq.development_questions.question_4") %></p>
       </div>
-      <div id="pxml-collapse-4" class="accordion-body collapse">
+      <div id="collapse-4" class="accordion-body collapse">
         <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.posxml_questions.answer_4") %></p>
+          <p><%= I18n.t("help.faq.development_questions.answer_4") %></p>
         </div>
       </div>
     </div>
 
     <div class="accordion-group">
       <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-posxml" href="#pxml-collapse-5"><%= I18n.t("help.faq.posxml_questions.question_5") %></p>
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-5"><%= I18n.t("help.faq.development_questions.question_5") %></p>
       </div>
-      <div id="pxml-collapse-5" class="accordion-body collapse">
+      <div id="collapse-5" class="accordion-body collapse">
         <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.posxml_questions.answer_5") %></p>
+          <p><%= I18n.t("help.faq.development_questions.answer_5") %></p>
         </div>
       </div>
     </div>
 
     <div class="accordion-group">
       <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-posxml" href="#pxml-collapse-6"><%= I18n.t("help.faq.posxml_questions.question_6") %></p>
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-6"><%= I18n.t("help.faq.development_questions.question_6") %></p>
       </div>
-      <div id="pxml-collapse-6" class="accordion-body collapse">
+      <div id="collapse-6" class="accordion-body collapse">
         <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.posxml_questions.answer_6") %></p>
+          <p><%= I18n.t("help.faq.development_questions.answer_6") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-7"><%= I18n.t("help.faq.development_questions.question_7") %></p>
+      </div>
+      <div id="collapse-7" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.development_questions.answer_7") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-8"><%= I18n.t("help.faq.development_questions.question_8") %></p>
+      </div>
+      <div id="collapse-8" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.development_questions.answer_8") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-9"><%= I18n.t("help.faq.development_questions.question_9") %></p>
+      </div>
+      <div id="collapse-9" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.development_questions.answer_9") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-10"><%= I18n.t("help.faq.development_questions.question_10") %></p>
+      </div>
+      <div id="collapse-10" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.development_questions.answer_10") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-11"><%= I18n.t("help.faq.development_questions.question_11") %></p>
+      </div>
+      <div id="collapse-11" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.development_questions.answer_11") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-development" href="#collapse-12"><%= I18n.t("help.faq.development_questions.question_12") %></p>
+      </div>
+      <div id="collapse-12" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.development_questions.answer_12") %></p>
         </div>
       </div>
     </div>
@@ -399,67 +465,6 @@
             <li><strong><%= I18n.t("help.faq.comm_questions.answer_6.dialed.step_3") %></li>
           </ul>
 
-        </div>
-      </div>
-    </div>
-  </ul>
-</div>
-
-<h2 id="config"><%= I18n.t("help.faq.table_of_contents.config") %></h2>
-
-<div class="accordion" id="accordion-config">
-  <ul>
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-config" href="#con-collapse-1"><%= I18n.t("help.faq.config_questions.question_1") %></p>
-      </div>
-      <div id="con-collapse-1" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.config_questions.answer_1") %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-config" href="#con-collapse-2"><%= I18n.t("help.faq.config_questions.question_2") %></p>
-      </div>
-      <div id="con-collapse-2" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.config_questions.answer_2") %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-config" href="#con-collapse-3"><%= I18n.t("help.faq.config_questions.question_3") %></p>
-      </div>
-      <div id="con-collapse-3" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.config_questions.answer_3") %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-config" href="#con-collapse-4"><%= I18n.t("help.faq.config_questions.question_4") %></p>
-      </div>
-      <div id="con-collapse-4" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.config_questions.answer_4") %></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-config" href="#con-collapse-5"><%= I18n.t("help.faq.config_questions.question_5") %></p>
-      </div>
-      <div id="con-collapse-5" class="accordion-body collapse">
-        <div class="accordion-inner">
-          <p><%= I18n.t("help.faq.config_questions.answer_5") %></p>
         </div>
       </div>
     </div>
@@ -589,4 +594,98 @@
 
   </ul>
 
+</div>
+
+<h2 id="cloudwalk"><%= I18n.t("help.faq.table_of_contents.cloudwalk") %></h2>
+
+<div class="accordion" id="accordion-cloudwalk">
+  <ul>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cloudwalk" href="#clw-collapse-1"><%= I18n.t("help.faq.cloudwalk_questions.question_1") %></p>
+      </div>
+      <div id="clw-collapse-1" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_1") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cloudwalk" href="#clw-collapse-2"><%= I18n.t("help.faq.cloudwalk_questions.question_2") %></p>
+      </div>
+      <div id="clw-collapse-2" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_2") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cloudwalk" href="#clw-collapse-3"><%= I18n.t("help.faq.cloudwalk_questions.question_3") %></p>
+      </div>
+      <div id="clw-collapse-3" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_3") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cloudwalk" href="#clw-collapse-4"><%= I18n.t("help.faq.cloudwalk_questions.question_4") %></p>
+      </div>
+      <div id="clw-collapse-4" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_4") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cloudwalk" href="#clw-collapse-5"><%= I18n.t("help.faq.cloudwalk_questions.question_5") %></p>
+      </div>
+      <div id="clw-collapse-5" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_5") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cloudwalk" href="#clw-collapse-6"><%= I18n.t("help.faq.cloudwalk_questions.question_6") %></p>
+      </div>
+      <div id="clw-collapse-6" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_6") %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <p class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-cloudwalk" href="#clw-collapse-7"><%= I18n.t("help.faq.cloudwalk_questions.question_7") %></p>
+      </div>
+      <div id="clw-collapse-7" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_1") %></p>
+          <p><strong><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_2") %></p>
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_3") %></p>
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_4") %></p>
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_5") %></p>
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_6") %></p>
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_7") %></p>
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_8") %></p>
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_9") %></p>
+          <p><%= I18n.t("help.faq.cloudwalk_questions.answer_7.paragraph_10") %></p>
+        </div>
+      </div>
+    </div>
+
+  </ul>
 </div>
