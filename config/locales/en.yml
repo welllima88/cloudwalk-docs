@@ -2937,19 +2937,19 @@ en:
       title: "CloudWalk F.A.Q"
       table_of_contents:
         device: Device
-        posxml: POSXML
+        development: Development
         comm:    Communication
-        config: Configuration
         manager: CloudWalk Manager
+        cloudwalk: Contracts and Services
       device_questions:
         question_1: 1. How I can reset the certificate that is already installed on the Verifone EVO POS terminals?
         answer_1: To do this reset you must get in touch with your terminal supplier, so they can send you a reset file that will be used to reset the certificate.
-        question_2: "2. How i can add new files on my device, for exemple: imagens, text, etc?"
+        question_2: "2. How i can add new files on my device, for example: imagens, text, etc?"
         answer_2: First compress the images and files that you want(<strong>atention</strong>, the files and images must be on the root of the zip file and the extension must be .zip, not .rar). After this, go to the files section on your CloudWalk manager environment and upload the zip file. Now select the Edit option on the application that will use the files and select the file that must be downloaded along with the application.
         question_3: 3. I just finished some alterations on my application, and I would like to updated on the device, How should I proceed?
         answer_3: To accomplish the update, you need to go to the configuration menu, that its accessed through the button F on ingenico devices, F1 on Verifone Devices and the menu option on the screen of the model VX680 from Verifone, type the password, type 1 for the CloudWalk option, next type 2 for the Delete Apps option, Confirm then press ENTER to download the updated application
         question_4: 4. What’s the best device model that I have to buy and use?
-        answer_4: "That depends on your project planning, must be verified if the devices that will be purchased, attend all the needs and requiriments of the project, for exemple: If you wish to process credit and debit transactions on establishments that need more mobility during the payment process, e.g gas station, you should acquire the model IWL280(Ingenico) or Vx680(Verifone), with 'GPRS' communication support, and that are also among the compatible and approved devices to operate with full compatibility with CloudWalk Framework."
+        answer_4: "That depends on your project planning, must be verified if the devices that will be purchased, attend all the needs and requiriments of the project, for example: If you wish to process credit and debit transactions on establishments that need more mobility during the payment process, e.g gas station, you should acquire the model IWL280(Ingenico) or Vx680(Verifone), with 'GPRS' communication support, and that are also among the compatible and approved devices to operate with full compatibility with CloudWalk Framework."
         question_5: 5. I’m trying to perform the CloudWalk framework load through the pendrive, but when connect to the device, the load doesn’t start.
         answer_5: "Check if the pendrive is formated as FAT32. Now verify is the folder and the file package was correctly copy to the device, in case you are using a POS terminal from Verifone: Evo, justo the file VERIFONE.zip must be present on the pendrive root, in case you are using a device from Ingenico: Telium 1/ Telium 2, verify if just the TELIUM folder is on the root of the pendrive."
         question_6: 6. It’s possible to use multi applications on the devices?
@@ -2969,8 +2969,8 @@ en:
         question_13: "13. What's the main functionality of option: 'MAGSTRIPE SETTINGS' on the configuration menu in 'POS SETTINGS'?"
         answer_13: "Define the 'Track' of magstripe card that should be read when the customer pass the card on merchant's POS terminal."
         question_14: 14. How can I define the type of communication that the device will use?
-        answer_14: "Press the Function button on the device, exemple: 'F'(Ingenico) 'F1'(Verifone), next type the password '55555'(if you are using the default password). On the configurations menu, select the option 'DEVICE SETTINGS', then the option 'COMMUNICATION', now you just have to select the type of communication that you want and inform the respectives parameters to finish the configuration."
-      posxml_questions:
+        answer_14: "Press the Function button on the device, example: 'F'(Ingenico) 'F1'(Verifone), next type the password '55555'(if you are using the default password). On the configurations menu, select the option 'DEVICE SETTINGS', then the option 'COMMUNICATION', now you just have to select the type of communication that you want and inform the respectives parameters to finish the configuration."
+      development_questions:
         question_1: 1. What's POSXML?
         answer_1: POSXML (acronym for Point Of Sale extended Markup Language) is a programming language that is used to create applications for a POS terminal. Normally the programming language used to develop such applications is C or C++. This development requires an in-depth knowledge of both the technical specifications of the machine (Hardware) and the programming language. The main purpose of POSXML is to simplify the development of applications for POS terminals. It contains a set of instructions and pre-programmed commands, which allow direct interaction with the machine, resulting in a large reduction in application development time.
         question_2: 2. What's the max. size supported by a string type variable in POSXML language?
@@ -2984,15 +2984,27 @@ en:
         answer_5: The WALK Framework, is a virtual machine installed directly in the sale of devices, that has the ability to interpret the commands of the POSXML language.
         question_6: 6. Is there any documentation that may assist us in developing our applications on the CloudWalk development environment?
         answer_6: "Yes, the documentation is available On line, just access this link: <a href='https://docs.cloudwalk.io' target='blank' class='external'>CloudWalk - Docs</a>, on this documentation you will have access to all the details of the CloudWalk platform, for example: complete descriptions of each command of the POSXML language and code samples related to each command: <a href='https://docs.cloudwalk.io/en/posxml/commands' target='blank' class='external'>POSXML Commands</a>, in case you don’t find what you are looking for on the docs or if specific questions arise about some topic of documentation, visit our support environment and send your questions or suggestions: <a href='https://cloudwalk.zendesk.com' target='blank' class='external'>Support</a>, It will be a pleasure help you."
+        question_7: 7. I would like to change the "background" image on the home screen and place the logo of my company, it is possible?
+        answer_7: Yes, you only need to upload the image (on bmp format with the name walk.bmp) you desire on the manager and associate with your application, to do this you just update your application selecting the image that you have uploaded.
+        question_8: 8. What’s a Authorizer Server?
+        answer_8: For all transaction originated from a POS be valid, the terminal must exchange informations with a Authorizer Server, which can be accomplished through a communication protocol, which is a standardized language for exchange data that can be extended  to all involved modules. In addition to validating the data generated by the payment method, the authorizer is also able to sign a response message before sending it to the sale terminal. So not only the authorizer can authenticate the POS, but the POS can also authenticate your Issuer, which guarantees even more safety to the whole process.
+        question_9: 9. How to set the address of the authorizing server of our company that the transactions will be sent?
+        answer_9: On the application registration is required to inform the authorizer, you must fill the form with its address. With this simple step the authorizer of your company is set.
+        question_10: 10. Can we use more than one address host to an application?
+        answer_10: No, actually, only one host can be set for an application, all modules of this application will use the same host to transact.
+        question_11: 11. We're developing a new POSXML application using the ISO8583 protocol for financials transactions, so we would like to know how we can create the bitmap.dat file?
+        answer_11: "Following below the download link about the bitmap.dat file, check it out: <a href='https://dl.dropboxusercontent.com/u/436039/cloudwalk/util/iso8583/bitmap.dat' target='blank' class='external'>Bitmap</a>. You must check and update the parameters and type of each bit according with the specification about the customer's ISO8583 authorizer system before download it on your device."
+        question_12: 12. We are trying to download a new file, but it seems that is not updating on the device, what can be happening?
+        answer_12: "If the file is an application or module, certify if the deploy was successful, If the file is an image or a compressed file, for example: ‘pos_files.zip’, ensure that the uploading was completed or attempt to clean the cache of your browser and upload the file to the CloudWalk Manager again."
       comm_questions:
         question_1: 1. What types of communication can I use to make the transaction?
         answer_1: Ethernet, GPRS and Dialed
-        question_2: 2. What types of integrations are available in the CloudWalk platform?
+        question_2: 2. What types of integrations are available on the CloudWalk platform?
         answer_2: TCP, HTTP, Simple and Rest
         question_3: 3. I’m using the Ethernet communication type, and I would like to configure my device to work on a DHCP network, how can I do that?
         answer_3: "When setting up the ethernet network, set the IP to '0.0.0.0', after the device restarts the IP is assigned automatically (alvez have to set some parameters manually, eg IP: 0.0.0.0, Network Mask: 255.255.255.0 , Gateway: 192.168.1.1, DNS 1: 8.8.8.8, DNS 2: 8.8.4.4, SSL: 0-No)."
         question_4: 4. I’m using the GPRS communication type, which APN, user and password I must set?
-        answer_4: "First you must verify if your GPRS chip uses privete or public APN, you can verify this information with your GPRS chip supplier or provider. In case you acquired the chip through a Telecommunication enterprise, for exemple, Lyra Network, probably it will use an private APN, if the the chip its a regular one, use the public APN, then you must enter the user and password according to each provider. CloudWalk provides an configuration menu intuitive and simple, you just have to select the provider, then the parameters: user, password and APN will be set automatically on the background. If you don’t find your provider, you can set the parameters manually selecting the option ‘Other operator’"
+        answer_4: "First you must verify if your GPRS chip uses privete or public APN, you can verify this information with your GPRS chip supplier or provider. In case you acquired the chip through a Telecommunication enterprise, for example, Lyra Network, probably it will use an private APN, if the the chip its a regular one, use the public APN, then you must enter the user and password according to each provider. CloudWalk provides an configuration menu intuitive and simple, you just have to select the provider, then the parameters: user, password and APN will be set automatically on the background. If you don’t find your provider, you can set the parameters manually selecting the option ‘Other operator’"
         question_5: "5. It’s possible to define the communications type 'Dialed/Landline' SDLC or PPP to perform transactions?"
         answer_5: "Yes, it is, first verify if the device has the support for this kind of communication, next with the configurations paramters in hand, access the POS terminal menu by pressing 'F'(Ingenico) or 'F1'(Verifone) on the main screen(in case you use the default password, type: '55555' to access the configuration menu), select the option 'COMMUNICATION', now select the type: 'SDLC' or 'PPP' and inform the line data."
         question_6: 6. The device does not connect, what might be happening?
@@ -3020,17 +3032,6 @@ en:
             step_1: —</strong> Check the cable
             step_2: —</strong> Check for interference
             step_3: —</strong> Get in touch with your provider
-      config_questions:
-        question_1: 1. I would like to change the "background" image on the home screen and place the logo of my company, it is possible?
-        answer_1: Yes, you only need to upload the image (on bmp format with the name walk.bmp) you desire on the manager and associate with your application, to do this you just update your application selecting the image that you have uploaded.
-        question_2: 2. What’s a Authorizer Server?
-        answer_2: For all transaction originated from a POS be valid, the terminal must exchange informations with a Authorizer Server, which can be accomplished through a communication protocol, which is a standardized language for exchange data that can be extended  to all involved modules. In addition to validating the data generated by the payment method, the authorizer is also able to sign a response message before sending it to the sale terminal. So not only the authorizer can authenticate the POS, but the POS can also authenticate your Issuer, which guarantees even more safety to the whole process.
-        question_3: 3. How to set the address of the authorizing server of our company that the transactions will be sent?
-        answer_3: On the application registration is required to inform the authorizer, you must fill the form with its address. With this simple step the authorizer of your company is set.
-        question_4: 4. Can we use more than one address host to an application?
-        answer_4: No, actually, only one host can be set for an application, all modules of this application will use the same host to transact.
-        question_5: 5. We're developing a new POSXML application using the ISO8583 protocol for financials transactions, so we would like to know how we can create the bitmap.dat file?
-        answer_5: "Following below the download link about the bitmap.dat file, check it out: <a href='https://dl.dropboxusercontent.com/u/436039/cloudwalk/util/iso8583/bitmap.dat' target='blank' class='external'>Bitmap</a>. You must check and update the parameters and type of each bit according with the specification about the customer's ISO8583 authorizer system before download it on your device."
       manager_questions:
         question_1: 1. What’s the CloudWalk Manager?
         answer_1: "The Walk Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. Also through WALK manager are made: users management and monitoring of transactions performed by the devices"
@@ -3059,3 +3060,28 @@ en:
         answer_9: After develop your application and make your changes, you should compile and deploy it, when the deploy of your application finished, try download it again.
         question_10: 10. I’m using GPRS communication and private APN, what’s the information that I need to send to the Telecommunication company for the routing and other settings be done?
         answer_10: "Following the information: CloudWalk DNS: switch.cloudwalk.io, port (with SSL): 31416 and port (without SSL): 31415."
+      cloudwalk_questions:
+        question_1: 1. I would like to take some technical questions about CloudWalk plataform, how can I access the CloudWalk support? What the opening hours?
+        answer_1: "You can access our support on the following address: <a href='https://cloudwalk.zendesk.com/' target='blank' class='external'>Support</a>, Its necessary to have a register on CloudWalk to access.The opening hours its the commercial one."
+        question_2: 2. Cloudwalk sells POS terminals, or other devices? How can I buy them?
+        answer_2: Currently CloudWalk does not provide POS terminals and other devices to its clients, but our representatives of the commercial area will gladly indicate great reliable suppliers where you can get your equipment quickly and safely.
+        question_3: 3. How to register on the CloudWalk platform and what are the costs?
+        answer_3: "The amount charged is per transaction made on the CloudWalk platform. To sign up, simply visit the link: <a href='https://manager.cloudwalk.io/users/sign_up' target='blank' class='external'>Sign up</a> and start today your development and functional tests!"
+        question_4: 4. The authorizer server of transactions is included on the CloudWalk service?
+        answer_4: No, this environment and system, must be developed and provided by each CloudWalk customer, that is, only the URL or IP and port related to the transaction authorizer host will be used for registration of each application in CloudWalk Manager.
+        question_5: 5. We'd like to know more informations about the commercial area of CloudWalk platform, so could you tell us the phone number and e-mail to get in touch?
+        answer_5: "Yes, sure! For more commercial informations about the CloudWalk platform, please contact us: <em>sales@cloudwalk.io</em> or <em>usa@cloudwalk.io</em>  or phone: +1 (877) 880-7247."
+        question_6: 6. Where can I buy new CloudWalk Framework licences to use on my device?
+        answer_6: "You don’t need to buy a new license for each device registered on the CloudWalk platform because this business model has been discontinued and is available only for customers who still use the Walk Framework and the Walk Server 2. If a new license is requested after making framework of the load on your device, probably the loaded version is incorrect or too old to solve this problem, access the documentation of the CloudWalk platform and download the updated version of the framework: <a href='https://docs.cloudwalk.io' target='blank' class='external'>Documentation</a>, to grant access to your device, simply register it in your CloudWalk account: <a href='https://manager.cloudwalk.io/devices' target='blank' class='external'>Grant Access</a>"
+        question_7: 7. What are the costs and payment terms to hire and acquire  the CloudWalk service in my company?
+        answer_7:
+          paragraph_1: "The investment on CloudWalk its quite simple, transparent and proportional, ensuring an evolution on your business. The comercial model its per transaction:"
+          paragraph_2: "—</strong> USD 0,29 (twenty nine cents),for a minimum monthly franchise of 3.500 (three thousand five hundred) transactions. That is, a minimum investment of USD 1.015,00 (one thousand, fifteen dollars)."
+          paragraph_3: "As we want our customers to grow, the more transactions they make, in addition to first 3,500 (three thousand five hundred)  transactions of the franchise, we will negotieate decreased values on the unit of the transaction, which will be added to the minimum value of the franchise, for example:"
+          paragraph_4: "On the range of 3,501 (three thousand, five hundred and one) transactions up to 10,000 (ten thousand) transactions, the transaction amount of the unit will be USD0,28 (twenty-eight cents). Thus, 6,500 (six thousand five hundred) transaction units will have differential charging for first track of transactions, the franchise."
+          paragraph_5: "<strong>Example:</strong>"
+          paragraph_6: "Track 1 (franchise): USD1.015,00"
+          paragraph_7: "Track 2 (monthly increase in transactions): USD1.820,00 (six thousand five hundred transactions times twenty-eight cents)"
+          paragraph_8: "Track 3 (And so on...)"
+          paragraph_9: "The total, it will be found in the sum of all previous month's transactions tracks until the closing of the bill. In this example, items one and two should be added, to find the final bill amount, that would be: USD2.835,00 (two thousand eight hundred thirty-five dollars)."
+          paragraph_10: "All the negotiation is more than welcome with at our Commercial area, with our Sales Manager Arthur Macedo: <em>arthur@cloudwalk.io</em>"
