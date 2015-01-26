@@ -2936,16 +2936,20 @@ en:
       description: FAQ is an online document that poses a series of common questions and answers on a specific topic.
       title: "CloudWalk F.A.Q"
       table_of_contents:
+        overview: Presentation
         device: Device
         development: Development
         comm:    Communication
         manager: CloudWalk Manager
         cloudwalk: Contracts and Services
+      overview:
+        paragraph_1: In order to answer the most frequently asked questions from our customers, we grouped on this page a series of questions and answers very enlightening. Just click on the desired question to see the answer.
+        paragraph_2: Still in doubt? <a href=' https://www.cloudwalk.io/contact' target='blank' class='external'>Get in touch!</a>
       device_questions:
         question_1: 1. How I can reset the certificate that is already installed on the Verifone EVO POS terminals?
         answer_1: To do this reset you must get in touch with your terminal supplier, so they can send you a reset file that will be used to reset the certificate.
         question_2: "2. How i can add new files on my device, for example: imagens, text, etc?"
-        answer_2: First compress the images and files that you want(<strong>atention</strong>, the files and images must be on the root of the zip file and the extension must be .zip, not .rar). After this, go to the files section on your CloudWalk manager environment and upload the zip file. Now select the Edit option on the application that will use the files and select the file that must be downloaded along with the application.
+        answer_2: First compress the images and files that you want (<strong>atention</strong>, the files and images must be on the root of the zip file and the extension must be .zip, not .rar). After this, go to the files section on your CloudWalk manager environment and upload the zip file. Now select the Edit option on the application that will use the files and select the file that must be downloaded along with the application.
         question_3: 3. I just finished some alterations on my application, and I would like to updated on the device, How should I proceed?
         answer_3: To accomplish the update, you need to go to the configuration menu, that its accessed through the button F on ingenico devices, F1 on Verifone Devices and the menu option on the screen of the model VX680 from Verifone, type the password, type 1 for the CloudWalk option, next type 2 for the Delete Apps option, Confirm then press ENTER to download the updated application
         question_4: 4. What’s the best device model that I have to buy and use?

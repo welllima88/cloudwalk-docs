@@ -2936,11 +2936,15 @@ pt-BR:
       description: Documento online com as perguntas mais frequentes e suas respectivas respostas
       title: "CloudWalk F.A.Q"
       table_of_contents:
+        overview: Apresentação
         device: Dispositivo
         development: Desenvolvimento
         comm:    Comunicação
         manager: CloudWalk Manager
         cloudwalk: Contratos e Serviços
+      overview:
+        paragraph_1: Com o intuito de responder as dúvidas mais frequentes de nossos clientes, agrupamos nesta página uma série de perguntas e respostas bastante esclarecedoras. Basta clicar na pergunta desejada para visualizar a resposta.
+        paragraph_2: Ainda está em dúvida? Entre em <a href=' https://www.cloudwalk.io/contact' target='blank' class='external'>contato!</a>
       device_questions:
         question_1: 1. Como resetar o certificado já instalado nos terminais POS referente à linha Verifone Evo?
         answer_1: Para fazer este reset é necessário entrar em contato com o seu fornecedor de Terminais Verifione EVO, para que eles possam assinar um arquivo de reset que será utilizado para resetar o certificado.
