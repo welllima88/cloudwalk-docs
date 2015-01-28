@@ -60,7 +60,7 @@ body > .navbar {
   margin-bottom: 85px;
 }
 
-.img-polaroid { margin: 5px 0 18px 0;}
+.img-polaroid { margin: 5px 0 18px 0; width: 99%}
 
 h1 {
   -webkit-font-smoothing: antialiased;
