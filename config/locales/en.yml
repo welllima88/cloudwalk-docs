@@ -5,9 +5,27 @@ en:
     method: Method and URL format
     name: Name
     overview:
+      title: Developer API
+      description: 'Access to the API must be done from the domain https://manager.cloudwalk.io/api.'
+      table_of_contents:
+        functionality: Functionality
+        versioning: Versioning
+        api_token: API Token
+        rate_limiting: "Rate limiting"
+        crud: 'CRUD: Create, Retrieve, Update and Destroy'
+        pagination: Pagination
+      functionality:
+        paragraph_1: The access to the API must be done from the domain <span class='code'>https://api.cloudwalk.io/%{version}</span>.
+        paragraph_2: The requests should be made using the <strong>HTTPS</strong> protocol.
+        paragraph_3: 'All date and time records are returned in ISO 8601 standard:'
+      versioning:
+        paragraph_1: When using the CloudWalk API, it is necessary to provide the version being used. Currently only the version <strong>v1</strong> is available for use, but eventually new versions will become available.
+        paragraph_2: 'Example of URL: <span class=''code''>https://api.cloudwalk.io/v1/devices</span>'
       api_token:
-        paragraph_1: 'All operations available on the API interface should always use a valid token API. The API token management is done directly on the CloudWalk Manager, by simply accessing the menu <strong>API</strong>, as shown below:'
+        paragraph_1: 'All operations available on the API interface should always use a valid API token. The API token management is done directly on the CloudWalk Manager, by simply accessing the top menu <strong>My account</strong>, and then the option <strong>API</strong>.'
         paragraph_2: 'Example of URL:'
+      rate_limiting:
+        paragraph_1: "By default, an IP address is allowed to perform up to 5,000 requests per hour. The rate limit status can be checked on the HTTP headers of any API request:"
       crud:
         paragraph_1: To perform an operation on a resource (app, logical number, group, etc), a HTTP request is made to the URL using the appropriate HTTP verb.
         paragraph_2: 'The four HTTP verbs used in CRUD operations are:'
@@ -15,23 +33,8 @@ en:
         paragraph_4: '<strong>POST: </strong>Creates a new resource. For example, <span class=''code''>POST /%{version}/devices</span> creates a new serial number. The information sent in the POST request would then be used to fill the properties of the serial number.'
         paragraph_5: '<strong>PUT: </strong>Updates an existing resource. For example, <span class=''code''>PUT /%{version}/devices/135</span> updates the serial number with the ID 135. The information sent in the PUT request would then be used to update the properties of the serial number.'
         paragraph_6: '<strong>DELETE: </strong>Deletes an existing resource. For example, <span class=''code''>DELETE /%{version}/devices/135</span> deletes the serial number with the ID 135.'
-      description: 'Access to the API must be done from the domain https://manager.cloudwalk.io/api.'
-      functionality:
-        paragraph_1: The access to the API must be done from the domain <span class='code'>https://api.cloudwalk.io/%{version}</span>.
-        paragraph_2: The requests should be made using the <strong>HTTPS</strong> protocol.
-        paragraph_3: 'All date and time records are returned in ISO 8601 standard:'
       pagination:
         paragraph_1: Requests that return multiple records are paginated, where the default pagination size is 30 records. The sub-sequent pages are defined by the parameter <span class='code'>&page</span>, which starts on 1. The default amount of returned records can be changed by defining the parameter <span class='code'>&per_page</span>, up to 100 records.
-      table_of_contents:
-        api_token: API Token
-        crud: 'CRUD: Create, Retrieve, Update and Destroy'
-        functionality: Functionality
-        pagination: Pagination
-        versioning: Versioning
-      title: Developer API
-      versioning:
-        paragraph_1: When using the CloudWalk API, it is necessary to provide the version being used. Currently only the version <strong>v1</strong> is available for use, but eventually new versions will become available.
-        paragraph_2: 'Example of URL: <span class=''code''>https://api.cloudwalk.io/v1/devices</span>'
     response: Example of response
     sample: Example of use
     type: Type

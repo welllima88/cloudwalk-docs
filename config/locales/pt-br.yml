@@ -5,9 +5,27 @@ pt-BR:
     method: Método e formato da URL
     name: Nome
     overview:
+      title: Developer API
+      description: 'O Acesso a API deve ser feito através do endereço https://manager.cloudwalk.io/api.'
+      table_of_contents:
+        functionality: Funcionalidade
+        versioning: Versionamento
+        api_token: API Token
+        rate_limiting: "Limite"
+        crud: 'CRUD: Create, Retrieve, Update e Destroy'
+        pagination: Paginação
+      functionality:
+        paragraph_1: O acesso a API deve ser feito a partir do domínio <span class='code'>https://api.cloudwalk.io/%{version}</span>.
+        paragraph_2: As requisições devem ser feitas utilizando o protocolo <strong>HTTPS</strong>.
+        paragraph_3: 'Todos os registros de data e hora são retornados no formato padrão ISO 8601:'
+      versioning:
+        paragraph_1: Ao utilizar a API do CloudWalk, é necessário informar a versão que está sendo utilizada. Atualmente somente a versão <strong>v1</strong> está disponível para utilização, mas eventualmente novas versões serão disponibilizadas.
+        paragraph_2: 'Exemplo de URL: <span class=''code''>https://api.cloudwalk.io/v1/devices</span>'
       api_token:
-        paragraph_1: 'Todas as operações disponíveis na interface API devem necessariamente utilizar uma API token válida. A geração/atualização da API token é feita diretamente no CloudWalk Manager, bastando para isso acessar o menu <strong>API</strong>, conforme exibido abaixo:'
+        paragraph_1: 'Todas as operações disponíveis na interface API devem necessariamente utilizar uma API token válida. A geração/atualização da API token é feita diretamente no CloudWalk Manager, bastando para isso acessar o menu <strong>Minha conta</strong>, e então a opção <strong>API</strong>.'
         paragraph_2: 'Exemplo de URL:'
+      rate_limiting:
+        paragraph_1: "Por padrão, um endereço IP pode efetuar até 5.000 requisições por hora. O status do limite de requisições pode ser verificado no cabeçalho HTTP de qualquer requisição:"
       crud:
         paragraph_1: Para executar alguma operação em um recurso (aplicação, número lógico, grupo, etc), é feita uma requisição HTTP para uma URL utilizando o verbo HTTP apropriado.
         paragraph_2: 'Os quatro vérbos HTTP utilizados em operações CRUD são:'
@@ -15,23 +33,8 @@ pt-BR:
         paragraph_4: '<strong>POST: </strong>Cria um novo recurso. Por exemplo, <span class=''code''>POST /%{version}/devices</span> criaria um novo número de série. A informação enviada na requisição POST seria então utilizada para preencher as propriedades do número de série.'
         paragraph_5: '<strong>PUT: </strong>Atualiza um recurso já existente. Por exemplo, <span class=''code''>PUT /%{version}/devices/135</span> atualizaria o número de série com o ID 135. A informação enviada na requisição PUT seria então utilizada para atualizar as propriedades do número de série.'
         paragraph_6: '<strong>DELETE: </strong>Exclui um recurso já existente. Por exemplo, <span class=''code''>DELETE /%{version}/devices/135</span> excluiria o número de série com o ID 135.'
-      description: 'O Acesso a API deve ser feito através do endereço https://manager.cloudwalk.io/api.'
-      functionality:
-        paragraph_1: O acesso a API deve ser feito a partir do domínio <span class='code'>https://api.cloudwalk.io/%{version}</span>.
-        paragraph_2: As requisições devem ser feitas utilizando o protocolo <strong>HTTPS</strong>.
-        paragraph_3: 'Todos os registros de data e hora são retornados no formato padrão ISO 8601:'
       pagination:
         paragraph_1: Requisições que retornam múltiplos registros são paginadas, onde a paginação padrão são 30 registros por vez. As páginas sub-sequentes são definidas pelo parâmetro <span class='code'>&page</span>, que se inicia em 1. A quantidade padrão de registros retornados pode ser alterada pelo parâmetro <span class='code'>&per_page</span>, onde o máximo permitido é 100.
-      table_of_contents:
-        api_token: API Token
-        crud: 'CRUD: Create, Retrieve, Update e Destroy'
-        functionality: Funcionalidade
-        pagination: Paginação
-        versioning: Versionamento
-      title: Developer API
-      versioning:
-        paragraph_1: Ao utilizar a API do CloudWalk, é necessário informar a versão que está sendo utilizada. Atualmente somente a versão <strong>v1</strong> está disponível para utilização, mas eventualmente novas versões serão disponibilizadas.
-        paragraph_2: 'Exemplo de URL: <span class=''code''>https://api.cloudwalk.io/v1/devices</span>'
     response: Exemplo de resposta
     sample: Exemplo de utilização
     type: Tipo
