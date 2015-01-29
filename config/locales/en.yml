@@ -2330,7 +2330,7 @@ en:
         check_serial_number: 'CHECK S. NUMBER'
         cloudwalk_update: 'CLOUDWALK UPDATE'
         about: 'ABOUT'
-      password: "To access the configuration menu, the password <strong>55555</strong> must be entered."
+      password: "To access the configuration menu, enter the password <strong>55555</strong>. This password can be <a href='/walk-framework/configuration/change-password'>changed</a>."
       logical_number:
         paragraph_1: "This option is used to define the device logical number."
         paragraph_2: "More information regarding the use of logical numbers can be found at:"
@@ -2354,6 +2354,19 @@ en:
         paragraph_1: "This options is used to remotely update the WALK Framework."
       about:
         paragraph_1: "Displays some device information, such as model and WALK Framework version."
+      change_password:
+        description: "Procedure for changing the default password to access the device configuration menu"
+        title: "Password change"
+        table_of_contents:
+          multiple_devices: "Multiple devices"
+          single_device: "Single device"
+        introduction: "This guide will walk you through the process of changing the Device configuration menu password, making use of parameters."
+        multiple_devices:
+          paragraph_1: "To change the default password of multiple devices, it's necessary to add a new parameter on the desired group. The parameter name is <strong>menupassword</strong>, and it accepts any number sequence from four to eight digits."
+          paragraph_2: "In the example below, all the logical numbers on the group <strong>CloudWalk</strong> will have the menu password changed from 55555 (default) to the new password <strong>112233</strong>."
+        single_device:
+          paragraph_1: "To change the default password of a single device, it's necessary to add a new parameter on the desired logical number. As is the group, the parameter name is <strong>menupassword</strong>, and it accepts any number sequence from four to eight digits."
+          paragraph_2: "In the example below, the logical number being updated will have the menu password changed from 55555 (default) to the new password <strong>123456</strong>."
     first_launch:
       description: "Procedure for setting up the device after installing the WALK Framework."
       title: "Device's first launch"

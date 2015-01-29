@@ -16,6 +16,7 @@ class Routes
       { "url" => "walk-framework/ingenico-telium-2",                     "view_path" => "walk_framework/ingenico_telium_2"},
       { "url" => "walk-framework/first-launch",                          "view_path" => "walk_framework/first-launch"},
       { "url" => "walk-framework/configuration",                         "view_path" => "walk_framework/configuration"},
+      { "url" => "walk-framework/configuration/change-password",         "view_path" => "walk_framework/configuration/change_password"},
       # WALK MANAGER
       { "url" => "walk-manager/apps",                                    "view_path" => "walk_manager/apps"},
       { "url" => "walk-manager/devices",                                 "view_path" => "walk_manager/devices"},

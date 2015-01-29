@@ -2330,7 +2330,7 @@ pt-BR:
         check_serial_number: 'CHECK S. NUMBER'
         cloudwalk_update: 'CLOUDWALK UPDATE'
         about: 'ABOUT'
-      password: "Para acessar o menu de configuração, é necessário informar a senha <strong>55555</strong>."
+      password: "Para acessar o menu de configuração, é necessário informar a senha <strong>55555</strong>. Esta senha pode ser <a href='/walk-framework/configuration/change-password'>alterada</a>."
       logical_number:
         paragraph_1: "Opção utilizada para definir o número lógico do dispositivo."
         paragraph_2: "Mais informações sobre a utilização de números lógicos podem ser encontradas em:"
@@ -2354,6 +2354,19 @@ pt-BR:
         paragraph_1: "Opção utilizada para atualizar remotamente o WALK Framework do dispositivo."
       about:
         paragraph_1: "Exibe informações do dispositivo, como o modelo e a versão do WALK Framework."
+      change_password:
+        description: "Procedimento de alteração da senha padrão de acesso ao menu de configuração do dispositivo"
+        title: "Alteração de senha"
+        table_of_contents:
+          multiple_devices: "Multiplos dispositivos"
+          single_device: "Dispositivos individuais"
+        introduction: "Este guia o conduzirá através do processo de alteração da senha padrão do menu de configuração dos dispositivos, através do uso de parâmetros."
+        multiple_devices:
+          paragraph_1: "Para alterar a senha padrão de vários dispositivos, é necessário adicionar um novo parâmetro no grupo desejado. O nome do parâmetro é <strong>menupassword</strong>, e o mesmo aceita qualquer sequência numérica entre quatro e oito dígitos."
+          paragraph_2: "No exemplo abaixo, todos os números lógicos do grupo <strong>CloudWalk</strong> terão a senha alterada de 55555 (padrão) para a nova senha <strong>112233</strong>."
+        single_device:
+          paragraph_1: "Para alterar a senha padrão de um único dispositivo, é necessário adicionar um novo parâmetro no número lógico desejado. Assim como no grupo, o nome do parâmetro é <strong>menupassword</strong>, e o mesmo aceita qualquer sequência numérica entre quatro e oito dígitos."
+          paragraph_2: "No exemplo abaixo, o número lógico que está sendo atualizado terá a senha alterada de 55555 (padrão) para a nova senha <strong>123456</strong>."
     first_launch:
       description: "Procedimento de configuração do dispositivo após a instalação do WALK Framework."
       title: "Primeira execução do dispositivo"
