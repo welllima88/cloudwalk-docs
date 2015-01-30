@@ -42,6 +42,18 @@ en:
         paragraph_1: Requests that return multiple records are paginated, where the default pagination size is 30 records. The sub-sequent pages are defined by the parameter <span class='code'>&page</span>, which starts on 1. The default amount of returned records can be changed by defining the parameter <span class='code'>&per_page</span>, up to 100 records.
     v1:
       apps:
+        description: Check how CRUD operations for application should be performed.
+        title: Developer API - Applications
+        table_of_contents:
+          types: Application types
+          attributes: Application attributes
+          create: Create a new application
+          destroy: Delete an application
+          index: List of all applications
+          show: Find a specific application
+          update: Update an application
+        types:
+          paragraph_1: Currently only POSXML apps are supported, but soon Ruby apps will be available as well, so app requests should always indicate the app type.
         attributes:
           list:
             authorizer_url: Authorizer IP address or URL.
@@ -62,21 +74,12 @@ en:
           paragraph_1: 'An application have the following attributes:'
         create:
           paragraph_1: Create a new application.
-        description: Check how CRUD operations for application should be performed.
         destroy:
           paragraph_1: Delete an application.
         index:
           paragraph_1: Return an array with all applications.
         show:
           paragraph_1: Return the details of a specific application.
-        table_of_contents:
-          attributes: Application attributes
-          create: Create a new application
-          destroy: Delete an application
-          index: List of all applications
-          show: Find a specific application
-          update: Update an application
-        title: Developer API - Applications
         update:
           paragraph_1: Update an existing application.
           paragraph_2: The bytecode sent on the parameter <strong>binary</strong> must be encoded with Base64.

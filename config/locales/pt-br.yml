@@ -42,6 +42,18 @@ pt-BR:
         paragraph_1: Requisições que retornam múltiplos registros são paginadas, onde a paginação padrão são 30 registros por vez. As páginas sub-sequentes são definidas pelo parâmetro <span class='code'>&page</span>, que se inicia em 1. A quantidade padrão de registros retornados pode ser alterada pelo parâmetro <span class='code'>&per_page</span>, onde o máximo permitido é 100.
     v1:
       apps:
+        description: Confira como as operações CRUD para aplicações devem ser usadas.
+        title: Developer API - Aplicações
+        table_ofntents:
+          types: Tipos de aplicações
+          attributes: Atributos de uma aplicação
+          create: Criação de uma nova aplicação
+          destroy: Exclusão de uma aplicação
+          index: Listagem de todas aplicações
+          show: Busca de uma aplicação específica
+          update: Modificação de uma aplicação
+        types:
+          paragraph_1: Atualmente somente aplicações POSXML são suportadas, mas em breve aplicações Ruby também estarão disponíveis, então requisições de aplicação devem sempre indicar o tipo.
         attributes:
           list:
             authorizer_url: URL do autorizador que a aplicação irá se conectar
@@ -62,21 +74,12 @@ pt-BR:
           paragraph_1: 'Os seguintes atributos compõe uma aplicação:'
         create:
           paragraph_1: Cria uma nova aplicação.
-        description: Confira como as operações CRUD para aplicações devem ser usadas.
         destroy:
           paragraph_1: Exclui uma aplicação.
         index:
           paragraph_1: Retorna um array com todas as aplicações.
         show:
           paragraph_1: Retorna os detalhes de uma aplicação específica.
-        table_ofntents:
-          attributes: Atributos de uma aplicação
-          create: Criação de uma nova aplicação
-          destroy: Exclusão de uma aplicação
-          index: Listagem de todas aplicações
-          show: Busca de uma aplicação específica
-          update: Modificação de uma aplicação
-        title: Developer API - Aplicações
         update:
           paragraph_1: Modifica uma aplicação já existente.
           paragraph_2: O bytecode enviado no parâmetro <strong>binary</strong> precisa estar encodado com Base64.
