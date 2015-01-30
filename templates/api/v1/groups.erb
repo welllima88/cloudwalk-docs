@@ -4,11 +4,12 @@
 
 <h1><%= I18n.t("api.v1.groups.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/08/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "30/01/2015") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
+  <li><a href="#types"><%= I18n.t("api.v1.groups.table_of_contents.types") %></a></li>
   <li><a href="#attributes"><%= I18n.t("api.v1.groups.table_of_contents.attributes") %></a></li>
   <li><a href="#index"><%= I18n.t("api.v1.groups.table_of_contents.index") %></a></li>
   <li><a href="#show"><%= I18n.t("api.v1.groups.table_of_contents.show") %></a></li>
@@ -16,6 +17,10 @@
   <li><a href="#update"><%= I18n.t("api.v1.groups.table_of_contents.update") %></a></li>
   <li><a href="#destroy"><%= I18n.t("api.v1.groups.table_of_contents.destroy") %></a></li>
 </ol>
+
+<h2 id="types"><%= I18n.t("api.v1.groups.table_of_contents.types") %></h2>
+
+<p><%= I18n.t("api.v1.groups.types.paragraph_1") %></p>
 
 <h2 id="attributes"><%= I18n.t("api.v1.groups.table_of_contents.attributes") %></h2>
 
@@ -31,9 +36,19 @@
   </thead>
   <tbody>
     <tr>
-      <td>checksum</td>
+      <td>id</td>
       <td>Integer</td>
-      <td><%= I18n.t("api.v1.groups.attributes.list.checksum") %></td>
+      <td><%= I18n.t("api.v1.groups.attributes.list.id") %></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.groups.attributes.list.name") %></td>
+    </tr>
+    <tr>
+      <td>updated_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.groups.attributes.list.updated_at") %></td>
     </tr>
     <tr>
       <td>created_at</td>
@@ -50,21 +65,6 @@
       <td>String</td>
       <td><%= I18n.t("api.v1.groups.attributes.list.created_via") %></td>
     </tr>
-    <tr>
-      <td>id</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.groups.attributes.list.id") %></td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.groups.attributes.list.name") %></td>
-    </tr>
-    <tr>
-      <td>updated_at</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.groups.attributes.list.updated_at") %></td>
-    </tr>
   </tbody>
 </table>
 
@@ -74,7 +74,7 @@
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups?access_token={token}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups/<%= I18n.t("api.object_type") %>?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -85,7 +85,7 @@
 
 <div class="tab-content">
 <div class="tab-pane active" id="index-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/groups?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/groups/posxml?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="index-tab2">
@@ -93,7 +93,7 @@
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/groups?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/groups/posxml?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -116,29 +116,25 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
       "entries":2,
       "total_entries":2
    },
-   "groups":[
+   "posxml_groups":[
       {
-         "group":{
-            "checksum":0,
-            "company_id":1,
-            "created_at":"2013-07-29T20:19:32Z",
-            "created_by":1,
-            "created_via":"interface",
+         "posxml_group":{
             "id":1,
             "name":"Retail",
-            "updated_at":"2013-07-29T20:19:32Z"
+            "updated_at":"2015-01-29T20:19:32Z",
+            "created_at":"2015-01-29T20:19:32Z",
+            "created_by":1,
+            "created_via":"interface"
          }
       },
       {
-         "group":{
-            "checksum":0,
-            "company_id":1,
-            "created_at":"2013-07-29T20:19:44Z",
-            "created_by":1,
-            "created_via":"interface",
+         "posxml_group":{
             "id":2,
             "name":"Staging",
-            "updated_at":"2013-07-29T20:19:44Z"
+            "updated_at":"2015-01-29T20:19:44Z",
+            "created_at":"2015-01-29T20:19:44Z",
+            "created_by":1,
+            "created_via":"interface"
          }
       }
    ]
@@ -151,7 +147,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups/{<%= I18n.t("api.v1.groups.name") %>}?access_token={token}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups/<%= I18n.t("api.object_type") %>/{<%= I18n.t("api.v1.groups.name") %>}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -162,7 +158,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="show-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/groups/Staging?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/groups/posxml/Staging?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="show-tab2">
@@ -170,7 +166,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/groups/Staging?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/groups/posxml/Staging?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -187,15 +183,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "group":{
-    "checksum":0,
-    "company_id":1,
-    "created_at":"2013-07-29T20:19:44Z",
-    "created_by":1,
-    "created_via":"interface",
+  "posxml_group":{
     "id":2,
     "name":"Staging",
-    "updated_at":"2013-07-29T20:19:44Z"
+    "updated_at":"2015-01-29T20:19:44Z",
+    "created_at":"2015-01-29T20:19:44Z",
+    "created_by":1,
+    "created_via":"interface"
   }
 }
 </code></pre>
@@ -206,7 +200,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>POST https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups?access_token={token}</code></pre>
+<pre><code>POST https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups/<%= I18n.t("api.object_type") %>?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -217,7 +211,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="create-tab1">
-<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/groups?access_token=$TOKEN" \
+<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/groups/posxml?access_token=$TOKEN" \
 -d '{"name":"Dev"}'
 </code></pre>
 </div>
@@ -230,7 +224,7 @@ token = 'API_TOKEN'
 
 payload = { "name" => "Dev" }
 
-uri = URI("https://api.cloudwalk.io/v1/groups?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/groups/posxml?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -248,15 +242,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "group":{
-    "checksum":0,
-    "company_id":1,
-    "created_at":"2013-07-29T20:23:08Z",
-    "created_by":1,
-    "created_via":"api",
+  "posxml_group":{
     "id":3,
     "name":"Dev",
-    "updated_at":"2013-07-29T20:23:08Z"
+    "updated_at":"2015-01-29T20:23:08Z",
+    "created_at":"2015-01-29T20:23:08Z",
+    "created_by":1,
+    "created_via":"api"
   }
 }
 </code></pre>
@@ -267,7 +259,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups/{<%= I18n.t("api.v1.groups.name") %>}?access_token={token}</code></pre>
+<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups/<%= I18n.t("api.object_type") %>/{<%= I18n.t("api.v1.groups.name") %>}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -278,7 +270,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="update-tab1">
-<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/groups/Dev?access_token=$TOKEN" \
+<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/groups/posxml/Dev?access_token=$TOKEN" \
 -d '{"name":"Development"}'
 </code></pre>
 </div>
@@ -291,7 +283,7 @@ token = 'API_TOKEN'
 
 payload = { "name" => "Development" }
 
-uri = URI("https://api.cloudwalk.io/v1/groups/Dev?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/groups/posxml/Dev?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -309,15 +301,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "group":{
-    "checksum":0,
-    "company_id":1,
-    "created_at":"2013-07-29T20:23:08Z",
-    "created_by":1,
-    "created_via":"api",
+  "posxml_group":{
     "id":3,
     "name":"Development",
-    "updated_at":"2013-07-29T20:25:14Z"
+    "updated_at":"2015-01-29T20:25:14Z",
+    "created_at":"2015-01-29T20:23:08Z",
+    "created_by":1,
+    "created_via":"api"
   }
 }
 </code></pre>
@@ -328,7 +318,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups/{<%= I18n.t("api.v1.groups.name") %>}?access_token={token}</code></pre>
+<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/groups/<%= I18n.t("api.object_type") %>/{<%= I18n.t("api.v1.groups.name") %>}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -339,7 +329,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="destroy-tab1">
-<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/groups/Development?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/groups/posxml/Development?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="destroy-tab2">
@@ -347,7 +337,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/groups/Development?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/groups/posxml/Development?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true

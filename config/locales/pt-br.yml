@@ -4,6 +4,11 @@ pt-BR:
     description: Descrição
     method: Método e formato da URL
     name: Nome
+    response: Exemplo de resposta
+    sample: Exemplo de utilização
+    type: Tipo
+    object_type: '{tipo}'
+    version: '{versão}'
     overview:
       title: Developer API
       description: 'O Acesso a API deve ser feito através do endereço https://manager.cloudwalk.io/api.'
@@ -35,9 +40,6 @@ pt-BR:
         paragraph_6: '<strong>DELETE: </strong>Exclui um recurso já existente. Por exemplo, <span class=''code''>DELETE /%{version}/devices/135</span> excluiria o número de série com o ID 135.'
       pagination:
         paragraph_1: Requisições que retornam múltiplos registros são paginadas, onde a paginação padrão são 30 registros por vez. As páginas sub-sequentes são definidas pelo parâmetro <span class='code'>&page</span>, que se inicia em 1. A quantidade padrão de registros retornados pode ser alterada pelo parâmetro <span class='code'>&per_page</span>, onde o máximo permitido é 100.
-    response: Exemplo de resposta
-    sample: Exemplo de utilização
-    type: Tipo
     v1:
       apps:
         attributes:
@@ -143,9 +145,21 @@ pt-BR:
         update:
           paragraph_1: Modifica um dispositivo já existente.
       groups:
+        description: Confira como as operações CRUD para grupos devem ser usadas.
+        title: Developer API - Grupos
+        name: nome do grupo
+        table_of_contents:
+          types: Tipos de grupos
+          attributes: Atributos de um grupo
+          create: Criação de um novo grupo
+          destroy: Exclusão de um grupo
+          index: Listagem de todos grupos
+          show: Busca de um grupo específico
+          update: Atualização de um grupo
+        types:
+          paragraph_1: Atualmente somente grupos POSXML são suportados, mas em breve grupos Ruby também estarão disponíveis, então requisições de grupo devem sempre indicar o tipo.
         attributes:
           list:
-            checksum: Checksum baseado no CRC das aplicações que pertencem ao grupo
             created_at: Timestamp da criação do registro (ISO 8601)
             created_by: ID do usuário que criou o registro
             created_via: Canal utilizado para criar o registro (Interface ou API)
@@ -155,22 +169,12 @@ pt-BR:
           paragraph_1: 'Os seguintes atributos compõe um grupo:'
         create:
           paragraph_1: Cria um novo grupo.
-        description: Confira como as operações CRUD para grupos devem ser usadas.
         destroy:
           paragraph_1: Exclui um grupo. Esta operação só pode ser executada quando o grupo estiver vazio (sem aplicações ou número lógicos).
         index:
-          paragraph_1: Retorna um array com todos os grupo.
-        name: nome do grupo
+          paragraph_1: Retorna um array com todos os grupos.
         show:
           paragraph_1: Retorna os detalhes de um grupo específico.
-        table_of_contents:
-          attributes: Atributos de um grupo
-          create: Criação de um novo grupo
-          destroy: Exclusão de um grupo
-          index: Listagem de todos grupos
-          show: Busca de um grupo específico
-          update: Atualização de um grupo
-        title: Developer API - Grupos
         update:
           paragraph_1: Modifica um grupo já existente.
       logical_numbers:
@@ -302,7 +306,6 @@ pt-BR:
         title: Developer API - Usuários
         token:
           paragraph_1: É possível obter a API Token de um usuário apartir do e-mail e senha do usuário em questão.
-    version: '{versão}'
   development_environment:
     overview:
       compilation_console:

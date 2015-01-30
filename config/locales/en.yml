@@ -4,6 +4,11 @@ en:
     description: Description
     method: Method and URL format
     name: Name
+    response: Example of response
+    sample: Example of use
+    type: Type
+    object_type: '{type}'
+    version: '{version}'
     overview:
       title: Developer API
       description: 'Access to the API must be done from the domain https://manager.cloudwalk.io/api.'
@@ -35,9 +40,6 @@ en:
         paragraph_6: '<strong>DELETE: </strong>Deletes an existing resource. For example, <span class=''code''>DELETE /%{version}/devices/135</span> deletes the serial number with the ID 135.'
       pagination:
         paragraph_1: Requests that return multiple records are paginated, where the default pagination size is 30 records. The sub-sequent pages are defined by the parameter <span class='code'>&page</span>, which starts on 1. The default amount of returned records can be changed by defining the parameter <span class='code'>&per_page</span>, up to 100 records.
-    response: Example of response
-    sample: Example of use
-    type: Type
     v1:
       apps:
         attributes:
@@ -143,9 +145,21 @@ en:
         update:
           paragraph_1: Update an existing device.
       groups:
+        description: Check how CRUD operations for groups should be performed.
+        title: Developer API - Groups
+        name: group name
+        table_of_contents:
+          types: Group types
+          attributes: Group attributes
+          create: Create a new group
+          destroy: Delete a group
+          index: List of all groups
+          show: Find a specific group
+          update: Update a group
+        types:
+          paragraph_1: Currently only POSXML groups are supported, but soon Ruby groups will be available as well, so group requests should always indicate the group type.
         attributes:
           list:
-            checksum: Checksum based on CRC of all apps that belongs to the group
             created_at: Timestamp in ISO 8601 format
             created_by: User ID that created the record
             created_via: Channel used to create the record (Interface or API)
@@ -155,22 +169,12 @@ en:
           paragraph_1: 'A group have the following attributes:'
         create:
           paragraph_1: Create a new group.
-        description: Check how CRUD operations for groups should be performed.
         destroy:
           paragraph_1: Delete a group. To perform this operation the group must be empty (no apps or logical numbers).
         index:
           paragraph_1: Return an array with all groups.
-        name: group name
         show:
           paragraph_1: Return the details of a specific group.
-        table_of_contents:
-          attributes: Group attributes
-          create: Create a new group
-          destroy: Delete a group
-          index: List of all groups
-          show: Find a specific group
-          update: Update a group
-        title: Developer API - Groups
         update:
           paragraph_1: Update an existing logical number.
       logical_numbers:
@@ -302,7 +306,6 @@ en:
         title: Developer API - Users
         token:
           paragraph_1: It is possible to get the API Token of a specific user, through its email and password.
-    version: '{version}'
   development_environment:
     overview:
       compilation_console:
