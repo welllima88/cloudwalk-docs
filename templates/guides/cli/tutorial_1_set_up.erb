@@ -1,0 +1,49 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for CloudWalk's CLI">
+<% end %>
+
+<h1>CloudWalk's CLI - Set up</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p>The first thing that you need to do is to install our CLI tool, using the following:</p>
+
+<small>
+  <p>
+  Here be an iframe to a download button that will auto-detect the
+  operative system and will give the user a text snippet with the
+  wget script or a download button for windows.
+  </p>
+</small>
+
+<p>
+Once installed, you can use <code>cloudwalk</code> from your
+command line interface, in case you don't have yet a CloudWalk
+account, let's create one using the following:
+</p>
+
+<code>
+  cloudwalk signup
+</code>
+
+<p>
+  It will ask your basic information to proceed, after that you'll
+  need to login, this way:
+</p>
+
+<code>
+  cloudwalk login
+</code>
+
+<p>
+Great! Now you're ready to create your new application.
+</p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "Introduction", "guides/cli") %>
+  </li>
+  <li class="next">
+    <%= link_to("Creating a new application" + " &rarr;", "guides/cli/new-app") %>
+  </li>
+</ul>
