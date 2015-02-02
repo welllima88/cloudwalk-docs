@@ -1,0 +1,90 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="short page description">
+<% end %>
+
+<h1>Getting Started with CloudWalk's CLI Tool</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<h4><%= I18n.t("general.index") %></h4>
+
+<ol class="table-of-contents">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#cli">Command Line Interface</a></li>
+  <li><a href="#da_funk">CloudWalk's Ruby Framework API</a></li>
+  <li><a href="#skeleton">CloudWalk Skeleton</a></li>
+  <li><a href="#full-guide">Full Guide</a></li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>
+CloudWalk provides you with a <i>command line interface</i> tool
+that allows you to control your company and applications in an
+easy way. In this guide, you'll learn how to set up your first
+paymet application in minutes, and it will empower you to make
+lightning fast changes and deploy them directly into your
+terminal from the command line interface of your preference.
+</p>
+
+<p>
+We'll try to be as specific as possible, so feel free to skip to
+the information that looks relevant to you.
+</p>
+
+<h2 id="cli">Command Line Interface</h2>
+
+<p>
+A command line interface (CLI) is a character user interface that
+dates back to when there was not enough technology to put cute
+cats on the internet, but has prevailed since then as the
+favorite tool for many developers to interact with computers.
+Herein we introduce our CLI tool, called <b>cloudwalk</b>, which
+will serve you as a text-only shortcut to manage your company's
+account and your applications. It also has additional features:
+you can compile, emulate and deploy your application directly
+from the CLI.
+</p>
+
+<h2 id=#da_funk">CloudWalk's Ruby Framework API</h2>
+
+<p>
+As you might know (thanks to our docs on the left of this site)
+our Ruby Framework is built to facilitate your development
+experience and is released already customized for several
+platforms such as Verifone, Ingenico and PAX.
+</p>
+
+<p>
+To let you build amazing Ruby applications, we've made an API
+client available within Ruby, that gives you all the methods
+you'll need to interact with the POS terminal's screen, printer,
+keyboard, network and to process different types of payments.
+This tool is called <b>DaFunk</b> and it's
+<a href="https://github.com/cloudwalkio/da_funk" target="_blank">opensource</a>,
+We'll teach you the way around it's functions so you can exploit
+it's potential.
+</p>
+
+<h2 id="skeleton">CloudWalk Skeleton</h2>
+
+<p>
+Our CLI will let you create new apps, they will be based on the
+<b>cloudwalk-skeleton</b>, a structure which is available
+<a href="https://github.com/scalone/cloudwalk-skeleton" target="_blank">opensource</a>
+too and could be useful for other projects, happy hacking!
+</p>
+
+<h2 id="full-guide">Full Guide</h2>
+
+<p>
+What's next? Let's rock this, go ahead into the full guide,
+follow the instructions and with some of our magic, you'll be
+able to make your first payment application almost effortlessly.
+</p>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to("Let's get it up" + " &rarr;", "guides/cli-patterns/overview") %>
+  </li>
+</ul>
