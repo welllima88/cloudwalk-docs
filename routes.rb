@@ -55,6 +55,7 @@ class Routes
       { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_4_notifications_settings"},
       { "url" => "guides/cli",                                           "view_path" => "guides/cli/intro"},
       { "url" => "guides/cli/set-up",                                    "view_path" => "guides/cli/tutorial_1_set_up"},
+      { "url" => "guides/cli/new-app",                                   "view_path" => "guides/cli/tutorial_2_new_app"},
     ]
   end
 
