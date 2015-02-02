@@ -14,6 +14,21 @@
   operative system and will give the user a text snippet with the
   wget script or a download button for windows.
   </p>
+
+  <p>
+  The script should go something along these lines:
+  <code>
+if (navigator.appVersion.indexOf("Win")!=-1) {
+  // Windows
+  // Show a button to download the exe
+} else {
+  // Linux, OSX, Unix
+  var a = document.createElement("a");
+  a.text = "wget -qO- https://cli.cloudwalk.io/api/versions/latest | bash";
+  window.document.body.appendChild(a);
+}
+  </code>
+  </p>
 </small>
 
 <p>
