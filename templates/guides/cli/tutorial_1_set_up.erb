@@ -6,40 +6,39 @@
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p>The first thing that you need to do is to install our CLI tool, using the following:</p>
+<p>The first thing needed is to install our CLI tool, using the following:</p>
 
 <ul id="index-view-tab" class="nav nav-tabs">
-  <li class="active"><a href="#index-tab1">OSX and Linux</a></li>
+  <li class="active"><a href="#index-tab1">Linux and OSX</a></li>
   <li><a href="#index-tab2">Windows</a></li>
 </ul>
 
 <div class="tab-content">
-<div class="tab-pane active" id="index-tab1">
-<pre><code>$ wget -qO- https://cli.cloudwalk.io/install.sh | bash</code></pre>
-</div>
+  <div class="tab-pane active" id="index-tab1">
+    <pre><code>curl https://cli.cloudwalk.io/install.sh | bash</code></pre>
+  </div>
 
-<div class="tab-pane" id="index-tab2">
-  <a href="https://cli.cloudwalk.io/windows.exe" id="file-request" class="btn btn-success">Download</a>
+  <div class="tab-pane" id="index-tab2">
+    <a href="https://cli.cloudwalk.io/windows.exe" id="file-request" class="btn btn-success">Download</a>
+    <br>
+    <br>
+  </div>
 </div>
 
 <p>
 Once installed, you can use <code>cloudwalk</code> from your
-command line interface, in case you don't have yet a CloudWalk
-account, let's create one using the following:
+command line interface. In case you don't have yet a CloudWalk
+account, you can create one using the following:
 </p>
 
-<code>
-  cloudwalk signup
-</code>
+<pre><code>cloudwalk signup</code></pre>
 
 <p>
   It will ask your basic information to proceed, after that you'll
   need to login, this way:
 </p>
 
-<code>
-  cloudwalk login
-</code>
+<pre><code>cloudwalk login</code></pre>
 
 <p>
 Great! Now you're ready to create your new application.
@@ -53,3 +52,8 @@ Great! Now you're ready to create your new application.
     <%= link_to("Creating a new application" + " &rarr;", "guides/cli/new-app") %>
   </li>
 </ul>
+
+<% content_for :javascripts do %>
+  $('#index-view-tab a:first').tab('show');
+  $('#index-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+<% end %>
