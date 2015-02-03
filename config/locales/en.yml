@@ -96,6 +96,7 @@ en:
             name: File name
             size: File size (bytes)
             updated_at: Timestamp in ISO 8601 format
+            file_type: File type (Asset or Torrent)
           paragraph_1: 'A file have the following attributes:'
         create:
           paragraph_1: Create a new file.

@@ -96,6 +96,7 @@ pt-BR:
             name: Nome do arquivo
             size: Tamanho do arquivo, em bytes
             updated_at: Timestamp da atualização do registro (ISO 8601)
+            file_type: Tipo do arquivo (Asset ou Torrent)
           paragraph_1: 'Os seguintes atributos compõe um arquivo:'
         create:
           paragraph_1: Cria um novo arquivo.
