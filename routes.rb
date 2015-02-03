@@ -53,9 +53,10 @@ class Routes
       { "url" => "guides/transactions-patterns/anomalies-report",        "view_path" => "guides/transactions_patterns/tutorial_2_anomalies_report"},
       { "url" => "guides/transactions-patterns/patterns-chart",          "view_path" => "guides/transactions_patterns/tutorial_3_patterns_chart"},
       { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_4_notifications_settings"},
-      { "url" => "guides/cli",                                           "view_path" => "guides/cli/intro"},
-      { "url" => "guides/cli/set-up",                                    "view_path" => "guides/cli/tutorial_1_set_up"},
-      { "url" => "guides/cli/new-app",                                   "view_path" => "guides/cli/tutorial_2_new_app"},
+      # CLI
+      { "url" => "cli/intro",                                            "view_path" => "cli/intro"},
+      { "url" => "cli/set-up",                                           "view_path" => "cli/tutorial_1_set_up"},
+      { "url" => "cli/new-app",                                          "view_path" => "cli/tutorial_2_new_app"},
     ]
   end
 
