@@ -8,28 +8,19 @@
 
 <p>The first thing that you need to do is to install our CLI tool, using the following:</p>
 
-<small>
-  <p>
-  Here be an iframe to a download button that will auto-detect the
-  operative system and will give the user a text snippet with the
-  wget script or a download button for windows.
-  </p>
+<ul id="index-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#index-tab1">OSX and Linux</a></li>
+  <li><a href="#index-tab2">Windows</a></li>
+</ul>
 
-  <p>
-  The script should go something along these lines:
-  <code>
-if (navigator.appVersion.indexOf("Win")!=-1) {
-  // Windows
-  // Show a button to download the exe
-} else {
-  // Linux, OSX, Unix
-  var a = document.createElement("a");
-  a.text = "wget -qO- https://cli.cloudwalk.io/install.sh | bash";
-  window.document.body.appendChild(a);
-}
-  </code>
-  </p>
-</small>
+<div class="tab-content">
+<div class="tab-pane active" id="index-tab1">
+<pre><code>$ wget -qO- https://cli.cloudwalk.io/install.sh | bash</code></pre>
+</div>
+
+<div class="tab-pane" id="index-tab2">
+  <a href="https://cli.cloudwalk.io/windows.exe" id="file-request" class="btn btn-success">Download</a>
+</div>
 
 <p>
 Once installed, you can use <code>cloudwalk</code> from your
