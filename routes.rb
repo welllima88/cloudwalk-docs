@@ -57,6 +57,9 @@ class Routes
       { "url" => "cli/intro",                                            "view_path" => "cli/intro"},
       { "url" => "cli/set-up",                                           "view_path" => "cli/tutorial_1_set_up"},
       { "url" => "cli/new-app",                                          "view_path" => "cli/tutorial_2_new_app"},
+      { "url" => "cli/emulate-app",                                      "view_path" => "cli/tutorial_3_emulate_app"},
+      { "url" => "cli/deploy-app",                                       "view_path" => "cli/tutorial_4_deploy_app"},
+      { "url" => "cli/change-app",                                       "view_path" => "cli/tutorial_5_change_app"},
     ]
   end
 

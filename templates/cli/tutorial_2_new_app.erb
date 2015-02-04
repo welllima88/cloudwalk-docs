@@ -35,7 +35,8 @@ To see your app running, try:
 </span>
 </code></pre>
 
-<p>So, what happened?<br>
+<p>So, what happened?</p>
+<p>
 <ol>
   <li>We added your key at <code>~/.ssh/id_rsa.pub</code> into your account automatically. You can check or edit your keys wiht <code>cloudwalk key</code>.</li>
   <li>As no name was specified in the first argument, we defined a name for you (you can read more about it running <code>cloudwalk help app create</code>).</li>
@@ -44,8 +45,14 @@ To see your app running, try:
 contents.</li>
   <li>We prepared the folder for you to get you ready to edit and deploy your application.</li>
 </ol>
+</p>
 
+<p>
 The process in detail is available by running <code>cloudwalk app create -v</code>, in case you're curious.
+</p>
+
+<p>
+What should we do next? Let's see this app working!
 </p>
 
 <ul class="pager">
@@ -53,6 +60,6 @@ The process in detail is available by running <code>cloudwalk app create -v</cod
     <%= link_to("&larr; " + "Let's set it up", "cli/set-up") %>
   </li>
   <li class="next">
-    <%= link_to("Deploying your application" + " &rarr;", "cli/deploy-app") %>
+    <%= link_to("See your app working" + " &rarr;", "cli/emulate-app") %>
   </li>
 </ul>

@@ -1,0 +1,121 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for CloudWalk's CLI">
+<% end %>
+
+<h1>CloudWalk's CLI - Deploying an app</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p>Now that your application is running, let's see how we deploy this app before making any changes.</p>
+
+<p>
+When the app was created, it was initialized with a default structure that
+helped us to see a proof of concept working, however this skeleton has not
+yet being pushed into our servers, therefore if you loose the files, the
+next time you want to recover the app, it won't have them.
+</p>
+
+<p>
+We prefer to let you select what you want in your first application
+instead of forcing content to it, therefore once that you learn how to
+work with our structure and workflow, you'll be comfortable to make sure
+that the history of changes of your app started with something useful for
+your goals.
+</p>
+
+<p>
+For now, let's focus on deploying our current concept application, but how
+do we do this? The code that is available in the repo was alrady added to
+the history of changes (just not pushed), so it's really simple, just run:
+<code>git push</code>. The output will be something around these lines:
+</p>
+
+<p>
+<pre><code><bold>$ git push</bold>
+Counting objects: 111, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (48/48), done.
+Writing objects: 100% (111/111), 12.81 KiB | 0 bytes/s, done.
+Total 111 (delta 44), reused 111 (delta 44)
+remote: -----> Initializing building process
+remote: Already on 'master'
+remote: -----> Launching application builder at a99f60fe-854c-4649-a271-7d19cf751784/cloud-walking-1
+remote: ini app name
+remote: 172.17.42.1
+remote: fim app_name
+remote: #1
+remote: -----> Building application cloud-walking-1
+remote: total 20K
+remote: drwxr-xr-x 4 999 999 4.0K Feb  4 18:51 test
+remote: drwxr-xr-x 4 999 999 4.0K Feb  4 18:51 .
+remote: drwxr-xr-x 2 999 999 4.0K Feb  4 18:51 lib
+remote: -rw-r--r-- 1 999 999  427 Feb  4 18:51 Rakefile
+remote: -rw-r--r-- 1 999 999  577 Feb  4 18:51 README.md
+remote: -rw-r--r-- 1 999 999  579 Feb  4 18:51 Gemfile.lock
+remote: -rw-r--r-- 1 999 999  189 Feb  4 18:51 Gemfile
+remote: -rw-r--r-- 1 999 999   42 Feb  4 18:51 .gitignore
+remote: drwxrwxrwx 3 999 999 4.0K Feb  4 18:51 ..
+remote: Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
+remote: installing your bundle as root will break this application for all non-root
+remote: users on this machine.
+remote: Fetching gem metadata from https://rubygems.org/
+remote: .
+remote: .
+remote: .
+remote: .
+remote: .
+remote: .
+remote: .
+remote: .
+remote: .
+remote:
+remote: Fetching https://github.com/cloudwalkio/da_funk.git
+remote: Fetching https://github.com/scalone/walk-simplehttp-poc.git
+remote: Using rake 10.4.2
+remote: Using bundler 1.7.11
+remote: Installing json 1.8.2
+remote: Installing rdoc 4.2.0
+remote: Installing yard 0.8.7.6
+remote: Using da_funk 0.3.2 from https://github.com/cloudwalkio/da_funk.git (at master)
+remote: Using simplehttp 0.1.0 from https://github.com/scalone/walk-simplehttp-poc.git (at master)
+remote: Your bundle is complete!
+remote: Use `bundle show [gemname]` to see where a bundled gem is installed.
+remote: Post-install message from rdoc:
+remote: Depending on your version of ruby, you may need to install ruby rdoc/ri data:
+remote:
+remote: <= 1.8.6 : unsupported
+remote:  = 1.8.7 : gem install rdoc-data; rdoc-data --install
+remote:  = 1.9.1 : gem install rdoc-data; rdoc-data --install
+remote: >= 1.9.2 : nothing to do! Yay!
+remote: cp /var/lib/gems/2.1.0/bundler/gems/da_funk-3d778c8c0189/out/da_funk.mrb out/da_funk.mrb
+remote:
+remote: cp /var/lib/gems/2.1.0/bundler/gems/walk-simplehttp-poc-4e25bd8e1b2c/out/simplehttp.mrb out/simplehttp.mrb
+remote:
+remote: cloudwalk compile -o ./out/main.mrb lib/main.rb lib/test_platform.rb
+remote:
+remote: rake aborted!
+remote: Command failed with status (127): [cloudwalk compile -o ./out/main.mrb lib/ma...]
+remote: /var/lib/gems/2.1.0/bundler/gems/da_funk-3d778c8c0189/lib/da_funk/rake_task.rb:69:in `block (2 levels) in define'
+remote: Tasks: TOP => default => skeleton:build
+remote: (See full trace by running task with --trace)
+remote: #2
+remote: -----> Build failed.
+To git@git-staging.cloudwalk.io:cloud-walking-1.git
+ * [new branch]      master -> master
+</code></pre>
+</p>
+
+<p>
+Once it finishes, our application was built and deployed, we don't have
+terminals yet so we won't see the app there, for now let's move on on how
+to customize our application.
+</p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "See your app working", "cli/emulate-app") %>
+  </li>
+  <li class="next">
+    <%= link_to("Customizing your application" + " &rarr;", "cli/change-app") %>
+  </li>
+</ul>
