@@ -1,0 +1,58 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for CloudWalk's CLI">
+<% end %>
+
+<h1>CloudWalk's CLI - Creating a new app</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p>With access to your account let's drive you through your first application. Make sure that you have git properly configured first,
+<a href="https://help.github.com/articles/set-up-git/" target="_blank">Github provides a really nice guide that you should follow</a>,
+don't skip steps! this is important.</p>
+
+<p>
+Now that we're ready, let's run <code>cloudwalk app create</code>:
+</p>
+
+<pre><code><b>$ cloudwalk app create</b>
+Creating a new app...
+You have an existing key in ~/.ssh/id_rsa.pub
+Would you like to add this key to your account? (y/n): y
+Key added.
+Would you like to create a new folder? (y/n): y
+The remote <span style="color:#0ad">origin</span> is set to be: <span style="color:#0ad">git@git.cloudwalk.io:cloud-walking-1.git</span>
+Preparing the new app in <span style="color:#0ad">cloud-walking-1</span>... <span style="color:#0d0">OK</span>
+
+<span style="color:#0ad"><b>Good! Your new application was created.</b></span>
+
+Apps come with a basic structure
+Please read the <span style="color:#0ad">README</span> available in the <span style="color:#0ad">cloud-walking-1</span> folder.
+To see your app running, try:
+<span style="color:#0ad">
+&nbsp;&nbsp;&nbsp;&nbsp;cd wispy-equinox-2
+&nbsp;&nbsp;&nbsp;&nbsp;rake
+&nbsp;&nbsp;&nbsp;&nbsp;cloudwalk emulate
+</span>
+</code></pre>
+
+<p>So, what happened?<br>
+<ol>
+  <li>We added your key at <code>~/.ssh/id_rsa.pub</code> into your account automatically. You can check or edit your keys wiht <code>cloudwalk key</code>.</li>
+  <li>As no name was specified in the first argument, we defined a name for you (you can read more about it running <code>cloudwalk help app create</code>).</li>
+  <li>We created a new folder with the new app name and we filled it with the
+<a href="https://github.com/scalone/cloudwalk-skeleton" target="_blank">default app's</a>
+contents.</li>
+  <li>We prepared the folder for you to get you ready to edit and deploy your application.</li>
+</ol>
+
+The process in detail is available by running <code>cloudwalk app create -v</code>, in case you're curious.
+</p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "Let's set it up", "cli/set-up") %>
+  </li>
+  <li class="next">
+    <%= link_to("Deploying your application" + " &rarr;", "cli/deploy-app") %>
+  </li>
+</ul>

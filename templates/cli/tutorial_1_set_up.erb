@@ -15,12 +15,25 @@
 
 <div class="tab-content">
   <div class="tab-pane active" id="index-tab1">
+    First of all, install <code>git</code>
+    (<a href="http://git-scm.com/book/en/v2/Getting-Started-Installing-Git">howto</a>)
+    and <code>ruby</code>
+    (<a href="https://www.ruby-lang.org/en/documentation/installation/">howto</a>).
+    Git is required to create, clone and push changes to your applications, please use
+    <a href="http://git-scm.com/book/en/v1/Getting-Started">this guide</a> to get started with git.
+    <br>
+    <br>
+
+    Then get the tool running this:
     <pre><code>curl https://cli.cloudwalk.io/install.sh | bash</code></pre>
   </div>
 
   <div class="tab-pane" id="index-tab2">
+    The CLI is not yet available for Windows.<br>
+    <!-- We're planning to have this for April
     <a href="https://cli.cloudwalk.io/windows.exe" id="file-request" class="btn btn-success">Download</a>
     <br>
+    -->
     <br>
   </div>
 </div>
@@ -31,14 +44,68 @@ command line interface. In case you don't have yet a CloudWalk
 account, you can create one using the following:
 </p>
 
-<pre><code>cloudwalk signup</code></pre>
+<pre><code><b>$ cloudwalk signup</b>
+Welcome!
+You're about to create a new cloudwalk account.
+Please answer the following questions...
+Your name (optional): Mr Tester
+Your email: tester@cloudwalk.io
+Your password:
+Success!
+Now access your account with <span style="color:#0ad">cloudwalk login</span>
+</code></pre>
 
 <p>
-  It will ask your basic information to proceed, after that you'll
-  need to login, this way:
+  Simply answer the questions and login with:
 </p>
 
-<pre><code>cloudwalk login</code></pre>
+<pre><code><b>$ cloudwalk login</b>
+Enter your email: tester@cloudwalk.io
+Enter your password:
+Logged in as <span style="color:#0ad">tester@cloudwalk.io</spam>.
+</code></pre>
+
+<p>
+After you access your account, you'll be able to run more commands, such as:
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td><code>cloudwalk logout</code></td>
+    <td>Logs out of your account, so you can access other accounts or to make sure no one else attempts to do anything fancy out of your presence.</td>
+  </tr>
+  <tr>
+    <td><code>cloudwalk apps</code></td>
+    <td>Shows the list of your applications.</td>
+  </tr>
+  <tr>
+    <td><code>cloudwalk app</code></td>
+    <td>Has several subcommands that let you create applications, show information about them, edit them and delete them.</td>
+  </tr>
+  <tr>
+    <td><code>cloudwalk keys</code></td>
+    <td>Shows information about all the SSH keys that are stored in your CloudWalk account. They're used to access and make changes to your repos, we'll get into it later.</td>
+  </tr>
+  <tr>
+    <td><code>cloudwalk key</code></td>
+    <td>Lets you add or remove keys from your account.</td>
+  </tr>
+  <tr>
+    <td><code>cloudwalk logs</code></td>
+    <td>Shows real time logs from all the applications related to your account.</td>
+  </tr>
+  <tr>
+    <td><code>cloudwalk users</code></td>
+    <td>Lets you display all the users that have access to your apps and manage them to simple <code>add</code> or <code>delete</code> commands</td>
+  </tr>
+</table>
+</p>
+
 
 <p>
 Great! Now you're ready to create your new application.
