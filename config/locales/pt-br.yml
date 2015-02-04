@@ -288,13 +288,12 @@ pt-BR:
           list:
             created_at: Timestamp da criação do registro (ISO 8601)
             email: E-mail da conta
-            first_name: Primeiro nome
+            name: Nome do usuário
             id: ID do registro
-            last_name: Último nome
             last_sign_in_at: Timestamp da criação da última sessão (ISO 8601)
             last_sign_in_ip: IP utilizado na última sessão
             sign_in_count: Quantidade de autenticações (sign-in) realizadas
-            time_zone: Time zone utilizado no CloudWalk Manager (padrão America/Sao_Paulo)
+            time_zone: Time zone utilizado no CloudWalk Manager (padrão UTC)
             updated_at: Timestamp da atualização do registro (ISO 8601)
           paragraph_1: 'Os seguintes atributos compõe um usuário:'
         description: Confira como as operações CRUD para usuário devem ser usadas.

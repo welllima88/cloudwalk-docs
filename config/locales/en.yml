@@ -288,13 +288,12 @@ en:
           list:
             created_at: Timestamp in ISO 8601 format
             email: Account e-mail
-            first_name: First name
+            name: User name
             id: Record ID
-            last_name: Last name
             last_sign_in_at: Timestamp of last session (ISO 8601)
             last_sign_in_ip: IP address used on last sign in
             sign_in_count: Sign in count
-            time_zone: Time zone utilizado no CloudWalk Manager (padrão America/Sao_Paulo)
+            time_zone: Time zone utilizado no CloudWalk Manager (padrão UTC)
             updated_at: Timestamp in ISO 8601 format
           paragraph_1: 'An user have the following attributes:'
         description: Check how CRUD operations for users should be performed.

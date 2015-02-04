@@ -4,7 +4,7 @@
 
 <h1><%= I18n.t("api.v1.users.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/08/2013") %></p>
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "03/02/2015") %></p>
 
 <h4><%= I18n.t("general.index") %></h4>
 
@@ -29,9 +29,9 @@
   </thead>
   <tbody>
     <tr>
-      <td>created_at</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.users.attributes.list.created_at") %></td>
+      <td>id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.id") %></td>
     </tr>
     <tr>
       <td>email</td>
@@ -39,19 +39,14 @@
       <td><%= I18n.t("api.v1.users.attributes.list.email") %></td>
     </tr>
     <tr>
-      <td>first_name</td>
+      <td>name</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.users.attributes.list.first_name") %></td>
+      <td><%= I18n.t("api.v1.users.attributes.list.name") %></td>
     </tr>
     <tr>
-      <td>id</td>
+      <td>sign_in_count</td>
       <td>Integer</td>
-      <td><%= I18n.t("api.v1.users.attributes.list.id") %></td>
-    </tr>
-    <tr>
-      <td>last_name</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.users.attributes.list.last_name") %></td>
+      <td><%= I18n.t("api.v1.users.attributes.list.sign_in_count") %></td>
     </tr>
     <tr>
       <td>last_sign_in_at</td>
@@ -64,11 +59,6 @@
       <td><%= I18n.t("api.v1.users.attributes.list.last_sign_in_ip") %></td>
     </tr>
     <tr>
-      <td>sign_in_count</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.users.attributes.list.sign_in_count") %></td>
-    </tr>
-    <tr>
       <td>time_zone</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.users.attributes.list.time_zone") %></td>
@@ -77,6 +67,11 @@
       <td>updated_at</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.users.attributes.list.updated_at") %></td>
+    </tr>
+    <tr>
+      <td>created_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.users.attributes.list.created_at") %></td>
     </tr>
   </tbody>
 </table>
@@ -132,30 +127,28 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
    "users":[
       {
          "user":{
-            "created_at":"2013-07-26T17:47:35Z",
-            "email":"hero@dccomics.com",
-            "first_name":"Clark",
             "id":1,
-            "last_name":"Kent",
-            "last_sign_in_at":"2013-07-29T17:42:26Z",
-            "last_sign_in_ip":"127.0.0.1",
+            "email":"hero@dccomics.com",
+            "name":"Clark Kent",
             "sign_in_count":4,
+            "last_sign_in_at":"2015-01-29T17:42:26Z",
+            "last_sign_in_ip":"127.0.0.1",
             "time_zone":"America/Chicago",
-            "updated_at":"2013-07-30T15:02:49Z"
+            "updated_at":"2015-01-30T15:02:49Z",
+            "created_at":"2015-01-26T17:47:35Z"
          }
       },
       {
          "user":{
-            "created_at":"2013-07-30T15:04:27Z",
-            "email":"owner@wayneenterprises.com",
-            "first_name":"Bruce",
             "id":3,
-            "last_name":"Wayne",
-            "last_sign_in_at":"2013-07-30T15:06:06Z",
-            "last_sign_in_ip":"127.0.0.1",
+            "email":"owner@wayneenterprises.com",
+            "name":"Bruce Wayne",
             "sign_in_count":1,
+            "last_sign_in_at":"2015-01-30T15:06:06Z",
+            "last_sign_in_ip":"127.0.0.1",
             "time_zone":"America/Chicago",
-            "updated_at":"2013-07-30T15:06:37Z"
+            "updated_at":"2015-01-30T15:06:37Z",
+            "created_at":"2015-01-30T15:04:27Z"
          }
       }
    ]
@@ -205,16 +198,15 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <pre><code data-language="javascript">{
   "user":{
-    "created_at":"2013-07-30T15:04:27Z",
-    "email":"owner@wayneenterprises.com",
-    "first_name":"Bruce",
     "id":3,
-    "last_name":"Wayne",
-    "last_sign_in_at":"2013-07-30T15:06:06Z",
-    "last_sign_in_ip":"127.0.0.1",
+    "email":"owner@wayneenterprises.com",
+    "name":"Bruce Wayne",
     "sign_in_count":1,
+    "last_sign_in_at":"2015-01-30T15:06:06Z",
+    "last_sign_in_ip":"127.0.0.1",
     "time_zone":"America/Chicago",
-    "updated_at":"2013-07-30T15:06:37Z"
+    "updated_at":"2015-01-30T15:06:37Z",
+    "created_at":"2015-01-30T15:04:27Z"
   }
 }
 </code></pre>
