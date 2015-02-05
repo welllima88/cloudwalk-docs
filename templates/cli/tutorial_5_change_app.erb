@@ -6,7 +6,91 @@
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p>To customize your application..</p>
+<p>
+There are two main aspects of customization that your apps can get, the
+first one is related to <i>the information that we have about this app in our
+  servers</i>, the second one is related to the source code itself.
+</p>
+
+<h2>App Settings</h2>
+
+<p>
+Our <a href="https://manager.cloudwalk.io/">Manager</a> provides
+a really neat interface for customizing your app settings and
+other relevant information, the CLI completes it with an easy way
+to edit your app from your terminal. By running
+<code>cloudwalk app edit</code>
+you'll be prompted with the available options to set including
+previous values. This command requires an app ID or app name, we
+know we already created an app that was called
+<code>cloud-walking-1</code>, but in case we need to check the
+names and IDs of all our apps, let's run
+<code>cloudwalk apps</code>
+first:
+</p>
+
+<pre><code><b>$ cloudwalk apps</b>
+Apps for tester@cloudwalk.io (tester@cloudwalk.io):
+Id              Name
+123             cloud-walking-1</code></pre>
+
+<p>
+We can use either <code>123</code> or <code>cloud-walking-1</code> to edit
+this app, let's see what happens with the name:
+</p>
+
+<pre><code><b>$ cloudwalk app edit cloud-walking-1</b>
+Getting the app details... <span style="color:#0d0">OK</span>
+Please specify the new values or click enter to keep the current ones.
+Authorizer's URL:
+Description: Test Application
+Name [cloud-walking-1]:
+POS Display Label:
+Updating the app <span style="color:#0ad">cloud-walking-1</span>... <span style="color:#0d0">OK</span>
+The application <span style="color:#0ad">cloud-walking-1</span> was updated.</code></pre>
+
+<p>
+After our changes, let's see the current information for this
+app by running <code>cloudwalk app show</code> with this app
+name:
+</p>
+
+<pre><code><b>$ cloudwalk app show cloud-walking-1</b>
+Details of the app cloud-walking-1:
+
+authorizer_url
+crc                     1921
+created_at              2015-02-05T11:30:04.404-02:00
+created_by              1
+created_via             api
+description             Test Application
+displayable             false
+id                      123
+name                    cloud-walking-1
+pos_display_label
+language
+binary
+size                    235
+updated_at              2015-02-05T11:30:50.172-02:00
+uuid</code></pre>
+
+<p>
+Not all the information available can be updated, but there you
+see the changes made and now you know how to see and edit your
+apps information.
+</p>
+
+<h2>Source Code</h2>
+
+<p>
+As you might remember, the folder structure of every new
+application created by the CLI comes from the
+<a href="https://github.com/cloudwalkio/cloudwalk-skeleton" target="_blank">cloudwalk-skeleton</a>,
+which uses
+<a href="https://github.com/cloudwalkio/da_funk" target="_blank">DaFunk</a>,
+up next, we'll see a few examples of how to use these tools for
+POS applications.
+</p>
 
 <ul class="pager">
   <li class="previous">
