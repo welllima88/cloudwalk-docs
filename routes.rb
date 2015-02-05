@@ -60,6 +60,7 @@ class Routes
       { "url" => "cli/emulate-app",                                      "view_path" => "cli/tutorial_3_emulate_app"},
       { "url" => "cli/deploy-app",                                       "view_path" => "cli/tutorial_4_deploy_app"},
       { "url" => "cli/change-app",                                       "view_path" => "cli/tutorial_5_change_app"},
+      { "url" => "cli/hello-world",                                      "view_path" => "cli/tutorial_6_hello_world"},
     ]
   end
 

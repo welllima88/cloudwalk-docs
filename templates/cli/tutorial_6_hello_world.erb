@@ -1,0 +1,143 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for CloudWalk's CLI">
+<% end %>
+
+<h1>CloudWalk's CLI - Hello World</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p>
+Our first application comes with a very simple source code in the <b>lib/main.rb</b> file:
+</p>
+
+<pre><code><b>require</b> <span style="color:#0ad">'simplehttp'</span>
+
+<b>class</b> Main < Device
+  <b>def</b> self.call
+    puts <span style="color:#0ad">"Card..."</span>
+    getc
+    <span style="color:#0d0">true</span>
+  <b>end</b>
+
+  <b>def</b> self.foo
+    <span style="color:#0d0">:foo</span>
+  <b>end</b>
+
+  <b>def</b> self.version
+    <span style="color:#0ad">"0.0.1"</span>
+  <b>end</b>
+<b>end</b>
+</code></pre>
+
+<p>
+It describes us some of the main steps of building an application, let's look at it in detail:
+</p>
+
+<ul>
+  <li>
+    <code><b>require</b> <span style="color:#0ad">'simplehttp'</span></code>
+    is how it requires <b>gems</b>, it's Ruby so there must be gems!
+    The <code>simplehttp</code> gem was required in
+    <a href="https://github.com/cloudwalkio/cloudwalk-skeleton/blob/master/Gemfile#L3">the Gemfile at the root of our project</a>,
+    and it's also:
+    <a href="https://github.com/scalone/walk-simplehttp-poc">open source</a>.
+    If you're an experienced Ruby developer, this
+    information could be enough for you to build your custom
+    gems for your application, happy hacking!
+  </li>
+  <li>
+    <code><b>class</b> Main < Device</code>
+    is where the Main class is defined. <b>This is required</b>,
+    all your applications must have a <b>Main</b> class, it
+    doesn't necessarily has to inherit from the <b>Device</b>
+    class, if you don't inherit, you might write <b>Device</b>
+    specific methods including the name of the class, for example
+    instead of writing <code>puts</code>, you would write
+    <code>Device.puts</code>. All the <b>Device</b> class methods are available
+    <a href="https://github.com/cloudwalkio/da_funk/tree/master/lib/device">here</a>.
+  </li>
+  <li>
+    <code><b>def</b> self.call</code>
+    is the function that is executed each time the application
+    runs, this function is <b>required</b> and must be defined.
+    <b>Important:</b> this function is executed inside a loop,
+    so plan yourself ahead.
+  </li>
+  <li>
+    <code>puts <span style="color:#0ad">"Card..."</span></code>
+    displays the given string into the terminal's screen.
+  </li>
+  <li>
+    <code>getc</code>
+    asks for any key to be pressed.
+  </li>
+  <li>
+    The <code><span style="color:#0d0">true</span></code>
+    at the end of the <code>Main.call</code> method states wether
+    the loop must continue or not.
+  </li>
+</ul>
+
+<p>
+The rest of the lines simply define other methods into the main
+class that could be useful to you eventually, but are not
+essential to the development of Ruby applications for POS
+terminals.
+</p>
+
+<h2>The Hello World Script</h2>
+
+<p>
+As a simple example, we can change this application to welcome
+whoever runs it, ask for a name and then say greetings to the
+given name.
+</p>
+
+<p>
+If you're a Ruby developer, the code is as you might expect:
+</p>
+
+<pre><code>puts <span style="color:#0ad">"Hello World! What's your name?"</span>
+name = gets
+name = name[<span style="color:#0d0">0</span>..-<span style="color:#0d0">2</span>] <span style="color:#999"># Removing the new line</span>
+puts <span style="color:#0ad">"Hello <span style="color:#a0d">#{name}</span>!!!"</span></code></pre>
+
+<p>
+By putting that code inside the <code>Main.call</code> method,
+before the <b>true</b> at the end, we will be prompted for a name
+and after that the name will be displayed in the next line. Try
+it yourself! Make the changes, run <b>rake</b> and then
+<b>cloudwalk emulate</b>. The <b>main.rb</b> file should end up
+like this:
+</p>
+
+
+<pre><code><b>require</b> <span style="color:#0ad">'simplehttp'</span>
+
+<b>class</b> Main < Device
+  <b>def</b> self.call
+    puts <span style="color:#0ad">"Hello World! What's your name?"</span>
+    name = gets
+    name = name[<span style="color:#0d0">0</span>..-<span style="color:#0d0">2</span>] <span style="color:#999"># Removing the new line</span>
+    puts <span style="color:#0ad">"Hello <span style="color:#a0d">#{name}</span>!!!"</span>
+    <span style="color:#0d0">true</span>
+  <b>end</b>
+
+  <b>def</b> self.foo
+    <span style="color:#0d0">:foo</span>
+  <b>end</b>
+
+  <b>def</b> self.version
+    <span style="color:#0ad">"0.0.1"</span>
+  <b>end</b>
+<b>end</b>
+</code></pre>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "Customizing your application", "cli/change-app") %>
+  </li>
+  <li class="next">
+    <%= link_to("Using the Network" + " &rarr;", "cli/network") %>
+  </li>
+</ul>
