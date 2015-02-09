@@ -1,0 +1,69 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for CloudWalk's CLI">
+<% end %>
+
+<h1>CloudWalk's CLI - Using the Network</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p>
+Among the many usages you could employ out platform, you'll
+probably be really interested in dealing with network
+communication, here we'll present a handful of ways to interact
+with different kind of hosts so you can begin your journey.
+</p>
+
+<p>
+The first thing we'll explore is how to connect to an access
+point, for example: `claro.com.br`, it goes as follows:
+</p>
+
+<pre><code><b>class</b> Main < Device
+  <b>def</b> self.call
+    test_sample_network_ping
+    test_sample_network_disconnect
+  <b>end</b>
+
+  <b>def</b> test_sample_network_attach
+    <span style="color:#999"># Initialize hardware with configurations</span>
+    Device::Network.init(<span style="color:#0d0">:gprs</span>, <span style="color:#0d0">apn:</span> <span style="color:#0ad">'claro.com.br'</span>, <span style="color:#0d0">user:</span> <span style="color:#0ad">'claro.com.br'</span>, <span style="color:#0d0">pass:</span> <span style="color:#0ad">'claro.com.br'</span>)
+    <span style="color:#999"># Start Attaching process</span>
+    Device::Network.connect
+
+    <span style="color:#999"># Attaching process is unblocking, for this sample let's wait until return something</span>
+    iRet = <span style="color:#0d0">1</span>
+    <b>while</b>(iRet == <span style="color:#0d0">1</span>)
+      iRet = Device::Network.connected?
+    <b>end</b>
+  <b>end</b>
+
+  <b>def</b> test_sample_network_ping
+    test_sample_network_attach
+    Device::Network.ping(<span style="color:#0ad">"cloudwalk.io"</span>, <span style="color:#0d0">8000</span>)
+  <b>end</b>
+
+  <b>def</b> test_sample_network_disconnect
+    test_sample_network_attach
+    puts <span style="color:#0ad">"Disconnect <span style="color:#a0d">#{Device::Network.disconnect}</span>"</span>
+  <b>end</b>
+<b>end</b>
+</code></pre>
+
+<p>
+In this example, we define three functions to test three basic
+network ussages, the <code>test_sample_network_attach</code>
+function stablishes a connection, the
+<code>test_sample_network_ping</code> uses this connection to
+ping a given host, and the
+<code>test_sample_network_disconnect</code> destroys the active
+connection.
+</p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "Customizing your application", "cli/change-app") %>
+  </li>
+  <li class="next">
+    <%= link_to("Using the Network" + " &rarr;", "cli/network") %>
+  </li>
+</ul>
