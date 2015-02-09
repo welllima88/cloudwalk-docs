@@ -114,4 +114,52 @@ describe "Docs" do
     last_response.body.include?('Sorry for the inconvenience.')
     assert last_response.ok?
   end
+
+  it "should not have english internal links without language" do
+      result = ""
+      File.open("config/locales/en.yml").each_with_index do |line, line_number|
+          found = line.scan(/<a href='(\/(?!en\/)(?!pt\-BR\/)[^']*)'/)
+          if found.length > 0
+              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
+          end
+      end
+
+      assert result.empty?, "Found some internal links without language prefix or with wrong language prefix in file config/locales/en.yml:\n#{result}To fix this you should ensure all these links have a /en/ prefix."
+  end
+
+  it "should not have portuguese internal links in english language file" do
+      result = ""
+      File.open("config/locales/en.yml").each_with_index do |line, line_number|
+          found = line.scan(/<a href='(\/pt\-BR\/[^']*)'/)
+          if found.length > 0
+              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
+          end
+      end
+
+      assert result.empty?, "Found some portuguese internal links in file config/locales/en.yml:\n#{result}To fix this you should change /pt-BR/ prefix to /en/."
+  end
+
+  it "should not have portuguese internal links without language" do
+      result = ""
+      File.open("config/locales/pt-br.yml").each_with_index do |line, line_number|
+          found = line.scan(/<a href='(\/(?!en\/)(?!pt\-BR\/)[^']*)'/)
+          if found.length > 0
+              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
+          end
+      end
+
+      assert result.empty?, "Found some internal links without language prefix or with wrong language prefix in file config/locales/pt-br.yml:\n#{result}To fix this you should ensure all these links have a /pt-BR/ prefix."
+  end
+
+  it "should not have english internal links in portuguese language file" do
+      result = ""
+      File.open("config/locales/pt-br.yml").each_with_index do |line, line_number|
+          found = line.scan(/<a href='(\/en\/[^']*)'/)
+          if found.length > 0
+              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
+          end
+      end
+
+      assert result.empty?, "Found some english internal links in file config/locales/pt-br.yml:\n#{result}To fix this you should change /en/ prefix to /pt-BR/."
+  end
 end

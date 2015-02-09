@@ -382,8 +382,8 @@ pt-BR:
         variables: VARIÁVEIS
       introduction:
         paragraph_1: 'É possível integrar aplicações CloudWalk escritas em POSXML com APIs <a href=''https://pt.wikipedia.org/wiki/REST'' class=''external'' target=''blank''>REST</a>. Para isso, passa-se para o comando <a href=''/posxml/commands/network.send'' class=''command''>network.send</a> uma string no seguinte formato:'
-        paragraph_2: O Switch do CloudWalk recebe a requisição enviada pelo comando <a href='/posxml/commands/network.send' class='command'>network.send</a> e faz uma requisição HTTP na url definida na aplicação configurada no <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
-        paragraph_3: Para receber a resposta do Switch do CloudWalk, é necessário utilizar o comando <a href='/posxml/commands/network.receive' class='command'>network.receive</a> para receber os primeiros 4 bytes, que indicam o tamanho da mensagem, e em seguida fazer uma nova chamada com comando <a href='/posxml/commands/network.receive' class='command'>network.receive</a>, recebendo o restante da mensagem. Esta abordagem evita possíveis <em>timeouts</em> e longos períodos de espera para receber a resposta do servidor HTTP.
+        paragraph_2: O Switch do CloudWalk recebe a requisição enviada pelo comando <a href='/pt-BR/posxml/commands/network.send' class='command'>network.send</a> e faz uma requisição HTTP na url definida na aplicação configurada no <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
+        paragraph_3: Para receber a resposta do Switch do CloudWalk, é necessário utilizar o comando <a href='/pt-BR/posxml/commands/network.receive' class='command'>network.receive</a> para receber os primeiros 4 bytes, que indicam o tamanho da mensagem, e em seguida fazer uma nova chamada com comando <a href='/pt-BR/posxml/commands/network.receive' class='command'>network.receive</a>, recebendo o restante da mensagem. Esta abordagem evita possíveis <em>timeouts</em> e longos períodos de espera para receber a resposta do servidor HTTP.
       posxml_sample:
         paragraph_1: 'O seguinte exemplo pode ser utilizado para testar esse tipo de ingração:'
         posxml:
@@ -411,7 +411,7 @@ pt-BR:
       description: Uma maneira de estabelecer uma comunicação entre CloudWalk e um autorizados, é via HTTP. Exemplo de uso, configurando o dispositivo, compilando a aplicação, configurando o WALK Manager, testando a comunicação.
       pos_setup:
         paragraph_1: Este guia assume que o seu dispositivo já possui o WALK Framework devidamente <strong>instalado e configurado</strong>, e que o número de série do dispositivo já está cadastrado no WALK Manager.
-        paragraph_2: Caso não tenha certeza dos passos acima, confira a sessão <a href='/walk-framework/configuration'>%{configuration}</a>
+        paragraph_2: Caso não tenha certeza dos passos acima, confira a sessão <a href='/pt-BR/walk-framework/configuration'>%{configuration}</a>
       sample:
         list:
           item_1: '<strong>Conta no WALK Manager: </strong>Crie uma gratuitamente em <a href=''https://manager.cloudwalk.io'' class=''external'' target=''_blank''>https://manager.cloudwalk.io</a>'
@@ -495,7 +495,7 @@ pt-BR:
       description: Uma maneira de estabelecer uma comunicação entre CloudWalk e um autorizados, é via TCP/IP. Exemplo de uso, configurando o dispositivo, compilando a aplicação, configurando o WALK Manager, testando a comunicação.
       pos_setup:
         paragraph_1: Este guia assume que o seu dispositivo já possui o WALK Framework devidamente <strong>instalado e configurado</strong>, e que o número de série do dispositivo já está cadastrado no WALK Manager.
-        paragraph_2: Caso não tenha certeza dos passos acima, confira a sessão <a href='/walk-framework/configuration'>%{configuration}</a>
+        paragraph_2: Caso não tenha certeza dos passos acima, confira a sessão <a href='/pt-BR/walk-framework/configuration'>%{configuration}</a>
       sample:
         list:
           item_1: '<strong>Conta no WALK Manager: </strong>Crie uma gratuitamente em <a href=''https://manager.cloudwalk.io'' class=''external'' target=''_blank''>https://manager.cloudwalk.io</a>'
@@ -1261,7 +1261,7 @@ pt-BR:
         paragraph_1: O conhecimento da norma <strong>ISO-8583</strong> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>iso8583.initfieldtable</span> irá iniciar a tabela de campos ISO8583 de acordo com os campos especificados no arquivo definido no parâmetro <strong>filename</strong>. Este comando deve ser executado antes de iniciar o trabalho com mensagens ISO8583.
         paragraph_3: 'No exemplo acima, foram criadas duas funções:'
-        paragraph_4: 1. <strong>downloadBitmap</strong> que realiza o download do arquivo <span class='code'>bitmap.dat</span> contendo o mapa de bits. O arquivo precisa estar armazenado no repositório de <a href='/walk-manager/assets'>arquivos</a> no <a href='https://manager.cloudwalk.io' class='external' target='_blank'>CloudWalk Manager</a>.
+        paragraph_4: 1. <strong>downloadBitmap</strong> que realiza o download do arquivo <span class='code'>bitmap.dat</span> contendo o mapa de bits. O arquivo precisa estar armazenado no repositório de <a href='/pt-BR/walk-manager/assets'>arquivos</a> no <a href='https://manager.cloudwalk.io' class='external' target='_blank'>CloudWalk Manager</a>.
         paragraph_5: 2. <strong>startEngineISO8583</strong> que inicia a tabela utilizando o comando <span class='code'>iso8583.initfieldtable</span>.
         paragraph_6: Caso o download do arquivo tenha sido completado com sucesso, é definido 1 no parâmetro bitmap do arquivo <span class='code'>params.dat</span>, apenas para indicar que o arquivo esta presente no dispositivo, caso contrário será apresentado uma mensagem de erro, baseado no respectivo retorno do comando e fechará a aplicação após pressionar a tecla Enter.
         paragraph_7: Após baixar e verificar a existência do arquivo bitmap.dat, será executada a função <strong>startEngineISO8583</strong>. A função referencia o comando <span class='code'>iso8583.initfieldtable</span> para iniciar a tabela. Caso o valor retornado na variável <strong>iReturn</strong> for <strong>0</strong>, a tabela foi iniciada com sucesso; caso contrário, o erro <strong>-802</strong> será apresentado, indicando falha na inicialização da tabela de mapa de bits.
@@ -1980,31 +1980,31 @@ pt-BR:
         parameter_4: <strong>dnssecundario</strong><br/> DNS secundário que será utilizado pelo dispositivo. É necessário definir o DNS <strong>0.0.0.0</strong> se o protocolo de comunicação <strong>PPP</strong> for utilizado
         parameter_5: <strong>gprs_pin</strong><br/> PIN do chip GPRS
         parameter_6: |-
-          <strong>iskeytimeout</strong><br/> Utilizado para identificar o que a função <a href='/posxml/commands/readkey' class='command'>readkey</a> vai retornar em caso de timeout, onde:<pre>0 – Desativado, readkey retorna KEY_CANCEL em timeout.
+          <strong>iskeytimeout</strong><br/> Utilizado para identificar o que a função <a href='/pt-BR/posxml/commands/readkey' class='command'>readkey</a> vai retornar em caso de timeout, onde:<pre>0 – Desativado, readkey retorna KEY_CANCEL em timeout.
           1 – Ativado, readkey retorna -1 em timeout.</pre>
         parameter_7: <strong>keyalpha</strong><br/> Tecla que será utilizada para fazer o <strong>alpha</strong> do teclado. As teclas opcionais variam de dispositivo para dispositivo, e podem ir de KEY_EXTRA1 até KEY_EXTRA99
-        parameter_8: <strong>keypaperfeed</strong><br/> Tecla que será utilizada para efetuar o <a href='/posxml/commands/paperfeed' class='command'>paperfeed</a>
+        parameter_8: <strong>keypaperfeed</strong><br/> Tecla que será utilizada para efetuar o <a href='/pt-BR/posxml/commands/paperfeed' class='command'>paperfeed</a>
         parameter_9: <strong>keypound</strong><br/> Tecla que será utilizada para colocar o <strong>#</strong> (sharp). As teclas opcionais variam de dispositivo para dispositivo, e podem ir de KEY_EXTRA1 até KEY_EXTRA99
         pos_model: Modelo do dispositivo POS
         reading_type: Tipo de leitura
         tracks: Trilhas
       presentation:
         paragraph_1: O WALK Framework possui diversas variáveis de configuração, permitindo configurar qualquer parâmetro do dispositivo através da linguagem POSXML, como se fossem variáveis de ambiente utilizadas pelo aplicativo e por drivers do dispositivo, como modem e impressora.
-        paragraph_2: Qualquer um desses parâmetros pode ser configurado com o auxílio do comando <a href='/posxml/commands/editfile' class='command'>editfile</a>, apontando para arquivo config.dat, e utilizando o nome desses parâmetros como chave. O arquivo config.dat nada mais é do que um arquivo no formato de sistema de arquivos do CloudWalk.
-        paragraph_3: É possível configurar qualquer tipo de comunicação, retentativas, entre outros parâmetros e fazer lógicas de reconexão de backup através da linguagem POSXML, utilizando as instruções <a href='/posxml/commands/editfile' class='command'>editfile</a> e <a href='/posxml/commands/preconnect' class='command'>preconnect</a>.
+        paragraph_2: Qualquer um desses parâmetros pode ser configurado com o auxílio do comando <a href='/pt-BR/posxml/commands/editfile' class='command'>editfile</a>, apontando para arquivo config.dat, e utilizando o nome desses parâmetros como chave. O arquivo config.dat nada mais é do que um arquivo no formato de sistema de arquivos do CloudWalk.
+        paragraph_3: É possível configurar qualquer tipo de comunicação, retentativas, entre outros parâmetros e fazer lógicas de reconexão de backup através da linguagem POSXML, utilizando as instruções <a href='/pt-BR/posxml/commands/editfile' class='command'>editfile</a> e <a href='/pt-BR/posxml/commands/preconnect' class='command'>preconnect</a>.
       table_of_contents:
         parameters_list: Listagem de parâmetros
         presentation: Apresentação
       title: POSXML - Configuração
     file_system:
       creating_and_editing_files:
-        paragraph_1: Os comandos <a href='/posxml/commands/editfile' class='command'>editfile</a>, <a href='/posxml/commands/readfile' class='command'>readfile</a> e <a href='/posxml/commands/readfilebyindex' class='command'>readfilebyindex</a> podem ser utilizados para trabalhar com este tipo de arquivo, baseado em chaves e valores, possibilitando um meio rápido e eficiente para armazenar dados estáticos no dispositivo.
+        paragraph_1: Os comandos <a href='/pt-BR/posxml/commands/editfile' class='command'>editfile</a>, <a href='/pt-BR/posxml/commands/readfile' class='command'>readfile</a> e <a href='/pt-BR/posxml/commands/readfilebyindex' class='command'>readfilebyindex</a> podem ser utilizados para trabalhar com este tipo de arquivo, baseado em chaves e valores, possibilitando um meio rápido e eficiente para armazenar dados estáticos no dispositivo.
         paragraph_2: 'Recomendamos a utilização do utilitário EditDBFile para manipular seus arquivos WALK dbfile. Siga o seguinte procedimento:'
         paragraph_3: Baixe o utilitário em <a href='http://dl.cloudwalk.io/edit_db_file.zip'>http://dl.cloudwalk.io/edit_db_file.zip</a>
         paragraph_4: Descompacte o pacote e execute o arquivo <strong>EditDbFileWalk.exe</strong>
         paragraph_5: Digite o caminho do arquivo dat e pressione o botão <strong>Load</strong>
         paragraph_6: Faça as devidas alterações e pressione o botão <strong>Save</strong>
-        paragraph_7: Cadastre o <a href='/walk-manager/assets'>arquivo no WALK Manager</a> e seus dispositivos poderão baixá-lo com o comando <a href='/posxml/commands/downloadfile' class='command'>downloadfile</a>
+        paragraph_7: Cadastre o <a href='/pt-BR/walk-manager/assets'>arquivo no WALK Manager</a> e seus dispositivos poderão baixá-lo com o comando <a href='/pt-BR/posxml/commands/downloadfile' class='command'>downloadfile</a>
       description: O WALK Framework tem um sistema de arquivos do tipo WALK dbfile (arquivos de text em ambientes UNIX). Criando e editando arquivos. Use o utilitário EditDBFile para manipular arquivos WALK dbfile.
       presentation:
         paragraph_1: 'O WALK Framework possui um sistema de arquivos que consegue manipular arquivos do tipo WALK dbfile, onde é possível criar e trabalhar com arquivos no seguinte formato:'
@@ -2018,7 +2018,7 @@ pt-BR:
       introduction: O WALK Framework é responsável por executar o aplicativo POSXML compilado, e ao ser instalado no dispositivo, assume toda a responsabilidade de gerenciamento de memória e drivers do mesmo. Sendo assim, para executar uma aplicação em um dispositivo, basta escrever um aplicativo POSXML.
       limitations:
         paragraph_1: Existe uma limitação de 511 variáveis por aplicação POSXML, sendo 256 do tipo string com tamanho máximo de 1K (1023 caracteres, sendo que um é utilizado automaticamente pela plataforma para alocar o <span class='code'>\0</span>), e 255 do tipo integer.
-        paragraph_2: Ao declarar uma variável com os comandos <a href='/posxml/commands/integervariable' class='command'>integervariable</a> ou <a href='/posxml/commands/stringvariable' class='command'>stringvariable</a>, esta ficará na memória da aplicação até que o dispositivo seja desligado. Por este motivo, é necessário se ter o cuidado de definir no começo da aplicação todas as variáveis utilizadas e limpá-las para não ocorrer erros no decorrer da execução do aplicativo.
+        paragraph_2: Ao declarar uma variável com os comandos <a href='/pt-BR/posxml/commands/integervariable' class='command'>integervariable</a> ou <a href='/pt-BR/posxml/commands/stringvariable' class='command'>stringvariable</a>, esta ficará na memória da aplicação até que o dispositivo seja desligado. Por este motivo, é necessário se ter o cuidado de definir no começo da aplicação todas as variáveis utilizadas e limpá-las para não ocorrer erros no decorrer da execução do aplicativo.
         paragraph_3: Atualmente existe um limite de memória de 32K para carregamento de páginas POSXML compiladas.
       parameters:
         paragraph_1: Todo comando POSXML que possuir um parâmetro cujo nome contenha a palavra <span class='code'>variable</span>, por exemplo, <span class='code'>variablereturn</span>, é obrigatório passar uma variável para aquele parâmetro.
@@ -2336,7 +2336,7 @@ pt-BR:
         check_serial_number: 'CHECK S. NUMBER'
         cloudwalk_update: 'CLOUDWALK UPDATE'
         about: 'ABOUT'
-      password: "Para acessar o menu de configuração, é necessário informar a senha <strong>55555</strong>. Esta senha pode ser <a href='/walk-framework/configuration/change-password'>alterada</a>."
+      password: "Para acessar o menu de configuração, é necessário informar a senha <strong>55555</strong>. Esta senha pode ser <a href='/pt-BR/walk-framework/configuration/change-password'>alterada</a>."
       logical_number:
         paragraph_1: "Opção utilizada para definir o número lógico do dispositivo."
         paragraph_2: "Mais informações sobre a utilização de números lógicos podem ser encontradas em:"
@@ -2376,13 +2376,13 @@ pt-BR:
     first_launch:
       description: "Procedimento de configuração do dispositivo após a instalação do WALK Framework."
       title: "Primeira execução do dispositivo"
-      after_install: "Agora que o dispositivo já possui o WALK Framework instalado, o próximo passo é realizar a <a href='/walk-framework/first-launch'>configuração inicial</a> do dispositivo."
+      after_install: "Agora que o dispositivo já possui o WALK Framework instalado, o próximo passo é realizar a <a href='/pt-BR/walk-framework/first-launch'>configuração inicial</a> do dispositivo."
       integration:
-        paragraph_1: "Agora que o dispositivo já está ativado, o próximo passo é realizar um teste de integração HTTP. Clique <a href='/integration/http'>aqui</a> para iniciar o processo."
+        paragraph_1: "Agora que o dispositivo já está ativado, o próximo passo é realizar um teste de integração HTTP. Clique <a href='/pt-BR/integration/http'>aqui</a> para iniciar o processo."
       prerequisites:
         internet_access: "<strong>Computador com acesso à internet:</strong> Necessário para cadastrar o número lógico e liberar o dispositivo no serviço CloudWalk"
         walk_framework: "<strong>WALK Framework:</strong> Dispositivo com WALK Framework devidamente instalado"
-        paragraph_1: "Para instalar o <strong>WALK Framework</strong> no dispositivo, acesse e siga atentamente as instruções dos links à seguir, de acordo com o modelo desejado: <strong><a href='verifone-evo'>Verifone EVO</a></strong>, <strong><a href='verifone-verix'>Verifone Verix</a></strong>, <strong><a href='ingenico-telium-1'>Ingenico Telium 1</a></strong>, <strong><a href='/walk-framework/ingenico-telium-2'>Ingenico Telium 2</a></strong>"
+        paragraph_1: "Para instalar o <strong>WALK Framework</strong> no dispositivo, acesse e siga atentamente as instruções dos links à seguir, de acordo com o modelo desejado: <strong><a href='verifone-evo'>Verifone EVO</a></strong>, <strong><a href='verifone-verix'>Verifone Verix</a></strong>, <strong><a href='ingenico-telium-1'>Ingenico Telium 1</a></strong>, <strong><a href='/pt-BR/walk-framework/ingenico-telium-2'>Ingenico Telium 2</a></strong>"
       table_of_contents:
         prerequisites: "Pré-requisitos"
         language_settings: "Preferência de idioma"
@@ -2584,7 +2584,7 @@ pt-BR:
         paragraph_2: Mantenha o sistema operacional dos seus terminais POS sempre atualizados. Terminais POS com o sistema operacional desatualizado podem ficar lentos e podem também apresentar problemas de comunicação.
         paragraph_3: 'Requisitos mínimos de sistema operacional para a instalação do WALK Framework:'
         pos_model: Modelo POS
-      installing_vx805_and_vx820: Para realizar a carga em terminais <strong>Vx805</strong> e <strong> Vx820 </strong>, confira <a href='/walk-framework/verifone-evo-vx805'>este guia</a>.
+      installing_vx805_and_vx820: Para realizar a carga em terminais <strong>Vx805</strong> e <strong> Vx820 </strong>, confira <a href='/pt-BR/walk-framework/verifone-evo-vx805'>este guia</a>.
       installing_vx805_and_vx820_intro: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx805</strong> e <strong>Vx820</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx520</strong> e <strong>Vx680</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       introduction_cable_terminals: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone Vx805 e Vx820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
@@ -2703,7 +2703,7 @@ pt-BR:
       description: O conceito de Aplicação no WALK Manager, como o próprio nome sugere, define as aplicações disponíveis para serem utilizadas pelos terminais POS. Como cadastrar uma aplicação em 3 passos.
       functionality:
         paragraph_1: O conceito de <strong>Aplicação</strong> no WALK Manager, como o próprio nome sugere, define as aplicações disponíveis para serem utilizadas pelos dispositivos.
-        paragraph_2: Estas aplicações na prática são geradas pelo <a href='/introduction/development-environment'>CloudWalk IDE</a>, sempre que uma aplicação <a href='/introduction/posxml'>POSXML</a> é compilada.
+        paragraph_2: Estas aplicações na prática são geradas pelo <a href='/pt-BR/introduction/development-environment'>CloudWalk IDE</a>, sempre que uma aplicação <a href='/pt-BR/introduction/posxml'>POSXML</a> é compilada.
       interface:
         paragraph_1: 'Para cadastrar uma aplicação, basta seguir o seguinte procedimento:'
         paragraph_2: Clique no menu <strong>Aplicações</strong>.
