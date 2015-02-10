@@ -38,6 +38,20 @@ are limited, but it's highly useful for testing. Use
 </table>
 </p>
 
+<p>
+<b>About <code>cloudwalk run</code>:</b>
+This command is intended to work like
+<code>mruby -b</code>, so if you emulate your apps with it it
+won't work as the <code>emulate</code> command: it will probabbly
+just quit if you have nothing to run outside of the Main class.
+</p>
+
+<p>
+You can add <code>Main.call</code> at the end of your scripts to
+check their behavior using the CLI, but to un tests, use the
+commands as they appear in <code>rake -T</code>.
+</p>
+
 <ul class="pager">
   <li class="previous">
     <%= link_to("&larr; " + "Creating a new application", "cli/new-app") %>

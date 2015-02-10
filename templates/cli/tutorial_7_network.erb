@@ -26,25 +26,25 @@ point, for example: `claro.com.br`, it goes as follows:
 
   <b>def</b> test_sample_network_attach
     <span style="color:#999"># Initialize hardware with configurations</span>
-    Device::Network.init(<span style="color:#0d0">:gprs</span>, <span style="color:#0d0">apn:</span> <span style="color:#0ad">'claro.com.br'</span>, <span style="color:#0d0">user:</span> <span style="color:#0ad">'claro.com.br'</span>, <span style="color:#0d0">pass:</span> <span style="color:#0ad">'claro.com.br'</span>)
+    Network.init(<span style="color:#0d0">:gprs</span>, <span style="color:#0d0">apn:</span> <span style="color:#0ad">'claro.com.br'</span>, <span style="color:#0d0">user:</span> <span style="color:#0ad">'claro.com.br'</span>, <span style="color:#0d0">pass:</span> <span style="color:#0ad">'claro.com.br'</span>)
     <span style="color:#999"># Start Attaching process</span>
-    Device::Network.connect
+    Network.connect
 
     <span style="color:#999"># Attaching process is unblocking, for this sample let's wait until return something</span>
     iRet = <span style="color:#0d0">1</span>
     <b>while</b>(iRet == <span style="color:#0d0">1</span>)
-      iRet = Device::Network.connected?
+      iRet = Network.connected?
     <b>end</b>
   <b>end</b>
 
   <b>def</b> test_sample_network_ping
     test_sample_network_attach
-    Device::Network.ping(<span style="color:#0ad">"cloudwalk.io"</span>, <span style="color:#0d0">8000</span>)
+    Network.ping(<span style="color:#0ad">"cloudwalk.io"</span>, <span style="color:#0d0">8000</span>)
   <b>end</b>
 
   <b>def</b> test_sample_network_disconnect
     test_sample_network_attach
-    puts <span style="color:#0ad">"Disconnect <span style="color:#a0d">#{Device::Network.disconnect}</span>"</span>
+    puts <span style="color:#0ad">"Disconnect <span style="color:#a0d">#{Network.disconnect}</span>"</span>
   <b>end</b>
 <b>end</b>
 </code></pre>
@@ -59,11 +59,24 @@ ping a given host, and the
 connection.
 </p>
 
+<p>
+The main things to observe from the previous code are those lines
+where we use the <code>Network</code> class. It's important to
+note that this class belongs to the <code>Device</code> class, so
+without defining our Main class with
+<code>class Main < Device</code>
+we would have to access the Network methods using the two colon syntax:
+<code>Device::Network.ping(<span style="color:#0ad">"cloudwalk.io"</span>, <span style="color:#0d0">8000</span>)</code>
+.
+</p>
+
+<p>
+All the <b>Device::Network</b> class methods are available
+<a href="https://github.com/cloudwalkio/da_funk/blob/master/lib/device/network.rb">here</a>.
+</p>
+
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Customizing your application", "cli/change-app") %>
-  </li>
-  <li class="next">
-    <%= link_to("Using the Network" + " &rarr;", "cli/network") %>
+    <%= link_to("&larr; " + "Hello World", "cli/hello-world") %>
   </li>
 </ul>
