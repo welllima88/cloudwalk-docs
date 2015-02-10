@@ -99,7 +99,7 @@ h3 {
   font-style: normal;
   font-variant: normal;
   font-weight: lighter;
-  height: 25px;
+  min-height: 25px;
   line-height: 25px;
   color: #333;
 }
@@ -525,17 +525,17 @@ p.note {
   border-radius: 50em;
 }
 
-.search-listing {
+.search-listing, .faq-listing {
   list-style: none;
 }
 
-.search-listing li {
+.search-listing li, .faq-listing li {
   font-size: 13px;
   font-weight: bold;
   margin: 20px 0 0 -25px;
 }
 
-.search-listing li:first-child {
+.search-listing li:first-child, .faq-listing li:first-child {
   margin-top: 20px;
 }
 
@@ -543,6 +543,14 @@ p.note {
   background: url("../img/icon_sprite_16.png") no-repeat;
   background-position: left 4px;
   padding: 4px 0 4px 22px;
+  text-decoration: none !important;
+}
+
+.faq-listing li a {
+  background: url("../img/double-arrows.png") no-repeat;
+  background-size: 10px;
+  background-position: left 3px;
+  padding-left: 20px;
   text-decoration: none !important;
 }
 
