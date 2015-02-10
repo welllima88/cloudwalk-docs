@@ -52,6 +52,19 @@ check their behavior using the CLI, but to un tests, use the
 commands as they appear in <code>rake -T</code>.
 </p>
 
+<p>
+The main implemented <code>rake</code> functionalities are the
+following:
+</p>
+
+<ul>
+  <li><b><code>rake build</code>:</b>            Compiles an app and it's resources into files of extension <code>.mrb</code>.</li>
+  <li><b><code>rake clean</code>:</b>            Cleans the previous rake actions.</li>
+  <li><b><code>rake test:all</code>:</b>         Run all tests.</li>
+  <li><b><code>rake test:integration</code>:</b> Run only the integration tests.</li>
+  <li><b><code>rake test:unit</code>:</b>        Run only the unit tests.</li>
+</ul>
+
 <ul class="pager">
   <li class="previous">
     <%= link_to("&larr; " + "Creating a new application", "cli/new-app") %>
