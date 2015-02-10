@@ -531,7 +531,7 @@ p.note {
 
 .search-listing li, .faq-listing li {
   font-size: 13px;
-  font-weight: bold;
+  font-weight: normal;
   margin: 20px 0 0 -25px;
 }
 
@@ -547,7 +547,7 @@ p.note {
 }
 
 .faq-listing li a {
-  background: url("../img/double-arrows.png") no-repeat;
+  background: url("../img/double-arrows.jpg") no-repeat;
   background-size: 10px;
   background-position: left 3px;
   padding-left: 20px;
@@ -560,11 +560,18 @@ p.note {
 }
 
 .anchor {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 40px 0 15px 0;
+  font-weight: normal;
+}
 
+.faq p {
+  font-size: 14px;
 }
 
 .anchor:hover {
-  background: url("../img/anchor.png") no-repeat;
+  background: url("../img/anchor.jpg") no-repeat;
   background-size: 16px;
   background-position: 0 3px;
   padding-left: 25px;
@@ -573,7 +580,7 @@ p.note {
 }
 
 .anchor a {
-  color: #333;
+  color: #636b72;
 }
 
 .anchor a:hover {
