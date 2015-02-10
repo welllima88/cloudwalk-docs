@@ -38,7 +38,7 @@ are limited, but it's highly useful for testing. Use
 </table>
 </p>
 
-<p>
+<p class="note">
 <b>About <code>cloudwalk run</code>:</b>
 This command is intended to work like
 <code>mruby -b</code>, so if you emulate your apps with it it
@@ -47,9 +47,12 @@ just quit if you have nothing to run outside of the Main class.
 </p>
 
 <p>
-You can add <code>Main.call</code> at the end of your scripts to
-check their behavior using the CLI, but to un tests, use the
-commands as they appear in <code>rake -T</code>.
+A <code>cloudwalk emulate</code> call will work right away, but
+if you don't want to use the graphical UI, you might want to use
+<code>cloudwalk run</code>, therefore you will have to add
+<code>Main.call</code> at the end of your scripts, or use a test
+file at the <i>test</i> folder inside your app. To un tests, use
+the commands as they appear in <code>rake -T</code>.
 </p>
 
 <p>
