@@ -4,6 +4,7 @@ require "sinatra"
 require "newrelic_rpm"
 require "sinatra/content_for"
 require "sinatra/partial"
+require "stringex"
 require "i18n"
 require "i18n/backend/fallbacks"
 require "rack-ssl-enforcer"
@@ -90,6 +91,10 @@ end
 helpers do
   def link_to(name, url)
     "<a href='/#{I18n.locale}/#{url}'>#{name}</a>"
+  end
+
+  def slugged_id(str)
+    str.to_url
   end
 
   def is_group_active?(group)
