@@ -559,6 +559,28 @@ p.note {
   background-position: 5px -73px;
 }
 
+.anchor {
+
+}
+
+.anchor:hover {
+  background: url("../img/anchor.png") no-repeat;
+  background-size: 16px;
+  background-position: 0 3px;
+  padding-left: 25px;
+  margin-left: -25px;
+  cursor: pointer;
+}
+
+.anchor a {
+  color: #333;
+}
+
+.anchor a:hover {
+  text-decoration: none;
+  color: auto;
+}
+
 /* Override Bootstrap .close class */
 .rainbow .close {
   float: none;
