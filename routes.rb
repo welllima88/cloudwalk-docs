@@ -62,6 +62,15 @@ class Routes
       { "url" => "cli/change-app",                                       "view_path" => "cli/tutorial_5_change_app"},
       { "url" => "cli/hello-world",                                      "view_path" => "cli/tutorial_6_hello_world"},
       { "url" => "cli/network",                                          "view_path" => "cli/tutorial_7_network"},
+      { "url" => "cli/transactions",                                     "view_path" => "cli/tutorial_8_transactions"},
+      { "url" => "cli/downloads",                                        "view_path" => "cli/tutorial_9_downloads"},
+      { "url" => "cli/down-params",                                      "view_path" => "cli/tutorial_10_download_parameters_file"},
+      { "url" => "cli/down-apps",                                        "view_path" => "cli/tutorial_11_download_applications"},
+      { "url" => "cli/magnetic",                                         "view_path" => "cli/tutorial_12_magnetic"},
+      { "url" => "cli/rakefile",                                         "view_path" => "cli/tutorial_13_rakefile"},
+      { "url" => "cli/gems",                                             "view_path" => "cli/tutorial_14_gems"},
+      { "url" => "cli/tests",                                             "view_path" => "cli/tutorial_15_tests"},
+      { "url" => "cli/logs",                                             "view_path" => "cli/tutorial_16_logs"},
     ]
   end
 
