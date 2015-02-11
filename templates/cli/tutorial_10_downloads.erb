@@ -1,0 +1,81 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for CloudWalk's CLI">
+<% end %>
+
+<h1>CloudWalk's CLI - Downloading files</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p>
+Most applications need to download resources, CloudWalk.io
+provides you with a simple hosting platform for files
+(find out how to use it <a href="https://docs.cloudwalk.io/en/walk-manager/assets">here</a>)
+that you can use to save files, images and other resources.
+</p>
+
+<p>
+From the Ruby API we've provided, to download files requires you
+need to get attached to the network and later request the file,
+it goes as follows:
+</p>
+
+<pre><code><b>class</b> Main < Device
+  <b>def</b> self.call
+    test_sample_network_attach
+
+    remote_path = <span style="color:#0ad">"remote_image_path.jpg"</span>
+    local_path  = <span style="color:#0ad">"local_image_path.jpg"</span>
+
+    <span style="color:#999"># Here we download the file</span>
+    Device::Transaction::Download.request_file(remote_image_path, local_image_path)
+
+    <span style="color:#999"># Disconnecting from the network</span>
+    Network.disconnect
+  <b>end</b>
+
+  <b>def</b> test_sample_network_attach
+    <span style="color:#999"># Initialize hardware with configurations</span>
+    Network.init(<span style="color:#0d0">:gprs</span>, <span style="color:#0d0">apn:</span> <span style="color:#0ad">'claro.com.br'</span>, <span style="color:#0d0">user:</span> <span style="color:#0ad">'claro.com.br'</span>, <span style="color:#0d0">pass:</span> <span style="color:#0ad">'claro.com.br'</span>)
+    <span style="color:#999"># Start Attaching process</span>
+    Network.connect
+
+    <span style="color:#999"># Attaching process is unblocking, for this sample let's wait until return something</span>
+    iRet = <span style="color:#0d0">1</span>
+    <b>while</b>(iRet == <span style="color:#0d0">1</span>)
+      iRet = Network.connected?
+    <b>end</b>
+  <b>end</b>
+<b>end</b>
+</code></pre>
+
+<p>
+As you see, this is far from misterious, the critical line is:
+<code>Device::Transaction::Download.request_file(remote_image_path, local_image_path)</code>,
+after that you'll be able to access your file by reading it with
+something like:
+</p>
+
+<pre><code>local_path = <span style="color:#0ad">"poem.txt"</span>
+
+file = File.new(local_path, "r")
+<b>while</b> (line = file.gets)
+  <span style="color:#999"># Here we do something with the file's lines.</span>
+  <b>puts</b> line
+<b>end</b>
+file.close
+</code></pre>
+
+<p>
+In another example, you could use
+<code>Device:Display.print_bitmap</code> to show a bitmap image
+file into the screen.
+</p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "Making transactions", "cli/transactions") %>
+  </li>
+  <li class="next">
+    <%= link_to("Downloading parameters files" + " &rarr;", "cli/down-params") %>
+  </li>
+</ul>

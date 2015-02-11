@@ -1,0 +1,60 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for CloudWalk's CLI">
+<% end %>
+
+<h1>CloudWalk's CLI - The Screen and the Printer</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p>
+In a POS terminal, you will be using two resources to present
+information to the users, here we will show you a simple way to
+do it using Ruby.
+</p>
+
+<h2>Screen</h2>
+
+<p>
+To work with the Screen, you can use the <code>puts</code> global
+function, but for extra control on the output use the
+<code>Device::Display</code> class and it's methods, which are
+the following:
+</p>
+
+<ul>
+  <li><code>Display.print(buf, row, column)</code>: lets you display content on the screen with a custom row and line.</li>
+  <li><code>Display.puts(buf, row, column)</code>: It's the same as <code>Display.print</code> but it adds a new line at the end.</li>
+  <li><code>Display.puts(buf, row, column)</code>: It's the same as <code>Display.print</code> but it adds a new line at the end.</li>
+  <li><code>Display.print_bitmap(path, row, column)</code>: Display bitmap images in the device's screen.</li>
+  <li><code>Display.clear(line)</code>: Clears a line of the screen if the line is specified, otherwise clears all the screen.</li>
+</ul>
+
+<h2>Printer</h2>
+
+<p>
+To work with the Printer, you are required to interact with the
+<code>Device::Printer</code> class and it's methods, which are
+the following:
+</p>
+
+<ul>
+  <li>
+    <code>Printer.print(buf, option)</code>:
+    prints the given line, the options vary between:
+    <code><span style="color:#0d0">:big</span></code>, which prints the line in a bigger font;
+    <code><span style="color:#0d0">:bar_code</span></code>, which prints a bar code;
+    <code><span style="color:#0d0">:bitmap</span></code>, which prints bitmap images.
+  </li>
+  <li><code>Printer.puts(buf, row, column)</code>: It's the same as <code>Printer.print</code> but it adds a new line at the end.</li>
+  <li><code>Printer.paper?</code>: Returns true if the system has paper to print on.</li>
+  <li><code>Printer.paperfeed</code>: Sends a signal to the printer by adding blank lines on the ticket.</li>
+</ul>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "Hello World", "cli/hello-world") %>
+  </li>
+  <li class="next">
+    <%= link_to("Using the Network" + " &rarr;", "cli/network") %>
+  </li>
+</ul>
