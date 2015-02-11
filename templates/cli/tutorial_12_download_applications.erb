@@ -6,13 +6,20 @@
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p class="note">
-Page under construction.
+<p>
+To download and execute applications, you simply follow our
+download process and then load the application as you normally do
+in ruby, as follows:
 </p>
+
+<pre><code><b>if</b> Device::Transaction::Download.request_file(<span style="color:#0ad">"show.rb"</span>, <span style="color:#0ad">"show.mrb"</span>)
+  <b>load</b> <span style="color:#0ad">"show.mrb"</span>
+<b>end</b>
+</code></pre>
 
 <ul class="pager">
   <li class="previous">
-    <%= link_to("&larr; " + "Downloading parameters files", "cli/down-params") %>
+    <%= link_to("&larr; " + "Downloading files", "cli/downloads") %>
   </li>
   <li class="next">
     <%= link_to("Reading Magnetic Cards" + " &rarr;", "cli/magnetic") %>

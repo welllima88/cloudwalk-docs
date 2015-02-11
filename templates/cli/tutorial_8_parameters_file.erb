@@ -1,0 +1,55 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Tutorial for CloudWalk's CLI">
+<% end %>
+
+<h1>CloudWalk's CLI - Parameters files</h1>
+
+<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
+
+<p>
+You also might want to use files with a format that could be easy
+to parse in order to retrieve information in an easy way, so you
+could look to formats and some code to parse them, but here at
+CloudWalk we like make it simple, we provide you with a format
+for files with keys and values, this format has been with us for
+many years under our POSXML environment, we called it
+<a href="https://docs.cloudwalk.io/en/posxml/file-system">file system</a>,
+so now is available in Ruby.
+</p>
+
+<p>
+To create your own key/value files or parse them, you'll need to
+interact with the <code>FileDb</code> class.
+Let's start creating a simple file:
+</p>
+
+<pre><code>file = FileDb.new(<span style="color:#0ad">"new_params_file.dat"</span>)
+file[<span style="color:#0ad">"key1"</span>] = <span style="color:#0ad">"key one"</span>
+file[<span style="color:#0ad">"key2"</span>] = <span style="color:#0ad">"key two"</span>
+</code></pre>
+
+<p>
+The method <code>FileDb.new</code> initializes the file object,
+which is accessible like an array, using brackets, once you
+change one key and value, the file is immediatly changed, so at
+the end you can output it's contents and you'll see the changes
+applied. As a proof of concept, after the previous code, we can
+read and output the files contents with:
+</p>
+
+<pre><code><b>puts</b> File.open(<span style="color:#0ad">"new_params_file.dat"</span>).read
+</code></pre>
+
+<p>And we'll be able to see:</p>
+
+<pre><code>key1=key one\nkey2=key two\n
+</code></pre>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + "The Screen and the Printer", "cli/screen-printer") %>
+  </li>
+  <li class="next">
+    <%= link_to("Using the Network" + " &rarr;", "cli/network") %>
+  </li>
+</ul>

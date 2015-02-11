@@ -6,9 +6,17 @@
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p class="note">
-Page under construction.
+<p>
+To read a magnetic card, simply use the method:
+<code>Device::IO.read_card(timeout)</code>, the timeout is in
+milliseconds, and it returns an object with the tracks available
+using symbols, as follows:
 </p>
+
+<pre><code><b>puts</b> <span style="color:#0ad">"Pass Card..."</span>
+card =  Device::IO.read_card(5000)
+<b>puts</b> <span style="color:#0ad">"Track1 <span style="color:#a0d">#{card[<span style="color:#0d0">:track1</span>]} Track2:#{card[<span style="color:#0d0">:track2</span>]} Track3:#{card[<span style="color:#0d0">:track3</span>]}</span>"</span>
+</code></pre>
 
 <ul class="pager">
   <li class="previous">
