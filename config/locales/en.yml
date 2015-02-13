@@ -642,12 +642,12 @@ en:
       approved_devices:
         cloudwalk_reader: CloudWalk devices
         paragraph_1: The component WALK Framework, which is installed on devices, differs between various lines of equipments, since each device has its own specifications. If the equipment you want to use does not appear on the list below, <a href='https://www.cloudwalk.io/contact'>contact us</a>, because we might consider the approval of it.
-        paragraph_2: 'Currently, the following devices are approved by WALK Framework:'
+        paragraph_2: 'Currently, the following devices are approved by the WALK Framework:'
       contactless:
-        paragraph_1: 'CloudWalk also offers the possibility of using the contactless technology with all devices with built-in native contactless, and also through the pinpads <strong>1000 SE CTLS</strong> (VeriFone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
-      description: 'The WALK Framework is a virtual machine that has the ability to interpret the commands of POSXML language. Currently, the following devices are approved by WALK Framework: VeriFone Verix Line, VeriFone Evo Line, Ingenico Telium 2 Line.'
+        paragraph_1: 'CloudWalk also offers the possibility to use the contactless technology on all devices with built-in native contactless, and also works through the pinpads <strong>1000 SE CTLS</strong> (VeriFone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
+      description: 'The WALK Framework is a virtual machine that has the ability to interpret the commands of the POSXML language. Currently, the following devices are approved by the WALK Framework: VeriFone Verix Line, VeriFone Evo Line, Ingenico Telium 2 Line.'
       overview:
-        paragraph_1: The WALK Framework, installed directly on the device, is a virtual machine that has the ability to interpret the commands of POSXML language.
+        paragraph_1: The WALK Framework, installed directly on the device, is a virtual machine that has the ability to interpret the commands of the POSXML language.
       table_of_contents:
         approved_devices: Approved devices
         overview: Presentation
