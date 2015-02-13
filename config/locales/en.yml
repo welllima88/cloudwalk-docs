@@ -449,13 +449,13 @@ en:
             item_10: A message indicating that the application was successfully registered should be be shown
             item_11: Copy the POSXML source code below (CTRL + C), click <strong>Edit source code</strong>, paste the previously copied code (CTRL + V) and click on <strong>Compile</strong>
             item_2: 'Select the first option: <strong>Applications</strong>'
-            item_3: Click the button: <strong>New application</strong>
+            item_3: 'Click the button: <strong>New application</strong>'
             item_4: 'Fill in the application name, for example: <strong>httpapp</strong>'
             item_5: Fill in the application description, for example <strong>Test with HTTP</strong>
             item_6: Fill in the authorizer with the URL <strong>http://http-echo.cloudwalk.io</strong>
             item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
             item_8: Fill <strong>HTTP</strong> in the display name in POS
-            item_9: Click the button: <strong>Register application</strong>
+            item_9: 'Click the button: <strong>Register application</strong>'
           posxml:
             comment_01: "The preconnect command attempts to connect the device on CloudWalk"
             comment_02: "Performs the transaction after connecting"
@@ -480,7 +480,7 @@ en:
             item_2: Click the button <strong>New logical number</strong>
             item_3: Fill in a logical number, for example <strong>0001</strong>
             item_4: Select the previously registered group (GROUP TEST) and click the button <strong>Register logical number</strong>
-          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow the following steps:'
+          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow these steps:'
         paragraph_1: 'The last step is to configure the WALK Manager. Follow the procedure:'
     tcp:
       description: One way to establish communication between CloudWalk service and a host authorizer is through TCP/IP. Example of use, configuring the device, compiling the application, configuring the WALK Manager, testing the communication.
@@ -564,7 +564,7 @@ en:
             item_2: Click the button <strong>New logical number</strong>
             item_3: Fill in a logical number, for example <strong>0001</strong>
             item_4: Select the previously registered group (GROUP TEST) and click the button <strong>Register logical number</strong>
-          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow the following steps:'
+          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow these steps:'
         paragraph_1: 'The last step is to configure the WALK Manager. Follow the procedure:'
   introduction:
     development_environment:
@@ -1990,7 +1990,7 @@ en:
     file_system:
       creating_and_editing_files:
         paragraph_1: The commands <a href='/posxml/commands/editfile' class='command'>editfile</a>, <a href='/posxml/commands/readfile' class='command'>readfile</a> and <a href='/posxml/commands/readfilebyindex' class='command'>readfilebyindex</a> can be used to work with this file type, based on keys and values, enabling a fast and efficient way to store static data on the device.
-        paragraph_2: 'We recommend using the utility EditDBFile to manipulate your WALK dbfile files. Follow the following procedure:'
+        paragraph_2: 'We recommend using the utility EditDBFile to manipulate your WALK dbfile files. Follow this procedure:'
         paragraph_3: Download the utility from  <a href='http://dl.cloudwalk.io/edit_db_file.zip'>http://dl.cloudwalk.io/edit_db_file.zip</a>
         paragraph_4: Unzip and run the package <strong>EditDbFileWalk.exe</strong>
         paragraph_5: Enter the path to the dat file and press the button <strong>Load</strong>
@@ -2394,7 +2394,7 @@ en:
             line_8: "www.cloudwalk.io/1"
         paragraph_1: 'After selecting the language (assuming you have selected <strong>English</strong>), the following screen appears:'
         paragraph_2: "This step is important, since in order to have access to CloudWalk, the device serial number should be registered on WALK Manager. Press <strong>OK</strong> to move to the next screen:"
-        paragraph_3: "The number <strong>123-456-789</strong> represents a fictitious serial number (an example), which should be used on WALK Manager's Device management section. Follow the following procedure:"
+        paragraph_3: "The number <strong>123-456-789</strong> represents a fictitious serial number (an example), which should be used on WALK Manager's Device management section. Follow this procedure:"
         paragraph_4: Access the WALK Manager through <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
         paragraph_5: Select the section <a href='https://manager.cloudwalk.io/devices' target='_blank' class='external'>Devices</a>
         paragraph_6: Click the button <strong>Grant access to a new device</strong>
@@ -2424,8 +2424,8 @@ en:
         paragraph_1: "The second step refers to the logical number registration process:"
         paragraph_2: Access the WALK Manager through <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
         paragraph_3: Select the section <a href='https://manager.cloudwalk.io/logical_numbers' target='_blank' class='external'>Logical numbers</a>
-        paragraph_4: Click the button: <strong>New logical number</strong>
-        paragraph_5: Enter the logical number (for example 0001) and click the button: <strong>Register logical number</strong>
+        paragraph_4: 'Click the button: <strong>New logical number</strong>'
+        paragraph_5: 'Enter the logical number (for example 0001) and click the button: <strong>Register logical number</strong>'
       step_3:
         posxml:
           screen_1:
@@ -2489,14 +2489,14 @@ en:
       deprecated: "<strong>Telium 1</strong> (EFT930G and EFT930S) has been deprecated and therefore has no EMV support anymore. The POS terminals can still be used, but they are not allowed to perform financial transactions (Visa, Master, etc). <a href='http://www.emvco.com/approvals.aspx?id=215#I'>More ≫</a>"
       loading_the_framework:
         paragraph_1: 'The models <strong>EFT930G</strong> and <strong>EFT930S</strong> have an entry for an USB adapter on the left side of the terminal. Connect the USB adapter on the entry and then connect the USB stick on the other end, as the picture below:'
-        paragraph_2: 'Then follow the following procedure:'
+        paragraph_2: 'Then follow this procedure:'
         paragraph_3: Restart the terminal holding the key <strong>F4</strong>. The terminal should display the message <strong>USB MASS STORAGE</strong>
         paragraph_4: Wait a few seconds until the terminal show the directory WALK on display
         paragraph_5: Wait for the WALK Framework loading process
         paragraph_6: 'When finished, the terminal will display the following screen:'
         paragraph_7: Then will be presented the first launch setup.
       preparing_the_pendrive:
-        paragraph_1: 'To build the WALK Framework setup on an USB stick, follow the following procedure:'
+        paragraph_1: 'To build the WALK Framework setup on an USB stick, follow this procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the USB stick
         paragraph_4: Extract the WALK Framework package that was downloaded at the beginning of this tutorial
@@ -2523,7 +2523,7 @@ en:
       loading_the_framework:
         paragraph_1: '<strong>ICT220 </strong> and <strong>ICT250</strong> Models contain a USB input located on the bottom of the device, plug in your USB stick as in the picture:'
         paragraph_2: 'IWL220, IWL250 and IWL280 models already have an entry for an USB adapter on the left side of the device. Connect the USB and then connect the USB on the other end, as the image below:'
-        paragraph_3: 'Then follow the following procedure:'
+        paragraph_3: 'Then follow this procedure:'
         paragraph_4: Restart the device and hold <strong>F4</strong> button. The device will display the message <strong>USB MASS STORAGE</strong>
         paragraph_5: Wait a few seconds until the device show the WALK directory on display
         paragraph_6: Select the WALK directory pressing <strong>GREEN</strong>
@@ -2532,7 +2532,7 @@ en:
         paragraph_9: Then will be presented the first launch setup.
       preparing_the_pendrive:
         macosx: <strong>Mac OS X users:</strong> To avoid problems with hidden files when unzipping the WALK Framework package, it is recommended to use the free app <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external' target='_blank'>iZip Archiver</a> to uncompress the package.
-        paragraph_1: 'To mount WALK Framework package on pendrive, follow the following procedure:'
+        paragraph_1: 'To mount WALK Framework package on pendrive, follow this procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the pendrive
         paragraph_4: Extract the WALK Framework downloaded at the beginning of this tutorial
@@ -2589,7 +2589,7 @@ en:
       preparing_the_device_usb:
         paragraph_1: 'After turning on the terminal and after displaying the splash screen that displays the version of the operating system, the following screen should be shown:'
       preparing_the_pendrive:
-        paragraph_1: 'To mount WALK Framework package on pendrive, follow the following procedure:'
+        paragraph_1: 'To mount WALK Framework package on pendrive, follow this procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the pendrive (format FAT32)
         paragraph_4: 'Unzip the downloaded WALK Framework package'
@@ -2678,19 +2678,19 @@ en:
         paragraph_9: Press the green button (OK) to select the type of download.
   walk_manager:
     apps:
-      description: The concept of Application in WALK Manager defines the applications available for use by devices. How to submit an application in 3 steps.
+      description: The concept of Application in the WALK Manager defines the applications available for use by devices. How to submit an application in 3 steps.
       functionality:
-        paragraph_1: The concept of <strong>Application</strong> in WALK Manager, as its name suggests, defines the applications available for use by devices.
+        paragraph_1: The concept of <strong>Application</strong> in the WALK Manager, as its name suggests, defines the applications available to run on the devices.
         paragraph_2: These applications in practice are generated by the <a href='/introduction/development-environment'>CloudWalk IDE</a>, whenever a <a href='/introduction/posxml'>POSXML</a> application is compiled.
       interface:
-        paragraph_1: 'To submit an application, just follow the following procedure:'
-        paragraph_2: Click the menu <strong>Applications</strong>.
+        paragraph_1: 'To submit an application, just follow this procedure:'
+        paragraph_2: In the WALK Manager, click the menu <strong>Applications</strong>.
         paragraph_3: Click the <strong>New Application</strong> button.
         paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Name</strong> is a unique reference on the system (attention to naming rule)
         paragraph_6: <strong>Brief Description</strong> is a name used to identify the application in WALK Manager
         paragraph_7: <strong>Authorizer IP address or URL</strong> is the address of the authorization server
-        paragraph_8: <strong>Application should be displayed in the menu of services.</strong> Define whether or not the application will appear on the device screen. If this option is selected, it is also necessary to set the name that will be displayed
+        paragraph_8: <strong>Application should be displayed in the menu of services.</strong> Define whether or not the application will appear on the device screen. If this option is selected, it is also necessary to set the name that will be displayed.
       table_of_contents:
         functionality: Functionality
         interface: Interface presentation
@@ -2701,10 +2701,10 @@ en:
         paragraph_1: 'Any file that is different from a POSXML application can be sent to the device through this functionality, using the command <a href=''/posxml/commands/downloadfile'' class=''command''>downloadfile</a>. Examples of files that can be sent:'
         paragraph_2: <strong>Pictures:</strong> Logo for the device screen or for the printed ticket
         paragraph_3: <strong>Texts:</strong> message files, names, etc.
-        paragraph_4: What can be unzipped directly on the POS
-        paragraph_5: Before updating a file, <strong>clean your browser's cache</strong>, to prevent sending old version of the file (maintained by the browser).
+        paragraph_4: Anything that could be unzipped directly on the POS.
+        paragraph_5: Before updating a file, <strong>clean your browser's cache</strong>, to prevent sending old version of the file that could be maintained by the browser.
       interface:
-        paragraph_1: 'To submit a file, just follow the following procedure:'
+        paragraph_1: 'To submit a file, just follow this procedure:'
         paragraph_2: Click the menu <strong>File</strong>.
         paragraph_3: Click the <strong>New File</strong> button.
         paragraph_4: 'Fill in the form:'
@@ -2719,7 +2719,7 @@ en:
       functionality:
         paragraph_1: For safety reasons, by default, a device cannot access CloudWalk. To allow a particular device to connect with CloudWalk servers, it is first necessary to grant access to this device, and this proccess is made through this feature.
       interface:
-        paragraph_1: 'To grant access to a device, just follow the following procedure:'
+        paragraph_1: 'To grant access to a device, just follow this procedure:'
         paragraph_2: Click the menu <strong>Devices</strong>.
         paragraph_3: Click the <strong>Grant access to a new device</strong> button.
         paragraph_4: 'Fill in the form:'
@@ -2737,16 +2737,16 @@ en:
         paragraph_2: <strong>Interface of Logical Numbers:</strong> Where logical numbers are registered and associated in groups;
         paragraph_3: <strong>Interface of Groups:</strong> Where applications are associated.
       interface:
-        paragraph_1: 'To register a group, please follow the following procedure:'
+        paragraph_1: 'To register a group, please follow this procedure:'
         paragraph_2: Click the menu <strong>Groups</strong>.
         paragraph_3: Click the <strong>New Group</strong> button.
         paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Group Name</strong> is the group identification
       parameters:
-        paragraph_1: It is possible to add parameters to a group. For example, the group <strong>AREA 51</strong> has several logical numbers and sales application. This group then has a parameter called <strong>SPECIAL_TICKET</strong>, with the value <strong>1</strong>. Thus, all devices belonging to this group inherit this parameter.
-        paragraph_2: Logic of sales application makes a validation on the parameter <strong>SPECIAL_TICKET</strong>, and since value is <strong>1</strong>, the application prints a special ticket, with additional company information for purposes of disclosure.
+        paragraph_1: It is possible to add parameters to a group. For example, the group <strong>AREA 51</strong> has several logical numbers and sales applications. This group then has a parameter called <strong>SPECIAL_TICKET</strong>, with the value <strong>1</strong>. Thus, all the devices belonging to this group inherit this parameter.
+        paragraph_2: The logic of the sales application makes a validation on the parameter <strong>SPECIAL_TICKET</strong>, and since the value is <strong>1</strong>, the application prints a special ticket, with additional company information for purposes of disclosure.
         paragraph_3: After long analysis by the strategic team, they came to the conclusion that the cost of printing this special, more detailed ticket, is not worth it. Analysts then decided to change the parameter <strong>SPECIAL_TICKET</strong> value from <strong>1</strong> to <strong>0</strong>. Ready! Now all devices belonging to the group <strong>AREA 51</strong> will no longer print the special tickets.
-        paragraph_4: In order of preference, parameter of a logical number overlaps the parameter of a group.
+        paragraph_4: In order of preference, the parameter of a logical number overlaps the parameter of a group.
       table_of_contents:
         functionality: Functionality
         interface: Interface presentation
@@ -2755,31 +2755,31 @@ en:
     logical_numbers:
       description: Logical Number is the device ID, and is directly associated with a Group. How to register a logical number and add parameters to it.
       functionality:
-        paragraph_1: 'The logical <strong>Number</strong> is the ID of the device, and is directly associated with a <strong>Group</strong>. The logical number is referenced in two distinct stages, which are:'
+        paragraph_1: 'The <strong>Logical Number</strong> is the ID of the device, and is directly associated with a <strong>Group</strong>. The logical number is referenced in two distinct stages, which are:'
         paragraph_2: <strong>Interface of Logical Numbers:</strong> where logical numbers are registered and associated in groups.
         paragraph_3: <strong>Device:</strong> Accessing the setup menu of the POS, on the option <strong>Logical Number</strong>
         paragraph_4: Do not confuse <strong>Logical Number</strong> with <strong>Serial Number</strong>. The logical number is used to identify the device while the serial number is used to grant access to the device on the CloudWalk network.
       interface:
-        paragraph_1: 'To register a logical number, just follow the following procedure:'
+        paragraph_1: 'To register a logical number, just follow this procedure:'
         paragraph_2: Click the menu <strong>Logical Numbers</strong>.
         paragraph_3: Click the <strong>New logical number</strong> button.
         paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Logical number</strong> is the ID of the device
       parameters:
-        paragraph_1: You can add parameters to a logical number. For example, the logical number <strong>100022</strong> is used on the device on restaurant 'Chop Suey' of Mr. Li Hanzo. This logical number then has a parameter called <strong>NUM_PARCELS</strong>, with the value <strong>1</strong>.
-        paragraph_2: Logic of the sales application makes a validation on the parameter <strong>NUM_PARCELS</strong>, and since the value is <strong>1</strong>, the application offers only the payment option 'on cash'.
-        paragraph_3: The restaurant of Mr. Li, presenting excellent results, drew the attention of the strategic team of restaurants 'Chop Suey', and they decided to offer the possibility to Mr. Li to accept payment in installments. For this change, it is enough that someone from strategic staff alter the parameter <strong>NUM_PARCELS</strong> value from <strong>1</strong> to <strong>3</strong>. Ready!
+        paragraph_1: You can add parameters to a logical number. For example, the logical number <strong>100022</strong> is used on the device on the restaurant 'Chop Suey' of Mr. Li Hanzo. This logical number then has a parameter called <strong>NUM_PARCELS</strong>, with the value <strong>1</strong>.
+        paragraph_2: The logic of the sales application makes a validation on the parameter <strong>NUM_PARCELS</strong>, and since the value is <strong>1</strong>, the application offers only the payment option 'on cash'.
+        paragraph_3: The restaurant of Mr. Li, presenting excellent results, drew the attention of the strategic team of restaurants 'Chop Suey', and they decided to offer the possibility to Mr. Li to accept payment in installments. For this change, it is enough that someone from the strategic staff alters the parameter <strong>NUM_PARCELS</strong> value from <strong>1</strong> to <strong>3</strong>. Ready!
       table_of_contents:
         functionality: Functionality
         interface: Interface presentation
         parameters: Parameters
       title: WALK Manager - Logical numbers
     transactions_monitor:
-      description: The transaction monitor displays all the operations that have been performed. Just specify the record type in the search filters.
+      description: The transactions monitor displays all the operations that have been performed. Just specify the record type in the search filters.
       functionality:
-        paragraph_1: The transaction monitor displays all the operations that have been performed by devices. Just specify the record type in the search filters.
+        paragraph_1: The transactions monitor displays all the operations that have been performed by all your devices. You just need to specify the record type in the search filters.
       interface:
-        paragraph_1: 'To access the transaction monitor, just follow the following procedure:'
+        paragraph_1: 'To access the transactions monitor, just follow this procedure:'
         paragraph_2: Click the menu <strong>Monitor transactions</strong>.
         paragraph_3: Click the <strong>Filters</strong> button.
         paragraph_4: 'Specify the type of record:'
