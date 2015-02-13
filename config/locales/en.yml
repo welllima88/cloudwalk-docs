@@ -612,10 +612,10 @@ en:
     authorizer:
       description: Component responsible to validate the information provided by POS terminals.
       overview:
-        paragraph_1: 'Authorizer is the component responsible to verify and validate the information provided by POS terminals. The information that travels over the CloudWalk network follows the following flow:'
-        item_1: The <strong>Device</strong> captures the data and sends it to the <strong>CloudWalk Service</strong>;
-        item_2: The <strong>CloudWalk Service</strong> receives the data and forwards it to the <strong>Authorizer</strong>;
-        item_3: The <strong>Authorizer</strong> validates the data and sends a response to the <strong>CloudWalk Service</strong>;
+        paragraph_1: 'Authorizer is the component responsible of the verification and validation of the information provided by POS terminals. The information that travels over the CloudWalk network follows the following flow:'
+        item_1: The <strong>Device</strong> captures the data and sends it to the <strong>CloudWalk Service</strong>.
+        item_2: The <strong>CloudWalk Service</strong> receives the data and forwards it to the <strong>Authorizer</strong>.
+        item_3: The <strong>Authorizer</strong> validates the data and sends a response to the <strong>CloudWalk Service</strong>.
         item_4: Finally, the <strong>CloudWalk Service</strong> forwards the response to the <strong>Device</strong>.
       more_info:
         paragraph_1: The CloudWalk service is extremely flexible when it comes to the communication between POS terminals and the authorizer. Financial applications commonly uses the communication protocol <a href='http://en.wikipedia.org/wiki/ISO_8583' target="blank" class="external">ISO 8583</a>, but other patterns and standards can be used.
