@@ -314,7 +314,7 @@ en:
           strings: Number of declared string variables
       description: The CloudWalk IDE enables the application development for mobile devices using POSXML language.
       introduction:
-        paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment, also providing the innovative use of real-time collaboration, which means, multiple developers can work on the same application simultaneously.
+        paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment accessible to anyone using a web browser, it provides the innovative use of real-time collaboration, by which multiple developers can work on the same application simultaneously.
         paragraph_2: 'Meet the CloudWalk IDE interface:'
       real_time_colaboration:
         paragraph_1: Always working to increase developers productivity, we have incorporated this feature in our IDE (development environment). To start real-time collaboration, simply copy the <strong>complete</strong> URL of the CloudWalk IDE and share it with the developers that are going to work together.
@@ -573,7 +573,7 @@ en:
         overview: overview
         paragraph_1: 'More information available at '
       overview:
-        paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment, also providing the innovative use of real-time collaboration, which means, multiple developers can work on the same application simultaneously.
+        paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment accessible to anyone using a web browser, it provides the innovative use of real-time collaboration, by which multiple developers can work on the same application simultaneously.
       table_of_contents:
         more_info: More information
         overview: Presentation
