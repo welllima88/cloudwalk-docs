@@ -580,18 +580,18 @@ en:
       title: Development environment
     index:
       benefits:
-        feature_1: — Free and unlimited licenses for all your devices:</strong> do not worry about license costs or activation equipment.
+        feature_1: — Free and unlimited licenses for all your devices:</strong> no more worries about costs for licenses or activation equipments.
         feature_2: — Easy preparation:</strong> installation, configuration and testing done directly by the retailer.
-        feature_3: — Full EMV support:</strong> use the full potential of chip cards.
-        feature_4: — Multi application:</strong> various applications running on one device.
-        feature_5: — Multi device:</strong> Your application will be always ready to run on any approved device.
+        feature_3: — Full EMV support:</strong> unlock the full potential of chip cards with our certified technology.
+        feature_4: — Multi application:</strong> achieve many business goals in a single device.
+        feature_5: — Multi device:</strong> Your applications will be always ready to run on any approved device.
         feature_6: — <em>Contactless</em> technology:</strong> innovation, agility and practicality using contactless payments.
-        feature_7: — Rapid development:</strong> quickly and easily develop applications with POSXML.
+        feature_7: — Rapid development:</strong> build payment applications quickly with our POSXML environment.
         feature_8: — Remote update:</strong> update your devices remotely, without going into the field.
-        paragraph_1: 'The foundations of CloudWalk service are based on the quality of network services, cost minimization, agility in the applications development and logistical control of the devices updates, such as:'
+        paragraph_1: 'The foundations of the CloudWalk service are based on the quality of network services, the minimization of costs, the agility on the development of applications and the logistical control of the updates to the devices. Based on those premises, we provide:'
       description: CloudWalk is a SaaS based application platform for devices such as POS terminals and smartphones. The service offers hardware agnostic solution, which allows any application developed with CloudWalk to be compatible with all approved devices, offering many benefits, such as EMV and contactless technology.
       how_it_works:
-        paragraph_1: CloudWalk is a <a href='http://en.wikipedia.org/wiki/Software_as_a_service' target='blank' class='external'>SaaS</a> based application platform for devices such as POS terminals and smartphones. The service offers a <em>hardware agnostic</em> solution, which allows any application developed with CloudWalk to be compatible with all approved devices, offering many benefits, such as EMV and contactless technology.
+        paragraph_1: CloudWalk offers a Software as a Service (<a href='http://en.wikipedia.org/wiki/Software_as_a_service' target='blank' class='external'>SaaS</a>) based application platform for devices such as Point Of Sale (POS) terminals and smartphones. The service offers a <em>hardware agnostic</em> solution, which allows any application developed with CloudWalk to be compatible with all approved devices, offering many benefits, such as EMV and contactless technologies.
       markets:
         item_1: — Administrators/Card Processor
         item_10: — Among many other market segments
@@ -603,7 +603,7 @@ en:
         item_7: — Universities and Colleges
         item_8: — Payments companies
         item_9: — Public service companies (water, energy, gas, etc.)
-        paragraph_1: 'CloudWalk service is not limited to administration or processing credit or debit card, but it adheres to any market segment that might have a need to collect data in the field and issuing receipts and reports:'
+        paragraph_1: 'The CloudWalk service is not limited to administrators or to the processing of credit and debit cards, it is able to benefit any market segment that might have a need to collect data and to issue receipts and reports. Our service is good to:'
       table_of_contents:
         benefits: Advantages and benefits
         how_it_works: How it works
