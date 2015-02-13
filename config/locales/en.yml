@@ -654,13 +654,13 @@ en:
       title: WALK Framework
     walk_manager:
       api:
-        paragraph_1: All operations available through WALK Manager web interface can also be performed via JSON API by simply generating an API Token.
+        paragraph_1: All operations available through the WALK Manager web interface can also be performed using our JSON API which only requires an API Token.
         paragraph_2: More information on
-      description: WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. All operations available through WALK Manager web interface can also be performed via JSON API.
+      description: The WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. All operations available through WALK Manager web interface can also be performed via JSON API.
       how_to_access:
-        paragraph_1: Access to WALK Manager is done via Internet, using the address <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
+        paragraph_1: Access to the WALK Manager is granted via Internet, using the address <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
       overview:
-        paragraph_1: 'WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. Also through WALK Manager are made: users management and monitoring of transactions performed by devices.'
+        paragraph_1: 'WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. Through this environment you are also able to manage users and monitor the transactions performed by devices.'
       table_of_contents:
         api: API
         how_to_access: How to access
