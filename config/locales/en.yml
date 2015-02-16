@@ -1929,59 +1929,59 @@ en:
         manual_typing_not_allowed: Does not allow manual entry
         manual_typing_or_swap: Manual typing or pass
         option: Option
-        paragraph_1: 'Below variables of configuration config.dat file:'
-        parameter_1: <strong>autooffmodem</strong><br/> off the modem automatically after a connection
+        paragraph_1: 'Below are the variables of configuration available in the config.dat file:'
+        parameter_1: <strong>autooffmodem</strong><br/> offs the modem automatically after a connection.
         parameter_10: <strong>keystar</strong><br/> Key that will be used to put the <strong>*</strong> (asterisk). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
         parameter_11: '<strong>model</strong><br/> Model of the device, as shown below:'
-        parameter_12: <strong>mygateway</strong><br/> Gateway which will be used by the device. You need to set the Gateway to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used
-        parameter_13: <strong>myip</strong><br/> Device IP address. You must set the IP to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used
-        parameter_14: <strong>nomeaplicativo</strong><br/> Name of the application that will be pursued in WALK Manager
-        parameter_15: <strong>numerodestepos</strong><br/> Device Logical number
-        parameter_16: <strong>primeiravez</strong><br/> Indicates whether this is the first time the device is running an application POSXML
-        parameter_17: <strong>qtdetentativasenvio</strong><br/> Number of packages to be sent until there is confirmation by authorizer
-        parameter_18: <strong>retentativas</strong><br/> Number of retries to connect to CloudWalk service
-        parameter_19: <strong>sn_terminal</strong><br/> Device Serial number
-        parameter_2: <strong>crcpaginawalkserver</strong><br/> the application CRC on the WALK Manager
+        parameter_12: <strong>mygateway</strong><br/> Gateway which will be used by the device. You need to set the Gateway to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used.
+        parameter_13: <strong>myip</strong><br/> Device's IP address. You must set the IP to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used.
+        parameter_14: <strong>nomeaplicativo</strong><br/> Name of the application that will be pursued in the WALK Manager.
+        parameter_15: <strong>numerodestepos</strong><br/> Device's Logical number.
+        parameter_16: <strong>primeiravez</strong><br/> Indicates whether this is the first time the device is running a POSXML application.
+        parameter_17: <strong>qtdetentativasenvio</strong><br/> Number of packages to be sent until there is confirmation by authorizer.
+        parameter_18: <strong>retentativas</strong><br/> Number of retries to connect to the CloudWalk service.
+        parameter_19: <strong>sn_terminal</strong><br/> Device's Serial number.
+        parameter_2: <strong>crcpaginawalkserver</strong><br/> sets the application's CRC on the WALK Manager.
         parameter_20: <strong>subnet</strong><br/> Netmask. It is necessary to set the mask to <strong>255.255.255.255</strong> if the communication protocol <strong>PPP</strong> is used, if used <strong>DHCP</strong> is necessary to set the mask to <strong>0.0.0.0</strong>
-        parameter_21: <strong>timeoutinput</strong><br/> Timeout for all statements that use it
+        parameter_21: <strong>timeoutinput</strong><br/> Timeout for all statements that use it.
         parameter_22: '<strong>tiposcartao</strong><br/> Defines the rules for use of cards, according to the table below:'
         parameter_23: |-
           <strong>touchscreen</strong><br/>Enables or disables the virtual keyboard, if the device has touchscreen where: <pre>0 - Does not activate the virtual keyboard
           1 - Enables virtual keyboard</pre>
-        parameter_24: <strong>uclapn</strong><br/> APN of GPRS network
+        parameter_24: <strong>uclapn</strong><br/> APN of the GPRS network.
         parameter_25: |-
           <strong>uclmedia</strong><br/> Connection type to be used, and can be: <pre>LANDLINE
           ETHERNET
           GPRS
           WIFI</pre>
-        parameter_26: <strong>uclpassword</strong><br/> User password of RAS or APN (PPP)
-        parameter_27: <strong>uclphoneno</strong><br/>The number that the device is going to call;
+        parameter_26: <strong>uclpassword</strong><br/> User password of the RAS or the APN (PPP).
+        parameter_27: <strong>uclphoneno</strong><br/>The number that the device is going to call.
         parameter_28: |-
           <strong>uclprotocol</strong><br/>Communication protocol to be used, and can be: <pre>TCP
           SDLC</pre>
-        parameter_29: <strong>uclusername</strong><br/>Name of the user of RAS or APN (PPP);
-        parameter_3: <strong>dnsprimario</strong><br/> primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
-        parameter_30: <strong>uclwifikey</strong><br/>Password for the WIFI network we want to connect (hexadecimal)
-        parameter_31: <strong>uclwifinetwork</strong><br/>Name of the WIFI network we want to connect
+        parameter_29: <strong>uclusername</strong><br/>Name of the user of RAS or APN (PPP).
+        parameter_3: <strong>dnsprimario</strong><br/> sets the primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used.
+        parameter_30: <strong>uclwifikey</strong><br/>Password for the WIFI network we want to connect (hexadecimal).
+        parameter_31: <strong>uclwifinetwork</strong><br/>Name of the WIFI network we want to connect.
         parameter_32: |-
           <strong>uclwifisecurity</strong><br/>Types of encryption <pre>WEP64-40
           WEP128-104
           WPA2-PSK <strong>(for Vx680 only)</strong></pre>
-        parameter_33: <strong>versaoframework</strong><br/>WALK Framework version installed on the device
-        parameter_4: <strong>dnssecundario</strong><br/> secondary DNS will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
-        parameter_5: <strong>gprs_pin</strong><br/> PIN of GPRS card
+        parameter_33: <strong>versaoframework</strong><br/>WALK Framework version installed on the device.
+        parameter_4: <strong>dnssecundario</strong><br/> sets the secondary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used.
+        parameter_5: <strong>gprs_pin</strong><br/> PIN of the GPRS card.
         parameter_6: |-
           <strong>iskeytimeout</strong><br/> Used to identify what <a href='/posxml/commands/readkey ' class='command'>readkey </a> will return in case of timeout, where: <pre>0 - Disabled, readkey returns KEY_CANCEL on timeout.
           1 - Enabled readkey returns -1 on timeout.</pre>
-        parameter_7: <strong>keyalpha</strong><br/> Key that will be used to make <strong>alpha</strong> keyboard. Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
-        parameter_8: <strong>keypaperfeed</strong><br/> Key that will be used to make the <a href='/posxml/commands/paperfeed' class='command'>paperfeed</a>
-        parameter_9: <strong>keypound</strong><br/> Key that will be used to put the <strong>#</strong> (sharp). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
+        parameter_7: <strong>keyalpha</strong><br/> Key that is used to activate the <strong>alpha</strong> keyboard. Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
+        parameter_8: <strong>keypaperfeed</strong><br/> Key that is used to make the <a href='/posxml/commands/paperfeed' class='command'>paperfeed</a>
+        parameter_9: <strong>keypound</strong><br/> Key that is used to put the <strong>#</strong> (sharp). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
         pos_model: Device model
         reading_type: Reading type
         tracks: Tracks
       presentation:
-        paragraph_1: The WALK Framework has several variables of configuration, allowing the configuration of every device parameter through the POSXML language, like environment variables used by the application and equipment drivers such as modem and printer.
-        paragraph_2: Any of these parameters can be set with the help of the command <a href='/posxml/commands/editfile' class='command'>editfile</a>, pointing config.dat file, and using the name of these parameters as a key. File config.dat is nothing more than a file in the file system CloudWalk.
+        paragraph_1: The WALK Framework has several variables of configuration, allowing the customization of every device parameter through the POSXML language, like environment variables used by the application and equipment drivers such as modem and printer.
+        paragraph_2: Any of these parameters can be set with the help of the command <a href='/posxml/commands/editfile' class='command'>editfile</a>, pointing config.dat file, and using the name of these parameters as a key. File config.dat is nothing more than a file in the CloudWalk's file system.
         paragraph_3: You can configure any type of communication, retries, among other parameters and make logical reconnection backup through POSXML using the instructions <a href='/posxml/commands/editfile' class='command'>editfile</a> and <a href='/posxml/commands/preconnect' class='command'>preconnect</a>.
       table_of_contents:
         parameters_list: List of parameters
@@ -1993,8 +1993,8 @@ en:
         paragraph_2: 'We recommend using the utility EditDBFile to manipulate your WALK dbfile files. Follow this procedure:'
         paragraph_3: Download the utility from  <a href='http://dl.cloudwalk.io/edit_db_file.zip'>http://dl.cloudwalk.io/edit_db_file.zip</a>
         paragraph_4: Unzip and run the package <strong>EditDbFileWalk.exe</strong>
-        paragraph_5: Enter the path to the dat file and press the button <strong>Load</strong>
-        paragraph_6: Make the necessary changes and press the button <strong>Save</strong>
+        paragraph_5: 'Enter the path to the dat file and press the button: <strong>Load</strong>.'
+        paragraph_6: 'Make the necessary changes and press the button: <strong>Save</strong>.'
         paragraph_7: Register the <a href='/walk-manager/assets'>file in WALK Manager</a> and your devices can download it with command <a href='/posxml/commands/downloadfile' class='command'>downloadfile</a>
       description: The WALK Framework has a file system that can handle files of type WALK dbfile (text file in UNIX environments). Creating and editing files. Use the utility EditDBFile to manipulate WALK dbfile files.
       presentation:
@@ -2005,15 +2005,15 @@ en:
         presentation: Presentation
       title: POSXML - File System
     memory_and_variables:
-      description: The POSXML has the concept of variable types, where they can be of type string or integer. Limitations and parameter passing.
+      description: The POSXML language has the concept of variable types, where they can be of type string or integer. Limitations and parameter passing.
       introduction: The WALK Framework is responsible for running compiled POSXML application, and being installed on the device, assumes all responsibility for memory management and devices. Thus, to run an application on the device, just write a file in POSXML, compile it and send it to the device.
       limitations:
         paragraph_1: There is a limit of 511 variables per POSXML application, and 256 of type string with maximum size of 1K (1023 characters, of which one is used automatically by the platform to allocate the <span class='code'>\0</span>), and 255 of type integer.
-        paragraph_2: When you declare a variable with the commands <a href='/posxml/commands/integervariable' class='command'>integervariable</a> or <a href='/posxml/commands/stringvariable' class='command'>stringvariable</a>, it will be in memory of the application until the device is disconnected. For this reason, you must be careful to define on the beginning of the application all variables used and clean them for no errors occur during the execution of the application.
+        paragraph_2: When you declare a variable with the commands <a href='/posxml/commands/integervariable' class='command'>integervariable</a> or <a href='/posxml/commands/stringvariable' class='command'>stringvariable</a>, it will be in memory until the device is disconnected. For this reason, you must be careful to define on the beginning of the application all the variables that will be used and clean them later, so no error would occur during the execution of the application.
         paragraph_3: Currently there is a limit of 32K memory for loading compiled POSXML pages.
       parameters:
         paragraph_1: Every POSXML command owning a parameter whose name contains the word <span class='code'>variable</span>, for example, <span class='code'>variablereturn</span>, is required to pass a variable to that parameter.
-        paragraph_2: 'The assignment of variables is made with nomenclature <span class=''code''>$(VariableName)</span>, as can be seen below:'
+        paragraph_2: 'The assignment of variables is made with the nomenclature <span class=''code''>$(VariableName)</span>, as can be seen below:'
         paragraph_3: 'When the name of the parameter does not have the word variable, you can pass either a constant or a variable. The assignment is taken as constant in every programming language:'
         paragraph_4: In variables string, it is still possible to pass to the command only a snippet of the indexed variable, as in other programming languages, using pointers to variables.
         paragraph_5: 'In the example below, the following string would be displayed: <strong>H</strong>'
@@ -2026,23 +2026,23 @@ en:
         variable_types: Variable Types
       title: POSXML - Variables and memory
       variable_types:
-        paragraph_1: The POSXML has the concept of variable types, where they can be of type <strong>string</strong> or <strong>integer</strong>. Several POSXML commands require a variable type, which is described in the explanation of operation commands.
-        paragraph_2: You can convert variables of type <strong>integer</strong> to <strong>string</strong> and vice versa, by simply using the commands inttostring and stringtoint.
-        paragraph_3: Variables of type <strong>double</strong> (decimal floating point) can also be used by using variables of type string with decimal point separated by <strong>.</Strong> (point), and not by comma.
+        paragraph_1: The POSXML language has the concept of variable types, it offers two types by which you can store values and manipulate them across your entire application, those types are <strong>string</strong> or <strong>integer</strong>. Several POSXML commands require a variable type, which is described in the explanation of operation commands.
+        paragraph_2: You can convert variables of type <strong>integer</strong> to <strong>string</strong> and vice versa, by simply using the commands <code>inttostring</code> and <code>stringtoint</code>.
+        paragraph_3: Variables of type <strong>double</strong> (decimal floating point) can also be used by using string variables with decimal point separated by <code>.</code> (point), and not by <code>,</code> (comma).
     structure:
       case_sensitive:
-        paragraph_1: The POSXML is <em>case sensitive</em>, so there are differences between the lowercase and uppercase words. You need to pay attention, especially when naming functions and variables.
+        paragraph_1: The POSXML language is <em>case sensitive</em>, so there are differences between lowercased and uppercased words. You need to pay attention, especially when naming functions and variables.
         paragraph_2: 'Example:'
       comments:
         paragraph_1: 'Comments blocks should be used with tags <span class=''code''>&lt;!--</span> and <span class=''code''>--&gt;</span> as below:'
       description: Organization and Structure, Parent tag or root tags, Case sensitive, Reserved characters, Comments.
-      introduction: The POSXML follows the open standard <a href='http://en.wikipedia.org/wiki/XML' class='external'>XML</a>, widespread in the software industry. The XML standard is totally flexible and allows rapid expansion. All formatting rules applied to XML still exist in POSXML.
+      introduction: The POSXML language follows the open standard <a href='http://en.wikipedia.org/wiki/XML' class='external'>XML</a>, widespread in the software industry. The XML standard is totally flexible and allows rapid expansion. All formatting rules applied to XML still exist in POSXML.
       reserved_characters:
         paragraph_1: All reserved characters in XML are also reserved in POSXML and should be written in a right way.
-        paragraph_2: 'The following symbols should be written:'
+        paragraph_2: 'The following symbols on the left should be written as they appear on the right:'
         paragraph_3: 'To display a message with the symbol <span class=''code''>&lt;</span> (less than), the code would be like:'
       structure:
-        paragraph_1: The POSXML is organized and structured in the form of tags with levels and sublevels of commands that form the logical structure of the application POSXML. A tag can be identified when is located between the signs <span class='code'>&lt;</span> (less than) and <span class='code'>></span> (greater than), where they shall be opened and closed.
+        paragraph_1: The POSXML language is organized and structured in the form of tags with levels and sublevels of commands that form the logical structure of the application. A tag can be identified when is located between the signs <span class='code'>&lt;</span> (less than) and <span class='code'>></span> (greater than), where they shall be opened and closed.
         paragraph_2: 'Example:'
       table_of_contents:
         case_sensitive: Case sensitive
