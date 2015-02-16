@@ -303,7 +303,7 @@ en:
   development_environment:
     overview:
       compilation_console:
-        paragraph_1: 'It is on the compilation console that important information is displayed, such as the return of the compilation proccess: ''Compilation Succeeded!'' and additional application details:'
+        paragraph_1: 'Some important information is displayed in the compilation console, such as the return of the compilation proccess: ''Compilation Succeeded!'' and additional application details, as follows:'
         properties:
           base64: Compiled source code
           functions: Number of declared functions
@@ -317,7 +317,7 @@ en:
         paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment accessible to anyone using a web browser, it provides the innovative use of real-time collaboration, by which multiple developers can work on the same application simultaneously.
         paragraph_2: 'Meet the CloudWalk IDE interface:'
       real_time_colaboration:
-        paragraph_1: Always working to increase developers productivity, we have incorporated this feature in our IDE (development environment). To start real-time collaboration, simply copy the <strong>complete</strong> URL of the CloudWalk IDE and share it with the developers that are going to work together.
+        paragraph_1: In CloudWalk, we're always working on increasing developers productivity, therefore we have incorporated real-time collaboration in our IDE (development environment). To start with it, simply copy the <strong>complete</strong> URL of the project once open in the CloudWalk IDE and share it with the developers that are going to work together.
         paragraph_2: 'The image below demonstrates an example URL:'
       table_of_contents:
         compilation_console: Compilation console
@@ -333,8 +333,8 @@ en:
         printing: Printing
       introduction:
         paragraph_1: In order to increase productivity and to facilitate the development of POSXML applications, we have created an emulator that precisely reproduces the behavior of a POS terminal or a smartphone.
-        paragraph_2: The emulator runs directly on CloudWalk IDE, ie directly in a web browser, eliminating the need of any kind of installation or configuration.
-        paragraph_3: It's never been easier to develop for POS terminals and smarphones!
+        paragraph_2: The emulator runs directly on CloudWalk IDE (in a web browser), eliminating the need of any kind of installation or configuration.
+        paragraph_3: It has never been easier to develop applications for POS terminals!
       workflow:
         paragraph_1: A common task in any kind of development is to test the workflow of the application being developed. With CloudWalk IDE you can at any time press the <strong>Compile</strong> button, and then press the <strong>Emulator</strong> button to start the emulation.
         paragraph_2: "We have prepared a video for demonstration purposes, a simple Hello World with a pause between the messages that are displayed:"
