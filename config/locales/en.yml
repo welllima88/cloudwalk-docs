@@ -303,7 +303,7 @@ en:
   development_environment:
     overview:
       compilation_console:
-        paragraph_1: 'Some important information is displayed in the compilation console, such as the return of the compilation proccess: ''Compilation Succeeded!'' and additional application details, as follows:'
+        paragraph_1: 'Important information is displayed in the compilation console, such as the return of the compilation proccess: ''Compilation Succeeded!'' and additional application details, as follows:'
         properties:
           base64: Compiled source code
           functions: Number of declared functions
