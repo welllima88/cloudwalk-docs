@@ -13,6 +13,10 @@
 
 .navbar-container{ margin: 0 6px; }
 
+.navbar-inner {
+  border-radius: 0;
+}
+
 .navbar .nav {
   float: none;
   margin: 0;
@@ -56,7 +60,7 @@ body > .navbar {
 }
 
 #top {
-  margin-top: 45px;
+  margin-top: -17px;
   margin-bottom: 85px;
 }
 
