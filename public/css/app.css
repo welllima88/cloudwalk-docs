@@ -532,7 +532,7 @@ p.note {
 .search-listing li, .faq-listing li {
   font-size: 13px;
   font-weight: normal;
-  margin: 20px 0 0 -25px;
+  margin: 10px 0 0 -25px;
 }
 
 .search-listing li:first-child, .faq-listing li:first-child {
@@ -546,11 +546,14 @@ p.note {
   text-decoration: none !important;
 }
 
-.faq-listing li a {
+.faq-listing li {
   background: url("../img/double-arrows.jpg") no-repeat;
   background-size: 10px;
-  background-position: left 3px;
+  background-position: left 4px;
   padding-left: 20px;
+}
+
+.faq-listing li a {
   text-decoration: none !important;
 }
 
