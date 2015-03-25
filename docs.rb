@@ -93,8 +93,14 @@ helpers do
     "<a href='/#{I18n.locale}/#{url}'>#{name}</a>"
   end
 
-  def slugged_id(str)
-    str.to_url
+  def toc_item(text)
+    # Table of contents item
+    "<a href='##{text.to_url}'>#{text}</a>"
+  end
+
+  def toc_header(text)
+    # Table of contents header
+    "<h3 class='anchor' id='#{text.to_url}'>#{toc_item(text)}</h3>"
   end
 
   def is_group_active?(group)
