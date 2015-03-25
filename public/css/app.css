@@ -11,6 +11,10 @@
 
 #display { margin-top: 45px; }
 
+.table-condensed {
+  margin-top: 18px;
+}
+
 .navbar-container{ margin: 0 6px; }
 
 .navbar-inner {
