@@ -3015,7 +3015,7 @@ en:
         question_1: "What is the CloudWalk Manager?"
         answer_1: "The <a href='https://manager.cloudwalk.io'>CloudWalk Manager</a> is a tool used to grant access to devices, register applications, files, logical numbers and groups. It is also through this tool that user management and transactions monitoring is done."
         question_2: "How is the CloudWalk development environment?"
-        answer_2: "Further reading: <a href='/development-environment/overview'>IDE overview</a>"
+        answer_2: "Further reading: <a href='/en/development-environment/overview'>IDE overview</a>"
         question_3: "What is POSXML?"
         answer_3:
           paragraph_1: "POSXML (acronym for <strong>P</strong>oint <strong>O</strong>f <strong>S</strong>ale e<strong>X</strong>tended <strong>M</strong>arkup <strong>L</strong>anguage) is a programming language that is used to create applications for POS terminals."
@@ -3069,7 +3069,7 @@ en:
           paragraph_5: "Repeat the step above as you need, creating hidden apps for all your endpoints;"
           paragraph_6: "Now, on the main application (myapp.posxml), you can use the command <a href='/en/posxml/commands/execute' class='command'>execute</a>, which will execute one of your hidden apps, communicating with the desired endpoint."
         question_13: "The CloudWalk platform has an API?"
-        answer_13: "Yes! Check out the <a href='/api/overview'>API section</a> for more information."
+        answer_13: "Yes! Check out the <a href='/en/api/overview'>API section</a> for more information."
       communication:
         question_1: "Which communication types are supported?"
         answer_1: "That depends on the device, but in general, Ethernet, GPRS and dialed is supported."
