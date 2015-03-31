@@ -2091,7 +2091,7 @@ en:
         telium_1: "EFT930G and EFT930S"
         telium_2: "ICT220, ICT250, IWL220, IWL250 and IWL280"
     communication:
-      paragraph_1: Common local network (ethernet)
+      paragraph_1: Common local network (Ethernet)
       paragraph_2: Landline/dial-up (PPP)
       paragraph_3: Landline/dial-up (SDLC)
       paragraph_4: If your device does not show an option, for example, GPRS, it means that your device does not support that specific type of communication.
@@ -2954,16 +2954,15 @@ en:
         previous: "Patterns chart"
   help:
     faq:
-      description: "The monst frequently asked questions about CloudWalk"
+      description: "The most frequently asked questions about CloudWalk"
       title: "Frequently Asked Questions about CloudWalk"
       table_of_contents:
-        device: Device
-        development: Development
-        communication: Communication
-        manager: CloudWalk Manager
-        cloudwalk: Contracts and Services
+        device: "Device"
+        development: "Development"
+        communication: "Communication"
+        cloudwalk: "Contracts and Services"
       device:
-        question_1: How do I setup the device communication?
+        question_1: "How do I setup the device communication?"
         answer_1:
           paragraph_1: "There's an interactive wizard that will guide you through the whole setup process:"
           paragraph_2: "First, press the device <strong>Function</strong> button (<span class='code'>F</span> for Ingenico, <span class='code'>F1</span> for Verifone);"
@@ -2978,63 +2977,63 @@ en:
           paragraph_3: "Go to the <a href='https://manager.cloudwalk.io/apps/posxml'>Application management</a> and <strong>edit</strong> the application that will make use of those files;"
           paragraph_4: "Check the files on the <strong>Application files</strong> list and update the app;"
           paragraph_5: "Now, assuming that your device is associated with the app that you've just added the files, you can update your device and the new files will be downloaded."
-        question_3: How do I clean a device?
+        question_3: "How do I clean a device?"
         answer_3:
           paragraph_1: "First, press the device <strong>Function</strong> button (<span class='code'>F</span> for Ingenico, <span class='code'>F1</span> for Verifone);"
           paragraph_2: "Enter the password (default is <span class='code'>55555</span>);"
           paragraph_3: "On the setup menu, select the option <strong>CLOUDWALK</strong>;"
           paragraph_4: "Then select the option <strong>DELETE APPS</strong>."
-        question_4: What is the best suitable device for my needs?
+        question_4: "What is the best suitable device for my needs?"
         answer_4: "That depends on the project, but in general, before purchasing a device, make sure that it meets the project requirements. For example, if mobility is an important factor, a device with <strong>GPRS</strong> should be considered. It's also necessary to be sure that the device is compatible with CloudWalk."
-        question_5: Which devices are compatible with CloudWalk?
-        answer_5: "Check out the <a href='https://docs.cloudwalk.io/en/introduction/walk-framework#approved-equipments'>approved devices list</a>."
-        question_6: Is it possible to have many applications on the same device?
+        question_5: "Which devices are compatible with CloudWalk?"
+        answer_5: "Check out the <a href='https://docs.cloudwalk.io/en/introduction/walk-framework#approved-devices'>approved devices list</a>."
+        question_6: "Is it possible to have many applications on the same device?"
         answer_6:
           paragraph_1: "Yes, that's perfectly possible, since CloudWalk devices are prepared to handle any amount of POSXML applications. If a device was configured to have access to a single application, when the <strong>green</strong> button is pressed, that application is automatically started. However, if the device have access to multiple applications, when the <strong>green</strong> button is pressed, a menu listing all the applications is displayed, so you can choose one of them to start."
           paragraph_2: "The <a href='https://manager.cloudwalk.io/groups'>Group management</a> section defines which applications should be accessible to a group. After configuring a group, any amount of logical numbers can be assigned to that group, through the <a href='https://manager.cloudwalk.io/logical-numbers'>Logical numbers</a> section."
-        question_7: How do I setup a basic integration between my device and an endpoint?
+        question_7: "How do I setup a basic integration between my device and an endpoint?"
         answer_7: "Check out the <a href='https://docs.cloudwalk.io/en/integration/http'>HTTP integration example</a>."
-        question_8: What is the password to access the configuration menu?
-        answer_8: The default password is <span class='code'>55555</span>.
-        question_9: Is it possible to change the default configuration menu password?
+        question_8: "What is the password to access the configuration menu?"
+        answer_8: "The default password is <span class='code'>55555</span>."
+        question_9: "Is it possible to change the default configuration menu password?"
         answer_9: "Yes, check out the <a href='https://docs.cloudwalk.io/en/walk-framework/configuration/change-password'>password change guide</a>."
-        question_10: How do I check the device serial number and where do I register it?
+        question_10: "How do I check the device serial number and where do I register it?"
         answer_10:
           paragraph_1: "First, press the device <strong>Function</strong> button (<span class='code'>F</span> for Ingenico, <span class='code'>F1</span> for Verifone);"
           paragraph_2: "Enter the password (default is <span class='code'>55555</span>);"
           paragraph_3: "On the setup menu, select the option <strong>DEVICE SETTINGS</strong>;"
           paragraph_4: "Then select the option <strong>SERIAL NUMBER</strong>;"
           paragraph_5: "The serial number registration is done through the <a href='https://manager.cloudwalk.io/devices'>Device management</a> section."
-        question_11: How do I reset the certificate already installed on Verifone EVO terminals?
-        answer_11: Get in touch with your POS terminal supplier and request a reset file, which then can be used to reset the certificate.
-        question_12: What might be stopping me to download a new file to my device?
+        question_11: "How do I reset the certificate already installed on Verifone EVO terminals?"
+        answer_11: "Get in touch with your POS terminal supplier and request a reset file, which then can be used to reset the certificate."
+        question_12: "What may be preventing the device to download a new file?"
         answer_12:
           paragraph_1: "Check the following points:"
           paragraph_2: "If it's an application or module, certify that the deploy was successful;"
           paragraph_3: "If it's common file or image, ensure that the file was properly uploaded. You can also clear the browser's cache and upload the file again to avoid any browser miss behaviours."
       development:
-        question_1: What is the CloudWalk Manager?
+        question_1: "What is the CloudWalk Manager?"
         answer_1: "The <a href='https://manager.cloudwalk.io'>CloudWalk Manager</a> is a tool used to grant access to devices, register applications, files, logical numbers and groups. It is also through this tool that user management and transactions monitoring is done."
         question_2: "How is the CloudWalk development environment?"
         answer_2: "Further reading: <a href='/development-environment/overview'>IDE overview</a>"
-        question_3: What is POSXML?
+        question_3: "What is POSXML?"
         answer_3:
           paragraph_1: "POSXML (acronym for <strong>P</strong>oint <strong>O</strong>f <strong>S</strong>ale e<strong>X</strong>tended <strong>M</strong>arkup <strong>L</strong>anguage) is a programming language that is used to create applications for POS terminals."
           paragraph_2: "Normally the programming language used to develop POS terminal applications is C or C++, which requires an in-depth knowledge of both the technical specifications of the machine (Hardware) and the programming language."
           paragraph_3: "The main purpose of POSXML is to simplify the development of applications for POS terminals. It contains a set of instructions and pre-programmed commands, which allow direct interaction with the device, resulting in a large reduction in application development time."
-        question_4: What is the maximum size of a String in POSXML?
-        answer_4: The maximum size of a <a href='https://docs.cloudwalk.io/en/posxml/commands/stringvariable'>String</a> is 1024 bytes.
-        question_5: Are there reserved characters or words in the POSXML language?
-        answer_5: "There are more information about the <a href='https://docs.cloudwalk.io/en/posxml/structure '>POSXML structure</a>."
+        question_4: "What is the maximum size of a String in POSXML?"
+        answer_4: "The maximum size of a <a href='https://docs.cloudwalk.io/en/posxml/commands/stringvariable'>String</a> is 1024 bytes."
+        question_5: "Are there reserved characters or words in the POSXML language?"
+        answer_5: "There are more information about the <a href='https://docs.cloudwalk.io/en/posxml/structure'>POSXML structure</a>."
         question_6: "Does CloudWalk supports ISO8583?"
         answer_7:
           paragraph_1: "Yes. CloudWalk and the POSXML language is full compliance with the standard ISO8583. In fact, there are many CloudWalk applications that have been successfully integrated with ISO8583 hosts."
           paragraph_2: "Do you need help? Just <a href='https://www.cloudwalk.io/contact'>get in touch</a> and we will be more than happy to get you started."
         question_7: "Is there a sample bitmap.dat file for ISO8583 transactions?"
         answer_7: "Yes, there is a <a href='https://dl.dropboxusercontent.com/u/436039/cloudwalk/util/iso8583/bitmap.dat'>sample bitmap.dat file</a> which you can use as an entry point, but you should check and update the parameters and the type of each bit according to your ISO8583 host specification before downloading it to your devices."
-        question_8: Is there a comprehensive list of POSXML commands?
+        question_8: "Is there a comprehensive list of POSXML commands?"
         answer_8: "Yes, there's a <a href='https://docs.cloudwalk.io/en/posxml/commands'>comprehensive list</a> of POSXML commands. However, if you are having a hard time to figure out how to tackle a specific situation, <a href='https://www.cloudwalk.io/contact'>drop us a note</a> and we will help you out."
-        question_9: How do I set a custom background image on my device home screen?
+        question_9: "How do I set a custom background image on my device home screen?"
         answer_9:
           paragraph_1: "Due the diversity of all CloudWalk supported devices, to use a custom background image, it is necessary to follow a set of rules in order to achieve the best results for a given device."
           table:
@@ -3050,12 +3049,12 @@ en:
           paragraph_4: "Go to the <a href='https://manager.cloudwalk.io/apps/posxml'>Application management</a> and <strong>edit</strong> your application;"
           paragraph_5: "Check the file <span class='code'>walk.bmp</span> on the <strong>Application files</strong> list and update the app;"
           paragraph_6: "Now, assuming that your device is associated with the app that you've just added the bitmap, you can update your device and the new background will be displayed."
-          paragraph_7: "<strong>Note:</strong> Only bitmap (.bmp) images are supported. Other formats like jpg, gif and png are not supported."
-        question_10: What is the authorizer server (host)?
+          paragraph_7: "<strong>Note:</strong> Only bitmap (.bmp) images are supported. Other formats like JPG, GIF and PNG are not supported."
+        question_10: "What is the authorizer server (host)?"
         answer_10:
           paragraph_1: "Authorizer is the component responsible to verify and validate the information provided by POS terminals."
           paragraph_2: "Further reading: <a href='https://docs.cloudwalk.io/en/introduction/authorizer'>Authorizer</a>"
-        question_11: How do I set the authorizer's endpoint?
+        question_11: "How do I set the authorizer's endpoint?"
         answer_11:
           paragraph_1: "The endpoint is configured at the application level, through the following steps:"
           paragraph_2: "Go to the <a href='https://manager.cloudwalk.io/apps/posxml'>Application management</a> and <strong>edit</strong> your application;"
@@ -3066,24 +3065,24 @@ en:
           paragraph_1: "No. An application can be associated to only one endpoint. Note that the modules being used by an application will automatically use that application's endpoint."
           paragraph_2: "However, if you need to communicate with multiple endpoints on the same application, you can follow these steps:"
           paragraph_3: "Create your main application (example, myapp.posxml) poiting to one of the endpoints (example, https://my-endpoint.com);"
-          paragraph_4: "Create a new application (example, activation.posxml) poiting to another endpoint (example, https://activation.com), and on this application, the <strong>Label</strong> should be to <span class='code'>x</span>, indicating that this app will be hidden. Not that this application should be responsible for the complete communication workflow, including <span class='code'>preconnect</span>, <span class='code'>network.send</span>, <span class='code'>network.receive</span> and <span class='code'>network.hostdisconnect</span>;"
+          paragraph_4: "Create a new application (example, activation.posxml) poiting to another endpoint (example, https://activation.com), and on this application, the <strong>Label</strong> should be to <span class='code'>x</span>, indicating that this app will be hidden. Note that this application should be responsible for the complete communication workflow, including <span class='code'>preconnect</span>, <span class='code'>network.send</span>, <span class='code'>network.receive</span> and <span class='code'>network.hostdisconnect</span>;"
           paragraph_5: "Repeat the step above as you need, creating hidden apps for all your endpoints;"
           paragraph_6: "Now, on the main application (myapp.posxml), you can use the command <a href='/posxml/commands/execute' class='command'>execute</a>, which will execute one of your hidden apps, communicating with the desired endpoint."
-        question_13: The CloudWalk platform has an API?
+        question_13: "The CloudWalk platform has an API?"
         answer_13: "Yes! Check out the <a href='/api/overview'>API section</a> for more information."
       communication:
-        question_1: Which communication types are supported?
-        answer_1: That depends on the device, but in general, ethernet, GPRS and dialed is supported.
-        question_2: How do I setup my Ethernet device to use DHCP?
+        question_1: "Which communication types are supported?"
+        answer_1: "That depends on the device, but in general, Ethernet, GPRS and dialed is supported."
+        question_2: "How do I setup my Ethernet device to use DHCP?"
         answer_2: "That's quite simple! All you have to do is set the IP to <strong>0.0.0.0</strong>. After restarting the device, an IP should be automatically assigned to it."
-        question_3: When using GPRS, which APN, user and password should be set?
+        question_3: "When using GPRS, which APN, user and password should be set?"
         answer_3:
           paragraph_1: "First you need to check if your GPRS SIM card uses private or public APN. You can get this information with your SIM card provider."
           paragraph_2: "If you have acquired the chip through a telecommunication company such as Lyra Network, it will probably use a private APN, otherwise it should use a public APN. The <strong>username</strong> and <strong>password</strong> should also be requested with your SIM card provider."
           paragraph_3: "Brazilian customers can take advantage of some pre-configured providers (CLARO, TIM, OI, VIVO, LYRA, etc), while customers outside Brazil should pick the option <strong>Other operator</strong> and manually enter the information."
         question_4: "Why my device is not connecting?"
         answer_4:
-          paragraph_1: "In general, you can assume that our service is always up. If you are not sure, just check our <a href='http://status.cloudwalk.io/'>status page</a>. So assuming that our service is up, communication problems should be related to <strong>your POS</strong>, <strong>your infrastructure</strong> or some sort of <strong>configuration</strong>."
+          paragraph_1: "In general, you can assume that our service is always up. If you are not sure, just check our <a href='http://status.cloudwalk.io/'>status page</a>. So assuming that our service is up, communication problems should be related to your <strong>POS</strong>, your <strong>infrastructure</strong> or some sort of <strong>configuration</strong>."
           pos_problems:
             title: "POS problems"
             paragraph_1: "When troubleshooting communication problems, it is essential to narrow the range of possibilities, and you should start by making sure that your device is working properly."
@@ -3091,19 +3090,19 @@ en:
             title: "Infrastructure problems"
             paragraph_1: "After making sure that your device your working, you should check your infraestructure."
             paragraph_2: "Make sure your host (your endpoint) is active and responding to requests."
-            paragraph_3: "For ethernet and wi-fi devices, make sure your network connection is active and check if you can access the Internet with a laptop or a smartphone on that network."
-            paragraph_4: "For ethernet and wi-fi devices, make sure there are no restrictions or rules (firewall) on the network that may block the connection."
-            paragraph_5: "For ethernet and dial devices, make sure that the cable is not damaged and that it is properly connected on both extremities."
+            paragraph_3: "For Ethernet and wi-fi devices, make sure your network connection is active and check if you can access the Internet with a laptop or a smartphone on that network."
+            paragraph_4: "For Ethernet and wi-fi devices, make sure there are no restrictions or rules (firewall) on the network that may block the connection."
+            paragraph_5: "For Ethernet and dial devices, make sure that the cable is not damaged and that it is properly connected on both extremities."
             paragraph_6: "For GPRS devices, check the signal and make sure the SIM card is operating normally (try in other devices). If it is prepaid, check if it has credit."
           configuration_problems:
             title: "Configuration problems"
-            paragraph_1: "Assuming that the problem is not related to your device (phisical problem) and that your infraestructure is fine, it can only be some sort of configuration problem:"
+            paragraph_1: "Assuming that the problem is not related to your device (physical problem) and that your infraestructure is fine, it can only be some sort of configuration problem:"
             paragraph_2: "Make sure that your device serial number is properly registered on the <a href='https://manager.cloudwalk.io/devices'>Devices management</a>."
-            paragraph_3: "For ethernet and wi-fi devices on a DHCP network, the IP should be set to <span class='code'>0.0.0.0</span>, so it will be assigned by the DHCP client."
-            paragraph_4: "For ethernet and wi-fi devices, make sure that you have set the correct values for Network Mask (e.g. <span class='code'>255.255.255.0</span>), Gateway (e.g. <span class='code'>192.168.1.1</span>), DNS 1 (e.g. <span class='code'>8.8.8.8</span>), DNS 2 (e.g. <span class='code'>8.8.4.4</span>) and SSL (e.g. <span class='code'>0</span>)."
-            paragraph_5: "For GPRS devices, double check the APN configucation. You might need to get in touch with your telecomunications provider to make sure that everything is correct."
+            paragraph_3: "For Ethernet and wi-fi devices on a DHCP network, the IP should be set to <span class='code'>0.0.0.0</span>, so it will be assigned by the DHCP client."
+            paragraph_4: "For Ethernet and wi-fi devices, make sure that you have set the correct values for Network Mask (e.g. <span class='code'>255.255.255.0</span>), Gateway (e.g. <span class='code'>192.168.1.1</span>), DNS 1 (e.g. <span class='code'>8.8.8.8</span>), DNS 2 (e.g. <span class='code'>8.8.4.4</span>) and SSL (e.g. <span class='code'>0</span>)."
+            paragraph_5: "For GPRS devices, double check the APN configuration. You might need to get in touch with your telecomunications provider to make sure that everything is correct."
       cloudwalk:
         question_1: "CloudWalk sells POS terminals?"
         answer_1: "No, CloudWalk provides only the service. However, if you need to buy POS terminals, you can <a href='https://www.cloudwalk.io/contact'>get in touch</a> and we will be more than happy to help you out!"
         question_2: "Is the authorizer server included on the CloudWalk service?"
-        answer_2: "No, the authorizer development and maintenance is the customer's responsibility. The CloudWalk service expects your authorizer's endpoint (URL or IP), so the POS terminal transaction can be forwared to it, that's all."
+        answer_2: "No, the authorizer development and maintenance is the customer's responsibility."
