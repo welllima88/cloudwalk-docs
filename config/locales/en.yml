@@ -313,7 +313,7 @@ en:
   development_environment:
     overview:
       compilation_console:
-        paragraph_1: 'It is on the compilation console that important information is displayed, such as the return of the compilation proccess: ''Compilation Succeeded!'' and additional application details:'
+        paragraph_1: 'Important information is displayed in the compilation console, such as the return of the compilation proccess: ''Compilation Succeeded!'' and additional application details, as follows:'
         properties:
           base64: Compiled source code
           functions: Number of declared functions
@@ -324,10 +324,10 @@ en:
           strings: Number of declared string variables
       description: The CloudWalk IDE enables the application development for mobile devices using POSXML language.
       introduction:
-        paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment, also providing the innovative use of real-time collaboration, which means, multiple developers can work on the same application simultaneously.
+        paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment accessible to anyone using a web browser, it provides the innovative use of real-time collaboration, by which multiple developers can work on the same application simultaneously.
         paragraph_2: 'Meet the CloudWalk IDE interface:'
       real_time_colaboration:
-        paragraph_1: Always working to increase developers productivity, we have incorporated this feature in our IDE (development environment). To start real-time collaboration, simply copy the <strong>complete</strong> URL of the CloudWalk IDE and share it with the developers that are going to work together.
+        paragraph_1: In CloudWalk, we're always working on increasing developers productivity, therefore we have incorporated real-time collaboration in our IDE (development environment). To start with it, simply copy the <strong>complete</strong> URL of the project once open in the CloudWalk IDE and share it with the developers that are going to work together.
         paragraph_2: 'The image below demonstrates an example URL:'
       table_of_contents:
         compilation_console: Compilation console
@@ -343,8 +343,8 @@ en:
         printing: Printing
       introduction:
         paragraph_1: In order to increase productivity and to facilitate the development of POSXML applications, we have created an emulator that precisely reproduces the behavior of a POS terminal or a smartphone.
-        paragraph_2: The emulator runs directly on CloudWalk IDE, ie directly in a web browser, eliminating the need of any kind of installation or configuration.
-        paragraph_3: It's never been easier to develop for POS terminals and smarphones!
+        paragraph_2: The emulator runs directly on CloudWalk IDE (in a web browser), eliminating the need of any kind of installation or configuration.
+        paragraph_3: It has never been easier to develop applications for POS terminals!
       workflow:
         paragraph_1: A common task in any kind of development is to test the workflow of the application being developed. With CloudWalk IDE you can at any time press the <strong>Compile</strong> button, and then press the <strong>Emulator</strong> button to start the emulation.
         paragraph_2: "We have prepared a video for demonstration purposes, a simple Hello World with a pause between the messages that are displayed:"
@@ -459,13 +459,13 @@ en:
             item_10: A message indicating that the application was successfully registered should be be shown
             item_11: Copy the POSXML source code below (CTRL + C), click <strong>Edit source code</strong>, paste the previously copied code (CTRL + V) and click on <strong>Compile</strong>
             item_2: 'Select the first option: <strong>Applications</strong>'
-            item_3: Click the button <strong>New application</strong>
+            item_3: 'Click the button: <strong>New application</strong>'
             item_4: 'Fill in the application name, for example: <strong>httpapp</strong>'
             item_5: Fill in the application description, for example <strong>Test with HTTP</strong>
             item_6: Fill in the authorizer with the URL <strong>http://http-echo.cloudwalk.io</strong>
             item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
             item_8: Fill <strong>HTTP</strong> in the display name in POS
-            item_9: Click the button <strong>Register application</strong>
+            item_9: 'Click the button: <strong>Register application</strong>'
           posxml:
             comment_01: "The preconnect command attempts to connect the device on CloudWalk"
             comment_02: "Performs the transaction after connecting"
@@ -490,7 +490,7 @@ en:
             item_2: Click the button <strong>New logical number</strong>
             item_3: Fill in a logical number, for example <strong>0001</strong>
             item_4: Select the previously registered group (GROUP TEST) and click the button <strong>Register logical number</strong>
-          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow the following steps:'
+          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow these steps:'
         paragraph_1: 'The last step is to configure the WALK Manager. Follow the procedure:'
     tcp:
       description: One way to establish communication between CloudWalk service and a host authorizer is through TCP/IP. Example of use, configuring the device, compiling the application, configuring the WALK Manager, testing the communication.
@@ -574,7 +574,7 @@ en:
             item_2: Click the button <strong>New logical number</strong>
             item_3: Fill in a logical number, for example <strong>0001</strong>
             item_4: Select the previously registered group (GROUP TEST) and click the button <strong>Register logical number</strong>
-          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow the following steps:'
+          paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow these steps:'
         paragraph_1: 'The last step is to configure the WALK Manager. Follow the procedure:'
   introduction:
     development_environment:
@@ -583,25 +583,25 @@ en:
         overview: overview
         paragraph_1: 'More information available at '
       overview:
-        paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment, also providing the innovative use of real-time collaboration, which means, multiple developers can work on the same application simultaneously.
+        paragraph_1: The Cloudwalk service provides a simple, fast and intuitive development environment accessible to anyone using a web browser, it provides the innovative use of real-time collaboration, by which multiple developers can work on the same application simultaneously.
       table_of_contents:
         more_info: More information
         overview: Presentation
       title: Development environment
     index:
       benefits:
-        feature_1: — Free and unlimited licenses for all your devices:</strong> do not worry about license costs or activation equipment.
+        feature_1: — Free and unlimited licenses for all your devices:</strong> no more worries about costs for licenses or activation equipments.
         feature_2: — Easy preparation:</strong> installation, configuration and testing done directly by the retailer.
-        feature_3: — Full EMV support:</strong> use the full potential of chip cards.
-        feature_4: — Multi application:</strong> various applications running on one device.
-        feature_5: — Multi device:</strong> Your application will be always ready to run on any approved device.
+        feature_3: — Full EMV support:</strong> unlock the full potential of chip cards with our certified technology.
+        feature_4: — Multi application:</strong> achieve many business goals in a single device.
+        feature_5: — Multi device:</strong> Your applications will be always ready to run on any approved device.
         feature_6: — <em>Contactless</em> technology:</strong> innovation, agility and practicality using contactless payments.
-        feature_7: — Rapid development:</strong> quickly and easily develop applications with POSXML.
+        feature_7: — Rapid development:</strong> build payment applications quickly with our POSXML environment.
         feature_8: — Remote update:</strong> update your devices remotely, without going into the field.
-        paragraph_1: 'The foundations of CloudWalk service are based on the quality of network services, cost minimization, agility in the applications development and logistical control of the devices updates, such as:'
+        paragraph_1: 'The foundations of the CloudWalk service are based on the quality of network services, the minimization of costs, the agility on the development of applications and the logistical control of the updates to the devices. Based on those premises, we provide:'
       description: CloudWalk is a SaaS based application platform for devices such as POS terminals and smartphones. The service offers hardware agnostic solution, which allows any application developed with CloudWalk to be compatible with all approved devices, offering many benefits, such as EMV and contactless technology.
       how_it_works:
-        paragraph_1: CloudWalk is a <a href='http://en.wikipedia.org/wiki/Software_as_a_service' target='blank' class='external'>SaaS</a> based application platform for devices such as POS terminals and smartphones. The service offers a <em>hardware agnostic</em> solution, which allows any application developed with CloudWalk to be compatible with all approved devices, offering many benefits, such as EMV and contactless technology.
+        paragraph_1: CloudWalk offers a Software as a Service (<a href='http://en.wikipedia.org/wiki/Software_as_a_service' target='blank' class='external'>SaaS</a>) based application platform for devices such as Point Of Sale (POS) terminals and smartphones. The service offers a <em>hardware agnostic</em> solution, which allows any application developed with CloudWalk to be compatible with all approved devices, offering many benefits, such as EMV and contactless technologies.
       markets:
         item_1: — Administrators/Card Processor
         item_10: — Among many other market segments
@@ -613,7 +613,7 @@ en:
         item_7: — Universities and Colleges
         item_8: — Payments companies
         item_9: — Public service companies (water, energy, gas, etc.)
-        paragraph_1: 'CloudWalk service is not limited to administration or processing credit or debit card, but it adheres to any market segment that might have a need to collect data in the field and issuing receipts and reports:'
+        paragraph_1: 'The CloudWalk service is not limited to administrators or to the processing of credit and debit cards, it is able to benefit any market segment that might have a need to collect data and to issue receipts and reports. Our service is good to:'
       table_of_contents:
         benefits: Advantages and benefits
         how_it_works: How it works
@@ -622,10 +622,10 @@ en:
     authorizer:
       description: Component responsible to validate the information provided by POS terminals.
       overview:
-        paragraph_1: 'Authorizer is the component responsible to verify and validate the information provided by POS terminals. The information that travels over the CloudWalk network follows the following flow:'
-        item_1: The <strong>Device</strong> captures the data and sends it to the <strong>CloudWalk Service</strong>;
-        item_2: The <strong>CloudWalk Service</strong> receives the data and forwards it to the <strong>Authorizer</strong>;
-        item_3: The <strong>Authorizer</strong> validates the data and sends a response to the <strong>CloudWalk Service</strong>;
+        paragraph_1: 'Authorizer is the component responsible of the verification and validation of the information provided by POS terminals. The information that travels over the CloudWalk network follows the following flow:'
+        item_1: The <strong>Device</strong> captures the data and sends it to the <strong>CloudWalk Service</strong>.
+        item_2: The <strong>CloudWalk Service</strong> receives the data and forwards it to the <strong>Authorizer</strong>.
+        item_3: The <strong>Authorizer</strong> validates the data and sends a response to the <strong>CloudWalk Service</strong>.
         item_4: Finally, the <strong>CloudWalk Service</strong> forwards the response to the <strong>Device</strong>.
       more_info:
         paragraph_1: The CloudWalk service is extremely flexible when it comes to the communication between POS terminals and the authorizer. Financial applications commonly uses the communication protocol <a href='http://en.wikipedia.org/wiki/ISO_8583' target="blank" class="external">ISO 8583</a>, but other patterns and standards can be used.
@@ -652,25 +652,25 @@ en:
       approved_devices:
         cloudwalk_reader: CloudWalk devices
         paragraph_1: The component WALK Framework, which is installed on devices, differs between various lines of equipments, since each device has its own specifications. If the equipment you want to use does not appear on the list below, <a href='https://www.cloudwalk.io/contact'>contact us</a>, because we might consider the approval of it.
-        paragraph_2: 'Currently, the following devices are approved by WALK Framework:'
+        paragraph_2: 'Currently, the following devices are approved by the WALK Framework:'
       contactless:
-        paragraph_1: 'CloudWalk also offers the possibility of using the contactless technology with all devices with built-in native contactless, and also through the pinpads <strong>1000 SE CTLS</strong> (VeriFone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
-      description: 'The WALK Framework is a virtual machine that has the ability to interpret the commands of POSXML language. Currently, the following devices are approved by WALK Framework: VeriFone Verix Line, VeriFone Evo Line, Ingenico Telium 2 Line.'
+        paragraph_1: 'CloudWalk also offers the possibility to use the contactless technology on all devices with built-in native contactless, and also works through the pinpads <strong>1000 SE CTLS</strong> (VeriFone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
+      description: 'The WALK Framework is a virtual machine that has the ability to interpret the commands of the POSXML language. Currently, the following devices are approved by the WALK Framework: VeriFone Verix Line, VeriFone Evo Line, Ingenico Telium 2 Line.'
       overview:
-        paragraph_1: The WALK Framework, installed directly on the device, is a virtual machine that has the ability to interpret the commands of POSXML language.
+        paragraph_1: The WALK Framework, installed directly on the device, is a virtual machine that has the ability to interpret the commands of the POSXML language.
       table_of_contents:
         approved_devices: Approved devices
         overview: Presentation
       title: WALK Framework
     walk_manager:
       api:
-        paragraph_1: All operations available through WALK Manager web interface can also be performed via JSON API by simply generating an API Token.
+        paragraph_1: All operations available through the WALK Manager web interface can also be performed using our JSON API which only requires an API Token.
         paragraph_2: More information on
-      description: WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. All operations available through WALK Manager web interface can also be performed via JSON API.
+      description: The WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. All operations available through WALK Manager web interface can also be performed via JSON API.
       how_to_access:
-        paragraph_1: Access to WALK Manager is done via Internet, using the address <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
+        paragraph_1: Access to the WALK Manager is granted via Internet, using the address <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
       overview:
-        paragraph_1: 'WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. Also through WALK Manager are made: users management and monitoring of transactions performed by devices.'
+        paragraph_1: 'WALK Manager is a tool used to grant access to devices, register applications, files, logical numbers and groups. Through this environment you are also able to manage users and monitor the transactions performed by devices.'
       table_of_contents:
         api: API
         how_to_access: How to access
@@ -1942,59 +1942,59 @@ en:
         manual_typing_not_allowed: Does not allow manual entry
         manual_typing_or_swap: Manual typing or pass
         option: Option
-        paragraph_1: 'Below variables of configuration config.dat file:'
-        parameter_1: <strong>autooffmodem</strong><br/> off the modem automatically after a connection
+        paragraph_1: 'Below are the variables of configuration available in the config.dat file:'
+        parameter_1: <strong>autooffmodem</strong><br/> offs the modem automatically after a connection.
         parameter_10: <strong>keystar</strong><br/> Key that will be used to put the <strong>*</strong> (asterisk). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
         parameter_11: '<strong>model</strong><br/> Model of the device, as shown below:'
-        parameter_12: <strong>mygateway</strong><br/> Gateway which will be used by the device. You need to set the Gateway to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used
-        parameter_13: <strong>myip</strong><br/> Device IP address. You must set the IP to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used
-        parameter_14: <strong>nomeaplicativo</strong><br/> Name of the application that will be pursued in WALK Manager
-        parameter_15: <strong>numerodestepos</strong><br/> Device Logical number
-        parameter_16: <strong>primeiravez</strong><br/> Indicates whether this is the first time the device is running an application POSXML
-        parameter_17: <strong>qtdetentativasenvio</strong><br/> Number of packages to be sent until there is confirmation by authorizer
-        parameter_18: <strong>retentativas</strong><br/> Number of retries to connect to CloudWalk service
-        parameter_19: <strong>sn_terminal</strong><br/> Device Serial number
-        parameter_2: <strong>crcpaginawalkserver</strong><br/> the application CRC on the WALK Manager
+        parameter_12: <strong>mygateway</strong><br/> Gateway which will be used by the device. You need to set the Gateway to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used.
+        parameter_13: <strong>myip</strong><br/> Device's IP address. You must set the IP to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> or <strong>DHCP</strong> is used.
+        parameter_14: <strong>nomeaplicativo</strong><br/> Name of the application that will be pursued in the WALK Manager.
+        parameter_15: <strong>numerodestepos</strong><br/> Device's Logical number.
+        parameter_16: <strong>primeiravez</strong><br/> Indicates whether this is the first time the device is running a POSXML application.
+        parameter_17: <strong>qtdetentativasenvio</strong><br/> Number of packages to be sent until there is confirmation by authorizer.
+        parameter_18: <strong>retentativas</strong><br/> Number of retries to connect to the CloudWalk service.
+        parameter_19: <strong>sn_terminal</strong><br/> Device's Serial number.
+        parameter_2: <strong>crcpaginawalkserver</strong><br/> sets the application's CRC on the WALK Manager.
         parameter_20: <strong>subnet</strong><br/> Netmask. It is necessary to set the mask to <strong>255.255.255.255</strong> if the communication protocol <strong>PPP</strong> is used, if used <strong>DHCP</strong> is necessary to set the mask to <strong>0.0.0.0</strong>
-        parameter_21: <strong>timeoutinput</strong><br/> Timeout for all statements that use it
+        parameter_21: <strong>timeoutinput</strong><br/> Timeout for all statements that use it.
         parameter_22: '<strong>tiposcartao</strong><br/> Defines the rules for use of cards, according to the table below:'
         parameter_23: |-
           <strong>touchscreen</strong><br/>Enables or disables the virtual keyboard, if the device has touchscreen where: <pre>0 - Does not activate the virtual keyboard
           1 - Enables virtual keyboard</pre>
-        parameter_24: <strong>uclapn</strong><br/> APN of GPRS network
+        parameter_24: <strong>uclapn</strong><br/> APN of the GPRS network.
         parameter_25: |-
           <strong>uclmedia</strong><br/> Connection type to be used, and can be: <pre>LANDLINE
           ETHERNET
           GPRS
           WIFI</pre>
-        parameter_26: <strong>uclpassword</strong><br/> User password of RAS or APN (PPP)
-        parameter_27: <strong>uclphoneno</strong><br/>The number that the device is going to call;
+        parameter_26: <strong>uclpassword</strong><br/> User password of the RAS or the APN (PPP).
+        parameter_27: <strong>uclphoneno</strong><br/>The number that the device is going to call.
         parameter_28: |-
           <strong>uclprotocol</strong><br/>Communication protocol to be used, and can be: <pre>TCP
           SDLC</pre>
-        parameter_29: <strong>uclusername</strong><br/>Name of the user of RAS or APN (PPP);
-        parameter_3: <strong>dnsprimario</strong><br/> primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
-        parameter_30: <strong>uclwifikey</strong><br/>Password for the WIFI network we want to connect (hexadecimal)
-        parameter_31: <strong>uclwifinetwork</strong><br/>Name of the WIFI network we want to connect
+        parameter_29: <strong>uclusername</strong><br/>Name of the user of RAS or APN (PPP).
+        parameter_3: <strong>dnsprimario</strong><br/> sets the primary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used.
+        parameter_30: <strong>uclwifikey</strong><br/>Password for the WIFI network we want to connect (hexadecimal).
+        parameter_31: <strong>uclwifinetwork</strong><br/>Name of the WIFI network we want to connect.
         parameter_32: |-
           <strong>uclwifisecurity</strong><br/>Types of encryption <pre>WEP64-40
           WEP128-104
           WPA2-PSK <strong>(for Vx680 only)</strong></pre>
-        parameter_33: <strong>versaoframework</strong><br/>WALK Framework version installed on the device
-        parameter_4: <strong>dnssecundario</strong><br/> secondary DNS will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used
-        parameter_5: <strong>gprs_pin</strong><br/> PIN of GPRS card
+        parameter_33: <strong>versaoframework</strong><br/>WALK Framework version installed on the device.
+        parameter_4: <strong>dnssecundario</strong><br/> sets the secondary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used.
+        parameter_5: <strong>gprs_pin</strong><br/> PIN of the GPRS card.
         parameter_6: |-
           <strong>iskeytimeout</strong><br/> Used to identify what <a href='/en/posxml/commands/readkey ' class='command'>readkey </a> will return in case of timeout, where: <pre>0 - Disabled, readkey returns KEY_CANCEL on timeout.
           1 - Enabled readkey returns -1 on timeout.</pre>
-        parameter_7: <strong>keyalpha</strong><br/> Key that will be used to make <strong>alpha</strong> keyboard. Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
-        parameter_8: <strong>keypaperfeed</strong><br/> Key that will be used to make the <a href='/en/posxml/commands/paperfeed' class='command'>paperfeed</a>
-        parameter_9: <strong>keypound</strong><br/> Key that will be used to put the <strong>#</strong> (sharp). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
+        parameter_7: <strong>keyalpha</strong><br/> Key that is used to activate the <strong>alpha</strong> keyboard. Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
+        parameter_8: <strong>keypaperfeed</strong><br/> Key that is used to make the <a href='/en/posxml/commands/paperfeed' class='command'>paperfeed</a>
+        parameter_9: <strong>keypound</strong><br/> Key that is used to put the <strong>#</strong> (sharp). Optional keys vary from device to device can go up from KEY_EXTRA1 to KEY_EXTRA99
         pos_model: Device model
         reading_type: Reading type
         tracks: Tracks
       presentation:
-        paragraph_1: The WALK Framework has several variables of configuration, allowing the configuration of every device parameter through the POSXML language, like environment variables used by the application and equipment drivers such as modem and printer.
-        paragraph_2: Any of these parameters can be set with the help of the command <a href='/en/posxml/commands/editfile' class='command'>editfile</a>, pointing config.dat file, and using the name of these parameters as a key. File config.dat is nothing more than a file in the file system CloudWalk.
+        paragraph_1: The WALK Framework has several variables of configuration, allowing the customization of every device parameter through the POSXML language, like environment variables used by the application and equipment drivers such as modem and printer.
+        paragraph_2: Any of these parameters can be set with the help of the command <a href='/en/posxml/commands/editfile' class='command'>editfile</a>, pointing config.dat file, and using the name of these parameters as a key. File config.dat is nothing more than a file in the CloudWalk's file system.
         paragraph_3: You can configure any type of communication, retries, among other parameters and make logical reconnection backup through POSXML using the instructions <a href='/en/posxml/commands/editfile' class='command'>editfile</a> and <a href='/en/posxml/commands/preconnect' class='command'>preconnect</a>.
       table_of_contents:
         parameters_list: List of parameters
@@ -2003,11 +2003,11 @@ en:
     file_system:
       creating_and_editing_files:
         paragraph_1: The commands <a href='/en/posxml/commands/editfile' class='command'>editfile</a>, <a href='/en/posxml/commands/readfile' class='command'>readfile</a> and <a href='/en/posxml/commands/readfilebyindex' class='command'>readfilebyindex</a> can be used to work with this file type, based on keys and values, enabling a fast and efficient way to store static data on the device.
-        paragraph_2: 'We recommend using the utility EditDBFile to manipulate your WALK dbfile files. Follow the following procedure:'
+        paragraph_2: 'We recommend using the utility EditDBFile to manipulate your WALK dbfile files. Follow this procedure:'
         paragraph_3: Download the utility from  <a href='http://dl.cloudwalk.io/edit_db_file.zip'>http://dl.cloudwalk.io/edit_db_file.zip</a>
         paragraph_4: Unzip and run the package <strong>EditDbFileWalk.exe</strong>
-        paragraph_5: Enter the path to the dat file and press the button <strong>Load</strong>
-        paragraph_6: Make the necessary changes and press the button <strong>Save</strong>
+        paragraph_5: 'Enter the path to the dat file and press the button: <strong>Load</strong>.'
+        paragraph_6: 'Make the necessary changes and press the button: <strong>Save</strong>.'
         paragraph_7: Register the <a href='/en/walk-manager/assets'>file in WALK Manager</a> and your devices can download it with command <a href='/en/posxml/commands/downloadfile' class='command'>downloadfile</a>
       description: The WALK Framework has a file system that can handle files of type WALK dbfile (text file in UNIX environments). Creating and editing files. Use the utility EditDBFile to manipulate WALK dbfile files.
       presentation:
@@ -2018,15 +2018,15 @@ en:
         presentation: Presentation
       title: POSXML - File System
     memory_and_variables:
-      description: The POSXML has the concept of variable types, where they can be of type string or integer. Limitations and parameter passing.
+      description: The POSXML language has the concept of variable types, where they can be of type string or integer. Limitations and parameter passing.
       introduction: The WALK Framework is responsible for running compiled POSXML application, and being installed on the device, assumes all responsibility for memory management and devices. Thus, to run an application on the device, just write a file in POSXML, compile it and send it to the device.
       limitations:
         paragraph_1: There is a limit of 511 variables per POSXML application, and 256 of type string with maximum size of 1K (1023 characters, of which one is used automatically by the platform to allocate the <span class='code'>\0</span>), and 255 of type integer.
-        paragraph_2: When you declare a variable with the commands <a href='/en/posxml/commands/integervariable' class='command'>integervariable</a> or <a href='/en/posxml/commands/stringvariable' class='command'>stringvariable</a>, it will be in memory of the application until the device is disconnected. For this reason, you must be careful to define on the beginning of the application all variables used and clean them for no errors occur during the execution of the application.
+        paragraph_2: When you declare a variable with the commands <a href='/en/posxml/commands/integervariable' class='command'>integervariable</a> or <a href='/en/posxml/commands/stringvariable' class='command'>stringvariable</a>, it will be in memory until the device is disconnected. For this reason, you must be careful to define on the beginning of the application all the variables that will be used and clean them later, so no error would occur during the execution of the application.
         paragraph_3: Currently there is a limit of 32K memory for loading compiled POSXML pages.
       parameters:
         paragraph_1: Every POSXML command owning a parameter whose name contains the word <span class='code'>variable</span>, for example, <span class='code'>variablereturn</span>, is required to pass a variable to that parameter.
-        paragraph_2: 'The assignment of variables is made with nomenclature <span class=''code''>$(VariableName)</span>, as can be seen below:'
+        paragraph_2: 'The assignment of variables is made with the nomenclature <span class=''code''>$(VariableName)</span>, as can be seen below:'
         paragraph_3: 'When the name of the parameter does not have the word variable, you can pass either a constant or a variable. The assignment is taken as constant in every programming language:'
         paragraph_4: In variables string, it is still possible to pass to the command only a snippet of the indexed variable, as in other programming languages, using pointers to variables.
         paragraph_5: 'In the example below, the following string would be displayed: <strong>H</strong>'
@@ -2039,23 +2039,23 @@ en:
         variable_types: Variable Types
       title: POSXML - Variables and memory
       variable_types:
-        paragraph_1: The POSXML has the concept of variable types, where they can be of type <strong>string</strong> or <strong>integer</strong>. Several POSXML commands require a variable type, which is described in the explanation of operation commands.
-        paragraph_2: You can convert variables of type <strong>integer</strong> to <strong>string</strong> and vice versa, by simply using the commands inttostring and stringtoint.
-        paragraph_3: Variables of type <strong>double</strong> (decimal floating point) can also be used by using variables of type string with decimal point separated by <strong>.</Strong> (point), and not by comma.
+        paragraph_1: The POSXML language has the concept of variable types, it offers two types by which you can store values and manipulate them across your entire application, those types are <strong>string</strong> or <strong>integer</strong>. Several POSXML commands require a variable type, which is described in the explanation of operation commands.
+        paragraph_2: You can convert variables of type <strong>integer</strong> to <strong>string</strong> and vice versa, by simply using the commands <code>inttostring</code> and <code>stringtoint</code>.
+        paragraph_3: Variables of type <strong>double</strong> (decimal floating point) can also be used by using string variables with decimal point separated by <code>.</code> (point), and not by <code>,</code> (comma).
     structure:
       case_sensitive:
-        paragraph_1: The POSXML is <em>case sensitive</em>, so there are differences between the lowercase and uppercase words. You need to pay attention, especially when naming functions and variables.
+        paragraph_1: The POSXML language is <em>case sensitive</em>, so there are differences between lowercased and uppercased words. You need to pay attention, especially when naming functions and variables.
         paragraph_2: 'Example:'
       comments:
         paragraph_1: 'Comments blocks should be used with tags <span class=''code''>&lt;!--</span> and <span class=''code''>--&gt;</span> as below:'
       description: Organization and Structure, Parent tag or root tags, Case sensitive, Reserved characters, Comments.
-      introduction: The POSXML follows the open standard <a href='http://en.wikipedia.org/wiki/XML' class='external'>XML</a>, widespread in the software industry. The XML standard is totally flexible and allows rapid expansion. All formatting rules applied to XML still exist in POSXML.
+      introduction: The POSXML language follows the open standard <a href='http://en.wikipedia.org/wiki/XML' class='external'>XML</a>, widespread in the software industry. The XML standard is totally flexible and allows rapid expansion. All formatting rules applied to XML still exist in POSXML.
       reserved_characters:
-        paragraph_1: All reserved characters in XML are also reserved in POSXML and should be properly written.
-        paragraph_2: 'The following symbols should be written as follows:'
+        paragraph_1: All reserved characters in XML are also reserved in POSXML and should be written in a right way.
+        paragraph_2: 'The following symbols on the left should be written as they appear on the right:'
         paragraph_3: 'To display a message with the symbol <span class=''code''>&lt;</span> (less than), the code would be like:'
       structure:
-        paragraph_1: The POSXML is organized and structured in the form of tags with levels and sublevels of commands that form the logical structure of the application POSXML. A tag can be identified when is located between the signs <span class='code'>&lt;</span> (less than) and <span class='code'>></span> (greater than), where they shall be opened and closed.
+        paragraph_1: The POSXML language is organized and structured in the form of tags with levels and sublevels of commands that form the logical structure of the application. A tag can be identified when is located between the signs <span class='code'>&lt;</span> (less than) and <span class='code'>></span> (greater than), where they shall be opened and closed.
         paragraph_2: 'Example:'
       table_of_contents:
         case_sensitive: Case sensitive
@@ -2146,7 +2146,7 @@ en:
             line_6: "\n"
             line_7: "\n"
             line_8: ""
-        paragraph_1: 1. Set the device IP address (eg 192.168.0.200). If using DHCP, the value <strong>0.0.0.0</strong> should be set.
+        paragraph_1: 1. Set the device IP address (eg 192.168.0.200). If you are using DHCP, the value <strong>0.0.0.0</strong> should be set.
         paragraph_2: 2. Set the subnet mask for the defined IP address class (eg 255.255.255.0).
         paragraph_3: 3. Set the router/gateway IP address (eg 192.168.0.1).
         paragraph_4: 4. Set the primary DNS server (eg 192.168.0.1).
@@ -2397,7 +2397,7 @@ en:
         integration: "Integration"
       language_settings:
         paragraph_1: "With the newly installed device in hand, the home screen will offer the option to choose the language that will be used during the device activation process:"
-        paragraph_2: "Press <strong>1</strong> to use the Portuguese or <strong>2</strong> to use the English"
+        paragraph_2: "Press <strong>1</strong> to use Portuguese or <strong>2</strong> to use English"
       step_1:
         posxml:
           screen_1:
@@ -2420,8 +2420,8 @@ en:
             line_8: "www.cloudwalk.io/1"
         paragraph_1: 'After selecting the language (assuming you have selected <strong>English</strong>), the following screen appears:'
         paragraph_2: "This step is important, since in order to have access to CloudWalk, the device serial number should be registered on WALK Manager. Press <strong>OK</strong> to move to the next screen:"
-        paragraph_3: "The number <strong>123-456-789</strong> represents a fictitious serial number (an example), which should be used on WALK Manager's Device management section. Follow the following procedure:"
-        paragraph_4: Access the WALK Managet through <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
+        paragraph_3: "The number <strong>123-456-789</strong> represents a fictitious serial number (an example), which should be used on WALK Manager's Device management section. Follow this procedure:"
+        paragraph_4: Access the WALK Manager through <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
         paragraph_5: Select the section <a href='https://manager.cloudwalk.io/devices' target='_blank' class='external'>Devices</a>
         paragraph_6: Click the button <strong>Grant access to a new device</strong>
         paragraph_7: Enter the serial number exactly as it appears on the screen of the device and click the button <strong>Grant access</strong>
@@ -2448,10 +2448,10 @@ en:
             line_7: "NEED HELP?\n"
             line_8: "www.cloudwalk.io/2"
         paragraph_1: "The second step refers to the logical number registration process:"
-        paragraph_2: Access the WALK Managet through <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
+        paragraph_2: Access the WALK Manager through <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
         paragraph_3: Select the section <a href='https://manager.cloudwalk.io/logical_numbers' target='_blank' class='external'>Logical numbers</a>
-        paragraph_4: Click the button <strong>New logical number</strong>
-        paragraph_5: Enter the logical number (for example 0001) and click the button <strong>Register logical number</strong>
+        paragraph_4: 'Click the button: <strong>New logical number</strong>'
+        paragraph_5: 'Enter the logical number (for example 0001) and click the button: <strong>Register logical number</strong>'
       step_3:
         posxml:
           screen_1:
@@ -2511,18 +2511,18 @@ en:
         paragraph_1: "At the end of the activation process, the following message should be displayed:"
     ingenico_telium_1:
       description: Step by step process of installing the WALK Framework on terminals Ingenico EFT930G and EFT930S.
-      introduction: This guide will walk you through the process of installing the WALK Framework on terminals Ingenico <strong>EFT930G</strong> and <strong>EFT930S</strong>. Be aware of prerequisites and follow the installation process carefully.
+      introduction: This guide will walk you through the process of installing the WALK Framework on terminals Ingenico <strong>EFT930G</strong> and <strong>EFT930S</strong>. Be aware of the prerequisites and follow the installation process carefully.
       deprecated: "<strong>Telium 1</strong> (EFT930G and EFT930S) has been deprecated and therefore has no EMV support anymore. The POS terminals can still be used, but they are not allowed to perform financial transactions (Visa, Master, etc). <a href='http://www.emvco.com/approvals.aspx?id=215#I'>More ≫</a>"
       loading_the_framework:
         paragraph_1: 'The models <strong>EFT930G</strong> and <strong>EFT930S</strong> have an entry for an USB adapter on the left side of the terminal. Connect the USB adapter on the entry and then connect the USB stick on the other end, as the picture below:'
-        paragraph_2: 'Then follow the following procedure:'
+        paragraph_2: 'Then follow this procedure:'
         paragraph_3: Restart the terminal holding the key <strong>F4</strong>. The terminal should display the message <strong>USB MASS STORAGE</strong>
         paragraph_4: Wait a few seconds until the terminal show the directory WALK on display
         paragraph_5: Wait for the WALK Framework loading process
         paragraph_6: 'When finished, the terminal will display the following screen:'
         paragraph_7: Then will be presented the first launch setup.
       preparing_the_pendrive:
-        paragraph_1: 'To build the WALK Framework setup on an USB stick, follow the following procedure:'
+        paragraph_1: 'To build the WALK Framework setup on an USB stick, follow this procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the USB stick
         paragraph_4: Extract the WALK Framework package that was downloaded at the beginning of this tutorial
@@ -2557,7 +2557,7 @@ en:
       loading_the_framework:
         paragraph_1: '<strong>ICT220 </strong> and <strong>ICT250</strong> Models contain a USB input located on the bottom of the device, plug in your USB stick as in the picture:'
         paragraph_2: 'IWL220, IWL250 and IWL280 models already have an entry for an USB adapter on the left side of the device. Connect the USB and then connect the USB on the other end, as the image below:'
-        paragraph_3: 'Then follow the following procedure:'
+        paragraph_3: 'Then follow this procedure:'
         paragraph_4: Restart the device and hold <strong>F4</strong> button. The device will display the message <strong>USB MASS STORAGE</strong>
         paragraph_5: Wait a few seconds until the device show the WALK directory on display
         paragraph_6: Select the WALK directory pressing <strong>GREEN</strong>
@@ -2566,7 +2566,7 @@ en:
         paragraph_9: Then will be presented the first launch setup.
       preparing_the_pendrive:
         macosx: <strong>Mac OS X users:</strong> To avoid problems with hidden files when unzipping the WALK Framework package, it is recommended to use the free app <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external' target='_blank'>iZip Archiver</a> to uncompress the package.
-        paragraph_1: 'To mount WALK Framework package on pendrive, follow the following procedure:'
+        paragraph_1: 'To mount WALK Framework package on pendrive, follow this procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the pendrive
         paragraph_4: Extract the WALK Framework downloaded at the beginning of this tutorial
@@ -2631,7 +2631,7 @@ en:
       preparing_the_device_usb:
         paragraph_1: 'After turning on the terminal and after displaying the splash screen that displays the version of the operating system, the following screen should be shown:'
       preparing_the_pendrive:
-        paragraph_1: 'To mount WALK Framework package on pendrive, follow the following procedure:'
+        paragraph_1: 'To mount WALK Framework package on pendrive, follow this procedure:'
         paragraph_2: Connect the USB stick to the computer
         paragraph_3: Format the pendrive (format FAT32)
         paragraph_4: 'Unzip the downloaded WALK Framework package'
@@ -2725,19 +2725,19 @@ en:
         paragraph_9: Press the green button (OK) to select the type of download.
   walk_manager:
     apps:
-      description: The concept of Application in WALK Manager defines the applications available for use by devices. How to submit an application in 3 steps.
+      description: The concept of Application in the WALK Manager defines the applications available for use by devices. How to submit an application in 3 steps.
       functionality:
-        paragraph_1: The concept of <strong>Application</strong> in WALK Manager, as its name suggests, defines the applications available for use by devices.
+        paragraph_1: The concept of <strong>Application</strong> in the WALK Manager, as its name suggests, defines the applications available to run on the devices.
         paragraph_2: These applications in practice are generated by the <a href='/en/introduction/development-environment'>CloudWalk IDE</a>, whenever a <a href='/en/introduction/posxml'>POSXML</a> application is compiled.
       interface:
-        paragraph_1: 'To submit an application, just follow the following procedure:'
-        paragraph_2: Click the menu <strong>Applications</strong>.
+        paragraph_1: 'To submit an application, just follow this procedure:'
+        paragraph_2: In the WALK Manager, click the menu <strong>Applications</strong>.
         paragraph_3: Click the <strong>New Application</strong> button.
         paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Name</strong> is a unique reference on the system (attention to naming rule)
         paragraph_6: <strong>Brief Description</strong> is a name used to identify the application in WALK Manager
         paragraph_7: <strong>Authorizer IP address or URL</strong> is the address of the authorization server
-        paragraph_8: <strong>Application should be displayed in the menu of services.</strong> Define whether or not the application will appear on the device screen. If this option is selected, it is also necessary to set the name that will be displayed
+        paragraph_8: <strong>Application should be displayed in the menu of services.</strong> Define whether or not the application will appear on the device screen. If this option is selected, it is also necessary to set the name that will be displayed.
       table_of_contents:
         functionality: Functionality
         interface: Interface presentation
@@ -2748,10 +2748,10 @@ en:
         paragraph_1: 'Any file that is different from a POSXML application can be sent to the device through this functionality, using the command <a href=''/posxml/commands/downloadfile'' class=''command''>downloadfile</a>. Examples of files that can be sent:'
         paragraph_2: <strong>Pictures:</strong> Logo for the device screen or for the printed ticket
         paragraph_3: <strong>Texts:</strong> message files, names, etc.
-        paragraph_4: What can be unzipped directly on the POS
-        paragraph_5: Before updating a file, <strong>clean your browser's cache</strong>, to prevent sending old version of the file (maintained by the browser).
+        paragraph_4: Anything that could be unzipped directly on the POS.
+        paragraph_5: Before updating a file, <strong>clean your browser's cache</strong>, to prevent sending old version of the file that could be maintained by the browser.
       interface:
-        paragraph_1: 'To submit a file, just follow the following procedure:'
+        paragraph_1: 'To submit a file, just follow this procedure:'
         paragraph_2: Click the menu <strong>File</strong>.
         paragraph_3: Click the <strong>New File</strong> button.
         paragraph_4: 'Fill in the form:'
@@ -2766,7 +2766,7 @@ en:
       functionality:
         paragraph_1: For safety reasons, by default, a device cannot access CloudWalk. To allow a particular device to connect with CloudWalk servers, it is first necessary to grant access to this device, and this proccess is made through this feature.
       interface:
-        paragraph_1: 'To grant access to a device, just follow the following procedure:'
+        paragraph_1: 'To grant access to a device, just follow this procedure:'
         paragraph_2: Click the menu <strong>Devices</strong>.
         paragraph_3: Click the <strong>Grant access to a new device</strong> button.
         paragraph_4: 'Fill in the form:'
@@ -2784,16 +2784,16 @@ en:
         paragraph_2: <strong>Interface of Logical Numbers:</strong> Where logical numbers are registered and associated in groups;
         paragraph_3: <strong>Interface of Groups:</strong> Where applications are associated.
       interface:
-        paragraph_1: 'To register a group, please follow the following procedure:'
+        paragraph_1: 'To register a group, please follow this procedure:'
         paragraph_2: Click the menu <strong>Groups</strong>.
         paragraph_3: Click the <strong>New Group</strong> button.
         paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Group Name</strong> is the group identification
       parameters:
-        paragraph_1: It is possible to add parameters to a group. For example, the group <strong>AREA 51</strong> has several logical numbers and sales application. This group then has a parameter called <strong>SPECIAL_TICKET</strong>, with the value <strong>1</strong>. Thus, all devices belonging to this group inherit this parameter.
-        paragraph_2: Logic of sales application makes a validation on the parameter <strong>SPECIAL_TICKET</strong>, and since value is <strong>1</strong>, the application prints a special ticket, with additional company information for purposes of disclosure.
+        paragraph_1: It is possible to add parameters to a group. For example, the group <strong>AREA 51</strong> has several logical numbers and sales applications. This group then has a parameter called <strong>SPECIAL_TICKET</strong>, with the value <strong>1</strong>. Thus, all the devices belonging to this group inherit this parameter.
+        paragraph_2: The logic of the sales application makes a validation on the parameter <strong>SPECIAL_TICKET</strong>, and since the value is <strong>1</strong>, the application prints a special ticket, with additional company information for purposes of disclosure.
         paragraph_3: After long analysis by the strategic team, they came to the conclusion that the cost of printing this special, more detailed ticket, is not worth it. Analysts then decided to change the parameter <strong>SPECIAL_TICKET</strong> value from <strong>1</strong> to <strong>0</strong>. Ready! Now all devices belonging to the group <strong>AREA 51</strong> will no longer print the special tickets.
-        paragraph_4: In order of preference, parameter of a logical number overlaps the parameter of a group.
+        paragraph_4: In order of preference, the parameter of a logical number overlaps the parameter of a group.
       table_of_contents:
         functionality: Functionality
         interface: Interface presentation
@@ -2802,31 +2802,31 @@ en:
     logical_numbers:
       description: Logical Number is the device ID, and is directly associated with a Group. How to register a logical number and add parameters to it.
       functionality:
-        paragraph_1: 'The logical <strong>Number</strong> is the ID of the device, and is directly associated with a <strong>Group</strong>. The logical number is referenced in two distinct stages, which are:'
+        paragraph_1: 'The <strong>Logical Number</strong> is the ID of the device, and is directly associated with a <strong>Group</strong>. The logical number is referenced in two distinct stages, which are:'
         paragraph_2: <strong>Interface of Logical Numbers:</strong> where logical numbers are registered and associated in groups.
         paragraph_3: <strong>Device:</strong> Accessing the setup menu of the POS, on the option <strong>Logical Number</strong>
         paragraph_4: Do not confuse <strong>Logical Number</strong> with <strong>Serial Number</strong>. The logical number is used to identify the device while the serial number is used to grant access to the device on the CloudWalk network.
       interface:
-        paragraph_1: 'To register a logical number, just follow the following procedure:'
+        paragraph_1: 'To register a logical number, just follow this procedure:'
         paragraph_2: Click the menu <strong>Logical Numbers</strong>.
         paragraph_3: Click the <strong>New logical number</strong> button.
         paragraph_4: 'Fill in the form:'
         paragraph_5: <strong>Logical number</strong> is the ID of the device
       parameters:
-        paragraph_1: You can add parameters to a logical number. For example, the logical number <strong>100022</strong> is used on the device on restaurant 'Chop Suey' of Mr. Li Hanzo. This logical number then has a parameter called <strong>NUM_PARCELS</strong>, with the value <strong>1</strong>.
-        paragraph_2: Logic of the sales application makes a validation on the parameter <strong>NUM_PARCELS</strong>, and since the value is <strong>1</strong>, the application offers only the payment option 'on cash'.
-        paragraph_3: The restaurant of Mr. Li, presenting excellent results, drew the attention of the strategic team of restaurants 'Chop Suey', and they decided to offer the possibility to Mr. Li to accept payment in installments. For this change, it is enough that someone from strategic staff alter the parameter <strong>NUM_PARCELS</strong> value from <strong>1</strong> to <strong>3</strong>. Ready!
+        paragraph_1: You can add parameters to a logical number. For example, the logical number <strong>100022</strong> is used on the device on the restaurant 'Chop Suey' of Mr. Li Hanzo. This logical number then has a parameter called <strong>NUM_PARCELS</strong>, with the value <strong>1</strong>.
+        paragraph_2: The logic of the sales application makes a validation on the parameter <strong>NUM_PARCELS</strong>, and since the value is <strong>1</strong>, the application offers only the payment option 'on cash'.
+        paragraph_3: The restaurant of Mr. Li, presenting excellent results, drew the attention of the strategic team of restaurants 'Chop Suey', and they decided to offer the possibility to Mr. Li to accept payment in installments. For this change, it is enough that someone from the strategic staff alters the parameter <strong>NUM_PARCELS</strong> value from <strong>1</strong> to <strong>3</strong>. Ready!
       table_of_contents:
         functionality: Functionality
         interface: Interface presentation
         parameters: Parameters
       title: WALK Manager - Logical numbers
     transactions_monitor:
-      description: The transaction monitor displays all the operations that have been performed. Just specify the record type in the search filters.
+      description: The transactions monitor displays all the operations that have been performed. Just specify the record type in the search filters.
       functionality:
-        paragraph_1: The transaction monitor displays all the operations that have been performed by devices. Just specify the record type in the search filters.
+        paragraph_1: The transactions monitor displays all the operations that have been performed by all your devices. You just need to specify the record type in the search filters.
       interface:
-        paragraph_1: 'To access the transaction monitor, just follow the following procedure:'
+        paragraph_1: 'To access the transactions monitor, just follow this procedure:'
         paragraph_2: Click the menu <strong>Monitor transactions</strong>.
         paragraph_3: Click the <strong>Filters</strong> button.
         paragraph_4: 'Specify the type of record:'
@@ -3067,7 +3067,7 @@ en:
           paragraph_3: "Create your main application (example, myapp.posxml) poiting to one of the endpoints (example, https://my-endpoint.com);"
           paragraph_4: "Create a new application (example, activation.posxml) poiting to another endpoint (example, https://activation.com), and on this application, the <strong>Label</strong> should be to <span class='code'>x</span>, indicating that this app will be hidden. Note that this application should be responsible for the complete communication workflow, including <span class='code'>preconnect</span>, <span class='code'>network.send</span>, <span class='code'>network.receive</span> and <span class='code'>network.hostdisconnect</span>;"
           paragraph_5: "Repeat the step above as you need, creating hidden apps for all your endpoints;"
-          paragraph_6: "Now, on the main application (myapp.posxml), you can use the command <a href='/posxml/commands/execute' class='command'>execute</a>, which will execute one of your hidden apps, communicating with the desired endpoint."
+          paragraph_6: "Now, on the main application (myapp.posxml), you can use the command <a href='/en/posxml/commands/execute' class='command'>execute</a>, which will execute one of your hidden apps, communicating with the desired endpoint."
         question_13: "The CloudWalk platform has an API?"
         answer_13: "Yes! Check out the <a href='/api/overview'>API section</a> for more information."
       communication:

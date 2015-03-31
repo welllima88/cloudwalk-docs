@@ -3067,7 +3067,7 @@ pt-BR:
           paragraph_3: "Crie a aplicação principal (por exemplo, myapp.posxml) apontando para uma das URLs (por exemplo, https://my-endpoint.com);"
           paragraph_4: "Crie uma nova aplicação (por exemplo, activation.posxml) apontando para uma outra URL (por exemplo, https://activation.com), e nesta aplicação, o <strong>Rótulo</strong> deve ser definido como <span class='code'>x</span>, indicando que esta aplicação não deverá ser exibida. Observe que esta aplicação deve ser responsável pelo workflow completo de comunicação, incluíndo <span class='code'>preconnect</span>, <span class='code'>network.send</span>, <span class='code'>network.receive</span> e <span class='code'>network.hostdisconnect</span>;"
           paragraph_5: "Repita o passo anterior enquanto for necessário, criando aplicações ocultas para todas as URLs;"
-          paragraph_6: "Agora, na aplicação principal (myapp.posxml), você pode utilizar o comando <a href='/posxml/commands/execute' class='command'>execute</a>, que irá executar uma de suas aplicações ocultas, comunicando-se com a URL desejada."
+          paragraph_6: "Agora, na aplicação principal (myapp.posxml), você pode utilizar o comando <a href='/pt-BR/posxml/commands/execute' class='command'>execute</a>, que irá executar uma de suas aplicações ocultas, comunicando-se com a URL desejada."
         question_13: "O serviço CloudWalk possui uma API?"
         answer_13: "Sim! Confira a seção <a href='/api/overview'>API</a> para obter maiores informações."
       communication:
