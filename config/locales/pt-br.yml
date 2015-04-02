@@ -2986,17 +2986,17 @@ pt-BR:
         question_4: "Qual é o dispositivo mais adequado para minhas necessidades?"
         answer_4: "Isso depende do projeto, mas em geral, antes de comprar um dispositivo, certifique-se de que o mesmo cumpre os requisitos do projeto. Por exemplo, se a mobilidade é um fator importante, um dispositivo com <strong>GPRS</strong> deve ser adquirido. Também é necessário ter certeza de que o dispositivo é compatível com o serviço CloudWalk."
         question_5: "Quais dispositivos são compatíveis com o serviço CloudWalk?"
-        answer_5: "Confira lista de <a href='https://docs.cloudwalk.io/en/introduction/walk-framework#approved-devices'>dispositivos homologados</a>."
+        answer_5: "Confira lista de <a href='https://docs.cloudwalk.io/pt-BR/introduction/walk-framework#approved-devices'>dispositivos homologados</a>."
         question_6: "É possível ter várias aplicações no mesmo dispositivo?"
         answer_6:
           paragraph_1: "Sim, isso é perfeitamente possível, pois os dispositivos CloudWalk estão preparados para lidar com qualquer quantidade de aplicativos POSXML. Se um dispositivo for configurado para ter acesso a uma única aplicação, quando o botão <strong>verde</strong> é pressionado, essa aplicação é automaticamente iniciada. No entanto, se o dispositivo tem acesso a múltiplas aplicações, quando o botão <strong>verde</strong> é pressionado, um menu com a lista de todas as aplicações é exibida, para que você possa escolher uma delas para iniciar."
           paragraph_2: "A seção de gerenciamento de <a href='https://manager.cloudwalk.io/groups'>Grupos</a> define quais aplicações devem ser acessíveis em um determinado grupo. Depois de configurado, qualquer quantidade de números lógicos podem ser atribuídos a esse grupo, através da seção de gerenciamento de <a href='https://manager.cloudwalk.io/logical-numbers'>números lógicos</a>."
         question_7: "Como faço para configurar uma integração simples entre um dispositivo e um host?"
-        answer_7: "Confira o <a href='https://docs.cloudwalk.io/en/integration/http'>exemplo de integração HTTP</a>."
+        answer_7: "Confira o <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>exemplo de integração HTTP</a>."
         question_8: "Qual é a senha para acessar o menu de configuração?"
         answer_8: "A senha padrão é <span class='code'>55555</span>."
         question_9: "É possível alterar a senha padrão do menu de configuração?"
-        answer_9: "Sim, confira o <a href='https://docs.cloudwalk.io/en/walk-framework/configuration/change-password'>guia de alteração de senha</a>."
+        answer_9: "Sim, confira o <a href='https://docs.cloudwalk.io/pt-BR/walk-framework/configuration/change-password'>guia de alteração de senha</a>."
         question_10: "Como faço para verificar o número de série do dispositivo e onde registrá-lo?"
         answer_10:
           paragraph_1: "Primeiramente, pressione o botão <strong>Função</strong> do dispositivo (<span class='code'>F</span> para Ingenico, <span class='code'>F1</span> para Verifone);"
@@ -3022,9 +3022,9 @@ pt-BR:
           paragraph_2: "No desenvolvimento de aplicações para terminais POS, utilizam-se normalmente as linguagens de programação C ou C++, que exigem um conhecimento profundo tanto da especificação técnica do equipamento (hardware) quanto da linguagem de programação."
           paragraph_3: "O objetivo principal da linguagem POSXML é simplificar o desenvolvimento de aplicações para os terminais POS, oferecendo um conjunto de instruções e de comandos pré-programados que permitem a interação direta com o dispositivo, resultando em uma grande redução no tempo de desenvolvimento de uma aplicação."
         question_4: "Qual é o tamanho máximo de uma String em POSXML?"
-        answer_4: "O tamanho máximo de uma <a href='https://docs.cloudwalk.io/en/posxml/commands/stringvariable'>String</a> é 1024 bytes."
+        answer_4: "O tamanho máximo de uma <a href='https://docs.cloudwalk.io/pt-BR/posxml/commands/stringvariable'>String</a> é 1024 bytes."
         question_5: "Existem caracteres ou palavras reservadas na linguagem POSXML?"
-        answer_5: "Para mais informações, confira a <a href='https://docs.cloudwalk.io/en/posxml/structure'>estrutura da linguagem POSXML</a>."
+        answer_5: "Para mais informações, confira a <a href='https://docs.cloudwalk.io/pt-BR/posxml/structure'>estrutura da linguagem POSXML</a>."
         question_6: "O serviço CloudWalk suporta o padrão ISO8583?"
         answer_6:
           paragraph_1: "Sim. A linguagem POSXML e o serviço CloudWalk são compatíveis com o padrão ISO8583. Diversas aplicações CloudWalk já foram desenvolvidas e foram devidamente integradas com servidores ISO8583."
@@ -3032,7 +3032,7 @@ pt-BR:
         question_7: "Existe um arquivo bitmap.dat de exemplo para transações ISO8583?"
         answer_7: "Sim, existe um <a href='https://dl.dropboxusercontent.com/u/436039/cloudwalk/util/iso8583/bitmap.dat'>exemplo de bitmap.dat</a> que você pode utilizar como ponto de partida, mas lembre-se de verificar e atualizar os parametros e os tipos de cada bit de acordo com a espeficicação ISO8583 do seu servidor, antes de baixar o arquivo para os seus dispositivos."
         question_8: "Existe uma lista completa de comandos POSXML?"
-        answer_8: "Sim, existe uma <a href='https://docs.cloudwalk.io/en/posxml/commands'>lista completa</a> de comandos POSXML. Entretanto, se você estiver com dificuldade em descobrir como lidar com uma situação específica, <a href='https://www.cloudwalk.io/contact'>nos envie uma mensagem</a> que iremos lhe ajudar!"
+        answer_8: "Sim, existe uma <a href='https://docs.cloudwalk.io/pt-BR/posxml/commands'>lista completa</a> de comandos POSXML. Entretanto, se você estiver com dificuldade em descobrir como lidar com uma situação específica, <a href='https://www.cloudwalk.io/contact'>nos envie uma mensagem</a> que iremos lhe ajudar!"
         question_9: "Como faço para definir uma imagem de fundo personalizada no dispositivo?"
         answer_9:
           paragraph_1: "Devido a diversidade de dispositivos suportados pelo serviço CloudWalk, para usar uma imagem de fundo personalizada (background), é necessário seguir um conjunto de regras a fim de alcançar os melhores resultados para um dispositivo em particular."
@@ -3053,7 +3053,7 @@ pt-BR:
         question_10: "O que é o servidor autorizador (host)?"
         answer_10:
           paragraph_1: "Autorizador é o componente responsável para verificar e validar as informações fornecidas pelos terminais POS."
-          paragraph_2: "Leitura complementar: <a href='https://docs.cloudwalk.io/en/introduction/authorizer'>Autorizador</a>"
+          paragraph_2: "Leitura complementar: <a href='https://docs.cloudwalk.io/pt-BR/introduction/authorizer'>Autorizador</a>"
         question_11: "Como faço para definir a URL (endpoint) do autorizador?"
         answer_11:
           paragraph_1: "A URL do autorizador é configurada diretamente na aplicação, através dos seguintes passos:"
