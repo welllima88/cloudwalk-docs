@@ -1,6 +1,6 @@
 language: ruby
 script: "bundle exec ruby docs_test.rb"
 rvm:
-  - 2.2.1
+  - 2.2.2
 gemfile:
   - Gemfile
