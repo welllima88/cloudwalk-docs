@@ -450,7 +450,7 @@ pt-BR:
       walk_manager_setup:
         associate_logical_number:
           header: Associar o número lógico
-          paragraph_1: 'O próximo passo é associar o dispositivo com o número lógico recém criado, pressionando a tecla <strong>F1</strong> (VeriFone) ou <strong>F</strong> (Telium). A seguinte tela será apresentada:'
+          paragraph_1: 'O próximo passo é associar o dispositivo com o número lógico recém criado, pressionando a tecla <strong>F1</strong> (Verifone) ou <strong>F</strong> (Telium). A seguinte tela será apresentada:'
           paragraph_2: 'Selecione então a opção <strong>1 LOGICAL NUMBER</strong> e informe o número lógico recém cadastrado (0001):'
           paragraph_3: Após informar o número lógico, pressione a tecla confirmar (verde).
         create_application:
@@ -534,7 +534,7 @@ pt-BR:
       walk_manager_setup:
         associate_logical_number:
           header: Associar o número lógico
-          paragraph_1: 'O próximo passo é associar o dispositivo com o número lógico recém criado, pressionando a tecla <strong>F1</strong> (VeriFone) ou <strong>F</strong> (Telium). A seguinte tela será apresentada:'
+          paragraph_1: 'O próximo passo é associar o dispositivo com o número lógico recém criado, pressionando a tecla <strong>F1</strong> (Verifone) ou <strong>F</strong> (Telium). A seguinte tela será apresentada:'
           paragraph_2: 'Selecione então a opção <strong>1 LOGICAL NUMBER</strong> e informe o número lógico recém cadastrado (0001):'
           paragraph_3: Após informar o número lógico, pressione a tecla confirmar (verde).
         create_application:
@@ -654,8 +654,8 @@ pt-BR:
         paragraph_1: O componente WALK Framework, que é instalado nos dispositivos, difere entre as diversas linhas de equipamentos, uma vez que, cada equipamento possui suas particularidades. Caso o equipamento que você pretende utilizar não conste na listagem abaixo, <a href='https://www.cloudwalk.io/contact'>entre em contato</a>, pois podemos considerar a homologação do mesmo.
         paragraph_2: 'Atualmente, os seguintes dispositivos estão homologados para utilizarem o WALK Framework:'
       contactless:
-        paragraph_1: 'O serviço CloudWalk também oferece a possibilidade de utilização da tecnologia <em>contactless</em> com todos os equipamentos que possuem o módulo de comunicação <em>contactless</em> nativo, e também através dos pinpads <strong>1000 SE CTLS</strong> (VeriFone) e <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
-      description: 'O WALK Framework, instalado diretamente nos terminais POS, é uma máquina virtual que possui a capacidade de interpretar os comandos da linguagem POSXML. Atualmente, os seguintes terminais estão homologados para utilizarem o WALK Framework: Linha VeriFone Verix, Linha VeriFone Evo, Linha Ingenico Telium 2.'
+        paragraph_1: 'O serviço CloudWalk também oferece a possibilidade de utilização da tecnologia <em>contactless</em> com todos os equipamentos que possuem o módulo de comunicação <em>contactless</em> nativo, e também através dos pinpads <strong>1000 SE CTLS</strong> (Verifone) e <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
+      description: 'O WALK Framework, instalado diretamente nos terminais POS, é uma máquina virtual que possui a capacidade de interpretar os comandos da linguagem POSXML. Atualmente, os seguintes terminais estão homologados para utilizarem o WALK Framework: Linha Verifone Verix, Linha Verifone Evo, Linha Ingenico Telium 2.'
       overview:
         paragraph_1: O WALK Framework, instalado diretamente nos dispositivos, é uma máquina virtual que possui a capacidade de interpretar os comandos da linguagem POSXML.
       table_of_contents:
@@ -733,8 +733,8 @@ pt-BR:
       group_name: WALK Framework
       ingenico_telium_1: Ingenico Telium 1
       ingenico_telium_2: Ingenico Telium 2
-      verifone_evo: VeriFone EVO
-      verifone_verix: VeriFone Verix
+      verifone_evo: Verifone EVO
+      verifone_verix: Verifone Verix
     walk_manager:
       apps: Aplicações
       assets: Arquivos
@@ -1060,7 +1060,7 @@ pt-BR:
         paragraph_2: Este comando ainda não funciona para a linha de terminais <strong>Telium 2</strong>.
         paragraph_3: No exemplo acima, será criado um arquivo chamado <em><strong>files.dat</strong></em>, e este arquivo guardará o nome e o tamanho de todos os arquivos que estiverem no diretório que foi analisado, neste caso <strong>F</strong>.<br/> Como o retorno do comando é um <a href='integervariable' class='command'>integervariable</a> o comando <a href='inttostring' class='command'>inttostring</a> é utilizado para converter a variável e exibi-la com o comando <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Diretório que será analizado, pode ser I ou F (VeriFone).
+          parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Diretório que será analizado, pode ser I ou F (Verifone).
           parameter_2: <strong>listfilename</strong> <span class='data-type'>[string]</span><br/>Nome do arquivo que irá armazenar o nome e o tamanho dos arquivos do diretório especificado.
           parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[inteiro]</span><br/>Variável que irá armazenar o retorno do comando.<ul><li>0: Listagem de arquivos criada</li><li>-1: Diretório vazio</li></ul>'
       filesystem_renamefile:
@@ -1979,7 +1979,7 @@ pt-BR:
         parameter_32: |-
           <strong>uclwifisecurity</strong><br/>Tipo de criptografia da rede <pre>WEP64-40
           WEP128-104
-          WPA2-PSK <strong>(somente para Vx680)</strong></pre>
+          WPA2-PSK <strong>(somente para VX 680)</strong></pre>
         parameter_33: <strong>versaoframework</strong><br/>Versão do WALK Framework instalado no dispositivo
         parameter_4: <strong>dnssecundario</strong><br/> DNS secundário que será utilizado pelo dispositivo. É necessário definir o DNS <strong>0.0.0.0</strong> se o protocolo de comunicação <strong>PPP</strong> for utilizado
         parameter_5: <strong>gprs_pin</strong><br/> PIN do chip GPRS
@@ -2085,9 +2085,9 @@ pt-BR:
         other: "Outro fornecedor"
       models:
         list: "Modelos suportados: "
-        verix: "Vx510, Vx610 e Vx670"
-        evo_usb: "Vx520, Vx675 e Vx680"
-        evo_serial: "Vx805 e Vx820"
+        verix: "Vx 510, Vx 610 e Vx 670"
+        evo_usb: "VX 520, VX 675 e VX 680"
+        evo_serial: "VX 805 e VX 820"
         telium_1: "EFT930G e EFT930S"
         telium_2: "ICT220, ICT250, IWL220, IWL250 e IWL280"
     communication:
@@ -2596,7 +2596,7 @@ pt-BR:
           title: "Qual é a senha do menu de configuração?"
           paragraph_1: "Se o seu dispositivo está solicitando uma senha, esta senha foi previamente definida por alguém. Por favor, entre em contato com o seu fornecedor de POS."
     verifone_evo:
-      description: Processo passo a passo de instalação do WALK Framework em terminais VeriFone Vx520 e Vx680.
+      description: Processo passo a passo de instalação do WALK Framework em terminais Verifone VX 520 e VX 680.
       identify_os:
         os_version: Versão do sistema operacional
         eos_version: Extended Operating System Version
@@ -2604,10 +2604,10 @@ pt-BR:
         paragraph_2: Mantenha o sistema operacional dos seus terminais POS sempre atualizados. Terminais POS com o sistema operacional desatualizado podem ficar lentos e podem também apresentar problemas de comunicação.
         paragraph_3: 'Requisitos mínimos de sistema operacional para a instalação do WALK Framework:'
         pos_model: Modelo POS
-      installing_vx805_and_vx820: Para realizar a carga em terminais <strong>Vx805</strong> e <strong> Vx820 </strong>, confira <a href='/pt-BR/walk-framework/verifone-evo-vx805'>este guia</a>.
-      installing_vx805_and_vx820_intro: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx805</strong> e <strong>Vx820</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
-      introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx520</strong> e <strong>Vx680</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
-      introduction_cable_terminals: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone Vx805 e Vx820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      installing_vx805_and_vx820: Para realizar a carga em terminais <strong>VX 805</strong> e <strong> VX 820 </strong>, confira <a href='/pt-BR/walk-framework/verifone-evo-vx805'>este guia</a>.
+      installing_vx805_and_vx820_intro: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais Verifone <strong>VX 805</strong> e <strong>VX 820</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais Verifone <strong>VX 520</strong> e <strong>VX 680</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      introduction_cable_terminals: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais Verifone VX 805 e VX 820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       loading_the_framework:
         paragraph_1: Para dar início ao processo de carga, execute o arquivo carrega_na_flash.bat para carregar os certificados e o WALK Framework.
         paragraph_2: 'A seguinte tela do DOS será exibida:'
@@ -2615,8 +2615,8 @@ pt-BR:
         paragraph_4: 'Enquanto a carga é efetuada, o terminal exibe o andamento do processo:'
         paragraph_5: Ao finalizar o processo de carga, a tela do DOS será fechada e o terminal será reiniciado algumas vezes, e em seguida será apresentado a tela de configuração da primeira execução.
       loading_the_framework_usb:
-        paragraph_1: 'Em terminais <strong>Vx520</strong>, conecte o pendrive no terminal na parte traseira conforme a figura abaixo:'
-        paragraph_2: 'Já os terminais <strong>Vx680</strong>, o local para conexão do pendrive se localiza no cabo que é utilizado para carregar a bateria do mesmo, conforme mostra a figura abaixo:'
+        paragraph_1: 'Em terminais <strong>VX 520</strong>, conecte o pendrive no terminal na parte traseira conforme a figura abaixo:'
+        paragraph_2: 'Já os terminais <strong>VX 680</strong>, o local para conexão do pendrive se localiza no cabo que é utilizado para carregar a bateria do mesmo, conforme mostra a figura abaixo:'
         paragraph_3: 'O terminal detectará o pendrive conectado, e exibirá a seguinte tela no display:'
         paragraph_4: Escolha a opção 1, Sim, para começar o processo de carga
         paragraph_5: Após carregar todos os arquivos, o terminal solicitará a retirada do pendrive
@@ -2635,7 +2635,7 @@ pt-BR:
         paragraph_2: 'Conecte o pendrive no computador'
         paragraph_3: 'Formate o pendrive (Formato FAT32)'
         paragraph_4: 'Descompacte o pacote WALK Framework baixado'
-        paragraph_5: 'Copie o arquivo: verifone_evo_usb/lib_cless/modelo(VX520 ou VX680)/<strong>VERIFONE.zip</strong> para a raiz do pendrive'
+        paragraph_5: 'Copie o arquivo: verifone_evo_usb/lib_cless/modelo(VX 520 ou VX 680)/<strong>VERIFONE.zip</strong> para a raiz do pendrive'
         paragraph_6: 'Repita o processo com o arquivo: verifone_evo_usb/cw_framework_version/<strong>VERIFONE.zip</strong>'
       prerequisites:
         cable: <strong>Cabo de carga Serial</strong>
@@ -2649,9 +2649,9 @@ pt-BR:
         preparing_the_pendrive: Preparando o pendrive
         prerequisites: Pré-requisitos
         wiping_the_device: Limpando o terminal POS
-      title: Instalação do WALK Framework - VeriFone EVO
+      title: Instalação do WALK Framework - Verifone EVO
       wiping_the_device:
-        paragraph_1: 'Com o cabo devidamente conectado, ligue o terminal no cabo de força. No modelo Vx805 pressione as teclas F2 e F4 no canto superior direito do terminal. No modelo Vx820 pressione as teclas enter (verde) e 7, simultaneamente, e a tela abaixo será exibida:'
+        paragraph_1: 'Com o cabo devidamente conectado, ligue o terminal no cabo de força. No modelo VX 805 pressione as teclas F2 e F4 no canto superior direito do terminal. No modelo VX 820 pressione as teclas enter (verde) e 7, simultaneamente, e a tela abaixo será exibida:'
         paragraph_10: Pressione 1 e veja a próxima tela.
         paragraph_11: Pressione 2 e pressione 2 novamente para escolher a opção COM1, para que o terminal fique aguardando a execução de algum arquivo do diretório WALK Framework, que foi descompactado anteriormente.
         paragraph_12: O primeiro arquivo que deve ser executado é o <strong>limpa_terminal.bat</strong>. Este arquivo limpa qualquer informação que esteja no terminal, para que não fique 'lixo' na memória do terminal quando for efetuada a carga do novo Framework.
@@ -2673,14 +2673,14 @@ pt-BR:
           paragraph_1: "O pendrive está formatado como <strong>FAT32</strong>;"
           paragraph_2: "Somente o arquivo VERIFONE.zip está na raiz do pendrive."
     verifone_verix:
-      description: Processo passo a passo de instalação do WALK Framework em terminais VeriFone Vx510, Vx610 e Vx670.
+      description: Processo passo a passo de instalação do WALK Framework em terminais Verifone Vx 510, Vx 610 e Vx 670.
       identify_os:
         os_version: Versão do sistema operacional
         paragraph_1: Para identificar a versão do sistema operacional que está instalado em seu terminal, observe a segunda linha no visor da tela inicial, considerando os últimos 2 caracteres. Esta tela é exibida quando o terminal é ligado.
         paragraph_2: Mantenha o sistema operacional dos seus terminais POS sempre atualizados. Terminais POS com o sistema operacional desatualizado podem ficar lentos e podem também apresentar problemas de comunicação.
         paragraph_3: 'Requisitos mínimos de sistema operacional para a instalação do WALK Framework:'
         pos_model: Modelo POS
-      introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais VeriFone <strong>Vx510</strong>, <strong>Vx610</strong> e <strong>Vx670</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      introduction: Este guia o conduzirá através do processo de instalação do WALK Framework em terminais Verifone <strong>Vx 510</strong>, <strong>Vx 610</strong> e <strong>Vx 670</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       loading_the_framework:
         paragraph_1: Para dar início ao processo de carga, execute o arquivo carrega_na_flash.bat.
         paragraph_2: 'A seguinte tela do DOS será exibida:'
@@ -2695,7 +2695,7 @@ pt-BR:
         paragraph_5: Este passo é o que apresenta o maior índice de erros, pois muitas pessoas conectam o cabo serial na porta errada do POS ou na porta errada do PC, caso este possua duas portas COM.
         paragraph_6: Outro ponto importante é que a COM1 do seu computador pode estar sendo utilizada por outro processo, causando erro na hora da carga do WALK Framework, e como o download só é possível através da COM1, ela deva estar corretamente configurada no Windows.
       prerequisites:
-        cable: <strong>Cabo de carga para VeriFone Verix 510 e 610:</strong> Se você estiver utilizando um terminal Verix 670, será necessário um adaptador especial que pode ser solicitado junto a seu revendedor autorizado.
+        cable: <strong>Cabo de carga para Verifone Verix 510 e 610:</strong> Se você estiver utilizando um terminal Verix 670, será necessário um adaptador especial que pode ser solicitado junto a seu revendedor autorizado.
         operating_system: <strong>Sistema operacional:</strong> Microsoft Windows XP SP3 ou superior (Vista, Seven, etc)
         serial_port: <strong>Porta serial ou USB:</strong> Disponível e configurada como <strong>COM1</strong>
       table_of_contents:
@@ -2704,7 +2704,7 @@ pt-BR:
         preparing_the_device: Preparando o terminal POS
         prerequisites: Pré-requisitos
         wiping_the_device: Limpando o terminal POS
-      title: Instalação do WALK Framework - VeriFone Verix
+      title: Instalação do WALK Framework - Verifone Verix
       wiping_the_device:
         paragraph_1: 'Com o cabo devidamente conectado, ligue o terminal no cabo de força. Pressione as teclas F2 e F4 no canto superior direito do terminal, simultaneamente, e a tela abaixo será exibida:'
         paragraph_10: 'Pressione F3 para selecionar a opção FULL e passar para a tela de seleção de modo de transferência:'
@@ -3021,7 +3021,7 @@ pt-BR:
           paragraph_1: "POSXML (acrônimo para <strong>P</strong>oint <strong>O</strong>f <strong>S</strong>ale e<strong>X</strong>tended <strong>M</strong>arkup <strong>L</strong>anguage) é uma linguagem de programação utilizada para criar aplicações para terminais POS."
           paragraph_2: "No desenvolvimento de aplicações para terminais POS, utilizam-se normalmente as linguagens de programação C ou C++, que exigem um conhecimento profundo tanto da especificação técnica do equipamento (hardware) quanto da linguagem de programação."
           paragraph_3: "O objetivo principal da linguagem POSXML é simplificar o desenvolvimento de aplicações para os terminais POS, oferecendo um conjunto de instruções e de comandos pré-programados que permitem a interação direta com o dispositivo, resultando em uma grande redução no tempo de desenvolvimento de uma aplicação."
-        question_4: "Qual é o tamanho máximo de uma String em POSXML?"
+        question_4: "Qual é o tamanho m��ximo de uma String em POSXML?"
         answer_4: "O tamanho máximo de uma <a href='https://docs.cloudwalk.io/pt-BR/posxml/commands/stringvariable'>String</a> é 1024 bytes."
         question_5: "Existem caracteres ou palavras reservadas na linguagem POSXML?"
         answer_5: "Para mais informações, confira a <a href='https://docs.cloudwalk.io/pt-BR/posxml/structure'>estrutura da linguagem POSXML</a>."

@@ -450,7 +450,7 @@ en:
       walk_manager_setup:
         associate_logical_number:
           header: Associate the logical number
-          paragraph_1: 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium). The following screen will appear:'
+          paragraph_1: 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (Verifone) or <strong>F</strong> (Telium). The following screen will appear:'
           paragraph_2: 'Then select the option <strong>1 LOGICAL NUMBER</strong> and enter the newly registered logical number (0001):'
           paragraph_3: After entering the logical number, press enter (green).
         create_application:
@@ -534,7 +534,7 @@ en:
       walk_manager_setup:
         associate_logical_number:
           header: Associate the logical number
-          paragraph_1: 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (VeriFone) or <strong>F</strong> (Telium). The following screen will appear:'
+          paragraph_1: 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (Verifone) or <strong>F</strong> (Telium). The following screen will appear:'
           paragraph_2: 'Then select the option <strong>1 LOGICAL NUMBER</strong> and enter the newly registered logical number (0001):'
           paragraph_3: After entering the logical number, press enter (green).
         create_application:
@@ -654,8 +654,8 @@ en:
         paragraph_1: The component WALK Framework, which is installed on devices, differs between various lines of equipment, since each device has its own specifications. If the equipment you want to use does not appear on the list below, <a href='https://www.cloudwalk.io/contact'>contact us</a>, because we might consider the approval of it.
         paragraph_2: 'Currently, the following devices are approved by the WALK Framework:'
       contactless:
-        paragraph_1: 'CloudWalk also offers the possibility to use the contactless technology on all devices with built-in native contactless, and also works through the pinpads <strong>1000 SE CTLS</strong> (VeriFone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
-      description: 'The WALK Framework is a virtual machine that has the ability to interpret the commands of the POSXML language. Currently, the following devices are approved by the WALK Framework: VeriFone Verix Line, VeriFone Evo Line, Ingenico Telium 2 Line.'
+        paragraph_1: 'CloudWalk also offers the possibility to use the contactless technology on all devices with built-in native contactless, and also works through the pinpads <strong>1000 SE CTLS</strong> (Verifone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
+      description: 'The WALK Framework is a virtual machine that has the ability to interpret the commands of the POSXML language. Currently, the following devices are approved by the WALK Framework: Verifone Verix Line, Verifone Evo Line, Ingenico Telium 2 Line.'
       overview:
         paragraph_1: The WALK Framework, installed directly on the device, is a virtual machine that has the ability to interpret the commands of the POSXML language.
       table_of_contents:
@@ -733,8 +733,8 @@ en:
       group_name: WALK Framework
       ingenico_telium_1: Ingenico Telium 1
       ingenico_telium_2: Ingenico Telium 2
-      verifone_evo: VeriFone EVO
-      verifone_verix: VeriFone Verix
+      verifone_evo: Verifone EVO
+      verifone_verix: Verifone Verix
     walk_manager:
       apps: Applications
       assets: Files
@@ -1060,7 +1060,7 @@ en:
         paragraph_2: At this moment this commands is not supported by <strong>Telium 2</strong> terminals.
         paragraph_3: In the above example, a file called <em><strong>files.dat</strong></em> will be created, and this file will save the name and size of all files that are in the directory being analyzed, in this case the directory <strong>F</strong>.<br/> Since the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Directory which is going to be analyzed, that can be I or F (VeriFone).
+          parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Directory which is going to be analyzed, that can be I or F (Verifone).
           parameter_2: <strong>listfilename</strong> <span class='data-type'>[string]</span><br/>Name of the file that will store the name and size of the files in the specified directory.
           parameter_3: '<strong>variablereturn</strong> <span class=''data-type''>[inteiro]</span><br/>Variable that will store the return of the command.<ul><li>0: File list created</li><li>-1: Empty directory</li></ul>'
       filesystem_renamefile:
@@ -1979,7 +1979,7 @@ en:
         parameter_32: |-
           <strong>uclwifisecurity</strong><br/>Types of encryption <pre>WEP64-40
           WEP128-104
-          WPA2-PSK <strong>(for Vx680 only)</strong></pre>
+          WPA2-PSK <strong>(for VX 680 only)</strong></pre>
         parameter_33: <strong>versaoframework</strong><br/>WALK Framework version installed on the device.
         parameter_4: <strong>dnssecundario</strong><br/> sets the secondary DNS that will be used by the device. You must set the DNS to <strong>0.0.0.0</strong> if the communication protocol <strong>PPP</strong> is used.
         parameter_5: <strong>gprs_pin</strong><br/> PIN of the GPRS card.
@@ -2085,9 +2085,9 @@ en:
         other: "Other supplier"
       models:
         list: "Supported models: "
-        verix: "Vx510, Vx610 and Vx670"
-        evo_usb: "Vx520, Vx675 and Vx680"
-        evo_serial: "Vx805 and Vx820"
+        verix: "Vx 510, Vx 610 and Vx 670"
+        evo_usb: "VX 520, VX 675 and VX 680"
+        evo_serial: "VX 805 and VX 820"
         telium_1: "EFT930G and EFT930S"
         telium_2: "ICT220, ICT250, IWL220, IWL250 and IWL280"
     communication:
@@ -2596,7 +2596,7 @@ en:
           title: "What is the setup menu password?"
           paragraph_1: "If your device is requesting a password to access the setup menu, this password was previously set by someone. Please get in touch with your the POS supplier."
     verifone_evo:
-      description: Step by step process of installing the WALK Framework for VeriFone Vx520 and Vx680.
+      description: Step by step process of installing the WALK Framework for Verifone VX 520 and VX 680.
       identify_os:
         os_version: Operating System Version
         eos_version: Extended Operating System Version
@@ -2604,10 +2604,10 @@ en:
         paragraph_2: Keep the operating system of your devices up to date. Devices with outdated operating system can be slow and may also have communication problems.
         paragraph_3: 'Minimum operating system requirements for installing the WALK Framework:'
         pos_model: Model POS
-      installing_vx805_and_vx820: To load the framework on terminals <strong>Vx805</strong> and <strong>Vx820</strong>, check out <a href='/en/walk-framework/verifone-evo-vx805'>this guide</a>.
-      installing_vx805_and_vx820_intro: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx805</strong> and <strong>Vx820</strong>. Be aware of prerequisites and follow the installation process carefully.
-      introduction: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx520</strong> and <strong>Vx680</strong>. Be aware of prerequisites and follow the installation process carefully.
-      introduction_cable_terminals: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone Vx805 and Vx820. Be aware of prerequisites and follow the installation process carefully.
+      installing_vx805_and_vx820: To load the framework on terminals <strong>VX 805</strong> and <strong>VX 820</strong>, check out <a href='/en/walk-framework/verifone-evo-vx805'>this guide</a>.
+      installing_vx805_and_vx820_intro: This guide will walk you through the process of installing the WALK Framework on terminals Verifone <strong>VX 805</strong> and <strong>VX 820</strong>. Be aware of prerequisites and follow the installation process carefully.
+      introduction: This guide will walk you through the process of installing the WALK Framework on terminals Verifone <strong>VX 520</strong> and <strong>VX 680</strong>. Be aware of prerequisites and follow the installation process carefully.
+      introduction_cable_terminals: This guide will walk you through the process of installing the WALK Framework on terminals Verifone VX 805 and VX 820. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
         paragraph_1: To start charging, run carrega_na_flash.bat to load the certificates and the WALK Framework.
         paragraph_2: 'The following DOS screen will appear:'
@@ -2615,8 +2615,8 @@ en:
         paragraph_4: 'While the charge is made, the device displays the progress of the case:'
         paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and then will be presented the first launch setup.
       loading_the_framework_usb:
-        paragraph_1: 'On terminals <strong>Vx520</strong>, connect the USB stick on the back of the terminal as shown below:'
-        paragraph_2: 'On terminals <strong>Vx680</strong>, the place to connect the USB stick is located on the recharge cable, as shown below:'
+        paragraph_1: 'On terminals <strong>VX 520</strong>, connect the USB stick on the back of the terminal as shown below:'
+        paragraph_2: 'On terminals <strong>VX 680</strong>, the place to connect the USB stick is located on the recharge cable, as shown below:'
         paragraph_3: 'The terminal will detect the connected stick, and the following screen is displayed:'
         paragraph_4: Choose the option 1, Yes, to begin the loading process
         paragraph_5: After loading all the files, the terminal will request to remove the stick
@@ -2635,7 +2635,7 @@ en:
         paragraph_2: Connect the USB pendrive to the computer
         paragraph_3: Format the pendrive (format FAT32)
         paragraph_4: 'Unzip the downloaded WALK Framework package'
-        paragraph_5: 'Copy the file: verifone_evo_usb/lib_cless/model(VX520 or VX680)/<strong>VERIFONE.zip</strong> to the pendrive (on root)'
+        paragraph_5: 'Copy the file: verifone_evo_usb/lib_cless/model(VX 520 or VX 680)/<strong>VERIFONE.zip</strong> to the pendrive (on root)'
         paragraph_6: 'Repeat the process with the file: verifone_evo_usb/cw_framework_version/<strong>VERIFONE.zip</strong>'
       prerequisites:
         cable: <strong>Charge cable USB or Serial</strong>
@@ -2649,9 +2649,9 @@ en:
         preparing_the_pendrive: Preparing the USB stick
         prerequisites: Prerequisites
         wiping_the_device: Cleaning the device
-      title: Installing the WALK Framework - VeriFone EVO
+      title: Installing the WALK Framework - Verifone EVO
       wiping_the_device:
-        paragraph_1: 'With the cable properly connected, turn the device on the power cord. In the model Vx520 press the F2 and F4 at the top right of the device. In the model Vx680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
+        paragraph_1: 'With the cable properly connected, turn the device on the power cord. In the model VX 520 press the F2 and F4 at the top right of the device. In the model VX 680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
         paragraph_10: Press 1 to see the next screen.
         paragraph_11: Press 2, then press 2 again to choose the COM1, so that the device will be awaiting the execution of any file from the directory WALK Framework, which was previously uncompressed.
         paragraph_12: The first file to be executed is <strong>limpa_terminal.bat</strong>. This file clears any information that is in the device, so there is no 'junk' in the device memory when it loads new framework.
@@ -2673,14 +2673,14 @@ en:
           paragraph_1: "The USB stick is formated with <strong>FAT32</strong>;"
           paragraph_2: "Just the file VERIFONE.zip is present on the USB stick root."
     verifone_verix:
-      description: Step by step process of installing the WALK Framework for VeriFone Vx510, Vx610 and Vx670.
+      description: Step by step process of installing the WALK Framework for Verifone Vx 510, Vx 610 and Vx 670.
       identify_os:
         os_version: Operating System Version
         paragraph_1: To identify the version of the operating system that is installed on your device, note the second line of the display screen, considering the last two characters. This screen is displayed when the device is connected.
         paragraph_2: Keep the operating system of your devices up to date. Devices with outdated operating system can be slow and may also have communication problems.
         paragraph_3: 'Minimum system requirements for installing the operating WALK Framework:'
         pos_model: Model POS
-      introduction: This guide will walk you through the process of installing the WALK Framework on terminals VeriFone <strong>Vx510</strong>, <strong>Vx610</strong> and <strong>Vx670</strong>. Be aware of prerequisites and follow the installation process carefully.
+      introduction: This guide will walk you through the process of installing the WALK Framework on terminals Verifone <strong>Vx 510</strong>, <strong>Vx 610</strong> and <strong>Vx 670</strong>. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
         paragraph_1: To start charging, run carrega_na_flash.bat to load the certificates and the WALK Framework.
         paragraph_2: 'The following DOS screen will appear:'
@@ -2695,7 +2695,7 @@ en:
         paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port of the PC, if it has two COM ports.
         paragraph_6: Another important point is that the COM1 of your computer may be being used by another process, causing error in the load time of the WALK Framework, and how the download is only possible through COM1, it must be correctly configured in Windows.
       prerequisites:
-        cable: <strong>Charge Cable for VeriFone Verix 510 and 610:</strong> If you are using the device Verix 670, it will require a special adapter which can be requested with your device supplier.
+        cable: <strong>Charge Cable for Verifone Verix 510 and 610:</strong> If you are using the device Verix 670, it will require a special adapter which can be requested with your device supplier.
         operating_system: <strong> Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)
         serial_port: <strong>Serial port or USB:</strong> available and configured as <strong>COM1</strong>
       table_of_contents:
@@ -2704,9 +2704,9 @@ en:
         preparing_the_device: Preparing the device
         prerequisites: Prerequisites
         wiping_the_device: Cleaning the device
-      title: Installing the WALK Framework - VeriFone Verix
+      title: Installing the WALK Framework - Verifone Verix
       wiping_the_device:
-        paragraph_1: 'With the cable properly connected, turn the device on the power cord. In the model Vx520 press the F2 and F4 at the top right of the device. In the model Vx680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
+        paragraph_1: 'With the cable properly connected, turn the device on the power cord. In the model VX 520 press the F2 and F4 at the top right of the device. In the model VX 680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
         paragraph_10: 'Press F3 to select FULL option and move to the screen of the selection of the transfer mode:'
         paragraph_11: 'Press F3 to choose  COM1, so that the device will be awaiting the execution of any file from WALK Framework directory, which was earlier unzipped:'
         paragraph_12: The first file to be executed is <strong>limpa_terminal.bat</strong>. This file clears any information that is in the device, so it is no 'junk' in the device memory when it loads new framework.
