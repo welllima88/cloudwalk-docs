@@ -2841,6 +2841,7 @@ pt-BR:
     transactions_patterns:
       intro:
         title: "Padrões de transações"
+        description: "Aprenda sobre seus padrões de transacões automaticamente identificados por nosso serviço."
         table_of_contents:
           introduction: "Introdução"
           pattern: "O que é um padrão?"
@@ -2861,6 +2862,7 @@ pt-BR:
         next: "Visão geral do tutorial"
       overview:
         title: "Padrões de transações - Visão geral do tutorial"
+        description: "Aprenda neste tutorial como acessar seus padrões de transacões e anomalias."
         paragraph_1: "Neste tutorial, você aprenderá: como acessar um relatório com suas últimas transações anômalas, como visualizar todos os padrões e anomalias de suas transações em um gráfico e como receber notificações via e-mail ou webhook quando algo anômalo ocorrer."
         image_1: "<img src='/img/pt-BR/guides/transactions_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Este é um serviço integrado ao CloudWalk Manager e você pode accessá-lo em <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
@@ -2870,6 +2872,7 @@ pt-BR:
         next: "Relatório de anomalias"
       anomalies_report:
         title: "Padrões de transações - Relatório de anomalias"
+        description: "Aprenda como acessar um relatório com suas últimas transações anômalas."
         paragraph_1: "Ao acessar a aba de anomalias, você verá uma tela similar a esta:"
         image_1: "<img src='/img/pt-BR/guides/transactions_patterns/report.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Esta é a aba padrão ativada quando você acessa a URL dos padrões de transações."
@@ -2881,6 +2884,7 @@ pt-BR:
         next: "Gráfico dos padrões  "
       patterns_chart:
         title: "Padrões de transações - Gráfico dos padrões"
+        description: "Aprenda como acessar um gráfico com seus padrões de transações."
         table_of_contents:
           interface_presentation: "Apresentação da interface"
           chart_interaction: "Interações com o gráfico"
@@ -2930,6 +2934,7 @@ pt-BR:
         next: "Configurando notificações"
       notifications_settings:
         title: "Padrões de transações - Configurando notificações"
+        description: "Aprenda a configurar um e-mail ou webhook para receber notificações de transações anômalas."
         table_of_contents:
           interface: "Apresentação da interface"
           setting_email: "Configurando um e-mail"
