@@ -3026,7 +3026,7 @@ pt-BR:
           paragraph_1: "POSXML (acrônimo para <strong>P</strong>oint <strong>O</strong>f <strong>S</strong>ale e<strong>X</strong>tended <strong>M</strong>arkup <strong>L</strong>anguage) é uma linguagem de programação utilizada para criar aplicações para terminais POS."
           paragraph_2: "No desenvolvimento de aplicações para terminais POS, utilizam-se normalmente as linguagens de programação C ou C++, que exigem um conhecimento profundo tanto da especificação técnica do equipamento (hardware) quanto da linguagem de programação."
           paragraph_3: "O objetivo principal da linguagem POSXML é simplificar o desenvolvimento de aplicações para os terminais POS, oferecendo um conjunto de instruções e de comandos pré-programados que permitem a interação direta com o dispositivo, resultando em uma grande redução no tempo de desenvolvimento de uma aplicação."
-        question_4: "Qual é o tamanho m��ximo de uma String em POSXML?"
+        question_4: "Qual é o tamanho máximo de uma String em POSXML?"
         answer_4: "O tamanho máximo de uma <a href='https://docs.cloudwalk.io/pt-BR/posxml/commands/stringvariable'>String</a> é 1024 bytes."
         question_5: "Existem caracteres ou palavras reservadas na linguagem POSXML?"
         answer_5: "Para mais informações, confira a <a href='https://docs.cloudwalk.io/pt-BR/posxml/structure'>estrutura da linguagem POSXML</a>."
