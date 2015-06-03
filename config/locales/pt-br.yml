@@ -361,9 +361,6 @@ pt-BR:
     get_in_touch: Entre em contato
     paragraph_1: Os nomes e logotipos WALK são marcas registradas da Plano Bê. Todos os direitos reservados.
     terms: Termos de Responsabilidade
-  general:
-    index: Índice
-    updated_at: Atualizado em %{date}
   search:
     placeholder: "Pesquisar..."
     helper: "Por favor insira ao menos um parâmetro de pesquisa"

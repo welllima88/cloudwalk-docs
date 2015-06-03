@@ -361,9 +361,6 @@ en:
     get_in_touch: Get in touch
     paragraph_1: The names and logos WALK are trademarks of Plano Bê. All rights reserved.
     terms: Terms of Responsability
-  general:
-    index: Index
-    updated_at: Updated at %{date}
   search:
     placeholder: "Search..."
     helper: "Please add at least one search parameter"
