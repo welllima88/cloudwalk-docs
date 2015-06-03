@@ -619,7 +619,7 @@ en:
     authorizer:
       description: Component responsible to validate the information provided by POS terminals.
       overview:
-        paragraph_1: 'Authorizer is the component responsible of the verification and validation of the information provided by POS terminals. The information that travels over the CloudWalk network follows the following flow:'
+        paragraph_1: 'Authorizer is the component responsible for the verification and validation of the information provided by POS terminals. The information that travels over the CloudWalk network follows the following flow:'
         item_1: The <strong>Device</strong> captures the data and sends it to the <strong>CloudWalk Service</strong>.
         item_2: The <strong>CloudWalk Service</strong> receives the data and forwards it to the <strong>Authorizer</strong>.
         item_3: The <strong>Authorizer</strong> validates the data and sends a response to the <strong>CloudWalk Service</strong>.
@@ -639,7 +639,7 @@ en:
       more_info:
         paragraph_1: Learn more about the <a href='https://en.wikipedia.org/wiki/POSXML' target='_blank' class='external'>POSXML</a> language on Wikipedia!
       overview:
-        paragraph_1: POSXML is a name given to the programming language created by Plano Bê, aimed at developing applications for devices such as POS terminals and smartphones. It is organized and structured in the form of tags, showing levels and subsets of a set of commands and instructions, which form the logical structure of a POSXML application.
+        paragraph_1: POSXML is a name given to the programming language created in-house. This guide will walk you through the process of installing the WALK Framework on terminals Verifone, aimed at developing applications for devices such as POS terminals and smartphones. It is organized and structured in the form of tags, showing levels and subsets of a set of commands and instructions, which form the logical structure of a POSXML application.
         paragraph_2: Structured and based on XML (acronym for eXtensible Markup Language), POSXML is easy to learn, has mathematical features and powerful graphical capabilities that enable the creation of animated interfaces with icons and animations.
       table_of_contents:
         more_info: More information
@@ -2083,7 +2083,7 @@ en:
       models:
         list: "Supported models: "
         verix: "Vx 510, Vx 610 and Vx 670"
-        evo_usb: "VX 520, VX 675 and VX 680"
+        evo_usb: "VX 520 and VX 680"
         evo_serial: "VX 805 and VX 820"
         telium_1: "EFT930G and EFT930S"
         telium_2: "ICT220, ICT250, IWL220, IWL250 and IWL280"
@@ -2543,8 +2543,8 @@ en:
       troubleshooting:
         one:
           title: "If the loading process didn't start, please make sure that:"
-          paragraph_1: "The USB stick is formated with <strong>FAT32</strong>;"
-          paragraph_2: "Just the TELIUM folder is present on the USB stick root."
+          paragraph_1: "The USB stick is formatted with <strong>FAT32</strong>."
+          paragraph_2: "Just the TELIUM folder is present on the root of the USB pendrive."
         two:
           title: "What is the setup menu password?"
           paragraph_1: "If your device is requesting a password to access the setup menu, this password was previously set by someone. Please get in touch with your the POS supplier."
@@ -2570,7 +2570,7 @@ en:
         paragraph_5: n the unzipped folder you will find a folder called 'CloudWalk Framework', copy the folder called Telium lying in it for pendrive
       prerequisites:
         adapter: '<strong>USB Adapter:</strong> Required only for installation on IWL220, IWL250 and IWL280'
-        operating_system: '<strong>Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)'
+        operating_system: '<strong>Operating System:</strong> Microsoft Windows XP SP3 or later.'
         pendrive: <strong>USB memory stick:</strong> A USB pendrive.
       table_of_contents:
         loading_the_framework: Loading the framework on the device
@@ -2587,8 +2587,8 @@ en:
       troubleshooting:
         one:
           title: "If the loading process didn't start, please make sure that:"
-          paragraph_1: "The USB stick is formated with <strong>FAT32</strong>;"
-          paragraph_2: "Just the TELIUM folder is present on the USB stick root."
+          paragraph_1: "The USB stick is formatted with <strong>FAT32</strong>."
+          paragraph_2: "Just the TELIUM folder is present on the root of the USB pendrive."
         two:
           title: "What is the setup menu password?"
           paragraph_1: "If your device is requesting a password to access the setup menu, this password was previously set by someone. Please get in touch with your the POS supplier."
@@ -2606,25 +2606,25 @@ en:
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals Verifone <strong>VX 520</strong> and <strong>VX 680</strong>. Be aware of prerequisites and follow the installation process carefully.
       introduction_cable_terminals: This guide will walk you through the process of installing the WALK Framework on terminals Verifone VX 805 and VX 820. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
-        paragraph_1: To start charging, run carrega_na_flash.bat to load the certificates and the WALK Framework.
+        paragraph_1: To start charging, run <strong>carrega_na_flash.bat</strong> to load the certificates and the WALK Framework.
         paragraph_2: 'The following DOS screen will appear:'
         paragraph_3: This screen shows the continuation of downloading the framework to the device. No action is required, since the commands are executed automatically.
         paragraph_4: 'While the charge is made, the device displays the progress of the case:'
-        paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and then will be presented the first launch setup.
+        paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and will then present the first launch setup.
       loading_the_framework_usb:
         paragraph_1: 'On terminals <strong>VX 520</strong>, connect the USB stick on the back of the terminal as shown below:'
         paragraph_2: 'On terminals <strong>VX 680</strong>, the place to connect the USB stick is located on the recharge cable, as shown below:'
         paragraph_3: 'The terminal will detect the connected stick, and the following screen is displayed:'
-        paragraph_4: Choose the option 1, Yes, to begin the loading process
-        paragraph_5: After loading all the files, the terminal will request to remove the stick
-        paragraph_6: Remove the pendrive and press Enter (green). The device will restart a few times, and then will be presented the first launch setup.
+        paragraph_4: Choose the option 1, Yes, to begin the loading process.
+        paragraph_5: After loading all the files, the terminal will request to remove the stick.
+        paragraph_6: Remove the pendrive and press Enter (green). The device will restart a few times, and then show the first launch setup.
       preparing_the_device:
         paragraph_1: Unpack the WALK Framework downloaded into directory of your choice.
         paragraph_2: This directory must be local directory (eg C:\temp\dir), and not network directory (\\)
-        paragraph_3: 'Before performing any file, you must prepare your device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port of your computer and the <strong>RS 232</strong> port of the device as the image below:'
+        paragraph_3: 'Before performing any file, you must prepare your device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port on your computer and the <strong>RS 232</strong> port of the device as the image below:'
         paragraph_4: <strong>Attention!</strong>
-        paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port of the PC, if it has two COM ports.
-        paragraph_6: Another important point is that the COM1 of your computer may be being used by another process, causing error in the load time of the WALK Framework, and because download is only possible through COM1, it must be correctly configured in Windows.
+        paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port on the PC, if it has two COM ports.
+        paragraph_6: Another important point is that the COM1 port on your computer may be in use by another process which will cause an error in the loading of the WALK Framework, and because the download is only possible through the COM1 port, it must be correctly configured in Windows.
       preparing_the_device_usb:
         paragraph_1: 'After turning on the terminal and after displaying the splash screen that displays the version of the operating system, the following screen should be shown:'
       preparing_the_pendrive:
@@ -2635,8 +2635,8 @@ en:
         paragraph_5: 'Copy the file: verifone_evo_usb/lib_cless/model(VX 520 or VX 680)/<strong>VERIFONE.zip</strong> to the pendrive (on root)'
         paragraph_6: 'Repeat the process with the file: verifone_evo_usb/cw_framework_version/<strong>VERIFONE.zip</strong>'
       prerequisites:
-        cable: <strong>Charge cable USB or Serial</strong>
-        operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)
+        cable: <strong>Charge cable:</strong> USB or Serial
+        operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or later.
         pendrive: <strong>USB memory stick:</strong> A USB pendrive.
         serial_port: <strong>Serial port or USB:</strong> available and configured as <strong>COM1</strong>
       table_of_contents:
@@ -2648,7 +2648,7 @@ en:
         wiping_the_device: Cleaning the device
       title: Installing the WALK Framework - Verifone EVO
       wiping_the_device:
-        paragraph_1: 'With the cable properly connected, turn the device on the power cord. In the model VX 520 press the F2 and F4 at the top right of the device. In the model VX 680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
+        paragraph_1: 'With the cable properly connected, power on the device. In the model VX 520 press the F2 and F4 at the top right of the device. In the model VX 680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
         paragraph_10: Press 1 to see the next screen.
         paragraph_11: Press 2, then press 2 again to choose the COM1, so that the device will be awaiting the execution of any file from the directory WALK Framework, which was previously uncompressed.
         paragraph_12: The first file to be executed is <strong>limpa_terminal.bat</strong>. This file clears any information that is in the device, so there is no 'junk' in the device memory when it loads new framework.
@@ -2667,8 +2667,8 @@ en:
       troubleshooting:
         one:
           title: "If the loading process didn't start, please make sure that:"
-          paragraph_1: "The USB stick is formated with <strong>FAT32</strong>;"
-          paragraph_2: "Just the file VERIFONE.zip is present on the USB stick root."
+          paragraph_1: "The USB stick is formatted with <strong>FAT32</strong>."
+          paragraph_2: "Just the file VERIFONE.zip is present on the root of the USB pendrive."
     verifone_verix:
       description: Step by step process of installing the WALK Framework for Verifone Vx 510, Vx 610 and Vx 670.
       identify_os:
@@ -2679,21 +2679,21 @@ en:
         pos_model: Model POS
       introduction: This guide will walk you through the process of installing the WALK Framework on terminals Verifone <strong>Vx 510</strong>, <strong>Vx 610</strong> and <strong>Vx 670</strong>. Be aware of prerequisites and follow the installation process carefully.
       loading_the_framework:
-        paragraph_1: To start charging, run carrega_na_flash.bat to load the certificates and the WALK Framework.
+        paragraph_1: To start charging, run <strong>carrega_na_flash.bat</strong> to load the certificates and the WALK Framework.
         paragraph_2: 'The following DOS screen will appear:'
         paragraph_3: This screen shows the continuation of downloading the framework to the device. No action is required, since the commands are executed automatically.
         paragraph_4: 'While the charge is made, the device displays the progress of the case:'
-        paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and then will be presented the first launch setup.
+        paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and will then present the first launch setup.
       preparing_the_device:
         paragraph_1: Unpack the WALK Framework downloaded into directory of your choice.
         paragraph_2: This directory must be a local directory (eg C:\temp\dir), and not a network directory (\\)
-        paragraph_3: 'Before performing any file, you must prepare the device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port of your computer and the <strong>RS 232</strong> port from the device as the image below:'
+        paragraph_3: 'Before performing any file, you must prepare the device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port on your computer and the <strong>RS 232</strong> port from the device as the image below:'
         paragraph_4: <strong>Attention!</strong>
-        paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port of the PC, if it has two COM ports.
-        paragraph_6: Another important point is that the COM1 of your computer may be being used by another process, causing error in the load time of the WALK Framework, and how the download is only possible through COM1, it must be correctly configured in Windows.
+        paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port on the PC, if it has two COM ports.
+        paragraph_6: Another important point is that the COM1 port on your computer may be in use by another process, causing error in the load time of the WALK Framework, and how the download is only possible through COM1, it must be correctly configured in Windows.
       prerequisites:
         cable: <strong>Charge Cable for Verifone Verix 510 and 610:</strong> If you are using the device Verix 670, it will require a special adapter which can be requested with your device supplier.
-        operating_system: <strong> Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc.)
+        operating_system: <strong> Operating System:</strong> Microsoft Windows XP SP3 or later.
         serial_port: <strong>Serial port or USB:</strong> available and configured as <strong>COM1</strong>
       table_of_contents:
         identify_os: Checking the device OS version
