@@ -586,36 +586,25 @@ pt-BR:
         overview: Apresentação
       title: Ambiente de desenvolvimento
     index:
-      benefits:
-        feature_1: — Licenças gratuitas e ilimitadas:</strong> não se preocupe com custos de licenças ou ativação de equipamentos.
-        feature_2: — Fácil preparação:</strong> instalação, configuração e testes feitos diretamente pela revenda credenciada.
-        feature_3: — Suporte EMV:</strong> evite fraldes e utilize todo o potencial e segurança dos cartões com chip.
-        feature_4: — Multi aplicativo:</strong> desfrute da possibilidade de possuir diversas aplicações em um mesmo dispositivo.
-        feature_5: — Multi dispositivo:</strong> sua aplicação estará sempre pronta para rodar em qualquer dispositivo dentre os homologados.
-        feature_6: — Tecnologia <em>contactless</em>:</strong> inovação, agilidade e praticidade em transações sem contato.
-        feature_7: — Desenvolvimento rápido:</strong> desenvolva as aplicações de forma simples e rápida com a linguagem POSXML.
-        feature_8: — Atualização remota:</strong> economize atualizando seus dispositivos remotamente, sem ir a campo.
-        paragraph_1: 'As premissas do serviço CloudWalk se baseiam na qualidade de serviços de rede, minimização de custos, agilidade no desenvolvimento das aplicações e controle logístico das atualizações de dispositivos em campo, como:'
-      description: CloudWalk é uma plataforma de aplicações para dispositivos móveis como smartphones e terminais POS, no modelo SaaS. O serviço oferece uma solução hardware agnostic, que permite que quaisquer aplicações desenvolvidas com o serviço CloudWalk sejam compatíveis com todos os dispositivos homologados, oferecendo diversos benefícios, tais como EMV e suporte a tecnologia contactless.
-      how_it_works:
-        paragraph_1: CloudWalk é uma plataforma de aplicações para dispositivos móveis como smartphones e terminais POS, no modelo <a href='http://pt.wikipedia.org/wiki/Software_como_serviço' target='blank' class='external'>SaaS</a>. O serviço oferece uma solução <em>hardware agnostic</em>, que permite que quaisquer aplicações desenvolvidas com o serviço CloudWalk sejam compatíveis com todos os dispositivos homologados, oferecendo diversos benefícios, tais como EMV e suporte a tecnologia <em>contactless</em>.
-      markets:
-        item_1: — Administradoras/Processadoras de Cartões
-        item_10: — Entre outros diversos segmentos de mercado
-        item_2: — Redes de captura
-        item_3: — Desenvolvedores de Softwares
-        item_4: — Redes de força de Vendas
-        item_5: — Operadoras de Planos de Saúde
-        item_6: — Operadores Logísticos
-        item_7: — Universidades e Faculdades
-        item_8: — Empresas de arrecadação e cobrança
-        item_9: — Prestadoras de serviço Público (água, energia, gás, etc)
-        paragraph_1: 'O serviço CloudWalk não se limita apenas às administradoras ou processadoras de cartão de crédito ou débito, mas se adere a qualquer segmento de mercado que possa vir a ter a necessidade de coleta de dados em campo e emissão de comprovantes e relatórios, a saber:'
+      description: Open Payment Platform as a Service
+      title: "CloudWalk Docs"
+      intro: "You will find below how to get started with CloudWalk, learning the basics of the <a href='/introduction/walk-manager'>Manager</a> and the <a href='/introduction/development-environment'>IDE</a>"
       table_of_contents:
-        benefits: Vantagens e benefícios
-        how_it_works: Funcionamento do serviço
-        markets: Possíveis mercados e aplicações
-      title: Visão geral do serviço CloudWalk
+        getting_started: "Getting started"
+      getting_started:
+        paragraph_1: "It is super easy to get started with CloudWalk! Follow the steps below and you should have a simple POS application running on an emulator, communicating with our sample endpoint."
+        h3_1: "1. Create a free account"
+        paragraph_2: "First, you will need to create a free CloudWalk account, which will let you use all the components of the platform:"
+        paragraph_3: "<a href='https://manager.cloudwalk.io/users/sign_up' target='blank' class='external'>https://manager.cloudwalk.io/users/sign_up</a>"
+        h3_2: "2. Create your first app"
+        paragraph_4: "Now that you have created your free CloudWalk account, you should be able to create your very first application:"
+        paragraph_5: "<a href='https://manager.cloudwalk.io/apps/posxml/new' target='blank' class='external'>https://manager.cloudwalk.io/apps/posxml/new</a>"
+        paragraph_6: "Let's keep it simple and create an application that will just send a string to our test server, that will then return an echo."
+        h3_3: "3. Add the source code"
+        paragraph_7: "Now that you have created your POSXML application, click on the button <strong>Edit source code</strong>, which will bring up the CloudWalk online IDE, where you can copy and paste the following POSXML code:"
+        h3_4: "4. Emulate!"
+        paragraph_8: "The last step is to emulate the sample application on the emulator. Click the button <strong>Emulate</strong> and be impressed!"
+        paragraph_9: "Note that the application is just sending a sequence of numbers (variable <span class='code'>sBufSend</span>), and our test server is appending the string <strong>CLOUDWALK</strong> into it."
     authorizer:
       description: Componente responsável pela validação das informações enviadas pelos terminais POS.
       overview:
