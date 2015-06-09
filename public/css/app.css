@@ -81,6 +81,11 @@ h1 {
   color: #333;
 }
 
+.intro {
+  margin-top: 5px;
+  color: #777;
+}
+
 h2 {
   -webkit-font-smoothing: antialiased;
   font-size: 24px;
