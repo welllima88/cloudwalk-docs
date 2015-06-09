@@ -588,7 +588,7 @@ en:
     index:
       description: Open Payment Platform as a Service
       title: "CloudWalk Docs"
-      intro: "You will find below how to get started with CloudWalk, learning the basics of the <a href='/introduction/walk-manager'>Manager</a> and the <a href='/introduction/development-environment'>IDE</a>"
+      intro: "You will find below how to get started with CloudWalk, learning the basics of the <a href='/en/introduction/walk-manager'>Manager</a> and the <a href='/en/introduction/development-environment'>IDE</a>"
       table_of_contents:
         getting_started: "Getting started"
       getting_started:
