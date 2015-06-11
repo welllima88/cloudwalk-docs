@@ -217,6 +217,7 @@ pt-BR:
         attributes:
           list:
             app_name: Nome da aplicação que originou a transação
+            detail: Detalhes adicionais da transação (pode ser vazio)
             finished_at: Timestamp do fim da transação (ISO 8601)
             framework_version: Versão do framework WALK instalado no dispositivo
             id: ID do registro

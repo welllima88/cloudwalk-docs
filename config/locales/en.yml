@@ -217,6 +217,7 @@ en:
         attributes:
           list:
             app_name: Application that originated the transaction
+            detail: Additional details about the transaction (might be empty)
             finished_at: Timestamp in ISO 8601 format
             framework_version: Framework version installed on the device
             id: Record ID
