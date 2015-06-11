@@ -3105,7 +3105,11 @@ en:
             paragraph_4: "For Ethernet and wi-fi devices, make sure that you have set the correct values for Network Mask (e.g. <span class='code'>255.255.255.0</span>), Gateway (e.g. <span class='code'>192.168.1.1</span>), DNS 1 (e.g. <span class='code'>8.8.8.8</span>), DNS 2 (e.g. <span class='code'>8.8.4.4</span>) and SSL (e.g. <span class='code'>0</span>)."
             paragraph_5: "For GPRS devices, double check the APN configuration. You might need to get in touch with your telecomunications provider to make sure that everything is correct."
       cloudwalk:
-        question_1: "CloudWalk sells POS terminals?"
-        answer_1: "No, CloudWalk provides only the service. However, if you need to buy POS terminals, you can <a href='https://www.cloudwalk.io/contact'>get in touch</a> and we will be more than happy to help you out!"
-        question_2: "Is the authorizer server included on the CloudWalk service?"
-        answer_2: "No, the authorizer development and maintenance is the customer's responsibility."
+        question_1: "How a transaction is defined?"
+        answer_1:
+          paragraph_1: "Uma transação se caracteriza por toda e qualquer mensagem de dados proveniente de qualquer equipamento homologado e certificado que tenha o framework Walk instalado, com aplicação ou aplicações operacionais nele, e que integradas ao nossos servidores e autorizadores dos nossos clientes, via telecomunicação aplicável, e que após a resposta dos servidores, retorne ao POS com a resposta do incentivo dado no POS primeiramente."
+          paragraph_2: "Note que todas as transações estão em conformidade com os padrões PCI e demais protocolos de segurança da CloudWalk, e as mesmas são sigilosas e de acesso exclusivo do cliente."
+        question_2: "CloudWalk sells POS terminals?"
+        answer_2: "No, CloudWalk provides only the service. However, if you need to buy POS terminals, you can <a href='https://www.cloudwalk.io/contact'>get in touch</a> and we will be more than happy to help you out!"
+        question_3: "Is the authorizer server included on the CloudWalk service?"
+        answer_3: "No, the authorizer development and maintenance is the customer's responsibility."

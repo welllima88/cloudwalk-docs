@@ -3105,7 +3105,11 @@ pt-BR:
             paragraph_4: "Para dispositivos Ethernet e wi-fi, certifique-se que os valores corretos foram definidos para Network Mask (ex: <span class='code'>255.255.255.0</span>), Gateway (ex: <span class='code'>192.168.1.1</span>), DNS 1 (ex: <span class='code'>8.8.8.8</span>), DNS 2 (ex: <span class='code'>8.8.4.4</span>) e SSL (ex: <span class='code'>0</span>)."
             paragraph_5: "Para dispositivos GPRS, verifique a configuração da APN. Talvez seja necessário entrar em contato com o seu provedor de telecomunicações para se certificar que tudo está correto."
       cloudwalk:
-        question_1: "CloudWalk vende terminais POS?"
-        answer_1: "Não, a CloudWalk oferece apenas o serviço. No entanto, se você precisa comprar terminais POS, <a href='https://www.cloudwalk.io/contact'>entre em contato</a> que ficaremos felizes em ajudar!"
-        question_2: "O servidor autorizador é incluído no serviço CloudWalk?"
-        answer_2: "Não, o desenvolvimento e a manutenção do autorizador é de responsibilidade do cliente."
+        question_1: "O que é uma transação?"
+        answer_1:
+          paragraph_1: "Uma transação se caracteriza por toda e qualquer mensagem de dados proveniente de qualquer equipamento homologado e certificado com o WALK Framework, com uma ou mais aplicações operacionais, integradas ao nossos servidores e demais autorizadores, via telecomunicação aplicável."
+          paragraph_2: "Note que todas as transações estão em conformidade com os padrões PCI e demais protocolos de segurança da CloudWalk, e as mesmas são sigilosas e de acesso exclusivo do cliente."
+        question_2: "CloudWalk vende terminais POS?"
+        answer_2: "Não, a CloudWalk oferece apenas o serviço. No entanto, se você precisa comprar terminais POS, <a href='https://www.cloudwalk.io/contact'>entre em contato</a> que ficaremos felizes em ajudar!"
+        question_3: "O servidor autorizador é incluído no serviço CloudWalk?"
+        answer_3: "Não, o desenvolvimento e a manutenção do autorizador é de responsibilidade do cliente."
