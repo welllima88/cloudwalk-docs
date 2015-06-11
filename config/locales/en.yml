@@ -587,8 +587,8 @@ en:
       title: Development environment
     index:
       description: Open Payment Platform as a Service
-      title: "CloudWalk Docs"
-      intro: "You will find below how to get started with CloudWalk, learning the basics of the <a href='/en/introduction/walk-manager'>Manager</a> and the <a href='/en/introduction/development-environment'>IDE</a>"
+      title: ""
+      intro: "Here you will discover how to get started with CloudWalk, learning the basics of the <a href='/en/introduction/walk-manager'>Manager</a> and the <a href='/en/introduction/development-environment'>IDE.</a>"
       table_of_contents:
         getting_started: "Getting started"
       getting_started:
@@ -599,12 +599,12 @@ en:
         h3_2: "2. Create your first app"
         paragraph_4: "Now that you have created your free CloudWalk account, you should be able to create your very first application:"
         paragraph_5: "<a href='https://manager.cloudwalk.io/apps/posxml/new' target='blank' class='external'>https://manager.cloudwalk.io/apps/posxml/new</a>"
-        paragraph_6: "Let's keep it simple and create an application that will just send a string to our test server, that will then return an echo."
+        paragraph_6: "Let's keep it simple and create an application that will just send a string to our test server and then return an echo."
         h3_3: "3. Add the source code"
         paragraph_7: "Now that you have created your POSXML application, click on the button <strong>Edit source code</strong>, which will bring up the CloudWalk online IDE, where you can copy and paste the following POSXML code:"
         h3_4: "4. Emulate!"
-        paragraph_8: "The last step is to emulate the sample application on the emulator. Click the button <strong>Emulate</strong> and be impressed!"
-        paragraph_9: "Note that the application is just sending a sequence of numbers (variable <span class='code'>sBufSend</span>), and our test server is appending the string <strong>CLOUDWALK</strong> into it."
+        paragraph_8: "The last step is to emulate the sample application on the emulator. Click the <strong>Emulate</strong> button, followed by the <strong>Power</strong> button and be impressed!"
+        paragraph_9: "Note that the application is just sending a sequence of numbers (variable <span class='code'>sBufSend</span>), and our test server is appending the string <strong>CLOUDWALK</strong> onto it."
     authorizer:
       description: Component responsible to validate the information provided by POS terminals.
       overview:
