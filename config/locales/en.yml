@@ -698,8 +698,8 @@ en:
       emulator: Emulator
     guides:
       group_name: Guides
-      patterns:
-        sub_group_name: "Transactions patterns"
+      patterns: "Transactions patterns"
+      emulator_card_swipe: "Emulator Card Swipe"
     help:
       group_name: Help
       faq: "Frequently Asked Questions"
@@ -2954,6 +2954,9 @@ en:
             paragraph_3: "The last step is to set this URL in CloudWalker Manager, as explained above."
             paragraph_4: "Now you are ready to receive our notifications!"
         previous: "Patterns chart"
+    emulator_card_swipe:
+      description: "Learn how to use cards on CloudWalk Emulator"
+      title: "Emulator Card Swipe"
   help:
     faq:
       description: "The most frequently asked questions about CloudWalk"

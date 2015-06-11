@@ -698,8 +698,8 @@ pt-BR:
       emulator: Emulador
     guides:
       group_name: Tutoriais
-      patterns:
-        sub_group_name: "Padrões de transações"
+      patterns: "Padrões de transações"
+      emulator_card_swipe: "Cartões no Emulador"
     help:
       group_name: Ajuda
       faq: "Perguntas Frequentes"
@@ -2954,6 +2954,9 @@ pt-BR:
             paragraph_3: "O último passo é configurar essa URL no CloudWalk Manager, conforme explicado acima."
             paragraph_4: "Agora você está pronto para receber nossas notificações!"
         previous: "Gráfico dos padrões"
+    emulator_card_swipe:
+      description: "Aprenda como utilizar cartões no Emuladow CloudWalk"
+      title: "Cartões no Emulador"
   help:
     faq:
       description: "As perguntas mais frequentes sobre o serviço CloudWalk"
