@@ -3105,7 +3105,11 @@ en:
             paragraph_4: "For Ethernet and wi-fi devices, make sure that you have set the correct values for Network Mask (e.g. <span class='code'>255.255.255.0</span>), Gateway (e.g. <span class='code'>192.168.1.1</span>), DNS 1 (e.g. <span class='code'>8.8.8.8</span>), DNS 2 (e.g. <span class='code'>8.8.4.4</span>) and SSL (e.g. <span class='code'>0</span>)."
             paragraph_5: "For GPRS devices, double check the APN configuration. You might need to get in touch with your telecomunications provider to make sure that everything is correct."
       cloudwalk:
-        question_1: "CloudWalk sells POS terminals?"
-        answer_1: "No, CloudWalk provides only the service. However, if you need to buy POS terminals, you can <a href='https://www.cloudwalk.io/contact'>get in touch</a> and we will be more than happy to help you out!"
-        question_2: "Is the authorizer server included on the CloudWalk service?"
-        answer_2: "No, the authorizer development and maintenance is the customer's responsibility."
+        question_1: "What is a transaction?"
+        answer_1:
+          paragraph_1: "A transaction is defined by any data message from approved and certified POS equipment with the WALK Framework and an operational application installed that is integrated with CloudWalk's servers and our customer's authorisers, via an applicable telecommunications channel."
+          paragraph_2: "Note: all transactions conform to PCI standards and additional CloudWalk security protocols, being private and exclusively accessible by the customer."
+        question_2: "Do CloudWalk sell POS terminals?"
+        answer_2: "No, CloudWalk provides only the service. However, if you need to buy POS terminals, you can <a href='https://www.cloudwalk.io/contact'>get in touch</a> and we will be more than happy to help you out!"
+        question_3: "Is the authorizer server included with the CloudWalk service?"
+        answer_3: "No, authorizer development and maintenance is the customer's responsibility."
