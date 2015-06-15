@@ -9,6 +9,7 @@ SimpleCov.start
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
+require 'tilt/erb'
 require_relative 'docs.rb'
 
 include Rack::Test::Methods
