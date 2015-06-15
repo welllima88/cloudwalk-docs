@@ -3107,8 +3107,8 @@ en:
       cloudwalk:
         question_1: "What is a transaction?"
         answer_1:
-          paragraph_1: "A transaction is characterised as any data message from any approved and certified POS equipment with the WALK Framework, an application or operational application installed, that is integrated with CloudWalk’s servers and our clients’ authorisers, via an applicable telecommunications channel, that receives a response to the POS equipment from the server and that verifies the data sent from the POS device initially."
-          paragraph_2: "Note: all transactions conform to PCI standards and CloudWalk security protocols and are exclusively accessible to the client."
+          paragraph_1: "A transaction is defined by any data message from approved and certified POS equipment with the WALK Framework and an operational application installed that is integrated with CloudWalk's servers and our customer's authorisers, via an applicable telecommunications channel."
+          paragraph_2: "Note: all transactions conform to PCI standards and additional CloudWalk security protocols, being private and exclusively accessible by the customer."
         question_2: "Do CloudWalk sell POS terminals?"
         answer_2: "No, CloudWalk provides only the service. However, if you need to buy POS terminals, you can <a href='https://www.cloudwalk.io/contact'>get in touch</a> and we will be more than happy to help you out!"
         question_3: "Is the authorizer server included with the CloudWalk service?"
