@@ -59,13 +59,13 @@ describe "Docs" do
   end
 
   it "should get a pt-BR title" do
-    get '/pt-BR/introduction'
-    assert last_response.body.include?('Visão geral do serviço CloudWalk'), "I18n failed"
+    get '/pt-BR/introduction/authorizer'
+    assert last_response.body.include?('Autorizador'), "I18n failed"
   end
 
   it "should get a en title" do
-    get '/en/introduction'
-    assert last_response.body.include?('CloudWalk Service Overview'), "I18n failed"
+    get '/en/introduction/authorizer'
+    assert last_response.body.include?('Authorizer'), "I18n failed"
   end
 
   it "should change locale to en" do

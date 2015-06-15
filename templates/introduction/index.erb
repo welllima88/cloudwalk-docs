@@ -4,57 +4,98 @@
 
 <h1><%= I18n.t("introduction.index.title") %></h1>
 
-<ol class="table-of-contents">
-  <li><a href="#how-it-works"><%= I18n.t("introduction.index.table_of_contents.how_it_works") %></a></li>
-  <li><a href="#benefits"><%= I18n.t("introduction.index.table_of_contents.benefits") %></a></li>
-  <li><a href="#markets"><%= I18n.t("introduction.index.table_of_contents.markets") %></a></li>
-</ol>
+<p class="intro"><%= I18n.t("introduction.index.intro") %></p>
 
-<h2 id="how-it-works"><%= I18n.t("introduction.index.table_of_contents.how_it_works") %></h2>
+<h2><%= I18n.t("introduction.index.table_of_contents.getting_started") %></h2>
 
-<p><%= I18n.t("introduction.index.how_it_works.paragraph_1") %></p>
+<p><%= I18n.t("introduction.index.getting_started.paragraph_1") %></p>
 
-<h2 id="benefits"><%= I18n.t("introduction.index.table_of_contents.benefits") %></h2>
+<%= toc_header(I18n.t("introduction.index.getting_started.h3_1")) %>
 
-<p><%= I18n.t("introduction.index.benefits.paragraph_1") %></p>
+<p><%= I18n.t("introduction.index.getting_started.paragraph_2") %></p>
 
-<ul class="features">
-  <li><strong><%= I18n.t("introduction.index.benefits.feature_1") %></li>
-  <li><strong><%= I18n.t("introduction.index.benefits.feature_2") %></li>
-  <li><strong><%= I18n.t("introduction.index.benefits.feature_3") %></li>
-  <li><strong><%= I18n.t("introduction.index.benefits.feature_4") %></li>
-  <li><strong><%= I18n.t("introduction.index.benefits.feature_5") %></li>
-  <li><strong><%= I18n.t("introduction.index.benefits.feature_6") %></li>
-  <li><strong><%= I18n.t("introduction.index.benefits.feature_7") %></li>
-  <li><strong><%= I18n.t("introduction.index.benefits.feature_8") %></li>
-</ul>
+<p><%= I18n.t("introduction.index.getting_started.paragraph_3") %></p>
 
-<h2 id="markets"><%= I18n.t("introduction.index.table_of_contents.markets") %></h2>
+<%= toc_header(I18n.t("introduction.index.getting_started.h3_2")) %>
 
-<p><%= I18n.t("introduction.index.markets.paragraph_1") %></p>
+<p><%= I18n.t("introduction.index.getting_started.paragraph_4") %></p>
 
-<div class="row-fluid">
-  <div class="span6">
-    <ul class="features">
-      <li><strong><%= I18n.t("introduction.index.markets.item_1") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_2") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_3") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_4") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_5") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_6") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_7") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_8") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_9") %></strong></li>
-      <li><strong><%= I18n.t("introduction.index.markets.item_10") %></strong></li>
-    </ul>
-  </div>
-	<div class="span6" style="text-align: center;">
-    <img src="/img/pos-market.png" alt="POS Markets" />
-	</div>
-</div>
+<p><%= I18n.t("introduction.index.getting_started.paragraph_5") %></p>
 
-<ul class="pager">
-  <li class="next">
-    <%= link_to(I18n.t("menu.understanding_the_service.walk_framework") + " &rarr;", "introduction/walk-framework") %>
-  </li>
-</ul>
+<p><%= I18n.t("introduction.index.getting_started.paragraph_6") %></p>
+
+<pre><strong>Application type:</strong> standard
+
+<strong>Application name:</strong> helloworld
+     <strong>Description:</strong> A simple echo application
+           <strong>Label:</strong> HELLO WORLD
+        <strong>Endpoint:</strong> http://http-echo.cloudwalk.io
+</pre>
+
+<%= toc_header(I18n.t("introduction.index.getting_started.h3_3")) %>
+
+<p><%= I18n.t("introduction.index.getting_started.paragraph_7") %></p>
+
+<pre><code data-language="html">&lt;integervariable value="0" variable="iConnect" /&gt;
+&lt;integervariable value="0" variable="iRet" /&gt;
+&lt;integervariable value="0" variable="iSize" /&gt;
+&lt;stringvariable value="" variable="sBuf" /&gt;
+
+&lt;display line="0" column="0" message="HTTP Post test" /&gt;
+
+&lt;!-- The preconnect command attempts to connect the device on CloudWalk --&gt;
+&lt;display line="1" column="0" message="Connecting ..." /&gt;
+&lt;preconnect variablestatus="$(iConnect)" /&gt;
+
+&lt;!-- Performs the transaction after connecting --&gt;
+&lt;if variable="$(iConnect)" operator="equalto" value="0" &gt;
+  &lt;display line="1" column="0" message="Connected!" /&gt;
+
+  &lt;!-- The content of the variable buffer should be hexadecimal. In the example
+  below, the value 0123456789 is being sent. It is possible to use command
+  string.tohex to convert any string to hexadecimal format, and then
+  use the command string.length to get the string size --&gt;
+
+  &lt;!-- In order to send data properly, it is necessary to send
+  at least 7 bytes to CloudWalk --&gt;
+
+  &lt;display line="3" column="0" message="Posting ..." /&gt;
+
+  &lt;stringvariable value="0123456789" variable="sBufSend" /&gt;
+  &lt;integervariable value="0" variable="iSzBufSend" /&gt;
+
+  &lt;string.tohex string="$(sBufSend)" variablereturn="$(sBufSend)" /&gt;
+  &lt;string.length value="$(sBufSend)" variablereturn="$(iSzBufSend)" /&gt;
+  &lt;network.send buffer="$(sBufSend)" size="$(iSzBufSend)" variablereturn="$(iRet)" /&gt;
+
+  &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
+    &lt;!-- The answer will also be stored in hexadecimal on the variable variablebuffer. Use
+    the command string.fromhex to convert the content to ASCII --&gt;
+    &lt;network.receive variablebuffer="$(sBuf)" maxsize="20" variablereceivedbytes="$(iSize)" variablereturn="$(iRet)" /&gt;
+    &lt;string.fromhex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
+
+    &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
+      &lt;display line="5" column="0" message="Post response:" /&gt;
+      &lt;display line="6" column="0" message="$(sBuf)" /&gt;
+    &lt;else/&gt;
+      &lt;display line="5" column="0" message="Receive failed!" /&gt;
+    &lt;/if&gt;
+  &lt;else/&gt;
+    &lt;display line="5" column="0" message="Send failed!" /&gt;
+  &lt;/if&gt;
+
+  &lt;!-- Always use the network.hostdisconnect command before using
+  again the commands network.send and network.receive --&gt;
+  &lt;network.hostdisconnect /&gt;
+&lt;else /&gt;
+  &lt;display line="1" column="0" message="Connection failed!" /&gt;
+&lt;/if&gt;
+
+&lt;waitkey /&gt;
+</code></pre>
+
+<%= toc_header(I18n.t("introduction.index.getting_started.h3_4")) %>
+
+<p><%= I18n.t("introduction.index.getting_started.paragraph_8") %></p>
+
+<p><%= I18n.t("introduction.index.getting_started.paragraph_9") %></p>
