@@ -2958,25 +2958,26 @@ pt-BR:
       title: "Cartões no Emulador"
       description: "Aprenda como utilizar cartões no Emuladow CloudWalk"
       table_of_contents:
-        introduction: "Introduction"
-        creating_cards: "Creating cards"
-        emulating: "Emulating"
-        adding_new_cards: "Adding new cards"
+        introduction: "Introdução"
+        creating_cards: "Criando cartões"
+        emulating: "Emulando"
+        adding_new_cards: "Adicionando novos cartões"
       introduction:
-        paragraph_1: "Many, if not the vast majority of the POS applications, will require to get information from cards, therefore it's extremely desirable to make sure the software in development runs smoothly even before hitting the real device. Fortunately, CloudWalk's IDE comes with a very simple way to use cards with it's emulator! In this page, you'll learn how to use them. Enjoy!"
+        paragraph_1: "Muitas, se não a grande maioria das aplicações para terminais POS precisam obter informações de cartões, portanto, é extremamente desejável garantir que a aplicação em desenvolvimento funcione perfeitamente mesmo antes de ser instalada em um dispositivo real. Felizmente, a IDE do CloudWalk possui uma forma muito simples de utilizar cartões no emulador! Nesta página, você aprenderá como usá-los. Divirta-se!"
       creating_cards:
-        paragraph_1: "Once your project's source code is open inside the IDE, you'll see a blue vertical bar at the left, holding the icons to the main functionalities of the IDE. In this bar you'll find an icon in the shape of a card, let's go click it:"
-        img_1_alt: "Cards icon and panel"
+        paragraph_1: "Com a IDE aberta no código fonte da sua aplicação, você verá uma barra vertical azul à esquerda, com os ícones das principais funcionalidades da IDE. Nesta barra você vai encontrar um ícone na forma de um cartão. Clique neste ícone:"
+        img_1_alt: "Painel e o ícone de cartões"
         paragraph_2: "A panel will appear with two cards. These cards are completely editable and selectable, simply click in the texts and they will become input fields, where you can put the information you want."
-        img_2_alt: "Editing cards"
-        paragraph_3: "Once you're done, click out of the fields, and the information will be saved. The last step before running the emulation is to <strong>click the card you want to use</strong>, it will end up highlighted in blue. As you see, there are several cards on the list, edit any of them and click the one of your choice!"
+        paragraph_2: "Irá aparecer um painel com dois cartões. Estes cartões são completamente editáveis e selecionaveis, bastando clicar nos textos para que eles se tornem campos editáveis."
+        img_2_alt: "Editando cartões"
+        paragraph_3: "Finalizando a edição, clique fora dos campos e as informações serão salvas. O último passo antes de executar a emulação é <strong>clicar no cartão que deseja utilizar</strong>, que ficará destacado em azul. Conforme pode ser observado, existem diversos cartões na lista, e todos eles podem ser editados!"
       emulating:
-        paragraph_1: "Now, let's emulate the POSXML command <a href='/pt-BR/posxml/commands/getcardvariable' class='command'>getcardvariable</a>, with the following example code:"
-        paragraph_2: "After clicking the card you want to use (the blue one), go to the emulator and click on the <strong>POWER</strong> green button to start the action. The emulation lasts some seconds to start, but once it's running, the information is retrieved from the card created in an instant, and you'll continue working on your project without further delays. You can see it happening here:"
-        img_1_alt: "Using a card"
+        paragraph_1: "Agora, vamos emular o comando POSXML <a href='/pt-BR/posxml/commands/getcardvariable' class='command'>getcardvariable</a>, com o seguinte código de exemplo:"
+        paragraph_2: "Após clicar no cartão que deseja utilizar (o azul), vá para o emulador e clique no botão <strong>POWER</strong> (verde) para iniciar a aplicação. A emulação demora alguns segundos para iniciar, mas uma vez iniciada, as informações do cartão são rapidamente obtidas, e você pode seguir com testes. Confira esse processo logo abaixo:"
+        img_1_alt: "Utilizando um cartão"
       adding_new_cards:
-        paragraph_1: "To add new cards, simply edit the last card available, a new card will appear below instantly!"
-        img_1_alt: "Add a new card"
+        paragraph_1: "Para adicionar novos cartões, basta editar o último cartão disponível e um novo cartão irá aparecer abaixo instantaneamente!"
+        img_1_alt: "Adicionar um novo cartão"
   help:
     faq:
       description: "As perguntas mais frequentes sobre o serviço CloudWalk"
