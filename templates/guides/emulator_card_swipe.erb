@@ -1,0 +1,56 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t("guides.emulator_card_swipe.description") %>">
+<% end %>
+
+<h1><%= I18n.t("guides.emulator_card_swipe.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#introduction"><%= I18n.t("guides.emulator_card_swipe.table_of_contents.introduction") %></a></li>
+  <li><a href="#creating-cards"><%= I18n.t("guides.emulator_card_swipe.table_of_contents.creating_cards") %></a></li>
+  <li><a href="#emulating"><%= I18n.t("guides.emulator_card_swipe.table_of_contents.emulating") %></a></li>
+  <li><a href="#adding-new-cards"><%= I18n.t("guides.emulator_card_swipe.table_of_contents.adding_new_cards") %></a></li>
+</ol>
+
+<h2 id="introduction"><%= I18n.t("guides.emulator_card_swipe.table_of_contents.introduction") %></h2>
+
+<p><%= I18n.t("guides.emulator_card_swipe.introduction.paragraph_1") %></p>
+
+<h2 id="creating-cards"><%= I18n.t("guides.emulator_card_swipe.table_of_contents.creating_cards") %></h2>
+
+<p><%= I18n.t("guides.emulator_card_swipe.creating_cards.paragraph_1") %></p>
+
+<img src="/img/card-emulation/cards-icon-and-panel.gif" class="animated" alt="<%= I18n.t("guides.emulator_card_swipe.creating_cards.img_1_alt") %>" />
+
+<p><%= I18n.t("guides.emulator_card_swipe.creating_cards.paragraph_2") %></p>
+
+<img src="/img/card-emulation/editing-cards.gif" class="animated" alt="<%= I18n.t("guides.emulator_card_swipe.creating_cards.img_2_alt") %>" />
+
+<p><%= I18n.t("guides.emulator_card_swipe.creating_cards.paragraph_3") %></p>
+
+<h2 id="emulating"><%= I18n.t("guides.emulator_card_swipe.table_of_contents.emulating") %></h2>
+
+<p><%= I18n.t("guides.emulator_card_swipe.emulating.paragraph_1") %></p>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
+
+&lt;getcardvariable firstmessage="Swipe the card" maximum="16" minimum="12" secondmessage="Enter the card number" variable="$(sReturn)" /&gt;
+
+&lt;display column="0" line="0" message="$(sReturn)" /&gt;
+
+&lt;waitkey/&gt;</code></pre>
+
+<p><%= I18n.t("guides.emulator_card_swipe.emulating.paragraph_2") %></p>
+
+<img src="/img/card-emulation/using-a-card.gif" class="animated" alt="<%= I18n.t("guides.emulator_card_swipe.emulating.img_1_alt") %>" />
+
+<h2 id="adding-new-cards"><%= I18n.t("guides.emulator_card_swipe.table_of_contents.adding_new_cards") %></h2>
+
+<p><%= I18n.t("guides.emulator_card_swipe.adding_new_cards.paragraph_1") %></p>
+
+<img src="/img/card-emulation/add-new-card.gif" class="animated" alt="<%= I18n.t("guides.emulator_card_swipe.adding_new_cards.img_1_alt") %>" />
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.guides.patterns"), "guides/transactions-patterns") %>
+  </li>
+</ul>
