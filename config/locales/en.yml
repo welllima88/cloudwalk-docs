@@ -2955,8 +2955,28 @@ en:
             paragraph_4: "Now you are ready to receive our notifications!"
         previous: "Patterns chart"
     emulator_card_swipe:
-      description: "Learn how to use cards on CloudWalk Emulator"
       title: "Emulator Card Swipe"
+      description: "Learn how to use cards on CloudWalk Emulator"
+      table_of_contents:
+        introduction: "Introduction"
+        creating_cards: "Creating cards"
+        emulating: "Emulating"
+        adding_new_cards: "Adding new cards"
+      introduction:
+        paragraph_1: "Many, if not the vast majority of the POS applications, will require to get information from cards, therefore it's extremely desirable to make sure the software in development runs smoothly even before hitting the real device. Fortunately, CloudWalk's IDE comes with a very simple way to use cards with it's emulator! In this page, you'll learn how to use them. Enjoy!"
+      creating_cards:
+        paragraph_1: "Once your project's source code is open inside the IDE, you'll see a blue vertical bar at the left, holding the icons to the main functionalities of the IDE. In this bar you'll find an icon in the shape of a card, let's go click it:"
+        img_1_alt: "Cards icon and panel"
+        paragraph_2: "A panel will appear with two cards. These cards are completely editable and selectable, simply click in the texts and they will become input fields, where you can put the information you want."
+        img_2_alt: "Editing cards"
+        paragraph_3: "Once you're done, click out of the fields, and the information will be saved. The last step before running the emulation is to <strong>click the card you want to use</strong>, it will end up highlighted in blue. As you see, there are several cards on the list, edit any of them and click the one of your choice!"
+      emulating:
+        paragraph_1: "Now, let's emulate the POSXML command <a href='/pt-BR/posxml/commands/getcardvariable' class='command'>getcardvariable</a>, with the following example code:"
+        paragraph_2: "After clicking the card you want to use (the blue one), go to the emulator and click on the <strong>POWER</strong> green button to start the action. The emulation lasts some seconds to start, but once it's running, the information is retrieved from the card created in an instant, and you'll continue working on your project without further delays. You can see it happening here:"
+        img_1_alt: "Using a card"
+      adding_new_cards:
+        paragraph_1: "To add new cards, simply edit the last card available, a new card will appear below instantly!"
+        img_1_alt: "Add a new card"
   help:
     faq:
       description: "The most frequently asked questions about CloudWalk"
