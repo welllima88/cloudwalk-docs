@@ -899,7 +899,7 @@ pt-BR:
           parameter_1: <strong>parameter</strong> <span class='data-type'>[string]</span><br/> Nome do parâmetro que desejamos passar. <a href='#table-of-parameters'>(veja tabela abaixo)</a>
           parameter_2: '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Tipo do parâmetro, pode ser: <br/><ul><li>init</li><li>process</li><li>finish</li></ul>'
           parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/> Valor do parâmetro.
-          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Retorno do comando, onde: <br/><ul><li>0: OK</li><li>-1: Erro. Tipo, chave ou valor não existe.'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Retorno do comando, onde: <br/><ul><li>0: OK</li><li>-1: Erro. Tipo, chave ou valor não existe.</li></ul>'
       emv_cleanstructures:
         description: Limpa todos os parâmetros de entrada e saída
         paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
@@ -914,7 +914,7 @@ pt-BR:
         paragraph_4: No exemplo acima, foi usado o comando <a href='emv.adddata' class='command'>emv.adddata</a> para passagem de parâmetros para o <em>Kernel EMV</em>.
         paragraph_5: Após isso, o comando <span class='code'>emv.finishtransaction</span> é executado para finalizar o processamento do cartão com chip, como o retorno do comando é um <a href='integervariable' class='command'>integervariable</a> o comando <a href='inttostring' class='command'>inttostring</a> é utilizado para converter a variável e exibi-la com o comando <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/><ul><li>0: OK</li><li>11: Parâmetro inválido passado em <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Operação de inserção/passagem do cartão ou escolha de aplicação cancelada pelo usuário</li><li>15: Biblioteca EMV não iniciada</li><li>16: Erro interno</li><li>20: Timestamp do dispositivo não bate com o do parâmetro passado em <em>emv.adddata</em></li><li>40: Erro na execução</li><li>41: Erro de leitura do cartão<li>43: Cartão retirado no meio da operação</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/><ul><li>0: OK</li><li>11: Parâmetro inválido passado em <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Operação de inserção/passagem do cartão ou escolha de aplicação cancelada pelo usuário</li><li>15: Biblioteca EMV não iniciada</li><li>16: Erro interno</li><li>20: Timestamp do dispositivo não bate com o do parâmetro passado em <em>emv.adddata</em></li><li>40: Erro na execução</li><li>41: Erro de leitura do cartão</li><li>43: Cartão retirado no meio da operação</li></ul>'
       emv_getinfo:
         description: Retorna parâmetros de informação após execução de processo EMV
         paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
@@ -1256,7 +1256,7 @@ pt-BR:
           parameter_1: <strong>fieldnumber</strong> <span class='data-type'>[integer]</span><br/> Número do campo a ser extraído.
           parameter_2: <strong>type</strong> <span class='data-type'>[string]</span><br/> Tipo do campo a ser extraído da mensagem, podendo ser <strong>string</strong> ou <strong>integer</strong>.
           parameter_3: <strong>variablevalue</strong> <span class='data-type'>[string ou integer]</span><br/> Variável onde será armazenado o valor do campo extraído.
-          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variável que irá armazenar o retorno do comando, onde: <br/><span class=''data-type''>0: Campo extraído com sucesso<br/>-801: Parâmetro inválido<br/>-802: Erro de função<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error'
+          parameter_4: "<strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/> Variável que irá armazenar o retorno do comando, onde: <br/><span class='data-type'>0: Campo extraído com sucesso<br/>-801: Parâmetro inválido<br/>-802: Erro de função<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error</span>"
       iso8583_initfieldtable:
         description: Inicia a tabela de campos ISO8583 baseado em um arquivo especificado
         paragraph_1: O conhecimento da norma <strong>ISO-8583</strong> é necessário para utilização deste comando.
@@ -1378,7 +1378,7 @@ pt-BR:
         paragraph_3: '<strong>Diferenças entre os comandos <a href=''preconnect'' class=''command''>preconnect</a> e <a href=''network.start'' class=''command''>network.start</a> </strong> :'
         paragraph_4: O comando POSXML <a href='preconnect' class='command'>preconnect</a> inicia o modem do dispositivo e estabelece uma nova conexão com o host, já o comando <a href='network.start' class='command'>network.start</a> apenas inicia o modem do dispositivo, <strong>NÃO</strong> será estabelecido uma nova conexão com o host.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Retorno da função:<ul><li>1: Modem inicializado</li><li><1: Erro, modem não inicializado</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Retorno da função:<ul><li>1: Modem inicializado</li><li>Qualquer coisa diferente de <strong>1</strong> significa <strong>Erro</strong> (modem não inicializado)</li></ul>'
       network_receive:
         description: Recebe um buffer do serviço CloudWalk previamente conectado
         paragraph_1: Saiba mais sobre <a href='https://docs.cloudwalk.io/pt-BR/integration/http'>Integração com o host - Simple HTTP</a>
@@ -1426,7 +1426,7 @@ pt-BR:
       pinpad_display:
         description: Exibe uma mensagem customizada no display do pinpad
         paragraph_1: O comando <span class='code'>pinpad.display</span> é usado para exibir uma mensagem customizada no display do pinpad externo.
-        paragraph_2: No exemplo acima, primeiramente é aberto a conexão com o <strong>pinpad externo</strong> com o comando  <a href='pinpad.open' class='command'>pinpad.open</a>, e então o comando <span class='code'>pinpad.display</span> é executado, exibindo a mensagem <strong><em>Hello World!</em></span>.
+        paragraph_2: No exemplo acima, primeiramente é aberto a conexão com o <strong>pinpad externo</strong> com o comando  <a href='pinpad.open' class='command'>pinpad.open</a>, e então o comando <span class='code'>pinpad.display</span> é executado, exibindo a mensagem <strong><em>Hello World!</em></strong>.
         paragraph_3: É aguardado então que alguma tecla do <strong>terminal POS</strong> seja pressionada, e após isso a desconexão com o pinpad é feita com o comando <a href='pinpad.close' class='command'>pinpad.close</a>.
         paragraph_4: <strong>ATENÇÃO!</strong>
         paragraph_5: Este comando não se aplica se o PIN-Pad utilizado for um <strong>PIN-Pad interno</strong>
@@ -1458,7 +1458,7 @@ pt-BR:
           parameter_4: '<strong>type</strong> <span class=''data-type''>[integer]</span> Tipo do algoritimo utilizado na encriptação, pode ser: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
           parameter_5: <strong>variablereturnksn</strong> <span class='data-type'>[string]</span> Variável que irá armazenar a <strong>KSN</strong> retornada do processo de encriptação.
           parameter_6: <strong>variablereturnpin</strong> <span class='data-type'>[string]</span> Variável que irá armazenar o <strong>PIN</strong> criptografado.
-          parameter_7: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Variável que irá armazenar o retorno do comando, onde: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Cancelado</li>-3: PIN Error</li></ul>'
+          parameter_7: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Variável que irá armazenar o retorno do comando, onde: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Cancelado</li><li>-3: PIN Error</li></ul>'
       pinpad_loadipek:
         description: Grava uma chave inicial e uma ksn inicial na memória do pinpad
         paragraph_1: O conhecimento do padrão <strong>DUKPT</strong> é necessário para utilização deste comando.

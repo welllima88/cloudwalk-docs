@@ -899,7 +899,7 @@ en:
           parameter_1: <strong>parameter</strong> <span class='data-type'>[string]</span><br/> Parameter name to be sent. <a href='#table-of-parameters'>(see table below)</a>
           parameter_2: '<strong>type</strong> <span class=''data-type''>[string]</span><br/> Possible types: <br/><ul><li>init</li><li>process</li><li>finish</li></ul>'
           parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/> Parameter value.
-          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn''t exist.'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn''t exist.</li></ul>'
       emv_cleanstructures:
         description: Clears all input and output parameters
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -914,7 +914,7 @@ en:
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
         paragraph_5: After that, the command <span class='code'>emv.finishtransaction</span> is executed to finish the chip processing; since the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp doesn''t match with the parameter''s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card<li>43: Card removed in the middle of the operation</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp doesn''t match with the parameter''s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card</li><li>43: Card removed in the middle of the operation</li></ul>'
       emv_getinfo:
         description: Returns information parameters after the execution of the EMV process
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -1256,7 +1256,7 @@ en:
           parameter_1: <strong>fieldnumber</strong> <span class='data-type'>[integer]</span><br/> Number of the field to be extracted.
           parameter_2: <strong>type</strong> <span class='data-type'>[string]</span><br/> Field type to be extracted from the message, which can be <strong>string</strong> or <strong>integer</strong>.
           parameter_3: <strong>variablevalue</strong> <span class='data-type'>[string ou integer]</span><br/> Variable where the extracted value will be stored.
-          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class=''data-type''>0: Field extracted successfully<br/>-801: Invalid parameter<br/>-802: Function error<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error'
+          parameter_4: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class=''data-type''>0: Field extracted successfully<br/>-801: Invalid parameter<br/>-802: Function error<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error</span>'
       iso8583_initfieldtable:
         description: Starts field table ISO8583 based on a specified file
         paragraph_1: The command <span class='code'>iso8583.initfieldtable</span> starts the ISO8583 field table according to the fields specified on the file defined on the parameter <strong>filename</strong>. This command must be executed before starting to use the ISO8583 messages.
@@ -1378,7 +1378,7 @@ en:
         paragraph_3: '<strong>Differences between the commands <a href=''preconnect'' class=''command''>preconnect</a> and <a href=''network.start'' class=''command''>network.start</a> </strong> :'
         paragraph_4: The POSXML command <a href='preconnect' class='command'>preconnect</a> starts the device's modem and connect to host. The command <a href='network.start' class='command'>network.start</a> starts the device's modem but <strong>NOT</strong> connect to host.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>1: Modem initialized</li><li><1: Error, modem not initialized</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span><br/>Return of the function:<ul><li>1: Modem initialized</li><li>Anything different than <strong>1</strong> means <strong>Error</strong> (modem not initialized)</li></ul>'
       network_receive:
         description: Receives from the host buffer previously connected
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
@@ -1426,7 +1426,7 @@ en:
       pinpad_display:
         description: Displays a custom message on the display of the pinpad
         paragraph_1: The command <span class='code'>pinpad.display</span> is used to display a custom message on the display of the pinpad.
-        paragraph_2: In the above example, firstly a connection is opened to the <strong>external PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>, and then the command <span class='code'>pinpad.display</span> is executed, displaying the message <strong><em>Hello World!</em></span>.
+        paragraph_2: In the above example, firstly a connection is opened to the <strong>external PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>, and then the command <span class='code'>pinpad.display</span> is executed, displaying the message <strong><em>Hello World!</em></strong>.
         paragraph_3: It is then expected that some <strong>POS terminal</strong> key is pressed, and after that the disconnection with the pinpad is done with the command <a href='pinpad.close' class='command'>pinpad.close</a>.
         paragraph_4: <strong>ATTENTION!</strong>
         paragraph_5: This command does not apply if the PIN-Pad used is an <strong>internal PIN-Pad</strong>
@@ -1458,7 +1458,7 @@ en:
           parameter_4: '<strong>type</strong> <span class=''data-type''>[integer]</span> Type of algorithm used in the encryption, which can be: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
           parameter_5: <strong>variablereturnksn</strong> <span class='data-type'>[string]</span> Variable that will store the <strong>KSN</strong> returned by the encryption process.
           parameter_6: <strong>variablereturnpin</strong> <span class='data-type'>[string]</span> Variable that will store the encrypted <strong>PIN</strong>.
-          parameter_7: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Variable that will store the return of the command, where: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Canceled</li>-3: PIN Error</li></ul>'
+          parameter_7: '<strong>variablereturn</strong> <span class=''data-type''>[integer]</span> Variable that will store the return of the command, where: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Canceled</li><li>-3: PIN Error</li></ul>'
       pinpad_loadipek:
         description: Records an initial key and an initial ksn on the memory of pinpad
         paragraph_1: Knowledge about <strong>DUKPT</strong> is required to use this command.
