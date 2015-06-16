@@ -45,7 +45,7 @@ pt-BR:
       apps:
         description: Confira como as operações CRUD para aplicações devem ser usadas.
         title: Developer API - Aplicações
-        table_ofntents:
+        table_of_contents:
           types: Tipos de aplicações
           attributes: Atributos de uma aplicação
           create: Criação de uma nova aplicação
