@@ -2963,19 +2963,19 @@ en:
         emulating: "Emulating"
         adding_new_cards: "Adding new cards"
       introduction:
-        paragraph_1: "Many, if not the vast majority of the POS applications, will require to get information from cards, therefore it's extremely desirable to make sure the software in development runs smoothly even before hitting the real device. Fortunately, CloudWalk's IDE comes with a very simple way to use cards with it's emulator! In this page, you'll learn how to use them. Enjoy!"
+        paragraph_1: "Most POS applications will require you to get information from cards, therefore it's extremely desirable to make sure the software in development runs smoothly before installing to a real device. Fortunately, CloudWalk's IDE emulator comes with a very simple way to use cards. On this page, you will learn how to use them. Enjoy!"
       creating_cards:
-        paragraph_1: "Once your project's source code is open inside the IDE, you'll see a blue vertical bar at the left, holding the icons to the main functionalities of the IDE. In this bar you'll find an icon in the shape of a card, let's go click it:"
+        paragraph_1: "With your project source code open inside the IDE, you will see a blue vertical bar on the left holding the icons of the main functionalities of the IDE. In this bar you will find an icon in the shape of a card. Let's go click it:"
         img_1_alt: "Cards icon and panel"
-        paragraph_2: "A panel will appear with two cards. These cards are completely editable and selectable, simply click in the texts and they will become input fields, where you can put the information you want."
+        paragraph_2: "A panel will appear with two cards. These cards are completely editable and selectable. Simply click on the different texts and they will become input fields where you can enter the information you want."
         img_2_alt: "Editing cards"
-        paragraph_3: "Once you're done, click out of the fields, and the information will be saved. The last step before running the emulation is to <strong>click the card you want to use</strong>, it will end up highlighted in blue. As you see, there are several cards on the list, edit any of them and click the one of your choice!"
+        paragraph_3: "When done, click out of the fields and the information will be saved. The last step before running the emulation is to <strong>click the card you want to use</strong>, it will end up highlighted in blue. As you see there are several cards on the list. Edit any of them and click the one of your choice!"
       emulating:
-        paragraph_1: "Now, let's emulate the POSXML command <a href='/en/posxml/commands/getcardvariable' class='command'>getcardvariable</a>, with the following example code:"
-        paragraph_2: "After clicking the card you want to use (the blue one), go to the emulator and click on the <strong>POWER</strong> green button to start the application. The emulation need a few seconds to start, but once it's running, the information is retrieved from the card created in an instant, and you can continue with the tests. You can see it happening here:"
+        paragraph_1: "Now, let's emulate the POSXML command <a href='/en/posxml/commands/getcardvariable' class='command'>getcardvariable</a> with the following example code:"
+        paragraph_2: "After clicking the card you want to use (the blue one), go to the emulator and click on the green <strong>POWER</strong> button to start the application. The emulator needs a few seconds to start but once it's running the information is retrieved from the card created in an instant, and you can continue with the tests. You can see it happening here:"
         img_1_alt: "Using a card"
       adding_new_cards:
-        paragraph_1: "To add new cards, simply edit the last card available, a new card will appear below instantly!"
+        paragraph_1: "To add new cards, simply edit the last card available and a new card will appear below instantly!"
         img_1_alt: "Add a new card"
   help:
     faq:
