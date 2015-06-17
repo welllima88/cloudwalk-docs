@@ -85,6 +85,3 @@ DEPENDENCIES
   sinatra-contrib
   sinatra-partial
   stringex
-
-BUNDLED WITH
-   1.10.2
