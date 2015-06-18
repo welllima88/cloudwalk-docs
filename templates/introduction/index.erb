@@ -36,22 +36,20 @@
 
 <p><%= I18n.t("introduction.index.getting_started.paragraph_7") %></p>
 
-<span id="copy-snippet-1" class="btn btn-small btn-clipboard"><span class="fa fa-clipboard"></span> <%= I18n.t("copy") %></span>
+<%= embed_posxml_code("
+&lt;integervariable value=\"0\" variable=\"iRet\" /&gt;
+&lt;integervariable value=\"0\" variable=\"iSize\" /&gt;
+&lt;stringvariable value=\"\" variable=\"sBuf\" /&gt;
 
-<pre data-display-element="#code-snippet-1" class="snippet hidden">
-&lt;integervariable value="0" variable="iRet" /&gt;
-&lt;integervariable value="0" variable="iSize" /&gt;
-&lt;stringvariable value="" variable="sBuf" /&gt;
-
-&lt;display line="0" column="0" message="HTTP Post test" /&gt;
+&lt;display line=\"0\" column=\"0\" message=\"HTTP Post test\" /&gt;
 
 &lt;!-- The preconnect command attempts to connect the device on CloudWalk --&gt;
-&lt;display line="1" column="0" message="Connecting ..." /&gt;
-&lt;preconnect variablestatus="$(iConnect)" /&gt;
+&lt;display line=\"1\" column=\"0\" message=\"Connecting ...\" /&gt;
+&lt;preconnect variablestatus=\"$(iConnect)\" /&gt;
 
 &lt;!-- Performs the transaction after connecting --&gt;
-&lt;if variable="$(iConnect)" operator="equalto" value="0" &gt;
-  &lt;display line="1" column="0" message="Connected!" /&gt;
+&lt;if variable=\"$(iConnect)\" operator=\"equalto\" value=\"0\" &gt;
+  &lt;display line=\"1\" column=\"0\" message=\"Connected!\" /&gt;
 
   &lt;!-- The content of the variable buffer should be hexadecimal. In the example
   below, the value 0123456789 is being sent. It is possible to use command
@@ -61,42 +59,40 @@
   &lt;!-- In order to send data properly, it is necessary to send
   at least 7 bytes to CloudWalk --&gt;
 
-  &lt;display line="3" column="0" message="Posting ..." /&gt;
+  &lt;display line=\"3\" column=\"0\" message=\"Posting ...\" /&gt;
 
-  &lt;stringvariable value="0123456789" variable="sBufSend" /&gt;
-  &lt;integervariable value="0" variable="iSzBufSend" /&gt;
+  &lt;stringvariable value=\"0123456789\" variable=\"sBufSend\" /&gt;
+  &lt;integervariable value=\"0\" variable=\"iSzBufSend\" /&gt;
 
-  &lt;string.tohex string="$(sBufSend)" variablereturn="$(sBufSend)" /&gt;
-  &lt;string.length value="$(sBufSend)" variablereturn="$(iSzBufSend)" /&gt;
-  &lt;network.send buffer="$(sBufSend)" size="$(iSzBufSend)" variablereturn="$(iRet)" /&gt;
+  &lt;string.tohex string=\"$(sBufSend)\" variablereturn=\"$(sBufSend)\" /&gt;
+  &lt;string.length value=\"$(sBufSend)\" variablereturn=\"$(iSzBufSend)\" /&gt;
+  &lt;network.send buffer=\"$(sBufSend)\" size=\"$(iSzBufSend)\" variablereturn=\"$(iRet)\" /&gt;
 
-  &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
+  &lt;if operator=\"equalto\" value=\"1\" variable=\"$(iRet)\"&gt;
     &lt;!-- The answer will also be stored in hexadecimal on the variable variablebuffer. Use
     the command string.fromhex to convert the content to ASCII --&gt;
-    &lt;network.receive variablebuffer="$(sBuf)" maxsize="20" variablereceivedbytes="$(iSize)" variablereturn="$(iRet)" /&gt;
-    &lt;string.fromhex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
+    &lt;network.receive variablebuffer=\"$(sBuf)\" maxsize=\"20\" variablereceivedbytes=\"$(iSize)\" variablereturn=\"$(iRet)\" /&gt;
+    &lt;string.fromhex string=\"$(sBuf)\" variablereturn=\"$(sBuf)\" /&gt;
 
-    &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
-      &lt;display line="5" column="0" message="Post response:" /&gt;
-      &lt;display line="6" column="0" message="$(sBuf)" /&gt;
+    &lt;if operator=\"equalto\" value=\"1\" variable=\"$(iRet)\"&gt;
+      &lt;display line=\"5\" column=\"0\" message=\"Post response:\" /&gt;
+      &lt;display line=\"6\" column=\"0\" message=\"$(sBuf)\" /&gt;
     &lt;else/&gt;
-      &lt;display line="5" column="0" message="Receive failed!" /&gt;
+      &lt;display line=\"5\" column=\"0\" message=\"Receive failed!\" /&gt;
     &lt;/if&gt;
   &lt;else/&gt;
-    &lt;display line="5" column="0" message="Send failed!" /&gt;
+    &lt;display line=\"5\" column=\"0\" message=\"Send failed!\" /&gt;
   &lt;/if&gt;
 
   &lt;!-- Always use the network.hostdisconnect command before using
   again the commands network.send and network.receive --&gt;
   &lt;network.hostdisconnect /&gt;
 &lt;else /&gt;
-  &lt;display line="1" column="0" message="Connection failed!" /&gt;
+  &lt;display line=\"1\" column=\"0\" message=\"Connection failed!\" /&gt;
 &lt;/if&gt;
 
 &lt;waitkey /&gt;
-</pre>
-
-<pre><code id="code-snippet-1" data-language="html"></code></pre>
+") %>
 
 <%= toc_header(I18n.t("introduction.index.getting_started.h3_4")) %>
 
