@@ -140,6 +140,8 @@
 
       var client = new ZeroClipboard($('.btn-clipboard'));
 
+      client.on('error', function(){ $('.btn-clipboard').hide(); });
+
       client.on('copy', function(event){
         var content = $('#' + event.target.id).next('pre').html();
         content = content.replace(/&lt;/g,'<').replace(/&gt;/g,'>');
