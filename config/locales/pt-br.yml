@@ -1,6 +1,7 @@
 pt-BR:
   troubleshooting: "Resolução de problemas"
   description: "Aprenda a criar, publicar e gerenciar aplicações CloudWalk."
+  copy: "Copiar"
   api:
     description: Descrição
     method: Método e formato da URL

@@ -1,6 +1,7 @@
 en:
   troubleshooting: "Troubleshooting"
   description: "Learn how to create, deploy and manage CloudWalk apps."
+  copy: "Copy"
   api:
     description: Description
     method: Method and URL format

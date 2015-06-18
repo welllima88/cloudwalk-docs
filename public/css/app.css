@@ -606,6 +606,9 @@ p.note {
   color: auto;
 }
 
+.btn-clipboard { float: right; margin: 5px; }
+.btn-clipboard.zeroclipboard-is-active { background-color: #aaa; }
+
 /* Override Bootstrap .close class */
 .rainbow .close {
   float: none;
