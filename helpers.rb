@@ -36,7 +36,9 @@ module Helpers
     begin
       res = open(gist_path)
       raise unless res.status[0] == "200"
-      res.read
+
+      # Replace html symbols
+      res.string.gsub("<", "&lt;").gsub(">", "&gt;")
     rescue
       "<!-- It was not possible to fetch this snippet -->\n\n#{gist_path}"
     end
