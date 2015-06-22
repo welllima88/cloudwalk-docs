@@ -14,6 +14,8 @@ require_relative 'docs.rb'
 
 include Rack::Test::Methods
 
+include Helpers
+
 def app
   Sinatra::Application
 end
@@ -27,6 +29,11 @@ describe "Docs" do
   it "should redirect to index" do
     get '/'
     assert last_response.redirect?
+  end
+
+  it "should redirect to index" do
+    get '/en/introduction'
+    assert last_response.ok?
   end
 
   it "should have a page for every navigation item" do
@@ -162,5 +169,13 @@ describe "Docs" do
       end
 
       assert result.empty?, "Found some english internal links in file config/locales/pt-br.yml:\n#{result}To fix this you should change /en/ prefix to /pt-BR/."
+  end
+
+  it "should retrieve a gist from github" do
+    assert fetch_gist("89d6af783a0a503afb80") == "OK"
+  end
+
+  it "should not retrieve a gist from github" do
+    assert fetch_gist("89d6af783a0a503afb88").include?("It was not possible to fetch this snippet")
   end
 end
