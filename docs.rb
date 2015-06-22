@@ -103,18 +103,33 @@ helpers do
     "<h3 class='anchor' id='#{text.to_url}'>#{toc_item(text)}</h3>"
   end
 
-  def embed_posxml_code(source)
+  def embed_posxml_code(gist_id)
     # Create the button
     markup = "<span id='copy-snippet-1' class='btn btn-small btn-clipboard'><span class='fa fa-clipboard'></span> #{I18n.t("copy")}</span>"
 
     # Create the hidden <pre> element that will contain the source code
     markup << "<pre data-display-element='#code-snippet-1' class='snippet hidden'>"
-    markup << source
+    markup << fetch_gist(gist_id)
     markup << "</pre>"
 
     # Create the <code> element that will receive the content of the
     # previous <pre> element, which will then apply the syntax highlight
     markup << "<pre><code id='code-snippet-1' data-language='html'></code></pre>"
+  end
+
+  def fetch_gist(gist_id)
+    require 'open-uri'
+
+    # All the gists are stored on the user posxml
+    gist_path = "https://gist.githubusercontent.com/posxml/#{gist_id}/raw"
+
+    begin
+      res = open(gist_path)
+      raise unless res.status[0] == "200"
+      res.read
+    rescue
+      "<!-- It was not possible to fetch this snippet -->\n\n#{gist_path}"
+    end
   end
 
   def is_group_active?(group)
