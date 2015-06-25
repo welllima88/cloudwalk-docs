@@ -429,7 +429,7 @@ en:
       testing:
         download_application: 1. Download the application
         if_fail: If fail
-        paragraph_1: 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it"s time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
+        paragraph_1: 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it's time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
         paragraph_2: 'Press the green button and the process of downloading previously configured on Manager WALK application will start:'
         paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
@@ -513,7 +513,7 @@ en:
       testing:
         download_application: 1. Download the application
         if_fail: If fail
-        paragraph_1: 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it"s time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
+        paragraph_1: 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it's time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
         paragraph_2: 'Press the green button and the process of downloading previously configured on Manager WALK application will start:'
         paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
@@ -901,7 +901,7 @@ en:
           parameter_1: <strong>parameter</strong> <span class='data-type'>[string]</span><br/> Parameter name to be sent. <a href='#table-of-parameters'>(see table below)</a>
           parameter_2: '<strong>type</strong> <span class="data-type">[string]</span><br/> Possible types: <br/><ul><li>init</li><li>process</li><li>finish</li></ul>'
           parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/> Parameter value.
-          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn"t exist.</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn't exist.</li></ul>'
       emv_cleanstructures:
         description: Clears all input and output parameters
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
@@ -916,7 +916,7 @@ en:
         paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
         paragraph_5: After that, the command <span class='code'>emv.finishtransaction</span> is executed to finish the chip processing; since the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp doesn"t match with the parameter"s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card</li><li>43: Card removed in the middle of the operation</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp doesn't match with the parameter"s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card</li><li>43: Card removed in the middle of the operation</li></ul>'
       emv_getinfo:
         description: Returns information parameters after the execution of the EMV process
         paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
