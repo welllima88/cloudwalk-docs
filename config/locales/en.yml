@@ -617,7 +617,7 @@ en:
         paragraph_7: "Now that you have created your POSXML application, click on the button <strong>Edit source code</strong>, which will bring up the CloudWalk online IDE, where you can copy and paste the following POSXML code:"
         h3_4: "4. Emulate!"
         paragraph_8: "The last step is to emulate the sample application on the emulator. Click the <strong>Emulate</strong> button, followed by the <strong>Power</strong> button and be impressed!"
-        paragraph_9: "Note that the application is just sending a sequence of numbers (variable <span class='code'>sBufSend</span>), and our test server is appending the string <strong>CLOUDWALK</strong> onto it."
+        paragraph_9: "Note that the application is just sending a sequence of numbers (variable <span class='code'>sBufSend</span>), and our test server is prepending the string <strong>CLOUDWALK</strong> onto it."
     authorizer:
       description: Component responsible to validate the information provided by POS terminals.
       overview:
