@@ -382,8 +382,8 @@ en:
         variables: VARIABLES
       introduction:
         paragraph_1: 'There is a way to integrate CloudWalk POSXML applications with <a href=''https://en.wikipedia.org/wiki/REST'' class=''external'' target=''blank''>REST</a> APIs. It can be done by using the command <a href=''/posxml/commands/network.send'' class=''command''>network.send</a> with a string in the following format:'
-        paragraph_2: The CloudWalk Switch will receive the request sent through the command <a href='/en/posxml/commands/network.send' class='command'>network.send</a> and will perform the HTTP request on the url defined on the application configured on <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
-        paragraph_3: To receive the answer from CloudWalk Switch, it is necessary to use the command <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a> to receive the first 4 bytes that indicates the size of the message, and then receive the rest of the message with a second <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a> call. This approach avoid timeouts and long wait times to receive the response from your HTTP endpoint.
+        paragraph_2: The CloudWalk switch will receive the request sent through the command <a href='/en/posxml/commands/network.send' class='command'>network.send</a> and will perform the HTTP request on the url defined on the application configured on <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
+        paragraph_3: To receive the answer from the CloudWalk switch, it is necessary to use the command <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a> to receive the first 4 bytes that indicates the size of the message, and then receive the rest of the message with a second <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a> call. This approach avoids timeouts and long wait times to receive the response from your HTTP endpoint.
       posxml_sample:
         paragraph_1: 'The following example can be used to test this kind of HTTP integration:'
         posxml:
