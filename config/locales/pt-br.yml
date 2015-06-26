@@ -35,7 +35,7 @@ pt-BR:
         paragraph_1: "Por padrão, um endereço IP pode efetuar até 5.000 requisições por hora. O status do limite de requisições pode ser verificado no cabeçalho HTTP de qualquer requisição:"
       crud:
         paragraph_1: Para executar alguma operação em um recurso (aplicação, número lógico, grupo, etc), é feita uma requisição HTTP para uma URL utilizando o verbo HTTP apropriado.
-        paragraph_2: 'Os quatro vérbos HTTP utilizados em operações CRUD são:'
+        paragraph_2: 'Os quatro verbos HTTP utilizados em operações CRUD são:'
         paragraph_3: '<strong>GET: </strong>Busca um recurso específico ou uma coleção de recursos de uma URL. Por exemplo, <span class="code">GET /%{version}/devices</span> retornaria uma listagem com todos os números de série, enquanto que um <span class="code">GET /%{version}/devices/135</span> retornaria somente o número de série com o ID 135.'
         paragraph_4: '<strong>POST: </strong>Cria um novo recurso. Por exemplo, <span class="code">POST /%{version}/devices</span> criaria um novo número de série. A informação enviada na requisição POST seria então utilizada para preencher as propriedades do número de série.'
         paragraph_5: '<strong>PUT: </strong>Atualiza um recurso já existente. Por exemplo, <span class="code">PUT /%{version}/devices/135</span> atualizaria o número de série com o ID 135. A informação enviada na requisição PUT seria então utilizada para atualizar as propriedades do número de série.'
