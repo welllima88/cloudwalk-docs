@@ -408,16 +408,16 @@ en:
         service_architecture: Service architecture
       title: Integration with host
     http:
-      description: One way to establish communication between CloudWalk service and a host authorizer is through HTTP. Example of use, configuring the device, compiling the application, configuring the WALK Manager, testing the communication.
+      description: One way to establish communication between the CloudWalk service and a host authorizer is through HTTP. Example of use, configuring the device, compiling the application, configuring the WALK Manager, testing the communication.
       pos_setup:
         paragraph_1: This guide assumes that your device already has the WALK Framework properly <strong>installed and configured</strong>, and that the device serial number is already registered on WALK Manager.
-        paragraph_2: If you are unsure of the steps above, check the session <a href='/en/walk-framework/configuration'>%{configuration}</a>
+        paragraph_2: If you are unsure of the steps above, please refer to <a href='/en/walk-framework/configuration'>%{configuration}</a>
       sample:
         list:
           item_1: '<strong>Account at WALK Manager: </strong>Create free at <a href="https://manager.cloudwalk.io" class="external" target="_blank">https://manager.cloudwalk.io</a>'
           item_2: '<strong>WALK Framework: </strong> Device properly installed and configured'
-          item_3: '<strong>Internet access: </strong> It is necessary that the device has internet access (Ethernet, Dial or GPRS)'
-        paragraph_1: For testing purposes, we provide a host authorizer ready to use. The authorizer is extremely simple, used only for testing purposes.
+          item_3: '<strong>Internet access: </strong> It is necessary that the device has internet access (Ethernet, Dial-up or GPRS)'
+        paragraph_1: For testing purposes, we provide a host authorizer that is really simple and ready to use.
         prerequisites: Prerequisites
       table_of_contents:
         development_environment: Compiling the application
@@ -428,24 +428,24 @@ en:
         walk_manager_setup: Configuring the WALK Manager
       testing:
         download_application: 1. Download the application
-        if_fail: If fail
-        paragraph_1: 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it''s time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
-        paragraph_2: 'Press the green button and the process of downloading previously configured on Manager WALK application will start:'
+        if_fail: Upon failure
+        paragraph_1: 'With the device properly prepared; application compiled and everything correctly configured in WALK Manager, it''s time to test the communication between all the components involved: device, CloudWalk and host authorizer.'
+        paragraph_2: 'Press the green button and the process of downloading will start:'
         paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
         paragraph_5: Check the device communication setup, cables and internet connection.
-        paragraph_6: 'Several tools and services can help you to test the return of their requests. An example is <a href="http://hurl.it" class="external">hurl.it</a>, which offers a very simple interface, as can be seen below:'
+        paragraph_6: 'Several tools and services can help you to test the return of the requests. An example is <a href="http://hurl.it" target="_blank" class="external">hurl.it</a>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
       title: Integration with host - Simple HTTP
       understanding_the_service:
         list:
           item_1: The device executes the command <a href="/en/posxml/commands/network.send" class='command'>network.send</a>;
-          item_2: The transactional switch receives the content sent and forwards it to the socket in the url/port and configured for the application in WALK Manager;
+          item_2: The CloudWalk transactional switch receives the content and forwards it to the end point (URL or IP and Port) configured for that application on the CloudWalk manager;
           item_3: The response of the socket is returned to the transactional switch;
-          item_4: The device executes the command network.receive and receives the response.
-        paragraph_1: 'One way to establish communication between CloudWalk service and a host authorizer is through HTTP. The diagram below represents communication between the mobile device, the CloudWalk service and the host authorizer:'
-        paragraph_2: <strong>Attention:</strong> After performing a network.send and network.receive, you must perform a network.hosdisconnect so you can make a new call (send).
+          item_4: The device executes the command <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a> and receives the response.
+        paragraph_1: 'One way to establish communication between the CloudWalk service and a host authorizer is through HTTP. The diagram below represents communication between the mobile device, the CloudWalk service and the host authorizer:'
+        paragraph_2: <strong>Attention:</strong> After performing a network.send and network.receive, you must perform a <a href="/en/posxml/commands/network.hostdisconnect" class='command'>network.hostdisconnect</a> so you can make a new call (send).
       walk_manager_setup:
         associate_logical_number:
           header: Associate the logical number
@@ -454,9 +454,9 @@ en:
           paragraph_3: After entering the logical number, press enter (green).
         create_application:
           list:
-            item_1: Login to your WALK Manager account
+            item_1: Login to your <a href="https://manager.cloudwalk.io/" target="_blank" class='command'>WALK Manager</a> account
             item_10: A message indicating that the application was successfully registered should be be shown
-            item_11: Copy the POSXML source code below (CTRL + C), click <strong>Edit source code</strong>, paste the previously copied code (CTRL + V) and click on <strong>Compile</strong>
+            item_11: Copy the POSXML source code below, click <strong>Edit source code</strong>, paste the previously copied code and click on <strong>Compile</strong>
             item_2: 'Select the first option: <strong>Applications</strong>'
             item_3: 'Click the button: <strong>New application</strong>'
             item_4: 'Fill in the application name, for example: <strong>httpapp</strong>'
@@ -492,16 +492,16 @@ en:
           paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow these steps:'
         paragraph_1: 'The last step is to configure the WALK Manager. Follow the procedure:'
     tcp:
-      description: One way to establish communication between CloudWalk service and a host authorizer is through TCP/IP. Example of use, configuring the device, compiling the application, configuring the WALK Manager, testing the communication.
+      description: One way to establish communication between the CloudWalk service and a host authorizer is through TCP/IP. Example of use, configuring the device, compiling the application, configuring the WALK Manager, testing the communication.
       pos_setup:
         paragraph_1: This guide assumes that your device already has the WALK Framework properly <strong>installed and configured</strong>, and that the device serial number is already registered on WALK Manager.
-        paragraph_2: If you are unsure of the steps above, check the session <a href='/en/walk-framework/configuration'>%{configuration}</a>
+        paragraph_2: If you are unsure of the steps above, please refer to <a href='/en/walk-framework/configuration'>%{configuration}</a>
       sample:
         list:
           item_1: '<strong>Account at WALK Manager: </strong>Create free at <a href="https://manager.cloudwalk.io" class="external" target="_blank">https://manager.cloudwalk.io</a>'
           item_2: <strong>WALK Framework:</strong> Device properly installed and configured
-          item_3: <strong>Internet access:</strong> It is necessary that the device has internet access (Ethernet, Dial or GPRS)
-        paragraph_1: For testing purposes, we provide a host authorizer ready to use. The authorizer is extremely simple, used only for testing purposes.
+          item_3: <strong>Internet access:</strong> It is necessary that the device has internet access (Ethernet, Dial-up or GPRS)
+        paragraph_1: For testing purposes, we provide a host authorizer that is really simple and ready to use.
         prerequisites: Prerequisites
       table_of_contents:
         development_environment: Compiling the application
@@ -512,24 +512,24 @@ en:
         walk_manager_setup: Configuring the WALK Manager
       testing:
         download_application: 1. Download the application
-        if_fail: If fail
-        paragraph_1: 'With the device properly prepared, compiled application and everything correct configures in WALK Manager, it''s time to test the communication between all the components involved: Mobile device, CloudWalk and host authorizer.'
-        paragraph_2: 'Press the green button and the process of downloading previously configured on Manager WALK application will start:'
+        if_fail: Upon failure
+        paragraph_1: 'With the device properly prepared; application compiled and everything correctly configured in WALK Manager, it''s time to test the communication between all the components involved: device, CloudWalk and host authorizer.'
+        paragraph_2: 'Press the green button and the process of downloading will start:'
         paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
         paragraph_5: Check the device communication setup, cables and internet connection.
-        paragraph_6: 'Several tools and services can help you to test the return of their requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
+        paragraph_6: 'Several tools and services can help you to test the return of the requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
       title: Integration with host - Plain TCP (socket tunnel)
       understanding_the_service:
         list:
-          item_1: The device executes the command network.send;
-          item_2: The transactional switch receives the content sent and forwards it to the socket in the url and configured port for the application in WALK Manager;
+          item_1: The device executes the command <a href="/en/posxml/commands/network.send" class='command'>network.send</a>;
+          item_2: The CloudWalk transactional switch receives the content and forwards it to the end point (URL or IP and Port) configured for that application on the CloudWalk manager;
           item_3: The response of the socket is returned to the transactional switch;
-          item_4: The device executes the command network.receive and receives the response.
-        paragraph_1: 'One way to establish communication between CloudWalk service and a host authorizer is through TCP/IP. The diagram below represents communication between the mobile device, CloudWalk service and host authorizer:'
-        paragraph_2: <strong>Attention:</strong> After performing a network.send and network.receive, you must perform a network.hosdisconnect so you can make a new call (send).
+          item_4: The device executes the command <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a> and receives the response.
+        paragraph_1: 'One way to establish communication between the CloudWalk service and a host authorizer is through TCP/IP. The diagram below represents communication between the mobile device, CloudWalk service and host authorizer:'
+        paragraph_2: <strong>Attention:</strong> After performing a network.send and network.receive, you must perform a <a href="/en/posxml/commands/network.hostdisconnect" class='command'>network.hostdisconnect</a> so you can make a new call (send).
       walk_manager_setup:
         associate_logical_number:
           header: Associate the logical number
@@ -538,9 +538,9 @@ en:
           paragraph_3: After entering the logical number, press enter (green).
         create_application:
           list:
-            item_1: Login to your WALK Manager account
+            item_1: Login to your <a href="https://manager.cloudwalk.io/" target="_blank" class='command'>WALK Manager</a> account
             item_10: A message indicating that the application was successfully registered should be be shown
-            item_11: Copy the POSXML source code below (CTRL + C), click <strong>Edit source code</strong>, paste the previously copied code (CTRL + V) and click on <strong>Compile</strong>
+            item_11: Copy the POSXML source code below, click <strong>Edit source code</strong>, paste the previously copied code and click on <strong>Compile</strong>
             item_2: 'Select the first option: <strong>Applications</strong>'
             item_3: Click the button <strong>New application</strong>
             item_4: 'Fill in the application name, for example: <strong>tcpapp</strong>'
