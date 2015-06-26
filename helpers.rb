@@ -13,7 +13,7 @@ module Helpers
     "<h3 class='anchor' id='#{text.to_url}'>#{toc_item(text)}</h3>"
   end
 
-  def embed_posxml_code(gist_id)
+  def embed_posxml_code(gist_id, ignore_emulation=false)
     # Create the button
     markup = "<span id='copy-snippet-1' class='btn btn-small btn-clipboard'><span class='fa fa-clipboard'></span> #{I18n.t("copy")}</span>"
 
@@ -25,6 +25,9 @@ module Helpers
     # Create the <code> element that will receive the content of the
     # previous <pre> element, which will then apply the syntax highlight
     markup << "<pre><code id='code-snippet-1' data-language='html'></code></pre>"
+
+    # The argument ignore_emulation will be used in the future later to ignore
+    # snippets that won't be emulated on the IDE
   end
 
   def fetch_gist(gist_id)
