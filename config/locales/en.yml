@@ -753,26 +753,26 @@ en:
       break:
         description: The break command allows immediate exit from while loop
         paragraph_1: The command <span class='code'>break</span> is used to stop the execution of a loop.
-        paragraph_2: In the above example, when the value of the variable <em>iNumber</em> is equal to <em>3</em> the condition of the command <a href='if' class='command'>if</a> is true, causing the execution of the command <strong>break</strong> which stopps the execution of the block <a href='while' class='command'>while</a> even if the condition has not been met yet.
+        paragraph_2: In the above example, when the value of the variable <em>iNumber</em> is equal to <em>3</em> the condition of the command <a href='if' class='command'>if</a> is true, causing the execution of the command <strong>break</strong> which stops the execution of the block <a href='while' class='command'>while</a> even if the condition has not been met yet.
       callfunction:
         description: Makes a call on a previously defined function
         paragraph_1: The command <span class='code'>callfunction</span> performs a function (<a href='function' class='command'>function</a>).
         paragraph_2: In the above example, function <em>double_value</em> has been declared, that encapsulates the command <a href='mathematicaloperation' class='command'>mathematicaloperation</a> which doubles the value of the variable <em>$(iNumber)</em>.
-        paragraph_3: The command <a href='callfunction' class='command'>callfunction</a> calls the function <em>dobra_valor</em>.
+        paragraph_3: The command <a href='callfunction' class='command'>callfunction</a> calls the function <em>double_value</em>.
         paragraph_4: To display the value of the variable <em>$(iNumber)</em>, which is an <a href='integervariable' class='command'>integervariable</a>, you need to change your type to <a href='stringvariable' class='command'>stringvariable</a> using the command <a href='inttostring' class='command'>inttostring</a>.
         parameters:
           parameter_1: <strong>name</strong> <span class='data-type'>[string]</span><br/>Function name.
       checkpaperout:
         description: Checks if the paper compartment still contains paper
-        paragraph_1: The command <span class='code'>checkpaperout</span> is used to check whether there is paper in the printer.
-        paragraph_2: In the above example has been created a variable <em>$(iPaper)</em> that will store the result of the command <strong>checkpaperout</strong> through its parameter <em>variablereturn</em>.
+        paragraph_1: The command <span class='code'>checkpaperout</span> is used to check if there is paper in the printer.
+        paragraph_2: This example creates a variable <em>$(iPaper)</em> that will store the result of the command <strong>checkpaperout</strong> using the parameter <em>variablereturn</em>.
         paragraph_3: The block <a href='if' class='command'>if</a> checks the value of the variable <em>$(iPaper)</em> and displays the message on the <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the result of the command, which may be 0 or 1.
       cleandisplay:
         description: Clean the device display (like a clear or cls)
         paragraph_1: The command <span class='code'>cleandisplay</span> is used to delete the entire contents of <a href='display' class='command'>display</a>.
-        paragraph_2: In the example above, the four lines that were displayed has been removed from <a href='display' class='command'>display</a>
+        paragraph_2: In the example above, the four lines that were displayed have been removed from <a href='display' class='command'>display</a>
       closeserialport:
         description: Closes the serial port
         paragraph_1: The command <span class='code'>closeserialport</span> is used to close an open serial port.
@@ -784,17 +784,17 @@ en:
       comments_message: Leave your comment...
       convert_toint:
         description: Converts binary, decimal or hexadecimal to integer
-        paragraph_1: The command <span class='code'>convert.toint</span> is used to specify a decision or logic comparison in the POSXML application. Other commands can be used within block <span class='code'>if</span>, and these commands are executed if the logical expression is true.
+        paragraph_1: The command <span class='code'>convert.toint</span> is used to convert a binary, decimal or hexadecimal value to an integer value.
         paragraph_2: In the above example the binary <strong>1010</strong> will be converted to decimal.
         paragraph_3: To display the converted value on the <a href='display' class='command'>display</a>, you need to convert it using the command  <a href='inttostring' class='command'>inttostring</a>.
         parameters:
-          parameter_1: '<strong>base</strong> <span class="data-type">[integer]</span><br/>What base is used in the conversion:<ul><li>2: binary</li><li>10: decimal</li><li>16: hexadecimal</li></ul>'
+          parameter_1: '<strong>base</strong> <span class="data-type">[integer]</span><br/>The base that is used in the conversion:<ul><li>2: binary</li><li>10: decimal</li><li>16: hexadecimal</li></ul>'
           parameter_2: <strong>number</strong> <span class='data-type'>[string]</span><br/>Binary, decimal or hexadecimal that will be converted.
-          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will receive return of the command.
+          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the result of the command.
       crypto_crc:
         description: 16-bit CRC calculation, support CRC-CCITT
-        paragraph_1: The command <span class='code'>crypto.crc</span> is used for 16-bit CRC calculation and CRC-CCITT support.
-        paragraph_2: In the above example, the buffer <strong>30313233343536</strong> will be used in the <strong>CRC</strong> calculation and the return of the command will be inserted in the variable <strong>iReturn</strong> and then turned into <a href='stringvariable' class='command'>stringvariable</a> in the variable <strong>sReturn</strong>.
+        paragraph_1: The command <span class='code'>crypto.crc</span> is used for 16-bit <a href='https://en.wikipedia.org/wiki/Cyclic_redundancy_check' target="_blank">CRC</a> calculation and CRC-CCITT support.
+        paragraph_2: In the above example, the buffer <strong>30313233343536</strong> will be used in the <strong>CRC</strong> calculation and the return of the command will be stored in the variable <strong>iReturn</strong>. This value will then be converted to a string using the command <a href='stringvariable' class='command'>stringvariable</a> and stored in the variable <strong>sReturn</strong>.
         paragraph_3: The return should be <strong>31712</strong>.
         parameters:
           parameter_1: <strong>buffer</strong> <span class='data-type'>[string]</span><br/>Hexadecimal representation that will be used to calculate CRC.
@@ -803,74 +803,74 @@ en:
           parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string or integer]</span><br/>Variable that will store the return of the command.
       crypto_encryptdecrypt:
         description: Encryption routines with algorithms DES, 3DES or NEWDES
-        paragraph_1: The command <span class='code'>crypto.encryptdecrypt</span> is used to specify a decision or logic comparison in the POSXML application. Other commands can be used within block <span class='code'>if</span>, and these commands are executed if the logical expression is true.
+        paragraph_1: The command <span class='code'>crypto.encryptdecrypt</span> is used to encrypt or decrypt data, in a specific format using DES, 3DES, 3DESTripleLength or NEWDES and using a specific key to return an encrypted or decrypted output.
         paragraph_2: In the example above, the command <a href='string.tohex' class='command'>string.tohex</a> has been used to transform the value of the variable <strong>sAscii</strong> in hexadecimal, which is the value required for the attribute <strong>crypto.encryptdecrypt</strong>.
         paragraph_3: The first <a href='display' class='command'>display</a> will display the value <strong>3031323334353637</strong> encrypted with type <strong>NEWDES</strong>.
         paragraph_4: The second <a href='display' class='command'>display</a> shows the decrypted value.
         parameters:
           parameter_1: <strong>cryptotype</strong> <span class='data-type'>[string]</span><br/>Algorithm to be used:<ul><li>DES</li><li>3DES</li><li>3DESTripleLength</li><li>NEWDES</li></ul>
-          parameter_2: '<strong>key</strong> <span class="data-type">[string]</span><br/>Hexadecimal encryption key.<ul><li>DES: 8 bytes or 16 characters</li><li>3DES: 16 bytes or 32 characters</li><li>3DESTripleLength: 24 bytes or 48 characters</li><li>NEWDES: 15 bytes or 30 characters</li></ul>'
-          parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Value, hexadecimal, which will be encrypted or decrypted. If the value has more than 8 bytes must be separated into blocks with the command <a href='string.elementat' class='command'>string.elementat</a>
+          parameter_2: '<strong>key</strong> <span class="data-type">[string]</span><br/>Hexadecimal encryption key:<ul><li>DES: 8 bytes or 16 characters</li><li>3DES: 16 bytes or 32 characters</li><li>3DESTripleLength: 24 bytes or 48 characters</li><li>NEWDES: 15 bytes or 30 characters</li></ul>'
+          parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Value, hexadecimal, which will be encrypted or decrypted. If the value has more than 8 bytes it must be parsed into blocks with the command <a href='string.elementat' class='command'>string.elementat</a>
           parameter_4: '<strong>type</strong> <span class="data-type">[integer]</span><br/><ul><li>0: Encrypt</li><li>1: Decrypt</li></ul>'
           parameter_5: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
       crypto_lrc:
         description: Generates a LRC byte of the string in the buffer
-        paragraph_1: The command <span class='code'>crypto.lrc</span> is used to generate a LRC byte of the string in the buffer.
+        paragraph_1: The command <span class='code'>crypto.lrc</span> is used to generate a <a href='https://en.wikipedia.org/wiki/Longitudinal_redundancy_check' target="_blank">LRC</a> byte of the string in the buffer.
         paragraph_2: In the above example, the buffer <strong>30313233343536</strong> will be used to generate a <strong>LRC</strong> byte.
         paragraph_3: The return should be <strong>37</strong>.
         parameters:
-          parameter_1: <strong>buffer</strong> <span class='data-type'>[string]</span><br/>Hexadecimal representation that will be used to generate a byte LRC.
+          parameter_1: <strong>buffer</strong> <span class='data-type'>[string]</span><br/>Hexadecimal representation that will be used to generate a LRC byte.
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/>Number of bytes in the buffer.
-          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string or integer]</span><br/>Variable that will store the return command.
+          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string or integer]</span><br/>Variable that will store the return result.
       crypto_xor:
-        description: Performs a binary XOR operation between the bytes of two strings
-        paragraph_1: The command <span class='code'>crypto.xor</span> is used to perform a XOR binary operation between the bytes of two strings.
+        description: Performs a binary XOR operation on the bytes of two strings
+        paragraph_1: The command <span class='code'>crypto.xor</span> is used to perform a <a href="https://en.wikipedia.org/wiki/Exclusive_or" target="_blank">XOR</a> binary operation on the bytes of two strings.
         paragraph_2: In the example above, <strong>buffer1</strong> <strong>123456</strong> is different from <strong>buffer2</strong> <strong>123450</strong> making that the <strong>XOR</strong> operation returns the result (hexadecimal) <strong>000 006 000 000</strong>.
         parameters:
           parameter_1: <strong>buffer1</strong> <span class='data-type'>[string]</span><br/>Hexadecimal string that will be used on the XOR operation.
           parameter_2: <strong>buffer2</strong> <span class='data-type'>[string]</span><br/>Hexadecimal string that will be used on the XOR operation.
           parameter_3: <strong>size</strong> <span class='data-type'>[integer]</span><br/>Buffer size in bytes.
-          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the hexadecimal return of the XOR command.
+          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the hexadecimal return value of the XOR command.
       deletefile:
         description: Deletes a file from the device memory
         paragraph_1: The command <span class='code'>deletefile</span> deletes a file from the device memory.
-        paragraph_2: In the above example, the file <strong>test.txt</strong> has been downloaded with the command <a href='downloadfile' class='command'>downloadfile</a>.
-        paragraph_3: The command <a href='deletefile' class='command'>deletefile</a> deletes the file <strong>test.txt</strong> from the device's memory, making sure that the variable <strong>sPeople</strong> is empty and does not show anything on the <a href='display' class='command'>display</a>.
+        paragraph_2: In the above example, the file <strong>test.txt</strong> has been downloaded using the command <a href='downloadfile' class='command'>downloadfile</a>.
+        paragraph_3: The command <a href='deletefile' class='command'>deletefile</a> deletes the file <strong>test.txt</strong> from the device memory, ensuring that the variable <strong>sPopulation</strong> is empty and does not show anything on the <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
       description: Listing with a brief description of all POSXML commands.
       display:
         description: Displays a custom message on device's display
-        paragraph_1: The command <span class='code'>display</span> is used to display a customized message, considering the row and column passed as parameter to the command.
-        paragraph_2: In the above example, the message <strong>CLOUDWALK</strong> would be displayed on line <strong>0</strong> and column <strong>0</strong>.
+        paragraph_1: The command <span class='code'>display</span> is used to display a customized message on the device display, considering the row and column passed as parameters to the command.
+        paragraph_2: In the above example, the message <strong>CLOUDWALK</strong> is displayed from line <strong>0</strong>, column <strong>0</strong>.
         parameters:
           parameter_1: <strong>line</strong> <span class='data-type'>[integer]</span><br/>Line where the message appears.
           parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column where the message appears.
           parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Custom message that will be displayed.
       displaybitmap:
         description: Displays a monochromatic bitmap on the display
-        paragraph_1: The command <span class='code'>displaybitmap</span> is used to display a bitmap.
-        paragraph_2: In the above example, to display a bitmap with the command <strong>displaybitmap</strong>, first needs to be downloaded the file using <a href='downloadfile' class='command'>downloadfile</a>.
-        paragraph_3: In this case it is not necessary to use the command <a href='display' class='command'>display</a> to view the image.
-        paragraph_4: The variable <strong>iReturn</strong> will store the result of the command.
+        paragraph_1: The command <span class='code'>displaybitmap</span> is used to display a bitmap image.
+        paragraph_2: In the example above, to display a bitmap image using the command <strong>displaybitmap</strong>, first download the .bmp file using <a href='downloadfile' class='command'>downloadfile</a>.
+        paragraph_3: (In this case it is not necessary to use the command <a href='display' class='command'>display</a> to view the image.)
+        paragraph_4: The variable <strong>iReturn</strong> will store the result of the command and will be used to display the bitmap image on the device display.
         paragraph_5: 'The image dimensions that will be shown must be aligned according to the device model and specification. Check an example image: <a href="http://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp" class="external" target="_blank">CloudWalk_Wallpaper</a>'
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will receive return of the command.<ul><li>-2: Bitmap is monochrome</li><li>-1: invalid bitmap size</li><li>0: bitmap not found</li><li>1: bitmap successfully displayed</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the result of the command.<ul><li>-2: Bitmap is monochrome</li><li>-1: invalid bitmap size</li><li>0: bitmap not found</li><li>1: bitmap successfully displayed</li></ul>'
           parameter_2: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name with extension.
       downloadfile:
         description: Downloads a file previously registered on the WALK Manager
         paragraph_1: The command <span class='code'>downloadfile</span> is used to download a file.
-        paragraph_2: In the example above, the file <strong>wallpaper_walkpb.bmp</strong> will be downloaded by the command <strong>downloadFile</strong>, displaying the response <strong>1</strong> on the <a href='display' class='command'>display</a>.
-        paragraph_3: As the return of the command <strong>downloadFile</strong> is an <a href='integervariable' class='command'>integervariable</a>, it must be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a> with the command <a href='inttostring' class='command'>inttostring</a>.
+        paragraph_2: In the example above, the file <strong>wallpaper_walkpb.bmp</strong> will be downloaded by the command <strong>downloadfile</strong>, displaying the response <strong>1</strong> <em>(Download performed successfully)</em> on the <a href='display' class='command'>display</a>.
+        paragraph_3: As the return of the command <strong>downloadfile</strong> is an <a href='integervariable' class='command'>integervariable</a>, it must be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a> with the command <a href='inttostring' class='command'>inttostring</a>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name with extension.
           parameter_2: <strong>remotepath</strong> <span class='data-type'>[string]</span><br/>File name with extension.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return command. <ul><li>2: The file has the CRC of a file on the server </li><li>1: Download performed successfully </li><li>0: Error encode base 64 </li><li>-1: File not found or error on encode</li><li>-2: connection Error in buffer send</li><li>-4: error when receiving Walk Server package </li><li>-5: Error connecting to Walk Server</li><li>-6: Error message transfer</li><li>-7: Error sending confirmation of completed download</li><li>-8: number unauthorized</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code. <ul><li>2: The file has the CRC of a file on the server </li><li>1: Download performed successfully </li><li>0: Error encode base 64 </li><li>-1: File not found or error on encode</li><li>-2: Connection error in buffer send</li><li>-4: Error when receiving Walk Server package </li><li>-5: Error connecting to Walk Server</li><li>-6: Error message transfer</li><li>-7: Error sending confirmation of completed download</li><li>-8: Number unauthorized</li></ul>'
       editfile:
         description: Allows write a file in WALK dbfile format (key/value)
         paragraph_1: The command <span class='code'>editfile</span> is used to edit a file in <a href='#walk_db' class='command'>Walk DB</a> format.
-        paragraph_2: In the above example, has been downloaded the file <strong>test.txt</strong> with the command <a href='downloadfile' class='command'> downloadFile </a>.
-        paragraph_3: The command <a href='editfile' class='command'>editfile</a> makes the edition of the key <strong>Population</strong>, passing the value from <strong>3.792.621</strong> to <strong>3.792.700</strong>.
+        paragraph_2: In the above example the file <strong>test.txt</strong> has been downloaded with the command <a href='downloadfile' class='command'> downloadFile </a>.
+        paragraph_3: The command <a href='editfile' class='command'>editfile</a> makes an edit on the key <strong>Population</strong> changing the value from <strong>3.792.621</strong> to <strong>3.792.700</strong>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
           parameter_2: <strong>key</strong> <span class='data-type'>[string]</span><br/>Key.
@@ -881,15 +881,15 @@ en:
         paragraph_2: 'There are three conditions in the example above:'
         paragraph_3: 1st - comparison between two texts resulting in <strong>false</strong> because <strong>Blue</strong> is different from the value of the variable <strong>sColor</strong>;
         paragraph_4: 2nd - comparison between two numbers resulting in <strong>false</strong> because <strong>111</strong> isn't greater than the value of the variable <strong>iNumber</strong>;
-        paragraph_5: 3rd - comparison between two texts resulting in <strong>false</strong> because <strong>blue</strong> is equal to the value of the variable <strong>$(sColor)</strong>;
+        paragraph_5: 3rd - comparison between two texts resulting in <strong>false</strong> because <strong>blue</strong> is equal to the value of the variable <strong>sColor</strong>;
         paragraph_6: POSXML is <strong>case-sensitive</strong>, so uppercase letters are different than lowercase letters.
       emv_adddata:
         description: Adds parameters to EMV process
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_10: For the type <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
-        paragraph_11: In the above example was demonstrated an example for each parameter type, <span class='code'>init</span>, <span class='code'>process</span> and <span class='code'>finish</span>.
-        paragraph_12: The example shown here is fictitious, since in order to succeed with a full EMV transaction is necessary several other factors such as an ISO-8583 answer from the card issuer, keys injected into the terminal and other requirements defined by the EMV standard.
-        paragraph_2: The command <span class='code'>emv.adddata</span> is used to pass parameters to the <em>Kernel EMV</em> on commands <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>.
+        paragraph_11: The example above demonstrates an example for each parameter type, <span class='code'>init</span>, <span class='code'>process</span> and <span class='code'>finish</span>.
+        paragraph_12: The example shown here is fictitious, since in order to succeed with a full EMV transaction it is necessary to meet several other requirements such having as an ISO-8583 answer from the card issuer, keys injected into the terminal and other requirements defined by the EMV standard.
+        paragraph_2: The command <span class='code'>emv.adddata</span> is used to pass parameters to the <em>EMV Kernel</em> on commands <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>.
         paragraph_3: 'Allowed parameters:'
         paragraph_4: Parameter
         paragraph_5: Description
@@ -901,28 +901,28 @@ en:
           parameter_1: <strong>parameter</strong> <span class='data-type'>[string]</span><br/> Parameter name to be sent. <a href='#table-of-parameters'>(see table below)</a>
           parameter_2: '<strong>type</strong> <span class="data-type">[string]</span><br/> Possible types: <br/><ul><li>init</li><li>process</li><li>finish</li></ul>'
           parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/> Parameter value.
-          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn''t exist.</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Return codes: <br/><ul><li>0: OK</li><li>-1: Error. Type, key or value doesn''t exist.</li></ul>'
       emv_cleanstructures:
         description: Clears all input and output parameters
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
-        paragraph_2: The command <span class='code'>emv.cleanstructures</span> is used to clean the data entry and search information structures. It's necessary to be executed when starting a transaction.
-        paragraph_3: In the above example, the first command to be executed is <span class='code'>emv.cleanstructures</span>, to clean up the data structures for the new transaction, then the command <a href='emv.adddata' class='command'>emv.adddata</a> is executed to pass the parameters to the <em>Kernel EMV</em>, and then the command <a href='emv.inittransaction' class='command'>emv.inittransaction</a> initiates the transaction.
-        paragraph_4: The command <a href='if' class='command'>if</a> should be used to evaluate the returning of the commands. In the process of developing an application, the commands <a href='inttostring' class='command'>inttostring</a> and <a href='print' class='command'>print</a> can be used to <strong>DEBUG</strong> and help the developer.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_2: The command <span class='code'>emv.cleanstructures</span> is used to clean the data entry and search information structures. It is necessary to execute this command before starting a transaction.
+        paragraph_3: In the example above, the first command executed is <span class='code'>emv.cleanstructures</span> command. This is used to clean up the data structures to prepare for a new transaction, followed by the command <a href='emv.adddata' class='command'>emv.adddata</a> which is executed to pass the parameters to the <em>EMV Kernel</em>, and finally the command <a href='emv.inittransaction' class='command'>emv.inittransaction</a> initiates the transaction.
+        paragraph_4: The command <a href='if' class='command'>if</a> should be used to evaluate the command returns. In the process of developing an application, the commands <a href='inttostring' class='command'>inttostring</a> and <a href='print' class='command'>print</a> can be used to <strong>DEBUG</strong> and help the developer.
       emv_finishtransaction:
         description: Terminates the execution of the EMV process
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
-        paragraph_2: The command <span class='code'>emv.finishtransaction</span> finishes chip processing, if <a href='emv.processtransaction' class='command'>emv.processtransaction</a> has requested online approval or if the transaction has already been approved offline.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_2: The command <span class='code'>emv.finishtransaction</span> finishes chip processing if <a href='emv.processtransaction' class='command'>emv.processtransaction</a> has requested online approval or if the transaction has already been approved offline.
         paragraph_3: A transaction denied in <a href='emv.processtransaction' class='command'>emv.processtransaction</a> does not require a call to this instruction.
-        paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
-        paragraph_5: After that, the command <span class='code'>emv.finishtransaction</span> is executed to finish the chip processing; since the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
+        paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> is used to pass parameters to the <em>EMV Kernel</em>.
+        paragraph_5: After that, the command <span class='code'>emv.finishtransaction</span> is executed to finish the chip processing. As the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp doesn''t match with the parameter"s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card</li><li>43: Card removed in the middle of the operation</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>20: Device timestamp does not match with the parameter''s timestamp passed through <em>emv.adddata</em></li><li>40: Execution error</li><li>41: Error while reading the card</li><li>43: Card removed in the middle of the operation</li></ul>'
       emv_getinfo:
         description: Returns information parameters after the execution of the EMV process
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_10: For the type <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
         paragraph_11: In the above example, the command <span class='code'>emv.getinfo</span> was used to fetch the parameters after the execution of the commands <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>. The command <a href='print' class='command'>print</a> was used to display the ticket information.
-        paragraph_12: Note that before performing the commands <strong>init</strong>, <strong>process</strong> and <strong>finish</strong> it is necessary to pass parameters to the <em>Kernel EMV</em> with the command <a href='emv.adddata' class='command'>emv.adddata</a>.
+        paragraph_12: Note that before performing the commands <strong>init</strong>, <strong>process</strong> and <strong>finish</strong> it is necessary to pass parameters to the <em>EMV Kernel</em> with the command <a href='emv.adddata' class='command'>emv.adddata</a>.
         paragraph_2: The command <span class='code'>emv.getinfo</span> is used to search for results in the instructions <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>.
         paragraph_3: 'Allowed parameters:'
         paragraph_4: Parameter
@@ -934,19 +934,19 @@ en:
         parameters:
           parameter_1: <strong>parameter</strong> <span class='data-type'>[string]</span><br/>Parameter name to search for <a href='#table-of-parameters'>(see table below)</a>.
           parameter_2: <strong>type</strong> <span class='data-type'>[string]</span><br/>Possible types:<br/><ul><li>init</li><li>process</li><li>finish</li></ul>
-          parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/>Variable that will store the parameter value that will be returned by the <em>Kernel EMV</em>.
+          parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/>Variable that will store the parameter value that will be returned by the <em>EMV Kernel</em>.
       emv_inittransaction:
         description: Initializes the EMV process with inserted parameters
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.inittransaction</span> begins processing the EMV card, either magnetic stripe or chip. At this time, the EMV library will ask the card <strong>insertion/swipe</strong> in order to choose and start the EMV application on the smartcard. The answer is the card data to be analyzed by the device application.
         paragraph_3: This instruction uses the timeout on the operation of card insertion and choice of application, if it has been defined by <a href='emv.settimeout' class='command'>emv.settimeout</a>.
-        paragraph_4: In the above example, the command <a href='emv.cleanstructures' class='command'>emv.cleanstructures</a> was used to clean the data structures, and the command <a href='emv.adddata' class='command'>emv.adddata</a> was used pass the parameters to the <em>Kernel EMV</em>.
+        paragraph_4: In the above example, the command <a href='emv.cleanstructures' class='command'>emv.cleanstructures</a> was used to clean the data structures, and the command <a href='emv.adddata' class='command'>emv.adddata</a> was used pass the parameters to the <em>EMV Kernel</em>.
         paragraph_5: After that, the command <span class='code'>emv.inittransaction</span> is executed to start the EMV processing. Since the return of command is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
       emv_loadtables:
         description: load tables EMV and PKI of the file for the buyer
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.loadtables</span> is used to load the tables of settings for each application by EMV acquirer network.
         paragraph_3: The loading of tables should be done in the device initialization. To load a table, a file should be sent to the device, with a standard name plus the number of the acquirer network.
         paragraph_4: In the above example, the command <a href='emv.open' class='command'>emv.open</a> is used to start the EMV library, and then the command <a href='if' class='command'>if</a> is used to evaluate the result of the operation.
@@ -955,10 +955,10 @@ en:
         paragraph_7: It is necessary to initialize the library EMV and load the tables only if the device is <strong>turned on</strong> or <strong>restarted</strong>, otherwise it is not necessary to use this command every time on an EMV transaction.
         parameters:
           parameter_1: <strong>acquirer</strong> <span class='data-type'>[integer]</span><br/> Acquirer network identification number.
-          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>10: Error while starting the tables</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>21: Error while trying to store records</li><li>30: Communication error, PIN-Pad serial port is probably busy</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/><ul><li>0: OK</li><li>10: Error while starting the tables</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>21: Error while trying to store records</li><li>30: Communication error, PIN-Pad serial port is probably busy</li></ul>'
       emv_open:
         description: Initializes EMV library
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.open</span> is used to initialize the EMV library, allocating hardware and software resources necessary for the EMV Kernel operation. A successful call to this command is a prerequisite for all other EMV library calls.
         paragraph_3: In the above example, the command <span class='code'>emv.open</span> was used to initialize the device's EMV library. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> was used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
@@ -966,35 +966,35 @@ en:
           parameter_2: '<strong>pinpadtype</strong> <span class="data-type">[integer]</span><br/> PIN-Pad type: <br/><ul><li>1: Internal</li><li>2: External</li></ul>'
           parameter_3: <strong>pinpadwk</strong> <span class='data-type'>[string]</span><br/> Working key used on the pinpad session.
           parameter_4: '<strong>showamount</strong> <span class="data-type">[integer]</span><br/> Defines wether the library should show the amount: <br/><ul><li>1: Show the amount</li><li>0: Does not show the amount</li></ul>'
-          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Command return, where: <br/><ul><li>0: OK</li><li>14: Library already started</li><li>16: Error</li></ul>'
+          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Return codes: <br/><ul><li>0: OK</li><li>14: Library already started</li><li>16: Error</li></ul>'
       emv_processtransaction:
         description: Starts the execution of the EMV process
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.processtransaction</span> continues the chip card handling process. If the command <a href='emv.inittransaction' class='command'>emv.inittransaction</a> returns that a magnetic card was swiped, then this command should not be executed.
         paragraph_3: This command uses the timeout when capturing the PIN if it was defined by <a href='emv.settimeout' class='command'>emv.settimeout</a>.
-        paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
+        paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> is used to pass parameters to the <em>EMV Kernel</em>.
         paragraph_5: Then, the command <span class='code'>emv.processtransaction</span> is executed to continue the chip card handling process. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: '<strong>ctls</strong> <span class="data-type">[integer]</span><br/>Defines wether the transaction should be <em><strong>contact-less</strong></em>, where:<br/><ul><li>1: Contact-less transaction</li><li>0: Contact (standard) transaction</li></ul>'
-          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>19: Absence of data for the mandatory field 55, or mandatory data is not accessible (if that"s the case, pass the tag on baOptionalTags)</li><li>31: PIN-Pad communication error</li><li>40: Execution error</li><li>43: Card removed in the middle of the operation</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter passed on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li><li>16: Internal error</li><li>19: Absence of data for the mandatory field 55, or mandatory data is not accessible (if that"s the case, pass the tag on baOptionalTags)</li><li>31: PIN-Pad communication error</li><li>40: Execution error</li><li>43: Card removed in the middle of the operation</li></ul>'
       emv_removecard:
         description: Waits for card removal
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.removecard</span> awaits the chip card removal. It is advised to always use this command at the end of the operation flow, whether successful or unsuccessful.
         paragraph_3: This command uses the timeout to remove the card if it was defined by <a href='emv.settimeout' class='command'>emv.settimeout</a>.
-        paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> was used to pass parameters to the <em>Kernel EMV</em>.
+        paragraph_4: In the above example, the command <a href='emv.adddata' class='command'>emv.adddata</a> is used to pass parameters to the <em>EMV Kernel</em>.
         paragraph_5: Then, the command <span class='code'>emv.finishtransaction</span> is executed to finish the chip card handling process. After that, the command <span class='code'>emv.removecard</span> requests the user to remove the chip card. Since the command returns an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable, displaying its content through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter set on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/><ul><li>0: OK</li><li>11: Invalid parameter set on <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Insert, card swipe or choose application operation canceled by the user</li><li>15: Library EMV not initiated</li></ul>'
       emv_settimeout:
         description: Define timeout (in seconds) of the library of the EMV process
-        paragraph_1: Knowledge about <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
+        paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_2: The command <span class='code'>emv.settimeout</span> is used to set a timeout to be used be blocking commands.
         paragraph_3: This timeout can be changed before performing a command, that is, this statement can be called several times during the transaction cycle.
         paragraph_4: In the above example, the command <span class='code'>emv.settimeout</span> is executed passing 10 seconds to the parameter <em><strong>seconds</strong></em>, that is, when the next command <a href='emv.inittransaction' class='commands'>emv.inittransaction</a> is executed, the device will wait for 10 seconds until the user inserts or swipes the card.
         parameters:
           parameter_1: <strong>timeout</strong> <span class='data-type'>[integer]</span><br/>Timeout in seconds
-          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>0: OK</li><li>15: Library EMV not initiated</li><li>16: Internal error</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/><ul><li>0: OK</li><li>15: Library EMV not initiated</li><li>16: Internal error</li></ul>'
       example: Example
       execute:
         app_name: 'Application name:'
@@ -1011,14 +1011,14 @@ en:
       file_close:
         description: Closes a file that was previously opened by file.open
         paragraph_1: The command  <span class='code'>file.close</span> is used to close an open file.
-        paragraph_2: In the above example, with the command <a href='downloadfile' class='command'>downloadfile</a> has been downloaded the file <strong>test.txt</strong>.
+        paragraph_2: In the above example the file <strong>test.txt</strong> has been downloaded using the command <a href='downloadfile' class='command'>downloadfile</a>.
         paragraph_3: The file <strong>test.txt</strong> has been opened for reading (<strong>r</strong>) by the command <a href='file.open' class='command'>file.open</a> and closed by command <a href='file.close' class='command'>file.close</a>.
         parameters:
           parameter_1: <strong>handle</strong> <span class='data-type'>[integer]</span><br/>Handle of the opened file.
       file_open:
         description: Opens a file for reading or writing
         paragraph_1: The command <span class='code'>file.open</span> is used to open a file for reading or writing.
-        paragraph_2: In the above example, by the command <a href='downloadfile' class='command'>downloadfile</a> has been downloaded the file <strong>test.txt</strong>. The file <strong>test.txt</strong> has been opened for reading (<strong>r</strong>) by the command <a href='file.open' class='command'>file.open</a>.
+        paragraph_2: In the above example, the file <strong>test.txt</strong> has been downloaded using the command <a href='downloadfile' class='command'>downloadfile</a>. The file <strong>test.txt</strong> has been opened for reading (<strong>r</strong>) by the command <a href='file.open' class='command'>file.open</a>.
         paragraph_3: The command <a href='display' class='command'>display</a> will display <strong>-1</strong>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
@@ -1027,7 +1027,7 @@ en:
       file_read:
         description: Reads a file that was previously opened by file.open
         paragraph_1: The command <span class='code'>file.read</span> is used to read a file open.
-        paragraph_2: In the above example, with the command <a href='downloadfile' class='command'>downloadfile</a> has been downloaded the file <strong>test.txt</strong>. The file <strong>test.txt</strong> has been opened for reading (<strong>r</strong>) by the command <a href='file.open' class='command'>file.open</a>
+        paragraph_2: In the above example the file <strong>test.txt</strong>has been downloaded using the command <a href='downloadfile' class='command'>downloadfile</a>. The file <strong>test.txt</strong> has been opened for reading (<strong>r</strong>) by the command <a href='file.open' class='command'>file.open</a>
         paragraph_3: Note that to inform the file size, in bytes, for the command <a href='file.read' class='command'>file.read</a>, had to be used the command <a href='filesystem.filesize' class='command'>filesystem.filesize</a>.
         paragraph_4: The return of the reading of the file executed by the command <a href='file.read' class='command'>file.read</a> will appear on the <a href='display' class='command'>display</a>.
         parameters:
@@ -1038,7 +1038,7 @@ en:
       file_write:
         description: Writes a file that was previously opened by file.open
         paragraph_1: The command <span class='code'>file.write</span> is used to writing on an open file.
-        paragraph_2: In the above example, with the command <a href='downloadfile' class='command'>downloadfile</a> has been downloaded the file <strong>test.txt</strong>. The file <strong>test.txt</strong> has been opened for reading (<strong>r</strong>) by the command <a href='file.open' class='command'>file.open</a>.
+        paragraph_2: In the above example the file <strong>test.txt</strong>has been downloaded using the command <a href='downloadfile' class='command'>downloadfile</a>. The file <strong>test.txt</strong> has been opened for reading (<strong>r</strong>) by the command <a href='file.open' class='command'>file.open</a>.
         paragraph_3: Note that to inform the file size, in bytes, for the command <a href='file.read' class='command'>file.read</a>, had to be used the command <a href='filesystem.filesize' class='command'>filesystem.filesize</a>.
         paragraph_4: The return of the reading of the file executed by the command <a href='file.read' class='command'>file.read</a> will appear in the <a href='display' class='command'>display</a>.
         parameters:
@@ -1048,7 +1048,7 @@ en:
       filesystem_filesize:
         description: Returns the size of a file in the memory of the POS
         paragraph_1: The command <span class='code'>filesystem.filesize</span> is used to get the size, in bytes, of a file in the device memory.
-        paragraph_2: In the example above, the file <strong>wallpaper_walkpb.bmp</strong> will be downloaded by the command <strong>downloadFile</strong> and the command <strong>filesystem.filesize</strong> will return the size in bytes.
+        paragraph_2: In the example above, the file <strong>wallpaper_walkpb.bmp</strong> will be downloaded by the command <strong>downloadfile</strong> and the command <strong>filesystem.filesize</strong> will return the size in bytes.
         paragraph_3: As the return of the command <strong>filesystem.filesize</strong> is an <a href='integervariable' class='command'>integervariable</a>, it must be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a> by the command <a href='inttostring' class='command'>inttostring</a>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name with extension.
@@ -1057,7 +1057,7 @@ en:
         description: Lists the files of a directory by saving them in a file
         paragraph_1: The command <span class='code'>filesystem.listfiles</span> is used to list the directory files by saving them in a file.
         paragraph_2: At this moment this commands is not supported by <strong>Telium 2</strong> terminals.
-        paragraph_3: In the above example, a file called <em><strong>files.dat</strong></em> will be created, and this file will save the name and size of all files that are in the directory being analyzed, in this case the directory <strong>F</strong>.<br/> Since the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
+        paragraph_3: In the above example, a file called <em><strong>files.dat</strong></em> will be created, and this file will save the name and size of all files that are in the directory being analyzed, in this case the directory <strong>F</strong>.<br/> As the command return is an <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and show the variable through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Directory which is going to be analyzed, that can be I or F (Verifone).
           parameter_2: <strong>listfilename</strong> <span class='data-type'>[string]</span><br/>Name of the file that will store the name and size of the files in the specified directory.
@@ -1084,10 +1084,10 @@ en:
         description: Defines a block of code that can be executed later
         paragraph_1: The command <span class='code'>function</span> encapsulates other commands and actions and can be called by the command <a href='callfunction' class='command'>callfunction</a> when needed. Functions are used to avoid code repetition.
         paragraph_2: In the above example, has been declared the function <em>double_value</em> that encapsulates the command <a href='mathematicaloperation' class='command'>mathematicaloperation</a> which doubles the value of the variable <em>$(iNumber)</em>.
-        paragraph_3: The command <a href='callfunction' class='command'>callfunction</a> calls the function <em>dobra_valor</em>.
+        paragraph_3: The command <a href='callfunction' class='command'>callfunction</a> calls the function <em>double_value</em>.
         paragraph_4: To display the value of the variable <em>$(iNumber)</em>, which is an <a href='integervariable' class='command'>integervariable</a>, you need to change your type to <a href='stringvariable' class='command'>stringvariable</a> using the command <a href='inttostring' class='command'>inttostring</a>.
         parameters:
-          parameter_1: <strong>name</strong> <span class='data-type'>[string]</span><br/>Name given to the function, used when the function is called.
+          parameter_1: <strong>name</strong> <span class='data-type'>[string]</span><br/>Name given to the function that is used when the function is called.
       getcardvariable:
         description: Gets the card number and stores it directly on a variable
         paragraph_1: The command <span class='code'>getcardvariable</span> is used to retrieve the card number passed through the magnetic reader.
@@ -1197,7 +1197,7 @@ en:
         paragraph_1: The command <span class='code'>integerconvert</span> is used to convert an integer into binary, octal or hexadecimal.
         paragraph_2: In the above example number <strong>10</strong> will be converted to binary, octal and hexadecimal values and will be displayed on the <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: '<strong>base</strong> <span class="data-type">[integer]</span><br/>What base is used in the conversion:<ul><li>2: binary</li><li>8: octal</li><li>16: hexadecimal</li></ul>'
+          parameter_1: '<strong>base</strong> <span class="data-type">[integer]</span><br/>The base that is used in the conversion:<ul><li>2: binary</li><li>8: octal</li><li>16: hexadecimal</li></ul>'
           parameter_2: <strong>number</strong> <span class='data-type'>[string]</span><br/>Decimal number to be converted.
           parameter_3: <strong>sizereturn</strong> <span class='data-type'>[integer]</span><br/>Size of the return, if the entered number is greater, there will be added 0 on the left.
           parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
@@ -1237,7 +1237,7 @@ en:
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/> Size of the message being analyzed.
           parameter_3: <strong>variableid</strong> <span class='data-type'>[string]</span><br/> Variable that stores the message ID.
           parameter_4: <strong>variablemessage</strong> <span class='data-type'>[string]</span><br/> Variable that has stored the message to be analyzed.
-          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return of the command, where: <br/> <span class="data-type"> 0: message successfully analyzed <br/> -806: error on the analyzed message</span>'
+          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where: <br/> <span class="data-type"> 0: message successfully analyzed <br/> -806: error on the analyzed message</span>'
       iso8583_endmessage:
         description: Ends assembly of the ISO message
         paragraph_1: The command <span class='code'>iso8583.endmessage</span> is used to finish the ISO8583 message being mounted.
@@ -1246,7 +1246,7 @@ en:
         paragraph_4: To view the data stored on the variable <strong>sMsgIso8583</strong>, the command <a href='print' class='command'>print</a> was added, passing as a parameter the ISO8583 message, to get the message printed. Now it's possible to start the transaction with the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>.
         parameters:
           parameter_1: <strong>variablesize</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the size of the message.
-          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/> <span class="data-type"> 0: message successfully finished <br/> -802: function error <br/> -803: buffer overrun </span>'
+          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/> <span class="data-type"> 0: message successfully finished <br/> -802: function error <br/> -803: buffer overrun </span>'
       iso8583_getfield:
         description: Extracts a field of the previously analyzed message
         paragraph_1: The command <span class='code'>iso8583.getfield</span> is used to extract a field from the message previously analyzed.
@@ -1258,7 +1258,7 @@ en:
           parameter_1: <strong>fieldnumber</strong> <span class='data-type'>[integer]</span><br/> Number of the field to be extracted.
           parameter_2: <strong>type</strong> <span class='data-type'>[string]</span><br/> Field type to be extracted from the message, which can be <strong>string</strong> or <strong>integer</strong>.
           parameter_3: <strong>variablevalue</strong> <span class='data-type'>[string ou integer]</span><br/> Variable where the extracted value will be stored.
-          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class="data-type">0: Field extracted successfully<br/>-801: Invalid parameter<br/>-802: Function error<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error</span>'
+          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where: <br/><span class="data-type">0: Field extracted successfully<br/>-801: Invalid parameter<br/>-802: Function error<br/>-803: Buffer overrun<br/>-805: No field<br/>-806: Msg error</span>'
       iso8583_initfieldtable:
         description: Starts field table ISO8583 based on a specified file
         paragraph_1: The command <span class='code'>iso8583.initfieldtable</span> starts the ISO8583 field table according to the fields specified on the file defined on the parameter <strong>filename</strong>. This command must be executed before starting to use the ISO8583 messages.
@@ -1312,7 +1312,7 @@ en:
           parameter_3: <strong>trailler</strong> <span class='data-type'>[string]</span><br/> Trailer used to route and ensure the message integrity, added on the end of the message.
           parameter_4: <strong>isomsg</strong> <span class='data-type'>[string]</span><br/> ISO8583 message including the ISO data (message fields).
           parameter_5: <strong>variableresponse</strong> <span class='data-type'>[string]</span><br/> ISO8583 message with the data sent by the host authorizer.
-          parameter_6: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return of the command, where:<br/> <span class="data-type"> 0: Size of the response message <br/> -1: Channel unknown or not implemented <br/> -2: Failed to connect to the host or while attempting to dial <br/> -3: Failed to send send the message to the host authorizer <br/> -4: Failed to receive the size of the response message <br/> -5: Failed to receive the response message</span>'
+          parameter_6: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where:<br/> <span class="data-type"> 0: Size of the response message <br/> -1: Channel unknown or not implemented <br/> -2: Failed to connect to the host or while attempting to dial <br/> -3: Failed to send send the message to the host authorizer <br/> -4: Failed to receive the size of the response message <br/> -5: Failed to receive the response message</span>'
       joinstring:
         description: Concatenates in a string the value of another 2 strings
         paragraph_1: The command <span class='code'>joinstring</span> is used to join two strings.
@@ -1460,7 +1460,7 @@ en:
           parameter_4: '<strong>type</strong> <span class="data-type">[integer]</span> Type of algorithm used in the encryption, which can be: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
           parameter_5: <strong>variablereturnksn</strong> <span class='data-type'>[string]</span> Variable that will store the <strong>KSN</strong> returned by the encryption process.
           parameter_6: <strong>variablereturnpin</strong> <span class='data-type'>[string]</span> Variable that will store the encrypted <strong>PIN</strong>.
-          parameter_7: '<strong>variablereturn</strong> <span class="data-type">[integer]</span> Variable that will store the return of the command, where: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Canceled</li><li>-3: PIN Error</li></ul>'
+          parameter_7: '<strong>variablereturn</strong> <span class="data-type">[integer]</span> Variable that will store the return code, where: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Canceled</li><li>-3: PIN Error</li></ul>'
       pinpad_loadipek:
         description: Records an initial key and an initial ksn on the memory of pinpad
         paragraph_1: Knowledge about <strong>DUKPT</strong> is required to use this command.
@@ -1481,7 +1481,7 @@ en:
         parameters:
           parameter_1: '<strong>type</strong> <span class="data-type">[integer]</span> PIN-Pad type to be enabled: <br/><ul><li>0: Internal PIN-Pad</li><li>1: External PIN-Pad</li></ul>'
           parameter_2: <strong>variableserialnumber</strong> <span class='data-type'>[string]</span> Variable that will store the PIN-Pad's serial number that is being enabled.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span> Command return, where: <br/><ul><li>0: PIN-Pad connected</li><li>-1: PIN-Pad not connected</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span> Return codes: <br/><ul><li>0: PIN-Pad connected</li><li>-1: PIN-Pad not connected</li></ul>'
       preconnect:
         description: Connects to the host authorizer
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
@@ -1528,7 +1528,7 @@ en:
       readfile:
         description: Reads a dbfile WALK file (key/value)
         paragraph_1: The command <span class='code'>readfilebyindex</span> is used to read a file in the format <a href='#walk_db' class='command'>Walk</a> at a specified position. Each key should be on a separate line.
-        paragraph_2: In the above example has been downloaded the file <strong>test.txt</strong> with the function <a href='downloadfile' class='command'>downloadfile</a>.
+        paragraph_2: In the above example the file <strong>test.txt</strong> has been downloaded with the function <a href='downloadfile' class='command'>downloadfile</a>.
         paragraph_3: The command <a href='readfile' class='command'>readfile</a> reads the file looking for the specified key (<strong>key</strong>) and stores your return of the variable specified in the parameter <strong>variabledestination</strong>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
@@ -1537,7 +1537,7 @@ en:
       readfilebyindex:
         description: Reads a key from a file WALK dbfile
         paragraph_1: The command <span class='code'>readfilebyindex</span> is used to read a file in the format <a href='#walk_db' class='command'>Walk DB</a> at a specified position. Each key should be on a separate line.
-        paragraph_2: In the above example has been downloaded the file <strong>test.txt</strong> with the function <a href='downloadfile' class='command'>downloadfile</a>.
+        paragraph_2: In the above example the file <strong>test.txt</strong> has been downloaded with the function <a href='downloadfile' class='command'>downloadfile</a>.
         paragraph_3: The function <a href='readfilebyindex' class='command'>readfilebyindex</a> reads the file looking for the position (<strong>index</strong>) and stores the key specified in the variable <strong>sKeyName</strong> and the value in the variable <strong>sKeyValue</strong>. The variable <strong>iReturn</strong> stores the value specifying if the position (<strong>index</strong>) was found or not.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
@@ -1565,7 +1565,7 @@ en:
           parameter_2: <strong>variablehandle</strong> <span class='data-type'>[integer]</span><br/>Handle of the open door.
           parameter_3: <strong>variablebuffer</strong> <span class='data-type'>[string]</span><br/> Variable that will store the buffer captured from the serial port.
           parameter_4: <strong>variablehandle</strong> <span class='data-type'>[integer]</span><br/> Open serial port identifier.
-          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return of the command, where: <br/><span class="data-type">-1: Timeout was reached and nothing was captured from the serial port<br/>>0: Number of bytes that was read from the serial port. </span>'
+          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where: <br/><span class="data-type">-1: Timeout was reached and nothing was captured from the serial port<br/>>0: Number of bytes that was read from the serial port. </span>'
       shutdownmodem:
         description: Turns off the modem and cancels the operations
         paragraph_1: The command <span class='code'>shutdownmodem</span> is used to disconnect the device from the host and the network.
@@ -1605,7 +1605,7 @@ en:
           parameter_3: <strong>LC</strong> <span class='data-type'>[string]</span><br/>Datafield parameter size in hexadecimal. Optional field, but if not used, shall receive the value <strong>00</strong>.
           parameter_4: <strong>LE</strong> <span class='data-type'>[string]</span><br/>Expected size of the response in hexadecimal. Optional field, but if not used, shall receive the value <strong>00</strong>. If the response size is greater than the 2 obligatory bytes SW1 and SW2, it is necessary to specify the size of the response in this field.
           parameter_5: <strong>slot</strong> <span class='data-type'>[string]</span><br/>slot that was opened with <span class='code'>smartcard.startreader</span>
-          parameter_6: <strong>variabledatafieldresponse</strong> <span class='data-type'>[string]</span><br/>Variable that will store the hexadecimal return of the APDU command.
+          parameter_6: <strong>variabledatafieldresponse</strong> <span class='data-type'>[string]</span><br/>Variable that will store the hexadecimal return value of the APDU command.
           parameter_7: <strong>variableSW</strong> <span class='data-type'>[string]</span><br/>Variable that will store the obligatory 2 hexadecimal bytes from the APDU command.
           parameter_8: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the command, where:<br/><ul><li>-2: Error while sending the command to the card</li><li>-1: Invalid slot</li><li>1: Command successfully sent</li></ul>'
       string_charat:
@@ -1774,7 +1774,7 @@ en:
         paragraph_4: Since the return of the command is an <a href='integervariable' class='commands'>integervariable</a>, the command <a href='inttostring' class='commands'>inttostring</a> was used to convert and display the variable throught the command <a href='display' class='commands'>display</a>.
         parameters:
           parameter_1: <strong>level</strong> <span class='data-type'>[integer]</span><br/>Backlight level percentage.
-          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/><ul><li>-1: Error when defining the new value</li><li>0: OK</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/><ul><li>-1: Error when defining the new value</li><li>0: OK</li></ul>'
       system_beep:
         description: Produces a short beep
         paragraph_1: The command <span class='code'>system.beep</span> is used to beep.
@@ -1792,7 +1792,7 @@ en:
         parameters:
           parameter_1: <strong>axisx</strong> <span class='data-type'>[integer]</span><br/>X-axis coordinate of the display, where the display was pressed.
           parameter_2: <strong>axisy</strong> <span class='data-type'>[integer]</span><br/>Y-axis coordinate of the display, where the display was pressed.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return of the command, where:<br/> <span class="data-type"> 1: display was pressed<br/> 0: display was not pressed</span>'
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/> <span class="data-type"> 1: display was pressed<br/> 0: display was not pressed</span>'
         paragraph_2: In the above example, the command <strong>system.gettouchscreen</strong> will return in iXaxis the X coordinate and in iYaxis the Y coordenate of the point pressed on the display.
         paragraph_3: The loop is to ensure that the display will pressed.
       system_info:

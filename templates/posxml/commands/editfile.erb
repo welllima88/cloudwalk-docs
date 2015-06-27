@@ -16,20 +16,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sPopulation" /&gt;
-&lt;integervariable value="" variable="iDownload" /&gt;
+<%= embed_posxml_code("baa633e84b8e301a27dc", true) %>
 
-&lt;downloadfile deleteafterdownload="0" filename="test.txt" remotepath="test.txt" variablereturn="$(iDownload)" /&gt;
-
-&lt;editfile filename="test.txt" key="population" value="3.792.700" /&gt;
-
-&lt;readfile filename="test.txt" key="population" variabledestination="$(sPopulation)" /&gt;
-
-&lt;display column="0" line="0" message="Population: " /&gt;
-&lt;display column="0" line="1" message="$(sPopulation)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <a id="walk_db"></a>
 <h2><%= I18n.t("posxml.commands.example") %> Walk DB</h2>
 <pre>
