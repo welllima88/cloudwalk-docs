@@ -14,21 +14,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="39" variable="iNumber"/&gt;
-&lt;stringvariable value="" variable="sResult"/&gt;
-
-&lt;function name="double_value"&gt;
-  &lt;mathematicaloperation firstvalue="$(iNumber)" operator="*" secondvalue="2" variabledestination="$(iNumber)"/&gt;
-&lt;/function&gt;
-
-&lt;callfunction name="double_value"/&gt;
-
-&lt;inttostring variableinteger="$(iNumber)" variablestring="$(sResult)"/&gt;
-
-&lt;display column="0" line="0" message="$(sResult)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
+<%= embed_posxml_code("dffa5d963dccb104eb62") %>
 
 <hr/>
 

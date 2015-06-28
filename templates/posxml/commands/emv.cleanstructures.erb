@@ -10,22 +10,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("b3ca36d02c9c6536df82", true) %>
 
-&lt;!-- limpando estruturas para nova transacao --&gt;
-&lt;emv.cleanstructures/&gt;
-
-&lt;!-- inicio de uma nova transacao, passando parametros para o Kernel EMV --&gt;
-&lt;emv.adddata type="init" parameter="bReqApplication" value="99" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baInitialValue" value="000000010000" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baDate" value="120604" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baTime" value="025000" variablereturn="$(iReturn)"/&gt;
-
-&lt;!-- inicia a transacao --&gt;
-&lt;emv.inittransaction variablereturn="$(iReturn)"/&gt;
-
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.emv_cleanstructures.paragraph_3") %></p>

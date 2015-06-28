@@ -17,17 +17,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="" variable="iReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("9353df1e236661a0c6c2", true) %>
 
-&lt;crypto.crc buffer="30313233343536" size="12" type="CRC-CCITT" variablereturn="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.crypto_crc.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.crypto_crc.paragraph_3") %></p>
