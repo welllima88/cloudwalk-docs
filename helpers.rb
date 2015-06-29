@@ -14,17 +14,19 @@ module Helpers
   end
 
   def embed_posxml_code(gist_id, ignore_emulation=false)
+    @dom_counter = @dom_counter.to_i + 1
+
     # Create the button
-    markup = "<span id='copy-snippet-1' class='btn btn-small btn-clipboard'><span class='fa fa-clipboard'></span> #{I18n.t("copy")}</span>"
+    markup = "<span id='copy-snippet-#{@dom_counter}' class='btn btn-small btn-clipboard'><span class='fa fa-clipboard'></span> #{I18n.t("copy")}</span>"
 
     # Create the hidden <pre> element that will contain the source code
-    markup << "<pre data-display-element='#code-snippet-1' class='snippet hidden'>"
+    markup << "<pre data-display-element='#code-snippet-#{@dom_counter}' class='snippet hidden'>"
     markup << fetch_gist(gist_id)
     markup << "</pre>"
 
     # Create the <code> element that will receive the content of the
     # previous <pre> element, which will then apply the syntax highlight
-    markup << "<pre><code id='code-snippet-1' data-language='html'></code></pre>"
+    markup << "<pre><code id='code-snippet-#{@dom_counter}' data-language='html'></code></pre>"
 
     # The argument ignore_emulation will be used in the future later to ignore
     # snippets that won't be emulated on the IDE
