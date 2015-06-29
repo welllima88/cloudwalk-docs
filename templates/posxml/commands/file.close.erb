@@ -14,23 +14,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iHandle" /&gt;
-&lt;integervariable value="0" variable="iReturn" /&gt;
+<%= embed_posxml_code("12b700fc7ea947055a15", true) %>
 
-&lt;downloadfile filename="test.txt" remotepath="test.txt" variablereturn="$(iReturn)" /&gt;
-
-&lt;file.open filename="test.txt" mode="r" variablehandle="$(iHandle)"  /&gt;
-
-&lt;display column="0" line="0" message="File is open" /&gt;
-
-&lt;waitkey /&gt;
-
-&lt;file.close handle="$(iHandle)" /&gt;
-
-&lt;display column="0" line="0" message="File is closed" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.file_close.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.file_close.paragraph_3") %></p>
