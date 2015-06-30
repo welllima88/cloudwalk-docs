@@ -17,23 +17,7 @@
 </ol>
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("ff91fa5e0de0187c42bc") %>
 
-&lt;inputformat column="0" line="0" format="999" variable="$(sReturn)" message="Only three numbers: " /&gt;
-
-&lt;waitkey/&gt;
-
-&lt;cleandisplay/&gt;
-
-&lt;inputformat column="0" line="0" format="AAAAAA" variable="$(sReturn)" message="Only six letters: " /&gt;
-
-&lt;waitkey/&gt;
-
-&lt;cleandisplay/&gt;
-
-&lt;inputformat column="0" line="0" format="****" variable="$(sReturn)" message="Four characters password: " /&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr />
 <p><%= I18n.t("posxml.commands.inputformat.paragraph_2") %></p>

@@ -35,26 +35,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="blue" variable="sColor"/&gt;
-&lt;integervariable value="123" variable="iNumber"/&gt;
+<%= embed_posxml_code("272b674beb025e4e6a23") %>
 
-&lt;if variable="$(sColor)" operator="equalto" value="blue"&gt;
-  &lt;display column="0" line="0" message="blue equal to blue" /&gt;
-&lt;/if&gt;
-
-&lt;waitkey /&gt;
-
-&lt;if variable="$(iNumber)" operator="greaterthan" value="111"&gt;
-  &lt;display column="0" line="0" message="123 greater than 111" /&gt;
-&lt;/if&gt;
-
-&lt;waitkey /&gt;
-
-&lt;if variable="$(sColor)" operator="notequalto" value="Blue"&gt;
-  &lt;display column="0" line="0" message="Blue not equal to blue" /&gt;
-&lt;/if&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.if.paragraph_2") %></p>

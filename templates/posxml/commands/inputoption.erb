@@ -18,16 +18,7 @@
 </ol>
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="" variable="iNumber" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("123b44830d43f2e279d0", true) %>
 
-&lt;inputoption column="0" line="0" maximum="100" minimum="0" variable="$(iNumber)" message="Type a integer number: " /&gt;
-
-&lt;inttostring variableinteger="$(iNumber)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="2" message="$(sReturn)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.inputoption.paragraph_2") %></p>

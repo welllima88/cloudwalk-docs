@@ -16,51 +16,10 @@
   <li><%= I18n.t("posxml.commands.filesystem_space.parameters.parameter_3") %></li>
 </ol>
 
+<%= embed_posxml_code("f66c646aeb68bf13f869", true) %>
+
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
-
-&lt;downloadfile filename="wallpaper_walkpb.bmp" remotepath="wallpaper_walkpb.bmp" variablereturn="$(iReturn)" /&gt;
-
-&lt;!--TOTAL--&gt;
-&lt;filesystem.space dir="F" type="total" variablereturn="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="Total: " /&gt;
-&lt;display column="8" line="0" message="$(sReturn)" /&gt;
-&lt;!--/TOTAL--&gt;
-
-&lt;!--USED--&gt;
-&lt;filesystem.space dir="N" type="used" variablereturn="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="2" message="Used: " /&gt;
-&lt;display column="8" line="2" message="$(sReturn)" /&gt;
-&lt;!--/USED--&gt;
-
-&lt;!--FREE--&gt;
-&lt;filesystem.space dir="N" type="free" variablereturn="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="4" message="Free: " /&gt;
-&lt;display column="8" line="4" message="$(sReturn)" /&gt;
-&lt;!--/FREE--&gt;
-
-&lt;!--COUNTFILES--&gt;
-&lt;filesystem.space dir="N" type="countfiles" variablereturn="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="6" message="Files: " /&gt;
-&lt;display column="11" line="6" message="$(sReturn)" /&gt;
-&lt;!--/COUNTFILES--&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.filesystem_space.paragraph_3") %></p>
 <p><%= I18n.t("posxml.commands.filesystem_space.paragraph_4") %></p>
