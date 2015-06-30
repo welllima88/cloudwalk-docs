@@ -18,26 +18,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("98e8a07d102a333f2081", true) %>
 
-&lt;emv.cleanstructures/&gt;
-
-&lt;emv.adddata type="init" parameter="bReqApplication" value="99" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baInitialValue" value="000000010000" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baDate" value="120604" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baTime" value="025000" variablereturn="$(iReturn)"/&gt;
-
-&lt;!-- inicia a transacao --&gt;
-&lt;emv.inittransaction variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey /&gt;
-
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.emv_inittransaction.paragraph_4") %></p>

@@ -19,24 +19,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("9a165e9edb1b013d2555", true) %>
 
-&lt;emv.adddata type="process" parameter="baAmount" value="000000005000" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="bMustConnect" value="01" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="bRequirePIN" value="01" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="bKeyMode" value="03" variablereturn="$(iReturn)"/&gt;
-
-&lt;!-- continua o processamento do cartão com chip, caso seja um cartão magnético esta instrução não deve ser chamada.--&gt;
-&lt;emv.processtransaction ctls="0" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey /&gt;
-
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.emv_processtransaction.paragraph_4") %></p>

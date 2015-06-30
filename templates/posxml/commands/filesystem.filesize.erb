@@ -15,19 +15,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("11ba19c67f233fa132d9") %>
 
-&lt;downloadfile filename="wallpaper_walkpb.bmp" remotepath="wallpaper_walkpb.bmp" variablereturn="$(iReturn)" /&gt;
-
-&lt;filesystem.filesize filename="wallpaper_walkpb.bmp" variablereturn="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.filesystem_filesize.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.filesystem_filesize.paragraph_3") %></p>

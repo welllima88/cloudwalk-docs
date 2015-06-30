@@ -19,12 +19,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("22403be6dddb829f1fe8", true) %>
 
-&lt;emv.settimeout seconds="10" variablereturn="$(iReturn)"/&gt;
-&lt;emv.inittransaction variablereturn="$(iReturn)"/&gt;
-
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.emv_settimeout.paragraph_4") %></p>

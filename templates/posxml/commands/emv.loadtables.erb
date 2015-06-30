@@ -19,29 +19,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("4fb5ddca053a5a697372", true) %>
 
-&lt;emv.open mkslot="0" pinpadtype="2" pinpadwk="0123456789ABCDEF" showamount="1" variablereturn="$(iReturn)" /&gt;
-
-&lt;!-- OBS: se a biblioteca já foi inicializada, o comando irá retornar 14, que não é um erro --&gt;
-
-&lt;if variable="$(iReturn)" operator="notequalto" value="0"&gt;
-
-  &lt;display column="1" line="1" message="not possible to open the EMV library"/&gt;
-  &lt;waitkey/&gt;
-  &lt;exit/&gt;
-
-&lt;/if&gt;
-
-&lt;emv.loadtables acquirer="04" variablereturn="$(iReturn)"&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.emv_loadtables.paragraph_4") %></p>
