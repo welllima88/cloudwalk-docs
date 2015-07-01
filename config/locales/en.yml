@@ -2899,7 +2899,6 @@ en:
           paragraph_5: "The big square is your latest transaction, and if it is grey, it's an anomalous transaction."
         chart_interaction:
           paragraph_1: "Here is all the ways you can interact with the chart:"
-          paragraph_2: "The parameters on the right side of the screen are really important, so we will explain everything you need to know about them in a later section."
           list:
             item_1: "You can hover your mouse over any point to see more details about the transaction."
             item_2: "You can click on the point to see even more information: it will show the message's buffers."
@@ -2910,7 +2909,7 @@ en:
           paragraph_2: "As an example, if you are sending pings from your POS to your server, you expect the same messages being sent and received each time, so their circles get stacked in the graph."
           paragraph_3: "When having this situation, you can hover the mouse over the circle representing the transaction to see how many times a transaction with same messages sizes was seen, along with other information, like the time of it's last occurrence. You can also click on it to see the message's buffer of its last ocurrence."
         parameters:
-          paragraph_1: "In the area at the right side of the chart, we have two sliders you can use to change some parameters of your detector."
+          paragraph_1: "We can set our model parameters by clicking at the cog in front of the application name. You'll see two sliders that can be used to change some parameters of your detector."
           paragraph_2: "Our algorithm relies on two parameters that effectively setup its sensitiveness, one of them controlling how easy/hard it is to flag two transactions as similar and the other controlling how many of these similar transactions we need to define a new pattern:"
           list:
             item_1: "<strong>Which amount of similar transactions defines a pattern:</strong> this parameter controls how easy/hard it is for the algorithm to define a new pattern. If we say a few amount of similar transactions defines a pattern (slider to the left), then the algorithm will create new patterns after seeing few similar transactions. On the other extreme, setting this parameter to many similar transactions definning a pattern (slider to the right), the algorithm will have to see many similar transactions occuring before saying they form a pattern. In summary, as the slider goes left to right we will be detecting less to more anomalies, or alternatively, more to less patterns."
