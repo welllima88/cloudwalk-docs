@@ -770,7 +770,7 @@ en:
         paragraph_1: The command <span class='code'>callfunction</span> performs a function (<a href='function' class='command'>function</a>).
         paragraph_2: In the example above, function <em>double_value</em> has been declared, that encapsulates the command <a href='mathematicaloperation' class='command'>mathematicaloperation</a> which doubles the value of the variable <em>$(iNumber)</em>.
         paragraph_3: The command <a href='callfunction' class='command'>callfunction</a> calls the function <em>double_value</em>.
-        paragraph_4: To display the value of the variable <em>$(iNumber)</em>, which is an <a href='integervariable' class='command'>integervariable</a>, you need to change your type to <a href='stringvariable' class='command'>stringvariable</a> using the command <a href='inttostring' class='command'>inttostring</a>.
+        paragraph_4: To display the value of the variable <em>$(iNumber)</em>, which is an <a href='integervariable' class='command'>integervariable</a>, you need to convert your type to <a href='stringvariable' class='command'>stringvariable</a> using the command <a href='inttostring' class='command'>inttostring</a>.
         parameters:
           parameter_1: <strong>name</strong> <span class='data-type'>[string]</span><br/>Function name.
       checkpaperout:
@@ -811,7 +811,7 @@ en:
           parameter_1: <strong>buffer</strong> <span class='data-type'>[string]</span><br/>Hexadecimal representation that will be used to calculate CRC.
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/>Number of bytes in buffer.
           parameter_3: <strong>type</strong> <span class='data-type'>[string]</span><br/>CRC or CRC-CCITT.
-          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string or integer]</span><br/>Variable that will store the return of the command.
+          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string or integer]</span><br/>Variable that will store the command return.
       crypto_encryptdecrypt:
         description: Encryption routines with algorithms DES, 3DES or NEWDES
         paragraph_1: The command <span class='code'>crypto.encryptdecrypt</span> is used to encrypt or decrypt data, in a specific format using DES, 3DES, 3DESTripleLength or NEWDES and using a specific key to return an encrypted or decrypted output.
@@ -823,7 +823,7 @@ en:
           parameter_2: '<strong>key</strong> <span class="data-type">[string]</span><br/>Hexadecimal encryption key:<ul><li>DES: 8 bytes or 16 characters</li><li>3DES: 16 bytes or 32 characters</li><li>3DESTripleLength: 24 bytes or 48 characters</li><li>NEWDES: 15 bytes or 30 characters</li></ul>'
           parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Value, hexadecimal, which will be encrypted or decrypted. If the value has more than 8 bytes it must be parsed into blocks with the command <a href='string.elementat' class='command'>string.elementat</a>
           parameter_4: '<strong>type</strong> <span class="data-type">[integer]</span><br/><ul><li>0: Encrypt</li><li>1: Decrypt</li></ul>'
-          parameter_5: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
+          parameter_5: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
       crypto_lrc:
         description: Generates a LRC byte of the string in the buffer
         paragraph_1: The command <span class='code'>crypto.lrc</span> is used to generate a <a href='https://en.wikipedia.org/wiki/Longitudinal_redundancy_check' target="_blank">LRC</a> byte of the string in the buffer.
@@ -1034,7 +1034,7 @@ en:
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
           parameter_2: '<strong>mode</strong> <span class="data-type">[string]</span><br/><ul><li>r: Reading</li><li>w: Writing</li></ul>'
-          parameter_3: '<strong>variablehandle</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:.<ul><li>-1: Could not open file</li><li>>-1: Open file</li></ul>'
+          parameter_3: '<strong>variablehandle</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<ul><li>-1: Could not open file</li><li>>-1: Open file</li></ul>'
       file_read:
         description: Reads a file that was previously opened by file.open
         paragraph_1: The command <span class='code'>file.read</span> is used to read an open file.
@@ -1063,7 +1063,7 @@ en:
         paragraph_3: As the return of the command <strong>filesystem.filesize</strong> is an <a href='integervariable' class='command'>integervariable</a>, it must be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a> by the command <a href='inttostring' class='command'>inttostring</a>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name with extension.
-          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
+          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
       filesystem_listfiles:
         description: Lists the files of a directory by saving them in a file
         paragraph_1: The command <span class='code'>filesystem.listfiles</span> is used to list the directory files by saving them in a file.
@@ -1072,7 +1072,7 @@ en:
         parameters:
           parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Directory which is going to be checked, that can be I or F (Verifone).
           parameter_2: <strong>listfilename</strong> <span class='data-type'>[string]</span><br/>Name of the file that will store the name and size of the files in the specified directory.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[inteiro]</span><br/>Variable that will store the return code, where:.<ul><li>0: File list created</li><li>-1: Empty directory</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[inteiro]</span><br/>Variable that will store the return code, where:<ul><li>0: File list created</li><li>-1: Empty directory</li></ul>'
       filesystem_renamefile:
         description: Rename a file
         paragraph_1: The command <span class='code'>filesystem.renamefile</span> is used to rename a file.
@@ -1080,41 +1080,41 @@ en:
         parameters:
           parameter_1: <strong>oldname</strong> <span class='data-type'>[string]</span><br/>Current name of the file.
           parameter_2: <strong>newname</strong> <span class='data-type'>[string]</span><br/>New name, that will replace the current one.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[inteiro]</span><br/>Variable that will store the return code, where:.<ul><li>0: File was renamed</li><li>-1: File does not exist</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[inteiro]</span><br/>Variable that will store the return code, where:<ul><li>0: File was renamed</li><li>-1: File does not exist</li></ul>'
       filesystem_space:
         description: Checks the space (free and used) and the number of files in memory
         paragraph_1: This command does not work on <strong>Telium</strong> terminals
-        paragraph_2: The command <span class='code'>filesystem.space</span> is used to get the information about the device memory.
-        paragraph_3: In the example above, on the <a href='display' class='command'>display</a> appear all the information about the device memory.
+        paragraph_2: The command <span class='code'>filesystem.space</span> is used to retrieve information about the device memory.
+        paragraph_3: In the example above, information about the device memory is displayed.
         paragraph_4: As the return of the command <strong>filesystem.filespace</strong> is an <a href='integervariable' class='command'>integervariable</a>, it must be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a> by the command <a href='inttostring' class='command'>inttostring</a>
         parameters:
-          parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Unit.
+          parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Directory which is going to be checked, that can be I or F (Verifone).
           parameter_2: '<strong>type</strong> <span class="data-type">[string]</span><br/><ul><li>total: Total space</li><li>used: Used space</li><li>free: Free space</li><li>countfiles: Number of files</li></ul>'
-          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
+          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
       function:
         description: Defines a block of code that can be executed later
         paragraph_1: The command <span class='code'>function</span> encapsulates other commands and actions and can be called by the command <a href='callfunction' class='command'>callfunction</a> when needed. Functions are used to avoid code repetition.
-        paragraph_2: In the example above, has been declared the function <em>double_value</em> that encapsulates the command <a href='mathematicaloperation' class='command'>mathematicaloperation</a> which doubles the value of the variable <em>$(iNumber)</em>.
+        paragraph_2: In the example above, the function <em>double_value</em> has been declared that encapsulates the command <a href='mathematicaloperation' class='command'>mathematicaloperation</a> which doubles the value of the variable <em>$(iNumber)</em>.
         paragraph_3: The command <a href='callfunction' class='command'>callfunction</a> calls the function <em>double_value</em>.
-        paragraph_4: To display the value of the variable <em>$(iNumber)</em>, which is an <a href='integervariable' class='command'>integervariable</a>, you need to change your type to <a href='stringvariable' class='command'>stringvariable</a> using the command <a href='inttostring' class='command'>inttostring</a>.
+        paragraph_4: To display the value of the variable <em>$(iNumber)</em>, which is an <a href='integervariable' class='command'>integervariable</a>, you need to convert your type to <a href='stringvariable' class='command'>stringvariable</a> using the command <a href='inttostring' class='command'>inttostring</a>.
         parameters:
           parameter_1: <strong>name</strong> <span class='data-type'>[string]</span><br/>Name given to the function that is used when the function is called.
       getcardvariable:
         description: Gets the card number and stores it directly on a variable
-        paragraph_1: The command <span class='code'>getcardvariable</span> is used to retrieve the card number passed through the magnetic reader.
-        paragraph_2: In the example above, when the card is passed through the magnetic reader, its number will be displayed.
+        paragraph_1: The command <span class='code'>getcardvariable</span> is used to retrieve the card number when passed through a magnetic reader.
+        paragraph_2: In the example above, when the card is passed through the magnetic reader, the number will be displayed.
         parameters:
-          parameter_1: <strong>firstmessage</strong> <span class='data-type'>[string]</span><br/>Message that appears before the card is passed in magnetic reader.
+          parameter_1: <strong>firstmessage</strong> <span class='data-type'>[string]</span><br/>Message that appears before the card is passed through the magnetic reader.
           parameter_2: <strong>maximum</strong> <span class='data-type'>[integer]</span><br/>The maximum size of the card number.
           parameter_3: <strong>minimum</strong> <span class='data-type'>[integer]</span><br/>The minimum size of the card number.
           parameter_4: <strong>secondmessage</strong> <span class='data-type'>[string]</span><br/>Message that appears when the user presses the <strong>Enter</strong> key.
-          parameter_5: <strong>variable</strong> <span class='data-type'>[string]</span><br/>Variable that will receive the return of function.
+          parameter_5: <strong>variable</strong> <span class='data-type'>[string]</span><br/>Variable that will store the function return.
       getdatetime:
         description: Stores in a variable date and time at runtime
-        paragraph_1: The command <span class='code'>getdatetime</span> is used to get the device date/time.
-        paragraph_2: The command <a href='getdatetime' class='command'>getdatetime</a> receives the desired format and informs the variable that will hold your return which is then displayed on the device screen.
+        paragraph_1: The command <span class='code'>getdatetime</span> is used to get the device date and time.
+        paragraph_2: In the example above, the command <a href='getdatetime' class='command'>getdatetime</a> retrieves the current date and time which is then displayed on the <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: '<strong>format</strong> <span class="data-type">[string]</span><br/>Date format retrieved where:<ul><li>yy: four-digit year</li><li>y: two-digit year</li><li>M: two-digit month</li><li>d: two-digit day</li><li>h: two-digit hour</li><li>m: two-digit minute</li><li>s: two-digit second</li>separators / and : are added automatically.</ul>'
+          parameter_1: '<strong>format</strong> <span class="data-type">[string]</span><br/>Date format retrieved where:<ul><li>yy: four-digit year</li><li>y: two-digit year</li><li>M: two-digit month</li><li>d: two-digit day</li><li>h: two-digit hour</li><li>m: two-digit minute</li><li>s: two-digit second</li></ul>'
           parameter_2: <strong>returnvariable</strong> <span class='data-type'>[string]</span><br/> Store the returned date.
       if:
         description: Instruction of decision making or logical comparison
@@ -1134,7 +1134,7 @@ en:
           paragraph_2: Operators <span class='code'>greaterthan</span>, <span class='code'>lessthan</span>, <span class='code'>greaterthanorequalto</span>, <span class='code'>lessthanorequalto</span>, in the case of variables of type string, convert the variable that is being compared to floating point, and then perform the comparison.
         other_operators: Operators <span class='code'>equalto</span> and <span class='code'>notequalto</span> follow the same logic of comparision that any programming language.
         paragraph_1: The command <span class='code'>if</span> is used to specify a decision or logic comparison in a POSXML application. Other commands can be used within block <span class='code'>if</span>, and these commands are executed if the logical expression is true.
-        paragraph_2: In the example above, there are three conditions:<ul><li>1st - compares two texts causing it to be <em>true</em> as <em>Blue</em> is equal to the value of the variable <em>sColor</em></li><li>2nd - compares two numbers causing it to be <em>false</em> as <em>111</em> is not greater than the value of the variable <em>iNumber</em></li><li>3rd - compares two texts causing it to be <em>false</em> as <em>Blue</em> is different from the value of the variable <em>sColor</em>. POSXML considers uppercase and lowercase letters (<em>case-sensitive</em>)</li></ul> The command <a href='waitkey' class='command'>waitkey</a> awaits a click of any key to continue code execution.
+        paragraph_2: In the example above, there are three conditions:<ul><li>1st - compares two strings with the operator <span class='code'>equalto</span> which results in <em>true</em> as <em>blue</em> is equal to the value of the variable <em>sColor</em></li><li>2nd - compares two numbers with the operator <span class='code'>greaterthan</span> which results in <em>true</em> as <em>111</em> is not greater than the value of the variable <em>iNumber</em></li><li>3rd - compares two strings using the operator <span class='code'>notequalto</span> which results in <em>true</em> as <em>Blue</em> is different from the value of the variable <em>sColor</em>. POSXML considers uppercase and lowercase letters (<em>case-sensitive</em>)</li></ul> The command <a href='waitkey' class='command'>waitkey</a> awaits a click of any key to continue code execution.
         parameters:
           parameter_1: <strong>variable</strong> <span class='data-type'>[integer or string]</span><br/>Variable that will be used in the comparision.
           parameter_2: '<strong>operator</strong> <span class="data-type">[string]</span><br/>Comparison operators: <span class="code">lessthan</span>, <span class="code">greaterthan</span>, <span class="code">equalto</span>, <span class="code">notequalto</span>, <span class="code">greaterthanorequalto</span> or <span class="code">lessthanorequalto</span>.'
@@ -1144,7 +1144,7 @@ en:
         paragraph_1: The command <span class='code'>input.getvalue</span> is used to store a value in a variable.
         paragraph_2: In the example above the command <a href='input.getvalue' class='command'>input.getvalue</a> will receive an input and store the value in the variable <strong>sReturn</strong>.
         parameters:
-          parameter_1: <strong>allowsempty</strong> <span class='data-type'>[string]</span><br/>Defines the mandatory.
+          parameter_1: <strong>allowsempty</strong> <span class='data-type'>[string]</span><br/>Defines if it is required or not.
           parameter_2: <strong>caption</strong> <span class='data-type'>[string]</span><br/>Header.
           parameter_3: <strong>columncaption</strong> <span class='data-type'>[integer]</span><br/>Column where the entered value should appear.
           parameter_4: <strong>linecaption</strong> <span class='data-type'>[integer]</span><br/>Line where the entered value should appear on the header.
@@ -1152,55 +1152,55 @@ en:
           parameter_6: <strong>lineinput</strong> <span class='data-type'>[integer]</span><br/>Line where the entered value should appear.
           parameter_7: <strong>maximum</strong> <span class='data-type'>[integer]</span><br/>Maximum number of characters.
           parameter_8: <strong>minimun</strong> <span class='data-type'>[integer]</span><br/>Minimum number of characters.
-          parameter_9: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_9: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the value returned.
       inputfloat:
         description: Allows the entry of a value with dot (.) by pressing (*)
         paragraph_1: The command <span class='code'>inputfloat</span> is used to allow the entry of a decimal value (for example 1.99).
-        paragraph_2: In the example above, the string variable <strong>sNumber</strong> was created and will store the <em>float</em> value entered by the user. The value is then displayed through the command <a href='display' class='command'>display</a>.
+        paragraph_2: In the example above, the string variable <strong>sNumber</strong> Dwill store the <em>float</em> value entered by the user. The value is then displayed through the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>line</strong> <span class='data-type'>[integer]</span><br/>Line where the message appears.
-          parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column that message appears.
+          parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column where the message appears.
           parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Custom message to be displayed.
-          parameter_4: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
+          parameter_4: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
       inputformat:
         description: Allows the entry of a value based on a pre-defined format
         paragraph_1: The command <span class='code'>inputformat</span> is used to define the entrance to a value based on a pre-defined format.
         paragraph_2: In the example above, each command has a predefined format and the value is displayed on the <a href='display' class='command'>display</a> when a key is pressed and its numerical value is stored in the variable <strong>sReturn</strong>.
         parameters:
           parameter_1: <strong>line</strong> <span class='data-type'>[integer]</span><br/>Line where the message appears.
-          parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column that message appears.
+          parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column where the message appears.
           parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Custom message to be displayed.
-          parameter_4: <strong>variable</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
-          parameter_5: '<strong>format</strong> <span class="data-type">[integer]</span><br/>Input format <ul><li>9: any numeric character</li><li>A: any non-numeric character</li><li>*: password</li></ul> You can use only one format for command.'
+          parameter_4: <strong>variable</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
+          parameter_5: '<strong>format</strong> <span class="data-type">[integer]</span><br/>Input format <ul><li>9: any numeric character</li><li>A: any non-numeric character</li><li>*: password</li></ul> You can use only one format per command call.'
       inputinteger:
         description: Allows the entry of an integer
-        paragraph_1: The command <span class='code'>inputinteger</span> is used to allow entry of an integer, following a maximum and a minimum limit.
-        paragraph_2: In the example above the command <strong>inputinteger</strong> awaits an integer, which is converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
+        paragraph_1: The command <span class='code'>inputinteger</span> is used to allow entry of an integer restricted by a maximum and a minimum limit.
+        paragraph_2: In the example above the command <strong>inputinteger</strong> captures an integer, which is converted to a string to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>line</strong> <span class='data-type'>[integer]</span><br/>Line where the message appears.
           parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column where the message appears.
           parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Custom message to be displayed.
-          parameter_4: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
+          parameter_4: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
           parameter_5: <strong>minimum</strong> <span class='data-type'>[integer]</span><br/>Maximum length of the number.
           parameter_6: <strong>maximum</strong> <span class='data-type'>[integer]</span><br/>Minimum length of the number.
       inputmoney:
         description: Allows the entry of a monetary value
-        paragraph_1: The command <span class='code'>inputmoney</span> is used to enter monetary values. The separators are automatically added, eliminating the need for the user to type dot or comma.
-        paragraph_2: In the example above the command <strong>inputinteger</strong> awaits for a integer number to be entered by the user. The entered value will be stored without formatting, and then the value is converted to <a href='stringvariable' class='command'>stringvariable</a> through the command <a href='inttostring' class='command'>inttostring</a>, and after that the value is displayed in the <a href='display' class='command'>display</a>.
-        parameters:
-          parameter_1: <strong>line</strong> <span class='data-type'>[integer]</span><br/>Line where the message appears.
-          parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column that message appears.
-          parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Custom message to be displayed.
-          parameter_4: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
-      inputoption:
-        description: Allows the entry of an integer
-        paragraph_1: The command <span class='code'>inputoption</span> is used to allow entry of an integer, following a maximum and a minimum limit.
-        paragraph_2: In the example above the command <strong>inputoption</strong> awaits an integer, which is converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
+        paragraph_1: The command <span class='code'>inputmoney</span> is used to enter monetary values. The separators are automatically added, eliminating the need for the user to type a dot or a comma.
+        paragraph_2: In the example above the command <strong>inputinteger</strong> captures an integer integer number entered by the user. The entered value will be stored without formatting, and then the value is converted to <a href='stringvariable' class='command'>stringvariable</a> through the command <a href='inttostring' class='command'>inttostring</a>, and after that the value is displayed on the <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>line</strong> <span class='data-type'>[integer]</span><br/>Line where the message appears.
           parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column where the message appears.
           parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Custom message to be displayed.
-          parameter_4: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
+          parameter_4: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
+      inputoption:
+        description: Allows the entry of an integer
+        paragraph_1: The command <span class='code'>inputoption</span> is used to allow entry of an integer restricted by a maximum and a minimum limit.
+        paragraph_2: In the example above the command <strong>inputoption</strong> captures an integer, which is converted to a string to be displayed on the <a href='display' class='command'>display</a>.
+        parameters:
+          parameter_1: <strong>line</strong> <span class='data-type'>[integer]</span><br/>Line where the message appears.
+          parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column where the message appears.
+          parameter_3: <strong>message</strong> <span class='data-type'>[string]</span><br/>Custom message to be displayed.
+          parameter_4: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
           parameter_5: <strong>minimum</strong> <span class='data-type'>[integer]</span><br/>Maximum length of the number.
           parameter_6: <strong>maximum</strong> <span class='data-type'>[integer]</span><br/>Minimum length of the number.
       integerconvert:
@@ -1210,13 +1210,13 @@ en:
         parameters:
           parameter_1: '<strong>base</strong> <span class="data-type">[integer]</span><br/>The base that is used in the conversion:<ul><li>2: binary</li><li>8: octal</li><li>16: hexadecimal</li></ul>'
           parameter_2: <strong>number</strong> <span class='data-type'>[string]</span><br/>Decimal number to be converted.
-          parameter_3: <strong>sizereturn</strong> <span class='data-type'>[integer]</span><br/>Size of the return, if the entered number is greater, there will be added 0 on the left.
-          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_3: <strong>sizereturn</strong> <span class='data-type'>[integer]</span><br/>Size of the return, if the number entered is larger, there will be added 0 from the left.
+          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       integeroperator:
         description: Increases by 1 (+1) or decrements by 1 (-1) a variable of integer type
-        paragraph_1: The command <span class='code'>integeroperator</span> is used to increment or decrement its value contained in the variable.
-        paragraph_2: In the example above number <strong>10</strong> will be incremented, and its value changed to <strong>11</strong> and will be stored in the variable <strong>sGreaterNumber</strong>.
-        paragraph_3: The new value of the variable <strong>iNumber</strong>, <strong>11</strong> will be decremented, and its value changed to <strong>10</strong> and will be stored in the variable <strong>sLowerNumber</strong>.
+        paragraph_1: The command <span class='code'>integeroperator</span> is used to increment or decrement a value contained in a variable.
+        paragraph_2: In the example above number <strong>10</strong> will be incremented by a value of 1 (to <strong>11</strong>) and its value stored in the variable <strong>sGreaterNumber</strong>.
+        paragraph_3: The new value of the variable <strong>iNumber</strong>, <strong>11</strong> will be decremented by a value of 1 (to <strong>10</strong>) and its value stored in the variable <strong>sLowerNumber</strong>.
         paragraph_4: To display the values on the <a href='display' class='command'>display</a>, you will need to convert them to <a href='stringvariable' class='command'>stringvariable</a> with the command <a href='inttostring' class='command'>inttostring</a>.
         parameters:
           parameter_1: <strong>operator</strong> <span class='data-type'>[string]</span><br/>Increase (++) or decrease (--).
@@ -1225,7 +1225,7 @@ en:
         description: Creates an instance of the variable of integer type
         paragraph_1: The command <span class='code'>integervariable</span> is used to declare a variable to store only whole numbers, positive or negative.
         paragraph_2: To display a variable of type <strong>integervariable</strong>, you must convert your type to <a href='stringvariable' class='command'>stringvariable</a>, as has been done in the example above.
-        paragraph_3: In the example above, two variables has been created, one of <strong>integervariable</strong> type and another of <a href='stringvariable' class='command'>stringvariable</a> type. The variable <em>$(iNumber)</em> has an initial value of <em>10</em>.
+        paragraph_3: In the example above, two variables have been created, one of <strong>integervariable</strong> type and another of <a href='stringvariable' class='command'>stringvariable</a> type. The variable <em>$(iNumber)</em> has an initial value of <em>10</em>.
         parameters:
           parameter_1: <strong>variable</strong> <span class='data-type'>[string]</span><br/>Variable Name.
           parameter_2: <strong>value</strong> <span class='data-type'>[integer or string]</span><br/>Initial value of the variable.
@@ -1281,7 +1281,7 @@ en:
         paragraph_7: After downloading and verifying the existence of the file bitmap.dat, the function <strong>startEngineISO8583</strong> will be executed. The function references the command <span class='code'>iso8583.initfieldtable</span> that initializes the table. If the value returned on the variable <strong>iReturn</strong> is <strong>0</strong>, the table was successfully initiated; other else the error <strong>-802</strong> will be displayed, indicating failure at starting up the bitmap table.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the file containing the size and format of all 128 fields defined by the ISO8583 standard.
-          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
+          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
       iso8583_initmessage:
         description: Initiates assembly of the ISO message
         paragraph_1: The command <span class='code'>iso8583.initmessager</span> is used to start mounting an ISO8583 message.
@@ -1331,7 +1331,7 @@ en:
         parameters:
           parameter_1: <strong>firstvalue</strong> <span class='data-type'>[string]</span><br/>First string.
           parameter_2: <strong>secondvalue</strong> <span class='data-type'>[string]</span><br/>Second string.
-          parameter_3: <strong>variabledestination</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_3: <strong>variabledestination</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       mathematicaloperation:
         description: Performs a mathematical operation between two values
         paragraph_1: The command <span class='code'>mathematicaloperation</span> is used to perform mathematical operations.
@@ -1424,7 +1424,7 @@ en:
           parameter_1: <strong>port</strong> <span class='data-type'>[string]</span><br/>Port where the connection is open.<ul><li>COM1, COM2, COM3, COM4, COM5, COM6</li></ul>
           parameter_2: <strong>rate</strong> <span class='data-type'>[integer]</span><br/>The serial port rate.<ul><li>300, 600, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 12000, 14400, 28800, 33600</li></ul>
           parameter_3: <strong>configuration</strong> <span class='data-type'>[string]</span><br/>The serial port configuration.<ul><li>A7E1, A7N1, A7O1, A8E1, A8N1, A8O1</li></ul>
-          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:. <ul><li>-2: Incorrect configuration</li><li>-1 or 0: Error opening serial port</li><li>0: Serial port successfully open</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where: <ul><li>-2: Incorrect configuration</li><li>-1 or 0: Error opening serial port</li><li>0: Serial port successfully open</li></ul>'
       paperfeed:
         description: Sends a signal to the printer by adding blank lines on the ticket
         paragraph_1: The command <span class='code'>paperfeed</span> is used to send a signal that the printer will add a blank line.
@@ -1544,7 +1544,7 @@ en:
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
           parameter_2: <strong>key</strong> <span class='data-type'>[string]</span><br/>Key Name.
-          parameter_3: <strong>variabledestination</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_3: <strong>variabledestination</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       readfilebyindex:
         description: Reads a key from a file WALK dbfile
         paragraph_1: The command <span class='code'>readfilebyindex</span> is used to read a file in the format <a href='#walk_db' class='command'>Walk DB</a> at a specified position. Each key should be on a separate line.
@@ -1563,7 +1563,7 @@ en:
         paragraph_3: If no key has been pressed at defined time (<strong>5 seconds</strong>), the application assumes that the key <strong>Cancel</strong> has been pressed.
         parameters:
           parameter_1: <strong>miliseconds</strong> <span class='data-type'>[integer]</span><br/>Pause time in milliseconds.
-          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       readserialport:
         description: Reads a buffer from an external device captured by the serial port
         paragraph_1: The command <span class='code'>readserialport</span> is used to write a message, hexadecimal on the serial port.
@@ -1595,7 +1595,7 @@ en:
         paragraph_2: In the example above, the command <strong>smartcard.insertedcard</strong> checks whether or not the card is inserted in the defined slot. If there is no card in the slot, the return will be <strong>-2</strong>, and <strong>1</strong> otherwise.
         parameters:
           parameter_1: '<strong>slot</strong> <span class="data-type">[integer]</span><br/>Defines which slot is used by the command.<ul><li>1: principal</li><li>2: sam1</li><li>3: sam2</li><li>4: sam3</li><li>5: sam4</li></ul> '
-          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer or string]</span><br/>Variable that will store the return of the command.
+          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer or string]</span><br/>Variable that will store the command return.
       smartcard_startreader:
         description: Starts the smart card reader and try to start the card
         paragraph_1: The command <span class='code'>smartcard.startreader</span> is used to start the smart card reader and try to start the card.
@@ -1626,7 +1626,7 @@ en:
         parameters:
           parameter_1: <strong>character_index</strong> <span class='data-type'>[integer]</span><br/>Character position.
           parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Variable that will be manipulated.
-          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       string_elementat:
         description: Returns a specific element in the string
         paragraph_1: The command <span class='code'>string.elementat</span> is used to separate a string into parts using a delimiter.
@@ -1662,7 +1662,7 @@ en:
         paragraph_2: In the example above the hex value <strong>436C6F756457616C6B</strong> will be converted to ASCII.
         parameters:
           parameter_1: <strong>string</strong> <span class='data-type'>[string]</span><br/>Hexadecimal value to be converted.
-          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       string_getvaluebykey:
         description: Searches in the string for a value based on key/value
         paragraph_1: The command <span class='code'>string.getvaluebykey</span> is used to return a value from a key in string.
@@ -1670,7 +1670,7 @@ en:
         parameters:
           parameter_1: <strong>key</strong> <span class='data-type'>[string]</span><br/>Key to be found.
           parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text to be searched.
-          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       string_insertat:
         description: Inserts an element at specific index in string
         paragraph_1: The command <span class='code'>string.insertat</span> is used to separate a string based on a delimiter and insert a substring in a set position.
@@ -1727,7 +1727,7 @@ en:
           parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Party's position, with 0 being the first.
           parameter_3: <strong>new_element</strong> <span class='data-type'>[integer]</span><br/>New text.
           parameter_4: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text that will be separated.
-          parameter_5: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_5: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       string_substring:
         description: Capture a specific part of string
         paragraph_1: The command <span class='code'>string.substring</span> is used to return a specific part of a <a href='stringvariable' class='command'>stringvariable</a>.
@@ -1736,14 +1736,14 @@ en:
           parameter_1: <strong>length</strong> <span class='data-type'>[integer]</span><br/>Set the size of the returned string.
           parameter_2: <strong>start</strong> <span class='data-type'>[integer]</span><br/>Defines which position of the string the will be used as a reference.
           parameter_3: <strong>string</strong> <span class='data-type'>[string or variável]</span><br/>A string or a variable with the value that will be changed by the command.
-          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string or integer]</span><br/>Variable that will store the return of the command.
+          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string or integer]</span><br/>Variable that will store the command return.
       string_tohex:
         description: Converts a string to its hexadecimal representation
         paragraph_1: The command <span class='code'>string.tohex</span> is used to convert an ASCII string to hexadecimal.
         paragraph_2: In the example above the text <strong>CloudWalk</strong> will be converted to hexadecimal.
         parameters:
           parameter_1: <strong>string</strong> <span class='data-type'>[string]</span><br/>Value to be converted.
-          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       string_trim:
         description: Eliminates the blanks on the left and right of the string
         paragraph_1: The command <span class='code'>string.trim</span> is used to remove the blank spaces at the beginning and the end of the string.
@@ -1776,7 +1776,7 @@ en:
           parameter_2: <strong>index</strong> <span class='data-type'>[integer]</span><br/>Party's position, with 0 being the first.
           parameter_3: <strong>variabledestination</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the substring.
           parameter_4: <strong>variablesource</strong> <span class='data-type'>[string]</span><br/>Text that will be separated.
-          parameter_5: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command. If nothing is found will return <strong>-1</strong>.
+          parameter_5: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return. If nothing is found will return <strong>-1</strong>.
       system_backlight:
         description: Define the device's backlight intensity level.
         paragraph_1: The command <span class='code'>system.backlight</span> defines the device's backlight intensity level.
@@ -1796,7 +1796,7 @@ en:
         paragraph_2: In the example above, the command <strong>system.checkbattery</strong> will return to the variable <strong>$( battery_status)</strong> which is a variable <a href='integervariable' class='command'>integervariable</a>. As the property <strong>variablestatus</strong> only accepts an integer value, it is necessary to convert the value to <a href='stringvariable' class='command'>stringvariable</a> so that the value can be shown on the display .
         paragraph_3: The value <strong>-1</strong> means that the device has no battery.
         parameters:
-          parameter_1: '<strong>variablestatus</strong> <span class="data-type">[integer]</span></br>Variable that will store the return of the command. The returned value ranges from 0 to 100, scaling 1 by 1. Examples: 0, 1, 2, 3, 4, 5 ... 95, 96, 97, 98, 99, 100.'
+          parameter_1: '<strong>variablestatus</strong> <span class="data-type">[integer]</span></br>Variable that will store the command return. The returned value ranges from 0 to 100, scaling 1 by 1. Examples: 0, 1, 2, 3, 4, 5 ... 95, 96, 97, 98, 99, 100.'
       system_gettouchscreen:
         description: Captures the coordinates (x and y) where the display was pressed
         paragraph_1: The command <span class='code'>system.gettouchscreen</span> is used to capture the coordinates (x, y) where the display is pressed. The file config.dat must be changed in order to enable the use of the touchscreen in the application.
@@ -1812,7 +1812,7 @@ en:
         paragraph_2: In the example above, the command <strong>system.infor</strong> will return the macaddress of the device.
         parameters:
           parameter_1: <strong>type</strong> <span class='data-type'>[string]</span><br/>Information you want to return, simid or macaddress.
-          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the return of the command.
+          parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       system_qrcode:
         description: Generate a QR Code based on the entered data
         paragraph_1: The command <span class='code'>system.qrcode</span> is used to generate a QR Code based on the content of the parameter <strong>input</strong>. The generated QR Code can be displayed or printed (if the device has a printer).
@@ -1833,7 +1833,7 @@ en:
           parameter_1: <strong>cardvariable</strong> <span class='data-type'>[string]</span><br/>Variable that will store the card number.
           parameter_2: <strong>keyvariable</strong> <span class='data-type'>[string]</span><br/>Variable that will store the value of the key pressed.
           parameter_3: <strong>timeout</strong> <span class='data-type'>[integer]</span><br/>Waiting time until the command cancels the operation.
-          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the return of the command.
+          parameter_4: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return.
       system_restart:
         description: Restarts the device
         paragraph_1: The command <span class='code'>system.restart</span> is used to restart the device.

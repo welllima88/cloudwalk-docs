@@ -16,23 +16,7 @@
 </ol>
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">
-&lt;integervariable value="0" variable="iValue" /&gt;
-&lt;stringvariable value="" variable="sValue" /&gt;
+<%= embed_posxml_code("4c1f225fd395863bf8e7") %>
 
-<!-- Enter a value -->
-&lt;inputmoney variable="$(iValue)" line="0" column="0" message="Type a value: " /&gt;
-
-<!-- Convert int to string -->
-&lt;inttostring variableinteger="$(iValue)" variablestring="$(sValue)" /&gt;
-
-<!-- Important: In order to display or to print an integer value, the integer value must be converted to string) -->
-
-<!-- Display the value -->
-&lt;cleandisplay />
-&lt;display line="0" column="0" message="The entered value is: " /&gt;
-&lt;display line="2" column="0" message="$(sValue)" /&gt;
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.inputmoney.paragraph_2") %></p>
