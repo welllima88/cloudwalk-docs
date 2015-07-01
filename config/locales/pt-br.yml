@@ -2929,6 +2929,15 @@ pt-BR:
               right: "Muito"
               left: "Pouco"
         previous: "Relatório de anomalias"
+        next: "Configurações avançadas"
+      advanced_settings:
+        title: "Padrões de transações - Configurações avançadas"
+        description: "Aprenda a configurar o intervalo de tempo para procurar por padrões."
+        paragraph_1: "Ao acessas a aba de configurações avançadas, você verá uma tela similar a esta:"
+        image_1: "<img src='/img/pt-BR/guides/transactions_patterns/advanced.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        paragraph_2: "Nesta tela você pode configurar quantos meses passados nosso modelo deve considerar para a criação de padrões para cada aplicação."
+        paragraph_3: "Usando a imagem acima como exemplo, vemos que a aplicação <em>emc2.posxml</em> está utilizando transações dos últimos três meses para crirar seu modelo."
+        previous: "Gráfico dos padrões"
         next: "Configurando notificações"
       notifications_settings:
         title: "Padrões de transações - Configurando notificações"
@@ -2954,7 +2963,7 @@ pt-BR:
             paragraph_2: "Para usar esse serviço, você deve configurar um <a href='https://cloudwalk.slack.com/services/new/incoming-webhook' class='external'>Incoming WebHook</a> em sua conta no Slack. Nesse processo você receberá uma URL para o webhook, algo como <code>https://hooks.slack.com/services/BUnCh0F/A1PhaNUMERIC/ChARAcT3RSHErE</code>."
             paragraph_3: "O último passo é configurar essa URL no CloudWalk Manager, conforme explicado acima."
             paragraph_4: "Agora você está pronto para receber nossas notificações!"
-        previous: "Gráfico dos padrões"
+        previous: "Configurações avançadas"
     emulator_card_swipe:
       title: "Cartões no Emulador"
       description: "Aprenda como utilizar cartões no Emuladow CloudWalk"

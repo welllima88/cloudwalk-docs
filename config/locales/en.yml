@@ -2929,6 +2929,15 @@ en:
               right: "Very"
               left: "Little"
         previous: "Anomalies report"
+        next: "Advanced settings"
+      advanced_settings:
+        title: "Transaction patterns - Advanced settings"
+        description: "Learn how to set the time interval to look for patterns."
+        paragraph_1: "When accessing the advanced settings tab, you'll see a screen similar to this:"
+        image_1: "<img src='/img/en/guides/transactions_patterns/advanced.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        paragraph_2: "In this screen you can set how many months in the past to look for transaction patterns for each application."
+        paragraph_3: "Using the image above as an example, we see that the application <em>emc2.posxml</em> is using transactions from the past three months to create its model."
+        previous: "Patterns chart"
         next: "Setting notifications"
       notifications_settings:
         title: "Transaction patterns - Setting notifications"
@@ -2954,7 +2963,7 @@ en:
             paragraph_2: "To use this service, you must setup a <a href='https://cloudwalk.slack.com/services/new/incoming-webhook' class='external'>Incoming WebHook</a> in your Slack account. In the process you will receive a URL for the webhook, something like <code>https://hooks.slack.com/services/BUnCh0F/A1PhaNUMERIC/ChARAcT3RSHErE</code>."
             paragraph_3: "The last step is to set this URL in CloudWalker Manager, as explained above."
             paragraph_4: "Now you are ready to receive our notifications!"
-        previous: "Patterns chart"
+        previous: "Advanced settings"
     emulator_card_swipe:
       title: "Emulator Card Swipe"
       description: "Learn how to use cards on CloudWalk Emulator"
