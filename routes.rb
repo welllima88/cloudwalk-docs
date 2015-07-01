@@ -55,8 +55,10 @@ class Routes
       { "url" => "guides/transactions-patterns/patterns-chart",          "view_path" => "guides/transactions_patterns/tutorial_3_patterns_chart"},
       { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_4_notifications_settings"},
       { "url" => "guides/emulator-card-swipe",                           "view_path" => "guides/emulator_card_swipe"},
-      #HELP
+      # HELP
       { "url" => "help/faq",                                             "view_path" => "help/faq"},
+      # POSXML APPS CHANGELOG
+      { "url" => "apps/globalpayments",                                  "view_path" => "apps/globalpayments"},
     ]
   end
 

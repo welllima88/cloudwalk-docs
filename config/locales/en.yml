@@ -2,6 +2,17 @@ en:
   troubleshooting: "Troubleshooting"
   description: "Learn how to create, deploy and manage CloudWalk apps."
   copy: "Copy"
+  version: "Version"
+  apps:
+    globalpayments:
+      title: "Global Payments"
+      description: "Payment application from Global Payments"
+      intro: "Payment application from Global Payments"
+      versions:
+        1.0.0:
+          date: "06/22/2015"
+          changelog:
+            paragraph_1: "First release"
   api:
     description: Description
     method: Method and URL format

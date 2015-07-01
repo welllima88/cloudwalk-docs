@@ -2,6 +2,17 @@ pt-BR:
   troubleshooting: "Resolução de problemas"
   description: "Aprenda a criar, publicar e gerenciar aplicações CloudWalk."
   copy: "Copiar"
+  version: "Versão"
+  apps:
+    globalpayments:
+      title: "Global Payments"
+      description: "Aplicação de pagamentos Global Payments"
+      intro: "Aplicação de pagamentos Global Payments"
+      versions:
+        1.0.0:
+          date: "22/06/2015"
+          changelog:
+            paragraph_1: "Primeiro release"
   api:
     description: Descrição
     method: Método e formato da URL
