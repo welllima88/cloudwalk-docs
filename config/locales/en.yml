@@ -1809,7 +1809,7 @@ en:
       system_info:
         description: Gets device information (MAC Address, SIM ID, etc)
         paragraph_1: The command <span class='code'>system.info</span> is used to return information from the device.
-        paragraph_2: In the example above, the command <strong>system.infor</strong> will return the macaddress of the device.
+        paragraph_2: In the example above, the command <strong>system.info</strong> will return the macaddress of the device.
         parameters:
           parameter_1: <strong>type</strong> <span class='data-type'>[string]</span><br/>Information you want to return, simid or macaddress.
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
