@@ -2862,7 +2862,7 @@ pt-BR:
       overview:
         title: "Padrões de transações - Visão geral do tutorial"
         description: "Aprenda neste tutorial como acessar seus padrões de transacões e anomalias."
-        paragraph_1: "Neste tutorial, você aprenderá: como acessar um relatório com suas últimas transações anômalas, como visualizar todos os padrões e anomalias de suas transações em um gráfico e como receber notificações via e-mail ou webhook quando algo anômalo ocorrer."
+        paragraph_1: "Neste tutorial, você aprenderá: <ul><li>como acessar um relatório com suas últimas transações anômalas,</li><li>como visualizar todos os padrões e anomalias de suas transações em um gráfico,</li><li>como configurar seus modelos, e</li><li>como receber notificações via e-mail ou webhook quando algo anômalo ocorrer.</li></ul>"
         image_1: "<img src='/img/pt-BR/guides/transactions_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Este é um serviço integrado ao CloudWalk Manager e você pode accessá-lo em <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "Você não conseguirá visualizar nada nesse link a menos que tenha realizado pelo menos uma transação utilizando sua conta CloudWalk."
