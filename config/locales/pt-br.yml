@@ -2873,7 +2873,7 @@ pt-BR:
       overview:
         title: "Padrões de transações - Visão geral do tutorial"
         description: "Aprenda neste tutorial como acessar seus padrões de transacões e anomalias."
-        paragraph_1: "Neste tutorial, você aprenderá: como acessar um relatório com suas últimas transações anômalas, como visualizar todos os padrões e anomalias de suas transações em um gráfico e como receber notificações via e-mail ou webhook quando algo anômalo ocorrer."
+        paragraph_1: "Neste tutorial, você aprenderá: <ul><li>como acessar um relatório com suas últimas transações anômalas,</li><li>como visualizar todos os padrões e anomalias de suas transações em um gráfico,</li><li>como configurar seus modelos, e</li><li>como receber notificações via e-mail ou webhook quando algo anômalo ocorrer.</li></ul>"
         image_1: "<img src='/img/pt-BR/guides/transactions_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "Este é um serviço integrado ao CloudWalk Manager e você pode accessá-lo em <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "Você não conseguirá visualizar nada nesse link a menos que tenha realizado pelo menos uma transação utilizando sua conta CloudWalk."
@@ -2910,7 +2910,6 @@ pt-BR:
           paragraph_5: "O quadrado grande representa sua última transação e, se for cinza, é uma transação anômala."
         chart_interaction:
           paragraph_1: "Aqui estão todas as formas pelas quais você pode interagir com o gráfico:"
-          paragraph_2: "Os parâmetros no lado direito da tela são realmente importantes, então explicaremos tudo que você precisa saber sobre eles em uma seção posterior."
           list:
             item_1: "Você pode mover o mouse sobre qualquer ponto para ver mais detalhes sobre a transação."
             item_2: "Você pode clicar no ponto para ver ainda mais informação: serão mostrados os conteúdos das mensagens."
@@ -2921,7 +2920,7 @@ pt-BR:
           paragraph_2: "Como exemplo, se você ficar enviando pings do seu POS ao seu servidor, você espera que as mesmas mensagens sejam enviadas e recebidas todas as vezes, de modo que os círculos representando essas transações estarão empilhados no gráfico."
           paragraph_3: "Nesta situação, você pode passar o mouse sobre o círculo representando as transações para ver quantas vezes uma transação com mensagens deste mesmo tamanho ocorreu, juntamente com outras informações, como a hora da última ocorrência. Você pode também clicar no círculo para ver o conteúdo da última transação."
         parameters:
-          paragraph_1: "Na área à direita do gráfico, temos dois sliders que você pode utilizar para modificar alguns parâmetros de seu detector."
+          paragraph_1: "Podemos configurar os parâmetros de nossos modelos clicando na engrenagem na frente do nome da aplicação. Você verá dois sliders que podem ser utilizados para modificar alguns parâmetros de seu detector."
           paragraph_2: "Nosso algoritmo depende de dois parâmetros que efetivamente configuram sua sensibilidade, um deles controlando quão fácil/difícil é para marcar duas transações como similares e o outro controlando quantas destas transações similares são necessárias para definir-se um novo padrão:"
           list:
             item_1: "<strong>Quantas transações similares definem um padrão:</strong> este parâmetro controla o quão fácil/difícil é para o algoritmo definir um novo padrão. Se dissermos que poucas transações similares definem um padrão (slider para a esquerda), o algoritmo criará novos padrões após observar poucas transações similares. No outro extremo, configurando este parâmetro para que muitas transações similares definam um padrão (slider para a direita), o algoritmo terá que observar muitas transações similares ocorrendo antes de dizer que elas formam um padrão. Em resumo, quando o slider for da esquerda para a direita estaremos detectando menos para mais anomalias, ou, alternativamente, mais para menos padrões."
@@ -2941,6 +2940,15 @@ pt-BR:
               right: "Muito"
               left: "Pouco"
         previous: "Relatório de anomalias"
+        next: "Configurações avançadas"
+      advanced_settings:
+        title: "Padrões de transações - Configurações avançadas"
+        description: "Aprenda a configurar o intervalo de tempo para procurar por padrões."
+        paragraph_1: "Ao acessas a aba de configurações avançadas, você verá uma tela similar a esta:"
+        image_1: "<img src='/img/pt-BR/guides/transactions_patterns/advanced.png' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
+        paragraph_2: "Nesta tela você pode configurar quantos meses passados nosso modelo deve considerar para a criação de padrões para cada aplicação."
+        paragraph_3: "Usando a imagem acima como exemplo, vemos que a aplicação <em>emc2.posxml</em> está utilizando transações dos últimos três meses para crirar seu modelo."
+        previous: "Gráfico dos padrões"
         next: "Configurando notificações"
       notifications_settings:
         title: "Padrões de transações - Configurando notificações"
@@ -2966,7 +2974,7 @@ pt-BR:
             paragraph_2: "Para usar esse serviço, você deve configurar um <a href='https://cloudwalk.slack.com/services/new/incoming-webhook' class='external'>Incoming WebHook</a> em sua conta no Slack. Nesse processo você receberá uma URL para o webhook, algo como <code>https://hooks.slack.com/services/BUnCh0F/A1PhaNUMERIC/ChARAcT3RSHErE</code>."
             paragraph_3: "O último passo é configurar essa URL no CloudWalk Manager, conforme explicado acima."
             paragraph_4: "Agora você está pronto para receber nossas notificações!"
-        previous: "Gráfico dos padrões"
+        previous: "Configurações avançadas"
     emulator_card_swipe:
       title: "Cartões no Emulador"
       description: "Aprenda como utilizar cartões no Emuladow CloudWalk"

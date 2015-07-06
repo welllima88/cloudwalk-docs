@@ -53,7 +53,8 @@ class Routes
       { "url" => "guides/transactions-patterns/overview",                "view_path" => "guides/transactions_patterns/tutorial_1_overview"},
       { "url" => "guides/transactions-patterns/anomalies-report",        "view_path" => "guides/transactions_patterns/tutorial_2_anomalies_report"},
       { "url" => "guides/transactions-patterns/patterns-chart",          "view_path" => "guides/transactions_patterns/tutorial_3_patterns_chart"},
-      { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_4_notifications_settings"},
+      { "url" => "guides/transactions-patterns/advanced-settings",       "view_path" => "guides/transactions_patterns/tutorial_4_advanced_settings"},
+      { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_5_notifications_settings"},
       { "url" => "guides/emulator-card-swipe",                           "view_path" => "guides/emulator_card_swipe"},
       # HELP
       { "url" => "help/faq",                                             "view_path" => "help/faq"},
