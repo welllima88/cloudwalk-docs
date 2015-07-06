@@ -2862,7 +2862,7 @@ en:
       overview:
         title: "Transaction patterns - Tutorial overview"
         description: "Learn in this tutorial how to access your transaction patterns and anomalies."
-        paragraph_1: "In this tutorial you will learn: <br /> <ul><li>how to access a report with your latest anomalous transactions,</li><li>how to see all your transaction patterns and anomalies in a nice chart, and,</li><li>how to receive notifications via email or webhook when something anomalous happens.</li></ul>"
+        paragraph_1: "In this tutorial you will learn: <ul><li>how to access a report with your latest anomalous transactions,</li><li>how to see all your transaction patterns and anomalies in a nice chart,</li><li>how to see configure your models, and,</li><li>how to receive notifications via email or webhook when something anomalous happens.</li></ul>"
         image_1: "<img src='/img/en/guides/transactions_patterns/overview.gif' class='img-tutorial img-polaroid' alt='Anomalies tab' />"
         paragraph_2: "This is a service integrated into CloudWalk Manager and you can access it at <a href='http://manager.cloudwalk.io/transactions/patterns' class='external'>manager.cloudwalk.io/transactions/patterns</a>."
         paragraph_3: "You won't see anything at this location unless you have made at least one transaction using your CloudWalk account."
