@@ -19,19 +19,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;function name="Getfields"&gt;
-&lt;integervariable value="0" variable="iReturn"&gt;
-
-&lt;stringvariable value="" variable="sBIT39"&gt;
-&lt;stringvariable value="" variable="sBIT62"&gt;
-&lt;stringvariable value="" variable="sBIT64"&gt;
-
-&lt;iso8583.getfield fieldnumber="39" type="string" variablevalue="$(sBIT39)" variablereturn="$(iRet)"&gt;
-&lt;iso8583.getfield fieldnumber="62" type="string" variablevalue="$(sBIT62)" variablereturn="$(iRet)"&gt;
-&lt;iso8583.getfield fieldnumber="64" type="string" variablevalue="$(sBIT64)" variablereturn="$(iRet)"&gt;
-
-&lt;/function&gt;
-</code></pre>
+<%= embed_posxml_code("0c8c263ca33f9998f447", true) %>
 
 <p><%= I18n.t("posxml.commands.iso8583_getfield.paragraph_3") %></p>
 <p><%= I18n.t("posxml.commands.iso8583_getfield.paragraph_4") %></p>
