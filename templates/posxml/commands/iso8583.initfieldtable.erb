@@ -6,8 +6,6 @@
 
 <p class="note"><%= I18n.t("posxml.commands.iso8583_initfieldtable.paragraph_1") %></p>
 
-<p><%= I18n.t("posxml.commands.iso8583_initfieldtable.paragraph_2") %></p>
-
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
 
 <ol class="parameters">
@@ -17,65 +15,9 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("906bf61252f1834c0f16", true) %>
 
-&lt;callfunction name="downloadBitmap" /&gt;
-&lt;callfunction name="startEngineISO8583" /&gt;
-
-&lt;cleandisplay /&gt;
-&lt;display column="0" line="2" message="    ISO TABLE     "/&gt;
-&lt;display column="0" line="3" message="   SUCCESSFULLY   "/&gt;
-&lt;display column="0" line="4" message="   INITIALIZED!   "/&gt;
-&lt;waitkey/&gt;
-&lt;exit/&gt;
-
-&lt;function name="startEngineISO8583"&gt;
-  &lt;iso8583.initfieldtable filename="bitmap.dat" variablereturn="$(iReturn)"/&gt;
-  &lt;if variable="$(iReturn)" operator="notequalto" value="0"&gt;
-    &lt;cleandisplay/&gt;
-    &lt;display column="0" line="3" message="ISO TABLE NOT FOUND "/&gt;
-    &lt;waitkey/&gt;
-    &lt;exit/&gt;
-  &lt;/if&gt;
-&lt;/function&gt;
-
-&lt;function name="downloadBitmap"&gt;
-  &lt;cleandisplay /&gt;
-  &lt;display column="0" line="3" message="  CONNECTING...  "/&gt;
-  &lt;preconnect variablestatus="$(iReturn)"/&gt;
-  &lt;if variable="$(iReturn)" operator="equalto" value="0"&gt;
-    &lt;display column="0" line="2" message="   DOWNLOADING  "/&gt;
-    &lt;display column="0" line="3" message="   BITMAP FILE..."/&gt;
-
-    &lt;deletefile filename="bitmap.dat" /&gt;
-    &lt;downloadfile filename="bitmap.dat" remotepath="bitmap.dat" variablereturn="$(iReturn)"/&gt;
-
-    &lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-
-    &lt;if variable="$(iReturn)" operator="notequalto" value="1"&gt;
-      &lt;if variable="$(iReturn)" operator="notequalto" value="2"&gt;
-        &lt;display column="0" line="2" message="    DOWNLOAD    "/&gt;
-        &lt;display column="0" line="3" message="     ERROR!     "/&gt;
-        &lt;display column="0" line="4" message="$(sReturn)"/&gt;
-        &lt;network.hostdisconnect/&gt;
-        &lt;waitkey/&gt;
-        &lt;exit/&gt;
-      &lt;/if&gt;
-    &lt;else/&gt;
-      &lt;network.hostdisconnect/&gt;
-      &lt;editfile filename="params.dat" key="bitmap" value="1"/&gt;
-    &lt;/if&gt;
-  &lt;else/&gt;
-    &lt;cleandisplay /&gt;
-    &lt;display column="0" line="2" message="  CONNECTION  "/&gt;
-    &lt;display column="0" line="3" message="    FAILED!   "/&gt;
-    &lt;network.hostdisconnect/&gt;
-    &lt;waitkey/&gt;
-    &lt;exit/&gt;
-  &lt;/if&gt;
-&lt;/function&gt;
-</code></pre>
+<p><%= I18n.t("posxml.commands.iso8583_initfieldtable.paragraph_2") %></p>
 
 <p><%= I18n.t("posxml.commands.iso8583_initfieldtable.paragraph_3") %></p>
 <p><%= I18n.t("posxml.commands.iso8583_initfieldtable.paragraph_4") %></p>

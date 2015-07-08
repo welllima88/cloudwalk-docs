@@ -6,8 +6,6 @@
 
 <p class="note"><%= I18n.t("posxml.commands.iso8583_initmessage.paragraph_1") %></p>
 
-<p><%= I18n.t("posxml.commands.iso8583_initmessage.paragraph_2") %></p>
-
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
 
 <ol class="parameters">
@@ -19,74 +17,9 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;integervariable value="0" variable="iSizeMessageISO" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;stringvariable value="" variable="sMsgIso8583" /&gt;
-&lt;stringvariable value="0800" variable="$(sIdMessageISO)" /&gt;
-&lt;stringvariable value="01234567" variable="sBIT41" /&gt;
-&lt;stringvariable value="0011903030303031323334353600119130303030301763233620011923030307072164323562"
-     variable="sBIT64" /&gt;
+<%= embed_posxml_code("5cf4c3c72a4475bc3ec9", true) %>
 
-&lt;callfunction name="initISO8583Message" /&gt;
-
-&lt;function name="initISO8583Message"&gt;
-  &lt;!-- INIT ISO8583 MESSAGE --&gt;
-  &lt;iso8583.initmessage format="ASCII" id="$(sIdMessageISO)" variablemessage="$(sMsgIso8583)"
-       variablereturn="$(iReturn)"/&gt;
-
-  &lt;if variable="$(iReturn)" operator="notequalto" value="0"&gt;
-    &lt;cleandisplay/&gt;
-    &lt;display column="0" line="2" message="   ISO MESSAGE    "/&gt;
-    &lt;display column="0" line="3" message="  INITIALIZATION  "/&gt;
-    &lt;display column="0" line="4" message="     FAILED!      "/&gt;
-    &lt;waitkey/&gt;
-    &lt;exit /&gt;
-  &lt;/if&gt;
-
-  &lt;!-- PUT FIELD - BIT41 --&gt;
-  &lt;if variable="$(sBIT41)" operator="notequalto" value=""&gt;
-    &lt;iso8583.putfield fieldnumber="41" type="string" value="$(sBIT41)" variablereturn="$(iReturn)"/&gt;
-    &lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-    &lt;if variable="$(iReturn)" operator="notequalto" value="0"&gt;
-      &lt;callfunction name="showBitError"/&gt;
-    &lt;/if&gt;
-  &lt;/if&gt;
-
-  &lt;!-- PUT FIELD - BIT64 --&gt;
-  &lt;if variable="$(sBIT64)" operator="notequalto" value=""&gt;
-    &lt;iso8583.putfield fieldnumber="64" type="string" value="$(sBIT64)" variablereturn="$(iReturn)"/&gt;
-    &lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-    &lt;if variable="$(iReturn)" operator="notequalto" value="0"&gt;
-      &lt;callfunction name="showBitError"/&gt;
-    &lt;/if&gt;
-  &lt;/if&gt;
-
-  &lt;!-- END MESSAGE --&gt;
-  &lt;iso8583.endmessage variablesize="$(iSizeMessageISO)" variablereturn="$(iReturn)"/&gt;
-
-  &lt;!-- Print ISO8583 Message --&gt;
-  &lt;print message="$(sMsgIso8583)" /&gt;
-
-  &lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-  &lt;if variable="$(iReturn)" operator="notequalto" value="0"&gt;
-    &lt;display column="0" line="2" message="   ISO END MESSAGE  "/&gt;
-    &lt;display column="0" line="3" message="       ERROR!       "/&gt;
-    &lt;display column="0" line="4" message="$(sReturn)"/&gt;
-    &lt;waitkey/&gt;
-    &lt;exit/&gt;
-  &lt;/if&gt;
-&lt;/function&gt;
-
-&lt;!-- SHOW ERROR --&gt;
-&lt;function name="showBitError"&gt;
-  &lt;display column="0" line="2" message="    ISO8583 BIT   "/&gt;
-  &lt;display column="0" line="3" message="      ERROR!      "/&gt;
-  &lt;display column="0" line="4" message="$(sReturn)"/&gt;
-  &lt;waitkey/&gt;
-  &lt;exit/&gt;
-&lt;/function&gt;
-</code></pre>
+<p><%= I18n.t("posxml.commands.iso8583_initmessage.paragraph_2") %></p>
 
 <p><%= I18n.t("posxml.commands.iso8583_initmessage.paragraph_3") %></p>
 <p><%= I18n.t("posxml.commands.iso8583_initmessage.paragraph_4") %></p>
