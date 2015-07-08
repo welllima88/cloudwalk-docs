@@ -779,7 +779,7 @@ en:
         paragraph_2: This example creates a variable <em>$(iPaper)</em> that will store the result of the command <strong>checkpaperout</strong> using the parameter <em>variablereturn</em>.
         paragraph_3: The block <a href='if' class='command'>if</a> checks the value of the variable <em>$(iPaper)</em> and displays the message on the <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the result of the command, which may be 0 or 1.
+          parameter_1: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the result of the command, 0 (no paper present) or 1 (paper present).
       cleandisplay:
         description: Clean the device display (like a clear or cls)
         paragraph_1: The command <span class='code'>cleandisplay</span> is used to delete the entire contents of <a href='display' class='command'>display</a>.
@@ -1033,7 +1033,7 @@ en:
         paragraph_3: The command <a href='display' class='command'>display</a> will display <strong>-1</strong>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
-          parameter_2: '<strong>mode</strong> <span class="data-type">[string]</span><br/><ul><li>r: Reading</li><li>w: Writing</li></ul>'
+          parameter_2: '<strong>mode</strong> <span class="data-type">[string]</span><br/><ul><li>r: Read</li><li>w: Write</li><li>a: Append</li></ul>'
           parameter_3: '<strong>variablehandle</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<ul><li>-1: Could not open file</li><li>>-1: Open file</li></ul>'
       file_read:
         description: Reads a file that was previously opened by file.open
@@ -1241,14 +1241,14 @@ en:
         description: Starts the process of analysis and decomposition of the fields of the message
         paragraph_1: The command <span class='code'>iso8583.analyzemessage</span> is used to start the process of analysis and decomposition of the fields of the message.
         paragraph_2: The command <span class='code'>iso8583.analyzemessage</span> is used to start the process of analysis and decomposition of the fields of the message.
-        paragraph_3: In the example above, after performing the transaction with the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>, the authorizer responds by sending another ISO message, which is stored on the variable <em><strong>ReceiveMsgISO</strong></em>, and the amount of bytes of the variable on <em><strong>iRecvBytes</strong></em>.
-        paragraph_4: The command <span class='code'>iso8583.analyzemessage</span> is executed to analyze the message returned by the authorizer, if executed successfully, then the <em><strong>function</strong></em> <em><strong>Getfields</strong></em> is executed to retrieve the fields of the reply message.
+        paragraph_3: In the example above, after performing the transaction with the command <a href='iso8583.transactmessage' class='command'>iso8583.transactmessage</a>, the authorizer responds by sending another ISO message, which is stored in the variable <em><strong>ReceiveMsgISO</strong></em>, and the amount of bytes of the variable on <em><strong>iRecvBytes</strong></em>.
+        paragraph_4: The command <span class='code'>iso8583.analyzemessage</span> is executed to analyze the message returned by the authorizer, if executed successfully, then the function <em><strong>Getfields</strong></em> is executed to retrieve the fields of the reply message.
         parameters:
           parameter_1: <strong>format</strong> <span class='data-type'>[string]</span><br/> Format of the message to be analyzed, which can be ASCII or BCD.
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/> Size of the message being analyzed.
           parameter_3: <strong>variableid</strong> <span class='data-type'>[string]</span><br/> Variable that stores the message ID.
-          parameter_4: <strong>variablemessage</strong> <span class='data-type'>[string]</span><br/> Variable that has stored the message to be analyzed.
-          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where: <br/> <span class="data-type"> 0: message successfully analyzed <br/> -806: error on the analyzed message</span>'
+          parameter_4: <strong>variablemessage</strong> <span class='data-type'>[string]</span><br/> Variable that stores  the message to be analyzed.
+          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where: <br/><ul><li> 0: message successfully analyzed <br/></li><li> -806: error on the analyzed message</li></ul>'
       iso8583_endmessage:
         description: Ends assembly of the ISO message
         paragraph_1: The command <span class='code'>iso8583.endmessage</span> is used to finish the ISO8583 message being mounted.
