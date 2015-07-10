@@ -1326,8 +1326,8 @@ en:
           parameter_6: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where:<br/> <ul><li> 0: Size of the response message </li><li> -1: Channel unknown or not implemented </li><li> -2: Failed to connect to the host or while attempting to dial </li><li> -3: Failed to send send the message to the host authorizer </li><li> -4: Failed to receive the size of the response message </li><li> -5: Failed to receive the response message</li></ul>'
       joinstring:
         description: Concatenates in a string the value of another 2 strings
-        paragraph_1: The command <span class='code'>joinstring</span> is used to join two strings.
-        paragraph_2: In the example above the command <a href='joinstring' class='command'>joinstring</a> will unite variables <strong>sTextOne</strong> and <strong>sTextTwo</strong>.
+        paragraph_1: The command <span class='code'>joinstring</span> is used to concatenate two strings.
+        paragraph_2: In the example above the command <a href='joinstring' class='command'>joinstring</a> will concatenate the string values of variables <strong>sTextOne</strong> and <strong>sTextTwo</strong>.
         parameters:
           parameter_1: <strong>firstvalue</strong> <span class='data-type'>[string]</span><br/>First string.
           parameter_2: <strong>secondvalue</strong> <span class='data-type'>[string]</span><br/>Second string.
@@ -1335,32 +1335,32 @@ en:
       mathematicaloperation:
         description: Performs a mathematical operation between two values
         paragraph_1: The command <span class='code'>mathematicaloperation</span> is used to perform mathematical operations.
-        paragraph_2: In the example above, with variables <strong>$(number_1)</strong> and <strong>$(number_2)</strong> has been performed 6 math operations.
-        paragraph_3: '<ul><li>1st operation: 200 + 100 = <strong>300</strong></li><li>2nd operation: 200 - 100 = <strong>100</strong></li><li>3rd operation: 200 * 100 = <strong>2000</strong></li><li>4th operation: 200 / 100 = <strong>2</strong></li><li>5th operation: 200 % 100 = <strong>0</strong></li><li>6th operation: 200 ^ 100 = <strong>2147483647</strong></li></ul>'
+        paragraph_2: In the example above, 6 different mathematical operations have been performed on the values stored in the variables <strong>$(number_1)</strong> and <strong>$(number_2)</strong>.
+        paragraph_3: '<ul><li>1st operation: 16 + 4 = <strong>20</strong></li><li>2nd operation: 16 - 4 = <strong>12</strong></li><li>3rd operation: 16 * 4 = <strong>64</strong></li><li>4th operation: 16 / 4 = <strong>4</strong></li><li>5th operation: 16 % 4 = <strong>0</strong></li><li>6th operation: 16 ^ 4 = <strong>65536</strong></li></ul>'
         parameters:
           parameter_1: <strong>firstvalue</strong> <span class='data-type'>[integer or string]</span><br/>First variable of the operation.
-          parameter_2: <strong>operator</strong> <span class='data-type'>[string]</span></br>Mathematical Operators:<span class='code'>+</span> sum <span class='code'>-</span> subtraction, <span class='code'>*</span> multiplication, <span class='code'>/</span> division <span class='code'>%</span> rest of the division, <span class='code'>^</span> exponentiation.
+          parameter_2: <strong>operator</strong> <span class='data-type'>[string]</span></br>Mathematical Operators:<br /><ul><li><span class='code'> +</span> add</li><li><span class='code'>-</span> subtract</li><li><span class='code'>*</span> multiply</li><li><span class='code'>/</span> divide</li><li><span class='code'>%</span> modulus (remainder of the division)</li><li><span class='code'>^</span> exponent</li></ul>
           parameter_3: <strong>secondvalue</strong> <span class='data-type'>[integer or string]</span><br/>Second variable of the operation.
-          parameter_4: <strong>variabledestination</strong> <span class='data-type'>[string ou integer]</span><br/>Variable where the operation value will be stored.
+          parameter_4: <strong>variabledestination</strong> <span class='data-type'>[string ou integer]</span><br/>Variable where the result of operation will be stored.
       menu:
         description: Displays a menu based on the device screen (number of lines)
         paragraph_1: The command <span class='code'>Menu</span> is used to generate a list of options.
-        paragraph_2: In the example above has been created a menu with three options, where slash (<strong>/</strong>) is the separator and the variable <strong>$(option)</strong> will store the result of the command, which will be the number of key pressed, a value between <strong>0</strong> and <strong>9</strong>.
+        paragraph_2: In the example above a menu list has been created with three options, where backslash <span class='code'>\</span> is the separator and the variable <strong>$(option)</strong> will store the list to be displayed, which is the values of the number keys pressed.
         parameters:
           parameter_1: <strong>variable</strong> <span class='data-type'>[integer]</span><br/>Variable that will be used in the comparison.
-          parameter_2: <strong>options</strong> <span class='data-type'>[string]</span><br/>List containing descriptions of each menu item, separated by slash <strong>/</strong>.
+          parameter_2: <strong>options</strong> <span class='data-type'>[string]</span><br/>List containing descriptions of each menu item, separated by a backslash <span class='code'>\</span>.
       menuwithheader:
         description: Displays a header with a menu based on the device screen (number of lines)
         paragraph_1: The command <span class='code'>menuwithheader</span> is used to generate a list of options.
-        paragraph_2: In the example above needs to be made the change in the <strong>config.dat</strong>, which contains some parameters, including <strong>iskeytimeout</strong>, set to the value <strong>1</strong>, that allows the command <strong>menuwithheader</strong> work.
-        paragraph_3: If the file <strong>config.dat</strong> does not have its parameter <strong>iskeytimeout</strong> set to <strong>1</strong>, there will be no error returned but the command <strong>menuwithheader</strong> will not work as expected.
-        paragraph_4: If the seconds of the property <strong>timeout</strong> finish without user interaction, the command returned <strong>-1</strong>.
+        paragraph_2: In the example above the file <strong>config.dat</strong> is changed to set the parameter <strong>iskeytimeout</strong> to <strong>1</strong>, which enables the command <strong>menuwithheader</strong> to work.
+        paragraph_3: If the file <strong>config.dat</strong> does not have the parameter <strong>iskeytimeout</strong> set to <strong>1</strong>, there will be no error returned but the command <strong>menuwithheader</strong> will not work as expected.
+        paragraph_4: If the value of the property <strong>timeout</strong> (in seconds) expires without user interaction, the command returned <strong>-1</strong>.
         parameters:
-          parameter_1: <strong>header</strong> <span class='data-type'>[string]</span><br/>Define the content of the menu header, separated by <strong>|</strong>. If the content is larger, then the screen space displays a plus sign (<strong>+</strong>) informing the continuity of the text.
+          parameter_1: <strong>header</strong> <span class='data-type'>[string]</span><br/>Define the content of the menu header, separated by a bar <span class='code'>|</span>. If the content is larger than one line, then the screen will display a plus sign <span class='code'>+</span> which indicates the text continues onto the next line.
           parameter_2: <strong>timeoutheader</strong> <span class='data-type'>[integer]</span><br/>Time in seconds for the description of the menu header to change.
-          parameter_3: <strong>options</strong> <span class='data-type'>[string]</span><br/>Menu options separated by a bar <strong>\</strong>.
+          parameter_3: <strong>options</strong> <span class='data-type'>[string]</span><br/>Menu options separated by a backslash <span class='code'>\</span>.
           parameter_4: <strong>timeout</strong> <span class='data-type'>[integer]</span><br/>Value that determines the time in seconds to wait for user interaction.
-          parameter_5: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will receive the return command.
+          parameter_5: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will receive the return of the command.
       network_checkgprssignal:
         description: Checks the status of the connection, if the POS supports GPRS
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
