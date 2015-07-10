@@ -16,16 +16,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="Texto 1" variable="sTextOne" /&gt;
-&lt;stringvariable value="Texto 2" variable="sTextTwo" /&gt;
+<%= embed_posxml_code("02347ded2b71f131eafb") %>
 
-&lt;stringvariable value="" variable="sReturn" /&gt;
-
-&lt;joinstring firstvalue="$(sTextOne)" secondvalue="$(sTextTwo)" variabledestination="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.joinstring.paragraph_2") %></p>

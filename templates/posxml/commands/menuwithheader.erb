@@ -18,14 +18,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sMenu"/&gt;
+<%= embed_posxml_code("fdc70cdb012789eba1c7") %>
 
-&lt;editfile filename="config.dat" key="iskeytimeout" value="1" /&gt;
-
-&lt;menuwithheader header="Welcome |M/d/yy h:m:s|M/d/yy h:m:s|h:m:s MENU|h:m:s AA|BB" timeoutheader="1" options="1.Option A\2.Option B\3.Option C\4.Option D\5.Option E\6.Option F\7.Option G\8.Option H\9.Option I" timeout="30" variablereturn="$(sMenu)"/>
-
-&lt;print message="$(sMenu)"/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.menuwithheader.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.menuwithheader.paragraph_3") %></p>
