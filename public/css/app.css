@@ -72,6 +72,22 @@ body > .navbar {
 
 .animated { margin: 15px 0 23px 0; border: 1px solid #ccc; padding: 5px;}
 
+.video-frame {
+  margin-top: 33px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 500px;
+  height: 320px;
+}
+.video-frame:hover {
+  cursor: pointer;
+  border-color: #bbb;
+}
+#video-player {
+  width:590px;
+  height:345px
+}
+
 h1 {
   -webkit-font-smoothing: antialiased;
   font-size: 30px;
