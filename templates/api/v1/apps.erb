@@ -4,11 +4,8 @@
 
 <h1><%= I18n.t("api.v1.apps.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "03/06/2014") %></p>
-
-<h4><%= I18n.t("general.index") %></h4>
-
 <ol class="table-of-contents">
+  <li><a href="#types"><%= I18n.t("api.v1.apps.table_of_contents.types") %></a></li>
   <li><a href="#attributes"><%= I18n.t("api.v1.apps.table_of_contents.attributes") %></a></li>
   <li><a href="#index"><%= I18n.t("api.v1.apps.table_of_contents.index") %></a></li>
   <li><a href="#show"><%= I18n.t("api.v1.apps.table_of_contents.show") %></a></li>
@@ -16,6 +13,10 @@
   <li><a href="#update"><%= I18n.t("api.v1.apps.table_of_contents.update") %></a></li>
   <li><a href="#destroy"><%= I18n.t("api.v1.apps.table_of_contents.destroy") %></a></li>
 </ol>
+
+<h2 id="types"><%= I18n.t("api.v1.apps.table_of_contents.types") %></h2>
+
+<p><%= I18n.t("api.v1.apps.types.paragraph_1") %></p>
 
 <h2 id="attributes"><%= I18n.t("api.v1.apps.table_of_contents.attributes") %></h2>
 
@@ -31,14 +32,59 @@
   </thead>
   <tbody>
     <tr>
+      <td>id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.id") %></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.name") %></td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.description") %></td>
+    </tr>
+    <tr>
       <td>authorizer_url</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.apps.attributes.list.authorizer_url") %></td>
     </tr>
     <tr>
+      <td>displayable</td>
+      <td>Boolean</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.displayable") %></td>
+    </tr>
+    <tr>
+      <td>pos_display_label</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.pos_display_label") %></td>
+    </tr>
+    <tr>
       <td>crc</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.apps.attributes.list.crc") %></td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.size") %></td>
+    </tr>
+    <tr>
+      <td>uuid</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.uuid") %></td>
+    </tr>
+    <tr>
+      <td>bytecode</td>
+      <td>Bytecode</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.binary") %></td>
+    </tr>
+    <tr>
+      <td>updated_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.updated_at") %></td>
     </tr>
     <tr>
       <td>created_at</td>
@@ -55,56 +101,6 @@
       <td>String</td>
       <td><%= I18n.t("api.v1.apps.attributes.list.created_via") %></td>
     </tr>
-    <tr>
-      <td>description</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.description") %></td>
-    </tr>
-    <tr>
-      <td>displayable</td>
-      <td>Boolean</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.displayable") %></td>
-    </tr>
-    <tr>
-      <td>id</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.id") %></td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.name") %></td>
-    </tr>
-    <tr>
-      <td>pos_display_label</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.pos_display_label") %></td>
-    </tr>
-    <tr>
-      <td>language</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.language") %></td>
-    </tr>
-    <tr>
-      <td>binary</td>
-      <td>Binary</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.binary") %></td>
-    </tr>
-    <tr>
-      <td>size</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.size") %></td>
-    </tr>
-    <tr>
-      <td>updated_at</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.updated_at") %></td>
-    </tr>
-    <tr>
-      <td>uuid</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.apps.attributes.list.uuid") %></td>
-    </tr>
   </tbody>
 </table>
 
@@ -114,7 +110,7 @@
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps?access_token={token}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps/<%= I18n.t("api.object_type") %>?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -125,7 +121,7 @@
 
 <div class="tab-content">
 <div class="tab-pane active" id="index-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/apps?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/apps/posxml?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="index-tab2">
@@ -133,7 +129,7 @@
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/apps?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/apps/posxml?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -156,43 +152,41 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
       "entries":2,
       "total_entries":2
    },
-   "apps":[
+   "posxml_apps":[
       {
-         "app":{
-            "authorizer_url":"http://myhost.com",
-            "crc":"5A02",
-            "created_at":"2013-07-24T12:09:30-03:00",
-            "created_by":218,
-            "created_via":"interface",
-            "description":"Hello World",
-            "displayable":true,
+         "posxml_app":{
             "id":172,
             "name":"helloworld.posxml",
+            "description":"Hello World",
+            "authorizer_url":"http://myhost.com",
+            "displayable":true,
             "pos_display_label":"HELLO WORLD",
-            "language":"posxml",
-            "binary":"ZDAKMApoZWxsb3dvcmxkLnBvc3htbAoNdQ0=",
+            "crc":"5A02",
             "size":18,
-            "updated_at":"2013-07-24T12:09:49-03:00",
-            "uuid":"2ca44bb6567747f8a3b0eed5dfe714f0"
+            "uuid":"2ca44bb6567747f8a3b0eed5dfe714f0",
+            "bytecode":"ZDAKMApoZWxsb3dvcmxkLnBvc3htbAoNdQ0=",
+            "updated_at":"2015-01-30T12:09:49-03:00",
+            "created_at":"2015-01-30T12:09:30-03:00",
+            "created_by":218,
+            "created_via":"interface"
          }
       },
       {
-         "app":{
-            "authorizer_url":"tcp://myhost.com:800",
-            "crc":"1FAE",
-            "created_at":"2013-07-24T12:12:42-03:00",
-            "created_by":218,
-            "created_via":"interface",
-            "description":"Sample App",
-            "displayable":true,
+         "posxml_app":{
             "id":173,
             "name":"sample.posxml",
+            "description":"Sample App",
+            "authorizer_url":"tcp://myhost.com:800",
+            "displayable":true,
             "pos_display_label":"SAMPLE APP",
-            "language":"posxml",
-            "binary":"ZDAKMApzYW1wbGUucG9zeG1sCg11DQ==",
+            "crc":"1FAE",
             "size":17,
-            "updated_at":"2013-07-24T12:13:26-03:00",
             "uuid":"34809a19bc192aa901823c911230ff0a"
+            "bytecode":"ZDAKMApzYW1wbGUucG9zeG1sCg11DQ==",
+            "updated_at":"2015-01-30T12:13:26-03:00",
+            "created_at":"2015-01-30T12:12:42-03:00",
+            "created_by":218,
+            "created_via":"interface"
          }
       }
    ]
@@ -205,7 +199,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps/{app_id}?access_token={token}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps/<%= I18n.t("api.object_type") %>/{app_id}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -216,7 +210,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="show-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/apps/172?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/apps/posxml/172?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="show-tab2">
@@ -224,7 +218,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/apps/172?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/apps/posxml/172?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -241,22 +235,21 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "app":{
-    "authorizer_url":"http://myhost.com",
-    "crc":"5A02",
-    "created_at":"2013-07-24T12:09:30-03:00",
-    "created_by":218,
-    "created_via":"interface",
-    "description":"Hello World",
-    "displayable":true,
+  "posxml_app":{
     "id":172,
     "name":"helloworld.posxml",
+    "description":"Hello World",
+    "authorizer_url":"http://myhost.com",
+    "displayable":true,
     "pos_display_label":"HELLO WORLD",
-    "language":"posxml",
-    "binary":"ZDAKMApIZWxsbyBXb3JsZAoN",
+    "crc":"5A02",
     "size":18,
-    "updated_at":"2013-07-24T12:09:49-03:00",
-    "uuid":"2ca44bb6567747f8a3b0eed5dfe714f0"
+    "uuid":"2ca44bb6567747f8a3b0eed5dfe714f0",
+    "bytecode":"ZDAKMApIZWxsbyBXb3JsZAoN",
+    "updated_at":"2015-01-30T12:09:49-03:00",
+    "created_at":"2015-01-30T12:09:30-03:00",
+    "created_by":218,
+    "created_via":"interface"
   }
 }
 </code></pre>
@@ -267,7 +260,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>POST https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps?access_token={token}</code></pre>
+<pre><code>POST https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps/<%= I18n.t("api.object_type") %>?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -278,7 +271,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="create-tab1">
-<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/apps?access_token=$TOKEN" \
+<pre><code>$ curl -X POST "https://api.cloudwalk.io/v1/apps/posxml?access_token=$TOKEN" \
 -d '{"name":"newapp","description":"desc","displayable":"false","authorizer_url":"http://auth.io"}'
 </code></pre>
 </div>
@@ -296,7 +289,7 @@ payload = {
   "authorizer_url" => "http://auth.io"
 }
 
-uri = URI("https://api.cloudwalk.io/v1/apps?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/apps/posxml?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -314,23 +307,21 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "app":{
-    "authorizer_url":"http://auth.io",
-    "company_id":1,
-    "crc":"EFBD",
-    "created_at":"2013-07-26T20:33:31Z",
-    "created_by":218,
-    "created_via":"api",
-    "description":"desc",
-    "displayable":false,
+  "posxml_app":{
     "id":173,
     "name":"newapp.posxml",
+    "description":"desc",
+    "authorizer_url":"http://auth.io",
+    "displayable":false,
     "pos_display_label":"",
-    "language":"posxml",
-    "binary":"ZDAKMApuZXdhcHAucG9zeG1sCg0=",
+    "crc":"EFBD",
     "size":20,
-    "updated_at":"2013-07-26T20:33:31Z",
-    "uuid":"763f25a891924e0d974d5df871381b11"
+    "uuid":"763f25a891924e0d974d5df871381b11",
+    "bytecode":"ZDAKMApuZXdhcHAucG9zeG1sCg0=",
+    "updated_at":"2015-01-30T20:33:31Z",
+    "created_at":"2015-01-30T20:33:31Z",
+    "created_by":218,
+    "created_via":"api"
   }
 }
 </code></pre>
@@ -341,7 +332,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps/{app_id}?access_token={token}</code></pre>
+<pre><code>PUT https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps/<%= I18n.t("api.object_type") %>/{app_id}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -354,7 +345,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="update-tab1">
-<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/apps/173?access_token=$TOKEN" \
+<pre><code>$ curl -X PUT "https://api.cloudwalk.io/v1/apps/posxml/173?access_token=$TOKEN" \
 -d '{"binary":"ZDAKMApDbG91ZFdhbGsKDQ=="}'
 </code></pre>
 </div>
@@ -369,7 +360,7 @@ payload = {
   "binary" => "ZDAKMApDbG91ZFdhbGsKDQ=="
 }
 
-uri = URI("https://api.cloudwalk.io/v1/apps/173?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/apps/posxml/173?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -385,23 +376,21 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 <h3><%= I18n.t("api.response") %></h3>
 
 <pre><code data-language="javascript">{
-  "app":{
-    "authorizer_url":"http://auth.io",
-    "company_id":1,
-    "crc":"905A",
-    "created_at":"2013-07-26T21:39:23Z",
-    "created_by":218,
-    "created_via":"api",
-    "description":"desc",
-    "displayable":false,
+  "posxml_app":{
     "id":173,
     "name":"newapp.posxml",
+    "description":"desc",
+    "authorizer_url":"http://auth.io",
+    "displayable":false,
     "pos_display_label":"",
-    "language":"posxml",
-    "binary":"ZDAKMApDbG91ZFdhbGsKDQ==",
+    "crc":"905A",
     "size":16,
-    "updated_at":"2013-07-26T21:50:21Z",
-    "uuid":"6828c8d4b01242158243b797ae10df4b"
+    "uuid":"6828c8d4b01242158243b797ae10df4b",
+    "binary":"ZDAKMApDbG91ZFdhbGsKDQ==",
+    "updated_at":"2015-01-30T21:50:21Z",
+    "created_at":"2015-01-30T21:39:23Z",
+    "created_by":218,
+    "created_via":"api"
   }
 }
 </code></pre>
@@ -412,7 +401,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps/{app_id}?access_token={token}</code></pre>
+<pre><code>DELETE https://api.cloudwalk.io/<%= I18n.t("api.version") %>/apps/<%= I18n.t("api.object_type") %>/{app_id}?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -423,7 +412,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="destroy-tab1">
-<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/apps/173?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X DELETE "https://api.cloudwalk.io/v1/apps/posxml/173?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="destroy-tab2">
@@ -431,7 +420,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/apps/173?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/apps/posxml/173?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true

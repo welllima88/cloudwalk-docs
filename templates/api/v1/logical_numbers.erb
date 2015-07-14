@@ -4,10 +4,6 @@
 
 <h1><%= I18n.t("api.v1.logical_numbers.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "24/10/2014") %></p>
-
-<h4><%= I18n.t("general.index") %></h4>
-
 <ol class="table-of-contents">
   <li><a href="#attributes"><%= I18n.t("api.v1.logical_numbers.table_of_contents.attributes") %></a></li>
   <li><a href="#index"><%= I18n.t("api.v1.logical_numbers.table_of_contents.index") %></a></li>
@@ -31,9 +27,29 @@
   </thead>
   <tbody>
     <tr>
+      <td>id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.logical_numbers.attributes.list.id") %></td>
+    </tr>
+    <tr>
+      <td>number</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logical_numbers.attributes.list.number") %></td>
+    </tr>
+    <tr>
+      <td>group_id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.logical_numbers.attributes.list.group_id") %></td>
+    </tr>
+    <tr>
       <td>app_ids</td>
       <td>Integer (array)</td>
       <td><%= I18n.t("api.v1.logical_numbers.attributes.list.app_ids") %></td>
+    </tr>
+    <tr>
+      <td>updated_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logical_numbers.attributes.list.updated_at") %></td>
     </tr>
     <tr>
       <td>created_at</td>
@@ -49,26 +65,6 @@
       <td>created_via</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.logical_numbers.attributes.list.created_via") %></td>
-    </tr>
-    <tr>
-      <td>group_id</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.logical_numbers.attributes.list.group_id") %></td>
-    </tr>
-    <tr>
-      <td>id</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.logical_numbers.attributes.list.id") %></td>
-    </tr>
-    <tr>
-      <td>number</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.logical_numbers.attributes.list.number") %></td>
-    </tr>
-    <tr>
-      <td>updated_at</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.logical_numbers.attributes.list.updated_at") %></td>
     </tr>
   </tbody>
 </table>
@@ -124,28 +120,26 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
    "logical_numbers":[
       {
          "logical_number":{
-            "company_id":1,
-            "created_at":"2013-07-29T18:59:14Z",
-            "created_by":1,
-            "created_via":"interface",
-            "group_id":null,
             "id":1,
             "number":"112233",
-            "updated_at":"2013-07-29T18:59:14Z",
-            "app_ids":[]
+            "group_id":null,
+            "app_ids":[],
+            "updated_at":"2015-03-02T18:59:14Z",
+            "created_at":"2015-03-02T18:59:14Z",
+            "created_by":1,
+            "created_via":"interface"
          }
       },
       {
          "logical_number":{
-            "company_id":1,
-            "created_at":"2013-07-29T18:59:29Z",
-            "created_by":1,
-            "created_via":"interface",
-            "group_id":null,
             "id":2,
             "number":"445566",
-            "updated_at":"2013-07-29T18:59:29Z",
-            "app_ids":[]
+            "group_id":null,
+            "app_ids":[],
+            "updated_at":"2015-03-02T18:59:29Z",
+            "created_at":"2015-03-02T18:59:29Z",
+            "created_by":1,
+            "created_via":"interface"
          }
       }
    ]
@@ -195,15 +189,14 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <pre><code data-language="javascript">{
   "logical_number":{
-    "company_id":1,
-    "created_at":"2013-07-29T18:59:29Z",
-    "created_by":1,
-    "created_via":"interface",
-    "group_id":null,
     "id":2,
     "number":"445566",
-    "updated_at":"2013-07-29T18:59:29Z",
-    "app_ids":[]
+    "group_id":null,
+    "app_ids":[],
+    "updated_at":"2015-03-02T18:59:29Z",
+    "created_at":"2015-03-02T18:59:29Z",
+    "created_by":1,
+    "created_via":"interface"
   }
 }
 </code></pre>
@@ -257,14 +250,14 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <pre><code data-language="javascript">{
   "logical_number":{
-    "company_id":1,
-    "created_at":"2013-07-29T19:17:19Z",
-    "created_by":1,
-    "created_via":"api",
-    "group_id":null,
     "id":3,
     "number":"778899",
-    "updated_at":"2013-07-29T19:17:19Z"
+    "group_id":null,
+    "app_ids":[],
+    "updated_at":"2015-03-02T19:17:19Z",
+    "created_at":"2015-03-02T19:17:19Z",
+    "created_by":1,
+    "created_via":"api"
   }
 }
 </code></pre>
@@ -318,14 +311,14 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <pre><code data-language="javascript">{
   "logical_number":{
-    "company_id":1,
-    "created_at":"2013-07-29T19:17:19Z",
-    "created_by":1,
-    "created_via":"api",
-    "group_id":null,
     "id":3,
     "number":"889900",
-    "updated_at":"2013-07-29T19:20:27Z"
+    "group_id":null,
+    "app_ids":[],
+    "updated_at":"2015-03-02T19:20:27Z",
+    "created_at":"2015-03-02T19:17:19Z",
+    "created_by":1,
+    "created_via":"api"
   }
 }
 </code></pre>

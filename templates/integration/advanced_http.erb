@@ -4,10 +4,6 @@
 
 <h1><%= I18n.t("integration.advanced_http.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "21/03/2014") %></p>
-
-<h4><%= I18n.t("general.index") %></h4>
-
 <ol class="table-of-contents">
   <li><a href="#introduction"><%= I18n.t("integration.advanced_http.table_of_contents.introduction") %></a></li>
   <li><a href="#http-samples"><%= I18n.t("integration.advanced_http.table_of_contents.http_samples") %></a></li>
@@ -67,79 +63,4 @@
 
 <p><%= I18n.t("integration.advanced_http.posxml_sample.paragraph_1") %></p>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iRet" /&gt;
-&lt;cleandisplay /&gt;
-&lt;display line="1" column="3" message=" CONNECTING " /&gt;
-
-&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_01") %> --&gt;
-&lt;preconnect variablestatus="$(iRet)" /&gt;
-&lt;if variable="$(iRet)" operator="notequalto" value="0"&gt;
-  &lt;cleandisplay /&gt;
-  &lt;display line="1" column="3" message="  CONNECTING " /&gt;
-  &lt;display line="2" column="3" message="     ERROR   " /&gt;
-  &lt;waitkeytimeout seconds="5" /&gt;
-  &lt;network.hostdisconnect /&gt;
-  &lt;exit /&gt;
-&lt;else /&gt;
-  &lt;display line="1" column="3" message=" SENDING " /&gt;
-&lt;/if&gt;
-
-&lt;stringvariable value="POST / " variable="sVerbAndPath" /&gt;
-&lt;stringvariable value="buf=0123456789" variable="sBuf" /&gt;
-&lt;stringvariable value="&amp;amp" variable="sAmp" /&gt;
-&lt;stringvariable value="anotherVariable=ABCDEF" variable="sAnotherVariable" /&gt;
-
-&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_02") %> --&gt;
-&lt;joinstring firstvalue="$(sVerbAndPath)" secondvalue="$(sBuf)" variabledestination="$(sBuf)" /&gt;
-&lt;joinstring firstvalue="$(sBuf)" secondvalue="$(sAmp)" variabledestination="$(sBuf)" /&gt;
-&lt;joinstring firstvalue="$(sBuf)" secondvalue="$(sAnotherVariable)" variabledestination="$(sBuf)" /&gt;
-
-&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_03") %> --&gt;
-&lt;integervariable value="0" variable="iSize" /&gt;
-&lt;string.tohex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
-&lt;string.length value="$(sBuf)" variablereturn="$(iSize)" /&gt;
-
-&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_04") %> --&gt;
-&lt;integervariable value="0" variable="iRet" /&gt;
-&lt;network.send buffer="$(sBuf)" size="$(iSize)" variablereturn="$(iRet)" /&gt;
-
-&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_05") %> --&gt;
-&lt;stringvariable value="" variable="sBufReceive" /&gt;
-&lt;integervariable value="0" variable="iBytesReceive" /&gt;
-
-&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_06") %> --&gt;
-&lt;network.receive variablebuffer="$(sBufReceive)" maxsize="4"
-                 variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
-
-&lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
-  &lt;cleandisplay /&gt;
-  &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
-  &lt;display line="2" column="3" message="     ERROR     " /&gt;
-  &lt;waitkeytimeout seconds="5" /&gt;
-  &lt;network.hostdisconnect /&gt;
-  &lt;exit /&gt;
-&lt;/if&gt;
-
-&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_07") %> --&gt;
-&lt;string.fromhex string="$(sBufReceive)" variablereturn="$(sBufReceive)" /&gt;
-&lt;convert.toint base="16" number="$(sBufReceive)" variablereturn="$(iSize)" /&gt;
-&lt;network.receive variablebuffer="$(sBufReceive)" maxsize="$(iSize)"
-                 variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
-
-&lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
-  &lt;cleandisplay /&gt;
-  &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
-  &lt;display line="2" column="3" message="     ERROR     " /&gt;
-  &lt;waitkeytimeout seconds="5" /&gt;
-  &lt;network.hostdisconnect /&gt;
-  &lt;exit /&gt;
-&lt;/if&gt;
-
-&lt;!-- <%= I18n.t("integration.advanced_http.posxml_sample.posxml.comment_08") %> --&gt;
-&lt;string.fromhex string="$(sBufReceive)" variablereturn="$(sBufReceive)" /&gt;
-&lt;cleandisplay /&gt;
-&lt;display line="1" column="3" message=" RECEIVED: " /&gt;
-&lt;display line="2" column="0" message="$(sBufReceive)" /&gt;
-&lt;waitkeytimeout seconds="5" /&gt;
-&lt;network.hostdisconnect /&gt;
-</code></pre>
+<%= embed_posxml_code("c1a5e9bd3f60fc1856d9") %>

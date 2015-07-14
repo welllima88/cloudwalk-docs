@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>emv.open</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "01/09/2013") %></p>
-
 <p class="note"><%= I18n.t("posxml.commands.emv_open.paragraph_1") %></p>
 
 <p><%= I18n.t("posxml.commands.emv_open.paragraph_2") %></p>
@@ -22,17 +20,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("2596a1711bd449bc2da3", true) %>
 
-&lt;emv.open mkslot="0" pinpadtype="2" pinpadwk="0123456789ABCDEF" showamount="1" variablereturn="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.emv_open.paragraph_3") %></p>

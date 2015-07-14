@@ -4,10 +4,6 @@
 
 <h1><%= I18n.t("integration.tcp.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "08/10/2014") %></p>
-
-<h4><%= I18n.t("general.index") %></h4>
-
 <ol class="table-of-contents">
   <li><a href="#understanding-the-comunication"><%= I18n.t("integration.tcp.table_of_contents.understanding_the_service") %></a></li>
   <li><a href="#sample"><%= I18n.t("integration.tcp.table_of_contents.sample") %></a></li>
@@ -67,57 +63,7 @@
   <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_11") %></li>
 </ol>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iConnect" /&gt;
-&lt;integervariable value="0" variable="iRet" /&gt;
-&lt;integervariable value="0" variable="iSize" /&gt;
-&lt;stringvariable value="" variable="sBuf" /&gt;
-
-&lt;display line="0" column="0" message="TCP socket test" /&gt;
-
-&lt;!-- <%= I18n.t("integration.tcp.walk_manager_setup.create_application.posxml.comment_01") %> --&gt;
-&lt;display line="1" column="0" message="Connecting ..." /&gt;
-&lt;preconnect variablestatus="$(iConnect)" /&gt;
-
-&lt;!-- <%= I18n.t("integration.tcp.walk_manager_setup.create_application.posxml.comment_02") %> --&gt;
-&lt;if variable="$(iConnect)" operator="igual" value="0" &gt;
-  &lt;display line="1" column="0" message="Connected!" /&gt;
-
-  &lt;!-- <%= I18n.t("integration.tcp.walk_manager_setup.create_application.posxml.comment_03") %> --&gt;
-
-  &lt;!-- <%= I18n.t("integration.tcp.walk_manager_setup.create_application.posxml.comment_04") %> --&gt;
-
-  &lt;display line="3" column="0" message="Sending ..." /&gt;
-
-  &lt;stringvariable value="0123456789" variable="sBufSend" /&gt;
-  &lt;integervariable value="0" variable="iSzBufSend" /&gt;
-
-  &lt;string.tohex string="$(sBufSend)" variablereturn="$(sBufSend)" /&gt;
-  &lt;string.length value="$(sBufSend)" variablereturn="$(iSzBufSend)" /&gt;
-  &lt;network.send buffer="$(sBufSend)" size="$(iSzBufSend)" variablereturn="$(iRet)" /&gt;
-
-  &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
-    &lt;!-- <%= I18n.t("integration.tcp.walk_manager_setup.create_application.posxml.comment_05") %> --&gt;
-    &lt;network.receive variablebuffer="$(sBuf)" maxsize="20" variablereceivedbytes="$(iSize)" variablereturn="$(iRet)" /&gt;
-    &lt;string.fromhex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
-
-    &lt;if operator="equalto" value="1" variable="$(iRet)"&gt;
-      &lt;display line="5" column="0" message="Socket response:" /&gt;
-      &lt;display line="6" column="0" message="$(sBuf)" /&gt;
-    &lt;else/&gt;
-      &lt;display line="5" column="0" message="Receive failed!" /&gt;
-    &lt;/if&gt;
-  &lt;else/&gt;
-    &lt;display line="5" column="0" message="Send failed!" /&gt;
-  &lt;/if&gt;
-
-  &lt;!-- <%= I18n.t("integration.tcp.walk_manager_setup.create_application.posxml.comment_06") %> --&gt;
-  &lt;network.hostdisconnect /&gt;
-&lt;else /&gt;
-  &lt;display line="1" column="0" message="Connection failed!" /&gt;
-&lt;/if&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
+<%= embed_posxml_code("fa64218692fef78ac97c") %>
 
 <h2 id="walk-manager-setup"><%= I18n.t("integration.tcp.table_of_contents.walk_manager_setup") %></h2>
 

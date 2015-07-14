@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>function</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "02/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.function.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -16,21 +14,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="39" variable="iNumber"/&gt;
-&lt;stringvariable value="" variable="sResult"/&gt;
+<%= embed_posxml_code("d0e1306e67f0fa11058b") %>
 
-&lt;function name="double_value"&gt;
-  &lt;mathematicaloperation firstvalue="$(iNumber)" operator="*" secondvalue="2" variabledestination="$(iNumber)"/&gt;
-&lt;/function&gt;
-
-&lt;callfunction name="double_value"/&gt;
-
-&lt;inttostring variableinteger="$(iNumber)" variablestring="$(sResult)"/&gt;
-
-&lt;display column="0" line="0" message="$(sResult)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.function.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.function.paragraph_3") %></p>

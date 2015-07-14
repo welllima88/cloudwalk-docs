@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>file.open</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "03/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.file_open.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -18,17 +16,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("8c38cc1ecd9b4f78856f", true) %>
 
-&lt;downloadfile filename="test.txt" remotepath="test.txt" variablereturn="$(iReturn)" /&gt;
-
-&lt;file.open filename="test.txt" mode="r" variablehandle="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.file_open.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.file_open.paragraph_3") %></p>

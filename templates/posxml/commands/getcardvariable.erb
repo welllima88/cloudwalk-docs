@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>getcardvariable</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "02/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.getcardvariable.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -20,13 +18,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn"/&gt;
+<%= embed_posxml_code("523551e04fa3e2c7dc13") %>
 
-&lt;getcardvariable firstmessage="Pass the card in the magnetic reader" maximum="16" minimum="12" secondmessage="Enter the number of the card" variable="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.getcardvariable.paragraph_2") %></p>

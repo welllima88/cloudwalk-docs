@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>filesystem.listfiles</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "28/08/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.filesystem_listfiles.paragraph_1") %></p>
 
 <p class="note"><%= I18n.t("posxml.commands.filesystem_listfiles.paragraph_2") %></p>
@@ -20,15 +18,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("f1324bf982b7fb7a0862") %>
 
-&lt;filesystem.listfiles dir="F" listfilename="files.dat" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-
-&lt;display line="0" column="0" message="$(sReturn)"&gt;
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.filesystem_listfiles.paragraph_3") %></p>

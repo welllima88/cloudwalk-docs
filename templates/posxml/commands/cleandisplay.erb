@@ -4,23 +4,12 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>cleandisplay</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "02/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.cleandisplay.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;display column="0" line="0" message="Message 1" /&gt;
-&lt;display column="0" line="1" message="Message 2" /&gt;
-&lt;display column="0" line="2" message="Message 3" /&gt;
-&lt;display column="0" line="3" message="Message 4" /&gt;
+<%= embed_posxml_code("150005d153c36e0b46e4") %>
 
-&lt;waitkey /&gt;
-
-&lt;cleandisplay /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.cleandisplay.paragraph_2") %></p>

@@ -1,12 +1,8 @@
 <% content_for :docs_description do %>
-  <meta name="docs:description" content="Tutorial for logs patterns and anomalies">
+  <meta name="docs:description" content="<%= I18n.t("guides.transactions_patterns.patterns_chart.description") %>">
 <% end %>
 
 <h1><%= I18n.t("guides.transactions_patterns.patterns_chart.title") %></h1>
-
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
-
-<h4><%= I18n.t("general.index") %></h4>
 
 <ol class="table-of-contents">
   <li><a href="#interface-presentation"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.interface_presentation") %></a></li>
@@ -40,8 +36,6 @@
   <li><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.list.item_3") %></li>
   <li><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.list.item_4") %></li>
 </ul>
-
-<p><%= I18n.t("guides.transactions_patterns.patterns_chart.chart_interaction.paragraph_2") %></p>
 
 <h2 id="transactions-stacks"><%= I18n.t("guides.transactions_patterns.patterns_chart.table_of_contents.transactions_stacks") %></h2>
 
@@ -116,6 +110,6 @@ function showChartMinPts(minPts)
     <%= link_to("&larr; " + I18n.t("guides.transactions_patterns.patterns_chart.previous"), "guides/transactions-patterns/anomalies-report") %>
   </li>
   <li class="next">
-    <%= link_to(I18n.t("guides.transactions_patterns.patterns_chart.next") + " &rarr;", "guides/transactions-patterns/notifications-settings") %>
+    <%= link_to(I18n.t("guides.transactions_patterns.patterns_chart.next") + " &rarr;", "guides/transactions-patterns/advanced-settings") %>
   </li>
 </ul>

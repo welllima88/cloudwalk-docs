@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>filesystem.renamefile</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "27/08/2014") %></p>
-
 <p><%= I18n.t("posxml.commands.filesystem_renamefile.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -18,8 +16,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;filesystem.renamefile oldname="file_temp.dat" newname="file.dat" variablereturn="$(iReturn)" /&gt;
-</code></pre>
+<%= embed_posxml_code("a61ca7eebc61c9a786da", true) %>
+
 <hr/>
 
 <p><%= I18n.t("posxml.commands.filesystem_renamefile.paragraph_2") %></p>

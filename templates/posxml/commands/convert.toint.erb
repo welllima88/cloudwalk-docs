@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>convert.toint</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "07/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.convert_toint.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -18,19 +16,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="1010" variable="sNumber" /&gt;
-&lt;integervariable value="" variable="iNumber" /&gt;
+<%= embed_posxml_code("527a4192332328703bc5") %>
 
-&lt;stringvariable value="" variable="sReturn" /&gt;
-
-&lt;convert.toint base="2" number="$(sNumber)" variablereturn="$(iNumber)" /&gt;
-
-&lt;inttostring variableinteger="$(iNumber)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.convert_toint.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.convert_toint.paragraph_3") %></p>

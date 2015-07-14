@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>execute</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "13/08/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.execute.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -18,51 +16,13 @@
 
 <h3><%= I18n.t("posxml.commands.execute.app_name") %> <em>appone</em></h3>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
+<%= embed_posxml_code("e48e576e70ca12c0ca8b") %>
 
-&lt;display column="0" line="0" message="- APPLICATION ONE -"/&gt;
-
-&lt;display line="3" column="0" message="    CONNECTING...  " /&gt;
-&lt;preconnect variablestatus="$(iReturn)" /&gt;
-
-&lt;if variable="$(iReturn)" operator="equalto" value="0">
-  &lt;display line="3" column="0" message="    DOWNLOADING      " /&gt;
-  &lt;display line="4" column="0" message="   APPLICATION 2...  " /&gt;
-
-  &lt;downloadfile filename="apptwo.posxml" remotepath="apptwo.posxml" variablereturn="$(iReturn)" /&gt;
-  &lt;network.hostdisconnect /&gt;
-
-  &lt;if variable="$(iReturn)" operator="equalto" value="1"&gt;
-    &lt;execute filename="apptwo.posxml" /&gt;
-  &lt;else /&gt;
-    &lt;if variable="$(iReturn)" operator="notequalto" value="2"&gt;
-      &lt;display line="3" column="0" message="    DOWNLOAD    " /&gt;
-      &lt;display line="4" column="0" message="     ERROR!     " /&gt;
-      &lt;waitkey /&gt;
-    &lt;else /&gt;
-      &lt;execute filename="apptwo.posxml" /&gt;
-    &lt;/if&gt;
-  &lt;/if&gt;
-&lt;else /&gt;
-  &lt;display line="3" column="0" message="    CONNECTION  " /&gt;
-  &lt;display line="4" column="0" message="      ERROR!    " /&gt;
-  &lt;network.hostdisconnect /&gt;
-  &lt;waitkey /&gt;
-&lt;/if&gt;
-</code></pre>
+<hr/>
 
 <h3><%= I18n.t("posxml.commands.execute.app_name") %> <em>apptwo</em></h3>
 
-<pre><code data-language="html">&lt;display column="0" line="0" message="- APPLICATION TWO - "/&gt;
-
-&lt;display column="0" line="2" message="  Opened using the "/&gt;
-&lt;display column="0" line="3" message="  command execute"/&gt;
-
-&lt;display column="0" line="5" message="    PRESS GREEN    "/&gt;
-&lt;waitkey /&gt;
-</code></pre>
-
-<hr/>
+<%= embed_posxml_code("4beb5cb9bb9a014c8a72") %>
 
 <p><%= I18n.t("posxml.commands.execute.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.execute.paragraph_3") %></p>

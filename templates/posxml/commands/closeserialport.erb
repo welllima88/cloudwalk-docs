@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>closeserialport</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "10/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.closeserialport.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -16,15 +14,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturnHandle" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("47244a551a2bcad08f65", true) %>
 
-&lt;openserialport port="COM1" rate="115200" configuration="A8N1" variablereturn="$(iReturnHandle)" /&gt;
-
-&lt;closeserialport variablehandle="$(iReturnHandle)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.closeserialport.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.closeserialport.paragraph_3") %></p>

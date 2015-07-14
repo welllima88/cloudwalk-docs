@@ -4,39 +4,11 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>else</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "13/08/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.else.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="blue" variable="sColor"/&gt;
-&lt;integervariable value="123" variable="iNumber"/&gt;
-
-&lt;if variable="$(sColor)" operator="equalto" value="Blue"&gt;
-  &lt;display column="0" line="0" message="Will not show" /&gt;
-&lt;else/&gt;
-  &lt;display column="0" line="0" message="Blue different from blue" /&gt;
-&lt;/if&gt;
-
-&lt;waitkey/&gt;
-
-&lt;if variable="$(iNumber)" operator="lessthanorequalto" value="111"&gt;
-  &lt;display column="0" line="0" message="Will not show" /&gt;
-&lt;else/&gt;
-  &lt;display column="0" line="0" message="123 is greater than 111" /&gt;
-&lt;/if&gt;
-
-&lt;waitkey/&gt;
-
-&lt;if variable="$(sColor)" operator="notequalto" value="blue"&gt;
-  &lt;display column="0" line="0" message="Will not show" /&gt;
-&lt;else/&gt;
-  &lt;display column="0" line="0" message="blue is equal to blue" /&gt;
-&lt;/if&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
+<%= embed_posxml_code("0298266480d3a5edc6fa") %>
 
 <hr/>
 

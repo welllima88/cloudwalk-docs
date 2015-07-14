@@ -4,10 +4,6 @@
 
 <h1><%= I18n.t("api.v1.assets.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "31/05/2014") %></p>
-
-<h4><%= I18n.t("general.index") %></h4>
-
 <ol class="table-of-contents">
   <li><a href="#attributes"><%= I18n.t("api.v1.assets.table_of_contents.attributes") %></a></li>
   <li><a href="#index"><%= I18n.t("api.v1.assets.table_of_contents.index") %></a></li>
@@ -31,14 +27,44 @@
   </thead>
   <tbody>
     <tr>
+      <td>id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.assets.attributes.list.id") %></td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.assets.attributes.list.name") %></td>
+    </tr>
+    <tr>
+      <td>file_type</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.assets.attributes.list.file_type") %></td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.assets.attributes.list.description") %></td>
+    </tr>
+    <tr>
       <td>content</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.assets.attributes.list.content") %></td>
     </tr>
     <tr>
+      <td>size</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.assets.attributes.list.size") %></td>
+    </tr>
+    <tr>
       <td>crc</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.assets.attributes.list.crc") %></td>
+    </tr>
+    <tr>
+      <td>updated_at</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.assets.attributes.list.updated_at") %></td>
     </tr>
     <tr>
       <td>created_at</td>
@@ -54,31 +80,6 @@
       <td>created_via</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.assets.attributes.list.created_via") %></td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.assets.attributes.list.description") %></td>
-    </tr>
-    <tr>
-      <td>id</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.assets.attributes.list.id") %></td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.assets.attributes.list.name") %></td>
-    </tr>
-    <tr>
-      <td>size</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.assets.attributes.list.size") %></td>
-    </tr>
-    <tr>
-      <td>updated_at</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.assets.attributes.list.updated_at") %></td>
     </tr>
   </tbody>
 </table>
@@ -134,28 +135,30 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
    "files":[
       {
          "file":{
-            "crc":"B446",
-            "created_at":"2013-07-30T15:47:34Z",
-            "created_by":1,
-            "created_via":"interface",
-            "description":"Bins",
             "id":6,
             "name":"bins.dat",
+            "file_type":"asset",
+            "description":"Bins",
             "size":19,
-            "updated_at":"2013-07-30T15:49:56Z"
+            "crc":"B446",
+            "updated_at":"2015-03-02T15:49:56Z",
+            "created_at":"2015-03-02T15:47:34Z",
+            "created_by":1,
+            "created_via":"interface"
          }
       },
       {
          "file":{
-            "crc":"416C",
-            "created_at":"2013-07-30T15:52:23Z",
-            "created_by":1,
-            "created_via":"interface",
-            "description":"Config",
             "id":8,
             "name":"config.dat",
+            "file_type":"asset",
+            "description":"Config",
             "size":11,
-            "updated_at":"2013-07-30T15:52:23Z"
+            "crc":"416C",
+            "updated_at":"2015-03-02T15:52:23Z",
+            "created_at":"2015-03-02T15:52:23Z",
+            "created_by":1,
+            "created_via":"interface"
          }
       }
    ]
@@ -205,16 +208,17 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <pre><code data-language="javascript">{
   "file":{
-    "content":"MT0yCjM9NAo0PTUKNj03Cjg9OQ==",
-    "crc":"B446",
-    "created_at":"2013-07-30T15:47:34Z",
-    "created_by":1,
-    "created_via":"interface",
-    "description":"Bins",
     "id":6,
     "name":"bins.dat",
+    "file_type":"asset",
+    "description":"Bins",
+    "content":"MT0yCjM9NAo0PTUKNj03Cjg9OQ==",
     "size":19,
-    "updated_at":"2013-07-30T15:49:56Z"
+    "crc":"B446",
+    "updated_at":"2015-03-02T15:49:56Z",
+    "created_at":"2015-03-02T15:47:34Z",
+    "created_by":1,
+    "created_via":"interface"
   }
 }
 </code></pre>
@@ -271,17 +275,17 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <pre><code data-language="javascript">{
   "file":{
-    "company_id":1,
-    "content":"YT1iCmM9ZAplPWY=",
-    "crc":"416C",
-    "created_at":"2013-07-30T16:30:51Z",
-    "created_by":1,
-    "created_via":"api",
-    "description":"CloudWalk DAT",
     "id":10,
     "name":"file.dat",
+    "file_type":"asset",
+    "description":"CloudWalk DAT",
+    "content":"YT1iCmM9ZAplPWY=",
     "size":11,
-    "updated_at":"2013-07-30T16:30:51Z"
+    "crc":"416C",
+    "updated_at":"2015-03-02T16:30:51Z",
+    "created_at":"2015-03-02T16:30:51Z",
+    "created_by":1,
+    "created_via":"api"
   }
 }
 </code></pre>
@@ -335,17 +339,17 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <pre><code data-language="javascript">{
   "file":{
-    "company_id":1,
-    "content":"YT1iCmM9ZAplPWYKZz1o",
-    "crc":"1E15",
-    "created_at":"2013-07-30T16:30:51Z",
-    "created_by":1,
-    "created_via":"api",
-    "description":"New CloudWalk DAT",
     "id":10,
     "name":"file.dat",
+    "file_type":"asset",
+    "description":"New CloudWalk DAT",
+    "content":"YT1iCmM9ZAplPWYKZz1o",
     "size":15,
-    "updated_at":"2013-07-30T16:42:01Z"
+    "crc":"1E15",
+    "updated_at":"2015-03-02T16:42:01Z",
+    "created_at":"2015-03-02T16:30:51Z",
+    "created_by":1,
+    "created_via":"api"
   }
 }
 </code></pre>

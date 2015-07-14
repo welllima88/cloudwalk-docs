@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>inputinteger</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "02/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.inputinteger.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -20,16 +18,7 @@
 </ol>
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="" variable="iNumber" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("cd9d69a7d939b0cc2a6a", true) %>
 
-&lt;inputinteger column="0" line="0" maximum="100" minimum="0" variable="$(iNumber)" message="Type a integer number: " /&gt;
-
-&lt;inttostring variableinteger="$(iNumber)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="2" message="$(sReturn)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.inputinteger.paragraph_2") %></p>

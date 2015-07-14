@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>integerconvert</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "07/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.integerconvert.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -19,19 +17,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sBinaryReturn" /&gt;
-&lt;stringvariable value="" variable="sOctalReturn" /&gt;
-&lt;stringvariable value="" variable="sHexaReturn" /&gt;
+<%= embed_posxml_code("d0c258be79b3ae13012e") %>
 
-&lt;integerconvert base="2" number="10" sizereturn="2" variablereturn="$(sBinaryReturn)" /&gt;
-&lt;integerconvert base="8" number="10" sizereturn="8" variablereturn="$(sOctalReturn)" /&gt;
-&lt;integerconvert base="16" number="10" sizereturn="16" variablereturn="$(sHexaReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sBinaryReturn)" /&gt;
-&lt;display column="0" line="1" message="$(sOctalReturn)" /&gt;
-&lt;display column="0" line="2" message="$(sHexaReturn)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.integerconvert.paragraph_2") %></p>

@@ -9,9 +9,12 @@ SimpleCov.start
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
+require 'tilt/erb'
 require_relative 'docs.rb'
 
 include Rack::Test::Methods
+
+include Helpers
 
 def app
   Sinatra::Application
@@ -26,6 +29,11 @@ describe "Docs" do
   it "should redirect to index" do
     get '/'
     assert last_response.redirect?
+  end
+
+  it "should redirect to index" do
+    get '/en/introduction'
+    assert last_response.ok?
   end
 
   it "should have a page for every navigation item" do
@@ -58,13 +66,13 @@ describe "Docs" do
   end
 
   it "should get a pt-BR title" do
-    get '/pt-BR/introduction'
-    assert last_response.body.include?('Visão geral do serviço CloudWalk'), "I18n failed"
+    get '/pt-BR/introduction/authorizer'
+    assert last_response.body.include?('Autorizador'), "I18n failed"
   end
 
   it "should get a en title" do
-    get '/en/introduction'
-    assert last_response.body.include?('CloudWalk Service Overview'), "I18n failed"
+    get '/en/introduction/authorizer'
+    assert last_response.body.include?('Authorizer'), "I18n failed"
   end
 
   it "should change locale to en" do
@@ -113,5 +121,61 @@ describe "Docs" do
     get "/en/search?query=posxml"
     last_response.body.include?('Sorry for the inconvenience.')
     assert last_response.ok?
+  end
+
+  it "should not have english internal links without language" do
+      result = ""
+      File.open("config/locales/en.yml").each_with_index do |line, line_number|
+          found = line.scan(/<a href='(\/(?!en\/)(?!pt\-BR\/)[^']*)'/)
+          if found.length > 0
+              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
+          end
+      end
+
+      assert result.empty?, "Found some internal links without language prefix or with wrong language prefix in file config/locales/en.yml:\n#{result}To fix this you should ensure all these links have a /en/ prefix."
+  end
+
+  it "should not have portuguese internal links in english language file" do
+      result = ""
+      File.open("config/locales/en.yml").each_with_index do |line, line_number|
+          found = line.scan(/<a href='(\/pt\-BR\/[^']*)'/)
+          if found.length > 0
+              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
+          end
+      end
+
+      assert result.empty?, "Found some portuguese internal links in file config/locales/en.yml:\n#{result}To fix this you should change /pt-BR/ prefix to /en/."
+  end
+
+  it "should not have portuguese internal links without language" do
+      result = ""
+      File.open("config/locales/pt-br.yml").each_with_index do |line, line_number|
+          found = line.scan(/<a href='(\/(?!en\/)(?!pt\-BR\/)[^']*)'/)
+          if found.length > 0
+              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
+          end
+      end
+
+      assert result.empty?, "Found some internal links without language prefix or with wrong language prefix in file config/locales/pt-br.yml:\n#{result}To fix this you should ensure all these links have a /pt-BR/ prefix."
+  end
+
+  it "should not have english internal links in portuguese language file" do
+      result = ""
+      File.open("config/locales/pt-br.yml").each_with_index do |line, line_number|
+          found = line.scan(/<a href='(\/en\/[^']*)'/)
+          if found.length > 0
+              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
+          end
+      end
+
+      assert result.empty?, "Found some english internal links in file config/locales/pt-br.yml:\n#{result}To fix this you should change /en/ prefix to /pt-BR/."
+  end
+
+  it "should retrieve a gist from github" do
+    assert fetch_gist("89d6af783a0a503afb80") == "OK"
+  end
+
+  it "should not retrieve a gist from github" do
+    assert fetch_gist("89d6af783a0a503afb88").include?("It was not possible to fetch this snippet")
   end
 end

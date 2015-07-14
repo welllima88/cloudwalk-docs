@@ -4,16 +4,13 @@
 
 <h1><%= I18n.t("api.overview.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "25/11/2014") %></p>
-
-<h4><%= I18n.t("general.index") %></h4>
-
 <ol class="table-of-contents">
   <li><a href="#functionality"><%= I18n.t("api.overview.table_of_contents.functionality") %></a></li>
   <li><a href="#versioning"><%= I18n.t("api.overview.table_of_contents.versioning") %></a></li>
+  <li><a href="#api-token"><%= I18n.t("api.overview.table_of_contents.api_token") %></a></li>
+  <li><a href="#rate-limiting"><%= I18n.t("api.overview.table_of_contents.rate_limiting") %></a></li>
   <li><a href="#pagination"><%= I18n.t("api.overview.table_of_contents.pagination") %></a></li>
   <li><a href="#crud"><%= I18n.t("api.overview.table_of_contents.crud") %></a></li>
-  <li><a href="#api-token"><%= I18n.t("api.overview.table_of_contents.api_token") %></a></li>
 </ol>
 
 <h2 id="functionality"><%= I18n.t("api.overview.table_of_contents.functionality") %></h2>
@@ -34,13 +31,28 @@ YYYY-MM-DDTHH:MM:SSZ
 
 <p><%= I18n.t("api.overview.versioning.paragraph_2") %></p>
 
-<h2 id="pagination"><%= I18n.t("api.overview.table_of_contents.pagination") %></h2>
+<h2 id="api-token"><%= I18n.t("api.overview.table_of_contents.api_token") %></h2>
 
-<p><%= I18n.t("api.overview.pagination.paragraph_1") %></p>
+<p><%= I18n.t("api.overview.api_token.paragraph_1") %></p>
 
-<pre>https://api.cloudwalk.io/v1/devices?access_token=$TOKEN&page=1&per_page=50</pre>
+<img src="/img/<%= I18n.locale %>/walk-manager/api-token.jpg" class="img-polaroid" alt="API Token" />
 
-<pre>https://api.cloudwalk.io/v1/devices?access_token=$TOKEN&page=2&per_page=50</pre>
+<p><%= I18n.t("api.overview.api_token.paragraph_2") %></p>
+
+<p><span class="code">https://api.cloudwalk.io/<%= I18n.t("api.version") %>/devices?access_token=6eb718f846c6d303ed8054cdf7ccdb18c821de18</span></p>
+
+<h2 id="rate-limiting"><%= I18n.t("api.overview.table_of_contents.rate_limiting") %></h2>
+
+<p><%= I18n.t("api.overview.rate_limiting.paragraph_1") %></p>
+
+<pre>$ curl -i https://api.cloudwalk.io/v1/devices?access_token=$TOKEN
+
+HTTP/1.1 200 OK
+Date: Wed, 28 Jan 2015 18:40:50 GMT
+X-Rate-Limit-Limit: 5000
+X-Rate-Limit-Remaining: 4999
+X-Rate-Limit-Reset: 1422474051
+</pre>
 
 <h2 id="crud"><%= I18n.t("api.overview.table_of_contents.crud") %></h2>
 
@@ -55,12 +67,10 @@ YYYY-MM-DDTHH:MM:SSZ
   <li><%= I18n.t("api.overview.crud.paragraph_6", :version => I18n.t("api.version")) %></li>
 </ol>
 
-<h2 id="api-token"><%= I18n.t("api.overview.table_of_contents.api_token") %></h2>
+<h2 id="pagination"><%= I18n.t("api.overview.table_of_contents.pagination") %></h2>
 
-<p><%= I18n.t("api.overview.api_token.paragraph_1") %></p>
+<p><%= I18n.t("api.overview.pagination.paragraph_1") %></p>
 
-<img src="/img/<%= I18n.locale %>/walk-manager/api-token.png" class="img-polaroid" alt="Developer API" />
+<pre>https://api.cloudwalk.io/v1/devices?access_token=$TOKEN&page=1&per_page=50</pre>
 
-<p><%= I18n.t("api.overview.api_token.paragraph_2") %></p>
-
-<p><span class="code">https://api.cloudwalk.io/<%= I18n.t("api.version") %>/devices?access_token=6eb718f846c6d303ed8054cdf7ccdb18c821de18</span></p>
+<pre>https://api.cloudwalk.io/v1/devices?access_token=$TOKEN&page=2&per_page=50</pre>

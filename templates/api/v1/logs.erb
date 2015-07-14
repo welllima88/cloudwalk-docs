@@ -4,10 +4,6 @@
 
 <h1><%= I18n.t("api.v1.logs.title") %></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "14/08/2013") %></p>
-
-<h4><%= I18n.t("general.index") %></h4>
-
 <ol class="table-of-contents">
   <li><a href="#attributes"><%= I18n.t("api.v1.logs.table_of_contents.attributes") %></a></li>
   <li><a href="#index"><%= I18n.t("api.v1.logs.table_of_contents.index") %></a></li>
@@ -31,14 +27,14 @@
   </thead>
   <tbody>
     <tr>
-      <td>app_name</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.app_name") %></td>
+      <td>id</td>
+      <td>Integer</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.id") %></td>
     </tr>
     <tr>
-      <td>framework_version</td>
+      <td>transaction_type</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.framework_version") %></td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.transaction_type") %></td>
     </tr>
     <tr>
       <td>serial_number</td>
@@ -51,19 +47,24 @@
       <td><%= I18n.t("api.v1.logs.attributes.list.logical_number") %></td>
     </tr>
     <tr>
-      <td>id</td>
-      <td>Integer</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.id") %></td>
+      <td>app_name</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.app_name") %></td>
+    </tr>
+    <tr>
+      <td>detail</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.detail") %></td>
+    </tr>
+    <tr>
+      <td>framework_version</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.framework_version") %></td>
     </tr>
     <tr>
       <td>status</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.logs.attributes.list.status") %></td>
-    </tr>
-    <tr>
-      <td>transaction_type</td>
-      <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.transaction_type") %></td>
     </tr>
     <tr>
       <td>started_at</td>
@@ -129,28 +130,30 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
    "logs":[
       {
          "log":{
-            "app_name":"main.posxml",
-            "finished_at":"2013-08-08T14:38:56Z",
-            "framework_version":"3.58",
             "id":62946,
-            "logical_number":"1116",
+            "transaction_type":"switch",
             "serial_number":"520-501-438",
-            "started_at":"2013-08-08T14:38:55Z",
+            "logical_number":"1116",
+            "app_name":"main.posxml",
+            "detail":"",
+            "framework_version":"3.80",
             "status":"success",
-            "transaction_type":"switch"
+            "started_at":"2015-02-04T14:38:55Z",
+            "finished_at":"2015-02-04T14:38:56Z"
          }
       },
       {
          "log":{
-            "app_name":"main.posxml",
-            "finished_at":"2013-08-08T14:37:57Z",
-            "framework_version":"3.58",
             "id":62945,
-            "logical_number":"1116",
+            "transaction_type":"switch",
             "serial_number":"520-501-438",
-            "started_at":"2013-08-08T14:37:56Z",
+            "logical_number":"1116",
+            "app_name":"main.posxml",
+            "detail":"",
+            "framework_version":"3.80",
             "status":"success",
-            "transaction_type":"switch"
+            "started_at":"2015-02-04T14:37:56Z",
+            "finished_at":"2015-02-04T14:37:57Z"
          }
       }
    ]
@@ -208,15 +211,16 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
    "logs":[
       {
          "log":{
-            "app_name":"main.posxml",
-            "finished_at":"2013-08-08T13:17:14Z",
-            "framework_version":"3.58",
             "id":62955,
-            "logical_number":"1116",
+            "transaction_type":"switch",
             "serial_number":"520-541-412",
-            "started_at":"2013-08-08T13:17:12Z",
+            "logical_number":"1116",
+            "app_name":"main.posxml",
+            "detail":"",
+            "framework_version":"3.80",
             "status":"fail",
-            "transaction_type":"switch"
+            "started_at":"2015-02-04T13:17:12Z",
+            "finished_at":"2015-02-04T13:17:14Z"
          }
       }
    ]
@@ -274,15 +278,16 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
    "logs":[
       {
          "log":{
-            "app_name":"main.posxml",
-            "finished_at":"2013-08-08T13:18:37Z",
-            "framework_version":"3.58",
             "id":63002,
-            "logical_number":"1234",
+            "transaction_type":"get_asset",
             "serial_number":"531-445-314",
-            "started_at":"2013-08-08T13:18:32Z",
+            "logical_number":"1234",
+            "app_name":"main.posxml",
+            "detail":"",
+            "framework_version":"3.80",
             "status":"success",
-            "transaction_type":"get_asset"
+            "started_at":"2015-02-04T13:18:32Z",
+            "finished_at":"2015-02-04T13:18:37Z"
          }
       }
    ]
@@ -340,15 +345,16 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
    "logs":[
       {
          "log":{
-            "app_name":"main.posxml",
-            "finished_at":"2013-08-08T14:21:14Z",
-            "framework_version":"3.58",
             "id":63154,
-            "logical_number":"1122",
+            "transaction_type":"switch",
             "serial_number":"510-520-530",
-            "started_at":"2013-08-08T14:21:11Z",
+            "logical_number":"1122",
+            "app_name":"main.posxml",
+            "detail":"",
+            "framework_version":"3.80",
             "status":"success",
-            "transaction_type":"switch"
+            "started_at":"2015-02-04T14:21:11Z",
+            "finished_at":"2015-02-04T14:21:14Z"
          }
       }
    ]
@@ -408,15 +414,16 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
    "logs":[
       {
          "log":{
-            "app_name":"main.posxml",
-            "finished_at":"2013-08-08T15:38:04Z",
-            "framework_version":"3.58",
             "id":63231,
-            "logical_number":"1122",
+            "transaction_type":"switch",
             "serial_number":"510-520-530",
-            "started_at":"2013-08-08T15:38:01Z",
+            "logical_number":"1122",
+            "app_name":"main.posxml",
+            "detail":"",
+            "framework_version":"3.80",
             "status":"fail",
-            "transaction_type":"switch"
+            "started_at":"2015-02-04T15:38:01Z",
+            "finished_at":"2015-02-04T15:38:04Z"
          }
       }
    ]

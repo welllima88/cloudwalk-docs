@@ -1,10 +1,8 @@
-# CloudWalk Docs
+# Docs [![Build Status](https://travis-ci.org/cloudwalkio/cloudwalk-docs.svg?branch=master)](https://travis-ci.org/cloudwalkio/cloudwalk-docs) [![Coverage Status](https://img.shields.io/coveralls/cloudwalkio/cloudwalk-docs.svg)](https://coveralls.io/r/cloudwalkio/cloudwalk-docs?branch=master) [![Dependency Status](https://gemnasium.com/cloudwalkio/cloudwalk-docs.png)](https://gemnasium.com/cloudwalkio/cloudwalk-docs)
 
-[![Build Status](https://travis-ci.org/cloudwalkio/cloudwalk-docs.svg?branch=master)](https://travis-ci.org/cloudwalkio/cloudwalk-docs)
-[![Coverage Status](https://img.shields.io/coveralls/cloudwalkio/cloudwalk-docs.svg)](https://coveralls.io/r/cloudwalkio/cloudwalk-docs?branch=master)
-[![Dependency Status](https://gemnasium.com/cloudwalkio/cloudwalk-docs.png)](https://gemnasium.com/cloudwalkio/cloudwalk-docs)
+![Docs](https://dl.dropboxusercontent.com/u/440273/docs.png)
 
-CloudWalk open-source documentation built on top of Sinatra.
+CloudWalk open-source documentation.
 
 ## Table of contents
 

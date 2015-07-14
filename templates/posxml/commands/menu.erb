@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>menu</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "02/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.menu.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -17,16 +15,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="" variable="option" /&gt;
-&lt;stringvariable value="" variable="option_display" /&gt;
+<%= embed_posxml_code("9f865700fa67a759a382") %>
 
-&lt;menu variable="$(option)" options="OPTION 1\OPTION 2\OPTION 3" /&gt;
-
-&lt;inttostring variableinteger="$(option)" variablestring="$(option_display)" /&gt;
-
-&lt;display column="0" line="5" message="$(option_display)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.menu.paragraph_2") %></p>

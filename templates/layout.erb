@@ -13,6 +13,7 @@
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet" media="all">
     <link href="/css/app.css" rel="stylesheet" media="all">
     <link href="/css/rainbow/github.css" rel="stylesheet" media="all">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="/img/favicon.png">
 
@@ -29,7 +30,7 @@
   </script>
   </head>
 <body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-inverse">
     <div class="navbar-inner">
       <div class="navbar-container">
         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -56,7 +57,7 @@
                 </select>
               </form>
             </li>
-            <li id="btn-signin" style="float: right"><a href="https://manager.cloudwalk.io/users/sign_in?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_in") %></a></li>
+            <li id="btn-signin" style="float: right"><a href="https://manager.cloudwalk.io/?locale=<%= I18n.locale %>"><%= I18n.t("main_menu.sign_in") %></a></li>
           </ul>
         </div>
       </div>
@@ -108,11 +109,11 @@
 
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/rainbow/rainbow-custom.min.js"></script>
+  <script src="/js/zeroclipboard/ZeroClipboard.min.js"></script>
 
   <script type="text/javascript">
     jQuery(document).ready(function(){
-      $('a[href*=#]').not('.accordion a, .nav-tabs a').click(function() {if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {var $target = $(this.hash);$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');if ($target.length) {var targetOffset = $target.offset().top - 50;$('html,body').animate({scrollTop: targetOffset}, 500);return false;}}});
+      $('a[href*=#]').not('.accordion a, .nav-tabs a').click(function() {if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {var $target = $(this.hash);$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');if ($target.length) {var targetOffset = $target.offset().top - 20;$('html,body').animate({scrollTop: targetOffset}, 500);return true;}}});
 
       // POSXML Commands
       $(".group-of-commands a").each(function() { $(this).click(function() { showContent($(this).attr('id')); }); });
@@ -132,17 +133,35 @@
         }
       });
 
-      // Rainbow
-      Rainbow.extend('html', [{
-        'name': 'tag',
-        'pattern': /string.tohex|string.replace|string.substring|string.replaceat|string.removeat|string.insertat|string.find|string.elementat|string.elements|string.charat|string.length|string.pad|string.getvaluebykey|string.fromhex|network.send|network.receive|network.ping|network.checkgprssignal|network.hostdisconnect|system.readcard|system.restart|system.qrcode|system.info|system.checkbattery|system.beep|file.open|file.read|file.write|file.close|filesystem.listfiles|filesystem.renamefile|filesystem.filesize|filesystem.space|crypto.xor|crypto.lrc|crypto.encryptdecrypt|crypto.crc|smartcard.insertedcard|input.getvalue|iso8583.initfieldtable|iso8583.initmessage|iso8583.putfield|iso8583.endmessage|iso8583.transactmessage|iso8583.analyzemessage|iso8583.getfield|time.calculate|convert.toint/g
-      },  {
-        'name': 'support',
-        'pattern': /buffer1|buffer2|element_index|new_substring|old_substring|original_string|new_element|string_to_be_inserted|character_index/g
-      }], true);
+      // Clipboard handling
+      $('.snippet').each(function(){
+        $($(this).data('display-element')).html($(this).html());
+      });
+
+      var client = new ZeroClipboard($('.btn-clipboard'));
+
+      client.on('error', function(){ $('.btn-clipboard').hide(); });
+
+      client.on('copy', function(event){
+        var content = $('#' + event.target.id).next('pre').html();
+        content = content.replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+        event.clipboardData.setData('text/plain', content);
+      });
 
       <%= yield_content(:javascripts) %>
     });
+  </script>
+
+  <script src="/js/rainbow/rainbow-custom.min.js"></script>
+  <script type="text/javascript">
+    // Rainbow
+    Rainbow.extend('html', [{
+      'name': 'tag',
+      'pattern': /string.tohex|string.replace|string.substring|string.replaceat|string.removeat|string.insertat|string.find|string.elementat|string.elements|string.charat|string.length|string.pad|string.getvaluebykey|string.fromhex|network.send|network.receive|network.ping|network.checkgprssignal|network.hostdisconnect|system.readcard|system.restart|system.qrcode|system.info|system.checkbattery|system.beep|file.open|file.read|file.write|file.close|filesystem.listfiles|filesystem.renamefile|filesystem.filesize|filesystem.space|crypto.xor|crypto.lrc|crypto.encryptdecrypt|crypto.crc|smartcard.insertedcard|input.getvalue|iso8583.initfieldtable|iso8583.initmessage|iso8583.putfield|iso8583.endmessage|iso8583.transactmessage|iso8583.analyzemessage|iso8583.getfield|time.calculate|convert.toint/g
+    },  {
+      'name': 'support',
+      'pattern': /buffer1|buffer2|element_index|new_substring|old_substring|original_string|new_element|string_to_be_inserted|character_index/g
+    }], true);
   </script>
 </body>
 </html>

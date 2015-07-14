@@ -1,0 +1,138 @@
+<h2 id="development"><%= I18n.t("help.faq.table_of_contents.development") %></h2>
+
+<ul class="faq-listing">
+  <li><%= toc_item(I18n.t("help.faq.development.question_1")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_2")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_3")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_4")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_5")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_6")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_7")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_8")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_9")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_10")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_11")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_12")) %></li>
+  <li><%= toc_item(I18n.t("help.faq.development.question_13")) %></li>
+</ul>
+
+<div class="faq">
+  <%= toc_header(I18n.t("help.faq.development.question_1")) %>
+  <p><%= I18n.t("help.faq.development.answer_1") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_2")) %>
+  <p><%= I18n.t("development_environment.overview.introduction.paragraph_1") %></p>
+  <p><%= I18n.t("help.faq.development.answer_2") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_3")) %>
+  <p><%= I18n.t("help.faq.development.answer_3.paragraph_1") %></p>
+  <p><%= I18n.t("help.faq.development.answer_3.paragraph_2") %></p>
+  <p><%= I18n.t("help.faq.development.answer_3.paragraph_3") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_4")) %>
+  <p><%= I18n.t("help.faq.development.answer_4") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_5")) %>
+  <p><%= I18n.t("posxml.structure.reserved_characters.paragraph_1") %></p>
+  <p><%= I18n.t("posxml.structure.reserved_characters.paragraph_2") %></p>
+  <pre>< &amp;lt;
+> &amp;gt;
+& &amp;amp;
+' &amp;apos;
+" &amp;quot;</pre>
+  <p><%= I18n.t("help.faq.development.answer_5") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_6")) %>
+  <p><%= I18n.t("help.faq.development.answer_6.paragraph_1") %></p>
+  <p><%= I18n.t("help.faq.development.answer_6.paragraph_2") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_7")) %>
+  <p><%= I18n.t("help.faq.development.answer_7") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_8")) %>
+  <p><%= I18n.t("help.faq.development.answer_8") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_9")) %>
+  <p><%= I18n.t("help.faq.development.answer_9.paragraph_1") %></p>
+
+  <table class="table table-striped table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th><%= I18n.t("help.faq.development.answer_9.table.header.model") %></th>
+        <th><%= I18n.t("help.faq.development.answer_9.table.header.type") %></th>
+        <th><%= I18n.t("help.faq.development.answer_9.table.header.size") %></th>
+        <th><%= I18n.t("help.faq.development.answer_9.table.header.sample") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Verifone VX 680, VX 820</td>
+        <td>Color (256 colors)</td>
+        <td>243 x 276</td>
+        <td><a href="/img/pos-backgrounds/256c_240x320/walk.bmp"><%= I18n.t("help.faq.development.answer_9.table.content.view") %></a></td>
+      </tr>
+      <tr>
+        <td>Verifone Verix, VX 520</td>
+        <td>Monochromatic</td>
+        <td>119 x 57</td>
+        <td><a href="/img/pos-backgrounds/monochromatic/walk.bmp"><%= I18n.t("help.faq.development.answer_9.table.content.view") %></a></td>
+      </tr>
+      <tr>
+        <td>Ingenico iWL280</td>
+        <td>Color (256K colors)</td>
+        <td>245 x 156</td>
+        <td><a href="/img/pos-backgrounds/256kc_320x240/walk.bmp"><%= I18n.t("help.faq.development.answer_9.table.content.view") %></a></td>
+      </tr>
+      <tr>
+        <td>Ingenico iCT250, iWL250, iPP350</td>
+        <td>Color (256 colors)</td>
+        <td>288 x 156</td>
+        <td><a href="/img/pos-backgrounds/256c_320x240/walk.bmp"><%= I18n.t("help.faq.development.answer_9.table.content.view") %></a></td>
+      </tr>
+      <tr>
+        <td>Ingenico iCT220, iPP320</td>
+        <td>Monochromatic</td>
+        <td>119 x 57</td>
+        <td><a href="/img/pos-backgrounds/monochromatic/walk.bmp"><%= I18n.t("help.faq.development.answer_9.table.content.view") %></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><%= I18n.t("help.faq.development.answer_9.paragraph_2") %></p>
+
+  <ol>
+    <li><%= I18n.t("help.faq.development.answer_9.paragraph_3") %></li>
+    <li><%= I18n.t("help.faq.development.answer_9.paragraph_4") %></li>
+    <li><%= I18n.t("help.faq.development.answer_9.paragraph_5") %></li>
+    <li><%= I18n.t("help.faq.development.answer_9.paragraph_6") %></li>
+  </ol>
+
+  <p class="note"><%= I18n.t("help.faq.development.answer_9.paragraph_7") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_10")) %>
+  <p><%= I18n.t("help.faq.development.answer_10.paragraph_1") %></p>
+  <p><%= I18n.t("help.faq.development.answer_10.paragraph_2") %></p>
+
+  <%= toc_header(I18n.t("help.faq.development.question_11")) %>
+  <p><%= I18n.t("help.faq.development.answer_11.paragraph_1") %></p>
+
+  <ol>
+    <li><%= I18n.t("help.faq.development.answer_11.paragraph_2") %></li>
+    <li><%= I18n.t("help.faq.development.answer_11.paragraph_3") %></li>
+    <li><%= I18n.t("help.faq.development.answer_11.paragraph_4") %></li>
+  </ol>
+
+  <%= toc_header(I18n.t("help.faq.development.question_12")) %>
+  <p><%= I18n.t("help.faq.development.answer_12.paragraph_1") %></p>
+  <p><%= I18n.t("help.faq.development.answer_12.paragraph_2") %></p>
+
+  <ol>
+    <li><%= I18n.t("help.faq.development.answer_12.paragraph_3") %></li>
+    <li><%= I18n.t("help.faq.development.answer_12.paragraph_4") %></li>
+    <li><%= I18n.t("help.faq.development.answer_12.paragraph_5") %></li>
+    <li><%= I18n.t("help.faq.development.answer_12.paragraph_6") %></li>
+  </ol>
+
+  <%= toc_header(I18n.t("help.faq.development.question_13")) %>
+  <p><%= I18n.t("help.faq.development.answer_13") %></p>
+</div>

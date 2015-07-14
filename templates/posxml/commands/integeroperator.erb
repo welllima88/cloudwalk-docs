@@ -4,8 +4,6 @@
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>integeroperator</em></h1>
 
-<p class="more-info"><%= I18n.t("general.updated_at", :date => "07/05/2013") %></p>
-
 <p><%= I18n.t("posxml.commands.integeroperator.paragraph_1") %></p>
 
 <h2><%= I18n.t("posxml.commands.parameters") %></h2>
@@ -17,26 +15,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="10" variable="iNumber" /&gt;
+<%= embed_posxml_code("9ff2e59673840d39ef02") %>
 
-&lt;stringvariable value="" variable="sGreaterNumber" /&gt;
-&lt;stringvariable value="" variable="sLowerNumber" /&gt;
-
-&lt;integeroperator operator="++" variablesource="$(iNumber)" /&gt;
-
-&lt;inttostring variableinteger="$(iNumber)" variablestring="$(sGreaterNumber)" /&gt;
-
-&lt;integeroperator operator="--" variablesource="$(iNumber)" /&gt;
-
-&lt;inttostring variableinteger="$(iNumber)" variablestring="$(sLowerNumber)" /&gt;
-
-&lt;display column="0" line="0" message="10 incremented: " /&gt;
-&lt;display column="0" line="1" message="$(sGreaterNumber)" /&gt;
-&lt;display column="0" line="4" message="11 decremented: " /&gt;
-&lt;display column="0" line="5" message="$(sLowerNumber)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.integeroperator.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.integeroperator.paragraph_3") %></p>

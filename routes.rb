@@ -16,6 +16,7 @@ class Routes
       { "url" => "walk-framework/ingenico-telium-2",                     "view_path" => "walk_framework/ingenico_telium_2"},
       { "url" => "walk-framework/first-launch",                          "view_path" => "walk_framework/first-launch"},
       { "url" => "walk-framework/configuration",                         "view_path" => "walk_framework/configuration"},
+      { "url" => "walk-framework/configuration/change-password",         "view_path" => "walk_framework/configuration/change_password"},
       # WALK MANAGER
       { "url" => "walk-manager/apps",                                    "view_path" => "walk_manager/apps"},
       { "url" => "walk-manager/devices",                                 "view_path" => "walk_manager/devices"},
@@ -52,7 +53,13 @@ class Routes
       { "url" => "guides/transactions-patterns/overview",                "view_path" => "guides/transactions_patterns/tutorial_1_overview"},
       { "url" => "guides/transactions-patterns/anomalies-report",        "view_path" => "guides/transactions_patterns/tutorial_2_anomalies_report"},
       { "url" => "guides/transactions-patterns/patterns-chart",          "view_path" => "guides/transactions_patterns/tutorial_3_patterns_chart"},
-      { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_4_notifications_settings"},
+      { "url" => "guides/transactions-patterns/advanced-settings",       "view_path" => "guides/transactions_patterns/tutorial_4_advanced_settings"},
+      { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_5_notifications_settings"},
+      { "url" => "guides/emulator-card-swipe",                           "view_path" => "guides/emulator_card_swipe"},
+      # HELP
+      { "url" => "help/faq",                                             "view_path" => "help/faq"},
+      # POSXML APPS CHANGELOG
+      { "url" => "apps/globalpayments",                                  "view_path" => "apps/globalpayments"},
     ]
   end
 
