@@ -1823,8 +1823,16 @@ pt-BR:
           parameter_3: "<strong>size</strong> <span class='data-type'>[string]</span><br/>Tamanho da imagem bitmap. Tamanhos suportados: <strong>x1, x2, x3, x4 e x5</strong>."
           parameter_4: "<strong>version</strong> <span class='data-type'>[string]</span><br/>Versão do símbolo do QR Code. Cada versão possui um número específico de módulos. Versões suportadas: <strong>1, 2, 3, 4, 5 e 6</strong>."
       system_inputtransaction:
-        description: Instrução para receber os dados do cartão em uma transação contactless
-        paragraph_1: O comando <span class='code'>system.inputtransaction</span> é um instrução para receber os dados do cartão em uma transação contactless.
+        description: "Recebe os dados do cartão em uma transação sem contato (contactless)"
+        paragraph_1: "O comando <span class='code'>system.inputtransaction</span> é uma instrução utilizada para receber os dados de um cartão em uma transação sem contato (contactless)."
+        paragraph_2: "No exemplo acima, as variáveis armazenarão os valores gerados pela instrução <strong>system.inputtransaction</strong>. A aplicação irá aguardar uma interação do usuário através de um cartão ou do teclado (pressionando uma tecla), durante o intervalo definido na propriedade <strong>timeout</strong>."
+        parameters:
+          parameter_1: "<strong>inputtype</strong> <span class='data-type'>[string]</span><br/>1 para magstripe, 2 para chip, 3 para contactless, 4 para teclado, 5 para toque (touchscreen)."
+          parameter_2: "<strong>keyboard</strong> <span class='data-type'>[string]</span><br/>1 para teclado ativado e 0 para teclado desativado."
+          parameter_3: "<strong>cardvariable</strong> <span class='data-type'>[string]</span><br/>Armazena o conteúdo da track 2 e/ou track 1 somente quando o inputtype for 1."
+          parameter_4: "<strong>timeout</strong> <span class='data-type'>[integer]</span><br/>Tempo de espera até que o comando cancele a operação (em milissegundos)."
+          parameter_5: "<strong>keyvariable</strong> <span class='data-type'>[string]</span><br/>When keyboard equals 0, just returns with timeout or if you press KEY_CANCEL. If keyboard equals 1 it will return all the pressed keys."
+          parameter_6: "<strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/> <span class='data-type'>0: quando uma tecla é pressionada ou quando um cartão é inserido com sucesso<br>-1: se ocorrer um erro no momento de ler as tracks<br>-2: timeout<br><strong>Para EMV chip ou sem contato</strong><br>1: sucesso<br> >1: erro</span>"
       system_readcard:
         description: Aguarda até que um cartão seja passado ou uma tecla seja pressionada
         paragraph_1: O comando <span class='code'>system.readcard</span> é utilizado para fazer a leitura de um cartão.
