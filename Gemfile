@@ -15,6 +15,7 @@ gem 'byebug'
 group :test do
   gem 'coveralls'
   gem 'minitest'
+  gem 'mocha'
   gem 'rack-test'
   gem 'simplecov'
 end
