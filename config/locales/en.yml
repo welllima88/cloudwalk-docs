@@ -755,12 +755,10 @@ en:
       transactions_monitor: Monitor of transactions
   posxml:
     commands:
+      deprecated: "Deprecated"
+      deprecated_info: "This command has been deprecated and therefore does not work anymore"
       adjustdatetime:
-        description: Updates the device internal clock
-        paragraph_1: Command <span class='code'>adjustdatetime</span> is used to update the date and time of the device.
-        paragraph_2: In the example above, date and time of the device will be changed to <strong>01/01/2010 10:10:10</strong> every time the application runs.
-        parameters:
-          parameter_1: <strong>datetime</strong> <span class='data-type'>[string]</span><br/>Data format mmddyyyyhhmmss.
+        paragraph_1: "The date and time is automatically set by the CloudWalk host, based on your timezone. Note that the timezone can be changed on your <a href='https://manager.cloudwalk.io/users/edit'>Manager account</a>."
       break:
         description: The break command allows immediate exit from while loop
         paragraph_1: The command <span class='code'>break</span> is used to stop the execution of a loop.

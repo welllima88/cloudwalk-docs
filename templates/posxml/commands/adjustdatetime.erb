@@ -1,21 +1,11 @@
 <% content_for :docs_description do %>
-  <meta name="docs:description" content="<%= I18n.t('posxml.commands.adjustdatetime.description') %>">
+  <meta name="docs:description" content="<%= I18n.t('posxml.commands.deprecated_info') %>">
 <% end %>
 
 <h1><%= I18n.t("posxml.commands.title") %> <em>adjustdatetime</em></h1>
 
+<p><span class="label label-warning"><%= I18n.t("posxml.commands.deprecated") %></span><span class="deprecated"><%= I18n.t("posxml.commands.deprecated_info") %></span></p>
+
+<br>
+
 <p><%= I18n.t("posxml.commands.adjustdatetime.paragraph_1") %></p>
-
-<h2><%= I18n.t("posxml.commands.parameters") %></h2>
-
-<ol class="parameters">
-  <li><%= I18n.t("posxml.commands.adjustdatetime.parameters.parameter_1") %></li>
-</ol>
-
-<h2><%= I18n.t("posxml.commands.example") %></h2>
-
-<%= embed_posxml_code("446f1535954fc18b7123", true) %>
-
-<hr/>
-
-<p><%= I18n.t("posxml.commands.adjustdatetime.paragraph_2") %></p>
