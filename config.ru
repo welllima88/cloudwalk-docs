@@ -1,2 +1,2 @@
 require './docs'
-run Sinatra::Application
+run Docs
