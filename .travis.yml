@@ -1,6 +1,13 @@
 language: ruby
-script: "bundle exec ruby docs_test.rb"
+script: bundle exec ruby docs_test.rb
 rvm:
-  - 2.2.2
+- 2.2.2
 gemfile:
-  - Gemfile
+- Gemfile
+deploy:
+  provider: heroku
+  api_key:
+    secure: a3eTx4Q+MRBi1GjWcQn3fFbO+JF6J4zdubIVRssG5e/cAUD+bKLu/DAtKqpvFG1W8kUF4zcZ2IJr9LYd1r4vt4NI/mszn7dbdob7YO9DdWnxGhSvKwE7D1/uWenEDOpLLTP2fRmZeP8uK+SkFUGk/qlYBvaandDDZWLNj/NSHEU=
+  app: cloudwalk-docs
+  on:
+    repo: cloudwalkio/cloudwalk-docs
