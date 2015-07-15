@@ -473,6 +473,11 @@ p.note {
   float: right;
 }
 
+.deprecated {
+  margin-left: 5px;
+  color: #999;
+}
+
 /* GITHUB BUTTON */
 .button {
   position: relative;
