@@ -10,15 +10,15 @@ gem 'sinatra-contrib'
 gem 'sinatra-partial'
 gem 'stringex'
 
+gem 'byebug'
+
 group :test do
   gem 'coveralls'
   gem 'minitest'
-  gem 'mocha'
   gem 'rack-test'
   gem 'simplecov'
 end
 
 group :production do
-  gem 'newrelic_rpm'
   gem 'rack-ssl-enforcer'
 end
