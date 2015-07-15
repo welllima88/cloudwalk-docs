@@ -12,83 +12,88 @@ require "rack-ssl-enforcer"
 require "json"
 require "pony"
 
-Pony.options = {
-  :via => :smtp,
-  :via_options => {
-    :address => 'smtp.sendgrid.net',
-    :port => '587',
-    :domain => 'cloudwalk.io',
-    :user_name => ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
-    :authentication => :plain,
-    :enable_starttls_auto => true
+class Docs < Sinatra::Base
+  Pony.options = {
+    :via => :smtp,
+    :via_options => {
+      :address => 'smtp.sendgrid.net',
+      :port => '587',
+      :domain => 'cloudwalk.io',
+      :user_name => ENV['SENDGRID_USERNAME'],
+      :password => ENV['SENDGRID_PASSWORD'],
+      :authentication => :plain,
+      :enable_starttls_auto => true
+    }
   }
-}
 
-configure do
-  I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
-  I18n.load_path = Dir[File.join(settings.root, 'config/locales', '*.yml')]
-  I18n.backend.load_translations
-  I18n.enforce_available_locales = false
+  configure do
+    I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
+    I18n.load_path = Dir[File.join(settings.root, 'config/locales', '*.yml')]
+    I18n.backend.load_translations
+    I18n.enforce_available_locales = false
 
-  use Rack::SslEnforcer if production?
+    use Rack::SslEnforcer if production?
 
-  enable :sessions
+    enable :sessions
 
-  use Rack::Session::Cookie, :key => ENV['SESSION_KEY'],
-                             :domain => 'cloudwalk.io',
-                             :path => '/',
-                             :expire_after => 2592000, # In seconds
-                             :secret => ENV['SESSION_SECRET'] if production?
+    use Rack::Session::Cookie, :key => ENV['SESSION_KEY'],
+                               :domain => 'cloudwalk.io',
+                               :path => '/',
+                               :expire_after => 2592000, # In seconds
+                               :secret => ENV['SESSION_SECRET'] if production?
 
-  set :views, File.dirname(__FILE__) + '/templates'
-  set :partial_template_engine, :erb
-end
+    set :views, File.dirname(__FILE__) + '/templates'
 
-before '/:locale/*' do
-  I18n.locale = params[:locale] if ["en", "pt-BR"].include?(params[:locale])
-end
-
-not_found do
-  erb :not_found
-end
-
-# Locale
-post '/' do
-  old_locale = params["url"].split("/")[1]
-  redirect params["url"].sub(old_locale, params["locale"]), 301
-end
-
-# Landing page
-get "/" do redirect "/#{I18n.locale}/introduction" end
-
-# Navigation pages
-Routes.navigation.each do |item|
-  get "/#{item["url"]}" do redirect "/#{I18n.locale}/#{item["url"]}", 301 end
-  get "/:locale/#{item["url"]}" do |locale|
-    @params = request.env['rack.request.query_hash']
-    erb "#{item["view_path"]}".to_sym
-  end
-end
-
-# POSXML commands
-Routes.commands.each do |command|
-  get "/posxml/commands/#{command}" do redirect "/#{I18n.locale}/posxml/commands/#{command}", 301 end
-  get "/:locale/posxml/commands/#{command}" do |locale|
-    erb "posxml/commands/#{command}".to_sym
-  end
-end
-
-get "/:locale/search" do |locale|
-  if params[:query]
-    @results = search
-  else
-    redirect "/#{I18n.locale}/introduction", 301
+    register Sinatra::Partial
+    set :partial_template_engine, :erb
   end
 
-  erb :search
-end
+  before '/:locale/*' do
+    I18n.locale = params[:locale] if ["en", "pt-BR"].include?(params[:locale])
+  end
 
-helpers do
-  include Helpers
+  not_found do
+    erb :not_found
+  end
+
+  # Locale
+  post '/' do
+    old_locale = params["url"].split("/")[1]
+    redirect params["url"].sub(old_locale, params["locale"]), 301
+  end
+
+  # Landing page
+  get "/" do redirect "/#{I18n.locale}/introduction" end
+
+  # Navigation pages
+  Routes.navigation.each do |item|
+    get "/#{item["url"]}" do redirect "/#{I18n.locale}/#{item["url"]}", 301 end
+    get "/:locale/#{item["url"]}" do |locale|
+      @params = request.env['rack.request.query_hash']
+      erb "#{item["view_path"]}".to_sym
+    end
+  end
+
+  # POSXML commands
+  Routes.commands.each do |command|
+    get "/posxml/commands/#{command}" do redirect "/#{I18n.locale}/posxml/commands/#{command}", 301 end
+    get "/:locale/posxml/commands/#{command}" do |locale|
+      erb "posxml/commands/#{command}".to_sym
+    end
+  end
+
+  get "/:locale/search" do |locale|
+    if params[:query]
+      @results = search
+    else
+      redirect "/#{I18n.locale}/introduction", 301
+    end
+
+    erb :search
+  end
+
+  helpers do
+    include Helpers
+    helpers Sinatra::ContentFor
+  end
 end

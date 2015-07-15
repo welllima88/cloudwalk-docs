@@ -4,6 +4,7 @@ require 'coveralls'
 Coveralls.wear!
 
 require 'simplecov'
+SimpleCov.formatter = SimpleCov::Formatter::HTMLFormatter
 SimpleCov.start
 
 require 'minitest/autorun'
@@ -17,10 +18,10 @@ include Rack::Test::Methods
 include Helpers
 
 def app
-  Sinatra::Application
+  Docs
 end
 
-describe "Docs" do
+describe Docs do
   before do
     # Do not deliver emails
     Pony.stubs(:deliver)
@@ -124,51 +125,51 @@ describe "Docs" do
   end
 
   it "should not have english internal links without language" do
-      result = ""
-      File.open("config/locales/en.yml").each_with_index do |line, line_number|
-          found = line.scan(/<a href='(\/(?!en\/)(?!pt\-BR\/)[^']*)'/)
-          if found.length > 0
-              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
-          end
+    result = ""
+    File.open("config/locales/en.yml").each_with_index do |line, line_number|
+      found = line.scan(/<a href='(\/(?!en\/)(?!pt\-BR\/)[^']*)'/)
+      if found.length > 0
+        result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
       end
+    end
 
-      assert result.empty?, "Found some internal links without language prefix or with wrong language prefix in file config/locales/en.yml:\n#{result}To fix this you should ensure all these links have a /en/ prefix."
+    assert result.empty?, "Found some internal links without language prefix or with wrong language prefix in file config/locales/en.yml:\n#{result}To fix this you should ensure all these links have a /en/ prefix."
   end
 
   it "should not have portuguese internal links in english language file" do
-      result = ""
-      File.open("config/locales/en.yml").each_with_index do |line, line_number|
-          found = line.scan(/<a href='(\/pt\-BR\/[^']*)'/)
-          if found.length > 0
-              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
-          end
+    result = ""
+    File.open("config/locales/en.yml").each_with_index do |line, line_number|
+      found = line.scan(/<a href='(\/pt\-BR\/[^']*)'/)
+      if found.length > 0
+        result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
       end
+    end
 
-      assert result.empty?, "Found some portuguese internal links in file config/locales/en.yml:\n#{result}To fix this you should change /pt-BR/ prefix to /en/."
+    assert result.empty?, "Found some portuguese internal links in file config/locales/en.yml:\n#{result}To fix this you should change /pt-BR/ prefix to /en/."
   end
 
   it "should not have portuguese internal links without language" do
-      result = ""
-      File.open("config/locales/pt-br.yml").each_with_index do |line, line_number|
-          found = line.scan(/<a href='(\/(?!en\/)(?!pt\-BR\/)[^']*)'/)
-          if found.length > 0
-              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
-          end
+    result = ""
+    File.open("config/locales/pt-br.yml").each_with_index do |line, line_number|
+      found = line.scan(/<a href='(\/(?!en\/)(?!pt\-BR\/)[^']*)'/)
+      if found.length > 0
+        esult += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
       end
+    end
 
-      assert result.empty?, "Found some internal links without language prefix or with wrong language prefix in file config/locales/pt-br.yml:\n#{result}To fix this you should ensure all these links have a /pt-BR/ prefix."
+    assert result.empty?, "Found some internal links without language prefix or with wrong language prefix in file config/locales/pt-br.yml:\n#{result}To fix this you should ensure all these links have a /pt-BR/ prefix."
   end
 
   it "should not have english internal links in portuguese language file" do
-      result = ""
-      File.open("config/locales/pt-br.yml").each_with_index do |line, line_number|
-          found = line.scan(/<a href='(\/en\/[^']*)'/)
-          if found.length > 0
-              result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
-          end
+    result = ""
+    File.open("config/locales/pt-br.yml").each_with_index do |line, line_number|
+      found = line.scan(/<a href='(\/en\/[^']*)'/)
+      if found.length > 0
+        result += "\tLine: #{line_number+1} URL: #{found.join("\n\t\t\t")}\n"
       end
+    end
 
-      assert result.empty?, "Found some english internal links in file config/locales/pt-br.yml:\n#{result}To fix this you should change /en/ prefix to /pt-BR/."
+    assert result.empty?, "Found some english internal links in file config/locales/pt-br.yml:\n#{result}To fix this you should change /en/ prefix to /pt-BR/."
   end
 
   it "should retrieve a gist from github" do
