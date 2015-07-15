@@ -38,6 +38,8 @@ describe Docs do
   end
 
   it "should have a page for every navigation item" do
+    Docs.any_instance.stubs(:fetch_gist).returns("")
+
     Routes.navigation.each do |nav|
       get "/en/#{nav["url"]}"
       assert last_response.ok?, "URL /#{nav["url"]} failed (view: #{nav["view_path"]})"
@@ -45,6 +47,8 @@ describe Docs do
   end
 
   it "should have a page for every command item" do
+    Docs.any_instance.stubs(:fetch_gist).returns("")
+
     Routes.commands.each do |command|
       get "/en/posxml/commands/#{command}"
       assert last_response.ok?, "Command #{command} failed"
