@@ -713,6 +713,7 @@ pt-BR:
       group_name: Tutoriais
       patterns: "Padrões de transações"
       emulator_card_swipe: "Cartões no Emulador"
+      using_http_headers: "Utilizando headers HTTP"
     help:
       group_name: Ajuda
       faq: "Perguntas Frequentes"

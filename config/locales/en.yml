@@ -713,6 +713,7 @@ en:
       group_name: Guides
       patterns: "Transaction patterns"
       emulator_card_swipe: "Emulator Card Swipe"
+      using_http_headers: "Using HTTP headers"
     help:
       group_name: Help
       faq: "Frequently Asked Questions"
