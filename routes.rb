@@ -33,6 +33,7 @@ class Routes
       { "url" => "posxml/file-system",                                   "view_path" => "posxml/file_system"},
       { "url" => "posxml/configuration",                                 "view_path" => "posxml/configuration"},
       { "url" => "posxml/commands",                                      "view_path" => "posxml/commands"},
+      { "url" => "posxml/useful-functions",                              "view_path" => "posxml/useful_functions"},
       # DEVELOPER API
       { "url" => "api/overview",                                         "view_path" => "api/overview"},
       { "url" => "api/v1/apps",                                          "view_path" => "api/v1/apps"},
