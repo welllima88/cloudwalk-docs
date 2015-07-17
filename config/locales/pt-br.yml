@@ -1,6 +1,7 @@
 pt-BR:
   troubleshooting: "Resolução de problemas"
   description: "Aprenda a criar, publicar e gerenciar aplicações CloudWalk."
+  author: "Autor"
   copy: "Copiar"
   version: "Versão"
   apps:
@@ -730,6 +731,7 @@ pt-BR:
       group_name: Linguagem POSXML
       memory_and_variables: Variáveis e memória
       structure: Estrutura da linguagem
+      useful_functions: Funções úteis
     understanding_the_service:
       development_environment: Ambiente de desenvolvimento
       group_name: Entendendo o serviço
@@ -2083,6 +2085,21 @@ pt-BR:
         paragraph_1: Todo aplicativo POSXML deve obrigatoriamente possuir uma tag pai ou tag root, e possuir um nome válido, obedecendo ao critério de abertura e fechamento da mesma. Abaixo da tag root, deve ser criada a tag <span class='code'>&lt;pagina nome="principal"&gt;</span>, que é onde deve ser feita toda a lógica da aplicação.
         paragraph_2: 'Exemplo:'
       title: POSXML - Estrutura da linguagem
+    useful_functions:
+      title: "POSXML - Funções úteis"
+      description: "Funções POSXML prontas para uso."
+      introduction: "Otimize seu tempo e utilize funções POSXML prontas em seus projetos."
+      paragraph_1: "Você gosta de compartilhar? <a href='mailto:posxml@cloudwalk.io'>Envie-nos sua função</a>, e caso a mesma seja publicada, mencionaremos a autoria!"
+      table_of_contents:
+        cpf_validation: "Validação de CPF"
+        hide_credit_card_number: "Ocultar número do cartão de crédito"
+        center_text: "Centralizar texto"
+      cpf_validation:
+        paragraph_1: "Função para validar um CPF informado."
+      hide_credit_card_number:
+        paragraph_1: "Função para ocultar o número do cartão de crédito informado."
+      center_text:
+        paragraph_1: "Função para centralizar um texto."
   walk_framework:
     package:
       select: "<strong>Pacote do WALK Framework:</strong> Selecione a marca, modelo e assinatura (se aplicável) do seu dispositivo:"

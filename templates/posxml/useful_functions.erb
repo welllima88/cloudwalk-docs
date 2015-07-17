@@ -1,0 +1,223 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('posxml.useful_functions.description') %>">
+<% end %>
+
+<h1><%= I18n.t("posxml.useful_functions.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#cpf-validation"><%= I18n.t("posxml.useful_functions.table_of_contents.cpf_validation") %></a></li>
+  <li><a href="#hide-credit-card-number"><%= I18n.t("posxml.useful_functions.table_of_contents.hide_credit_card_number") %></a></li>
+  <li><a href="#center-text"><%= I18n.t("posxml.useful_functions.table_of_contents.center_text") %></a></li>
+</ol>
+
+<p><%= I18n.t('posxml.useful_functions.introduction') %></p>
+
+<p class="note"><%= I18n.t('posxml.useful_functions.paragraph_1') %></p>
+
+<h2 id="cpf-validation"><%= I18n.t("posxml.useful_functions.table_of_contents.cpf_validation") %></h2>
+
+<p><%= I18n.t("posxml.useful_functions.cpf_validation.paragraph_1") %></p>
+
+<p><%= I18n.t("author") %>: <a href="https://github.com/gustavofernandesn">Gustavo Fernandes</a></p>
+
+<pre><code data-language="html">&lt;stringvariable value="" variable="sCpf" /&gt;
+&lt;integervariable value="0" variable="is_cpf_valid" /&gt;
+
+&lt;cleandisplay /&gt;
+&lt;display line="0" column="0" message="DIGITE O CPF" /&gt;
+&lt;inputformat variable="$(sCpf)" line="2" column="0" message=":" format="999.999.999.99" /&gt;
+&lt;callfunction name="fn_cpf_validation" /&gt;
+
+&lt;if variable="$(is_cpf_valid)" operator="equalto" value="0"&gt;
+  &lt;cleandisplay /&gt;
+  &lt;display line="3" column="0" message="    CPF INVALIDO!   " /&gt;
+  &lt;display line="5" column="0" message="     PRESS GREEN!   " /&gt;
+  &lt;waitkey /&gt;
+&lt;else /&gt;
+  &lt;if variable="$(is_cpf_valid)" operator="equalto" value="1"&gt;
+    &lt;cleandisplay /&gt;
+    &lt;display line="3" column="0" message="     CPF VALIDO!    " /&gt;
+    &lt;display line="5" column="0" message="    PRESS GREEN!    " /&gt;
+    &lt;waitkey /&gt;
+  &lt;else /&gt;
+    &lt;if variable="$(is_cpf_valid)" operator="equalto" value="1"&gt;
+      &lt;cleandisplay /&gt;
+      &lt;display line="3" column="0" message="   INVALID RETURN!  " /&gt;
+      &lt;display line="5" column="0" message="    PRESS GREEN!    " /&gt;
+      &lt;waitkey /&gt;
+    &lt;/if&gt;
+  &lt;/if&gt;
+&lt;/if&gt;
+
+&lt;function name="fn_cpf_validation"&gt;
+  &lt;stringvariable value="" variable="sDigVerif" /&gt;
+  &lt;integervariable value="0" variable="is_cpf_valid" /&gt;
+  &lt;integervariable value="0" variable="iExecFunction" /&gt;
+
+  &lt;string.replace original_string="$(sCpf)" old_substring="." new_substring="" variablereturn="$(sCpf)" /&gt;
+  &lt;string.replace original_string="$(sCpf)" old_substring="-" new_substring="" variablereturn="$(sCpf)" /&gt;
+  &lt;string.trim string="$(sCpf)" variablereturn="$(sCpf)" /&gt;
+
+  &lt;while variable="$(iExecFunction)" operator="lessthan" value="1"&gt;
+    &lt;if variable="$(sCpf)" operator="equalto" value=""&gt;
+      &lt;integervariable value="0" variable="is_cpf_valid" /&gt;
+      &lt;break /&gt;
+    &lt;/if&gt;
+
+    &lt;string.substring string="$(sCpf)" start="9" length="2" variablereturn="$(sDigVerif)" /&gt;
+    &lt;string.substring string="$(sCpf)" start="0" length="9" variablereturn="$(sCpf)" /&gt;
+
+    &lt;stringvariable value="" variable="sSubDig" /&gt;
+    &lt;integervariable value="0" variable="iPrimDig" /&gt;
+    &lt;integervariable value="0" variable="iSegDig" /&gt;
+    &lt;integervariable value="0" variable="iSoma" /&gt;
+    &lt;integervariable value="10" variable="iPeso" /&gt;
+    &lt;integervariable value="0" variable="iSubDig" /&gt;
+    &lt;integervariable value="0" variable="iCpfLen" /&gt;
+    &lt;integervariable value="0" variable="iCount" /&gt;
+    &lt;integervariable value="0" variable="iAux" /&gt;
+    &lt;integervariable value="0" variable="iMod11" /&gt;
+
+    &lt;string.length value="$(sCpf)" variablereturn="$(iCpfLen)" /&gt;
+
+    &lt;while variable="$(iCount)" operator="lessthan" value="$(iCpfLen)"&gt;
+      &lt;string.substring string="$(sCpf)" start="$(iCount)" length="1" variablereturn="$(sSubDig)" /&gt;
+      &lt;stringtoint variablestring="$(sSubDig)" variableinteger="$(iSubDig)" /&gt;
+
+      &lt;mathematicaloperation variabledestination="$(iAux)" operator="*" firstvalue="$(iSubDig)" secondvalue="$(iPeso)" /&gt;
+      &lt;integeroperator operator="--" variablesource="$(iPeso)" /&gt;
+      &lt;mathematicaloperation variabledestination="$(iSoma)" operator="+" firstvalue="$(iSoma)" secondvalue="$(iAux)" /&gt;
+
+      &lt;integeroperator operator="++" variablesource="$(iCount)" /&gt;
+    &lt;/while&gt;
+
+    &lt;mathematicaloperation variabledestination="$(iMod11)" operator="%" firstvalue="$(iSoma)" secondvalue="11" /&gt;
+
+    &lt;if variable="$(iMod11)" operator="equalto" value="0"&gt;
+      &lt;integervariable value="0" variable="iPrimDig" /&gt;
+    &lt;else /&gt;
+      &lt;if variable="$(iMod11)" operator="equalto" value="1"&gt;
+        &lt;integervariable value="0" variable="iPrimDig" /&gt;
+      &lt;else/&gt;
+        &lt;mathematicaloperation variabledestination="$(iPrimDig)" operator="-" firstvalue="11" secondvalue="$(iMod11)" /&gt;
+      &lt;/if&gt;
+    &lt;/if&gt;
+
+    &lt;integervariable value="0" variable="iSoma" /&gt;
+    &lt;integervariable value="11" variable="iPeso" /&gt;
+    &lt;integervariable value="0" variable="iCount" /&gt;
+    &lt;integervariable value="0" variable="iAux" /&gt;
+
+    &lt;while variable="$(iCount)" operator="lessthan" value="$(iCpfLen)"&gt;
+      &lt;string.substring string="$(sCpf)" start="$(iCount)" length="1" variablereturn="$(sSubDig)" /&gt;
+      &lt;stringtoint variablestring="$(sSubDig)" variableinteger="$(iSubDig)" /&gt;
+
+      &lt;mathematicaloperation variabledestination="$(iAux)" operator="*" firstvalue="$(iSubDig)" secondvalue="$(iPeso)" /&gt;
+      &lt;integeroperator operator="--" variablesource="$(iPeso)" /&gt;
+      &lt;mathematicaloperation variabledestination="$(iSoma)" operator="+" firstvalue="$(iSoma)" secondvalue="$(iAux)" /&gt;
+
+      &lt;integeroperator operator="++" variablesource="$(iCount)" /&gt;
+    &lt;/while&gt;
+
+    &lt;mathematicaloperation variabledestination="$(iAux)" operator="*" firstvalue="$(iPrimDig)" secondvalue="2" /&gt;
+    &lt;mathematicaloperation variabledestination="$(iSoma)" operator="+" firstvalue="$(iSoma)" secondvalue="$(iAux)" /&gt;
+    &lt;mathematicaloperation variabledestination="$(iMod11)" operator="%" firstvalue="$(iSoma)" secondvalue="11" /&gt;
+
+    &lt;if variable="$(iMod11)" operator="equalto" value="0"&gt;
+      &lt;integervariable value="0" variable="iSegDig" /&gt;
+    &lt;else /&gt;
+      &lt;if variable="$(iMod11)" operator="equalto" value="1"&gt;
+        &lt;integervariable value="0" variable="iSegDig" /&gt;
+      &lt;else/&gt;
+        &lt;mathematicaloperation variabledestination="$(iSegDig)" operator="-" firstvalue="11" secondvalue="$(iMod11)" /&gt;
+      &lt;/if&gt;
+    &lt;/if&gt;
+
+    &lt;stringvariable value="" variable="sResult" /&gt;
+    &lt;stringvariable value="" variable="sPrimDig" /&gt;
+    &lt;stringvariable value="" variable="sSegDig" /&gt;
+    &lt;inttostring variableinteger="$(iPrimDig)" variablestring="$(sPrimDig)" /&gt;
+    &lt;inttostring variableinteger="$(iSegDig)" variablestring="$(sSegDig)" /&gt;
+
+    &lt;joinstring firstvalue="$(sPrimDig)" secondvalue="$(sSegDig)" variabledestination="$(sResult)" /&gt;
+
+    &lt;if variable="$(sResult)" operator="notequalto" value="$(sDigVerif)"&gt;
+      &lt;integervariable value="0" variable="is_cpf_valid" /&gt;
+    &lt;else/&gt;
+      &lt;integervariable value="1" variable="is_cpf_valid" /&gt;
+    &lt;/if&gt;
+
+    &lt;integeroperator operator="++" variablesource="$(iExecFunction)" /&gt;
+  &lt;/while&gt;
+&lt;/function&gt;
+</code></pre>
+
+<h2 id="hide-credit-card-number"><%= I18n.t("posxml.useful_functions.table_of_contents.hide_credit_card_number") %></h2>
+
+<p><%= I18n.t("posxml.useful_functions.hide_credit_card_number.paragraph_1") %></p>
+
+<p><%= I18n.t("author") %>: <a href="https://github.com/gabrielbernal">Gabriel Bernal</a></p>
+
+<pre><code data-language="html">&lt;!-- fn_hide_card_number --&gt;
+&lt;function name="fn_hide_card_number"&gt;
+  &lt;!-- Original, example: 1112345634591010 --&gt;
+  &lt;!-- Output, example: 1112********1010 --&gt;
+
+  &lt;stringvariable value="" variable="sCardNumberP1" /&gt;
+  &lt;stringvariable value="" variable="sCardNumberP4" /&gt;
+  &lt;stringvariable value="" variable="sAux" /&gt;
+  &lt;stringvariable value="" variable="sHideCardNumber" /&gt;
+  &lt;integervariable value="0" variable="iLen" /&gt;
+
+  &lt;string.length value="$(sCardNumber)" variablereturn="$(iLen)" /&gt;
+
+  &lt;if variable="$(iLen)" operator="lessthan" value="16"&gt;
+    &lt;cleandisplay /&gt;
+    &lt;display line="3" column="0" message="   CARTAO INVALIDO!  " /&gt;
+    &lt;display line="6" column="0" message="   PRESSIONE ENTER   " /&gt;
+    &lt;waitkey /&gt;
+  &lt;else /&gt;
+    &lt;if variable="$(sCardNumber)" operator="greaterthan" value="16"&gt;
+      &lt;string.elementat string="$(sCardNumber)" element_index="0" delimiter="=" variablereturn="$(sAux)" /&gt;
+    &lt;else /&gt;
+      &lt;stringvariable value="$(sCardNumber)" variable="sAux" /&gt;
+    &lt;/if&gt;
+
+    &lt;if variable="$(sAux)" operator="notequalto" value=""&gt;
+      &lt;string.substring string="$(sAux)" start="0" length="4" variablereturn="$(sCardNumberP1)" /&gt;
+      &lt;string.substring string="$(sAux)" start="12" length="4" variablereturn="$(sCardNumberP4)" /&gt;
+
+      &lt;joinstring firstvalue="$(sCardNumberP1)" secondvalue="********" variabledestination="$(sHideCardNumber)" /&gt;
+      &lt;joinstring firstvalue="$(sHideCardNumber)" secondvalue="$(sCardNumberP4)" variabledestination="$(sHideCardNumber)" /&gt;
+    &lt;/if&gt;
+  &lt;/if&gt;
+&lt;/function&gt;
+</code></pre>
+
+<h2 id="center-text"><%= I18n.t("posxml.useful_functions.table_of_contents.center_text") %></h2>
+
+<p><%= I18n.t("posxml.useful_functions.center_text.paragraph_1") %></p>
+
+<p><%= I18n.t("author") %>: <a href="https://github.com/gabrielbernal">Gabriel Bernal</a></p>
+
+<pre><code data-language="html">&lt;!-- fn_align_center --&gt;
+&lt;function name="fn_align_center"&gt;
+  &lt;integervariable value="42" variable="iDisplayColumns"/&gt;
+  &lt;integervariable value="0" variable="iLenMessage"/&gt;
+  &lt;integervariable value="1" variable="iCharCount"/&gt;
+  &lt;integervariable value="0" variable="iSpaceCount"/&gt;
+
+  &lt;string.trim string="$(sTextMsg)" variablereturn="$(sTextMsg)"/&gt;
+  &lt;string.length value="$(sTextMsg)" variablereturn="$(iLenMessage)"/&gt;
+
+  &lt;if variable="$(iLenMessage)" operator="lessthan" value="$(iDisplayColumns)"&gt;
+    &lt;mathematicaloperation firstvalue="$(iDisplayColumns)" operator="-" secondvalue="$(iLenMessage)" variabledestination="$(iSpaceCount)"/&gt;
+    &lt;mathematicaloperation firstvalue="$(iSpaceCount)" operator="/" secondvalue="2" variabledestination="$(iSpaceCount)" /&gt;
+
+    &lt;while variable="$(iCharCount)" operator="lessthanorequalto" value="$(iSpaceCount)"&gt;
+      &lt;mathematicaloperation firstvalue="$(iCharCount)" operator="+" secondvalue="1" variabledestination="$(iCharCount)"/&gt;
+      &lt;joinstring firstvalue=" " secondvalue="$(sTextMsg)" variabledestination="$(sTextMsg)"/&gt;
+    &lt;/while&gt;
+  &lt;/if&gt;
+&lt;/function&gt;
+</code></pre>

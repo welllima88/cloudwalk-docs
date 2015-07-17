@@ -1,6 +1,7 @@
 en:
   troubleshooting: "Troubleshooting"
   description: "Learn how to create, deploy and manage CloudWalk apps."
+  author: "Author"
   copy: "Copy"
   version: "Version"
   apps:
@@ -730,6 +731,7 @@ en:
       group_name: POSXML language
       memory_and_variables: Variables and memory
       structure: Language structure
+      useful_functions: Useful functions
     understanding_the_service:
       development_environment: Development environment
       group_name: Understanding the service
@@ -2083,6 +2085,21 @@ en:
         paragraph_1: Every POSXML application has to have a parent tag or a root tag, and a valid name, following the criteria for opening and closing tags. Below the root tag, the tag <span class='code'>&lt;pagina nome="principal"&gt;</span> must be created, which is where all the application logic should be done.
         paragraph_2: 'Example:'
       title: POSXML - Language structure
+    useful_functions:
+      title: "POSXML - Useful functions"
+      description: "POSXML functions ready to use."
+      introduction: "Optimize your time and take advantage of ready to use POSXML functions."
+      paragraph_1: "Do you like to share? <a href='mailto:posxml@cloudwalk.io'>Send us your function</a>, and if we publish it, we will mention the authorship!"
+      table_of_contents:
+        cpf_validation: "CPF validation"
+        hide_credit_card_number: "Hide the entered credit card number"
+        center_text: "Center text"
+      cpf_validation:
+        paragraph_1: "Function to validate a given CPF."
+      hide_credit_card_number:
+        paragraph_1: "Function to hide a given credit card number."
+      center_text:
+        paragraph_1: "Function to center a text."
   walk_framework:
     package:
       select: "<strong>WALK Framework package:</strong> Select your device brand, model and signature (if applicable):"
