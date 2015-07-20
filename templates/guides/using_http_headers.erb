@@ -1,6 +1,80 @@
 <h1>Utilizando headers HTTP</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Uma mensagem http pode conter diversos Headers, que são utilizados para descrever propriedades da mensagem, como o comprimento, tipo de conteudo, entre outros. Para utilizá-los em POSXML bastar seguir os passos abaixo:</p>
 
-<pre><code data-language="html">&lt;!-- Sample Code --&gt;
-</code></pre>
+<pre>
+  <code data-language="html">
+    &lt;!-- Sempre se atentar aos espaços. --&gt;
+    &lt;!-- Declare o método da requisição HTTP. --&gt;
+    &lt;stringvariable value="GET " variable="sVerb" /&gt;
+    &lt;!-- Adicione os Headers, separados por virgula. Deste modo: Header: valor, AnotherHeader: valor --&gt;
+    &lt;stringvariable value="Authorization: Basic dWlvMHE2WFphMUt0ZDN4R==:,Content-Type:application/json" variable="sHeaders" /&gt;
+    &lt;!-- O caminho. --&gt;
+    &lt;stringvariable value=' /balance/ ' variable="sPath" /&gt;
+    &lt;!-- Os dados que serão enviados --&gt;
+    &lt;stringvariable value='{"object":"balance","paymentData":{"cardNumber":"14sJ212eZvKYlo2CLJXYQFYd"}}' variable="sData" /&gt;
+
+    &lt;!-- Concatene as strings na sequencia: Método(sVerb) - Headers (sHeaders) - Caminho (sPath) - Dados(sData). --&gt;
+    &lt;joinstring firstvalue="$(sVerb)" secondvalue="$(sHeaders)" variabledestination="$(sBuffer)" /&gt;
+    &lt;joinstring firstvalue="$(sBuffer)" secondvalue="$(sPath)" variabledestination="$(sBuffer)" /&gt;
+    &lt;joinstring firstvalue="$(sBuffer)" secondvalue="$(sData)" variabledestination="$(sBuffer)" /&gt;
+  </code>
+</pre>
+
+<p>O valor final do buffer deste após concatenado será: </p>
+<pre><code>GET Authorization: Basic dWlvMHE2WFphMUt0ZDN4R==,Content-Type:application/json /balance/ {"object":"balance","paymentData":{"cardNumber":"14sJ212eZvKYlo2CLJXYQFYd"}}' variable="sData</code></pre>
+
+<p>Após toda a composição de seu HTTP request é necessário somente envia-lo</p>
+
+<pre>
+  <code data-language="html">
+    &lt;!-- Convertendo a string para hexadecimal --&gt;
+    &lt;integervariable value="0" variable="iSize" /&gt;
+    &lt;string.tohex string="$(sBuffer)" variablereturn="$(sBuffer)" /&gt;
+    &lt;string.length value="$(sBuffer)" variablereturn="$(iSize)" /&gt;
+
+    &lt;!-- Enviando a string hexadecimal com o comando network.send --&gt;
+    &lt;integervariable value="0" variable="iRet" /&gt;
+    &lt;network.send buffer="$(sBuffer)" size="$(iSize)" variablereturn="$(iRet)" /&gt;
+
+    &lt;!-- Recebendo do host a resposta com o comando network.receive --&gt;
+    &lt;stringvariable value="" variable="sBufferReceive" /&gt;
+    &lt;integervariable value="0" variable="iBytesReceive" /&gt;
+
+    &lt;!-- Recebendo os 4 bytes do size --&gt;
+    &lt;network.receive variablebuffer="$(sBufferReceive)" maxsize="4"
+                     variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+
+    &lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
+      &lt;cleandisplay /&gt;
+      &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
+      &lt;display line="2" column="3" message="     ERROR     " /&gt;
+      &lt;waitkeytimeout seconds="5" /&gt;
+      &lt;network.hostdisconnect /&gt;
+      &lt;exit /&gt;
+    &lt;/if&gt;
+
+    &lt;!-- Recebendo a mensagem --&gt;
+    &lt;string.fromhex string="$(sBufferReceive)" variablereturn="$(sBufferReceive)" /&gt;
+    &lt;convert.toint base="16" number="$(sBufferReceive)" variablereturn="$(iSize)" /&gt;
+    &lt;network.receive variablebuffer="$(sBufferReceive)" maxsize="$(iSize)"
+                     variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+
+    &lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
+      &lt;cleandisplay /&gt;
+      &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
+      &lt;display line="2" column="3" message="     ERROR     " /&gt;
+      &lt;waitkeytimeout seconds="5" /&gt;
+      &lt;network.hostdisconnect /&gt;
+      &lt;exit /&gt;
+    &lt;/if&gt;
+
+    &lt;!-- Convertendo a resposta hexadecimal e mostrando a mensagem  --&gt;
+    &lt;string.fromhex string="$(sBufferReceive)" variablereturn="$(sBufferReceive)" /&gt;
+    &lt;cleandisplay /&gt;
+    &lt;display line="1" column="3" message=" RECEIVED: " /&gt;
+    &lt;display line="2" column="0" message="$(sBufferReceive)" /&gt;
+    &lt;waitkeytimeout seconds="5" /&gt;
+    &lt;network.hostdisconnect /&gt;
+  </code>
+</pre>
