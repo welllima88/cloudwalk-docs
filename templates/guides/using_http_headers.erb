@@ -1,80 +1,85 @@
 <h1>Utilizando headers HTTP</h1>
 
-<p>Uma mensagem http pode conter diversos Headers, que são utilizados para descrever propriedades da mensagem, como o comprimento, tipo de conteudo, entre outros. Para utilizá-los em POSXML bastar seguir os passos abaixo:</p>
+<ol class="table-of-contents">
+    <li><a href="#introduction">Introdução</a></li>
+  <li><a href="#app-sample">Aplicação de exemplo</a></li>
+</ol>
 
-<pre>
-  <code data-language="html">
-    &lt;!-- Sempre se atentar aos espaços. --&gt;
-    &lt;!-- Declare o método da requisição HTTP. --&gt;
-    &lt;stringvariable value="GET " variable="sVerb" /&gt;
-    &lt;!-- Adicione os Headers, separados por virgula. Deste modo: Header: valor, AnotherHeader: valor --&gt;
-    &lt;stringvariable value="Authorization: Basic dWlvMHE2WFphMUt0ZDN4R==:,Content-Type:application/json" variable="sHeaders" /&gt;
-    &lt;!-- O caminho. --&gt;
-    &lt;stringvariable value=' /balance/ ' variable="sPath" /&gt;
-    &lt;!-- Os dados que serão enviados --&gt;
-    &lt;stringvariable value='{"object":"balance","paymentData":{"cardNumber":"14sJ212eZvKYlo2CLJXYQFYd"}}' variable="sData" /&gt;
+<h2 id="introduction">Introdução</h2>
 
-    &lt;!-- Concatene as strings na sequencia: Método(sVerb) - Headers (sHeaders) - Caminho (sPath) - Dados(sData). --&gt;
-    &lt;joinstring firstvalue="$(sVerb)" secondvalue="$(sHeaders)" variabledestination="$(sBuffer)" /&gt;
-    &lt;joinstring firstvalue="$(sBuffer)" secondvalue="$(sPath)" variabledestination="$(sBuffer)" /&gt;
-    &lt;joinstring firstvalue="$(sBuffer)" secondvalue="$(sData)" variabledestination="$(sBuffer)" /&gt;
-  </code>
-</pre>
+<p>Requisições HTTP podem utilizar cabeçalhos (headers) para descrever propriedades da requisição, como autenticação, tipo de conteúdo, etc. Nesta página, você aprenderá como usá-los. Divirta-se!</p>
 
-<p>O valor final do buffer deste após concatenado será: </p>
-<pre><code>GET Authorization: Basic dWlvMHE2WFphMUt0ZDN4R==,Content-Type:application/json /balance/ {"object":"balance","paymentData":{"cardNumber":"14sJ212eZvKYlo2CLJXYQFYd"}}' variable="sData</code></pre>
+<h2 id="app-sample">Aplicação de exemplo</h2>
 
-<p>Após toda a composição de seu HTTP request é necessário somente envia-lo</p>
+<p>A aplicação de exemplo monta o <span class='code'>buffer</span> com a requisição HTTP (método, cabeçalhos, caminho e payload), converte o <span class='code'>buffer</span> para hexadecimal e o envia para o host, através do comando <a href='/posxml/commands/network.send' class='command'>network.send</a>. Em seguida, são requisitados 4 bytes, referente ao tamanho da resposta, através do comando <a href='/posxml/commands/network.receive' class='command'>network.receive</a>, e após a validação, a resposta completa é requisitada.</p>
 
-<pre>
-  <code data-language="html">
-    &lt;!-- Convertendo a string para hexadecimal --&gt;
-    &lt;integervariable value="0" variable="iSize" /&gt;
-    &lt;string.tohex string="$(sBuffer)" variablereturn="$(sBuffer)" /&gt;
-    &lt;string.length value="$(sBuffer)" variablereturn="$(iSize)" /&gt;
+<p class="note">Atente-se aos espaços, pois algumas variáveis serão concatenadas!</p>
 
-    &lt;!-- Enviando a string hexadecimal com o comando network.send --&gt;
-    &lt;integervariable value="0" variable="iRet" /&gt;
-    &lt;network.send buffer="$(sBuffer)" size="$(iSize)" variablereturn="$(iRet)" /&gt;
+<pre><code data-language="html">&lt;!-- HTTP verb --&gt;
+&lt;stringvariable value="GET " variable="sVerb" /&gt;
+&lt;!-- Path --&gt;
+&lt;stringvariable value=' /balance/ ' variable="sPath" /&gt;
+&lt;!-- Data to be sent --&gt;
+&lt;stringvariable value='{"object":"balance","paymentData":{"cardNumber":"1J212eZvKYlo2CLJXYQ"}}' variable="sPayload" /&gt;
+&lt;!-- Headers, comma separated: header1:value1,header2:value2 --&gt;
+&lt;stringvariable value="Authorization: Basic dWlvMHE2WFphZDN4R==:,Content-Type:application/json" variable="sHeaders" /&gt;
 
-    &lt;!-- Recebendo do host a resposta com o comando network.receive --&gt;
-    &lt;stringvariable value="" variable="sBufferReceive" /&gt;
-    &lt;integervariable value="0" variable="iBytesReceive" /&gt;
+&lt;!-- Concatenate the strings in this order: Method (sVerb), Headers (sHeaders), Path (sPath), Payload (sPayload) --&gt;
+&lt;joinstring firstvalue="$(sVerb)" secondvalue="$(sHeaders)" variabledestination="$(sBuffer)" /&gt;
+&lt;joinstring firstvalue="$(sBuffer)" secondvalue="$(sPath)" variabledestination="$(sBuffer)" /&gt;
+&lt;joinstring firstvalue="$(sBuffer)" secondvalue="$(sPayload)" variabledestination="$(sBuffer)" /&gt;
 
-    &lt;!-- Recebendo os 4 bytes do size --&gt;
-    &lt;network.receive variablebuffer="$(sBufferReceive)" maxsize="4"
-                     variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+&lt;!-- The content of the variable buffer at the end should be:
 
-    &lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
-      &lt;cleandisplay /&gt;
-      &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
-      &lt;display line="2" column="3" message="     ERROR     " /&gt;
-      &lt;waitkeytimeout seconds="5" /&gt;
-      &lt;network.hostdisconnect /&gt;
-      &lt;exit /&gt;
-    &lt;/if&gt;
+GET Authorization: Basic dWlvMHE2WFphMUt0ZDN4R==,Content-Type:application/json /balance/ {"object":"balance","paymentData":{"cardNumber":"14sJ212eZvKYlo2CLJXYQFYd"}}
 
-    &lt;!-- Recebendo a mensagem --&gt;
-    &lt;string.fromhex string="$(sBufferReceive)" variablereturn="$(sBufferReceive)" /&gt;
-    &lt;convert.toint base="16" number="$(sBufferReceive)" variablereturn="$(iSize)" /&gt;
-    &lt;network.receive variablebuffer="$(sBufferReceive)" maxsize="$(iSize)"
-                     variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+Note the spaces between the parts of the content --&gt;
 
-    &lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
-      &lt;cleandisplay /&gt;
-      &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
-      &lt;display line="2" column="3" message="     ERROR     " /&gt;
-      &lt;waitkeytimeout seconds="5" /&gt;
-      &lt;network.hostdisconnect /&gt;
-      &lt;exit /&gt;
-    &lt;/if&gt;
+&lt;!-- Convert the buffer to hexadecimal --&gt;
+&lt;integervariable value="0" variable="iSize" /&gt;
+&lt;string.tohex string="$(sBuffer)" variablereturn="$(sBuffer)" /&gt;
+&lt;string.length value="$(sBuffer)" variablereturn="$(iSize)" /&gt;
 
-    &lt;!-- Convertendo a resposta hexadecimal e mostrando a mensagem  --&gt;
-    &lt;string.fromhex string="$(sBufferReceive)" variablereturn="$(sBufferReceive)" /&gt;
-    &lt;cleandisplay /&gt;
-    &lt;display line="1" column="3" message=" RECEIVED: " /&gt;
-    &lt;display line="2" column="0" message="$(sBufferReceive)" /&gt;
-    &lt;waitkeytimeout seconds="5" /&gt;
-    &lt;network.hostdisconnect /&gt;
-  </code>
-</pre>
+&lt;!-- Send the hexadecimal buffer to the host with the command network.send --&gt;
+&lt;integervariable value="0" variable="iRet" /&gt;
+&lt;network.send buffer="$(sBuffer)" size="$(iSize)" variablereturn="$(iRet)" /&gt;
+
+&lt;!-- Receive the size of the answer (4 bytes) from the host with the command network.receive --&gt;
+&lt;stringvariable value="" variable="sBufferReceive" /&gt;
+&lt;integervariable value="0" variable="iBytesReceive" /&gt;
+&lt;network.receive variablebuffer="$(sBufferReceive)" maxsize="4"
+                 variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+
+&lt;!-- Validate if it was possible to receive the size of the answer from the host --&gt;
+&lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
+  &lt;cleandisplay /&gt;
+  &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
+  &lt;display line="2" column="3" message="     ERROR     " /&gt;
+  &lt;waitkeytimeout seconds="5" /&gt;
+  &lt;network.hostdisconnect /&gt;
+  &lt;exit /&gt;
+&lt;/if&gt;
+
+&lt;!-- Receive the complete answer from the host with the command network.receive --&gt;
+&lt;string.fromhex string="$(sBufferReceive)" variablereturn="$(sBufferReceive)" /&gt;
+&lt;convert.toint base="16" number="$(sBufferReceive)" variablereturn="$(iSize)" /&gt;
+&lt;network.receive variablebuffer="$(sBufferReceive)" maxsize="$(iSize)"
+                 variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+
+&lt;!-- Validate if it was possible to receive the complete answer from the host --&gt;
+&lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
+  &lt;cleandisplay /&gt;
+  &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
+  &lt;display line="2" column="3" message="     ERROR     " /&gt;
+  &lt;waitkeytimeout seconds="5" /&gt;
+  &lt;network.hostdisconnect /&gt;
+  &lt;exit /&gt;
+&lt;/if&gt;
+
+&lt;!-- Convert the hexadecimal answer and display it --&gt;
+&lt;string.fromhex string="$(sBufferReceive)" variablereturn="$(sBufferReceive)" /&gt;
+&lt;cleandisplay /&gt;
+&lt;display line="1" column="3" message=" RECEIVED: " /&gt;
+&lt;display line="2" column="0" message="$(sBufferReceive)" /&gt;
+&lt;waitkeytimeout seconds="5" /&gt;
+&lt;network.hostdisconnect /&gt;</code></pre>
