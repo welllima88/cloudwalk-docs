@@ -1,19 +1,23 @@
-<h1>Utilizando headers HTTP</h1>
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t("guides.using_http_headers.description") %>">
+<% end %>
+
+<h1><%= I18n.t("guides.using_http_headers.title") %></h1>
 
 <ol class="table-of-contents">
-    <li><a href="#introduction">Introdução</a></li>
-  <li><a href="#app-sample">Aplicação de exemplo</a></li>
+    <li><a href="#introduction"><%= I18n.t("guides.using_http_headers.table_of_contents.introduction") %></a></li>
+  <li><a href="#app-sample"><%= I18n.t("guides.using_http_headers.table_of_contents.app_sample") %></a></li>
 </ol>
 
-<h2 id="introduction">Introdução</h2>
+<h2 id="introduction"><%= I18n.t("guides.using_http_headers.table_of_contents.introduction") %></h2>
 
-<p>Requisições HTTP podem utilizar cabeçalhos (headers) para descrever propriedades da requisição, como autenticação, tipo de conteúdo, etc. Nesta página, você aprenderá como usá-los. Divirta-se!</p>
+<p><%= I18n.t("guides.using_http_headers.introduction.paragraph_1") %></p>
 
-<h2 id="app-sample">Aplicação de exemplo</h2>
+<h2 id="app-sample"><%= I18n.t("guides.using_http_headers.table_of_contents.app_sample") %></h2>
 
-<p>A aplicação de exemplo monta o <span class='code'>buffer</span> com a requisição HTTP (método, cabeçalhos, caminho e payload), converte o <span class='code'>buffer</span> para hexadecimal e o envia para o host, através do comando <a href='/posxml/commands/network.send' class='command'>network.send</a>. Em seguida, são requisitados 4 bytes, referente ao tamanho da resposta, através do comando <a href='/posxml/commands/network.receive' class='command'>network.receive</a>, e após a validação, a resposta completa é requisitada.</p>
+<p><%= I18n.t("guides.using_http_headers.app_sample.paragraph_1") %></p>
 
-<p class="note">Atente-se aos espaços, pois algumas variáveis serão concatenadas!</p>
+<p class="note"><%= I18n.t("guides.using_http_headers.app_sample.note") %></p>
 
 <pre><code data-language="html">&lt;!-- HTTP verb --&gt;
 &lt;stringvariable value="GET " variable="sVerb" /&gt;
