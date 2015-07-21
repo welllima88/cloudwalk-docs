@@ -714,6 +714,7 @@ en:
       group_name: Guides
       patterns: "Transaction patterns"
       emulator_card_swipe: "Emulator Card Swipe"
+      using_http_headers: "Using HTTP headers"
     help:
       group_name: Help
       faq: "Frequently Asked Questions"
@@ -3021,6 +3022,17 @@ en:
       adding_new_cards:
         paragraph_1: "To add new cards, simply edit the last card available and a new card will appear below instantly!"
         img_1_alt: "Add a new card"
+    using_http_headers:
+      title: "Using HTTP headers"
+      description: "Learn how to use HTTP headers with POSXML"
+      table_of_contents:
+        introduction: "Introduction"
+        app_sample: "Sample application"
+      introduction:
+        paragraph_1: "HTTP requests can use headers to describe additional properties of the request, like authentication, content type, etc. On this page, you will learn how to use them. Enjoy!"
+      app_sample:
+        paragraph_1: "The sample application builds the HTTP request <span class='code'>buffer</span> (method, headers, path and payload), converts the <span class='code'>buffer</span> to hexadecimal and send it to the host, through the command <a href='/en/posxml/commands/network.send' class='command'>network.send</a>. After that, 4 bytes are requested, related to the size of the answer, through the command <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a>, and after a validation, the complete answer is requested."
+        note: "Watch out the spaces, because some variables will be concatenated!"
   help:
     faq:
       description: "The most frequently asked questions about CloudWalk"

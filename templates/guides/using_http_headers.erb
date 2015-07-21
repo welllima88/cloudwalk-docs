@@ -1,0 +1,89 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t("guides.using_http_headers.description") %>">
+<% end %>
+
+<h1><%= I18n.t("guides.using_http_headers.title") %></h1>
+
+<ol class="table-of-contents">
+    <li><a href="#introduction"><%= I18n.t("guides.using_http_headers.table_of_contents.introduction") %></a></li>
+  <li><a href="#app-sample"><%= I18n.t("guides.using_http_headers.table_of_contents.app_sample") %></a></li>
+</ol>
+
+<h2 id="introduction"><%= I18n.t("guides.using_http_headers.table_of_contents.introduction") %></h2>
+
+<p><%= I18n.t("guides.using_http_headers.introduction.paragraph_1") %></p>
+
+<h2 id="app-sample"><%= I18n.t("guides.using_http_headers.table_of_contents.app_sample") %></h2>
+
+<p><%= I18n.t("guides.using_http_headers.app_sample.paragraph_1") %></p>
+
+<p class="note"><%= I18n.t("guides.using_http_headers.app_sample.note") %></p>
+
+<pre><code data-language="html">&lt;!-- HTTP verb --&gt;
+&lt;stringvariable value="GET " variable="sVerb" /&gt;
+&lt;!-- Path --&gt;
+&lt;stringvariable value=' /balance/ ' variable="sPath" /&gt;
+&lt;!-- Data to be sent --&gt;
+&lt;stringvariable value='{"object":"balance","paymentData":{"cardNumber":"1J212eZvKYlo2CLJXYQ"}}' variable="sPayload" /&gt;
+&lt;!-- Headers, comma separated: header1:value1,header2:value2 --&gt;
+&lt;stringvariable value="Authorization: Basic dWlvMHE2WFphZDN4R==:,Content-Type:application/json" variable="sHeaders" /&gt;
+
+&lt;!-- Concatenate the strings in this order: Method (sVerb), Headers (sHeaders), Path (sPath), Payload (sPayload) --&gt;
+&lt;joinstring firstvalue="$(sVerb)" secondvalue="$(sHeaders)" variabledestination="$(sBuffer)" /&gt;
+&lt;joinstring firstvalue="$(sBuffer)" secondvalue="$(sPath)" variabledestination="$(sBuffer)" /&gt;
+&lt;joinstring firstvalue="$(sBuffer)" secondvalue="$(sPayload)" variabledestination="$(sBuffer)" /&gt;
+
+&lt;!-- The content of the variable buffer at the end should be:
+
+GET Authorization: Basic dWlvMHE2WFphMUt0ZDN4R==,Content-Type:application/json /balance/ {"object":"balance","paymentData":{"cardNumber":"14sJ212eZvKYlo2CLJXYQFYd"}}
+
+Note the spaces between the parts of the content --&gt;
+
+&lt;!-- Convert the buffer to hexadecimal --&gt;
+&lt;integervariable value="0" variable="iSize" /&gt;
+&lt;string.tohex string="$(sBuffer)" variablereturn="$(sBuffer)" /&gt;
+&lt;string.length value="$(sBuffer)" variablereturn="$(iSize)" /&gt;
+
+&lt;!-- Send the hexadecimal buffer to the host with the command network.send --&gt;
+&lt;integervariable value="0" variable="iRet" /&gt;
+&lt;network.send buffer="$(sBuffer)" size="$(iSize)" variablereturn="$(iRet)" /&gt;
+
+&lt;!-- Receive the size of the answer (4 bytes) from the host with the command network.receive --&gt;
+&lt;stringvariable value="" variable="sBufferReceive" /&gt;
+&lt;integervariable value="0" variable="iBytesReceive" /&gt;
+&lt;network.receive variablebuffer="$(sBufferReceive)" maxsize="4"
+                 variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+
+&lt;!-- Validate if it was possible to receive the size of the answer from the host --&gt;
+&lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
+  &lt;cleandisplay /&gt;
+  &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
+  &lt;display line="2" column="3" message="     ERROR     " /&gt;
+  &lt;waitkeytimeout seconds="5" /&gt;
+  &lt;network.hostdisconnect /&gt;
+  &lt;exit /&gt;
+&lt;/if&gt;
+
+&lt;!-- Receive the complete answer from the host with the command network.receive --&gt;
+&lt;string.fromhex string="$(sBufferReceive)" variablereturn="$(sBufferReceive)" /&gt;
+&lt;convert.toint base="16" number="$(sBufferReceive)" variablereturn="$(iSize)" /&gt;
+&lt;network.receive variablebuffer="$(sBufferReceive)" maxsize="$(iSize)"
+                 variablereceivedbytes="$(iBytesReceive)" variablereturn="$(iRet)" /&gt;
+
+&lt;!-- Validate if it was possible to receive the complete answer from the host --&gt;
+&lt;if variable="$(iRet)" operator="notequalto" value="1"&gt;
+  &lt;cleandisplay /&gt;
+  &lt;display line="1" column="3" message=" COMMUNICATION " /&gt;
+  &lt;display line="2" column="3" message="     ERROR     " /&gt;
+  &lt;waitkeytimeout seconds="5" /&gt;
+  &lt;network.hostdisconnect /&gt;
+  &lt;exit /&gt;
+&lt;/if&gt;
+
+&lt;!-- Convert the hexadecimal answer and display it --&gt;
+&lt;string.fromhex string="$(sBufferReceive)" variablereturn="$(sBufferReceive)" /&gt;
+&lt;cleandisplay /&gt;
+&lt;display line="1" column="3" message=" RECEIVED: " /&gt;
+&lt;display line="2" column="0" message="$(sBufferReceive)" /&gt;
+&lt;waitkeytimeout seconds="5" /&gt;
+&lt;network.hostdisconnect /&gt;</code></pre>

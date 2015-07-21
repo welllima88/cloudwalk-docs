@@ -714,6 +714,7 @@ pt-BR:
       group_name: Tutoriais
       patterns: "Padrões de transações"
       emulator_card_swipe: "Cartões no Emulador"
+      using_http_headers: "Utilizando headers HTTP"
     help:
       group_name: Ajuda
       faq: "Perguntas Frequentes"
@@ -3022,6 +3023,17 @@ pt-BR:
       adding_new_cards:
         paragraph_1: "Para adicionar novos cartões, basta editar o último cartão disponível e um novo cartão irá aparecer abaixo instantaneamente!"
         img_1_alt: "Adicionar um novo cartão"
+    using_http_headers:
+      title: "Utilizando headers HTTP"
+      description: "Aprenda como utilizar cabeçalhos (headers) HTTP com POSXML"
+      table_of_contents:
+        introduction: "Introdução"
+        app_sample: "Aplicação de exemplo"
+      introduction:
+        paragraph_1: "Requisições HTTP podem utilizar cabeçalhos (headers) para descrever propriedades da requisição, como autenticação, tipo de conteúdo, etc. Nesta página, você aprenderá como usá-los. Divirta-se!"
+      app_sample:
+        paragraph_1: "A aplicação de exemplo monta o <span class='code'>buffer</span> com a requisição HTTP (método, cabeçalhos, caminho e payload), converte o <span class='code'>buffer</span> para hexadecimal e o envia para o host, através do comando <a href='/pt-BR/posxml/commands/network.send' class='command'>network.send</a>. Em seguida, são requisitados 4 bytes, referente ao tamanho da resposta, através do comando <a href='/pt-BR/posxml/commands/network.receive' class='command'>network.receive</a>, e após a validação, a resposta completa é requisitada."
+        note: "Atente-se aos espaços, pois algumas variáveis serão concatenadas!"
   help:
     faq:
       description: "As perguntas mais frequentes sobre o serviço CloudWalk"
