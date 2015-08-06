@@ -755,6 +755,7 @@ pt-BR:
       group_name: WALK Manager
       groups: Grupos
       logical_numbers: Números lógicos
+      push_notifications: Notificações push
       transactions_monitor: Monitor de transações
   posxml:
     commands:
@@ -2855,6 +2856,31 @@ pt-BR:
         interface: Apresentação da interface
         parameters: Parâmetros
       title: WALK Manager - Números lógicos
+    push_notifications:
+      title: "WALK Manager - Notificações push"
+      description: "Envie notificações instantâneas para seus terminais POS"
+      table_of_contents:
+        functionality: "Funcionalidade"
+        interface: "Apresentação da interface"
+      functionality:
+        paragraph_1: "Notificações push são utilizadas para interagir com os terminais POS. As notificações são entregues instantaneamente, e caso o terminal POS esteja indisponível, a notificação permanece em uma fila por até 35 dias antes de ser removida."
+        paragraph_2: "Atualmente, existem dois tipos de notificações: Exibição instantânea e Processamento."
+        instant_display: "Exibição instantânea"
+        paragraph_3: "A notificação é simplesmente exibida na tela do terminal POS."
+        use_cases: "Casos de uso:"
+        use_case_1: "Dar boas vindas ao operador do POS;"
+        use_case_2: "Notificar o operador do POS que há uma atualização agendada;"
+        use_case_3: "Pedir que o operador do POS entre em contato com a central de suporte."
+        processing: "Processamento"
+        paragraph_4: "A notificação não será exibida na tela do POS, em vez disso, ela será armazenada no sistema de arquivos do POS, no arquivo <strong>cw_notifications.dat</strong>, na chave <strong>processing_message</strong>, para que sua aplicação possa processá-la dinamicamente."
+      interface:
+        paragraph_1: 'Para enviar uma notificação push, basta seguir o seguinte procedimento:'
+        paragraph_2: Clique no menu <strong>Notificações push</strong>.
+        paragraph_3: Digite a mensagem (somente caracteres ASCII).
+        paragraph_4: Clique no seletor <strong>Grupo</strong> e escolha o grupo que deverá receber a notificação.
+        paragraph_5: Escolha o escopo (todos números lógicos ou números lógicos específicos) no seletor <strong>Escopo</strong>.
+        paragraph_6: Escolha o tipo (exibição instantânea ou processamento) no seletor <strong>Tipo</strong>.
+        paragraph_7: "Opcional: Se o tipo \"Processamento\" foi escolhido, a aplicação responsável pelo tratamento da notificação pode ser informada."
     transactions_monitor:
       description: O monitor de transações exibe todas as operações que foram efetuadas pelos terminais POS. Basta especificar o tipo de registro nos filtros de pesquisa.
       functionality:

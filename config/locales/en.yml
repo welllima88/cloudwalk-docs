@@ -755,6 +755,7 @@ en:
       group_name: WALK Manager
       groups: Groups
       logical_numbers: Logical numbers
+      push_notifications: Push notifications
       transactions_monitor: Monitor of transactions
   posxml:
     commands:
@@ -2855,6 +2856,31 @@ en:
         interface: Interface presentation
         parameters: Parameters
       title: WALK Manager - Logical numbers
+    push_notifications:
+      title: "WALK Manager - Push notifications"
+      description: "Send instant notifications to your POS terminals"
+      table_of_contents:
+        functionality: "Functionality"
+        interface: "Interface presentation"
+      functionality:
+        paragraph_1: "Push notifications are used to interact with POS terminals. Notifications are instantly delivered, and if the POS terminal is out of reach, the notification remains on a queue for up to 35 days before being removed."
+        paragraph_2: "Currently, there are two types of notifications: Instant display and Processing."
+        instant_display: "Instant display"
+        paragraph_3: "The notification is simply be displayed on the POS terminal screen."
+        use_cases: "Practical use cases:"
+        use_case_1: "Welcome the POS operator;"
+        use_case_2: "Notify the POS operator that there is a scheduled update;"
+        use_case_3: "Ask the POS operator to get in touch with the customer support."
+        processing: "Processing"
+        paragraph_4: "The notification will not be displayed on the POS screen, instead, it will be stored on the POS file system, on the file <strong>cw_notifications.dat</strong>, under the key <strong>processing_message</strong>, so your application can dynamically process it."
+      interface:
+        paragraph_1: 'To send a push notification, just follow this procedure:'
+        paragraph_2: Click the menu <strong>Push notifications</strong>.
+        paragraph_3: Enter the message (ASCII characters only).
+        paragraph_4: Click the select <strong>Group</strong> and choose which group should receive the notification.
+        paragraph_5: Choose the scope (all logical numbers or specific logical numbers) on the select <strong>Scope</strong>.
+        paragraph_6: Choose the type (instant display or processing) on the select <strong>Type</strong>.
+        paragraph_7: "Optional: If the type \"Processing\" was selected, the application responsible to handle the notification can be informed."
     transactions_monitor:
       description: The transactions monitor displays all the operations that have been performed. Just specify the record type in the search filters.
       functionality:
