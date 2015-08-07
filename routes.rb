@@ -23,6 +23,7 @@ class Routes
       { "url" => "walk-manager/groups",                                  "view_path" => "walk_manager/groups"},
       { "url" => "walk-manager/logical-numbers",                         "view_path" => "walk_manager/logical_numbers"},
       { "url" => "walk-manager/assets",                                  "view_path" => "walk_manager/assets"},
+      { "url" => "walk-manager/push-notifications",                      "view_path" => "walk_manager/push_notifications"},
       { "url" => "walk-manager/transactions-monitor",                    "view_path" => "walk_manager/transactions_monitor"},
       # DEVELOPMENT ENVIRONMENT
       { "url" => "development-environment/overview",                     "view_path" => "development_environment/overview"},

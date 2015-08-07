@@ -1,0 +1,56 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('walk_manager.push_notifications.description') %>">
+<% end %>
+
+<h1><%= I18n.t("walk_manager.push_notifications.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#functionality"><%= I18n.t("walk_manager.push_notifications.table_of_contents.functionality") %></a></li>
+  <li><a href="#interface"><%= I18n.t("walk_manager.push_notifications.table_of_contents.interface") %></a></li>
+</ol>
+
+<h2 id="functionality"><%= I18n.t("walk_manager.push_notifications.table_of_contents.functionality") %></h2>
+
+<p><%= I18n.t("walk_manager.push_notifications.functionality.paragraph_1") %></p>
+
+<p><%= I18n.t("walk_manager.push_notifications.functionality.paragraph_2") %></p>
+
+<h3><%= I18n.t("walk_manager.push_notifications.functionality.instant_display") %></h3>
+
+<p><%= I18n.t("walk_manager.push_notifications.functionality.paragraph_3") %></p>
+
+<p><%= I18n.t("walk_manager.push_notifications.functionality.use_cases") %></p>
+<ul>
+  <li><%= I18n.t("walk_manager.push_notifications.functionality.use_case_1") %></li>
+  <li><%= I18n.t("walk_manager.push_notifications.functionality.use_case_2") %></li>
+  <li><%= I18n.t("walk_manager.push_notifications.functionality.use_case_3") %></li>
+</ul>
+
+<h3><%= I18n.t("walk_manager.push_notifications.functionality.processing") %></h3>
+
+<p><%= I18n.t("walk_manager.push_notifications.functionality.paragraph_4") %></p>
+
+<h2 id="interface"><%= I18n.t("walk_manager.push_notifications.table_of_contents.interface") %></h2>
+
+<img src="/img/<%= I18n.locale %>/walk-manager/push-notification.jpg" class="img-polaroid" alt="Push notification" />
+
+<p><%= I18n.t("walk_manager.push_notifications.interface.paragraph_1") %></p>
+
+<ol>
+  <li><%= I18n.t("walk_manager.push_notifications.interface.paragraph_2") %></li>
+  <li><%= I18n.t("walk_manager.push_notifications.interface.paragraph_3") %></li>
+  <li><%= I18n.t("walk_manager.push_notifications.interface.paragraph_4") %></li>
+  <li><%= I18n.t("walk_manager.push_notifications.interface.paragraph_5") %></li>
+  <li><%= I18n.t("walk_manager.push_notifications.interface.paragraph_6") %></li>
+  <li><%= I18n.t("walk_manager.push_notifications.interface.paragraph_7") %></li>
+</ol>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.walk_manager.assets"), "walk-manager/assets") %>
+  </li>
+
+  <li class="next">
+    <%= link_to(I18n.t("menu.walk_manager.transactions_monitor") + " &rarr;", "walk-manager/transactions-monitor") %>
+  </li>
+</ul>
