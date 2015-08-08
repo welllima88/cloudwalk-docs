@@ -806,9 +806,9 @@ en:
           parameter_3: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the result of the command.
       crypto_crc:
         description: 16-bit CRC calculation, support CRC-CCITT
-        paragraph_1: The command <span class='code'>crypto.crc</span> is used for 16-bit <a href='https://en.wikipedia.org/wiki/Cyclic_redundancy_check' target="_blank">CRC</a> calculation and CRC-CCITT support.
+        paragraph_1: The command <span class='code'>crypto.crc</span> is used for 16-bit CRC calculation and CRC-CCITT support.
         paragraph_2: In the example above, the buffer <strong>30313233343536</strong> will be used in the <strong>CRC</strong> calculation and the return of the command will be stored in the variable <strong>iReturn</strong>. This value will then be converted to a string using the command <a href='stringvariable' class='command'>stringvariable</a> and stored in the variable <strong>sReturn</strong>.
-        paragraph_3: The return should be <strong>31712</strong>.
+        paragraph_3: The return should be <strong>19462</strong>.
         parameters:
           parameter_1: <strong>buffer</strong> <span class='data-type'>[string]</span><br/>Hexadecimal representation that will be used to calculate CRC.
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/>Number of bytes in buffer.
