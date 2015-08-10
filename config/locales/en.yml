@@ -298,6 +298,35 @@ en:
         title: Developer API - Parameters
         update:
           paragraph_1: Update an existing parameter.
+      push_notifications:
+        title: Developer API - Push notifications
+        description: Check how to send push notifications though the CloudWalk API.
+        attributes:
+          list:
+            created_at: Timestamp in ISO 8601 format
+            id: Record ID
+            content: Notification content (payload)
+            created_by: User ID that created the record
+            created_via: Channel used to create the record (Interface or API)
+            updated_at: Timestamp in ISO 8601 format
+          paragraph_1: 'A push notification have the following attributes:'
+        index:
+          paragraph_1: Return an array with all notifications.
+        show:
+          paragraph_1: Return the details of a specific notification.
+        table_of_contents:
+          attributes: Push notification attributes
+          index: List of all push notifications
+          show: Find a specific push notification
+          create: Create a new push notification
+        create:
+          paragraph_1: Create a new push notification.
+          extra_info:
+            group_id: "<strong>group_id:</strong> The ID of the group that should receive the notification"
+            range: "<strong>range:</strong> <span class='code'>group</span> to notify the whole group or <span class='code'>specific_logical_numbers</span> to notify only specific logical numbers"
+            logical_numbers: "<strong>logical_numbers:</strong> If the range \"specific_logical_numbers\" was select, enter the logical numbers (comma separated)"
+            kind: "<strong>kind:</strong> <span class='code'>show</span> for instant displaying the content or <span class='code'>processing</span> for custom handling of the content"
+            app_id: "<strong>app_id:</strong> (optional) If the kind \"processing\" was selected, enter the ID of the application responsible to handle the notification"
       users:
         attributes:
           list:
@@ -704,6 +733,7 @@ en:
         groups: Groups
         logical_numbers: Logical numbers
         logs: Logs
+        push_notifications: Push notifications
         parameters: Parameters
         users: Users
     development_environment:

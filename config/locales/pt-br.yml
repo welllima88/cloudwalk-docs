@@ -298,6 +298,35 @@ pt-BR:
         title: Developer API - Parâmetros
         update:
           paragraph_1: Modifica um parâmetro já existente.
+      push_notifications:
+        title: Developer API - Notificações push
+        description: Veja como enviar notificações push através da API CloudWalk.
+        attributes:
+          list:
+            created_at: Timestamp da criação do registro (ISO 8601)
+            id: ID do registro
+            content: Conteúdo da notificação (payload)
+            created_by: ID do usuário que criou o registro
+            created_via: Canal utilizado para criar o registro (Interface ou API)
+            updated_at: Timestamp da atualização do registro (ISO 8601)
+          paragraph_1: 'Atributos de uma notificação push:'
+        index:
+          paragraph_1: Retorna um array com todas as notificações push.
+        show:
+          paragraph_1: Retorna os detalhes de uma notificação push específica.
+        table_of_contents:
+          attributes: Atributos de uma notificação push
+          index: Listagem de todas as notificações push
+          show: Busca de uma notificação push específica
+          create: Criação de uma nova notificação push
+        create:
+          paragraph_1: Cria uma nova notificação push.
+          extra_info:
+            group_id: "<strong>group_id:</strong> O ID do grupo que deve receber a notificação"
+            range: "<strong>range:</strong> <span class='code'>group</span> para notificar o grupo todo ou <span class='code'>specific_logical_numbers</span> para notificar somente números lógicos específicos"
+            logical_numbers: "<strong>logical_numbers:</strong> Se o range \"specific_logical_numbers\" foi selecionado, informe os números lógicos (separados por vírgula)"
+            kind: "<strong>kind:</strong> <span class='code'>show</span> para exibir instantaneamente o conteúdo ou <span class='code'>processing</span> para manipular dinamicamente o conteúdo"
+            app_id: "<strong>app_id:</strong> (optional) Se o tipo \"processing\" foi escolhido, informe o ID da aplicação que irá processar a conteúdo da notificação"
       users:
         attributes:
           list:
