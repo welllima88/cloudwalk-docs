@@ -238,6 +238,8 @@ en:
             serial_number: Device serial number
             started_at: Timestamp in ISO 8601 format
             status: 'Record status: Success <span class="code">success</span>, Processing <span class="code">running</span> or Error <span class="code">fail</span>'
+            sent: Information sent to the host
+            received: Information received from the host
             transaction_type: 'Record type: Release <span class="code">company</span>, Transaction <span class="code">switch</span> or Download <span class="code">get_asset</span>'
           paragraph_1: 'A log have the following attributes:'
         description: The log records have some acronyms in fields transaction_type, status and received. Check out the definition of all acronyms.

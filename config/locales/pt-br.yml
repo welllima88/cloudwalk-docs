@@ -238,6 +238,8 @@ pt-BR:
             serial_number: Número de série do dispositivo
             started_at: Timestamp do início da transação (ISO 8601)
             status: 'Status do registro: Sucesso <span class="code">success</span>, Processando <span class="code">running</span> ou Falha <span class="code">fail</span>'
+            sent: Informação enviada para o host
+            received: Informação recebida do host
             transaction_type: 'Tipo de registro: Liberação <span class="code">company</span>, Transação <span class="code">switch</span> ou Download <span class="code">get_asset</span>'
           paragraph_1: 'Os seguintes atributos compõe um registro de log:'
         description: Os registros de log possuem algumas siglas, nos campos transaction_type, status e received. Confira a definição de todas as siglas.

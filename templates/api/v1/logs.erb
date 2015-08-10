@@ -67,6 +67,16 @@
       <td><%= I18n.t("api.v1.logs.attributes.list.status") %></td>
     </tr>
     <tr>
+      <td>sent</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.sent") %></td>
+    </tr>
+    <tr>
+      <td>received</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.logs.attributes.list.received") %></td>
+    </tr>
+    <tr>
       <td>started_at</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.logs.attributes.list.started_at") %></td>
@@ -138,6 +148,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "detail":"",
             "framework_version":"3.80",
             "status":"success",
+            "sent":"null",
+            "received":"null",
             "started_at":"2015-02-04T14:38:55Z",
             "finished_at":"2015-02-04T14:38:56Z"
          }
@@ -152,6 +164,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "detail":"",
             "framework_version":"3.80",
             "status":"success",
+            "sent":"null",
+            "received":"null",
             "started_at":"2015-02-04T14:37:56Z",
             "finished_at":"2015-02-04T14:37:57Z"
          }
@@ -219,6 +233,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "detail":"",
             "framework_version":"3.80",
             "status":"fail",
+            "sent":"null",
+            "received":"null",
             "started_at":"2015-02-04T13:17:12Z",
             "finished_at":"2015-02-04T13:17:14Z"
          }
@@ -286,6 +302,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "detail":"",
             "framework_version":"3.80",
             "status":"success",
+            "sent":"null",
+            "received":"null",
             "started_at":"2015-02-04T13:18:32Z",
             "finished_at":"2015-02-04T13:18:37Z"
          }
@@ -353,6 +371,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "detail":"",
             "framework_version":"3.80",
             "status":"success",
+            "sent":"null",
+            "received":"null",
             "started_at":"2015-02-04T14:21:11Z",
             "finished_at":"2015-02-04T14:21:14Z"
          }
@@ -422,6 +442,8 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "detail":"",
             "framework_version":"3.80",
             "status":"fail",
+            "sent":"null",
+            "received":"null",
             "started_at":"2015-02-04T15:38:01Z",
             "finished_at":"2015-02-04T15:38:04Z"
          }
