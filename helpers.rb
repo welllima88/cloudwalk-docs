@@ -121,6 +121,10 @@ module Helpers
     markup
   end
 
+  def html_escape(html)
+    html.nil? || html.empty? ? "" : CGI.escapeHTML(html)
+  end
+
   def send_mail(subject, body)
     Pony.mail :to => ENV["ADMIN_CONTACT_EMAIL"].dup,
               :from => "docs@cloudwalk.io",

@@ -49,7 +49,7 @@
               <form action="/" method="post" class="navbar-form pull-right" style="float: right">
                 <input type="hidden" name="url" value="<%= request.path_info %>">
                 <% if params[:query] %>
-                  <input type="hidden" name="query" value="<%= params['query']%>" />
+                  <input type="hidden" name="query" value="<%= html_escape(params['query']) %>" />
                 <% end %>
                 <select name="locale" class="input-medium" onchange="this.form.submit()">
                   <%= option_select "pt-BR", "Português", I18n.locale %>
@@ -73,7 +73,7 @@
         <div id="banner">
           <img src="/img/cloudwalk-logo.png" alt="CloudWalk" width="239" height="83">
           <form id="query-form" action="/<%= I18n.locale %>/search" class="navbar-form pull-right" method="GET">
-            <input name="query" id="query" class="input-medium search-query" placeholder="<%= I18n.t("search.placeholder") %>" type="text" value="<%= params[:query]%>" />
+            <input name="query" id="query" class="input-medium search-query" placeholder="<%= I18n.t("search.placeholder") %>" type="text" value="<%= html_escape(params[:query]) %>" />
           </form>
           <span class="badge badge-info query-help" id="query-help"><%= I18n.t("search.helper") %></span>
         </div>
