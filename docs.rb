@@ -8,6 +8,7 @@ require "stringex"
 require "i18n"
 require "i18n/backend/fallbacks"
 require "rack-ssl-enforcer"
+require "rack/protection"
 require "json"
 require "pony"
 
@@ -32,6 +33,7 @@ class Docs < Sinatra::Base
     I18n.enforce_available_locales = false
 
     use Rack::SslEnforcer if production?
+    use Rack::Protection
 
     enable :sessions
 

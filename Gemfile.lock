@@ -79,6 +79,7 @@ DEPENDENCIES
   mocha
   pony
   puma
+  rack-protection
   rack-ssl-enforcer
   rack-test
   simplecov
@@ -86,3 +87,6 @@ DEPENDENCIES
   sinatra-contrib
   sinatra-partial
   stringex
+
+BUNDLED WITH
+   1.10.5
