@@ -6,9 +6,111 @@
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p class="note">
-Page under construction.
+<p>
+The <code>Rakefile</code> is a file available in your new application,
+it's destined to be used by the program <code>rake</code>, a common tool
+used by rubyists to set up many projects, install dependencies and make
+the preparations to run the related application.
 </p>
+
+<p class="note">
+This file doesn't need to be edited, it works well by default for most
+apps, but here are the main guidelines you might need in case you want to
+personalize the way the app is built in detail.
+</p>
+
+<p>
+Initially, the <code>Rakefile</code> of your new CloudWalk applciation
+will contain the following code:
+</p>
+
+<pre><code><span style="color:#999">#!/usr/bin/env rake</span>
+
+require <span style="color:#0ad">'rake'</span>
+require <span style="color:#0ad">'fileutils'</span>
+require <span style="color:#0ad">'bundler/setup'</span>
+
+Bundler.require(<span style="color:#0ad">:default</span>)
+
+DaFunk::RakeTask.new do |t|
+  t.mrbc  = <span style="color:#0ad">"cloudwalk compile"</span>
+  t.mruby = <span style="color:#0ad">"cloudwalk run"</span>
+end</code></pre>
+
+<p>
+That code essentially requires the dependencies and sets up the variabels
+that <b>da_funk</b> uses to run our application. The variables set are
+perhaps the most important values you need to personalize the behavior of
+your build and the application itself. The variables that can be set
+inside the <code>RakeTask</code> are:
+</p>
+
+<ul>
+  <li>
+    <code>t.libs</code>: The location of your app's source code, by
+    default it uses <code>FileList['lib/**/*.rb']</code>, which means all
+    the <b>.rb</b> files inside the <b>lib</b> directory.
+  </li>
+  <li>
+    <code>t.tests</code>: The location of your app's test files, by
+    default it uses <code>FileList['test/**/*test.rb']</code>, whcih means
+    all the files ending with <b>test.rb</b> in the directory <b>test</b>.
+  </li>
+  <li>
+    <code>t.tests_integration</code>: The location of your app's
+    integration tests files, by default they're at:
+    <code>FileList['test/integration/**/*test.rb']</code>
+  </li>
+  <li>
+    <code>t.tests_unit</code>: The location of your app's
+    unit tests files, by default they're at:
+    <code>FileList['test/unit/**/*test.rb']</code>
+  </li>
+  <li>
+    <code>t.root_path</code>: By default:
+    <code>File.expand_path("./")</code>
+  </li>
+  <li>
+    <code>t.name</code>: By default, the name of the directory where all
+    the app files are at, which means: <code>File.basename(t.root_path)</code>
+  </li>
+  <li>
+    <code>t.out_path</code>: This is the path where the application's
+    built files will be available, by default:
+    <code>File.join(t.root_path, "out", t.name)</code>
+  </li>
+  <li>
+    <code>t.main_out</code>: The location of the final <b>.mrb</b> that
+    will hold all the app we're developing, by default at:
+    <code>File.join(t.out_path, "main.mrb")</code>
+  </li>
+  <li>
+    <code>t.test_out</code>: The location of the final <b>.mrb</b> that
+    will hold all the app's tests, by default at:
+    <code>File.join(t.out_path, "test.mrb")</code>
+  </li>
+  <li>
+    <code>t.resources</code>: The location of some extra resources, if
+    your app needs them, by default at:
+    <code>FileList['resources/**/*']</code>
+  </li>
+  <li>
+    <code>t.resources_out</code>: The resources built, by default at:
+    <code>t.resources.pathmap("%{resources,#{t.out_path}}p")</code>
+  </li>
+  <li>
+    <code>t.mruby</code>: The location or the program we're using to run
+    our app, by default it uses our CLI, this way: <code>"cloudwalk run"</code>,
+    but you can set it to be the location of your <code>mruby</code>
+    binary.
+  </li>
+  <li>
+    <code>t.mrbc</code>: The location or the program we're using to build
+    our app, by default it uses our CLI, this way: <code>"cloudwalk compile"</code>,
+    but you can set it to be the location of your <code>mrbc</code>
+    binary.
+  </li>
+</ul>
 
 <ul class="pager">
   <li class="previous">
