@@ -6,9 +6,43 @@
 
 <p class="more-info"><%= I18n.t("general.updated_at", :date => "16/09/2014") %></p>
 
-<p class="note">
-Page under construction.
+<p>
+Once you create a new app, it's useful for you to make tests to check if your
+app is behaving correctly. To help you with this task, we've provided you with
+a basic structure ready to host your tests, and it's in your recently created
+app under the folder <code>test</code>.
 </p>
+
+<p>
+In that folder, you'll find a file called <b>test_helper.rb</b>, don't change
+it, it's an important tool for the execution of your tests!
+</p>
+
+<p>
+You'll also find two folders, <code>unit</code> and <code>integration</code>,
+each to hold specific tests of both kinds, <i>integration tests</i> and <i>unit
+tests</i>.
+</p>
+
+<p>
+Besides the difference of types of tests, the way to code them is quite the
+same, simpy create a file inside one of those folders, this file must end in
+<b>test.rb</b>, and inside it, create a class that will inherit from DaFunk's
+test cases, as it appears here: <code>class ParamsDatTest &lt; DaFunk::Test.case</code>
+</p>
+
+<p>Inside that class, asimply assume that your lib classes, functions and
+methods are globally available, execute them and compare the results with
+desired values using <code>assert_equal</code> or <code>assert</code>, example:</p>
+
+<pre><code>class MyAppTest < DaFunk::Test.case
+  def first_test
+    assert Main.call
+  end
+  def second_test
+    assert_equal Main.call, true
+  end
+end</code></pre>
 
 <ul class="pager">
   <li class="previous">
