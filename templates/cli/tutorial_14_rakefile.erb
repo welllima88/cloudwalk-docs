@@ -20,7 +20,7 @@ personalize the way the app is built in detail.
 </p>
 
 <p>
-Initially, the <code>Rakefile</code> of your new CloudWalk applciation
+Initially, the <code>Rakefile</code> of your new CloudWalk application
 will contain the following code:
 </p>
 
@@ -38,7 +38,7 @@ DaFunk::RakeTask.new do |t|
 end</code></pre>
 
 <p>
-That code essentially requires the dependencies and sets up the variabels
+That code essentially requires the dependencies and sets up the variables
 that <b>da_funk</b> uses to run our application. The variables set are
 perhaps the most important values you need to personalize the behavior of
 your build and the application itself. The variables that can be set
@@ -53,7 +53,7 @@ inside the <code>RakeTask</code> are:
   </li>
   <li>
     <code>t.tests</code>: The location of your app's test files, by
-    default it uses <code>FileList['test/**/*test.rb']</code>, whcih means
+    default it uses <code>FileList['test/**/*test.rb']</code>, which means
     all the files ending with <b>test.rb</b> in the directory <b>test</b>.
   </li>
   <li>
