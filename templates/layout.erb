@@ -47,11 +47,12 @@
             <li><a href="https://www.cloudwalk.io/contact"><%= I18n.t("main_menu.get_in_touch") %></a></li>
             <li style="float: right">
               <form action="/" method="post" class="navbar-form pull-right" style="float: right">
+                <%= Rack::Csrf.tag(env) %>
                 <input type="hidden" name="url" value="<%= request.path_info %>">
                 <% if params[:query] %>
                   <input type="hidden" name="query" value="<%= html_escape(params['query']) %>" />
                 <% end %>
-                <select name="locale" class="input-medium" onchange="this.form.submit()">
+                <select id="locale" class="input-medium">
                   <%= option_select "pt-BR", "Português", I18n.locale %>
                   <%= option_select "en", "English", I18n.locale %>
                 </select>
@@ -114,6 +115,13 @@
   <script type="text/javascript">
     jQuery(document).ready(function(){
       $('a[href*=#]').not('.accordion a, .nav-tabs a').click(function() {if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {var $target = $(this.hash);$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');if ($target.length) {var targetOffset = $target.offset().top - 20;$('html,body').animate({scrollTop: targetOffset}, 500);return true;}}});
+
+      $('#locale').change(function() {
+        if($(this).val() == 'en')
+          window.location = window.location.href.replace('/pt-BR/', '/en/');
+        else
+          window.location = window.location.href.replace('/en/', '/pt-BR/');
+      });
 
       // POSXML Commands
       $(".group-of-commands a").each(function() { $(this).click(function() { showContent($(this).attr('id')); }); });

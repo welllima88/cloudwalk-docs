@@ -5,13 +5,12 @@ ruby '2.2.2'
 gem 'i18n'
 gem 'pony'
 gem 'puma'
+gem 'rack_csrf'
 gem 'rack-protection'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-partial'
 gem 'stringex'
-
-gem 'byebug'
 
 group :test do
   gem 'coveralls'
