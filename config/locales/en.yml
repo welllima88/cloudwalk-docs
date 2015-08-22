@@ -3080,6 +3080,33 @@ en:
       adding_new_cards:
         paragraph_1: "To add new cards, simply edit the last card available and a new card will appear below instantly!"
         img_1_alt: "Add a new card"
+    emulator_serial_ports:
+      title: "Emulator Serial Ports"
+      description: "Learn how to use serial ports on the CloudWalk Emulator"
+      table_of_contents:
+        introduction: "Introduction"
+        the_idea: "The idea"
+        creating_ports: "Creating ports"
+        emulating: "Emulating"
+        ports_order: "Ports order"
+      introduction:
+        paragraph_1: "In some POS applications, you might want to interact with other devices via serial ports, using real devices it can be tricky but nothing puzzling, however you might wonder how to test your code under the web development environment. The web is not able to use serial ports, but we've developed some tools to help you with this process, here we will explain how to use these functionalities."
+      the_idea:
+        paragraph_1: "The way we let you have serial ports is by setting some values organized by port number, rate and configuration values, so instead of having a memory place where you retrieve things that arrive from another device, think on this as a memory place where the program takes values, but they are pre-defined by you."
+        paragraph_2: "In real life, though, serial ports value might change for external reasons! This is where we implemented a nice feature, if you ever create a port that has the same number, rate and configurations than a port previously created, it will count as the second value when your code reads it. In other words: each time your app reads from a single port, it will receive as many different results as values you created with the same settings. We'll get in to a practical example a little bit later."
+      creating_ports:
+        paragraph_1: "Once you open an application on the IDE, go to the icon that looks like a tree, click it and you will see the ports panel:"
+        img_1_alt: "Ports icon and panel"
+        paragraph_2: "If it's your first time there, you'll see two values on the same port configurations which you can use, as they're on the same settings, to get both you'll need to read the same port two times, here's an example code:"
+        paragraph_3: "We'll explore on the emulation of that code in the next section, in the mean time, let's go back to the form we see on the ports panel. This form consists of 4 fields, the first three fields let you choose your port number, rate and configuration value. The last input field is where you put the data that will be read from your application. Pick your settings, click <b>Create</b> and you'll see your port added to the list below."
+        img_2_alt: "Creating ports"
+      emulating:
+        paragraph_1: "So let's try the code above, open the emulator panel and run emulate, the code will read two times from the port with number <b>COM2</b>, rate <b>1200</b>, and configuration <b>A701</b>. Fortunately we already had two ports with these values created by default! The emulation will go as follows:"
+        img_1_alt: "Reading from a port, twice"
+        paragraph_2: "Something important is that by writing on a specific port that happens to have two values on the ports panel, both values will be overwritten by whatever you write in them. In POSXML usually you'll need to hex the values you write in serial ports, but the values are automatically unhexed once they're stored in the emulator panel."
+      ports_order:
+        paragraph_1: "Finally, there are some buttons under the ports that allow you to change the order of ports and remove them, the icons are pretty intuitive so let's see them in action:"
+        img_1_alt: "Moving and deleting ports"
     using_http_headers:
       title: "Using HTTP headers"
       description: "Learn how to use HTTP headers with POSXML"
