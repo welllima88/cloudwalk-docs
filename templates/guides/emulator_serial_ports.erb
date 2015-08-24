@@ -20,8 +20,6 @@
 
 <p><%= I18n.t("guides.emulator_serial_ports.the_idea.paragraph_1") %></p>
 
-<p><%= I18n.t("guides.emulator_serial_ports.the_idea.paragraph_2") %></p>
-
 <h2 id="creating-ports"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.creating_ports") %></h2>
 
 <p><%= I18n.t("guides.emulator_serial_ports.creating_ports.paragraph_1") %></p>
@@ -29,35 +27,6 @@
 <img src="/img/serial-ports/serial-ports-open.gif" class="animated" alt="<%= I18n.t("guides.emulator_serial_ports.creating_cards.img_1_alt") %>" />
 
 <p><%= I18n.t("guides.emulator_serial_ports.creating_ports.paragraph_2") %></p>
-
-<pre>
-<code><integervariable value="0" variable="iReturnHandle" />
-<integervariable value="0" variable="iReturn" />
-<stringvariable value=" " variable="sReturn" />
-<stringvariable value=" " variable="sBufferReturned" />
-
-<!-- Here we open the port: -->
-<openserialport port="COM2" rate="1200" configuration="A7O1" variablereturn="$(iReturnHandle)" />
-
-<!-- Here we read it a first time -->
-<readserialport bytes="8" timeout="10000" variablebuffer="$(sBufferReturned)" variablehandle="$(iReturnHandle)" variablereturn="$(iReturn)" />
-
-<string.fromhex string="$(sBufferReturned)" variablereturn="$(sReturn)" />
-
-<display column="0" line="0" message="$(sReturn)" />
-
-<!-- Here we read it a second time -->
-<readserialport bytes="8" timeout="10000" variablebuffer="$(sBufferReturned)" variablehandle="$(iReturnHandle)" variablereturn="$(iReturn)" />
-
-<string.fromhex string="$(sBufferReturned)" variablereturn="$(sReturn)" />
-
-<display column="0" line="1" message="$(sReturn)" />
-
-<closeserialport variablehandle="$(iReturnHandle)" />
-
-<waitkey />
-</code>
-</pre>
 
 <p><%= I18n.t("guides.emulator_serial_ports.creating_ports.paragraph_3") %></p>
 
@@ -67,9 +36,11 @@
 
 <p><%= I18n.t("guides.emulator_serial_ports.emulating.paragraph_1") %></p>
 
-<img src="/img/serial-ports/serial-ports-emulate.gif" class="animated" alt="<%= I18n.t("guides.emulator_serial_ports.emulating.img_1_alt") %>" />
+<script src="https://gist.github.com/sadasant/ff9bd1c39a6d36e4939b.js"></script>
 
 <p><%= I18n.t("guides.emulator_serial_ports.emulating.paragraph_2") %></p>
+
+<img src="/img/serial-ports/serial-ports-emulate.gif" class="animated" alt="<%= I18n.t("guides.emulator_serial_ports.emulating.img_1_alt") %>" />
 
 <h2 id="ports-order"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.ports_order") %></h2>
 
