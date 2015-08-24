@@ -59,6 +59,7 @@ class Routes
       { "url" => "guides/transactions-patterns/advanced-settings",       "view_path" => "guides/transactions_patterns/tutorial_4_advanced_settings"},
       { "url" => "guides/transactions-patterns/notifications-settings",  "view_path" => "guides/transactions_patterns/tutorial_5_notifications_settings"},
       { "url" => "guides/emulator-card-swipe",                           "view_path" => "guides/emulator_card_swipe"},
+      { "url" => "guides/emulator-serial-ports",                         "view_path" => "guides/emulator_serial_ports"},
       { "url" => "guides/using-http-headers",                            "view_path" => "guides/using_http_headers"},
       # HELP
       { "url" => "help/faq",                                             "view_path" => "help/faq"},
