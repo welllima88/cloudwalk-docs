@@ -3179,14 +3179,14 @@ en:
             header:
               model: "Device model"
               type: "Bitmap type"
-              size: "Bitmap size"
+              filename: "Filename"
               sample: "Sample"
             content:
               view: "View"
           paragraph_2: "After creating your custom image, follow these steps:"
-          paragraph_3: "Go to the <a href='https://manager.cloudwalk.io/files'>File management</a> section and upload your custom bitmap image under the name <span class='code'>walk.bmp</span>;"
+          paragraph_3: "Go to the <a href='https://manager.cloudwalk.io/files'>File management</a> section and upload your custom bitmap image, following the naming convention on the table above."
           paragraph_4: "Go to the <a href='https://manager.cloudwalk.io/apps/posxml'>Application management</a> and <strong>edit</strong> your application;"
-          paragraph_5: "Check the file <span class='code'>walk.bmp</span> on the <strong>Application files</strong> list and update the app;"
+          paragraph_5: "Check the bitmap file that was previously submitted on the <strong>Application files</strong> list and update the app;"
           paragraph_6: "Now, assuming that your device is associated with the app that you've just added the bitmap, you can update your device and the new background will be displayed."
           paragraph_7: "<strong>Note:</strong> Only bitmap (.bmp) images are supported. Other formats like JPG, GIF and PNG are not supported."
         question_10: "What is the authorizer server (host)?"

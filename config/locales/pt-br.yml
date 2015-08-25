@@ -3179,14 +3179,14 @@ pt-BR:
             header:
               model: "Modelo do dispositivo"
               type: "Tipo do bitmap"
-              size: "Tamanho do bitmap"
+              filename: "Nome do arquivo"
               sample: "Exemplo"
             content:
               view: "Visualizar"
           paragraph_2: "Depois de criar a sua imagem personalizada, siga estes passos:"
-          paragraph_3: "Vá para a seção de gerenciamento de <a href='https://manager.cloudwalk.io/files'>Arquivos</a> e faça o upload da imagem o nome <span class='code'>walk.bmp</span>;"
+          paragraph_3: "Vá para a seção de gerenciamento de <a href='https://manager.cloudwalk.io/files'>Arquivos</a> e faça o upload da imagem, seguindo a nomenclatura da tabela acima."
           paragraph_4: "Vá para a seção de gerenciamento de <a href='https://manager.cloudwalk.io/apps/posxml'>Aplicações</a> e <strong>edite</strong> sua aplicação;"
-          paragraph_5: "Selecione o arquivo <span class='code'>walk.bmp</span> na lista de <strong>Arquivos da aplicação</strong> e atualize a aplicação;"
+          paragraph_5: "Na lista de <strong>Arquivos da aplicação</strong>, selecione o arquivo bitmap previamente submetido e atualize a aplicação;"
           paragraph_6: "Agora, assumindo que o dispositivo está associado com a aplicação que você acabou de adicionar a imagem, basta atualizar o dispositivo e o novo background será exibido."
           paragraph_7: "<strong>Observação:</strong> Apenas imagens bitmap (.bmp) são suportadas. Outros formatos como JPG, GIF e PNG não são suportados."
         question_10: "O que é o servidor autorizador (host)?"
