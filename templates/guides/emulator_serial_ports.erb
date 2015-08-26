@@ -1,0 +1,80 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="Learn how to use serial ports on the CloudWalk Emulator">
+<% end %>
+
+<h1><%= I18n.t("guides.emulator_serial_ports.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#introduction"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.introduction") %></a></li>
+  <li><a href="#creating-ports"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.creating_ports") %></a></li>
+  <li><a href="#emulating"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.emulating") %></a></li>
+  <li><a href="#ports-order"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.ports_order") %></a></li>
+</ol>
+
+<h2 id="introduction"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.introduction") %></h2>
+
+<p><%= I18n.t("guides.emulator_serial_ports.introduction.paragraph_1") %></p>
+
+<p><%= I18n.t("guides.emulator_serial_ports.introduction.paragraph_2") %></p>
+
+<h2 id="creating-ports"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.creating_ports") %></h2>
+
+<p><%= I18n.t("guides.emulator_serial_ports.creating_ports.paragraph_1") %></p>
+
+<img src="/img/serial-ports/serial-ports-open.gif" class="animated" alt="<%= I18n.t("guides.emulator_serial_ports.creating_cards.img_1_alt") %>" />
+
+<p><%= I18n.t("guides.emulator_serial_ports.creating_ports.paragraph_2") %></p>
+
+<p><%= I18n.t("guides.emulator_serial_ports.creating_ports.paragraph_3") %></p>
+
+<img src="/img/serial-ports/serial-ports-create.gif" class="animated" alt="<%= I18n.t("guides.emulator_serial_ports.creating_ports.img_2_alt") %>" />
+
+<h2 id="emulating"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.emulating") %></h2>
+
+<p><%= I18n.t("guides.emulator_serial_ports.emulating.paragraph_1") %></p>
+
+<pre><code data-language="html">&lt;integervariable value="0" variable="iReturnHandle" /&gt;
+&lt;integervariable value="0" variable="iReturn" /&gt;
+&lt;stringvariable value=" " variable="sReturn" /&gt;
+&lt;stringvariable value=" " variable="sBufferReturned" /&gt;
+
+&lt;openserialport port="COM2" rate="1200" configuration="A7O1" variablereturn="$(iReturnHandle)" /&gt;
+
+&lt;readserialport bytes="8" timeout="10000" variablebuffer="$(sBufferReturned)" variablehandle="$(iReturnHandle)" variablereturn="$(iReturn)" /&gt;
+
+&lt;string.fromhex string="$(sBufferReturned)" variablereturn="$(sReturn)" /&gt;
+
+&lt;display column="0" line="0" message="$(sReturn)" /&gt;
+
+&lt;string.tohex string="CloudWalk" variablereturn="$(sReturn)" /&gt;
+
+&lt;writeserialport buffer="$(sReturn)" variablehandle="$(iReturnHandle)" /&gt;
+
+&lt;readserialport bytes="9" timeout="10000" variablebuffer="$(sBufferReturned)" variablehandle="$(iReturnHandle)" variablereturn="$(iReturn)" /&gt;
+
+&lt;string.fromhex string="$(sBufferReturned)" variablereturn="$(sReturn)" /&gt;
+
+&lt;display column="0" line="1" message="$(sReturn)" /&gt;
+
+&lt;closeserialport variablehandle="$(iReturnHandle)" /&gt;
+
+&lt;waitkey /&gt;</code></pre>
+
+<p><%= I18n.t("guides.emulator_serial_ports.emulating.paragraph_2") %></p>
+
+<img src="/img/serial-ports/serial-ports-emulate.gif" class="animated" alt="<%= I18n.t("guides.emulator_serial_ports.emulating.img_1_alt") %>" />
+
+<h2 id="ports-order"><%= I18n.t("guides.emulator_serial_ports.table_of_contents.ports_order") %></h2>
+
+<p><%= I18n.t("guides.emulator_serial_ports.ports_order.paragraph_1") %></p>
+
+<img src="/img/serial-ports/serial-ports-move.gif" class="animated" alt="<%= I18n.t("guides.emulator_serial_ports.ports_order.img_1_alt") %>" />
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.guides.emulator_card_swipe"), "guides/emulator-card-swipe") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("menu.guides.using_http_headers") + " &rarr;", "guides/using-http-headers") %>
+  </li>
+</ul>

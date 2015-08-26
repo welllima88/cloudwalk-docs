@@ -746,6 +746,7 @@ en:
       group_name: Guides
       patterns: "Transaction patterns"
       emulator_card_swipe: "Emulator Card Swipe"
+      emulator_serial_ports: "Emulator Serial Ports"
       using_http_headers: "Using HTTP headers"
     help:
       group_name: Help
@@ -3080,6 +3081,30 @@ en:
       adding_new_cards:
         paragraph_1: "To add new cards, simply edit the last card available and a new card will appear below instantly!"
         img_1_alt: "Add a new card"
+    emulator_serial_ports:
+      title: "Emulator Serial Ports"
+      description: "Learn how to use serial ports on the CloudWalk Emulator"
+      table_of_contents:
+        introduction: "Introduction"
+        creating_ports: "Creating ports"
+        emulating: "Emulating"
+        ports_order: "Ports order"
+      introduction:
+        paragraph_1: "Some POS applications might need to interact with other devices via serial ports. Using real devices it can be tricky but nothing puzzling, however you might wonder how to test your code under the web development environment. The web is not able to use serial ports, but we have developed some tools to help you with this process, and here we will explain how to use these functionalities."
+        paragraph_2: "The way we let you have serial ports is by setting some values organized by port number, rate and configuration values, so instead of having a memory place where you retrieve things that arrive from another device, there will be a place where the program takes values, but you pre-define them."
+      creating_ports:
+        paragraph_1: "Once you open an application on the IDE, go to the icon that looks like a tree, click it and you will see the ports panel:"
+        img_1_alt: "Ports icon and panel"
+        paragraph_2: "If it is your first time there, you will see two values which correspond to two different port configurations (more on it later). For now, let's create a new port."
+        paragraph_3: "There is a form on the ports panel that consists on 4 fields, where the first three fields let you choose your port number, rate and configuration value. The last input field is where you put the data that will be read from your application. Pick your settings, click <b>Create</b> and you will see your port added to the list below."
+        img_2_alt: "Creating ports"
+      emulating:
+        paragraph_1: "A simple code that we can use to read and write into the ports is the following:"
+        paragraph_2: "Open the emulator panel and press the green <b>POWER</b> button, the code will read one time from the port with number <b>COM2</b>, rate <b>1200</b>, and configuration <b>A701</b>, after that it will write <b>CloudWalk</b> in that port, and finally it will read it again to retrieve the value we just wrote. The emulation will go as follows:"
+        img_1_alt: "Reading from a port, twice"
+      ports_order:
+        paragraph_1: "Finally, there are some buttons under the ports that allow you to change the order of ports and remove them. The icons are pretty intuitive, so let's see them in action:"
+        img_1_alt: "Moving and deleting ports"
     using_http_headers:
       title: "Using HTTP headers"
       description: "Learn how to use HTTP headers with POSXML"

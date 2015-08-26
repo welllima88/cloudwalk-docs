@@ -735,6 +735,7 @@ pt-BR:
         groups: Grupos
         logical_numbers: Números lógicos
         logs: Logs
+        push_notifications: Notificações push
         parameters: Parâmetros
         users: Usuários
     development_environment:
@@ -744,7 +745,8 @@ pt-BR:
     guides:
       group_name: Tutoriais
       patterns: "Padrões de transações"
-      emulator_card_swipe: "Cartões no Emulador"
+      emulator_card_swipe: "Cartões no emulador"
+      emulator_serial_ports: "Portas seriais no emulador"
       using_http_headers: "Utilizando headers HTTP"
     help:
       group_name: Ajuda
@@ -3058,7 +3060,7 @@ pt-BR:
         previous: "Configurações avançadas"
     emulator_card_swipe:
       title: "Cartões no Emulador"
-      description: "Aprenda como utilizar cartões no Emuladow CloudWalk"
+      description: "Aprenda como utilizar cartões no Emulador CloudWalk"
       table_of_contents:
         introduction: "Introdução"
         creating_cards: "Criando cartões"
@@ -3069,7 +3071,6 @@ pt-BR:
       creating_cards:
         paragraph_1: "Com a IDE aberta no código fonte da sua aplicação, você verá uma barra vertical azul à esquerda, com os ícones das principais funcionalidades da IDE. Nesta barra você vai encontrar um ícone na forma de um cartão. Clique neste ícone:"
         img_1_alt: "Painel e o ícone de cartões"
-        paragraph_2: "A panel will appear with two cards. These cards are completely editable and selectable, simply click in the texts and they will become input fields, where you can put the information you want."
         paragraph_2: "Irá aparecer um painel com dois cartões. Estes cartões são completamente editáveis e selecionaveis, bastando clicar nos textos para que eles se tornem campos editáveis."
         img_2_alt: "Editando cartões"
         paragraph_3: "Finalizando a edição, clique fora dos campos e as informações serão salvas. O último passo antes de executar a emulação é <strong>clicar no cartão que deseja utilizar</strong>, que ficará destacado em azul. Conforme pode ser observado, existem diversos cartões na lista, e todos eles podem ser editados!"
@@ -3080,6 +3081,30 @@ pt-BR:
       adding_new_cards:
         paragraph_1: "Para adicionar novos cartões, basta editar o último cartão disponível e um novo cartão irá aparecer abaixo instantaneamente!"
         img_1_alt: "Adicionar um novo cartão"
+    emulator_serial_ports:
+      title: "Portas seriais no emulador"
+      description: "Aprenda como utilizar portas seriais no Emulador CloudWalk"
+      table_of_contents:
+        introduction: "Introdução"
+        creating_ports: "Criando portas"
+        emulating: "Emulando"
+        ports_order: "Ordem das portas"
+      introduction:
+        paragraph_1: "Algumas aplicações para terminais POS precisam interagir com outros dispositivos através de portas seriais. Este tipo de tarefa pode ser meio complexa, mas nada de outro mundo. Entretanto, você deve estar imaginando como seria possível testar seu código em nosso ambiente de desenvolvimento web (IDE). A web não oferece a possibilidade de utilização de portas seriais, porém, nós desenvolvemos algumas ferramentas para lhe ajudar neste processo."
+        paragraph_2: "Você poderá utilizar portas seriais definindo alguns valores, como número da porta, taxa de transmissão e configuração. Sendo assim, ao invés de realizar leituras em memória para receber os dados enviados por outro dispositivo, existirá um local onde a IDE irá ler estes dados, previamente definidos."
+      creating_ports:
+        paragraph_1: "Ao acessar a IDE, clique no ícone que se parece com uma árvore para abrir o painel de portas:"
+        img_1_alt: "Painel e ícone das portas seriais"
+        paragraph_2: "No primeiro acesso, será possível ver dois valores que correspondem a duas diferentes configurações de porta (mais sobre isso em seguida). Por agora, vamos criar uma nova porta."
+        paragraph_3: "O formulário no painel de portas seriais possui quatro campos. Os três primeiros campos permitem a escolha do número da porta, taxa de transmissão e o valor da configuração. O último campo é utilizado para definir os dados serão lidos a partir da aplicação. Defina suas configurações, clique em <b>Create</b> e a porta será adicionada na lista."
+        img_2_alt: "Criando portas"
+      emulating:
+        paragraph_1: "O seguinte código POSXML pode ser utilizado para ler e escrever nas portas seriais:"
+        paragraph_2: "Abra o painel do emulador e pressione o botão verde <b>POWER</b>. O código irá ler o conteúdo da porta <b>COM2</b>, com taxa de transmissão de <b>1200</b>, na configuração <b>A701</b>. Em seguida, o código irá escrever <b>CloudWalk</b> nesta mesma porta, e por último, realizará uma nova leitura, recuperando o valor que acabou de ser escrito. Confira abaixo:"
+        img_1_alt: "Leitura e escrita na porta serial"
+      ports_order:
+        paragraph_1: "Os botões localizados logo abaixo das portas permitem alterar a ordem das mesmas, e também removê-las. Os ícones são bem intuitivos. Confira o exemplo abaixo:"
+        img_1_alt: "Movendo e excluindo portas"
     using_http_headers:
       title: "Utilizando headers HTTP"
       description: "Aprenda como utilizar cabeçalhos (headers) HTTP com POSXML"
