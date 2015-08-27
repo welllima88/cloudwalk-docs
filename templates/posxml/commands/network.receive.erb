@@ -19,30 +19,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iConnect" /&gt;
-&lt;integervariable value="0" variable="iSize" /&gt;
-&lt;stringvariable value="" variable="sBuf" /&gt;
-
-&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;stringvariable value="0" variable="sReturn" /&gt;
-
-&lt;stringvariable value="0123456789" variable="sBufSend" /&gt;
-&lt;integervariable value="0" variable="iSizeBufSend" /&gt;
-
-&lt;preconnect variablestatus="$(iConnect)" /&gt;
-
-&lt;string.tohex string="$(sBufSend)" variablereturn="$(sBufSend)" /&gt;
-&lt;string.length value="$(sBufSend)" variablereturn="$(iSizeBufSend)" /&gt;
-&lt;network.send buffer="$(sBufSend)" size="$(iSizeBufSend)" variablereturn="$(iReturn)" /&gt;
-
-&lt;network.receive variablebuffer="$(sBuf)" maxsize="20" variablereceivedbytes="$(iSize)" variablereturn="$(iReturn)" /&gt;
-
-&lt;string.fromhex string="$(sBuf)" variablereturn="$(sBuf)" /&gt;
-
-&lt;display column="0" line="0" message="$(sBuf)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
+<%= embed_posxml_code("9d9f5d4850f727182f05") %>
 
 <hr/>
 <p><%= I18n.t("posxml.commands.network_receive.paragraph_3") %></p>
