@@ -14,29 +14,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;integervariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="sMsgDisplay" /&gt;
-
-&lt;network.start variablereturn="$(iReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;cleandisplay /&gt;
-&lt;joinstring firstvalue="RET: " secondvalue="$(sReturn)" variabledestination="$(sMsgDisplay)" /&gt;
-&lt;display line="0" column="0" message="TEST: network.start" /&gt;
-&lt;display line="1" column="0" message="$(sMsgDisplay)" /&gt;
-
-&lt;if variable="$(iReturn)" operator="equalto" value="1"&gt;
-  &lt;display line="3" column="0" message=" MODEM INITIALIZED! " /&gt;
-&lt;else/&gt;
-  &lt;display line="3" column="0" message="  FAILED TO START   " /&gt;
-  &lt;display line="4" column="0" message=" THE MODEM DEVICE!  " /&gt;
-&lt;/if&gt;
-
-&lt;display line="6" column="0" message="     PRESS GREEN    " /&gt;
-&lt;waitkey /&gt;
-</code></pre>
+<%= embed_posxml_code("0fef4510869a294fb127", true) %>
 
 <hr/>
 <p><%= I18n.t("posxml.commands.network_start.paragraph_2") %></p>

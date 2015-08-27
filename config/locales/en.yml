@@ -1399,41 +1399,41 @@ en:
       network_checkgprssignal:
         description: Checks the status of the connection, if the POS supports GPRS
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
-        paragraph_2: The command <span class='code'>network.checkgprssignal</span> is used to check the GPRS signal level, if the device provides this type of communication.
-        paragraph_3: In the example above the command <a href='network.checkgprssignal' class='command'>network.checkgprssignal</a> will check the GPRS signal level, storing the operation result on the integer variable $(iReturn).
+        paragraph_2: The command <span class='code'>network.checkgprssignal</span> is used to check the GPRS signal level on a device that provides this type of communication.
+        paragraph_3: In the example above the command <a href='network.checkgprssignal' class='command'>network.checkgprssignal</a> will check the GPRS signal level, storing the operation result in the integer variable $(iReturn).
         parameters:
           parameter_1: <strong>variablestatus</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the GPRS signal level.
       network_hostdisconnect:
         description: Disconnects the device from the host, keeping it connected to the network
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>.
-        paragraph_2: The command <span class='code'>network.hostdisconnect</span> is used to disconnect the host terminal but remains connected to the network.
-        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the host. The command <a href='network.hostdisconnect' class='command'>network.hostdisconnect</a> will close this connection but the device will be maintained with the network connection.
+        paragraph_2: The command <span class='code'>network.hostdisconnect</span> is used to disconnect from the host terminal but remain connected to the network.
+        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the host. The command <a href='network.hostdisconnect' class='command'>network.hostdisconnect</a> will close this connection but the device will maintain the network connection.
         paragraph_4: <strong>ATTENTION!</strong>
-        paragraph_5: If a dial-up <strong>(PPP e SDLC)</strong> connection was used to perform the transaction, it's necessary to use the command <a href='shutdownmodem' class='command'>shutdownmodem</a> to close the <strong>socket</strong>, preventing the device to keeping the line busy.
+        paragraph_5: If a dial-up <strong>(PPP and SDLC)</strong> connection was used to perform the transaction, it's necessary to use the command <a href='shutdownmodem' class='command'>shutdownmodem</a> to close the <strong>socket</strong>, preventing the device from keeping the line busy.
         paragraph_6: The command <span class='code'>network.hostdisconnect</span> also closes the socket that was opened with the  <a href='preconnect' class='command'>preconnect</a>, but only for connection types <strong>ETHERNET and GPRS </strong>.
       network_ping:
         description: Checks the status of the connection with the host
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'> network.ping </span> is used to test connectivity with the host.
-        paragraph_3: In the example above the command <a href='network.ping' class='command'>network.ping</a> will do a ping on the host, your return will be stored in the variable <strong>iReturn</strong> that should be transformed into <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
+        paragraph_3: In the example above the command <a href='network.ping' class='command'>network.ping</a> will do a ping on the host and the return will be stored in the variable <strong>iReturn</strong> that should be converted into <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the function:<ul><li>0: Success</li><li>-1: Error while connecting to the server</li><li>-2: Error while sending ping</li></ul>'
-          parameter_2: <strong>host</strong> <span class='data-type'>[string]</span> Hostname or IP address to perform the ping.
+          parameter_2: <strong>host</strong> <span class='data-type'>[string]</span> <br/>Hostname or IP address to perform the ping.
       network_start:
         description: Starts the device's modem.
-        paragraph_1: The command <span class='code'>network.start</span> is used to starts the device's modem.
+        paragraph_1: The command <span class='code'>network.start</span> is used to start the device's modem.
         paragraph_2: In the example above, the command <span class='code'>network.start</span> will start the device's modem and the value of return will be displayed.
         paragraph_3: '<strong>Differences between the commands <a href="preconnect" class="command">preconnect</a> and <a href="network.start" class="command">network.start</a> </strong> :'
-        paragraph_4: The POSXML command <a href='preconnect' class='command'>preconnect</a> starts the device's modem and connect to host. The command <a href='network.start' class='command'>network.start</a> starts the device's modem but <strong>NOT</strong> connect to host.
+        paragraph_4: The POSXML command <a href='preconnect' class='command'>preconnect</a> starts the device's modem and connects to host. The command <a href='network.start' class='command'>network.start</a> starts the device's modem but will <strong>NOT</strong> connect to host.
         parameters:
-          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the function:<ul><li>1: Modem initialized</li><li>Anything different than <strong>1</strong> means <strong>Error</strong> (modem not initialized)</li></ul>'
+          parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the function:<ul><li>1: Modem initialized</li><li>Anything other than <strong>1</strong> means <strong>Error</strong> (modem not initialized)</li></ul>'
       network_receive:
         description: Receives from the host buffer previously connected
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.receive</span> is used to receive a message (hexadecimal) from the host.
-        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server, your return will be stored in the variable <strong>iConnect</strong>.
+        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: The command <a href='network.send' class='command'>network.send</a> will send a message, hexadecimal for the host and its return will be stored in the variable <strong>iReturn</strong>.
-        paragraph_5: The command <a href='network.receive' class='command'>network.receive</a> will receive a message, hexadecimal from the host and the return will be stored in the variable <strong>variablebuffer</strong>, which should be transformed into <a href='stringvariable' class='command'>stringvariable</a> with the function <a href='string.fromhex' class='command'>string.fromhex</a>.
+        paragraph_5: The command <a href='network.receive' class='command'>network.receive</a> will receive a message, hexadecimal from the host and the return will be stored in the variable <strong>variablebuffer</strong>, which should be converted into <a href='stringvariable' class='command'>stringvariable</a> with the function <a href='string.fromhex' class='command'>string.fromhex</a>.
         parameters:
           parameter_1: <strong>maxsize</strong> <span class='data-type'>[integer]</span><br/>Maximum message size that can be received.
           parameter_2: <strong>variablereceivedbytes</strong> <span class='data-type'>[integer]</span><br/>Number of received bytes.
@@ -1443,9 +1443,9 @@ en:
         description: Sends a buffer to the host previously connected
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.send</span> is used to send a message (hexadecimal) to the host.
-        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server, your return will be stored in the variable <strong>iConnect</strong>.
+        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: The command <a href='network.send' class='command'>network.send</a> will send a message, hexadecimal to the host and its return will be stored in the variable <strong>iReturn</strong>.
-        paragraph_5: To transform the text of the variable <strong>sBufSend</strong> into hexadecimal, the command will be used <a href='string.tohex' class='command'>string.tohex</a> and size will be calculated by the command <a href='string.length' class='command'>string.length</a>.
+        paragraph_5: To convert the text of the variable <strong>sBufSend</strong> into hexadecimal, the command will be used <a href='string.tohex' class='command'>string.tohex</a> and size will be calculated by the command <a href='string.length' class='command'>string.length</a>.
         parameters:
           parameter_1: <strong>buffer</strong> <span class='data-type'>[string]</span><br/>Message, hexadecimal, which will be sent to the host.
           parameter_2: <strong>size</strong> <span class='data-type'>[integer]</span><br/>Size of the message in bytes.
