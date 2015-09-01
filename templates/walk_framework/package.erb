@@ -159,6 +159,9 @@
   }
 
   function select_framework_guide(sbrand, smodel, ssignature){
+    if(smodel == 'none')
+      return;
+
     if(sbrand == 'ingenico' && ssignature != 'none'){
       return '/<%= I18n.locale %>/walk-framework/' + sbrand + '-' + smodel + '?signature=' + ssignature;
     } else {
@@ -180,7 +183,10 @@
       via = '_' + interface;
     }
 
-    return 'http://dl.cloudwalk.io/framework/' + sbrand + '_' + smodel + sig + via + '.zip';
+    if(sbrand == 'ingenico' && ssignature == 'none')
+      return '';
+    else
+      return 'https://dl.cloudwalk.io/framework/' + sbrand + '_' + smodel + sig + via + '.zip';
 
   }
 
