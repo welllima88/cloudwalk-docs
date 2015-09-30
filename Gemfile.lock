@@ -18,15 +18,15 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     metaclass (0.0.4)
-    mime-types (2.6.1)
-    minitest (5.8.0)
+    mime-types (2.6.2)
+    minitest (5.8.1)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multi_json (1.11.2)
     netrc (0.10.3)
     pony (1.11)
       mail (>= 2.0)
-    puma (2.13.4)
+    puma (2.14.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -88,4 +88,4 @@ DEPENDENCIES
   stringex
 
 BUNDLED WITH
-   1.10.5
+   1.10.6
