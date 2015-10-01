@@ -1453,41 +1453,41 @@ en:
       openserialport:
         description: Opens the serial port for communication with external peripherals
         paragraph_1: The command <span class='code'>openserialport</span> is used to open a connection to the serial port.
-        paragraph_2: In the example above the command <a href='openserialport' class='command'>openserialport</a> will open a connection on port <strong>COM1</strong> with the rate <strong>115200</strong> and configuration <strong>A8N1</strong>, return will be stored in the variable <strong>iReturn</strong>, converted using the command <a href='inttostring' class='command'>inttostring</a> and displayed on the <a href='display' class='command'>display</a>.
+        paragraph_2: In the example above the command <a href='openserialport' class='command'>openserialport</a> will open a connection on port <strong>COM1</strong> with the rate <strong>115200</strong> and configuration <strong>A8N1</strong>. The return will be stored in the variable <strong>iReturn</strong>, converted using the command <a href='inttostring' class='command'>inttostring</a> and displayed on the <a href='display' class='command'>display</a>.
         paragraph_3: The command <a href='closeserialport' class='command'>closeserialport</a> closes the serial port.
         parameters:
           parameter_1: <strong>port</strong> <span class='data-type'>[string]</span><br/>Port where the connection is open.<ul><li>COM1, COM2, COM3, COM4, COM5, COM6</li></ul>
-          parameter_2: <strong>rate</strong> <span class='data-type'>[integer]</span><br/>The serial port rate.<ul><li>300, 600, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 12000, 14400, 28800, 33600</li></ul>
+          parameter_2: <strong>rate</strong> <span class='data-type'>[integer]</span><br/>The serial port rate (bits per second).<ul><li>300, 600, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 12000, 14400, 28800, 33600</li></ul>
           parameter_3: <strong>configuration</strong> <span class='data-type'>[string]</span><br/>The serial port configuration.<ul><li>A7E1, A7N1, A7O1, A8E1, A8N1, A8O1</li></ul>
           parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where: <ul><li>-2: Incorrect configuration</li><li>-1 or 0: Error opening serial port</li><li>0: Serial port successfully open</li></ul>'
       paperfeed:
         description: Sends a signal to the printer by adding blank lines on the ticket
         paragraph_1: The command <span class='code'>paperfeed</span> is used to send a signal that the printer will add a blank line.
-        paragraph_2: In the example above, when the application is executed, the printer will add a blank line on paper.
+        paragraph_2: In the example above, when the application is executed, the printer will add a blank line on the paper.
       parameters: Parameters
       pinpad_close:
         description: Terminates communication with the external or internal pinpad
-        paragraph_1: The command <span class='code'>pinpad.close</span> is used to terminate the communication with the external or internal pinpad.
-        paragraph_2: In the example above, firstly a connection is opened to the <strong>external PIN-Pad</strong>, then waits for a key to be pressed with the command <a href='waitkey' class='command'>waitkey</a>, and then the communication with the PIN-Pad is terminated with the command <span class='code'>pinpad.close</span>.
+        paragraph_1: The command <span class='code'>pinpad.close</span> is used to close the communication with an external or the internal pinpad.
+        paragraph_2: In the example above, a connection is opened to the <strong>external PIN-Pad</strong>, then waits for a key press using the command <a href='waitkey' class='command'>waitkey</a>. After the key press, the communication with the PIN-Pad is terminated with the command <span class='code'>pinpad.close</span>.
         parameters:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the PIN-Pad's display after closing the communication.
       pinpad_display:
         description: Displays a custom message on the display of the pinpad
         paragraph_1: The command <span class='code'>pinpad.display</span> is used to display a custom message on the display of the pinpad.
-        paragraph_2: In the example above, firstly a connection is opened to the <strong>external PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>, and then the command <span class='code'>pinpad.display</span> is executed, displaying the message <strong><em>Hello World!</em></strong>.
-        paragraph_3: It is then expected that some <strong>POS terminal</strong> key is pressed, and after that the disconnection with the pinpad is done with the command <a href='pinpad.close' class='command'>pinpad.close</a>.
+        paragraph_2: In the example above, a connection is opened to the <strong>external PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>, and then the command <span class='code'>pinpad.display</span> is executed, displaying the message <strong><em>Hello World!</em></strong>.
+        paragraph_3: After a key press on the <strong>POS terminal</strong> the connection to the PIN-Pad is closed using with the command <a href='pinpad.close' class='command'>pinpad.close</a>.
         paragraph_4: <strong>ATTENTION!</strong>
-        paragraph_5: This command does not apply if the PIN-Pad used is an <strong>internal PIN-Pad</strong>
+        paragraph_5: This command does not apply if the PIN-Pad used is an <strong>internal PIN-Pad</strong>.
         parameters:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the external PIN-Pad's display.
       pinpad_getkey:
         description: Captures a key that is pressed on the external pinpad
         paragraph_1: The command <span class='code'>pinpad.getkey</span> is used to capture a key that is pressed on the external pinpad.
-        paragraph_2: In the example above, firstly a connection is opened to the <strong>external PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>; after that the command <span class='code'>pinpad.getkey</span> is executed.
-        paragraph_3: It is awaited 10 minutes, if no action is taken, it is returned <strong>-1</strong> to the variable <strong><em>sKey</em></strong>, if an action is taken, the pressed key is returned.
+        paragraph_2: In the example above, a connection is opened to the <strong>external PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>; after that the command <span class='code'>pinpad.getkey</span> is executed.
+        paragraph_3: The PIN-Pad waits for 10 minutes and if no action is taken, <strong>-1</strong> is returned and stored in the variable <strong><em>sKey</em></strong>. If a key is pressed before 10 minutes (the configured timeout), the pressed key value is returned.
         paragraph_4: After that, the PIN-Pad is disconnected with the command <a href='pinpad.close' class='command'>pinpad.close</a> and the result is displayed through the command <a href='display' class='command'>display</a>.
         paragraph_5: <strong>ATTENTION!</strong>
-        paragraph_6: This command does not apply if the PIN-Pad used is an <strong>internal PIN-Pad</strong>
+        paragraph_6: This command does not apply if the PIN-Pad used is an <strong>internal PIN-Pad</strong>.
         parameters:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the external PIN-Pad.
           parameter_2: <strong>timeout</strong> <span class='data-type'>[integer]</span> Timeout in seconds that the statement should wait before resuming the execution.
@@ -1496,9 +1496,9 @@ en:
         description: Catches a PIN and encrypts it using DUKPT standard
         paragraph_1: The command <span class='code'>pinpad.getpindukpt</span> is used to capture a PIN and encrypts using standard DUKPT.
         paragraph_2: The command <span class='code'>pinpad.getpindukpt</span> captures a PIN and encrypts it using the standard DUKPT in the internal or external PIN-Pad, while displaying a message on the PIN-Pad or device display.
-        paragraph_3: In the example above, firstly a connection is opened with the <strong>internal PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>, end then the command <span class='code'>pinpad.getpindukpt</span> is executed.
-        paragraph_4: The user is requested to type the <strong>PIN (password);</strong> the PIN is then encrypted and stored on the variable <strong><em>sEncriptedPIN</em></strong>, and the KSN is stored on the variable <strong><em>sKSN</em></strong>. Since the return is integer, the return is converted to <a href='stringvariable' class='command'>stringvariable</a> with the command <a href='inttostring' class='command'>inttostring</a>
-        paragraph_5: The PIN-Pad is disconnected by the command <a href='pinpad.close' class='command'>pinpad.close</a> and then the content of the variables is displayed through the command <a href='display' class='command'>display</a>
+        paragraph_3: In the example above, a connection is opened with the <strong>internal PIN-Pad</strong> using the command <a href='pinpad.open' class='command'>pinpad.open</a>, and then the command <span class='code'>pinpad.getpindukpt</span> is executed.
+        paragraph_4: The user is requested to type the <strong>PIN (password);</strong> the PIN is then encrypted and stored in the variable <strong><em>sEncriptedPIN</em></strong>, and the KSN is stored in the variable <strong><em>sKSN</em></strong>. Since the return value is an integer, the return is converted to <a href='stringvariable' class='command'>stringvariable</a> with the command <a href='inttostring' class='command'>inttostring</a>
+        paragraph_5: The PIN-Pad is disconnected using the command <a href='pinpad.close' class='command'>pinpad.close</a> and then the values of the variables are displayed using the command <a href='display' class='command'>display</a>
         parameters:
           parameter_1: <strong>maxlen</strong> <span class='data-type'>[integer]</span> Maximum number of characters typed in the PIN.
           parameter_2: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the external PIN-Pad's display (or internal in the case of a POS terminal).
@@ -1509,20 +1509,20 @@ en:
           parameter_7: '<strong>variablereturn</strong> <span class="data-type">[integer]</span> Variable that will store the return code, where: <br/><ul><li>0: OK</li><li>-1: COMM Error</li><li>-2: Canceled</li><li>-3: PIN Error</li></ul>'
       pinpad_loadipek:
         description: Records an initial key and an initial ksn on the memory of pinpad
-        paragraph_1: Knowledge about <strong>DUKPT</strong> is required to use this command.
-        paragraph_2: The command <span class='code'>pinpad.loadipek</span> is used to store an initial and a ksn key on the internal or extenal PIN-Pad memory, in order to make is possible to perform password encryption using <strong><em>DUKPT</em></strong>.
-        paragraph_3: In the example above, firstly a connection to the <strong>internal PIN-Pad</strong> is made with the command <a href='pinpad.open' class='command'>pinpad.open</a>; after that the keys ipek (initial) <strong><em>EA51888F7CF2EBA6BB80EF0D4267642E</em></strong> and ksn <strong><em>FFFF0123456789A00003</em></strong> are loaded to the PIN-Pad memory with the command <span class='code'>pinpad.loadipek</span>.
-        paragraph_4: Then the connection with the PIN-Pad is closed with the command <a href='pinpad.close' class='command'>pinpad.close</a>, and then the variable is converted to para <a href='stringvariable' class='command'>stringvariable</a> so it can be displayed through the command <a href='display' class='command'>display</a>.
+        paragraph_1: Knowledge about <strong><a href="https://en.wikipedia.org/wiki/Derived_unique_key_per_transaction" target="_blank">DUKPT</a></strong> is required to use this command.
+        paragraph_2: The command <span class='code'>pinpad.loadipek</span> is used to store an initial and a ksn key on the internal or extenal PIN-Pad memory, in order to make it possible to perform password encryption using <strong><em>DUKPT</em></strong>.
+        paragraph_3: In the example above, a connection to the <strong>internal PIN-Pad</strong> is made using the command <a href='pinpad.open' class='command'>pinpad.open</a>; after that the keys ipek (initial) <strong><em>EA51888F7CF2EBA6BB80EF0D4267642E</em></strong> and ksn <strong><em>FFFF0123456789A00003</em></strong> are loaded to the PIN-Pad memory using the command <span class='code'>pinpad.loadipek</span>.
+        paragraph_4: The connection with the PIN-Pad is closed using the command <a href='pinpad.close' class='command'>pinpad.close</a>, and then value of the variable is converted to <a href='stringvariable' class='command'>stringvariable</a> so it can be displayed through the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: <strong>ipek</strong> <span class='data-type'>[string]</span> Initial key on the format <strong>hex ascii 16</strong> or <strong>32</strong> characters.
-          parameter_2: <strong>ksn</strong> <span class='data-type'>[string]</span> initial KSN on the format <strong>hex ascii 20</strong> characters.
+          parameter_1: <strong>ipek</strong> <span class='data-type'>[string]</span> Initial key in the format <strong>hex ascii 16</strong> or <strong>32</strong> characters.
+          parameter_2: <strong>ksn</strong> <span class='data-type'>[string]</span> Initial KSN in the format <strong>hex ascii 20</strong> characters.
           parameter_3: '<strong>type</strong> <span class="data-type">[integer]</span> Type of algorithm used in the encryption, which can be: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
           parameter_4: '<strong>variablereturn</strong> <span class="data-type">[inteiro]</span> Return of the command, where: <br/><ul><li>0: OK</li><li>-1: Error</li></ul>'
       pinpad_open:
         description: Enables communication with the external or internal pinpad
-        paragraph_1: The command <span class='code'>pinpad.open</span> is used to enable communication with external or internal pinpad.
-        paragraph_2: In the example above, firstly a connection with the <strong>external PIN-Pad</strong> was opened, and then the command returned the result of the operation on the variable <em><strong>variablereturn</strong></em>.
-        paragraph_3: Then the command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, which is displayed through the command <a href='display' class='command'>display</a>, and finally the connection with the PIN-Pad is closed through the command <a href='pinpad.close' class='command'>pinpad.close</a>.
+        paragraph_1: The command <span class='code'>pinpad.open</span> is used to enable communication with an external or the internal pinpad.
+        paragraph_2: In the example above, firstly a connection with the <strong>external PIN-Pad</strong> was opened, and then the command stored the result of the operation in the variable <em><strong>variablereturn</strong></em>.
+        paragraph_3: The command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, which is displayed using the command <a href='display' class='command'>display</a>, and finally the connection with the PIN-Pad is closed using the command <a href='pinpad.close' class='command'>pinpad.close</a>.
         paragraph_4: The same is applied for the <strong>external PIN-Pad</strong>, but in this case, the PIN-Pad serial number is stored on the variable <span class='code'>sSerialNumber</span>.
         parameters:
           parameter_1: '<strong>type</strong> <span class="data-type">[integer]</span> PIN-Pad type to be enabled: <br/><ul><li>0: Internal PIN-Pad</li><li>1: External PIN-Pad</li></ul>'

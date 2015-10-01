@@ -16,20 +16,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sKey" /&gt;
-&lt;stringvariable value="" variable="sSerialNumber"/&gt;
-
-&lt;integervariable value="0" variable="iReturn"/&gt;
-
-&lt;pinpad.open type="1" variableserialnumber="$(sSerialNumber)" variablereturn="$(iReturn)"/&gt;
-
-&lt;pinpad.getkey message="Press key..." timeout="10" variablereturn="$(sKey)"/&gt;
-&lt;pinpad.close message="Pinpad off"/&gt;
-
-&lt;display column="0" line="0" message="$(sKey)"/&gt;
-&lt;waitkey/&gt;
-
-</code></pre>
+<%= embed_posxml_code("e22ad08e504ffda03e5e") %>
 
 <p><%= I18n.t("posxml.commands.pinpad_getkey.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.pinpad_getkey.paragraph_3") %></p>

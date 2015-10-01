@@ -16,29 +16,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
-
-&lt;stringvariable value="" variable="sSerialNumber" /&gt;
-
-&lt;pinpad.open type="0" variableserialnumber="$(sSerialNumber)" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-&lt;display column="0" line="0" message="$(sReturn)"/&gt;
-&lt;waitkey/&gt;
-
-&lt;pinpad.close message="Pinpad off"/&gt;
-
-&lt;!-- External pinpad --/&gt;
-
-&lt;pinpad.open type="1" variableserialnumber="$(sSerialNumber)" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-&lt;display column="0" line="0" message="$(sReturn)"/&gt;
-&lt;waitkey/&gt;
-
-&lt;pinpad.close message="Pinpad off"/&gt;
-</code></pre>
+<%= embed_posxml_code("cc9c8fed3654f5daccad") %>
 
 <p><%= I18n.t("posxml.commands.pinpad_open.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.pinpad_open.paragraph_3") %></p>
