@@ -18,19 +18,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="diReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("922bd37ee98a61d6cbe9") %>
 
-&lt;openserialport port="COM1" rate="115200" configuration="A8N1" variablereturn="$(diReturn)" /&gt;
-
-&lt;inttostring variableinteger="$(diReturn)" variablestring="$(sReturn)" /&gt;
-&lt;display column="0" line="0" message="OPENSERIALPORT" /&gt;
-&lt;display column="0" line="1" message="$(sReturn)" /&gt;
-
-&lt;closeserialport variablehandle="$(iReturnHandle)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.openserialport.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.openserialport.paragraph_3") %></p>

@@ -22,28 +22,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn"/&gt;
-
-&lt;stringvariable value="" variable="sSerialNumber"/&gt;
-&lt;stringvariable value="63705100" variable="sPan"/&gt;
-&lt;stringvariable value="" variable="sKSN"/&gt;
-&lt;stringvariable value="" variable="sEncriptedPIN"/&gt;
-
-&lt;pinpad.open type="0" variableserialnumber="$(sSerialNumber)" variablereturn="$(iReturn)"/&gt;
-
-&lt;pinpad.getpindukpt maxlen="6" message="Enter the PIN..." pan="$(sPan)" type="1" variablereturnksn="$(sKSN)" variablereturnpin="$(sEncriptedPIN)" variablereturn="$(iReturn)"/&gt;
-
-&lt;pinpad.close message="Pinpad off"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-
-&lt;display column="0" line="1" message="$(sEncriptedPIN)"/&gt;
-&lt;display column="0" line="2" message="$(sKSN)"/&gt;
-&lt;display column="0" line="3" message="$(sReturn)"/&gt;
-&lt;waitkey/&gt;
-
-</code></pre>
+<%= embed_posxml_code("99e033d0ad004871a2d8", true) %>
 
 <p><%= I18n.t("posxml.commands.pinpad_getpindukpt.paragraph_3") %></p>
 <p><%= I18n.t("posxml.commands.pinpad_getpindukpt.paragraph_4") %></p>

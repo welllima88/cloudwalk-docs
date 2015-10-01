@@ -19,23 +19,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn"/&gt;
-
-&lt;stringvariable value="" variable="sSerialNumber"/&gt;
-&lt;stringvariable value="EA51888F7CF2EBA6BB80EF0D4267642E" variable="sInitialKey" /&gt;
-&lt;stringvariable value="FFFF0123456789A00003" variable="sKsn" /&gt;
-
-&lt;pinpad.open type="0" variableserialnumber="$(sSerialNumber)" variablereturn="$(iReturn)"/&gt;
-&lt;pinpad.loadipek ipek="$(sInitialKey)" ksn="$(sKsn)" type="1" variablereturn="$(iReturn)"/&gt;
-
-&lt;pinpad.close message="pinpad off"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-&lt;display column="0" line="0" message="$(sReturn)"/&gt;
-&lt;waitkey/&gt;
-
-</code></pre>
+<%= embed_posxml_code("a6f66417e220b8a6abdc", true) %>
 
 <p><%= I18n.t("posxml.commands.pinpad_loadipek.paragraph_3") %></p>
 <p><%= I18n.t("posxml.commands.pinpad_loadipek.paragraph_4") %></p>
