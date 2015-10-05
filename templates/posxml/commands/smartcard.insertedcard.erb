@@ -13,18 +13,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-
-&lt;stringvariable value="0" variable="sBuf" /&gt;
-
-&lt;smartcard.insertedcard slot="1" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sBuf)" /&gt;
-
-&lt;display column="0" line="0" message="$(sBuf)"/&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
+<%= embed_posxml_code("a94a1365c5a4f6b674e8", true) %>
 
 <hr/>
 

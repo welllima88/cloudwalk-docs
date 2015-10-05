@@ -996,7 +996,7 @@ en:
         paragraph_2: The command <span class='code'>emv.loadtables</span> is used to load the table settings for each application by EMV acquirer network.
         paragraph_3: The loading of tables should be done in the device initialization. To load a table, a file should be sent to the device, with a standard name plus the number of the acquirer network.
         paragraph_4: In the example above, the command <a href='emv.open' class='command'>emv.open</a> is initialize to start the EMV library, and then the command <a href='if' class='command'>if</a> is used to evaluate the result of the operation.
-        paragraph_5: The command <span class='code'>emv.loadtables</span> is used to load the tables, and since the command return is a <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable through the command <a href='display' class='command'>display</a>.
+        paragraph_5: The command <span class='code'>emv.loadtables</span> is used to load the tables, and since the command return is a <a href='integervariable' class='command'>integervariable</a>, the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable using the command <a href='display' class='command'>display</a>.
         paragraph_6: <strong>ATTENTION!</strong>
         paragraph_7: It is necessary to initialize the library EMV and load the tables only if the device is <strong>turned on</strong> or <strong>restarted</strong>, otherwise it is not necessary to use this command every time an EMV transaction starts.
         parameters:
@@ -1431,7 +1431,7 @@ en:
         description: Receives from the host buffer previously connected
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.receive</span> is used to receive a message (hexadecimal) from the host.
-        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server and the return will be stored in the variable <strong>iConnect</strong>.
+        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the CloudWalk Walk Server and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: The command <a href='network.send' class='command'>network.send</a> will send a message, hexadecimal for the host and its return will be stored in the variable <strong>iReturn</strong>.
         paragraph_5: The command <a href='network.receive' class='command'>network.receive</a> will receive a message, hexadecimal from the host and the return will be stored in the variable <strong>variablebuffer</strong>, which should be converted into <a href='stringvariable' class='command'>stringvariable</a> with the function <a href='string.fromhex' class='command'>string.fromhex</a>.
         parameters:
@@ -1443,7 +1443,7 @@ en:
         description: Sends a buffer to the host previously connected
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.send</span> is used to send a message (hexadecimal) to the host.
-        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server and the return will be stored in the variable <strong>iConnect</strong>.
+        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the CloudWalk Walk Server and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: The command <a href='network.send' class='command'>network.send</a> will send a message, hexadecimal to the host and its return will be stored in the variable <strong>iReturn</strong>.
         paragraph_5: To convert the text of the variable <strong>sBufSend</strong> into hexadecimal, the command will be used <a href='string.tohex' class='command'>string.tohex</a> and size will be calculated by the command <a href='string.length' class='command'>string.length</a>.
         parameters:
@@ -1532,8 +1532,8 @@ en:
         description: Connects to the host authorizer
         paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
         paragraph_2: The command <span class='code'>preconnect</span> is used to establish a connection with CloudWalk.
-        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the Walk Server, and the return will be stored in the variable <strong>iConnect</strong>.
-        paragraph_4: Since the variable <strong>iConnect</strong> is of the type <a href='integervariable' class='command'>integervariable</a>, it must be transformed into <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
+        paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the CloudWalk Walk Server, and the return will be stored in the variable <strong>iConnect</strong>.
+        paragraph_4: Since the variable <strong>iConnect</strong> is of the type <a href='integervariable' class='command'>integervariable</a>, it must be converted into a <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: '<strong>variablestatus</strong> <span class="data-type">[integer]</span><br/>Return function:<ul><li>0: Connected successfully</li><li>-1: Error when trying to connect</li></ul> '
       predial:
@@ -1543,7 +1543,7 @@ en:
         paragraph_3: In the example above the first command <a href='predial' class='command'>predial</a> with <strong>option</strong> 1, will make a connection with the provider, and the return will be stored in the variable <strong>iReturn</strong>.
         paragraph_4: The second command <a href='predial' class='command'>predial</a> with <strong>option</strong> 2, will check if the dialing process was completed.
         parameters:
-          parameter_1: '<strong>option</strong> <span class="data-type">[integer]</span><br/><ul><li>1: The command will perform a dialing</li><li>2: The command will check if the dialing was completed.</li></ul>'
+          parameter_1: '<strong>option</strong> <span class="data-type">[integer]</span><br/><ul><li>1: The command will perform a dial-up connection</li><li>2: The command will check if the dial-up connection was completed</li></ul>'
           parameter_2: <strong>variablestatus</strong> <span class='data-type'>[integer]</span><br/>Variable that will store return of the function.
       print:
         description: Prints a custom message in the default font size
@@ -1553,28 +1553,28 @@ en:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span><br/>Message that will be printed.
       printbarcode:
         description: Prints a bar code in the I25 format, horizontal or vertical
-        paragraph_1: The command <span class='code'>printbarcode</span> is used to print barcode.
+        paragraph_1: The command <span class='code'>printbarcode</span> is used to print a defined barcode.
         paragraph_2: In the example above, will print a barcode number <strong>123456</strong> in the <strong>horizontal</strong> position.
         parameters:
           parameter_1: <strong>horizontal</strong> <span class='data-type'>[integer]</span><br/>Define if the barcode will be horizontal (1) or vertical (0).
           parameter_2: <strong>number</strong> <span class='data-type'>[integer]</span><br/>Barcode number.
       printbig:
         description: Prints a custom message in the double font size
-        paragraph_1: The command <span class='code'>printbig</span> is used to print any message with a doubled font size.
-        paragraph_2: In the example above, when the application runs, it will print the message <strong>Using PRINTBIG</strong> with doubled font size.
+        paragraph_1: The command <span class='code'>printbig</span> is used to print a message using double sized font.
+        paragraph_2: In the example above, when the application runs, it will print the message <strong>Using PRINTBIG</strong> using double sized font size.
         parameters:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span><br/>Message to be printed.
       printbitmap:
         description: Prints a monochromatic bitmap
         paragraph_1: The command <span class='code'>printbitmap</span> is used to print a monochrome bitmap.
-        paragraph_2: In the example above, when the application runs, will print the image set in the property <strong>filename</strong> of the command <strong>printbitmap</strong>
+        paragraph_2: In the example above, when the application runs it will print the image set in the property <strong>filename</strong> of the command <strong>printbitmap</strong>
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
           parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will receive the return of the command <ul><li>-2: bitmap is monochrome </li><li>-1: invalid bitmap size</li><li>0: bitmap not found </li><li>1: bitmap successfully printed</li></ul>'
       readfile:
         description: Reads a dbfile WALK file (key/value)
-        paragraph_1: The command <span class='code'>readfilebyindex</span> is used to read a file in the format <a href='#walk_db' class='command'>Walk</a> at a specified position. Each key should be on a separate line.
-        paragraph_2: In the example above the file <strong>test.txt</strong> has been downloaded with the function <a href='downloadfile' class='command'>downloadfile</a>.
+        paragraph_1: The command <span class='code'>readfile</span> is used to read a file in the format <a href='#walk_db' class='command'>Walk</a> at a specified position. Each key should be on a separate line.
+        paragraph_2: In the example above the file <strong>test.txt</strong> has been downloaded using the command <a href='downloadfile' class='command'>downloadfile</a>.
         paragraph_3: The command <a href='readfile' class='command'>readfile</a> reads the file looking for the specified key (<strong>key</strong>) and stores your return of the variable specified in the parameter <strong>variabledestination</strong>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
@@ -1583,7 +1583,7 @@ en:
       readfilebyindex:
         description: Reads a key from a file WALK dbfile
         paragraph_1: The command <span class='code'>readfilebyindex</span> is used to read a file in the format <a href='#walk_db' class='command'>Walk DB</a> at a specified position. Each key should be on a separate line.
-        paragraph_2: In the example above the file <strong>test.txt</strong> has been downloaded with the function <a href='downloadfile' class='command'>downloadfile</a>.
+        paragraph_2: In the example above the file <strong>test.txt</strong> has been downloaded using the command <a href='downloadfile' class='command'>downloadfile</a>.
         paragraph_3: The function <a href='readfilebyindex' class='command'>readfilebyindex</a> reads the file looking for the position (<strong>index</strong>) and stores the key specified in the variable <strong>sKeyName</strong> and the value in the variable <strong>sKeyValue</strong>. The variable <strong>iReturn</strong> stores the value specifying if the position (<strong>index</strong>) was found or not.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
@@ -1594,8 +1594,8 @@ en:
       readkey:
         description: Same as command waitkey, but holds the pressed key
         paragraph_1: The command <span class='code'>readkey</span> is used to pause the execution of the application for a certain time.
-        paragraph_2: In the example above the variable <strong>$(sPressedKey)</strong> will store the variable that is pressed. The command <strong>readkey</strong> requires property <strong>milisenconds</strong> to set the maximum time to wait for a key to be pressed.
-        paragraph_3: If no key has been pressed at defined time (<strong>5 seconds</strong>), the application assumes that the key <strong>Cancel</strong> has been pressed.
+        paragraph_2: In the example above the variable <strong>$(sPressedKey)</strong> will store the variable that is pressed. The command <strong>readkey</strong> requires <strong>miliseconds</strong> to set the maximum time to wait for a key to be pressed.
+        paragraph_3: If no key has been pressed at the defined time (<strong>5 seconds</strong>), the application assumes that the <strong>Cancel</strong> key has been pressed.
         parameters:
           parameter_1: <strong>miliseconds</strong> <span class='data-type'>[integer]</span><br/>Pause time in milliseconds.
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
@@ -1611,7 +1611,7 @@ en:
           parameter_2: <strong>variablehandle</strong> <span class='data-type'>[integer]</span><br/>Handle of the open door.
           parameter_3: <strong>variablebuffer</strong> <span class='data-type'>[string]</span><br/> Variable that will store the buffer captured from the serial port.
           parameter_4: <strong>variablehandle</strong> <span class='data-type'>[integer]</span><br/> Open serial port identifier.
-          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where: <br/><span class="data-type">-1: Timeout was reached and nothing was captured from the serial port<br/>>0: Number of bytes that was read from the serial port. </span>'
+          parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Variable that will store the return code, where: <br/><ul><li>-1: Timeout was reached and nothing was captured from the serial port<br/></li><li>>0: Number of bytes that was read from the serial port. </li></ul>'
       shutdownmodem:
         description: Turns off the modem and cancels the operations
         paragraph_1: The command <span class='code'>shutdownmodem</span> is used to disconnect the device from the host and the network.
@@ -1619,7 +1619,7 @@ en:
       smartcard_closereader:
         description: Terminates communication process of with the smart card
         paragraph_1: The command <span class='code'>smartcard.closereader</span> is used to terminate the process of communication with the smart card.
-        paragraph_2: In the example above, The command <a href='smartcard.startreader' class='command'>smartcard.startreader</a> is used to start the reader and try to read a card; after that the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable through the command <a href='display' class='command'>display</a>.
+        paragraph_2: In the example above, The command <a href='smartcard.startreader' class='command'>smartcard.startreader</a> is used to start the reader and try to read a card; after that the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable using the command <a href='display' class='command'>display</a>.
         paragraph_3: Then the command <span class='code'>smartcard.closereader</span> is used to close the reader communication, and the result of the operation is displayed.
         parameters:
           parameter_1: <strong>slot</strong> <span class='data-type'>[integer]</span><br/> slot number that was opened with the command <a href='smartcard.startreader' class='command'>smartcard.startreader</a>.
@@ -1627,32 +1627,32 @@ en:
       smartcard_insertedcard:
         description: Checks if the card is inserted in the smart card reader
         paragraph_1: The command <span class='code'>smartcard.insertcard</span> is used to check if a smart card is inserted in a given slot.
-        paragraph_2: In the example above, the command <strong>smartcard.insertedcard</strong> checks whether or not the card is inserted in the defined slot. If there is no card in the slot, the return will be <strong>-2</strong>, and <strong>1</strong> otherwise.
+        paragraph_2: In the example above, the command <strong>smartcard.insertedcard</strong> checks whether or not the card is inserted in the defined slot. If there is no card in the slot, the return will be <strong>-2</strong>, otherwise it will be <strong>1</strong>.
         parameters:
           parameter_1: '<strong>slot</strong> <span class="data-type">[integer]</span><br/>Defines which slot is used by the command.<ul><li>1: principal</li><li>2: sam1</li><li>3: sam2</li><li>4: sam3</li><li>5: sam4</li></ul> '
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer or string]</span><br/>Variable that will store the command return.
       smartcard_startreader:
         description: Starts the smart card reader and try to start the card
         paragraph_1: The command <span class='code'>smartcard.startreader</span> is used to start the smart card reader and try to start the card.
-        paragraph_2: In the example above, the command <span class='code'>smartcard.startreader</span> was used to start the reader and the smartcard, and the result of the operation was stored on the variable <strong>variablereturn</strong>.
-        paragraph_3: The command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, and then to be displayed through the command <a href='display' class='command'>display</a>.
+        paragraph_2: In the example above, the command <span class='code'>smartcard.startreader</span> is used to start the reader and the smartcard, and the result of the operation is stored on the variable <strong>variablereturn</strong>.
+        paragraph_3: The command <a href='inttostring' class='command'>inttostring</a> is used to convert the variable to <a href='stringvariable' class='command'>stringvariable</a>, and then displayed using the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: '<strong>slot</strong> <span class="data-type">[integer]</span><br/> slot that will be started:<br/><ul><li>main: 1</li><li>sam1: 2</li><li>sam2: 3</li><li>sam3: 4</li><li>sam4: 5</li></ul>'
-          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the command, where:<br/><ul><li>-2: Error while starting the reader or while reading the card</li><li>-1: Invalid slot</li><li>Reader started abd command ATR successfully sent.</li></ul>'
+          parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the command, where:<br/><ul><li>-2: Error while starting the reader or while reading the card</li><li>-1: Invalid slot</li><li>Reader started and command ATR successfully sent.</li></ul>'
       smartcard_transmitapdu:
         description: Sends an APDU command to the smart card
         paragraph_1: The command <span class='code'>smartcard.transmitAPDU</span> is used to send an APDU command to the smart card.
         paragraph_2: The parameters should receive only hexadecimal strings.
-        paragraph_3: In the example above, firstly a loop with the command <a href='while' class='command'>while</a> is made waiting for the command <a href='smartcard.insertedcard' class='command'>smartcard.insertedcard</a> to identify a card insertion.
-        paragraph_4: Once the card is inserted, the command <a href='smartcard.startreader' class='command'>smartcard.startreader</a> initializes the reader and the card by sending an ATR command; then the command <span class='code'>smartcard.transmitAPDU</span> is executed. In the end the result is displayed through the command <a href='display' class='command'>display</a>.
+        paragraph_3: In the example above, a <a href='while' class='command'>while</a> loop waits for the command <a href='smartcard.insertedcard' class='command'>smartcard.insertedcard</a> to identify a card insertion.
+        paragraph_4: Once the card is inserted, the command <a href='smartcard.startreader' class='command'>smartcard.startreader</a> initializes the reader and the card by sending an ATR command; then the command <span class='code'>smartcard.transmitAPDU</span> is executed. In the end the result is displayed using the command <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: <strong>datafield</strong> <span class='data-type'>[string]</span><br/>Hexadecimal datafield of an APDU command containing additional information. Optional field, but if not used, shall receive the value <strong>00</strong>
+          parameter_1: <strong>datafield</strong> <span class='data-type'>[string]</span><br/>Hexadecimal datafield of an APDU command containing additional information. <b>Optional field:</b> if not used will default to <strong>00</strong>
           parameter_2: <strong>header</strong> <span class='data-type'>[string]</span><br/>APDU hexadecimal header, composed by CLA + INS + P1 + P2. Required field.
-          parameter_3: <strong>LC</strong> <span class='data-type'>[string]</span><br/>Datafield parameter size in hexadecimal. Optional field, but if not used, shall receive the value <strong>00</strong>.
-          parameter_4: <strong>LE</strong> <span class='data-type'>[string]</span><br/>Expected size of the response in hexadecimal. Optional field, but if not used, shall receive the value <strong>00</strong>. If the response size is greater than the 2 obligatory bytes SW1 and SW2, it is necessary to specify the size of the response in this field.
+          parameter_3: <strong>LC</strong> <span class='data-type'>[string]</span><br/>Datafield parameter size in hexadecimal. <b>Optional field:</b> if not used will default to <strong>00</strong>.
+          parameter_4: <strong>LE</strong> <span class='data-type'>[string]</span><br/>Expected size of the response in hexadecimal. <b>Optional field:</b> if not used will default to <strong>00</strong>. If the response size is greater than the two obligatory bytes SW1 and SW2, it is necessary to specify the size of the response in this field.
           parameter_5: <strong>slot</strong> <span class='data-type'>[string]</span><br/>slot that was opened with <span class='code'>smartcard.startreader</span>
           parameter_6: <strong>variabledatafieldresponse</strong> <span class='data-type'>[string]</span><br/>Variable that will store the hexadecimal return value of the APDU command.
-          parameter_7: <strong>variableSW</strong> <span class='data-type'>[string]</span><br/>Variable that will store the obligatory 2 hexadecimal bytes from the APDU command.
+          parameter_7: <strong>variableSW</strong> <span class='data-type'>[string]</span><br/>Variable that will store the obligatory two hexadecimal bytes from the APDU command.
           parameter_8: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the command, where:<br/><ul><li>-2: Error while sending the command to the card</li><li>-1: Invalid slot</li><li>1: Command successfully sent</li></ul>'
       string_charat:
         description: Extracts specified string character
@@ -1899,7 +1899,7 @@ en:
       unzipfile:
         description: Unpacks a zip file
         paragraph_1: The command <span class='code'>unzipfile</span> is used to uncompress a file compressed in zip format.
-        paragraph_2: In the example above, the command <span class='code'>unzipfile</span> was used to to decompress a file called <strong>teste.zip</strong>, that is stored on the device memory. After that the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable through the command <a href='display' class='command'>display</a>.
+        paragraph_2: In the example above, the command <span class='code'>unzipfile</span> was used to to decompress a file called <strong>teste.zip</strong>, that is stored on the device memory. After that the command <a href='inttostring' class='command'>inttostring</a> is used to convert and display the variable using the command <a href='display' class='command'>display</a>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the zip file stored on the device.
           parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the command, where:<br/><ul><li>0: File successfully uncompressed</li><li>-1: Error during decompression</li></ul>'

@@ -15,16 +15,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sPressedKey"/&gt;
+<%= embed_posxml_code("1e79f127f95492865587") %>
 
-&lt;display column="0" line="0" message="Press any key:"/&gt;
-&lt;readkey miliseconds="5000" variablereturn="$(sPressedKey)"/&gt;
-
-&lt;display column="0" line="0" message="Pressed key:"/&gt;
-&lt;display column="0" line="1" message="$(sPressedKey)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.readkey.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.readkey.paragraph_3") %></p>
