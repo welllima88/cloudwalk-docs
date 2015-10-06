@@ -16,17 +16,7 @@
 </ol>
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
-
-&lt;predial option="1" variablestatus="$(iReturn)" /&gt;
-&lt;display column="0" line="0" message="Wait..." /&gt;
-&lt;display column="0" line="2" message="predial..." /&gt;
-&lt;waitkeytimeout seconds="15" /&gt;
-
-&lt;predial option="2" variablestatus="$(iReturn)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
+<%= embed_posxml_code("d158637f5856030d2c50") %>
 
 <hr/>
 <p><%= I18n.t("posxml.commands.predial.paragraph_3") %></p>

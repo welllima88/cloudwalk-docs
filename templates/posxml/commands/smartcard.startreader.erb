@@ -15,18 +15,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn" /&gt;
+<%= embed_posxml_code("a48b1ea7fb87ed557638") %>
 
-&lt;stringvariable value="0" variable="sBuf" /&gt;
-
-&lt;smartcard.startreader slot="1" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sBuf)" /&gt;
-
-&lt;display column="0" line="0" message="$(sBuf)"/&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.smartcard_startreader.paragraph_2") %></p>

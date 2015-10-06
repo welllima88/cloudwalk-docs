@@ -18,23 +18,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturnHandle" /&gt;
-&lt;integervariable value="0" variable="iReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;stringvariable value="" variable="sBufferReturned" /&gt;
+<%= embed_posxml_code("58ab14f6707e3e43369b") %>
 
-&lt;openserialport port="COM1" rate="115200" configuration="A8N1" variablereturn="$(iReturnHandle)" /&gt;
-
-&lt;readserialport bytes="8" timeout="10000" variablebuffer="$(sBufferReturned)" variablehandle="$(iReturnHandle)" variablereturn="$(iReturn)" /&gt;
-
-&lt;string.fromhex string="$(sBufferReturned)" variablereturn="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;closeserialport variablehandle="$(iReturnHandle)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.readserialport.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.readserialport.paragraph_3") %></p>

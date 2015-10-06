@@ -16,17 +16,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable variable="iConnect" value=""/&gt;
-&lt;stringvariable variable="sConnect" value=""/&gt;
-
-&lt;preconnect variablestatus="$(iConnect)" /&gt;
-
-&lt;inttostring variableinteger="$(iConnect)" variablestring="$(sConnect)" /&gt;
-
-&lt;display column="0" line="0" message="$(sConnect)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
+<%= embed_posxml_code("828957356c235b2af28f") %>
 
 <hr/>
 <p><%= I18n.t("posxml.commands.preconnect.paragraph_3") %></p>
