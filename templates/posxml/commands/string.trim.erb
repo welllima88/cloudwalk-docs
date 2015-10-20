@@ -15,17 +15,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="    CloudWalk    " variable="sText" /&gt;
+<%= embed_posxml_code("7fd82b0034e981d9020e") %>
 
-&lt;display column="0" line="0" message="Without TRIM:" /&gt;
-&lt;display column="0" line="1" message="$(sText)" /&gt;
-
-&lt;string.trim string="$(sText)" variablereturn="$(sText)" /&gt;
-
-&lt;display column="0" line="3" message="With TRIM:" /&gt;
-&lt;display column="0" line="4" message="$(sText)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.string_trim.paragraph_2") %></p>

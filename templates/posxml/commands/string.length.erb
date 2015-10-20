@@ -15,19 +15,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sStringSize" /&gt;
-&lt;stringvariable value="CloudWalk" variable="sText" /&gt;
+<%= embed_posxml_code("510c4f622bd6b8a5b026") %>
 
-&lt;integervariable value="" variable="iStringSize" /&gt;
-
-&lt;string.length value="$(sText)" variablereturn="$(iStringSize)" /&gt;
-
-&lt;inttostring variableinteger="$(iStringSize)" variablestring="$(sStringSize)" /&gt;
-
-&lt;display column="0" line="0" message="$(sStringSize)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.string_length.paragraph_2") %></p>

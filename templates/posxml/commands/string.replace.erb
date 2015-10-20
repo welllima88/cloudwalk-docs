@@ -17,13 +17,6 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="WalkCloud" variable="sText"/&gt;
-&lt;stringvariable value="" variable="sReturn"/&gt;
-
-&lt;string.replace new_substring="CloudWalk" old_substring="WalkCloud" original_string="$(sText)" variablereturn="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-&lt;waitkey /&gt;
-</code></pre>
+<%= embed_posxml_code("26561a1b8b6bdcb2eb4d") %>
 <hr/>
 <p><%= I18n.t("posxml.commands.string_replace.paragraph_2") %></p>

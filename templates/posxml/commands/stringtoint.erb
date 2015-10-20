@@ -15,26 +15,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="" variable="iLine" /&gt;
-&lt;integervariable value="" variable="iColumn" /&gt;
+<%= embed_posxml_code("b2dac360ee4c05a3e475") %>
 
-&lt;stringvariable value="" variable="sLine" /&gt;
-&lt;stringvariable value="" variable="sColumn" /&gt;
-&lt;stringvariable value="" variable="sMessage" /&gt;
-
-&lt;stringvariable value="1;2;Column 1 Line 2" variable="sText" /&gt;
-
-&lt;string.elementat delimiter=";" element_index="0" string="$(sText)" variablereturn="$(sLine)" /&gt;
-&lt;string.elementat delimiter=";" element_index="1" string="$(sText)" variablereturn="$(sColumn)" /&gt;
-&lt;string.elementat delimiter=";" element_index="2" string="$(sText)" variablereturn="$(sMessage)" /&gt;
-
-&lt;stringtoint variableinteger="$(iLine)" variablestring="$(sLine)" /&gt;
-&lt;stringtoint variableinteger="$(iColumn)" variablestring="$(sColumn)" /&gt;
-
-&lt;display column="$(iColumn)" line="$(iLine)" message="$(sMessage)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.stringtoint.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.stringtoint.paragraph_3") %></p>
