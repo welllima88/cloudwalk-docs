@@ -17,15 +17,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="Welcome to Plano Be" variable="sCompleteText" /&gt;
+<%= embed_posxml_code("6553a67961c8c7263fdd") %>
 
-&lt;stringvariable value="" variable="sHalfText" /&gt;
-
-&lt;string.substring length="7" start="10" string="$(sCompleteText)" variablereturn="$(sHalfText)" /&gt;
-
-&lt;display column="0" line="0" message="$(sHalfText)"/&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.string_substring.paragraph_2") %></p>

@@ -18,22 +18,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="1234" variable="sString"/&gt;
-&lt;stringvariable value="" variable="sValue"/&gt;
+<%= embed_posxml_code("f43cbc3058fee9c00056") %>
 
-&lt;string.pad character="0" length="10" align="left" origin="$(sString)" destination="$(sValue)"/&gt;
-
-&lt;display column="0" line="0" message="$(sValue)" /&gt;
-&lt;waitkey /&gt;
-
-&lt;stringvariable value="1234" variable="sString"/&gt;
-&lt;stringvariable value="" variable="sValue"/&gt;
-
-&lt;string.pad character="0" length="10" align="right" origin="$(sString)" destination="$(sValue)"/&gt;
-
-&lt;display column="0" line="0" message="$(sValue)" /&gt;
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.string_pad.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.string_pad.paragraph_3") %></p>

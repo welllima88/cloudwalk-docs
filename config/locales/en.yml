@@ -1660,7 +1660,7 @@ en:
         paragraph_2: In the example above the command <a href='string.charat' class='command'>string.charat</a> will get the 1st and 4th characters of the variable <strong>sText</strong> and store in variables <strong>sReturnC</strong> and <strong>sReturnW</strong>.
         parameters:
           parameter_1: <strong>character_index</strong> <span class='data-type'>[integer]</span><br/>Character position.
-          parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Variable that will be manipulated.
+          parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>String that will be manipulated.
           parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       string_elementat:
         description: Returns a specific element in the string
@@ -1668,28 +1668,28 @@ en:
         paragraph_2: In the example above the text of the variable <strong>sText</strong> has been separated using the command <a href='string.elementat' class='command'>string.elementat</a>.
         paragraph_3: The numbers (<a href='stringvariable' class='command'>stringvariable</a>) have been converted to <a href='integervariable' class='command'>integervariable</a> and you can use the command <a href='display' class='command'>display</a> to set the row and column.
         parameters:
-          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>Content delimiter.
-          parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Party's position, with 0 being the first.
+          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>String delimiter.
+          parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Delimiter's position, with 0 being the first.
           parameter_3: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text to be separated.
           parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the converted value.
       string_elements:
         description: Returns how many elements there are in the specified string
-        paragraph_1: The command <span class='code'>string.elements</span> is used to return the number of elements found in a string according to a delimiter.
-        paragraph_2: In the example above the command <a href='string.elements' class='command'>string.elements</a> will separate the contets of the variable <strong>sText</strong> based on delimiter <strong>;</strong> .
+        paragraph_1: The command <span class='code'>string.elements</span> is used to return the number of elements found in a string based on a delimiter.
+        paragraph_2: In the example above the command <a href='string.elements' class='command'>string.elements</a> will separate the contents of the variable <strong>sText</strong> based on delimiter <strong>;</strong> .
         paragraph_3: The variable <strong>iElements</strong> will be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>Content delimiter.
+          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>String delimiter.
           parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text to be separated.
           parameter_3: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the result of the command.
       string_find:
         description: Searches for a substring in the specified string
         paragraph_1: The command <span class='code'>string.find</span> is used to return the position of a substring in a string.
         paragraph_2: In the example above the command <a href='string.find' class='command'>string.find</a> will search for text <strong>Walk</strong> in the variable <strong>sText</strong>, starting the search at position 0. The return is saved in the variable <strong>iElement</strong>.
-        paragraph_3: The variable <strong>iElement</strong> will be converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
+        paragraph_3: The variable <strong>iElement</strong> is converted to <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
-          parameter_1: <strong>start</strong> <span class='data-type'>[string]</span><br/>Set start of the search.
-          parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Where the text search will be made.
-          parameter_3: <strong>substring</strong> <span class='data-type'>[string]</span><br/>Text to be found.
+          parameter_1: <strong>start</strong> <span class='data-type'>[string]</span><br/>Set the search starting point.
+          parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Define the string to be searched.
+          parameter_3: <strong>substring</strong> <span class='data-type'>[string]</span><br/>Define the text to be found.
           parameter_4: '<strong>variablereturn</strong> <span class="data-type">[string]</span><br/>Variable that will store the result of the command <ul><li>-1: Text not found</li><li>>-1: position of the found text</li></ul>'
       string_fromhex:
         description: Converts a hexadecimal representation to a string
@@ -1701,7 +1701,7 @@ en:
       string_getvaluebykey:
         description: Searches in the string for a value based on key/value
         paragraph_1: The command <span class='code'>string.getvaluebykey</span> is used to return a value from a key in string.
-        paragraph_2: In the example above the command <a href='string.getvaluebykey' class='command'>string.getvaluebykey</a> will search on the string for the value of the key <strong>company</strong>.
+        paragraph_2: In the example above the command <a href='string.getvaluebykey' class='command'>string.getvaluebykey</a> will search the string for the value of the key <strong>company</strong>.
         parameters:
           parameter_1: <strong>key</strong> <span class='data-type'>[string]</span><br/>Key to be found.
           parameter_2: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text to be searched.
@@ -1711,8 +1711,8 @@ en:
         paragraph_1: The command <span class='code'>string.insertat</span> is used to separate a string based on a delimiter and insert a substring in a set position.
         paragraph_2: In the example above the command <a href='string.insertat' class='command'>string.insertat</a> will insert the text <strong>Walk</strong> in the second element generated by the separation of the string whose index is <strong>1</strong>.
         parameters:
-          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>Content delimiter.
-          parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Party's position, with 0 being the first.
+          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>String delimiter.
+          parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Delimiter's position, with 0 being the first.
           parameter_3: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text to be changed.
           parameter_4: <strong>string_to_be_inserted</strong> <span class='data-type'>[string]</span><br/>Text to be inserted.
           parameter_5: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the converted value.
@@ -1726,22 +1726,22 @@ en:
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the converted value.
       string_pad:
         description: Adds a padding with specific character in string
-        paragraph_1: The command <span class='code'>string.pad</span> is used to add content to the right or left of a string.
+        paragraph_1: The command <span class='code'>string.pad</span> is used to add content to the right or left side of a string.
         paragraph_2: In the example above the first command <a href='string.pad' class='command'>string.pad</a> will add character <strong>0</strong> to the left side of the string <strong>1234</strong>, the command will accept a maximum <strong>10</strong> characters, so the result will be <strong>0000001234</strong>.
         paragraph_3: The second command <a href='string.pad' class='command'>string.pad</a> will add character <strong>0</strong> to the right side of the string <strong>1234</strong>, the command will accept a maximum <strong>10</strong> characters, so the result will be <strong>1234000000</strong>.
         parameters:
           parameter_1: <strong>character</strong> <span class='data-type'>[string]</span><br/>Text to be inserted.
           parameter_2: <strong>length</strong> <span class='data-type'>[string]</span><br/>Maximum size of the changed text.
           parameter_3: <strong>align</strong> <span class='data-type'>[string]</span><br/>Alignment, left or right.
-          parameter_4: <strong>origin</strong> <span class='data-type'>[string]</span><br/>Text that will be added to the character.
+          parameter_4: <strong>origin</strong> <span class='data-type'>[string]</span><br/>Text that will be added to the <b>character</b>.
           parameter_5: <strong>destination</strong> <span class='data-type'>[integer]</span><br/>Variable that will receive the result of the command.
       string_removeat:
         description: Removes an element from specific index in string
         paragraph_1: The command <span class='code'>string.removeat</span> is used to separate a string into parts using a delimiter and remove one of them.
         paragraph_2: In the example above the command <a href='string.removeat' class='command'>string.removeat</a> will separate a contents of the variable <strong>sText</strong> according to the delimiter and will remove the separate part according to the index on the property <strong>element_index</strong>.
         parameters:
-          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>Content delimiter.
-          parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Party's position, with 0 being the first.
+          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>String delimiter.
+          parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Delimiter's position, with 0 being the first.
           parameter_3: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text that will be separated.
           parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the result of the command.
       string_replace:
@@ -1756,21 +1756,21 @@ en:
       string_replaceat:
         description: Replaces an element at a specific index in string
         paragraph_1: The command <span class='code'>string.replaceat</span> is used to replace a specific part of the string.
-        paragraph_2: In the example above the command <a href='string.replaceat' class='command'>string.replaceat</a> will separate the string from the variable <strong>sText</strong> and replace the contents of the second part, defined by <strong>element_index</strong> 1, which is <strong>POSXML Application</strong> to <strong>POSXML</strong>.
+        paragraph_2: In the example above the command <a href='string.replaceat' class='command'>string.replaceat</a> will separate the string stored in the variable <strong>sText</strong> and replace the contents of the second part, defined by <strong>element_index</strong> 1, which is <strong>POSXML Application</strong> to <strong>POSXML</strong>.
         parameters:
-          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>Content delimiter.
-          parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Party's position, with 0 being the first.
+          parameter_1: <strong>delimiter</strong> <span class='data-type'>[string]</span><br/>String delimiter.
+          parameter_2: <strong>element_index</strong> <span class='data-type'>[integer]</span><br/>Delimiter's position, with 0 being the first.
           parameter_3: <strong>new_element</strong> <span class='data-type'>[integer]</span><br/>New text.
           parameter_4: <strong>string</strong> <span class='data-type'>[string]</span><br/>Text that will be separated.
           parameter_5: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       string_substring:
         description: Capture a specific part of string
         paragraph_1: The command <span class='code'>string.substring</span> is used to return a specific part of a <a href='stringvariable' class='command'>stringvariable</a>.
-        paragraph_2: In the example above the variable <strong>$(sCompleteText)</strong> will be used by the command <strong>string.substring</strong> that will get your content starting from the 10th character (0 is the first, including spaces) and will return 7 characters that will be passed to the variable <strong>$(sHalfText)</strong>.
+        paragraph_2: In the example above the variable <strong>$(sCompleteText)</strong> will be used by the command <strong>string.substring</strong> to locate the starting point from the 10th character (0 is the first, including spaces) and will return 10 characters that will be passed to the variable <strong>$(sHalfText)</strong>.
         parameters:
           parameter_1: <strong>length</strong> <span class='data-type'>[integer]</span><br/>Set the size of the returned string.
           parameter_2: <strong>start</strong> <span class='data-type'>[integer]</span><br/>Defines which position of the string the will be used as a reference.
-          parameter_3: <strong>string</strong> <span class='data-type'>[string or variável]</span><br/>A string or a variable with the value that will be changed by the command.
+          parameter_3: <strong>string</strong> <span class='data-type'>[string or variable]</span><br/>A string or a variable with the value that will be changed by the command.
           parameter_4: <strong>variablereturn</strong> <span class='data-type'>[string or integer]</span><br/>Variable that will store the command return.
       string_tohex:
         description: Converts a string to its hexadecimal representation
@@ -1797,18 +1797,18 @@ en:
           parameter_2: <strong>variablestring</strong> <span class='data-type'>[string]</span><br/>Variable that will store the converted value.
       stringvariable:
         description: Creates an instance of the variable of string type
-        paragraph_1: The command <span class='code'>stringvariable</span> is used to declare a variable that stores only text. This type supports variable number of mathematical operations but they will not be treated as numeric values, for example, <strong>variavel123</strong>.
-        paragraph_2: In the example above, has been created a variable of type <strong>stringvariable</strong> which has an initial value <strong>Initial value</strong>.
+        paragraph_1: The command <span class='code'>stringvariable</span> is used to declare a variable that stores only text. This type supports a number of mathematical operations but they will not be treated as numeric values, for example, <strong>variable123</strong>.
+        paragraph_2: In the example above, a variable of type <strong>stringvariable</strong> has been created which has an initial value <strong>Initial value</strong>.
         parameters:
           parameter_1: <strong>variable</strong> <span class='data-type'>[string]</span></br>Variable Name.
           parameter_2: <strong>value</strong> <span class='data-type'>[integer or string]</span></br>Initial value of the variable.
       substring:
         description: Copies part of a variable string to another variable
         paragraph_1: The command <span class='code'>substring</span> is used to separate a string into substrings according to a delimiter.
-        paragraph_2: In the example above the command <a href='substring' class='command'>substring</a> will separate the string from the variable <strong>sText</strong> according to the delimiter and store the substring defined by <strong>index</strong> 0, found in variable <strong>variabledestination</strong> in the variable <strong>sReturn</strong>.
+        paragraph_2: In the example above the command <a href='substring' class='command'>substring</a> will separate the string stored in the variable <strong>sText</strong> according to the delimiter and store the substring defined by <strong>index</strong> 0 in the variable <strong>sReturn</strong>.
         parameters:
-          parameter_1: <strong>character</strong> <span class='data-type'>[string]</span><br/>Content delimiter.
-          parameter_2: <strong>index</strong> <span class='data-type'>[integer]</span><br/>Party's position, with 0 being the first.
+          parameter_1: <strong>character</strong> <span class='data-type'>[string]</span><br/>String delimiter.
+          parameter_2: <strong>index</strong> <span class='data-type'>[integer]</span><br/>Delimiter's position, with 0 being the first.
           parameter_3: <strong>variabledestination</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the substring.
           parameter_4: <strong>variablesource</strong> <span class='data-type'>[string]</span><br/>Text that will be separated.
           parameter_5: <strong>variablereturn</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the command return. If nothing is found will return <strong>-1</strong>.
