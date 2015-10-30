@@ -16,20 +16,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;editfile filename="config.dat" key="touchscreen" value="1"/&gt;
-
-&lt;integervariable value="0" variable="iTouch" /&gt;
-
-&lt;integervariable value="0" variable="iXaxis" /&gt;
-
-&lt;integervariable value="0" variable="iYaxis" /&gt;
-
-&lt;while variable="$(iTouch)" operator="notequalto" value="1"&gt;
-
-  &lt;system.gettouchscreen axisx="$(iXaxis)" axisy="$(iYaxis)" variablereturn="$(iTouch)" /&gt;
-
-&lt;/while&gt;
-</code></pre>
+<%= embed_posxml_code("9aa16557ff3d97647352", true) %>
 
 <p><%= I18n.t('posxml.commands.system_gettouchscreen.paragraph_2') %></p>
 
