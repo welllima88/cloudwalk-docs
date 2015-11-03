@@ -16,17 +16,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="" variable="battery_status"/&gt;
+<%= embed_posxml_code("87e83ed02c4925bc1bfb", true) %>
 
-&lt;stringvariable value="" variable="battery_status_display"/&gt;
-
-&lt;system.checkbattery variablestatus="$(battery_status)"/&gt;
-
-&lt;inttostring variableinteger="$(battery_status)" variablestring="$(battery_status_display)"/&gt;
-
-&lt;display column="0" line="0" message="$(battery_status_display)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.system_checkbattery.paragraph_2") %></p>

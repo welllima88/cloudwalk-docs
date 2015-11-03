@@ -17,17 +17,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn"/&gt;
-&lt;stringvariable value="" variable="sReturn"/&gt;
+<%= embed_posxml_code("60d128c797ac26f3b75a", true) %>
 
-&lt;system.backlight level="50" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-
-&lt;display column="0" line="0" message="$(sInfo)"/&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.system_backlight.paragraph_3") %></p>

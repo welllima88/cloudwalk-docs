@@ -1815,20 +1815,20 @@ en:
       system_backlight:
         description: Define the device's backlight intensity level.
         paragraph_1: The command <span class='code'>system.backlight</span> defines the device's backlight intensity level.
-        paragraph_2: This command is often used when the device has a battery (not plugged directly into electricity), because there is a considerable consumption of battery when the backlight is in 100%.
-        paragraph_3: In the example above, the command <span class='code'>system.backlight</span> was used to modify the backlight intensity level to 50%.
-        paragraph_4: Since the return of the command is an <a href='integervariable' class='commands'>integervariable</a>, the command <a href='inttostring' class='commands'>inttostring</a> was used to convert and display the variable throught the command <a href='display' class='commands'>display</a>.
+        paragraph_2: This command is often used when the device in on battery power as there is a considerable consumption of battery when the backlight is set to 100%.
+        paragraph_3: In the example above, the command <span class='code'>system.backlight</span> is used to modify the backlight intensity level to 50%.
+        paragraph_4: Since the return of the command is an <a href='integervariable' class='commands'>integervariable</a>, the command <a href='inttostring' class='commands'>inttostring</a> is used to convert and display the variable using the command <a href='display' class='commands'>display</a>.
         parameters:
           parameter_1: <strong>level</strong> <span class='data-type'>[integer]</span><br/>Backlight level percentage.
           parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/><ul><li>-1: Error when defining the new value</li><li>0: OK</li></ul>'
       system_beep:
         description: Produces a short beep
-        paragraph_1: The command <span class='code'>system.beep</span> is used to beep.
+        paragraph_1: The command <span class='code'>system.beep</span> is used to make the terminal beep.
         paragraph_2: In the example above, the command <strong>system.beep</strong> will cause the device to beep.
       system_checkbattery:
         description: Checks the device battery status
         paragraph_1: The command <span class='code'>system.checkbattery</span> is used to return the current percentage of battery.
-        paragraph_2: In the example above, the command <strong>system.checkbattery</strong> will return to the variable <strong>$( battery_status)</strong> which is a variable <a href='integervariable' class='command'>integervariable</a>. As the property <strong>variablestatus</strong> only accepts an integer value, it is necessary to convert the value to <a href='stringvariable' class='command'>stringvariable</a> so that the value can be shown on the display .
+        paragraph_2: In the example above, the command <strong>system.checkbattery</strong> will return to <a href='integervariable' class='command'>integervariable</a> <strong>$( battery_status)</strong>. As <strong>variablestatus</strong> only accepts an integer value, it is necessary to convert the value to <a href='stringvariable' class='command'>stringvariable</a> to display the value onscreen.
         paragraph_3: The value <strong>-1</strong> means that the device has no battery.
         parameters:
           parameter_1: '<strong>variablestatus</strong> <span class="data-type">[integer]</span></br>Variable that will store the command return. The returned value ranges from 0 to 100, scaling 1 by 1. Examples: 0, 1, 2, 3, 4, 5 ... 95, 96, 97, 98, 99, 100.'
@@ -1838,25 +1838,25 @@ en:
         parameters:
           parameter_1: <strong>axisx</strong> <span class='data-type'>[integer]</span><br/>X-axis coordinate of the display, where the display was pressed.
           parameter_2: <strong>axisy</strong> <span class='data-type'>[integer]</span><br/>Y-axis coordinate of the display, where the display was pressed.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/> <span class="data-type"> 1: display was pressed<br/> 0: display was not pressed</span>'
-        paragraph_2: In the example above, the command <strong>system.gettouchscreen</strong> will return in iXaxis the X coordinate and in iYaxis the Y coordenate of the point pressed on the display.
-        paragraph_3: The loop is to ensure that the display will pressed.
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/>1: display was pressed<br/> 0: display was not pressed'
+        paragraph_2: In the example above, the command <strong>system.gettouchscreen</strong> will return in iXaxis the X coordinate and in iYaxis the Y coordinate of the point pressed on the display.
+        paragraph_3: The while loop is to ensure that the display will continue to listen for a display press.
       system_info:
         description: Gets device information (MAC Address, SIM ID, etc)
         paragraph_1: The command <span class='code'>system.info</span> is used to return information from the device.
-        paragraph_2: In the example above, the command <strong>system.info</strong> will return the macaddress of the device.
+        paragraph_2: In the example above, the command <strong>system.info</strong> will return the <b>macaddress</b> of the device.
         parameters:
-          parameter_1: <strong>type</strong> <span class='data-type'>[string]</span><br/>Information you want to return, simid or macaddress.
+          parameter_1: <strong>type</strong> <span class='data-type'>[string]</span><br/>Information you want to return, <b>simid</b> or <b>macaddress</b>.
           parameter_2: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will store the command return.
       system_qrcode:
         description: Generate a QR Code based on the entered data
         paragraph_1: The command <span class='code'>system.qrcode</span> is used to generate a QR Code based on the content of the parameter <strong>input</strong>. The generated QR Code can be displayed or printed (if the device has a printer).
-        paragraph_2: "In the example above, the command <strong>system.qrcode</strong> will generate a new bitmap on size: <strong>x1</strong> and version: <strong>4</strong> and a second bitmap on size: <strong>x5</strong> and version: <strong>4</strong>. Then, the <strong>x1</strong> QR Code will be displayed through the command <a href='displaybitmap' class='command'>displaybitmap</a> and the <strong>x5</strong> QR Code will be printed through the command <a href='printbitmap' class='command'>printbitmap</a> (if the device has a printer)."
+        paragraph_2: "In the example above, the command <strong>system.qrcode</strong> will generate a new bitmap of size: <strong>x1</strong> and version: <strong>4</strong> and a second bitmap of size: <strong>x5</strong> and version: <strong>4</strong>. Then, the <strong>x1</strong> QR Code will be displayed through the command <a href='displaybitmap' class='command'>displaybitmap</a> and the <strong>x5</strong> QR Code will be printed through the command <a href='printbitmap' class='command'>printbitmap</a> (if the device has a printer)."
         parameters:
-          parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the bitmap that will created.
+          parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Name of the bitmap file that will be created.
           parameter_2: <strong>input</strong> <span class='data-type'>[string]</span><br/>Content that will be used to generate the QR Code.
-          parameter_3: "<strong>size</strong> <span class='data-type'>[string]</span><br/>Size of bitmap image. Supported size: <strong>x1, x2, x3, x4 and x5</strong>."
-          parameter_4: "<strong>version</strong> <span class='data-type'>[string]</span><br/>Symbol version of QR Code. Each version has a different module configuration or number of modules. Supported versions: <strong>1, 2, 3, 4, 5 and 6</strong>."
+          parameter_3: "<strong>size</strong> <span class='data-type'>[string]</span><br/>Size of the bitmap image. Supported sizes: <strong>x1, x2, x3, x4 and x5</strong>."
+          parameter_4: "<strong>version</strong> <span class='data-type'>[string]</span><br/>Symbol version of the QR Code. Each version has a different module configuration or number of modules. Supported versions: <strong>1, 2, 3, 4, 5 and 6</strong>."
       system_inputtransaction:
         description: "Instruction to receive the data card on a contactless transaction"
         paragraph_1: "The command <span class='code'>system.inputtransaction</span> is an instruction to receive the data card on a contactless transaction."

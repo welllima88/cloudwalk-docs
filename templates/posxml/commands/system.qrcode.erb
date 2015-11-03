@@ -17,29 +17,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iRet" /&gt;
 
-&lt;!-- Delete the old files before generate the new QR Code images. --&gt;
-&lt;deletefile filename="qrcode_x1.bmp" /&gt;
-&lt;deletefile filename="qrcode_x5.bmp" /&gt;
-
-&lt;!-- Generate the new QR Code bitmap files. --&gt;
-&lt;system.qrcode filename="qrcode_x1.bmp" input="cloudwalk.io" size="x1" version="4" /&gt;
-&lt;system.qrcode filename="qrcode_x5.bmp" input="cloudwalk.io" size="x5" version="4" /&gt;
-
-&lt;!-- Display the new QR Code image generated. --&gt;
-&lt;cleandisplay />
-&lt;display line="6" column="0" message="QR CODE - SIZE: x1" /&gt;
-&lt;displaybitmap filename="qrcode_x1.bmp" variablereturn="$(iRet)" /&gt;
-
-&lt;!-- Printing the new QR Code image generated. --&gt;
-&lt;printbig message="QR CODE - SIZE: x5" /&gt;
-&lt;paperfeed /&gt;
-&lt;printbitmap filename="qrcode_x5.bmp" variablereturn="$(iRet)" /&gt;
-&lt;paperfeed /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
+<%= embed_posxml_code("10cde41fca6480b8a9a3") %>
 
 <hr/>
 <p><%= I18n.t("posxml.commands.system_qrcode.paragraph_2") %></p>
