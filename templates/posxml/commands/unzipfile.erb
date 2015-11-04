@@ -15,17 +15,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturn"/&gt;
-&lt;stringvariable value="" variable="sReturn"/&gt;
+<%= embed_posxml_code("d968b8950757963a5288") %>
 
-&lt;unzipfile filename="teste.zip" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)"/&gt;
-&lt;waitkey/&gt;
-
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.unzipfile.paragraph_2") %></p>

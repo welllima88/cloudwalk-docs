@@ -15,18 +15,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iReturnHandle" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("6d5d1676d7568729b7dc") %>
 
-&lt;openserialport port="COM1" rate="115200" configuration="A8N1" variablereturn="$(iReturnHandle)" /&gt;
-
-&lt;string.tohex string="CloudWalk" variablereturn="$(sReturn)" /&gt;
-&lt;writeserialport buffer="$(sReturn)" variablehandle="$(iReturnHandle)" /&gt;
-
-&lt;closeserialport variablehandle="$(iReturnHandle)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.writeserialport.paragraph_2") %></p>
 <p><%= I18n.t("posxml.commands.writeserialport.paragraph_3") %></p>

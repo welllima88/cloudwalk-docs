@@ -17,22 +17,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sCard" /&gt;
-&lt;stringvariable value="" variable="sKey" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
-&lt;stringvariable value="" variable="sReturn" /&gt;
+<%= embed_posxml_code("376ebfe2c95d86258fde", true) %>
 
-&lt;system.readcard cardvariable="$(sCard)" keyvariable="$(sKey)" timeout="10000" variablereturn="$(iReturn)"  /&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)" /&gt;
-
-&lt;display column="0" line="0" message="$(sReturn)" /&gt;
-
-&lt;display column="0" line="2" message="$(sCard)" /&gt;
-
-&lt;display column="0" line="6" message="$(sKey)" /&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.system_readcard.paragraph_2") %></p>

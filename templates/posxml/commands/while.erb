@@ -35,15 +35,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="0" variable="iNumber"/&gt;
+<%= embed_posxml_code("a1fd3ca1eaa99c1c1297") %>
 
-&lt;while variable="$(iNumber)" operator="lessthanorequalto" value="5"&gt;
-  &lt;display column="0" line="$(iNumber)" message="Message"/&gt;
-  &lt;integeroperator operator="++" variablesource="$(iNumber)" /&gt;
-&lt;/while&gt;
-
-&lt;waitkey/&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.while.paragraph_3") %></p>
 <p><%= I18n.t("posxml.commands.while.paragraph_4") %></p>

@@ -19,35 +19,7 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;integervariable value="1" variable="int_inputtype_return" /&gt;
-&lt;stringvariable value="" variable="str_inputtype_return" /&gt;
+<%= embed_posxml_code("6c614f2a9d98b9b443b7" ) %>
 
-&lt;integervariable value="2" variable="int_keyvariable_return" /&gt;
-&lt;stringvariable value="" variable="str_keyvariable_return" /&gt;
-
-&lt;integervariable value="3" variable="int_variablereturn_return" /&gt;
-&lt;stringvariable value="" variable="str_variablereturn_return" /&gt;
-
-&lt;stringvariable value="" variable="str_cardvariable_return" /&gt;
-
-&lt;system.inputtransaction
-	inputtype="$(int_inputtype_return)"
-	keyboard="0"
-	timeout="30000"
-	keyvariable="$(int_keyvariable_return)"
-	cardvariable="$(str_cardvariable_return)"
-	variablereturn="$(int_variablereturn_return)" /&gt;
-
-&lt;inttostring variableinteger="$(int_inputtype_return)" variablestring="$(str_inputtype_return)" /&gt;
-&lt;inttostring variableinteger="$(int_keyvariable_return)" variablestring="$(str_keyvariable_return)" /&gt;
-&lt;inttostring variableinteger="$(int_variablereturn_return)" variablestring="$(str_variablereturn_return)" /&gt;
-
-&lt;display line="0" column="0" message="$(str_inputtype_return)" /&gt;
-&lt;display line="1" column="0" message="$(str_keyvariable_return)" /&gt;
-&lt;display line="2" column="0" message="$(str_variablereturn_return)" /&gt;
-&lt;display line="3" column="0" message="$(str_cardvariable_return)" /&gt;
-
-&lt;waitkey /&gt;
-</code></pre>
 <hr/>
 <p><%= I18n.t("posxml.commands.system_inputtransaction.paragraph_2") %></p>
