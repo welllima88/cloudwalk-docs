@@ -19,57 +19,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;!-- Difference operation --/&gt;
-&lt;integervariable value="0" variable="iDifference"/&gt;
-&lt;stringvariable value="" variable="sDifference"/&gt;
+<%= embed_posxml_code("fb217565330e1c97044b") %>
 
-&lt;stringvariable value="2013-08-28 17:12:27" variable="sDate1"/&gt;
-&lt;stringvariable value="" variable="sDate2"/&gt;
-
-&lt;getdatetime format="yy-M-d h:m:s" variabledestination="$(sDate2)"/&gt;
-
-&lt;time.calculate date="$(sDate1)" greaterdate="$(sDate2)" operation="difference" type="hours" value="10" variablereturn="$(iDifference)"/&gt;
-
-&lt;inttostring variableinteger="$(iDifference)" variablestring="$(sDifference)"/&gt;
-
-&lt;print message="Difference"/&gt;
-&lt;print message="$(sDifference)"/&gt;
-
-
-&lt;!-- Sum operation: adds 10 hours --/&gt;
-&lt;integervariable value="0" variable="iReturn"/&gt;
-&lt;stringvariable value="" variable="sReturn"/&gt;
-
-&lt;stringvariable value="2013-08-28 17:12:27" variable="sDate1"/&gt;
-
-&lt;time.calculate date="$(sDate1)" greaterdate="$(sDate2)" operation="sum" type="hours" value="10" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-
-&lt;print message="New date"/&gt;
-&lt;print message="$(sDate1)"/&gt;
-
-&lt;print message="Command return"/&gt;
-&lt;print message="$(sDate1)"/&gt;
-
-
-&lt;!-- Less operation: subtracts 10 minutes --/&gt;
-&lt;integervariable value="0" variable="iReturn"/&gt;
-&lt;stringvariable value="" variable="sReturn"/&gt;
-
-&lt;stringvariable value="2013-08-28 17:12:27" variable="sDate1"/&gt;
-
-&lt;time.calculate date="$(sDate1)" greaterdate="$(sDate2)" operation="less" type="minutes" value="10" variablereturn="$(iReturn)"/&gt;
-
-&lt;inttostring variableinteger="$(iReturn)" variablestring="$(sReturn)"/&gt;
-
-&lt;print message="New date"/&gt;
-&lt;print message="$(sDate1)"/&gt;
-
-&lt;print message="Command return"/&gt;
-&lt;print message="$(sDate1)"/&gt;
-
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.time_calculate.paragraph_2") %></p>
