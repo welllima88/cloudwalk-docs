@@ -967,7 +967,7 @@ en:
         description: Returns information parameters after the execution of the EMV process
         paragraph_1: Knowledge about the <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> standard is required to use this command.
         paragraph_10: For the type <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
-        paragraph_11: In the example above, the command <span class='code'>emv.getinfo</span> was used to fetch the parameters after the execution of the commands <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>. The command <a href='print' class='command'>print</a> was used to display the ticket information.
+        paragraph_11: In the example above, the command <span class='code'>emv.getinfo</span> was used to fetch the parameters following the execution of the commands <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>. The command <a href='print' class='command'>print</a> was used to display the ticket information.
         paragraph_12: Note that before performing the commands <strong>init</strong>, <strong>process</strong> and <strong>finish</strong> it is necessary to pass parameters to the <em>EMV Kernel</em> with the command <a href='emv.adddata' class='command'>emv.adddata</a>.
         paragraph_2: The command <span class='code'>emv.getinfo</span> is used to search for results in the instructions <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> and <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>.
         paragraph_3: 'Allowed parameters:'
@@ -1200,7 +1200,7 @@ en:
       inputformat:
         description: Allows the entry of a value based on a pre-defined format
         paragraph_1: The command <span class='code'>inputformat</span> is used to define the entrance to a value based on a pre-defined format.
-        paragraph_2: In the example above, each command has a predefined format and the value is displayed on the <a href='display' class='command'>display</a> when a key is pressed and its numerical value is stored in the variable <strong>sReturn</strong>.
+        paragraph_2: In the example above, each command has a predefined format. The value is displayed on the <a href='display' class='command'>display</a> when a key is pressed and its numerical value is stored in the variable <strong>sReturn</strong>.
         parameters:
           parameter_1: <strong>line</strong> <span class='data-type'>[integer]</span><br/>Line where the message appears.
           parameter_2: <strong>column</strong> <span class='data-type'>[integer]</span><br/>Column where the message appears.

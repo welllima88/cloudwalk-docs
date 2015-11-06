@@ -33,49 +33,50 @@
   <tbody>
     <tr>
       <td>bAcquirerID</td>
-      <td>Identificador da Rede Adquirente</td>
+      <td>Acquiring Network Identifier</td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bReqApplication</td>
-      <td>“99” - Todas as aplicaçãoes, “0” - Apenas aplicações selecionadas em waAppArray</td>
+      <td>99 - All applications</br>
+      0 - Only application selections in waAppArray</td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baInitialValue</td>
-      <td>Valor inicial(Amount authorized). 12 caracteres com padding de 0 a esquerda, exemplo: “000000005000”(50,00)</td>
+      <td>Initial value (Amount authorized). 12 characters with 0 padding to the left, example: “000000005000”(50,00)</td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baDate</td>
-      <td>Data da Transação(“AAMMDD”)</td>
+      <td>Date of the transaction (“AAMMDD”)</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTime</td>
-      <td>Hora da transação(“HHMMSS”)</td>
+      <td>Time of the transaction (“HHMMSS”)</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTimeStamp</td>
-      <td>Selo de tempo para as tabelas(“DDMMAAAASS”), onde SS é um número sequencial qualquer. O Kernel EMV do Telium válida o timestamp.</td>
+      <td>Timestamp for the tables (“DDMMAAAASS”), where SS is ​any sequential number. The Telium EMV Kernel validates the timestamp.</td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>iAppCount</td>
-      <td>Quantidade de entradas da lista waAppArray</td>
+      <td> Number of entries on the list waAppArray</td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>waAppArrayX</td>
-      <td>Array contendo identificador da rede adquirente + índice para tabela de parâmetros EMV. Aonde X é o número sequencial da aplicação, começando a partir do 1. Exemplo waAppArray1, waAppArray2...</td>
+      <td>Array containing the acquiring network identifier + table index of EMV parameters. Where X is the sequential number of the application, starting from 1. Example waAppArray1, waAppArray2...</td>
       <td>x</td>
       <td></td>
     </tr>
@@ -96,61 +97,73 @@
   <tbody>
     <tr>
       <td>baAmount</td>
-      <td>Valor da transação (Amount, authorized), podendo incluir novos valores apresentados após a instrução emv.inittransaction. 12 caracteres com padding de 0 a esquerdo, exemplo: “000000005000”(50,00).</td>
+      <td>Value of the transaction (Amount, authorized); may include new values presented after the instruction emv.inittransaction. 12 characters with 0 padding to the left, example: “000000005000”(50,00).</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baAmountOther</td>
-      <td>Valor de saque ou troco - cashback (Amount, other). 12 caracteres com padding de 0 a esquerdo, exemplo: “000000005000”(50,00).</td>
+      <td>Withdrawl value or change - cashback (Amount, other). 12 characters with 0 padding to the left, example: “000000005000”(50,00).</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bfRefund</td>
-      <td>Anulação da transação anterior “1” - sim “0” - não</td>
+      <td>Cancel the previous transaction</br>
+      1 - yes</br>
+      0 - no</br></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bBlackList</td>
-      <td>Resultado da consulta à lista negativa (EMV), 0 - PAN não consta na lista negra, 1 - PAN consta na lista negra.</td>
+      <td>Results of querying the blacklist (EMV)</br>
+      0 - PAN not blacklisted</br>
+      1 - PAN blacklisted.</td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bMustConnect</td>
-      <td>Obrigatoriedade de conexão, 0 - Transação pode ser efetuada offline, 1 - Transação somente pode ser efetuada online.</td>
+      <td>Mandatory connection</br>
+      0 - Transaction can be made offline</br>
+      1 - Transaction can only be made online.</td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>bRequirePIN</td>
-      <td>Entrada de PIN, 0 - Não obrigatória, 1 - Obrigatória.</td>
+      <td>PIN entry</br>
+      0 - Not required</br>
+      1 - Required.</td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bKeyMode</td>
-      <td>Modo de criptografia para captura de PIN online: 2 - DUKPT DES(8 bytes), 3 - DUKPT 3DES(18 bytes)</td>
+      <td>Encryption mode to capture PIN online</br>
+      2 - DUKPT DES(8 bytes)</br>
+      3 - DUKPT 3DES(18 bytes)</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bManageRisk</td>
-      <td>Gerenciamento de risco EMV (Risk Management), 0 - Não faz o gerenciamento de risco, 1 - Faz o gerenciamento de risco.</td>
+      <td>EMV Risk Management</br>
+      0 - Do not make a risk assessment</br>
+      1 - Make a risk assessment.</td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>dwFloorLimit</td>
-      <td>Terminal Floor Limit (em centavos).</td>
+      <td>Terminal Floor Limit (in cents).</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>dwThresholdValue</td>
-      <td>Threshold Value for Biased Transaction Selection (em centavos).</td>
+      <td>Threshold Value for Biased Transaction Selection (in cents).</td>
       <td>x</td>
       <td></td>
     </tr>
@@ -162,25 +175,25 @@
     </tr>
     <tr>
       <td>bMandatoryTagsLen</td>
-      <td>Tamanho do campo baMandatoryTags.</td>
+      <td>Field size of baMandatoryTags.</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baMandatoryTags</td>
-      <td>Lista de tags necessárias para a montagem do campo 55 da mensagem ISO-8583. (Hex)</td>
+      <td>List of the tags necessary to assemble the field 55 of the ISO-8583 message. (Hex)</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bOptionalTagsLen</td>
-      <td>Tamanho do campo baOptionalTags.</td>
+      <td>Field size of baOptionalTags.</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baOptionalTags</td>
-      <td>Lista de tags desejáveis a serem recuperadas na operação. (Hex)</td>
+      <td>List of desirable tags to be retrieved in the operation. (Hex)</td>
       <td>x</td>
       <td>x</td>
     </tr>
@@ -201,49 +214,53 @@
   <tbody>
     <tr>
       <td>bCommStatus</td>
-      <td>Status da comunicação com o Host. 0 - Comunicação bem sucedida, 1 – Falha na comunicação com o host.</td>
+      <td>Communication status with the Host</br>
+      0 - Successful Communication</br>
+      1 - Failed to communicate with the host.</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bIssuerType</td>
-      <td>Tipo de Emissor: 0 - EMV “Full-Grade”, 1 - EMV “Partial-Grade”.</td>
+      <td>Issuer type</br>
+      0 - EMV “Full-Grade”</br>
+      1 - EMV “Partial-Grade”.</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baInitialValue</td>
-      <td>Authorization Response Code (em ASCII). O padrão define:<br/>
-      "00" - Approved<br/>
-      "01" - Denied<br/>
-      "Y1" - Offline approved<br/>
-      "Y3" - Offline declined<br/>
-      "Z1" - Unable to go online, offline approved<br/>
-      "Z3" - Unable to go online, offline declined<br/></td>
+      <td>Authorization Response Code (em ASCII). Standard definitions:<br/>
+      00 - Approved<br/>
+      01 - Denied<br/>
+      Y1 - Offline approved<br/>
+      Y3 - Offline declined<br/>
+      Z1 - Unable to go online, offline approved<br/>
+      Z3 - Unable to go online, offline declined<br/></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>iTLVDataEMVLen</td>
-      <td>Tamanho do campo baTLVDataEMV.</td>
+      <td>Field size of baTLVDataEMV.</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTLVDataEMV</td>
-      <td>Lista de tags retornadas pelo emissor. (Hex)</td>
+      <td>Tags list returned by the issuer. (Hex)</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bMandatoryTagsLen</td>
-      <td>Tamanho do campo baMandatoryTags.</td>
+      <td>Field size of baMandatoryTags.</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baMandatoryTags</td>
-      <td>Lista de tags mandatórias a serem recuperadas na operação. (Hex)</td>
+      <td>List of mandatory tags to be retrieved in the operation. (Hex)</td>
       <td>x</td>
       <td>x</td>
     </tr>
@@ -252,50 +269,8 @@
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sReturn" /&gt;
-&lt;integervariable value="" variable="iReturn" /&gt;
+<%= embed_posxml_code("9fa094705897f32fc297", true) %>
 
-&lt;emv.cleanstructures/&gt;
-
-&lt;!-- adicionando dados para tipo init, &lt;emv.inittransaction/&gt; -- &gt;
-&lt;emv.adddata type="init" parameter="bAcquirerID" value="4" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="bReqApplication" value="99" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baDate" value="20130916" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baTime" value="160010" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="init" parameter="baTimeStamp" value="1609201310" variablereturn="$(iReturn)"/&gt;
-
-&lt;!-- inicia a transacao -- &gt;
-&lt;emv.inittransaction variablereturn="$(iReturn)"/&gt;
-
-&lt;!-- se o cartao passado for um cartao com chip, continua o processamento, passando agora parametros com o tipo process &lt;emv.processtransaction/&gt;-- &gt;
-&lt;emv.adddata type="process" parameter="baAmount" value="000000005000" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="bMustConnect" value="01" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="bRequirePIN" value="01" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="bKeyMode" value="03" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="bManageRisk" value="01" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="baMandatoryTags" value="845A5F349F039F269F279F109F379F36959A9C9F025F2A829F1A" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="process" parameter="bMandatoryTagsLen" value="52" variablereturn="$(iReturn)"/&gt;
-
-&lt;!-- continua o processamento do cartão com chip -- &gt;
-&lt;emv.processtransaction ctls="0" variablereturn="$(iReturn)"/&gt;
-
-&lt;emv.adddata type="finish" parameter="bCommStatus" value="0" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="finish" parameter="bIssuerType" value="00" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="finish" parameter="baAuthRespCode" value="00" variablereturn="$(iReturn)"/&gt;
-
-&lt;!-- tamanho da resposta do TLV do autorizador EMV -- &gt;
-&lt;emv.adddata type="finish" parameter="iTLVDataEMVLen" value="110" variablereturn="$(iReturn)"/&gt;
-
-&lt;!-- no caso aqui, devemos passar a resposta do TLV do autorizador EMV -- &gt;
-&lt;emv.adddata type="finish" parameter="baTLVDataEMV" value="$(sTLVResposta)" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="finish" parameter="bMandatoryTagsLen" value="0" variablereturn="$(iReturn)"/&gt;
-&lt;emv.adddata type="finish" parameter="baMandatoryTags" value="0" variablereturn="$(iReturn)"/&gt;
-
-&lt;emv.finishtransaction variablereturn="$(iReturn)"/&gt;
-
-&lt;emv.removecard variablereturn="$(iReturn)"/&gt;
-
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.emv_adddata.paragraph_11") %></p>
