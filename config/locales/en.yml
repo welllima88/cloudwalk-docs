@@ -2128,12 +2128,15 @@ en:
         cpf_validation: "CPF validation"
         hide_credit_card_number: "Hide the credit card number entered"
         center_text: "Center text"
+        format_iso8583_money: "Format ISO8583 money"
       cpf_validation:
         paragraph_1: "Function to validate a given CPF."
       hide_credit_card_number:
         paragraph_1: "Function to hide a given credit card number."
       center_text:
         paragraph_1: "Function to center a text."
+      format_iso8583_money:
+        paragraph_1: "Function to format any ISO8583 money value. For example, 100 becomes 1,00."
   walk_framework:
     package:
       select: "<strong>WALK Framework package:</strong> Select your device brand, model and signature (if applicable):"
