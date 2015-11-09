@@ -71,6 +71,7 @@ pt-BR:
         attributes:
           list:
             authorizer_url: URL do autorizador que a aplicação irá se conectar
+            communication_format: Formato da comunicação com o autorizador (HTTP, ISO8583 ou ISO20022).
             crc: <a href='http://en.wikipedia.org/wiki/Cyclic_redundancy_check' class='external'>CRC</a> da aplicação
             created_at: Timestamp da criação do registro (ISO 8601)
             created_by: ID do usuário que criou o registro

@@ -71,6 +71,7 @@ en:
         attributes:
           list:
             authorizer_url: Authorizer IP address or URL.
+            communication_format: Authorizer communication format (HTTP, ISO8583 or ISO20022).
             crc: Application <a href='http://en.wikipedia.org/wiki/Cyclic_redundancy_check' class='external'>CRC</a>
             created_at: Timestamp in ISO 8601 format
             created_by: User ID that created the record

@@ -52,6 +52,11 @@
       <td><%= I18n.t("api.v1.apps.attributes.list.authorizer_url") %></td>
     </tr>
     <tr>
+      <td>communication_format</td>
+      <td>String</td>
+      <td><%= I18n.t("api.v1.apps.attributes.list.communication_format") %></td>
+    </tr>
+    <tr>
       <td>displayable</td>
       <td>Boolean</td>
       <td><%= I18n.t("api.v1.apps.attributes.list.displayable") %></td>
@@ -159,6 +164,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "name":"helloworld.posxml",
             "description":"Hello World",
             "authorizer_url":"http://myhost.com",
+            "communication_format":"http",
             "displayable":true,
             "pos_display_label":"HELLO WORLD",
             "crc":"5A02",
@@ -177,6 +183,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "name":"sample.posxml",
             "description":"Sample App",
             "authorizer_url":"tcp://myhost.com:800",
+            "communication_format":"http",
             "displayable":true,
             "pos_display_label":"SAMPLE APP",
             "crc":"1FAE",
@@ -240,6 +247,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
     "name":"helloworld.posxml",
     "description":"Hello World",
     "authorizer_url":"http://myhost.com",
+    "communication_format":"http",
     "displayable":true,
     "pos_display_label":"HELLO WORLD",
     "crc":"5A02",
@@ -312,6 +320,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
     "name":"newapp.posxml",
     "description":"desc",
     "authorizer_url":"http://auth.io",
+    "communication_format":"http",
     "displayable":false,
     "pos_display_label":"",
     "crc":"EFBD",
@@ -381,6 +390,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
     "name":"newapp.posxml",
     "description":"desc",
     "authorizer_url":"http://auth.io",
+    "communication_format":"http",
     "displayable":false,
     "pos_display_label":"",
     "crc":"905A",
