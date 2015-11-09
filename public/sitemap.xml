@@ -166,7 +166,7 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/api/v1/logs</loc>
+  <loc>https://docs.cloudwalk.io/en/api/v1/transactions</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -874,7 +874,7 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/api/v1/logs</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/api/v1/transactions</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>

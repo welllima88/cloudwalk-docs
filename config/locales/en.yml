@@ -227,7 +227,7 @@ en:
         title: Developer API - Logical numbers
         update:
           paragraph_1: Update an existing logical number.
-      logs:
+      transactions:
         attributes:
           list:
             app_name: Application that originated the transaction
@@ -242,29 +242,29 @@ en:
             sent: Information sent to the host
             received: Information received from the host
             transaction_type: 'Record type: Release <span class="code">company</span>, Transaction <span class="code">switch</span> or Download <span class="code">get_asset</span>'
-          paragraph_1: 'A log have the following attributes:'
-        description: The log records have some acronyms in fields transaction_type, status and received. Check out the definition of all acronyms.
+          paragraph_1: 'A transaction have the following attributes:'
+        description: The transaction records have some acronyms in fields transaction_type, status and received. Check out the definition of all acronyms.
         index:
-          paragraph_1: Return an array with all logs.
+          paragraph_1: Return an array with all transactions.
         search_by_multiple_params:
-          paragraph_1: Return an array with all logs with the defined parameters.
+          paragraph_1: Return an array with all transactions with the defined parameters.
         search_by_serial_number:
-          paragraph_1: Return an array with all logs with the <strong>serial number</strong> defined on parameter <span class='code'>&serial_number</span>.
-          paragraph_2: It is also possible to search logs with a specific <strong>logical number</strong> by defining the parameter <span class='code'>&logical_number</span>
+          paragraph_1: Return an array with all transactions with the <strong>serial number</strong> defined on parameter <span class='code'>&serial_number</span>.
+          paragraph_2: It is also possible to search for transactions of a specific <strong>logical number</strong> by defining the parameter <span class='code'>&logical_number</span>
           serial_number: serial number
         search_by_status:
-          paragraph_1: Return an array with all logs with the <strong>status</strong> defined on parameter <span class='code'>&status</span>.
+          paragraph_1: Return an array with all transactions with the <strong>status</strong> defined on parameter <span class='code'>&status</span>.
         search_by_transaction_type:
-          paragraph_1: Return an array with all logs with the <strong>record type</strong> defined on parameter <span class='code'>&transaction_type</span>.
+          paragraph_1: Return an array with all transactions with the <strong>record type</strong> defined on parameter <span class='code'>&transaction_type</span>.
           transaction_type: record type
         table_of_contents:
-          attributes: Log attributes
-          index: List of all logs
-          search_by_multiple_params: Find logs by multiple parameters
-          search_by_serial_number: Find logs by serial number
-          search_by_status: Find logs by status
-          search_by_transaction_type: Find logs by transaction type
-        title: Developer API - Logs
+          attributes: Transaction attributes
+          index: List of all transactions
+          search_by_multiple_params: Find transactions by multiple parameters
+          search_by_serial_number: Find transactions by serial number
+          search_by_status: Find transactions by status
+          search_by_transaction_type: Find transactions by type
+        title: Developer API - Transactions
       parameters:
         attributes:
           list:
@@ -735,7 +735,7 @@ en:
         devices: Devices
         groups: Groups
         logical_numbers: Logical numbers
-        logs: Logs
+        transactions: Transactions
         push_notifications: Push notifications
         parameters: Parameters
         users: Users

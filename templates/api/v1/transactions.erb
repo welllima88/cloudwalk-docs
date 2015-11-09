@@ -1,21 +1,21 @@
 <% content_for :docs_description do %>
-  <meta name="docs:description" content="<%= I18n.t('api.v1.logs.description') %>">
+  <meta name="docs:description" content="<%= I18n.t('api.v1.transactions.description') %>">
 <% end %>
 
-<h1><%= I18n.t("api.v1.logs.title") %></h1>
+<h1><%= I18n.t("api.v1.transactions.title") %></h1>
 
 <ol class="table-of-contents">
-  <li><a href="#attributes"><%= I18n.t("api.v1.logs.table_of_contents.attributes") %></a></li>
-  <li><a href="#index"><%= I18n.t("api.v1.logs.table_of_contents.index") %></a></li>
-  <li><a href="#search-by-status"><%= I18n.t("api.v1.logs.table_of_contents.search_by_status") %></a></li>
-  <li><a href="#search-by-transaction-type"><%= I18n.t("api.v1.logs.table_of_contents.search_by_transaction_type") %></a></li>
-  <li><a href="#search-by-serial-number"><%= I18n.t("api.v1.logs.table_of_contents.search_by_serial_number") %></a></li>
-  <li><a href="#search-by-multiple-params"><%= I18n.t("api.v1.logs.table_of_contents.search_by_multiple_params") %></a></li>
+  <li><a href="#attributes"><%= I18n.t("api.v1.transactions.table_of_contents.attributes") %></a></li>
+  <li><a href="#index"><%= I18n.t("api.v1.transactions.table_of_contents.index") %></a></li>
+  <li><a href="#search-by-status"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_status") %></a></li>
+  <li><a href="#search-by-transaction-type"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_transaction_type") %></a></li>
+  <li><a href="#search-by-serial-number"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_serial_number") %></a></li>
+  <li><a href="#search-by-multiple-params"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_multiple_params") %></a></li>
 </ol>
 
-<h2 id="attributes"><%= I18n.t("api.v1.logs.table_of_contents.attributes") %></h2>
+<h2 id="attributes"><%= I18n.t("api.v1.transactions.table_of_contents.attributes") %></h2>
 
-<p><%= I18n.t("api.v1.logs.attributes.paragraph_1") %></p>
+<p><%= I18n.t("api.v1.transactions.attributes.paragraph_1") %></p>
 
 <table class="table table-striped table-bordered table-condensed">
   <thead>
@@ -29,73 +29,73 @@
     <tr>
       <td>id</td>
       <td>Integer</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.id") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.id") %></td>
     </tr>
     <tr>
       <td>transaction_type</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.transaction_type") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.transaction_type") %></td>
     </tr>
     <tr>
       <td>serial_number</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.serial_number") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.serial_number") %></td>
     </tr>
     <tr>
       <td>logical_number</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.logical_number") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.logical_number") %></td>
     </tr>
     <tr>
       <td>app_name</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.app_name") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.app_name") %></td>
     </tr>
     <tr>
       <td>detail</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.detail") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.detail") %></td>
     </tr>
     <tr>
       <td>framework_version</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.framework_version") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.framework_version") %></td>
     </tr>
     <tr>
       <td>status</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.status") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.status") %></td>
     </tr>
     <tr>
       <td>sent</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.sent") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.sent") %></td>
     </tr>
     <tr>
       <td>received</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.received") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.received") %></td>
     </tr>
     <tr>
       <td>started_at</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.started_at") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.started_at") %></td>
     </tr>
     <tr>
       <td>finished_at</td>
       <td>String</td>
-      <td><%= I18n.t("api.v1.logs.attributes.list.finished_at") %></td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.finished_at") %></td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="index"><%= I18n.t("api.v1.logs.table_of_contents.index") %></h2>
+<h2 id="index"><%= I18n.t("api.v1.transactions.table_of_contents.index") %></h2>
 
-<p><%= I18n.t("api.v1.logs.index.paragraph_1") %></p>
+<p><%= I18n.t("api.v1.transactions.index.paragraph_1") %></p>
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/transactions?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -106,7 +106,7 @@
 
 <div class="tab-content">
 <div class="tab-pane active" id="index-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/transactions?access_token=$TOKEN"</code></pre>
 </div>
 
 <div class="tab-pane" id="index-tab2">
@@ -114,7 +114,7 @@
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}")
+uri = URI("https://api.cloudwalk.io/v1/transactions?access_token=#{token}")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -137,9 +137,9 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
       "entries":2,
       "total_entries":2
    },
-   "logs":[
+   "transactions":[
       {
-         "log":{
+         "transaction":{
             "id":62946,
             "transaction_type":"switch",
             "serial_number":"520-501-438",
@@ -155,7 +155,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
          }
       },
       {
-         "log":{
+         "transaction":{
             "id":62945,
             "transaction_type":"switch",
             "serial_number":"520-501-438",
@@ -174,13 +174,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 }
 </code></pre>
 
-<h2 id="search-by-status"><%= I18n.t("api.v1.logs.table_of_contents.search_by_status") %></h2>
+<h2 id="search-by-status"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_status") %></h2>
 
-<p><%= I18n.t("api.v1.logs.search_by_status.paragraph_1") %></p>
+<p><%= I18n.t("api.v1.transactions.search_by_status.paragraph_1") %></p>
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}&status={status}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/transactions?access_token={token}&status={status}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -191,7 +191,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="search-by-status-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN&status=fail"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/transactions?access_token=$TOKEN&status=fail"</code></pre>
 </div>
 
 <div class="tab-pane" id="search-by-status-tab2">
@@ -199,7 +199,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}&status=fail")
+uri = URI("https://api.cloudwalk.io/v1/transactions?access_token=#{token}&status=fail")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -222,9 +222,9 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
       "entries":1,
       "total_entries":1
    },
-   "logs":[
+   "transactions":[
       {
-         "log":{
+         "transaction":{
             "id":62955,
             "transaction_type":"switch",
             "serial_number":"520-541-412",
@@ -243,13 +243,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 }
 </code></pre>
 
-<h2 id="search-by-transaction-type"><%= I18n.t("api.v1.logs.table_of_contents.search_by_transaction_type") %></h2>
+<h2 id="search-by-transaction-type"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_transaction_type") %></h2>
 
-<p><%= I18n.t("api.v1.logs.search_by_transaction_type.paragraph_1") %></p>
+<p><%= I18n.t("api.v1.transactions.search_by_transaction_type.paragraph_1") %></p>
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}&transaction_type={<%= I18n.t("api.v1.logs.search_by_transaction_type.transaction_type") %>}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/transactions?access_token={token}&transaction_type={<%= I18n.t("api.v1.transactions.search_by_transaction_type.transaction_type") %>}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -260,7 +260,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="search-by-transaction-type-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN&transaction_type=get_asset"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/transactions?access_token=$TOKEN&transaction_type=get_asset"</code></pre>
 </div>
 
 <div class="tab-pane" id="search-by-transaction-type-tab2">
@@ -268,7 +268,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}&transaction_type=get_asset")
+uri = URI("https://api.cloudwalk.io/v1/transactions?access_token=#{token}&transaction_type=get_asset")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -291,9 +291,9 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
       "entries":1,
       "total_entries":1
    },
-   "logs":[
+   "transactions":[
       {
-         "log":{
+         "transaction":{
             "id":63002,
             "transaction_type":"get_asset",
             "serial_number":"531-445-314",
@@ -312,13 +312,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 }
 </code></pre>
 
-<h2 id="search-by-serial-number"><%= I18n.t("api.v1.logs.table_of_contents.search_by_serial_number") %></h2>
+<h2 id="search-by-serial-number"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_serial_number") %></h2>
 
-<p><%= I18n.t("api.v1.logs.search_by_serial_number.paragraph_1") %></p>
+<p><%= I18n.t("api.v1.transactions.search_by_serial_number.paragraph_1") %></p>
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}&serial_number={<%= I18n.t("api.v1.logs.search_by_serial_number.serial_number") %>}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/transactions?access_token={token}&serial_number={<%= I18n.t("api.v1.transactions.search_by_serial_number.serial_number") %>}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -329,7 +329,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="search-by-serial-number-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN&serial_number=510-520-530"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/transactions?access_token=$TOKEN&serial_number=510-520-530"</code></pre>
 </div>
 
 <div class="tab-pane" id="search-by-serial-number-tab2">
@@ -337,7 +337,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}&serial_number=510-520-530")
+uri = URI("https://api.cloudwalk.io/v1/transactions?access_token=#{token}&serial_number=510-520-530")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -360,9 +360,9 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
       "entries":1,
       "total_entries":1
    },
-   "logs":[
+   "transactions":[
       {
-         "log":{
+         "transaction":{
             "id":63154,
             "transaction_type":"switch",
             "serial_number":"510-520-530",
@@ -381,15 +381,15 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 }
 </code></pre>
 
-<p class="note"><%= I18n.t("api.v1.logs.search_by_serial_number.paragraph_2") %></p>
+<p class="note"><%= I18n.t("api.v1.transactions.search_by_serial_number.paragraph_2") %></p>
 
-<h2 id="search-by-multiple-params"><%= I18n.t("api.v1.logs.table_of_contents.search_by_multiple_params") %></h2>
+<h2 id="search-by-multiple-params"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_multiple_params") %></h2>
 
-<p><%= I18n.t("api.v1.logs.search_by_multiple_params.paragraph_1") %></p>
+<p><%= I18n.t("api.v1.transactions.search_by_multiple_params.paragraph_1") %></p>
 
 <h3><%= I18n.t("api.method") %></h3>
 
-<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/logs?access_token={token}</code></pre>
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/transactions?access_token={token}</code></pre>
 
 <h3><%= I18n.t("api.sample") %></h3>
 
@@ -400,7 +400,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="search-by-multiple-params-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/logs?access_token=$TOKEN&serial_number=510-520-530&status=fail"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/transactions?access_token=$TOKEN&serial_number=510-520-530&status=fail"</code></pre>
 </div>
 
 <div class="tab-pane" id="search-by-multiple-params-tab2">
@@ -408,7 +408,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/logs?access_token=#{token}&serial_number=510-520-530&status=fail")
+uri = URI("https://api.cloudwalk.io/v1/transactions?access_token=#{token}&serial_number=510-520-530&status=fail")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -431,9 +431,9 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
       "entries":1,
       "total_entries":1
    },
-   "logs":[
+   "transactions":[
       {
-         "log":{
+         "transaction":{
             "id":63231,
             "transaction_type":"switch",
             "serial_number":"510-520-530",

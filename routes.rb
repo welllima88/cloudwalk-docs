@@ -45,7 +45,7 @@ class Routes
       { "url" => "api/v1/assets",                                        "view_path" => "api/v1/assets"},
       { "url" => "api/v1/push-notifications",                            "view_path" => "api/v1/push_notifications"},
       { "url" => "api/v1/users",                                         "view_path" => "api/v1/users"},
-      { "url" => "api/v1/logs",                                          "view_path" => "api/v1/logs"},
+      { "url" => "api/v1/transactions",                                  "view_path" => "api/v1/transactions"},
       # INTEGRATION
       { "url" => "integration/architecture",                             "view_path" => "integration/architecture"},
       { "url" => "integration/tcp",                                      "view_path" => "integration/tcp"},
