@@ -33,50 +33,49 @@
   <tbody>
     <tr>
       <td>bAcquirerID</td>
-      <td>Acquiring Network Identifier</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_1.table_row_1") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bReqApplication</td>
-      <td>99 - All applications</br>
-      0 - Only application selections in waAppArray</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_1.table_row_2") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baInitialValue</td>
-      <td>Initial value (Amount authorized). 12 characters with 0 padding to the left, example: “000000005000”(50,00)</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_1.table_row_3") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baDate</td>
-      <td>Date of the transaction (“AAMMDD”)</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_1.table_row_4") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTime</td>
-      <td>Time of the transaction (“HHMMSS”)</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_1.table_row_5") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTimeStamp</td>
-      <td>Timestamp for the tables (“DDMMAAAASS”), where SS is ​any sequential number. The Telium EMV Kernel validates the timestamp.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_1.table_row_6") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>iAppCount</td>
-      <td> Number of entries on the list waAppArray</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_1.table_row_7") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>waAppArrayX</td>
-      <td>Array containing the acquiring network identifier + table index of EMV parameters. Where X is the sequential number of the application, starting from 1. Example waAppArray1, waAppArray2...</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_1.table_row_8") %></td>
       <td>x</td>
       <td></td>
     </tr>
@@ -97,103 +96,91 @@
   <tbody>
     <tr>
       <td>baAmount</td>
-      <td>Value of the transaction (Amount, authorized); may include new values presented after the instruction emv.inittransaction. 12 characters with 0 padding to the left, example: “000000005000”(50,00).</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_1") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baAmountOther</td>
-      <td>Withdrawl value or change - cashback (Amount, other). 12 characters with 0 padding to the left, example: “000000005000”(50,00).</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_2") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bfRefund</td>
-      <td>Cancel the previous transaction</br>
-      1 - yes</br>
-      0 - no</br></td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_3") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bBlackList</td>
-      <td>Results of querying the blacklist (EMV)</br>
-      0 - PAN not blacklisted</br>
-      1 - PAN blacklisted.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_4") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bMustConnect</td>
-      <td>Mandatory connection</br>
-      0 - Transaction can be made offline</br>
-      1 - Transaction can only be made online.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_5") %></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>bRequirePIN</td>
-      <td>PIN entry</br>
-      0 - Not required</br>
-      1 - Required.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_6") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bKeyMode</td>
-      <td>Encryption mode to capture PIN online</br>
-      2 - DUKPT DES(8 bytes)</br>
-      3 - DUKPT 3DES(18 bytes)</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_7") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bManageRisk</td>
-      <td>EMV Risk Management</br>
-      0 - Do not make a risk assessment</br>
-      1 - Make a risk assessment.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_8") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>dwFloorLimit</td>
-      <td>Terminal Floor Limit (in cents).</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_9") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>dwThresholdValue</td>
-      <td>Threshold Value for Biased Transaction Selection (in cents).</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_10") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bMaximumTarget</td>
-      <td>Maximum Target Percentage to be used for Biased Transaction Selection.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_11") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bMandatoryTagsLen</td>
-      <td>Field size of baMandatoryTags.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_12") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baMandatoryTags</td>
-      <td>List of the tags necessary to assemble the field 55 of the ISO-8583 message. (Hex)</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_13") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bOptionalTagsLen</td>
-      <td>Field size of baOptionalTags.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_14") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baOptionalTags</td>
-      <td>List of desirable tags to be retrieved in the operation. (Hex)</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_2.table_row_15") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
@@ -214,53 +201,43 @@
   <tbody>
     <tr>
       <td>bCommStatus</td>
-      <td>Communication status with the Host</br>
-      0 - Successful Communication</br>
-      1 - Failed to communicate with the host.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_3.table_row_1") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bIssuerType</td>
-      <td>Issuer type</br>
-      0 - EMV “Full-Grade”</br>
-      1 - EMV “Partial-Grade”.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_3.table_row_2") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baInitialValue</td>
-      <td>Authorization Response Code (em ASCII). Standard definitions:<br/>
-      00 - Approved<br/>
-      01 - Denied<br/>
-      Y1 - Offline approved<br/>
-      Y3 - Offline declined<br/>
-      Z1 - Unable to go online, offline approved<br/>
-      Z3 - Unable to go online, offline declined<br/></td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_3.table_row_3") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>iTLVDataEMVLen</td>
-      <td>Field size of baTLVDataEMV.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_3.table_row_4") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTLVDataEMV</td>
-      <td>Tags list returned by the issuer. (Hex)</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_3.table_row_5") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bMandatoryTagsLen</td>
-      <td>Field size of baMandatoryTags.</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_3.table_row_6") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baMandatoryTags</td>
-      <td>List of mandatory tags to be retrieved in the operation. (Hex)</td>
+      <td><%= I18n.t("posxml.commands.emv_adddata.table_3.table_row_7") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
