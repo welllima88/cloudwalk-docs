@@ -32,146 +32,145 @@
   <tbody>
     <tr>
       <td>bCardType</td>
-      <td>Tipo do cartão: 0 - Tarja magnética, 3 - EMV chip card.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_1") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bLastChipStatus</td>
-      <td>Status da última leitura do cartão: 0 - ok, 1 - Fallback é necessário, 2 - App não suportada.
-      </td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_2") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bAppType</td>
-      <td>Tipo de aplicação selecionada (conforme tabela de parâmetros): 01 - Crédito, 02 - Débito, 03 - Voucher</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_3") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bAcquirerID</td>
-      <td>Identificador da rede adquirente (conforme tabela de parâmetros).</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_4") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bRegisterIndex</td>
-      <td>Índice do registro na tabela de parâmetros.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_5") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bTrack1Len</td>
-      <td>Tamanho do campo bTrack1.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_6") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baTrack1</td>
-      <td>Trillha 1 (Hex).</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_7") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bTrack2Len</td>
-      <td>Tamanho do campo bTrack2.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_8") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baTrack2</td>
-      <td>Trilha 2 (Hex).</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_9") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bTrack3Len</td>
-      <td>Tamanho do campo bTrack3.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_10") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baTrack3</td>
-      <td>Trilha 3 (Hex).</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_11") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bPANLen</td>
-      <td>Tamanho do campo baPAN.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_12") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baPAN</td>
-      <td>PAN</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_13") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bPANSequence</td>
-      <td>PAN Sequence.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_14") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bApplicationLabelLen</td>
-      <td>Tamanho do campo baApplicationLabel.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_15") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baApplicationLabel</td>
-      <td>Application Name.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_16") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baServiceCode</td>
-      <td>Service Code (com zero á esquerda).</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_17") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bCardHolderNameLen</td>
-      <td>Tamanho do campo baCardHolderName.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_18") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baCardHolderName</td>
-      <td>Nome cardholder.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_19") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baExpirationDate</td>
-      <td>Data de expiração (“AAMMDD”).</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_20") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>bExternalNumberLen</td>
-      <td>Tamanho do campo baExternalNumber.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_21") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baExternalNumber</td>
-      <td>Número externo do cartão.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_22") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baBalance</td>
-      <td>Saldo, em caso de moedeiro.</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_23") %></td>
       <td>x</td>
       <td></td>
     </tr>
     <tr>
       <td>baIssuerCountryCode</td>
-      <td>Código do país do Emissor</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_1.table_row_24") %></td>
       <td>x</td>
       <td></td>
     </tr>
@@ -192,194 +191,195 @@
   <tbody>
     <tr>
       <td>bDecision</td>
-      <td>Decisão tomada: 0 - Aprovada Offline, 1 - Negada, 2 - ir Online</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_1") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bSignature</td>
-      <td>Assinatura em papel deve ser obtida: 0 - Não, 1 - Sim</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_2") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bOfflinePIN</td>
-      <td>PIN foi verificado Offline: 0 - Não, 1 - Sim</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_3") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bOfflinePINErrors</td>
-      <td>Número de apresentações inválidas de PIN Offline</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_4") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bOfflinePINBlocked</td>
-      <td>PIN Offline foi bloqueado na última apresentação inválida: 0 - Não, 1 - Sim</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_5") %></br>
+      0 - No</br>
+      1 - Yes</td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>bOnlinePIN</td>
-      <td>PIN capturado para verificação online: 0 - Não, 1 - Sim</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_6") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baDUKPTInfo</td>
-      <td>Número de série da chave (Key Serial Number) e contador (Key Counter) Em caso de PIN Online
-      </td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_7") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>iTLVDataEMVLen</td>
-      <td>Tamanho do campo baTLVDataEMV</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_8") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTLVDataEMV</td>
-      <td>Tags mandatórias e opcionais requisitadas no parâmetro baMandatoryTags de AddData (criptograma para ser análisado pelo emissor do cartão em caso de transação online)</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_9") %></td>
       <td>x</td>
       <td>x</td>
     </tr>
     <tr>
       <td>baBalance</td>
-      <td>Quantidade disponível para aprovação offline</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_10") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baVLPIssuerAuthCode</td>
-      <td>VLP Issuer Authorization Code. Apenas para cartões Visa e JCB</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_11") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baCardTransactionQualifiers</td>
-      <td>VISA Card Transaction Qualifiers</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_12") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baAppExpirationDate</td>
-      <td>Data de expiração da aplicação</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_13") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baAppEffectiveDate</td>
-      <td>Aplicação efetiva na data (“DDMMAA”)</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_14") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bTrack1EquivalentDataLen</td>
-      <td>Tamanho do campo baTrack1EquivalentData</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_15") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTrack1EquivalentData</td>
-      <td>Track 1 Equivalent Data</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_16") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bTrack2EquivalentDataLen</td>
-      <td>Tamanho do campo baTrack2EquivalentData</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_17") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTrack2EquivalentData</td>
-      <td>Track 2 Equivalent Data</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_18") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bCardType</td>
-      <td>Tipo do cartão: 0 - Tarja magnética, 3 - EMV chip card</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_19") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bApplicationIdentifierLen</td>
-      <td>Tamanho do campo baApplicationIdentifier</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_20") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baApplicationIdentifier</td>
-      <td>Application Identifier</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_21") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bTrack1Len</td>
-      <td>Tamanho do campo bTrack1</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_22") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTrack1</td>
-      <td>Trillha 1 (Hex)</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_23") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bTrack2Len</td>
-      <td>Tamanho do campo bTrack2</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_24") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baTrack2</td>
-      <td>Trilha 2 (Hex)</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_25") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bPANLen</td>
-      <td>Tamanho do campo baPAN</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_26") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baPAN</td>
-      <td>PAN</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_27") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bPANSequence</td>
-      <td>PAN Sequence</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_28") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bApplicationLabelLen</td>
-      <td>Tamanho do campo baApplicationLabel</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_29") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baApplicationLabel</td>
-      <td>Application Name</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_30") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>bCardHolderNameLen</td>
-      <td>Tamanho do campo baCardHolderName</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_31") %></td>
       <td></td>
       <td>x</td>
     </tr>
     <tr>
       <td>baCardHolderName</td>
-      <td>Nome cardholder</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_2.table_row_32") %></td>
       <td></td>
       <td>x</td>
     </tr>
@@ -398,79 +398,27 @@
   <tbody>
     <tr>
       <td>bDecision</td>
-      <td>Decisão tomada: 0 - Aprovado, 1 - Negado pelo cartão, 2 - Negado pelo host</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_3.table_row_1") %></td>
     </tr>
     <tr>
       <td>TLVDataEMVLen</td>
-      <td>Tags mandatórias e opcionais requisitadas em emv.processtransaction</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_3.table_row_2") %></td>
     </tr>
     <tr>
       <td>bIssuerScriptResLen</td>
-      <td>Tamanho do Issuer Script Results</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_3.table_row_3") %></td>
     </tr>
     <tr>
       <td>baIssuerScriptResults</td>
-      <td>Resultado da execução dos scripts.(EMV 4.2, Book 4, Anexo A5)</td>
+      <td><%= I18n.t("posxml.commands.emv_getinfo.table_3.table_row_4") %></td>
     </tr>
   </tbody>
 </table>
 
 <h2><%= I18n.t("posxml.commands.example") %></h2>
 
-<pre><code data-language="html">&lt;stringvariable value="" variable="sBcardType" /&gt;
-&lt;stringvariable value="" variable="sBAppType" /&gt;
-&lt;stringvariable value="" variable="sBAcquirerID" /&gt;
+<%= embed_posxml_code("07381b137a19f437ac4e", true) %>
 
-&lt;stringvariable value="" variable="sDecision" /&gt;
-&lt;stringvariable value="" variable="sBOnlinePIN" /&gt;
-&lt;stringvariable value="" variable="sCriptograma" /&gt;
-
-&lt;integervariable value="" variable="iReturn" /&gt;
-
-&lt;!-- Os dados devem ser passados pra o Kernel EMV com &lt;emv.adddata/&gt; antes de iniciarmos a transacao -- &gt;
-
-&lt;!-- inicia a transacao -- &gt;
-&lt;emv.inittransaction variablereturn="$(iReturn)"/&gt;
-
-&lt;emv.getinfo parameter="bCardType" type="init" value="$(sBcardType)"/&gt;
-&lt;emv.getinfo parameter="bAppType" type="init" value="$(sBAppType)"/&gt;
-&lt;emv.getinfo parameter="bAcquirerID" type="init" value="$(sBAcquirerID)"/&gt;
-
-&lt;print message="tipo do cartao"/&gt;
-&lt;print message="$(sBcardType)"/&gt;
-
-&lt;print message="aplicacao selecionada"/&gt;
-&lt;print message="$(sBAppType)"/&gt;
-
-&lt;print message="Rede adquirente"/&gt;
-&lt;print message="$(sBAcquirerID)"/&gt;
-
-&lt;!-- continua o processamento do cartão com chip -- &gt;
-&lt;emv.processtransaction ctls="0" variablereturn="$(iReturn)"/&gt;
-
-&lt;emv.getinfo parameter="bDecision" type="process" value="$(sDecision)"/&gt;
-&lt;emv.getinfo parameter="bOnlinePIN" type="process" value="$(sBOnlinePIN)"/&gt;
-&lt;emv.getinfo parameter="baTLVDataEMV" type="process" value="$(sCriptograma)"/&gt;
-
-&lt;print message="Decisao tomada"/&gt;
-&lt;print message="$(sDecision)"/&gt;
-
-&lt;print message="PIN foi verificado online?"/&gt;
-&lt;print message="$(sBOnlinePIN)"/&gt;
-
-&lt;print message="Criptograma EMV"/&gt;
-&lt;print message="$(sCriptograma)"/&gt;
-
-&lt;emv.finishtransaction variablereturn="$(iReturn)"/&gt;
-
-&lt;emv.getinfo parameter="bDecision" type="finish" value="$(sDecision)"/&gt;
-
-&lt;print message="Decisao final tomada"/&gt;
-&lt;print message="$(sDecision)"/&gt;
-
-&lt;emv.removecard variablereturn="$(iReturn)"/&gt;
-
-</code></pre>
 <hr/>
 
 <p><%= I18n.t("posxml.commands.emv_getinfo.paragraph_11") %></p>

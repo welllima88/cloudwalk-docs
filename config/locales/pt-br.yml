@@ -934,6 +934,14 @@ pt-BR:
         description: Adiciona parâmetros ao processo EMV
         paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
         paragraph_10: Para tipo <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
+        table_3:
+            table_row_1: Status da comunicação com o Host</br>0 - Comunicação bem sucedida</br>1 – Falha na comunicação com o host.
+            table_row_2: Tipo de Emissor</br>0 - EMV “Full-Grade”</br>1 - EMV “Partial-Grade”.
+            table_row_3: Authorization Response Code (em ASCII). O padrão define:<br/>00 - Approved<br/>01 - Denied<br/>Y1 - Offline approved<br/>Y3 - Offline declined<br/>Z1 - Unable to go online, offline approved<br/>Z3 - Unable to go online, offline declined
+            table_row_4: Tamanho do campo baTLVDataEMV.
+            table_row_5: Lista de tags retornadas pelo emissor. (Hex)
+            table_row_6: Tamanho do campo baMandatoryTags.
+            table_row_7: Lista de tags mandatórias a serem recuperadas na operação. (Hex)
         paragraph_11: No exemplo acima, foi demonstrado um exemplo para cada tipo de parâmetro, <span class='code'>init</span>, <span class='code'>process</span> e <span class='code'>finish</span>.
         paragraph_12: O exemplo aqui demonstrado é fictício, já que para se ter sucesso com toda uma transação EMV é necessário vários outros fatores como resposta ISO-8583 do emissor do cartão, chaves injetadas no terminal e demais requisitos como define a norma EMV.
         paragraph_2: O comando <span class='code'>emv.adddata</span> é utilizado para passagem de parâmetros para o <em>Kernel EMV</em> nas instruções <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> e <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>.
@@ -943,7 +951,32 @@ pt-BR:
         paragraph_6: Contact
         paragraph_7: Cless
         paragraph_8: Para tipo <em><strong>'init'</strong> &lt;emv.inittransaction/&gt;</em>
+        table_1:
+            table_row_1: Identificador da Rede Adquirente
+            table_row_2: 99 - Todas as aplicaçãoes</br>0 - Apenas aplicações selecionadas em waAppArray
+            table_row_3: Valor inicial(Amount authorized). 12 caracteres com padding de 0 a esquerda, exemplo:</br>“000000005000”(50,00)
+            table_row_4: Data da Transação(“AAMMDD”)
+            table_row_5: Hora da transação(“HHMMSS”)
+            table_row_6: Selo de tempo para as tabelas(“DDMMAAAASS”), onde SS é um número sequencial qualquer. O Kernel EMV do Telium
+            table_row_7: Quantidade de entradas da lista waAppArray
+            table_row_8: Array contendo identificador da rede adquirente + índice para tabela de parâmetros EMV. Aonde X é o número sequencial da aplicação, começando a partir do 1. Exemplo waAppArray1, waAppArray2...
         paragraph_9: Para tipo <em><strong>'process'</strong> &lt;emv.processtransaction/&gt;</em>
+        table_2:
+          table_row_1: Valor da transação (Amount, authorized), podendo incluir novos valores apresentados após a instrução emv.inittransaction. 12 caracteres com padding de 0 a esquerdo, exemplo:</br>“000000005000”(50,00).
+          table_row_2: 'Valor de saque ou troco - cashback (Amount, other). 12 caracteres com padding de 0 a esquerdo, exemplo: “000000005000”(50,00).'
+          table_row_3: Anulação da transação anterior</br>1 - sim</br>0 - não
+          table_row_4: Resultado da consulta à lista negativa (EMV)</br>0 - PAN não consta na lista negra</br>1 - PAN consta na lista negra.
+          table_row_5: Obrigatoriedade de conexão</br>0 - Transação pode ser efetuada offline</br>1 - Transação somente pode ser efetuada online.
+          table_row_6: Entrada de PIN</br>0 - Não obrigatória</br>1 - Obrigatória.
+          table_row_7: Modo de criptografia para captura de PIN online</br>2 - DUKPT DES(8 bytes)</br>3 - DUKPT 3DES(18 bytes)
+          table_row_8: Gerenciamento de risco EMV (Risk Management)</br>0 - Não faz o gerenciamento de risco</br>1 - Faz o gerenciamento de risco.
+          table_row_9: Terminal Floor Limit (em centavos).
+          table_row_10: Valor limite para “Biased Transaction Selection” em centavos.
+          table_row_11: Porcentagem máxima alvo para ser usada em “Biased Transaction Selection”.
+          table_row_12: Tamanho do campo baMandatoryTags.
+          table_row_13: Lista de tags necessárias para a montagem do campo 55 da mensagem ISO-8583. (Hex)
+          table_row_14: Tamanho do campo baOptionalTags.
+          table_row_15: Lista de tags desejáveis a serem recuperadas na operação. (Hex)
         parameters:
           parameter_1: <strong>parameter</strong> <span class='data-type'>[string]</span><br/> Nome do parâmetro que desejamos passar. <a href='#table-of-parameters'>(veja tabela abaixo)</a>
           parameter_2: '<strong>type</strong> <span class="data-type">[string]</span><br/> Tipo do parâmetro, pode ser: <br/><ul><li>init</li><li>process</li><li>finish</li></ul>'
@@ -968,6 +1001,11 @@ pt-BR:
         description: Retorna parâmetros de informação após execução de processo EMV
         paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
         paragraph_10: Para tipo <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
+        table_3:
+          table_row_1: Decisão tomada</br>0 - Aprovado</br>1 - Negado pelo cartão</br>2 - Negado pelo host
+          table_row_2: Tags mandatórias e opcionais requisitadas em emv.processtransaction
+          table_row_3: Tamanho do Issuer Script Results
+          table_row_4: Resultado da execução dos scripts.(EMV 4.2, Book 4, Anexo A5)
         paragraph_11: No exemplo acima, o comando <span class='code'>emv.getinfo</span> foi usado para buscar os parâmetros após a execução dos comandos <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> e <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>. O comando <a href='print' class='command'>print</a> foi utilizado para exibir as informações impressas no ticket.
         paragraph_12: Note que antes de executar as intruções <strong>init</strong>, <strong>process</strong> e <strong>finish</strong> é necessário passar parâmetros para o <em>Kernel EMV</em> com o comando <a href='emv.adddata' class='command'>emv.adddata</a>.
         paragraph_2: O comando <span class='code'>emv.getinfo</span> é utilizado para busca de resultados nas intruções <a href='emv.inittransaction' class='command'>emv.inittransaction</a>, <a href='emv.processtransaction' class='command'>emv.processtransaction</a> e <a href='emv.finishtransaction' class='command'>emv.finishtransaction</a>.
@@ -977,7 +1015,65 @@ pt-BR:
         paragraph_6: Contact
         paragraph_7: Cless
         paragraph_8: Para tipo <em><strong>'init'</strong> &lt;emv.inittransaction/&gt;</em>
+        table_1:
+          table_row_1: Tipo do cartão</br>0 - Tarja magnética</br>3 - EMV chip card.
+          table_row_2: Status da última leitura do cartão</br>0 - ok</br>1 - Fallback é necessário</br>2 - App não suportada
+          table_row_3: Tipo de aplicação selecionada (conforme tabela de parâmetros)</br>01 - Crédito</br>02 - Débito</br>03 - Voucher
+          table_row_4: Identificador da rede adquirente (conforme tabela de parâmetros).
+          table_row_5: Índice do registro na tabela de parâmetros.
+          table_row_6: Tamanho do campo bTrack1.
+          table_row_7: Trillha 1 (Hex).
+          table_row_8: Tamanho do campo bTrack2.
+          table_row_9: Trilha 2 (Hex).
+          table_row_10: Tamanho do campo bTrack3.
+          table_row_11: Trilha 3 (Hex).
+          table_row_12: Tamanho do campo baPAN.
+          table_row_13: PAN
+          table_row_14: PAN Sequence.
+          table_row_15: Tamanho do campo baApplicationLabel.
+          table_row_16: Application Name.
+          table_row_17: Service Code (com zero á esquerda).
+          table_row_18: Tamanho do campo baCardHolderName.
+          table_row_19: Nome cardholder.
+          table_row_20: Data de expiração (“AAMMDD”).
+          table_row_21: Tamanho do campo baExternalNumber.
+          table_row_22: Número externo do cartão.
+          table_row_23: Saldo, em caso de moedeiro.
+          table_row_24: Código do país do Emissor.
         paragraph_9: Para tipo <em><strong>'process'</strong> &lt;emv.processtransaction/&gt;</em>
+        table_2:
+          table_row_1: Decisão tomada</br>0 - Aprovada Offline</br>1 - Negada</br>2 - Ir Online
+          table_row_2: Assinatura em papel deve ser obtida</br>0 - Não</br>1 - Sim
+          table_row_3: PIN foi verificado Offline</br>0 - Não</br>1 - Sim
+          table_row_4: Número de apresentações inválidas de PIN Offline
+          table_row_5: PIN Offline foi bloqueado na última apresentação inválida</br>0 - Não</br>1 - Sim
+          table_row_6: PIN capturado para verificação online</br>0 - Não</br>1 - Sim
+          table_row_7: Número de série da chave (Key Serial Number) e contador (Key Counter) Em caso de PIN Online
+          table_row_8: Tamanho do campo baTLVDataEMV
+          table_row_9: Tags mandatórias e opcionais requisitadas no parâmetro baMandatoryTags de AddData (criptograma para ser análisado pelo emissor do cartão em caso de transação online)
+          table_row_10: Quantidade disponível para aprovação offline
+          table_row_11: VLP Issuer Authorization Code. Apenas para cartões Visa e JCB
+          table_row_12: VISA Card Transaction Qualifiers
+          table_row_13: Data de expiração da aplicação
+          table_row_14: Aplicação efetiva na data (“DDMMAA”)
+          table_row_15: Tamanho do campo baTrack1EquivalentData
+          table_row_16: Track 1 Equivalent Data
+          table_row_17: Tamanho do campo baTrack2EquivalentData
+          table_row_18: Track 2 Equivalent Data
+          table_row_19: Tipo do cartão</br>0 - Tarja magnética</br>3 - EMV chip card
+          table_row_20: Tamanho do campo baApplicationIdentifier
+          table_row_21: Application Identifier
+          table_row_22: Tamanho do campo bTrack1
+          table_row_23: Trillha 1 (Hex)
+          table_row_24: Tamanho do campo bTrack2
+          table_row_25: Trilha 2 (Hex)
+          table_row_26: Tamanho do campo baPAN
+          table_row_27: PAN
+          table_row_28: PAN Sequence
+          table_row_29: Tamanho do campo baApplicationLabel
+          table_row_30: Application Name
+          table_row_31: Tamanho do campo baCardHolderName
+          table_row_32: Nome cardholder
         parameters:
           parameter_1: <strong>parameter</strong> <span class='data-type'>[string]</span><br/>Nome do parâmetro que desejamos buscar <a href='#table-of-parameters'>(veja tabela abaixo)</a>.
           parameter_2: <strong>type</strong> <span class='data-type'>[string]</span><br/>tipo do parâmetro, pode ser:<br/><ul><li>init</li><li>process</li><li>finish</li></ul>
