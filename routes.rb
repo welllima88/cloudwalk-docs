@@ -8,7 +8,7 @@ class Routes
       { "url" => "introduction/walk-manager",                            "view_path" => "introduction/walk_manager"},
       { "url" => "introduction/development-environment",                 "view_path" => "introduction/development_environment"},
       { "url" => "introduction/posxml",                                  "view_path" => "introduction/posxml"},
-      # WALK FRAMEWORK
+      # CloudWalk Framework
       { "url" => "walk-framework/verifone-evo",                          "view_path" => "walk_framework/verifone_evo"},
       { "url" => "walk-framework/verifone-evo-vx805",                    "view_path" => "walk_framework/verifone_evo_vx805"},
       { "url" => "walk-framework/verifone-verix",                        "view_path" => "walk_framework/verifone_verix"},
@@ -17,7 +17,7 @@ class Routes
       { "url" => "walk-framework/first-launch",                          "view_path" => "walk_framework/first-launch"},
       { "url" => "walk-framework/configuration",                         "view_path" => "walk_framework/configuration"},
       { "url" => "walk-framework/configuration/change-password",         "view_path" => "walk_framework/configuration/change_password"},
-      # WALK MANAGER
+      # CloudWalk Manager
       { "url" => "walk-manager/apps",                                    "view_path" => "walk_manager/apps"},
       { "url" => "walk-manager/devices",                                 "view_path" => "walk_manager/devices"},
       { "url" => "walk-manager/groups",                                  "view_path" => "walk_manager/groups"},
