@@ -60,7 +60,6 @@
   <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_8") %></li>
   <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_9") %></li>
   <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_10") %></li>
-  <li><%= I18n.t("integration.tcp.walk_manager_setup.create_application.list.item_11") %></li>
 </ol>
 
 <%= embed_posxml_code("fa64218692fef78ac97c") %>
@@ -97,25 +96,36 @@
 <p><%= I18n.t("integration.tcp.walk_manager_setup.associate_logical_number.paragraph_1") %></p>
 
 <div class="pos evo"><pre>
-- POS SETTINGS -
+CONFIGURATION MENU
 
-1 LOGICAL NUMBER
-2 COMMUNICATION
-3 CARD TYPES
-4 CLEAN TERMINAL
-5 CHECK S. NUMBER
-6 ABOUT
+1 CLOUDWALK
+2 DEVICE SETTINGS
+3 MASTER / VISA
+4 ABOUT
+5 QUIT
 </pre></div>
 
 <p><%= I18n.t("integration.tcp.walk_manager_setup.associate_logical_number.paragraph_2") %></p>
 
 <div class="pos evo"><pre>
-- LOGICAL NUMBER -
+CLOUDWALK SETTINGS
 
-:0001
+1 LOGICAL NUMBERS
+2 DELETE APPS
+3 REINSTALL
+4 BACK
 </pre></div>
 
-<p><%= I18n.t("integration.tcp.walk_manager_setup.associate_logical_number.paragraph_3") %></p>
+<p><%= I18n.t("integration.http.walk_manager_setup.associate_logical_number.paragraph_3") %></p>
+
+<div class="pos evo"><pre>
+LOGICAL NUMBER
+
+: 0001
+
+</pre></div>
+
+<p><%= I18n.t("integration.tcp.walk_manager_setup.associate_logical_number.paragraph_4") %></p>
 
 <h2 id="testing"><%= I18n.t("integration.tcp.table_of_contents.testing") %></h2>
 
@@ -138,6 +148,8 @@
 <pre>
 
   DOWNLOAD COMPLETE!
+
+  
      PRESS GREEN
 </pre>
 </div>
