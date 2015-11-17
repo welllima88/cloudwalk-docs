@@ -10,6 +10,7 @@ require "i18n/backend/fallbacks"
 require "rack-ssl-enforcer"
 require "rack/protection"
 require 'rack/csrf'
+require 'tilt/erb'
 require "json"
 require "pony"
 
