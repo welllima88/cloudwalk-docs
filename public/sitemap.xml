@@ -18,7 +18,7 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/introduction/development-environment</loc>
+  <loc>https://docs.cloudwalk.io/en/introduction/ide</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -82,11 +82,11 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/development-environment/overview</loc>
+  <loc>https://docs.cloudwalk.io/en/ide/overview</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/development-environment/emulator</loc>
+  <loc>https://docs.cloudwalk.io/en/ide/emulator</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -726,7 +726,7 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/introduction/development-environment</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/introduction/ide</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -790,11 +790,11 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/development-environment/overview</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/ide/overview</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/development-environment/emulator</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/ide/emulator</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>

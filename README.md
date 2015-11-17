@@ -56,7 +56,7 @@ Additional information:
   - Alternate text (`alt`): A short and descriptive text (I18n'ed, when necessary)
   - CSS: The class `img-polaroid` should be used
 
-Example: [https://docs.cloudwalk.io/en/development-environment/overview](https://docs.cloudwalk.io/en/development-environment/overview)
+Example: [https://docs.cloudwalk.io/en/ide/overview](https://docs.cloudwalk.io/en/ide/overview)
 
 #### Image internationalization
 

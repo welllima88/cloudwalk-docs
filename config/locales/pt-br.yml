@@ -356,7 +356,7 @@ pt-BR:
         title: Developer API - Usuários
         token:
           paragraph_1: É possível obter a API Token de um usuário apartir do e-mail e senha do usuário em questão.
-  development_environment:
+  ide:
     overview:
       compilation_console:
         paragraph_1: 'É na console de compilação que são exibidas importantes informações, como por exemplo o retorno da compilação: "Compilation Succeeded!", e demais detalhes da aplicação:'
@@ -379,10 +379,10 @@ pt-BR:
         compilation_console: Janela/console de compilação
         introduction: Introdução
         real_time_colaboration: Colaboração em tempo real
-      title: Ambiente de desenvolvimento
+      title: CloudWalk IDE
     emulator:
       description: "Emulador web utilizado para visualizar e testar as aplicações em tempo de desenvolvimento"
-      title: "Ambiente de desenvolvimento - Emulador"
+      title: "CloudWalk IDE - Emulador"
       table_of_contents:
         introduction: Introdução
         workflow: Testando workflows
@@ -464,7 +464,7 @@ pt-BR:
         paragraph_1: Para fins de teste, disponibilizamos um host autorizador pronto para ser utilizado. O autorizador é extremamente simples, utilizado exclusivamente para fins de testes.
         prerequisites: Pré-requisitos
       table_of_contents:
-        development_environment: Compilação da aplicação
+        ide: Compilação da aplicação
         pos_setup: Configuração do dispositivo
         sample: Exemplo de utilização
         testing: Testando a comunicação
@@ -548,7 +548,7 @@ pt-BR:
         paragraph_1: Para fins de teste, disponibilizamos um host autorizador pronto para ser utilizado. O autorizador é extremamente simples, utilizado exclusivamente para fins de testes.
         prerequisites: Pré-requisitos
       table_of_contents:
-        development_environment: Compilação da aplicação
+        ide: Compilação da aplicação
         pos_setup: Configuração do dispositivo
         sample: Exemplo de utilização
         testing: Testando a comunicação
@@ -620,7 +620,7 @@ pt-BR:
           paragraph_1: 'Todo dispositivo deve possuir um número lógico, que é a identificação do dispositivo no CloudWalk. Para configurar o número lógico, siga o seguinte procedimento:'
         paragraph_1: 'O último passo consiste em configurar o CloudWalk Manager. Siga o seguinte procedimento:'
   introduction:
-    development_environment:
+    ide:
       description: O CloudWalk IDE possibilita o desenvolvimento de aplicações para terminais POS utilizando a linguagem POSXML.
       more_info:
         overview: visão geral
@@ -630,11 +630,11 @@ pt-BR:
       table_of_contents:
         more_info: Mais informações
         overview: Apresentação
-      title: Ambiente de desenvolvimento
+      title: CloudWalk IDE
     index:
       description: Open Payment Platform as a Service
       title: "Seja bem vindo!"
-      intro: "Descubra como começar a utilizar a plataforma CloudWalk, aprendendo o básico do <a href='/pt-BR/introduction/walk-manager'>Manager</a> e da <a href='/pt-BR/introduction/development-environment'>IDE</a>"
+      intro: "Descubra como começar a utilizar a plataforma CloudWalk, aprendendo o básico do <a href='/pt-BR/introduction/walk-manager'>Manager</a> e da <a href='/pt-BR/introduction/ide'>IDE</a>"
       table_of_contents:
         getting_started: "Começando"
       getting_started:
@@ -739,8 +739,8 @@ pt-BR:
         push_notifications: Notificações push
         parameters: Parâmetros
         users: Usuários
-    development_environment:
-      group_name: Ambiente de desenvolvimento
+    ide:
+      group_name: CloudWalk IDE
       overview: Visão geral
       emulator: Emulador
     guides:
@@ -767,7 +767,7 @@ pt-BR:
       structure: Estrutura da linguagem
       useful_functions: Funções úteis
     understanding_the_service:
-      development_environment: Ambiente de desenvolvimento
+      ide: CloudWalk IDE
       group_name: Entendendo o serviço
       overview: Visão geral
       authorizer: Autorizador
@@ -2896,7 +2896,7 @@ pt-BR:
       description: O conceito de Aplicação no CloudWalk Manager, como o próprio nome sugere, define as aplicações disponíveis para serem utilizadas pelos terminais POS. Como cadastrar uma aplicação em 3 passos.
       functionality:
         paragraph_1: O conceito de <strong>Aplicação</strong> no CloudWalk Manager, como o próprio nome sugere, define as aplicações disponíveis para serem utilizadas pelos dispositivos.
-        paragraph_2: Estas aplicações na prática são geradas pelo <a href='/pt-BR/introduction/development-environment'>CloudWalk IDE</a>, sempre que uma aplicação <a href='/pt-BR/introduction/posxml'>POSXML</a> é compilada.
+        paragraph_2: Estas aplicações na prática são geradas pelo <a href='/pt-BR/introduction/ide'>CloudWalk IDE</a>, sempre que uma aplicação <a href='/pt-BR/introduction/posxml'>POSXML</a> é compilada.
       interface:
         paragraph_1: 'Para cadastrar uma aplicação, basta seguir o seguinte procedimento:'
         paragraph_2: Clique no menu <strong>Aplicações</strong>.
@@ -3279,7 +3279,7 @@ pt-BR:
         question_1: "O que é o CloudWalk Manager?"
         answer_1: "O <a href='https://manager.cloudwalk.io'>CloudWalk Manager</a> é a ferramenta utilizada para liberar dispositivos, cadastrar aplicações, arquivos, números lógicos e grupos. É também através do CloudWalk Manager que é feita a gestão de usuários e por onde é realizado o monitoramento das transações efetuadas."
         question_2: "Como é o ambiente de desenvolvimento CloudWalk?"
-        answer_2: "Confira a <a href='/pt-BR/development-environment/overview'>visão geral</a> da IDE!"
+        answer_2: "Confira a <a href='/pt-BR/ide/overview'>visão geral</a> da IDE!"
         question_3: "O que é POSXML?"
         answer_3:
           paragraph_1: "POSXML (acrônimo para <strong>P</strong>oint <strong>O</strong>f <strong>S</strong>ale e<strong>X</strong>tended <strong>M</strong>arkup <strong>L</strong>anguage) é uma linguagem de programação utilizada para criar aplicações para terminais POS."

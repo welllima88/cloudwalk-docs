@@ -9,7 +9,7 @@
           <li class="<%=is_group_item_active?("introduction") %>"><%= link_to(I18n.t("menu.understanding_the_service.overview"), "introduction") %></li>
           <li class="<%=is_group_item_active?("introduction", "walk-framework") %>"><%= link_to(I18n.t("menu.understanding_the_service.walk_framework"), "introduction/walk-framework") %></li>
           <li class="<%=is_group_item_active?("introduction", "walk-manager") %>"><%= link_to(I18n.t("menu.understanding_the_service.walk_manager"), "introduction/walk-manager") %></li>
-          <li class="<%=is_group_item_active?("introduction", "development-environment") %>"><%= link_to(I18n.t("menu.understanding_the_service.development_environment"), "introduction/development-environment") %></li>
+          <li class="<%=is_group_item_active?("introduction", "ide") %>"><%= link_to(I18n.t("menu.understanding_the_service.ide"), "introduction/ide") %></li>
           <li class="<%=is_group_item_active?("introduction", "posxml") %>"><%= link_to(I18n.t("menu.understanding_the_service.posxml"), "introduction/posxml") %></li>
           <li class="<%=is_group_item_active?("introduction", "authorizer") %>"><%= link_to(I18n.t("menu.understanding_the_service.authorizer"), "introduction/authorizer") %></li>
         </ul>
@@ -56,13 +56,13 @@
 
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"><%= I18n.t("menu.development_environment.group_name") %></a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour"><%= I18n.t("menu.ide.group_name") %></a>
     </div>
-    <div id="collapseFour" class="accordion-body collapse <%=is_group_active?("development-environment") %>">
+    <div id="collapseFour" class="accordion-body collapse <%=is_group_active?("ide") %>">
       <div class="accordion-inner">
         <ul>
-          <li class="<%=is_group_item_active?("development-environment", "overview") %>"><%= link_to(I18n.t("menu.development_environment.overview"), "development-environment/overview") %></li>
-          <li class="<%=is_group_item_active?("development-environment", "emulator") %>"><%= link_to(I18n.t("menu.development_environment.emulator"), "development-environment/emulator") %></li>
+          <li class="<%=is_group_item_active?("ide", "overview") %>"><%= link_to(I18n.t("menu.ide.overview"), "ide/overview") %></li>
+          <li class="<%=is_group_item_active?("ide", "emulator") %>"><%= link_to(I18n.t("menu.ide.emulator"), "ide/emulator") %></li>
         </ul>
       </div>
     </div>

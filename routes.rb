@@ -6,7 +6,7 @@ class Routes
       { "url" => "introduction/authorizer",                              "view_path" => "introduction/authorizer"},
       { "url" => "introduction/walk-framework",                          "view_path" => "introduction/walk_framework"},
       { "url" => "introduction/walk-manager",                            "view_path" => "introduction/walk_manager"},
-      { "url" => "introduction/development-environment",                 "view_path" => "introduction/development_environment"},
+      { "url" => "introduction/ide",                                     "view_path" => "introduction/ide"},
       { "url" => "introduction/posxml",                                  "view_path" => "introduction/posxml"},
       # CloudWalk Framework
       { "url" => "walk-framework/verifone-evo",                          "view_path" => "walk_framework/verifone_evo"},
@@ -26,8 +26,8 @@ class Routes
       { "url" => "walk-manager/push-notifications",                      "view_path" => "walk_manager/push_notifications"},
       { "url" => "walk-manager/transactions-monitor",                    "view_path" => "walk_manager/transactions_monitor"},
       # DEVELOPMENT ENVIRONMENT
-      { "url" => "development-environment/overview",                     "view_path" => "development_environment/overview"},
-      { "url" => "development-environment/emulator",                     "view_path" => "development_environment/emulator"},
+      { "url" => "ide/overview",                                         "view_path" => "ide/overview"},
+      { "url" => "ide/emulator",                                         "view_path" => "ide/emulator"},
       # POSXML
       { "url" => "posxml/structure",                                     "view_path" => "posxml/structure"},
       { "url" => "posxml/memory-and-variables",                          "view_path" => "posxml/memory_and_variables"},
