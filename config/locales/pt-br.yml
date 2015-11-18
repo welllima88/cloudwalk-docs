@@ -624,15 +624,33 @@ pt-BR:
   introduction:
     ide:
       description: O CloudWalk IDE possibilita o desenvolvimento de aplicações para terminais POS utilizando a linguagem POSXML.
-      more_info:
-        overview: visão geral
-        paragraph_1: Mais informações disponíveis em
       overview:
         paragraph_1: O ambiente de desenvolvimento do serviço CloudWalk ofecere uma interface simples, rápida e intuitiva, contando ainda com o inovador recurso de colaboração em tempo real, ou seja, múltiplos desenvolvedores podem trabalhar em uma mesma aplicação simultaneamente.
       table_of_contents:
-        more_info: Mais informações
-        overview: Apresentação
+        overview: Visão geral
       title: CloudWalk IDE
+    cli:
+      description: The CloudWalk CLI allows you to control your applications in an easy way.
+      title: CloudWalk CLI
+      table_of_contents:
+        overview: Overview
+        command_line_interface: Command Line Interface
+        ruby_framework_api: Ruby Framework API
+        skeleton: Skeleton
+        mruby: MRuby
+      overview:
+        paragraph_1: CloudWalk provides a command line interface tool that allows applications to be manipulated in an easy way. It allows new applications to be set in minutes, and it empowers the developer to make lightning fast changes and deploy them directly into POS terminals from the command line interface.
+      command_line_interface:
+        paragraph_1: A command line interface (CLI) is a character user interface that was initially the only way to access computers (before graphical user interfaces were invented), but has prevailed since then as the favorite tool for many developers to interact with computers.
+        paragraph_2: Every operative system still provides this environment. In Windows it's possible to access it through the <span class='code'>cmd</span> terminal (<span class='code'>CTRL+R</span> and enter <span class='code'>cmd</span>). In Mac OS it's accessible commonly through the Terminal (or iTerm) and in GNU/Linux it's usually called Terminal or Xterm. These boxes contain plenty of commands to interact with the operative system, many of them are very easy to use, simply using the command name and other words after it, separated by spaces, can trigger very powerful effects on the computer.
+        paragraph_3: We introduce our CLI tool to help you take control over your apps with as little effort as possible; it's called <strong>cloudwalk</strong>, and it allows you (between other things) to compile, emulate and deploy your applications directly from the CLI.
+      ruby_framework_api:
+        paragraph_1: The Ruby Framework is built to facilitate your development experience and is being initially released to work on the PAX platform, and additional platforms such as Verifone and Ingenico will be supported soon.
+        paragraph_2: To let you build amazing Ruby applications, we've made an API client available within Ruby, that gives you all the methods you'll need to start developing, making it easy to interact with the POS terminal's screen, printer, keyboard, network and to process different types of payments without the overhead of starting from scratch or using a low level language. This tool is called <strong>DaFunk</strong> and it's <a href='https://github.com/cloudwalkio/da_funk'>open source</a>.
+      skeleton:
+        paragraph_1: Our CLI will let you create new apps, which will be based on the <strong>cloudwalk-skeleton</strong>, a structure that is <a href='https://github.com/cloudwalkio/cloudwalk-skeleton'>open source</a> too, and could be useful for other projects; be creative!
+      mruby:
+        paragraph_1: Ruby is a modern object-oriented language that has many beautiful properties and a huge community to explore and to support new ideas, such as those you might come up to. Ruby is too heavy of a language to work in a POS terminal by itself, therefore we use <a href='http://www.mruby.org'>MRuby</a>, a small version of Ruby intended to work on embedded systems. Your applications will be built into MRuby programs that you'll be able to excecute using MRuby tools as well as in our frameworks.
     index:
       description: Open Payment Platform as a Service
       title: "Seja bem vindo!"
@@ -680,7 +698,7 @@ pt-BR:
         paragraph_5: O desenvolvimento e a manutenção do autorizador é de responsabilidade do cliente.
       table_of_contents:
         more_info: Mais informações
-        overview: Apresentação
+        overview: Visão geral
       title: Autorizador
     posxml:
       description: Linguagem de programação usada para criar aplicações para um dispositivo.
@@ -691,7 +709,7 @@ pt-BR:
         paragraph_2: Baseada na estrutura XML (acrônimo para eXtensible Markup Language), a linguagem POSXML é de fácil aprendizado, possui recursos matemáticos e recursos gráficos poderosos que permitem a criação de interfaces gráficas animadas, com ícones e animações.
       table_of_contents:
         more_info: Mais informações
-        overview: Apresentação
+        overview: Visão geral
       title: Linguagem POSXML
     framework:
       approved_devices:
@@ -705,7 +723,7 @@ pt-BR:
         paragraph_1: O CloudWalk Framework, instalado diretamente nos dispositivos, é uma máquina virtual que possui a capacidade de interpretar os comandos da linguagem POSXML.
       table_of_contents:
         approved_devices: Dispositivos homologados
-        overview: Apresentação
+        overview: Visão geral
       title: CloudWalk Framework
     manager:
       api:
@@ -719,7 +737,7 @@ pt-BR:
       table_of_contents:
         api: API
         how_to_access: Como acessar
-        overview: Apresentação
+        overview: Visão geral
       title: CloudWalk Manager
   main_menu:
     docs: Documentação
@@ -775,7 +793,7 @@ pt-BR:
       ide: CloudWalk IDE
       cli: CloudWalk CLI
       group_name: A Plataforma
-      overview: Visão geral
+      introduction: Introdução
       authorizer: Autorizador
       posxml: Linguagem POSXML
       framework: CloudWalk Framework
