@@ -1,4 +1,6 @@
 pt-BR:
+  posxml_supported: "Suporte à POSXML"
+  ruby_supported: "Suporte à Ruby"
   troubleshooting: "Resolução de problemas"
   description: "Aprenda a criar, publicar e gerenciar aplicações CloudWalk."
   author: "Autor"
@@ -455,7 +457,7 @@ pt-BR:
       description: Uma maneira de estabelecer uma comunicação entre CloudWalk e um autorizados, é via HTTP. Exemplo de uso, configurando o dispositivo, compilando a aplicação, configurando o CloudWalk Manager, testando a comunicação.
       pos_setup:
         paragraph_1: Este guia assume que o seu dispositivo já possui o CloudWalk Framework devidamente <strong>instalado e configurado</strong>, e que o número de série do dispositivo já está cadastrado no CloudWalk Manager.
-        paragraph_2: Caso não tenha certeza dos passos acima, confira a seção <a href='/pt-BR/walk-framework/configuration'>%{configuration}</a>
+        paragraph_2: Caso não tenha certeza dos passos acima, confira a seção <a href='/pt-BR/framework/configuration'>%{configuration}</a>
       sample:
         list:
           item_1: '<strong>Conta no CloudWalk Manager: </strong>Crie uma gratuitamente em <a href="https://manager.cloudwalk.io" class="external" target="_blank">https://manager.cloudwalk.io</a>'
@@ -469,7 +471,7 @@ pt-BR:
         sample: Exemplo de utilização
         testing: Testando a comunicação
         understanding_the_service: Entendendo a comunicação
-        walk_manager_setup: Configuração do CloudWalk Manager
+        manager_setup: Configuração do CloudWalk Manager
       testing:
         download_application: 1. Download da aplicação
         if_fail: Se falhar
@@ -490,7 +492,7 @@ pt-BR:
           item_4: O dispositivo executa o comando network.receive e recebe a resposta.
         paragraph_1: 'Uma das formas de se estabelecer uma comunicação entre o serviço CloudWalk e um host autorizador é através do protocolo HTTP. O diagrama abaixo representa uma comunicação entre o dispositivo, o serviço CloudWalk e o host autorizador:'
         paragraph_2: <strong>Atenção:</strong> Após efetuar um network.send e um network.receive, é necessário efetuar um network.hostdisconnect para que seja possível realizar uma nova chamada (send).
-      walk_manager_setup:
+      manager_setup:
         associate_logical_number:
           header: Associar o número lógico
           paragraph_1: 'O próximo passo é associar o dispositivo com o número lógico recém criado, pressionando a tecla <strong>F1</strong> (Verifone) ou <strong>F</strong> (Telium). A seguinte tela será apresentada:'
@@ -539,7 +541,7 @@ pt-BR:
       description: Uma maneira de estabelecer uma comunicação entre CloudWalk e um autorizados, é via TCP/IP. Exemplo de uso, configurando o dispositivo, compilando a aplicação, configurando o CloudWalk Manager, testando a comunicação.
       pos_setup:
         paragraph_1: Este guia assume que o seu dispositivo já possui o CloudWalk Framework devidamente <strong>instalado e configurado</strong>, e que o número de série do dispositivo já está cadastrado no CloudWalk Manager.
-        paragraph_2: Caso não tenha certeza dos passos acima, confira a seção <a href='/pt-BR/walk-framework/configuration'>%{configuration}</a>
+        paragraph_2: Caso não tenha certeza dos passos acima, confira a seção <a href='/pt-BR/framework/configuration'>%{configuration}</a>
       sample:
         list:
           item_1: '<strong>Conta no CloudWalk Manager: </strong>Crie uma gratuitamente em <a href="https://manager.cloudwalk.io" class="external" target="_blank">https://manager.cloudwalk.io</a>'
@@ -553,7 +555,7 @@ pt-BR:
         sample: Exemplo de utilização
         testing: Testando a comunicação
         understanding_the_service: Entendendo a comunicação
-        walk_manager_setup: Configuração do CloudWalk Manager
+        manager_setup: Configuração do CloudWalk Manager
       testing:
         download_application: 1. Download da aplicação
         if_fail: Se falhar
@@ -574,7 +576,7 @@ pt-BR:
           item_4: O dispositivo executa o comando network.receive e recebe a resposta.
         paragraph_1: 'Uma das formas de se estabelecer uma comunicação entre o serviço CloudWalk e um host autorizador é através do protocolo TCP/IP. O diagrama abaixo representa uma comunicação entre o dispositivo, o serviço CloudWalk e o host autorizador:'
         paragraph_2: <strong>Atenção:</strong> Após efetuar um network.send e um network.receive, é necessário efetuar um network.hosdisconnect para que seja possível realizar uma nova chamada (send).
-      walk_manager_setup:
+      manager_setup:
         associate_logical_number:
           header: Associar o número lógico
           paragraph_1: 'O próximo passo é associar o dispositivo com o número lógico recém criado, pressionando a tecla <strong>F1</strong> (Verifone) ou <strong>F</strong> (Telium). A seguinte tela será apresentada:'
@@ -634,7 +636,7 @@ pt-BR:
     index:
       description: Open Payment Platform as a Service
       title: "Seja bem vindo!"
-      intro: "Descubra como começar a utilizar a plataforma CloudWalk, aprendendo o básico do <a href='/pt-BR/introduction/walk-manager'>Manager</a> e da <a href='/pt-BR/introduction/ide'>IDE</a>"
+      intro: "Descubra como começar a utilizar a plataforma CloudWalk, aprendendo o básico do <a href='/pt-BR/introduction/manager'>Manager</a> e da <a href='/pt-BR/introduction/ide'>IDE</a>."
       table_of_contents:
         getting_started: "Começando"
       getting_started:
@@ -691,7 +693,7 @@ pt-BR:
         more_info: Mais informações
         overview: Apresentação
       title: Linguagem POSXML
-    walk_framework:
+    framework:
       approved_devices:
         cloudwalk_reader: Dispositivos CloudWalk
         paragraph_1: O componente CloudWalk Framework, que é instalado nos dispositivos, difere entre as diversas linhas de equipamentos, uma vez que, cada equipamento possui suas particularidades. Caso o equipamento que você pretende utilizar não conste na listagem abaixo, <a href='https://www.cloudwalk.io/contact'>entre em contato</a>, pois podemos considerar a homologação do mesmo.
@@ -705,7 +707,7 @@ pt-BR:
         approved_devices: Dispositivos homologados
         overview: Apresentação
       title: CloudWalk Framework
-    walk_manager:
+    manager:
       api:
         paragraph_1: Todas as operações disponíveis através da interface web do CloudWalk Manager podem também ser executadas através de uma API Json, bastando para tal, gerar uma API Token.
         paragraph_2: Mais informações em
@@ -776,9 +778,9 @@ pt-BR:
       overview: Visão geral
       authorizer: Autorizador
       posxml: Linguagem POSXML
-      walk_framework: CloudWalk Framework
-      walk_manager: CloudWalk Manager
-    walk_framework:
+      framework: CloudWalk Framework
+      manager: CloudWalk Manager
+    framework:
       configuration: Configuração do dispositivo
       first_launch: 'Primeira execução'
       group_name: CloudWalk Framework
@@ -786,7 +788,7 @@ pt-BR:
       ingenico_telium_2: Ingenico Telium 2
       verifone_evo: Verifone EVO
       verifone_verix: Verifone Verix
-    walk_manager:
+    manager:
       apps: Aplicações
       assets: Arquivos
       devices: Dispositivos
@@ -1411,7 +1413,7 @@ pt-BR:
         paragraph_1: O conhecimento da norma <strong>ISO-8583</strong> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>iso8583.initfieldtable</span> irá iniciar a tabela de campos ISO8583 de acordo com os campos especificados no arquivo definido no parâmetro <strong>filename</strong>. Este comando deve ser executado antes de iniciar o trabalho com mensagens ISO8583.
         paragraph_3: 'No exemplo acima, foram criadas duas funções:'
-        paragraph_4: 1. <strong>downloadBitmap</strong> que realiza o download do arquivo <span class='code'>bitmap.dat</span> contendo o mapa de bits. O arquivo precisa estar armazenado no repositório de <a href='/pt-BR/walk-manager/assets'>arquivos</a> no <a href='https://manager.cloudwalk.io' class='external' target='_blank'>CloudWalk Manager</a>.
+        paragraph_4: 1. <strong>downloadBitmap</strong> que realiza o download do arquivo <span class='code'>bitmap.dat</span> contendo o mapa de bits. O arquivo precisa estar armazenado no repositório de <a href='/pt-BR/manager/assets'>arquivos</a> no <a href='https://manager.cloudwalk.io' class='external' target='_blank'>CloudWalk Manager</a>.
         paragraph_5: 2. <strong>startEngineISO8583</strong> que inicia a tabela utilizando o comando <span class='code'>iso8583.initfieldtable</span>.
         paragraph_6: Caso o download do arquivo tenha sido completado com sucesso, é definido 1 no parâmetro bitmap do arquivo <span class='code'>params.dat</span>, apenas para indicar que o arquivo esta presente no dispositivo, caso contrário será apresentado uma mensagem de erro, baseado no respectivo retorno do comando e fechará a aplicação após pressionar a tecla Enter.
         paragraph_7: Após baixar e verificar a existência do arquivo bitmap.dat, será executada a função <strong>startEngineISO8583</strong>. A função referencia o comando <span class='code'>iso8583.initfieldtable</span> para iniciar a tabela. Caso o valor retornado na variável <strong>iReturn</strong> for <strong>0</strong>, a tabela foi iniciada com sucesso; caso contrário, o erro <strong>-802</strong> será apresentado, indicando falha na inicialização da tabela de mapa de bits.
@@ -2162,7 +2164,7 @@ pt-BR:
         paragraph_4: Descompacte o pacote e execute o arquivo <strong>EditDbFileWalk.exe</strong>
         paragraph_5: Digite o caminho do arquivo dat e pressione o botão <strong>Load</strong>
         paragraph_6: Faça as devidas alterações e pressione o botão <strong>Save</strong>
-        paragraph_7: Cadastre o <a href='/pt-BR/walk-manager/assets'>arquivo no CloudWalk Manager</a> e seus dispositivos poderão baixá-lo com o comando <a href='/pt-BR/posxml/commands/downloadfile' class='command'>downloadfile</a>
+        paragraph_7: Cadastre o <a href='/pt-BR/manager/assets'>arquivo no CloudWalk Manager</a> e seus dispositivos poderão baixá-lo com o comando <a href='/pt-BR/posxml/commands/downloadfile' class='command'>downloadfile</a>
       description: O CloudWalk Framework tem um sistema de arquivos do tipo WALK dbfile (arquivos de text em ambientes UNIX). Criando e editando arquivos. Use o utilitário EditDBFile para manipular arquivos WALK dbfile.
       presentation:
         paragraph_1: 'O CloudWalk Framework possui um sistema de arquivos que consegue manipular arquivos do tipo WALK dbfile, onde é possível criar e trabalhar com arquivos no seguinte formato:'
@@ -2238,7 +2240,7 @@ pt-BR:
         paragraph_1: "Função para centralizar um texto."
       format_iso8583_money:
         paragraph_1: "Função para formatar um valor ISO8583. Por exemplo, 100 se torna 1,00."
-  walk_framework:
+  framework:
     package:
       select: "<strong>Pacote do CloudWalk Framework:</strong> Selecione a marca, modelo e assinatura (se aplicável) do seu dispositivo:"
       device:
@@ -2512,7 +2514,7 @@ pt-BR:
         check_serial_number: 'CHECK S. NUMBER'
         cloudwalk_update: 'CLOUDWALK UPDATE'
         about: 'ABOUT'
-      password: "Para acessar o menu de configuração, é necessário informar a senha <strong>55555</strong>. Esta senha pode ser <a href='/pt-BR/walk-framework/configuration/change-password'>alterada</a>."
+      password: "Para acessar o menu de configuração, é necessário informar a senha <strong>55555</strong>. Esta senha pode ser <a href='/pt-BR/framework/configuration/change-password'>alterada</a>."
       logical_number:
         paragraph_1: "Opção utilizada para definir o número lógico do dispositivo."
         paragraph_2: "Mais informações sobre a utilização de números lógicos podem ser encontradas em:"
@@ -2552,13 +2554,13 @@ pt-BR:
     first_launch:
       description: "Procedimento de configuração do dispositivo após a instalação do CloudWalk Framework."
       title: "Primeira execução do dispositivo"
-      after_install: "Agora que o dispositivo já possui o CloudWalk Framework instalado, o próximo passo é realizar a <a href='/pt-BR/walk-framework/first-launch'>configuração inicial</a> do dispositivo."
+      after_install: "Agora que o dispositivo já possui o CloudWalk Framework instalado, o próximo passo é realizar a <a href='/pt-BR/framework/first-launch'>primeira execução</a> do dispositivo."
       integration:
         paragraph_1: "Agora que o dispositivo já está ativado, o próximo passo é realizar um teste de integração HTTP. Clique <a href='/pt-BR/integration/http'>aqui</a> para iniciar o processo."
       prerequisites:
         internet_access: "<strong>Computador com acesso à internet:</strong> Necessário para cadastrar o número lógico e liberar o dispositivo no serviço CloudWalk"
-        walk_framework: "<strong>CloudWalk Framework:</strong> Dispositivo com CloudWalk Framework devidamente instalado"
-        paragraph_1: "Para instalar o <strong>CloudWalk Framework</strong> no dispositivo, acesse e siga atentamente as instruções dos links à seguir, de acordo com o modelo desejado: <strong><a href='verifone-evo'>Verifone EVO</a></strong>, <strong><a href='verifone-verix'>Verifone Verix</a></strong>, <strong><a href='ingenico-telium-1'>Ingenico Telium 1</a></strong>, <strong><a href='/pt-BR/walk-framework/ingenico-telium-2'>Ingenico Telium 2</a></strong>"
+        framework: "<strong>CloudWalk Framework:</strong> Dispositivo com CloudWalk Framework devidamente instalado"
+        paragraph_1: "Para instalar o <strong>CloudWalk Framework</strong> no dispositivo, acesse e siga atentamente as instruções dos links à seguir, de acordo com o modelo desejado: <strong><a href='verifone-evo'>Verifone EVO</a></strong>, <strong><a href='verifone-verix'>Verifone Verix</a></strong>, <strong><a href='ingenico-telium-1'>Ingenico Telium 1</a></strong>, <strong><a href='/pt-BR/framework/ingenico-telium-2'>Ingenico Telium 2</a></strong>"
       table_of_contents:
         prerequisites: "Pré-requisitos"
         language_settings: "Preferência de idioma"
@@ -2776,7 +2778,7 @@ pt-BR:
         paragraph_2: Mantenha o sistema operacional dos seus terminais POS sempre atualizados. Terminais POS com o sistema operacional desatualizado podem ficar lentos e podem também apresentar problemas de comunicação.
         paragraph_3: 'Requisitos mínimos de sistema operacional para a instalação do CloudWalk Framework:'
         pos_model: Modelo POS
-      installing_vx805_and_vx820: Para realizar a carga em terminais <strong>VX 805</strong> e <strong> VX 820 </strong>, confira <a href='/pt-BR/walk-framework/verifone-evo-vx805'>este guia</a>.
+      installing_vx805_and_vx820: Para realizar a carga em terminais <strong>VX 805</strong> e <strong> VX 820 </strong>, confira <a href='/pt-BR/framework/verifone-evo-vx805'>este guia</a>.
       installing_vx805_and_vx820_intro: Este guia o conduzirá através do processo de instalação do CloudWalk Framework em terminais Verifone <strong>VX 805</strong> e <strong>VX 820</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       introduction: Este guia o conduzirá através do processo de instalação do CloudWalk Framework em terminais Verifone <strong>VX 520</strong> e <strong>VX 680</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       introduction_cable_terminals: Este guia o conduzirá através do processo de instalação do CloudWalk Framework em terminais Verifone VX 805 e VX 820. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
@@ -2895,7 +2897,7 @@ pt-BR:
         paragraph_7: 'Pressione a tecla verde (OK) para passar para a próxima tela:'
         paragraph_8: Digite a senha novamente.
         paragraph_9: 'Pressione a tecla verde (OK), para selecionar a opção de download:'
-  walk_manager:
+  manager:
     apps:
       description: O conceito de Aplicação no CloudWalk Manager, como o próprio nome sugere, define as aplicações disponíveis para serem utilizadas pelos terminais POS. Como cadastrar uma aplicação em 3 passos.
       functionality:
@@ -3254,7 +3256,7 @@ pt-BR:
         question_4: "Qual é o dispositivo mais adequado para minhas necessidades?"
         answer_4: "Isso depende do projeto, mas em geral, antes de comprar um dispositivo, certifique-se de que o mesmo cumpre os requisitos do projeto. Por exemplo, se a mobilidade é um fator importante, um dispositivo com <strong>GPRS</strong> deve ser adquirido. Também é necessário ter certeza de que o dispositivo é compatível com o serviço CloudWalk."
         question_5: "Quais dispositivos são compatíveis com o serviço CloudWalk?"
-        answer_5: "Confira lista de <a href='https://docs.cloudwalk.io/pt-BR/introduction/walk-framework#approved-devices'>dispositivos homologados</a>."
+        answer_5: "Confira lista de <a href='https://docs.cloudwalk.io/pt-BR/introduction/framework#approved-devices'>dispositivos homologados</a>."
         question_6: "É possível ter várias aplicações no mesmo dispositivo?"
         answer_6:
           paragraph_1: "Sim, isso é perfeitamente possível, pois os dispositivos CloudWalk estão preparados para lidar com qualquer quantidade de aplicativos POSXML. Se um dispositivo for configurado para ter acesso a uma única aplicação, quando o botão <strong>verde</strong> é pressionado, essa aplicação é automaticamente iniciada. No entanto, se o dispositivo tem acesso a múltiplas aplicações, quando o botão <strong>verde</strong> é pressionado, um menu com a lista de todas as aplicações é exibida, para que você possa escolher uma delas para iniciar."
@@ -3264,7 +3266,7 @@ pt-BR:
         question_8: "Qual é a senha para acessar o menu de configuração?"
         answer_8: "A senha padrão é <span class='code'>55555</span>."
         question_9: "É possível alterar a senha padrão do menu de configuração?"
-        answer_9: "Sim, confira o <a href='https://docs.cloudwalk.io/pt-BR/walk-framework/configuration/change-password'>guia de alteração de senha</a>."
+        answer_9: "Sim, confira o <a href='https://docs.cloudwalk.io/pt-BR/framework/configuration/change-password'>guia de alteração de senha</a>."
         question_10: "Como faço para verificar o número de série do dispositivo e onde registrá-lo?"
         answer_10:
           paragraph_1: "Primeiramente, pressione o botão <strong>Função</strong> do dispositivo (<span class='code'>F</span> para Ingenico, <span class='code'>F1</span> para Verifone);"

@@ -56,12 +56,12 @@ describe Docs do
   end
 
   it "should pre-select the signature paytec" do
-    get '/en/walk-framework/ingenico-telium-2?signature=paytec'
+    get '/en/framework/ingenico-telium-2?signature=paytec'
     assert last_response.ok?
   end
 
   it "should pre-select another signature" do
-    get '/en/walk-framework/ingenico-telium-2?something=else'
+    get '/en/framework/ingenico-telium-2?something=else'
     assert last_response.ok?
   end
 
