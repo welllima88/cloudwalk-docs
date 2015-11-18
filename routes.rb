@@ -1,7 +1,7 @@
 class Routes
   def self.navigation
     [
-      # OVERVIEW
+      # The Platform
       { "url" => "introduction",                                         "view_path" => "introduction/index"},
       { "url" => "introduction/authorizer",                              "view_path" => "introduction/authorizer"},
       { "url" => "introduction/framework",                               "view_path" => "introduction/framework"},
@@ -30,15 +30,20 @@ class Routes
       { "url" => "ide/overview",                                         "view_path" => "ide/overview"},
       { "url" => "ide/emulator",                                         "view_path" => "ide/emulator"},
       # CloudWalk CLI
-      { "url" => "cli/overview",                                         "view_path" => "cli/overview"},
-      # POSXML
+      { "url" => "cli/setup",                                            "view_path" => "cli/setup"},
+      # POSXML language
       { "url" => "posxml/structure",                                     "view_path" => "posxml/structure"},
       { "url" => "posxml/memory-and-variables",                          "view_path" => "posxml/memory_and_variables"},
       { "url" => "posxml/file-system",                                   "view_path" => "posxml/file_system"},
       { "url" => "posxml/configuration",                                 "view_path" => "posxml/configuration"},
       { "url" => "posxml/commands",                                      "view_path" => "posxml/commands"},
       { "url" => "posxml/useful-functions",                              "view_path" => "posxml/useful_functions"},
-      # DEVELOPER API
+      # Host integration
+      { "url" => "integration/architecture",                             "view_path" => "integration/architecture"},
+      { "url" => "integration/tcp",                                      "view_path" => "integration/tcp"},
+      { "url" => "integration/http",                                     "view_path" => "integration/http"},
+      { "url" => "integration/advanced-http",                            "view_path" => "integration/advanced_http"},
+      # Developer API
       { "url" => "api/overview",                                         "view_path" => "api/overview"},
       { "url" => "api/v1/apps",                                          "view_path" => "api/v1/apps"},
       { "url" => "api/v1/devices",                                       "view_path" => "api/v1/devices"},
@@ -49,12 +54,7 @@ class Routes
       { "url" => "api/v1/push-notifications",                            "view_path" => "api/v1/push_notifications"},
       { "url" => "api/v1/users",                                         "view_path" => "api/v1/users"},
       { "url" => "api/v1/transactions",                                  "view_path" => "api/v1/transactions"},
-      # INTEGRATION
-      { "url" => "integration/architecture",                             "view_path" => "integration/architecture"},
-      { "url" => "integration/tcp",                                      "view_path" => "integration/tcp"},
-      { "url" => "integration/http",                                     "view_path" => "integration/http"},
-      { "url" => "integration/advanced-http",                            "view_path" => "integration/advanced_http"},
-      # GUIDES
+      # Guides
       { "url" => "guides/transactions-patterns",                         "view_path" => "guides/transactions_patterns/intro"},
       { "url" => "guides/transactions-patterns/overview",                "view_path" => "guides/transactions_patterns/tutorial_1_overview"},
       { "url" => "guides/transactions-patterns/anomalies-report",        "view_path" => "guides/transactions_patterns/tutorial_2_anomalies_report"},
@@ -64,9 +64,9 @@ class Routes
       { "url" => "guides/emulator-card-swipe",                           "view_path" => "guides/emulator_card_swipe"},
       { "url" => "guides/emulator-serial-ports",                         "view_path" => "guides/emulator_serial_ports"},
       { "url" => "guides/using-http-headers",                            "view_path" => "guides/using_http_headers"},
-      # HELP
+      # Help
       { "url" => "help/faq",                                             "view_path" => "help/faq"},
-      # POSXML APPS CHANGELOG
+      # POSXML apps changelog
       { "url" => "apps/globalpayments",                                  "view_path" => "apps/globalpayments"},
     ]
   end

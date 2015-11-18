@@ -445,14 +445,14 @@ en:
         http_samples: Examples of HTTP verbs and paths
         introduction: Introduction
         posxml_sample: Example of POSXML application
-      title: Integration with host - REST HTTP
+      title: Host integration - REST HTTP
     architecture:
       description: 'Simplified architecture of CloudWalk service, with all the components involved: mobile device, authorizer, transactional switch, etc.'
       service_architecture:
         paragraph_1: 'The diagram below shows a simplified architecture of CloudWalk service, with all the components involved: A mobile device, an authorizer, the transactional switch, etc.'
       table_of_contents:
         service_architecture: Service architecture
-      title: Integration with host
+      title: Host integration
     http:
       description: One way to establish communication between the CloudWalk service and a host authorizer is through HTTP. Example of use, configuring the device, compiling the application, configuring the CloudWalk Manager, testing the communication.
       pos_setup:
@@ -483,7 +483,7 @@ en:
         paragraph_6: 'Several tools and services can help you to test the return of the requests. An example is <a href="http://hurl.it" target="_blank" class="external">hurl.it</a>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
-      title: Integration with host - Simple HTTP
+      title: Host integration - Simple HTTP
       understanding_the_service:
         list:
           item_1: The device executes the command <a href="/en/posxml/commands/network.send" class='command'>network.send</a>;
@@ -567,7 +567,7 @@ en:
         paragraph_6: 'Several tools and services can help you to test the return of the requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
-      title: Integration with host - Plain TCP (socket tunnel)
+      title: Host integration - Plain TCP (socket tunnel)
       understanding_the_service:
         list:
           item_1: The device executes the command <a href="/en/posxml/commands/network.send" class='command'>network.send</a>;
@@ -765,7 +765,7 @@ en:
       emulator: Emulator
     cli:
       group_name: CloudWalk CLI
-      overview: Overview
+      setup: Set up
     guides:
       group_name: Guides
       patterns: "Transaction patterns"
@@ -778,7 +778,7 @@ en:
     integration:
       advanced_http: REST HTTP
       architecture: Service architecture
-      group_name: Integration with host
+      group_name: Host integration
       http: Simple HTTP
       tcp: Plain TCP (socket tunnel)
     posxml:
@@ -1519,14 +1519,14 @@ en:
           parameter_5: <strong>variablereturn</strong> <span class='data-type'>[string]</span><br/>Variable that will receive the return of the command.
       network_checkgprssignal:
         description: Checks the status of the connection, if the POS supports GPRS
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Host integration - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.checkgprssignal</span> is used to check the GPRS signal level on a device that provides this type of communication.
         paragraph_3: In the example above the command <a href='network.checkgprssignal' class='command'>network.checkgprssignal</a> will check the GPRS signal level, storing the operation result in the integer variable $(iReturn).
         parameters:
           parameter_1: <strong>variablestatus</strong> <span class='data-type'>[integer]</span><br/>Variable that will store the GPRS signal level.
       network_hostdisconnect:
         description: Disconnects the device from the host, keeping it connected to the network
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>.
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Host integration - Simple HTTP</a>.
         paragraph_2: The command <span class='code'>network.hostdisconnect</span> is used to disconnect from the host terminal but remain connected to the network.
         paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the host. The command <a href='network.hostdisconnect' class='command'>network.hostdisconnect</a> will close this connection but the device will maintain the network connection.
         paragraph_4: <strong>ATTENTION!</strong>
@@ -1534,7 +1534,7 @@ en:
         paragraph_6: The command <span class='code'>network.hostdisconnect</span> also closes the socket that was opened with the  <a href='preconnect' class='command'>preconnect</a>, but only for connection types <strong>ETHERNET and GPRS </strong>.
       network_ping:
         description: Checks the status of the connection with the host
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Host integration - Simple HTTP</a>
         paragraph_2: The command <span class='code'> network.ping </span> is used to test connectivity with the host.
         paragraph_3: In the example above the command <a href='network.ping' class='command'>network.ping</a> will do a ping on the host and the return will be stored in the variable <strong>iReturn</strong> that should be converted into <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
         parameters:
@@ -1550,7 +1550,7 @@ en:
           parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the function:<ul><li>1: Modem initialized</li><li>Anything other than <strong>1</strong> means <strong>Error</strong> (modem not initialized)</li></ul>'
       network_receive:
         description: Receives from the host buffer previously connected
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Host integration - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.receive</span> is used to receive a message (hexadecimal) from the host.
         paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the CloudWalk Walk Server and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: The command <a href='network.send' class='command'>network.send</a> will send a message, hexadecimal for the host and its return will be stored in the variable <strong>iReturn</strong>.
@@ -1562,7 +1562,7 @@ en:
           parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Return of the function:<ul><li>1: Message successfully received</li><li>0: Could not receive the message</li></ul>'
       network_send:
         description: Sends a buffer to the host previously connected
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Host integration - Simple HTTP</a>
         paragraph_2: The command <span class='code'>network.send</span> is used to send a message (hexadecimal) to the host.
         paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the CloudWalk Walk Server and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: The command <a href='network.send' class='command'>network.send</a> will send a message, hexadecimal to the host and its return will be stored in the variable <strong>iReturn</strong>.
@@ -1651,7 +1651,7 @@ en:
           parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span> Return codes: <br/><ul><li>0: PIN-Pad connected</li><li>-1: PIN-Pad not connected</li></ul>'
       preconnect:
         description: Connects to the host authorizer
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Host integration - Simple HTTP</a>
         paragraph_2: The command <span class='code'>preconnect</span> is used to establish a connection with CloudWalk.
         paragraph_3: In the example above the command <a href='preconnect' class='command'>preconnect</a> will make a connection with the CloudWalk Walk Server, and the return will be stored in the variable <strong>iConnect</strong>.
         paragraph_4: Since the variable <strong>iConnect</strong> is of the type <a href='integervariable' class='command'>integervariable</a>, it must be converted into a <a href='stringvariable' class='command'>stringvariable</a> to be displayed on the <a href='display' class='command'>display</a>.
@@ -1659,7 +1659,7 @@ en:
           parameter_1: '<strong>variablestatus</strong> <span class="data-type">[integer]</span><br/>Return function:<ul><li>0: Connected successfully</li><li>-1: Error when trying to connect</li></ul> '
       predial:
         description: Performs a dial-up connection with the provider
-        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Integration with host - Simple HTTP</a>
+        paragraph_1: Learn more about <a href='https://docs.cloudwalk.io/en/integration/http'>Host integration - Simple HTTP</a>
         paragraph_2: The command <span class='code'>predial</span> is used to perform a dial-up connection with the provider.
         paragraph_3: In the example above the first command <a href='predial' class='command'>predial</a> with <strong>option</strong> 1, will make a connection with the provider, and the return will be stored in the variable <strong>iReturn</strong>.
         paragraph_4: The second command <a href='predial' class='command'>predial</a> with <strong>option</strong> 2, will check if the dialing process was completed.
@@ -2106,7 +2106,7 @@ en:
         commands: Commands List
         commands_list: Commands List
         presentation: Presentation
-      title: POSXML Commands List
+      title: POSXML - Commands List
     configuration:
       description: The CloudWalk Framework has several variables of configuration, allowing to configure any parameter of the terminal through POSXML language. List of parameters.
       parameters_list:
@@ -2523,7 +2523,7 @@ en:
         paragraph_1: '%{num}. Set whether the device should use or not use <a href="http://en.wikipedia.org/wiki/Secure_Socket_Layer" class="external">SSL</a>.'
     configuration:
       description: Procedure for setting up the device after installing the CloudWalk Framework.
-      title: Device configuration
+      title: CloudWalk Framework - Device configuration
       table_of_contents:
         logical_number: 'LOGICAL NUMBER'
         communication: 'COMMUNICATION'
@@ -2571,7 +2571,7 @@ en:
           paragraph_2: "In the example below, the logical number being updated will have the menu password changed from 55555 (default) to the new password <strong>123456</strong>."
     first_launch:
       description: "Procedure for setting up the device after installing the CloudWalk Framework."
-      title: "Device's first launch"
+      title: "CloudWalk Framework - First launch"
       after_install: "Now that CloudWalk Framework has already been installed on the device, the next step is to perform the <a href='/en/framework/first-launch'>first launch</a> configuration."
       integration:
         paragraph_1: "Now that the device is activated, the next step is to perform an HTTP integration test. Click <a href='/en/integration/http'>here</a> to start the process."
@@ -2728,7 +2728,7 @@ en:
         preparing_the_pendrive: Preparing the USB sticker
         prerequisites: Prerequisites
         wiping_the_device: Cleaning the device
-      title: Installing the CloudWalk Framework - Ingenico Telium 1
+      title: CloudWalk Framework - Ingenico Telium 1
       wiping_the_device:
         paragraph_1: 'Access the OS menu restarting the terminal and pressing the key <strong>f2</strong> quickly as soon as the screen below appears:'
         paragraph_2: 'On the main menu, choose the option <strong>Delete menu</strong>:'
@@ -2772,7 +2772,7 @@ en:
         preparing_the_pendrive: Preparing pendrive
         prerequisites: Prerequisites
         wiping_the_device: Cleaning the device
-      title: Installing the CloudWalk Framework - Ingenico Telium 2
+      title: CloudWalk Framework - Ingenico Telium 2
       wiping_the_device:
         paragraph_1: 'Access the menu of the OS restarting the device and pressing <strong>F</strong> and the screen below will appear:'
         paragraph_2: 'From the main menu, select the <strong>Delete menu</strong> option:'
@@ -2841,7 +2841,7 @@ en:
         preparing_the_pendrive: Preparing the USB stick
         prerequisites: Prerequisites
         wiping_the_device: Cleaning the device
-      title: Installing the CloudWalk Framework - Verifone EVO
+      title: CloudWalk Framework - Verifone EVO
       wiping_the_device:
         paragraph_1: 'With the cable properly connected, power on the device. In the model VX 520 press the F2 and F4 at the top right of the device. In the model VX 680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
         paragraph_10: Press 1 to see the next screen.
@@ -2896,7 +2896,7 @@ en:
         preparing_the_device: Preparing the device
         prerequisites: Prerequisites
         wiping_the_device: Cleaning the device
-      title: Installing the CloudWalk Framework - Verifone Verix
+      title: CloudWalk Framework - Verifone Verix
       wiping_the_device:
         paragraph_1: 'With the cable properly connected, turn the device on the power cord. In the model VX 520 press the F2 and F4 at the top right of the device. In the model VX 680 press the enter (green) and 7 simultaneously, and the following screen will appear:'
         paragraph_10: 'Press F3 to select FULL option and move to the screen of the selection of the transfer mode:'
