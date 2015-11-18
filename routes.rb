@@ -7,6 +7,7 @@ class Routes
       { "url" => "introduction/walk-framework",                          "view_path" => "introduction/walk_framework"},
       { "url" => "introduction/walk-manager",                            "view_path" => "introduction/walk_manager"},
       { "url" => "introduction/ide",                                     "view_path" => "introduction/ide"},
+      { "url" => "introduction/cli",                                     "view_path" => "introduction/cli"},
       { "url" => "introduction/posxml",                                  "view_path" => "introduction/posxml"},
       # CloudWalk Framework
       { "url" => "walk-framework/verifone-evo",                          "view_path" => "walk_framework/verifone_evo"},
@@ -25,9 +26,11 @@ class Routes
       { "url" => "walk-manager/assets",                                  "view_path" => "walk_manager/assets"},
       { "url" => "walk-manager/push-notifications",                      "view_path" => "walk_manager/push_notifications"},
       { "url" => "walk-manager/transactions-monitor",                    "view_path" => "walk_manager/transactions_monitor"},
-      # DEVELOPMENT ENVIRONMENT
+      # CloudWalk IDE
       { "url" => "ide/overview",                                         "view_path" => "ide/overview"},
       { "url" => "ide/emulator",                                         "view_path" => "ide/emulator"},
+      # CloudWalk CLI
+      { "url" => "cli/overview",                                         "view_path" => "cli/overview"},
       # POSXML
       { "url" => "posxml/structure",                                     "view_path" => "posxml/structure"},
       { "url" => "posxml/memory-and-variables",                          "view_path" => "posxml/memory_and_variables"},

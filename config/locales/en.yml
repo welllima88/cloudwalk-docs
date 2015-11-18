@@ -1,4 +1,6 @@
 en:
+  posxml_supported: "POSXML supported"
+  ruby_supported: "Ruby supported"
   troubleshooting: "Troubleshooting"
   description: "Learn how to create, deploy and manage CloudWalk apps."
   author: "Author"
@@ -743,6 +745,9 @@ en:
       group_name: CloudWalk IDE
       overview: Overview
       emulator: Emulator
+    cli:
+      group_name: CloudWalk CLI
+      overview: Overview
     guides:
       group_name: Guides
       patterns: "Transaction patterns"
@@ -768,7 +773,8 @@ en:
       useful_functions: Useful functions
     understanding_the_service:
       ide: CloudWalk IDE
-      group_name: Understanding the service
+      cli: CloudWalk CLI
+      group_name: The Platform
       overview: Overview
       authorizer: Authorizer
       posxml: POSXML language

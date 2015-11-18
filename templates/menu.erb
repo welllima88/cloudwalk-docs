@@ -10,6 +10,7 @@
           <li class="<%=is_group_item_active?("introduction", "walk-framework") %>"><%= link_to(I18n.t("menu.understanding_the_service.walk_framework"), "introduction/walk-framework") %></li>
           <li class="<%=is_group_item_active?("introduction", "walk-manager") %>"><%= link_to(I18n.t("menu.understanding_the_service.walk_manager"), "introduction/walk-manager") %></li>
           <li class="<%=is_group_item_active?("introduction", "ide") %>"><%= link_to(I18n.t("menu.understanding_the_service.ide"), "introduction/ide") %></li>
+          <li class="<%=is_group_item_active?("introduction", "cli") %>"><%= link_to(I18n.t("menu.understanding_the_service.cli"), "introduction/cli") %></li>
           <li class="<%=is_group_item_active?("introduction", "posxml") %>"><%= link_to(I18n.t("menu.understanding_the_service.posxml"), "introduction/posxml") %></li>
           <li class="<%=is_group_item_active?("introduction", "authorizer") %>"><%= link_to(I18n.t("menu.understanding_the_service.authorizer"), "introduction/authorizer") %></li>
         </ul>
@@ -70,9 +71,22 @@
 
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive"><%= I18n.t("menu.posxml.group_name") %></a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive"><%= I18n.t("menu.cli.group_name") %></a>
     </div>
-    <div id="collapseFive" class="accordion-body collapse <%=is_group_active?("posxml") %>">
+    <div id="collapseFive" class="accordion-body collapse <%=is_group_active?("cli") %>">
+      <div class="accordion-inner">
+        <ul>
+          <li class="<%=is_group_item_active?("cli", "overview") %>"><%= link_to(I18n.t("menu.cli.overview"), "cli/overview") %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix"><%= I18n.t("menu.posxml.group_name") %></a>
+    </div>
+    <div id="collapseSix" class="accordion-body collapse <%=is_group_active?("posxml") %>">
       <div class="accordion-inner">
         <ul>
           <li class="<%=is_group_item_active?("posxml", "structure") %>"><%= link_to(I18n.t("menu.posxml.structure"), "posxml/structure") %></li>
@@ -88,9 +102,9 @@
 
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseEight"><%= I18n.t("menu.integration.group_name") %></a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven"><%= I18n.t("menu.integration.group_name") %></a>
     </div>
-    <div id="collapseEight" class="accordion-body collapse <%=is_group_active?("integration") %>">
+    <div id="collapseSeven" class="accordion-body collapse <%=is_group_active?("integration") %>">
       <div class="accordion-inner">
         <ul>
           <li class="<%=is_group_item_active?("integration", "architecture") %>"><%= link_to(I18n.t("menu.integration.architecture"), "integration/architecture") %></li>
@@ -104,9 +118,9 @@
 
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix"><%= I18n.t("menu.api.group_name") %></a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseEight"><%= I18n.t("menu.api.group_name") %></a>
     </div>
-    <div id="collapseSix" class="accordion-body collapse <%=is_group_active?("api") %>">
+    <div id="collapseEight" class="accordion-body collapse <%=is_group_active?("api") %>">
       <div class="accordion-inner">
         <ul>
           <li class="<%=is_group_item_active?("api", "overview") %>"><%= link_to(I18n.t("menu.api.overview"), "api/overview") %></li>

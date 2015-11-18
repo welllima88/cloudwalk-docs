@@ -743,6 +743,9 @@ pt-BR:
       group_name: CloudWalk IDE
       overview: Visão geral
       emulator: Emulador
+    cli:
+      group_name: CloudWalk CLI
+      overview: Visão geral
     guides:
       group_name: Tutoriais
       patterns: "Padrões de transações"
@@ -768,7 +771,8 @@ pt-BR:
       useful_functions: Funções úteis
     understanding_the_service:
       ide: CloudWalk IDE
-      group_name: Entendendo o serviço
+      cli: CloudWalk CLI
+      group_name: A Plataforma
       overview: Visão geral
       authorizer: Autorizador
       posxml: Linguagem POSXML

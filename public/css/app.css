@@ -666,3 +666,15 @@ p.note {
 	width: 100%;
 	height: 100%;
 }
+
+.table-pos-terminals .fa {
+  margin-right: 5px;
+}
+
+.table-pos-terminals .fa-diamond {
+  color: #823131;
+}
+
+.table-pos-terminals .fa-code {
+  color: #315b82;
+}
