@@ -766,6 +766,9 @@ en:
     cli:
       group_name: CloudWalk CLI
       setup: Set up
+      creating_a_new_app: Creating a new app
+      customizing_an_app: Customizing an app
+      deploying_an_app: Deploying an app
     guides:
       group_name: Guides
       patterns: "Transaction patterns"

@@ -766,6 +766,9 @@ pt-BR:
     cli:
       group_name: CloudWalk CLI
       setup: Instalação
+      creating_a_new_app: Criando uma nova app
+      customizing_an_app: Cutomizando uma app
+      deploying_an_app: Publicando uma app
     guides:
       group_name: Tutoriais
       patterns: "Padrões de transações"

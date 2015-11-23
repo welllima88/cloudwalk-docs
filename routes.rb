@@ -31,6 +31,9 @@ class Routes
       { "url" => "ide/emulator",                                         "view_path" => "ide/emulator"},
       # CloudWalk CLI
       { "url" => "cli/setup",                                            "view_path" => "cli/setup"},
+      { "url" => "cli/creating-a-new-app",                               "view_path" => "cli/creating_a_new_app"},
+      { "url" => "cli/customizing-an-app",                               "view_path" => "cli/customizing_an_app"},
+      { "url" => "cli/deploying-an-app",                                 "view_path" => "cli/deploying_an_app"},
       # POSXML language
       { "url" => "posxml/structure",                                     "view_path" => "posxml/structure"},
       { "url" => "posxml/memory-and-variables",                          "view_path" => "posxml/memory_and_variables"},
