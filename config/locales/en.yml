@@ -16,6 +16,34 @@ en:
           date: "09/08/2015"
           changelog:
             paragraph_1: "First production release"
+  cli:
+    setup:
+      title: "Set Up"
+      description: "Learn how to install and get started with the CloudWalk CLI"
+      introduction: "This guide will walk you through the process of installing the CloudWalk CLI on Windows, Linux and Mac OS environments. Be aware of prerequisites and follow the installation process carefully."
+      for_windows_users: "For Windows users:"
+      for_windows_unix_like: "For Linux and Mac OS users:"
+      table_of_contents:
+        prerequisites: "Prerequisites"
+        installing: "Installing"
+        commands: "Available commands"
+      prerequisites:
+        installer: "Download the installer at:"
+        more_info: "more information at:"
+      installing:
+        paragraph_1: "Assuming that you have already downloaded the install package (<a href='https://dl.cloudwalk.io/cli/setup.exe'>setup.exe</a>), simply double-click the file and follow the setup instructions."
+        paragraph_2: "Assuming that you have already installed <a href='http://git-scm.com/book/en/v2/Getting-Started-Installing-Git'>Git</a> and <a href='https://www.ruby-lang.org/en/documentation/installation'>Ruby</a>, enter the following on the terminal:"
+        paragraph_3: "Once installed, you can use <span class='code'>cloudwalk</span> from your command line interface. In case you don't have yet a CloudWalk account, you can create one using the following:"
+        paragraph_4: "Simply answer the questions and login with:"
+        paragraph_5: "After accessing your account, you should be able to run more commands, such as:"
+      commands:
+        logout: "Logs out of your account."
+        apps: "Shows your list of applications."
+        app: "Allows you to manage applications (create, show details, edit and delete them)."
+        keys: "Shows your list of SSH keys, used to access and make changes to your repositories."
+        key: "Allows you to manage SSK keys (add and remove them)."
+        logs: "Shows logs in real-time from your applications."
+        users: "Shows the list users within your account."
   api:
     description: Description
     method: Method and URL format
