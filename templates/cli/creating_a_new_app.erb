@@ -1,5 +1,82 @@
 <% content_for :docs_description do %>
-  <meta name="docs:description" content="CloudWalk CLI">
+  <meta name="docs:description" content="<%= I18n.t('cli.creating_a_new_app.description') %>">
 <% end %>
 
-<h1>Creating a new app</h1>
+<h1><%= I18n.t("cli.creating_a_new_app.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#pre-requisites"><%= I18n.t("cli.creating_a_new_app.table_of_contents.prerequisites") %></a></li>
+  <li><a href="#creating-the-new-app"><%= I18n.t("cli.creating_a_new_app.table_of_contents.creating_the_new_app") %></a></li>
+  <li><a href="#emulating"><%= I18n.t("cli.creating_a_new_app.table_of_contents.emulating") %></a></li>
+</ol>
+
+<p><%= I18n.t("cli.creating_a_new_app.introduction") %></p>
+
+<h2 id="pre-requisites"><%= I18n.t("cli.creating_a_new_app.table_of_contents.prerequisites") %></h2>
+
+<ol>
+  <li><%= I18n.t("cli.creating_a_new_app.prerequisites.cli_is_installed") %></li>
+  <li><%= I18n.t("cli.creating_a_new_app.prerequisites.git_is_configured") %></li>
+</ol>
+
+<h2 id="creating-the-new-app"><%= I18n.t("cli.creating_a_new_app.table_of_contents.creating_the_new_app") %></h2>
+
+<p><%= I18n.t("cli.creating_a_new_app.creating_the_new_app.paragraph_1") %></p>
+
+<pre><code><b>$ cloudwalk app create</b>
+Creating a new app...
+You have an existing key in ~/.ssh/id_rsa.pub
+Would you like to add this key to your account? (y/n): y
+Key added.
+Would you like to create a new folder? (y/n): y
+The remote <span style="color:#0ad">origin</span> is set to be: <span style="color:#0ad">git@git.cloudwalk.io:cloud-walking-1.git</span>
+Preparing the new app in <span style="color:#0ad">cloud-walking-1</span>... <span style="color:#0d0">OK</span>
+
+<span style="color:#0ad"><b>Good! Your new application was created.</b></span>
+
+Apps come with a basic structure,
+deploy it with <span style="color:#0ad">git push</span> once you customize it.
+Please read the <span style="color:#0ad">README</span> available in the <span style="color:#0ad">cloud-walking-1</span> folder.
+To see your app running, try:
+<span style="color:#0ad">
+&nbsp;&nbsp;&nbsp;&nbsp;cd cloud-walking-1
+&nbsp;&nbsp;&nbsp;&nbsp;rake
+&nbsp;&nbsp;&nbsp;&nbsp;cloudwalk emulate
+</span>
+</code></pre>
+
+<p><%= I18n.t("cli.creating_a_new_app.creating_the_new_app.paragraph_2") %></p>
+
+<ol>
+  <li><%= I18n.t("cli.creating_a_new_app.creating_the_new_app.paragraph_3") %></li>
+  <li><%= I18n.t("cli.creating_a_new_app.creating_the_new_app.paragraph_4") %></li>
+  <li><%= I18n.t("cli.creating_a_new_app.creating_the_new_app.paragraph_5") %></li>
+</ol>
+
+<h2 id="emulating"><%= I18n.t("cli.creating_a_new_app.table_of_contents.emulating") %></h2>
+
+<p><%= I18n.t("cli.creating_a_new_app.emulating.paragraph_1") %></p>
+
+<br>
+
+<table class="table table-hover">
+  <tbody>
+  <tr>
+    <td style="width:20%"><b>cloudwalk emulate</b></td>
+    <td><%= I18n.t("cli.creating_a_new_app.emulating.emulate") %></td>
+  </tr>
+  <tr>
+    <td><b>cloudwalk run</b></td>
+    <td><%= I18n.t("cli.creating_a_new_app.emulating.run") %></td>
+  </tr>
+  </tbody>
+</table>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.cli.setup"), "cli/setup") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("menu.cli.customizing_an_app") + " &rarr;", "cli/customizing-an-app") %>
+  </li>
+</ul>
