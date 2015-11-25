@@ -46,6 +46,14 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
+  <loc>https://docs.cloudwalk.io/en/framework/pax-d200</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://docs.cloudwalk.io/en/framework/pax-d200-linux</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
   <loc>https://docs.cloudwalk.io/en/framework/first-launch</loc>
   <changefreq>monthly</changefreq>
 </url>
@@ -751,6 +759,14 @@
 </url>
 <url>
   <loc>https://docs.cloudwalk.io/pt-BR/framework/ingenico-telium-2</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/pax-d200</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/pax-d200-linux</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>

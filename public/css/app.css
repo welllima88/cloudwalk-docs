@@ -454,6 +454,22 @@ h2.command-header{
   font-size: 19px;
 }
 
+.pax{
+  height: 200px;
+  border: 8px solid #DCDCDC;
+  background-color: #F5F5F5;
+  text-shadow: #B0E0E6 1px 1px 1px;
+  color: #333;
+}
+
+.pax pre{
+  border: none;
+  background-color: #F5F5F5;
+  text-shadow: #B0E0E6 1px 1px 1px;
+  color: #4682B4;
+  font-size: 19px;
+}
+
 /* Note */
 p.note {
   background: #eef url(/img/note.png) no-repeat center left;

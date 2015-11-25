@@ -901,6 +901,7 @@ en:
       group_name: CloudWalk Framework
       ingenico_telium_1: Ingenico Telium 1
       ingenico_telium_2: Ingenico Telium 2
+      pax_d200: PAX D200
       verifone_evo: Verifone EVO
       verifone_verix: Verifone Verix
     manager:
@@ -2379,6 +2380,7 @@ en:
         evo_serial: "VX 805 and VX 820"
         telium_1: "EFT930G and EFT930S"
         telium_2: "ICT220, ICT250, IWL220, IWL250 and IWL280"
+        d200: "D200"
     communication:
       paragraph_1: Common local network (Ethernet)
       paragraph_2: Landline/dial-up (PPP)
@@ -3012,6 +3014,40 @@ en:
         paragraph_7: 'Press the green button (OK) to move to the next screen:'
         paragraph_8: Enter the password again.
         paragraph_9: Press the green button (OK) to select the type of download.
+    pax_d200:
+      title: CloudWalk Framework - PAX D200 (Windows)
+      description: Step by step process of installing the CloudWalk Framework for PAX D200.
+      introduction: This guide will walk you through the process of installing the CloudWalk Framework on the terminal PAX <strong>D200</strong>. Be aware of prerequisites and follow the installation process carefully.
+      note: "Guide for Windows users: <a href='/en/framework/pax-d200'>PAX D200 Windows</a> <i class='fa fa-windows'></i>"
+      loading_the_framework:
+        paragraph_1: To start charging, Open the TermAssist.
+        paragraph_2: 'With the device connected to the computer, go to the option <em>Setting</em>, select the option <strong>Serial Port</strong>, on the <em>Connection Mode</em> field.'
+        paragraph_3: 'Next on the field <em>Serial Port Setting</em> click on the refresh button and will be shown to which port your device is using'
+        paragraph_4: 'After that, click on the <em>Play</em> button, to connect to the device'
+        paragraph_5: 'Now go to the <em>Installer</em> option, and click on <strong>Select Installation Files</strong>, select the framework file, as shown below:'
+        paragraph_6: 'To proceed with the load click on the download button, according to the image below:'
+      preparing_the_device:
+        paragraph_1: "Unpack the CloudWalk Framework downloaded into directory of your choice."
+        paragraph_2: This directory must be a local directory (eg C:\temp\dir), and not a network directory (\\)
+        paragraph_3: 'Before performing any file, you must prepare the device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port of your computer and the <strong>USB</strong> port from the device'
+        paragraph_4: "Enter on the device's main menu, to do that, turn on the device and keep pressing repeatedly the key <strong>2</strong>, the device will stay in the following screen:"
+      prerequisites:
+        cable: <strong>Cable:</strong>Cable USB 5 pins.
+        operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc)
+        linux: <strong>Operating System:</strong> Ubuntu/Debian
+        software: "<strong>TermAssist:</strong> Available at <a href='https://dl.cloudwalk.io/util/term-assist.zip'>https://dl.cloudwalk.io/util/term-assist.zip</a>"
+        cltool: "<strong>XCB:</strong> Available at <a href='https://dl.cloudwalk.io/util/xcb-with-driver.zip'>https://dl.cloudwalk.io/util/xcb-with-driver.zip</a>"
+      table_of_contents:
+        loading_the_framework: Loading the framework on the device
+        preparing_the_device: Preparing the device
+        prerequisites: Prerequisites
+      linux:
+        title: CloudWalk Framework - PAX D200 (Linux)
+        note: "Guide for Linux users: <a href='/en/framework/pax-d200-linux'>PAX D200 Linux</a> <i class='fa fa-linux'></i>"
+        path: This directory must be a local directory (eg ~/temp/), and not a network directory.
+        step_1: "Before issuing XCB commands, it is helpful to know what emulator/device instances are connected to the XCB server. You can generate a list of attached emulators/devices using the devices command:"
+        step_2: "Use the serial mode to connect the emulator or device"
+        step_3: "Install the application package:"
   manager:
     apps:
       description: The concept of Application in the CloudWalk Manager defines the applications available for use by devices. How to submit an application in 3 steps.

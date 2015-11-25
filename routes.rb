@@ -15,6 +15,8 @@ class Routes
       { "url" => "framework/verifone-verix",                             "view_path" => "framework/verifone_verix"},
       { "url" => "framework/ingenico-telium-1",                          "view_path" => "framework/ingenico_telium_1"},
       { "url" => "framework/ingenico-telium-2",                          "view_path" => "framework/ingenico_telium_2"},
+      { "url" => "framework/pax-d200",                                   "view_path" => "framework/pax_d200"},
+      { "url" => "framework/pax-d200-linux",                             "view_path" => "framework/pax_d200_linux"},
       { "url" => "framework/first-launch",                               "view_path" => "framework/first-launch"},
       { "url" => "framework/configuration",                              "view_path" => "framework/configuration"},
       { "url" => "framework/configuration/change-password",              "view_path" => "framework/configuration/change_password"},

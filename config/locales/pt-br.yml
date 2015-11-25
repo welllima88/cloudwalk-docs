@@ -807,6 +807,7 @@ pt-BR:
       group_name: CloudWalk Framework
       ingenico_telium_1: Ingenico Telium 1
       ingenico_telium_2: Ingenico Telium 2
+      pax_d200: PAX D200
       verifone_evo: Verifone EVO
       verifone_verix: Verifone Verix
     manager:
@@ -2277,6 +2278,7 @@ pt-BR:
       supplier:
         tefti: "BRASIL - TEFTI"
         paytec: "BRASIL - Paytec"
+        pax: "BRASIL - PAX"
         other: "Outro fornecedor"
       models:
         list: "Modelos suportados: "
@@ -2285,6 +2287,7 @@ pt-BR:
         evo_serial: "VX 805 e VX 820"
         telium_1: "EFT930G e EFT930S"
         telium_2: "ICT220, ICT250, IWL220, IWL250 e IWL280"
+        d200: "D200"
     communication:
       paragraph_1: Rede local (Ethernet)
       paragraph_2: Linha discada (PPP)
@@ -2918,6 +2921,40 @@ pt-BR:
         paragraph_7: 'Pressione a tecla verde (OK) para passar para a próxima tela:'
         paragraph_8: Digite a senha novamente.
         paragraph_9: 'Pressione a tecla verde (OK), para selecionar a opção de download:'
+    pax_d200:
+      title: CloudWalk Framework - PAX D200 (Windows)
+      description: Processo passo a passo de instalação do CloudWalk Framework no terminal PAX D200.
+      introduction: Este guia o conduzirá através do processo de instalação do CloudWalk Framework em terminais PAX <strong>D200</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      note: "Guia para usuários Windows: <a href='/pt-BR/framework/pax-d200'>PAX D200 Windows</a> <i class='fa fa-windows'></i>"
+      loading_the_framework:
+        paragraph_1: 'Para dar início ao processo de carga. Inicie o TermAssist.'
+        paragraph_2: 'Com o dispositivo conectado no computador, vá na opção <em>Setting</em> selecione a opção <strong>Serial Port</strong> no campo <em>Connection Mode</em>'
+        paragraph_3: 'Em seguida no campo <em>Serial Port Setting</em> clique no botão atualizar e aparecerá a qual porta seu dispositivo se encontra.'
+        paragraph_4: 'Feito isso clique no botão <em>Play</em> para se conectar ao dispositivo.'
+        paragraph_5: 'Agora vá até a opção <em>Installer</em> clique em <strong>Select Installation Files</strong>, selecione o arquivo do framework conforme demonstrado abaixo:'
+        paragraph_6: 'Para prosseguir com a carga clique no botão para download, conforme a figura abaixo:'
+      preparing_the_device:
+        paragraph_1: Descompacte o pacote do CloudWalk Framework baixado em um diretório de sua preferência.
+        paragraph_2: Este diretório precisa ser um diretório local (por exemplo C:\temp\dir), e não um diretório de rede (\\)
+        paragraph_3: 'Antes de executar qualquer arquivo, é necessário preparar o terminal para o download da carga. O primeiro ponto que deve ser verificado é se o cabo de carga está devidamente conectado na porta USB do seu computador e na porta <strong>USB</strong> do terminal'
+        paragraph_4: 'Entre no menu principal do aparelho, para isso ao ligar o aparelho aperte repetidamente a tecla <strong>2</strong>, o terminal permanecerá na seguinte tela:'
+      prerequisites:
+        cable: <strong>Cabo:</strong> Cabo USB padrão 5 pinos.
+        operating_system: <strong>Sistema operacional:</strong> Microsoft Windows XP SP3 ou superior (Vista, Seven, etc)
+        linux: <strong>Sistema operacional:</strong> Ubuntu/Debian
+        software: "<strong>TermAssist:</strong> Disponível em <a href='https://dl.cloudwalk.io/util/term-assist.zip'>https://dl.cloudwalk.io/util/term-assist.zip</a>"
+        cltool: "<strong>XCB:</strong> Disponível em <a href='https://dl.cloudwalk.io/util/xcb-with-driver.zip'>https://dl.cloudwalk.io/util/xcb-with-driver.zip</a>"
+      table_of_contents:
+        loading_the_framework: Efetuando a carga no terminal POS
+        preparing_the_device: Preparando o terminal POS
+        prerequisites: Pré-requisitos
+      linux:
+        title: CloudWalk Framework - PAX D200 (Linux)
+        note: "Guia para usuários Linux: <a href='/pt-BR/framework/pax-d200-linux'>PAX D200 Linux</a> <i class='fa fa-linux'></i>"
+        path: Este diretório precisa ser um diretório local (por exemplo ~/temp/), e não um diretório de rede.
+        step_1: "Antes de executar os comandos do XCB, é útil saber qual emulador/dispositivo está conectado no server XCB. Você pode gerar uma lista de emuladores/dispositivos conectados usando o comando:"
+        step_2: "Use o modo serial para conectar com o emulador ou dispositivo:"
+        step_3: "Instale o pacote da aplicação:"
   manager:
     apps:
       description: O conceito de Aplicação no CloudWalk Manager, como o próprio nome sugere, define as aplicações disponíveis para serem utilizadas pelos terminais POS. Como cadastrar uma aplicação em 3 passos.

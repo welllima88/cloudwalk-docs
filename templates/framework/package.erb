@@ -4,6 +4,7 @@
     <select name="brand" id="brand" class="input-medium">
       <%= option_select "verifone", "Verifone", device_brand %>
       <%= option_select "ingenico", "Ingenico", device_brand %>
+      <%= option_select "pax", "PAX", device_brand %>
     </select>
   </div>
 
@@ -111,7 +112,9 @@
     if(sbrand == 'verifone'){
       $('#model').append(new Option('Evo', 'evo'));
       $('#model').append(new Option('Verix', 'verix'));
-    } else {
+    } else if (sbrand == 'pax') {
+      $('#model').append(new Option('D200', 'd200'));
+    }else {
       $('#model').append(new Option('Telium 1', 'telium-1'));
       $('#model').append(new Option('Telium 2', 'telium-2'));
     }
@@ -152,6 +155,9 @@
       break;
     case 'telium-2':
       list += '<%= I18n.t("framework.package.models.telium_2") %>';
+      break;
+    case 'd200':
+      list += '<%= I18n.t("framework.package.models.d200") %>'
       break;
     }
 
@@ -213,6 +219,9 @@
       break;
     case 'paytec':
       return package + ' <%= I18n.t("framework.package.with_signature") %> ' + 'Paytec (Brasil)';
+      break;
+    case 'pax':
+      return package + ' <%= I18n.t("ramework.package.with_signature") %> ' + 'PAX (Brasil)';
       break;
     default:
       return '<%= I18n.t("framework.package.binary") %> ' + package + ' (<%= I18n.t("framework.package.unsigned") %>)';
