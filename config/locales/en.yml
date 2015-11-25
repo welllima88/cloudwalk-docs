@@ -20,7 +20,7 @@ en:
     setup:
       title: "CloudWalk CLI - Set Up"
       description: "Learn how to install and get started with the CloudWalk CLI"
-      introduction: "This guide will walk you through the process of installing the CloudWalk CLI on Windows, Linux and Mac OS environments. Be aware of prerequisites and follow the installation process carefully."
+      introduction: "This guide will walk you through the process of installing the CloudWalk CLI on Windows, Linux and Mac OS environments. Be aware of the prerequisites and follow the installation process carefully."
       for_windows_users: "For Windows users:"
       for_windows_unix_like: "For Linux and Mac OS users:"
       table_of_contents:
@@ -31,44 +31,44 @@ en:
         installer: "Download the installer at:"
         more_info: "more information at:"
       installing:
-        paragraph_1: "Assuming that you have already downloaded the install package (<a href='https://dl.cloudwalk.io/cli/setup.exe'>setup.exe</a>), simply double-click the file and follow the setup instructions."
-        paragraph_2: "Assuming that you have already installed <a href='http://git-scm.com/book/en/v2/Getting-Started-Installing-Git'>Git</a> and <a href='https://www.ruby-lang.org/en/documentation/installation'>Ruby</a>, enter the following on the terminal:"
-        paragraph_3: "Once installed, you can use <span class='code'>cloudwalk</span> from your command line interface. In case you don't have yet a CloudWalk account, you can create one using the following:"
+        paragraph_1: "Assuming that you have already downloaded the install package (<a href='https://dl.cloudwalk.io/cli/setup.exe' target='_blank' class='external'>setup.exe</a>), simply double-click the file and follow the setup instructions."
+        paragraph_2: "Assuming that you have already installed <a href='http://git-scm.com/book/en/v2/Getting-Started-Installing-Git' target='_blank' class='external'>Git</a> and <a href='https://www.ruby-lang.org/en/documentation/installation' target='_blank' class='external'>Ruby</a>, enter the following on the terminal:"
+        paragraph_3: "Once installed, you can use <span class='code'>cloudwalk</span> from your command line interface. In case you do not have a CloudWalk account, you can create one as follows:"
         paragraph_4: "Simply answer the questions and login with:"
         paragraph_5: "After accessing your account, you should be able to run more commands, such as:"
       commands:
-        logout: "Logs out of your account."
-        apps: "Shows your list of applications."
-        app: "Allows you to manage applications (create, show details, edit and delete them)."
-        keys: "Shows your list of SSH keys, used to access and make changes to your repositories."
-        key: "Allows you to manage SSK keys (add and remove them)."
-        logs: "Shows logs in real-time from your applications."
-        users: "Shows the list users within your account."
+        logout: "Log out of your account."
+        apps: "List your applications."
+        app: "Manage your applications e.g. create, show details, edit and delete."
+        keys: "List your SSH keys which are used to access and make changes to your repositories."
+        key: "Manage your SSH keys (add and remove them)."
+        logs: "View application logs in real-time."
+        users: "List users within your account."
     creating_a_new_app:
       title: "CloudWalk CLI - Creating a new app"
       description: "Learn how to create a new Ruby application with the CloudWalk CLI"
-      introduction: "This guide will walk you through the process of creating and emulating a new Ruby application using the CloudWalk CLI. Be aware of prerequisites and follow the installation process carefully."
+      introduction: "This guide will walk you through the process of creating and emulating a new Ruby application using the CloudWalk CLI. Be aware of the prerequisites and follow the installation process carefully."
       table_of_contents:
         prerequisites: "Prerequisites"
         creating_the_new_app: "Creating the new app"
         emulating: "Emulating"
       prerequisites:
         cli_is_installed: "The CloudWalk CLI is installed"
-        git_is_configured: "Git is configured. Not sure? Please check <a href='https://help.github.com/articles/set-up-git'>https://help.github.com/articles/set-up-git</a>"
+        git_is_configured: "Git is configured. Not sure? Please check <a href='https://help.github.com/articles/set-up-git' target='_blank' class='external'>https://help.github.com/articles/set-up-git</a>"
       creating_the_new_app:
         paragraph_1: "Assuming that the CloudWalk CLI is installed and that Git is properly configure, let's run <span class='code'>cloudwalk app create</span>:"
         paragraph_2: "Let's understand what happened:"
         paragraph_3: "Your SSH key at <code>~/.ssh/id_rsa.pub</code> was automatically added into your account"
         paragraph_4: "A random application name was set, as no name was specified (see <span class='code'>cloudwalk help app create</span>)"
-        paragraph_5: "A new folder was created with the new app name filled with the <a href='https://github.com/cloudwalkio/cloudwalk-skeleton'>default app's</a> contents"
+        paragraph_5: "A new folder was created with the new app name filled with the <a href='https://github.com/cloudwalkio/cloudwalk-skeleton' target='blank' class='external'>default app's</a> contents"
       emulating:
-        paragraph_1: "Once your application is created, we can see it working using one of two possible commands of the CLI:"
+        paragraph_1: "Once your application is created, we can see it working using one of two possible commands on the CLI:"
         emulate: "Run apps generated by our build process <strong>with</strong> our graphical emulator. It will spawn a new window containing a colorful device, with a screen, buttons and a printer. Use <span class='code'>cloudwalk help emulate</span> to learn more about this command."
         run: "Run apps generated by our build process <strong>without</strong> our graphical emulator. As it is only in text mode, the capabilities are limited, but it is useful for testing. Use <span class='code'>cloudwalk help run</span> to learn more about this command."
     customizing_an_app:
       title: "CloudWalk CLI - Customizing an app"
       description: "Learn how to customize a Ruby application with the CloudWalk CLI"
-      introduction: "This guide will walk you through the process of customizing a Ruby application with the CloudWalk CLI. Be aware of prerequisites and follow the installation process carefully."
+      introduction: "This guide will walk you through the process of customizing a Ruby application with the CloudWalk CLI. Be aware of the prerequisites and follow the installation process carefully."
       table_of_contents:
         prerequisites: "Prerequisites"
         settings: "Settings"
@@ -77,29 +77,29 @@ en:
       prerequisites:
         previous_step: "This guide assumes that you have completed the previous step:"
       settings:
-        paragraph_1: "The CloudWalk Manager provides an interface for customizing the app settings on the web, and the CLI completes it with an easy way to edit those settings from the terminal. By running <span class='code'>cloudwalk app edit</span> you will be prompted with the available options to set including the previous values. This command requires an app ID or app name, so in this example <span class='code'>cloud-walking-1</span> will be used, but in case it is necessary to check the names/IDs of the apps, the command <span class='code'>cloudwalk apps</span> can be used:"
+        paragraph_1: "The CloudWalk Manager provides an interface for customizing an app's settings on the web, and the CLI completes it with an easy way to edit those settings from the terminal. By running <span class='code'>cloudwalk app edit</span> you will be prompted with the available options to set including the previous values. This command requires an app ID or app name, so in this example <span class='code'>cloud-walking-1</span> will be used, but in case it is necessary to check the names/IDs of the apps, the command <span class='code'>cloudwalk apps</span> can be used:"
         paragraph_2: "Either the ID <strong>123</strong> or the name <strong>cloud-walking-1</strong> can be used to edit this app:"
         paragraph_3: "After performing the changes, the command <span class='code'>cloudwalk app show</span> can be used:"
       source_code:
         paragraph_1: "A new application comes with the following source code in the <strong>lib/main.rb</strong> file:"
         paragraph_2: "It describes some of the main steps of building an application. Let's look at it in detail:"
         paragraph_3: "It is how gems are required. It is Ruby so there must be gems!"
-        paragraph_4: "The <strong>simplehttp</strong> gem was required in the <strong>Gemfile</strong> at the root of the project, and it is also <a href='https://github.com/cloudwalkio/simplehttp'>open source</a>. If you are an experienced Ruby developer, this information could be enough for you to build your custom gems for your application!"
+        paragraph_4: "The <strong>simplehttp</strong> gem was required in the <strong>Gemfile</strong> at the root of the project, and it is also <a href='https://github.com/cloudwalkio/simplehttp' target='blank' class='external'>open source</a>. If you are an experienced Ruby developer, this information could be enough for you to build your custom gems for your application!"
         paragraph_5: "It is where the Main class is defined. This is a requirement, all your applications must have a Main class."
-        paragraph_6: "Note that it doesn't necessarily has to inherit from the Device class, if you don't inherit, you might write Device specific methods including the name of the class, for example instead of writing puts, you would write <strong>Device.puts</strong>."
-        paragraph_7: "Function that is executed each time the application runs. This function is a requirement and must be defined. Note that this function is executed inside a <strong>loop</strong>, so plan yourself ahead."
-        paragraph_8: "Displays the string <strong>Card...</strong> into the terminal's screen."
+        paragraph_6: "Note that it doesn't necessarily have to inherit from the Device class. If you don't inherit, you might write Device specific methods including the name of the class, for example instead of writing puts, you would write <strong>Device.puts</strong>."
+        paragraph_7: "Function that is executed each time the application runs. This function is a requirement and must be defined. Note that this function is executed inside a <strong>loop</strong>, so plan ahead."
+        paragraph_8: "Displays the string <strong>Card...</strong> on the terminal screen."
         paragraph_9: "Holds the execution by asking for a key to be pressed."
         paragraph_10: "At the end of the <strong>Main.call</strong> method states wether the loop must continue or not."
       hello_world:
         paragraph_1: "As a simple example, we can change this application to welcome whoever runs it, ask for a name and then say greetings to the given name."
         paragraph_2: "If you are a Ruby developer, this is the code you might expect:"
-        paragraph_3: "By putting that code inside the <span class='code'>Main.call</span> method, before the <span class='code'>true</span> at the end, a name will be asked, and after that the name will be displayed in the next line."
+        paragraph_3: "By putting that code inside the <span class='code'>Main.call</span> method, before the <span class='code'>true</span> at the end, a name will be requested, and after that the name will be displayed in the next line."
         paragraph_4: "Try it yourself! Make the changes, run <span class='code'>rake</span> and then <span class='code'>cloudwalk emulate</span>. The <strong>main.rb</strong> file should end up like this:"
     deploying_an_app:
       title: "CloudWalk CLI - Deploying an app"
       description: "Learn how to deploy a Ruby application with the CloudWalk CLI"
-      introduction: "This guide will walk you through the process of deploying a Ruby application with the CloudWalk CLI. Be aware of prerequisites and follow the installation process carefully."
+      introduction: "This guide will walk you through the process of deploying a Ruby application with the CloudWalk CLI. Be aware of the prerequisites and follow the installation process carefully."
       table_of_contents:
         prerequisites: "Prerequisites"
         deploying_with_git: "Deploying with Git"
@@ -108,7 +108,7 @@ en:
       deploying_with_git:
         paragraph_1: "When an app is created, it is initialized with a default structure to make it easy to see a proof of concept working, however this skeleton has not yet being pushed to CloudWalk."
         paragraph_2: "Considering the application previously created and customized (cloud-walking-1), let's commit the changes:"
-        paragraph_3: "The code that is available in the repo was already added to the history of changes (just not pushed), so simply run <span class='code'>git push</span> - the output will be something around these lines:"
+        paragraph_3: "The code that is available in the repo was already added to the history of changes (just not pushed), so simply run <span class='code'>git push</span> - the output will look something like this:"
         paragraph_4: "Once it finishes, the application will be built and deployed!"
   api:
     description: Description
@@ -911,7 +911,7 @@ en:
       groups: Groups
       logical_numbers: Logical numbers
       push_notifications: Push notifications
-      transactions_monitor: Monitor of transactions
+      transactions_monitor: Transactions monitor
   posxml:
     commands:
       deprecated: "Deprecated"
@@ -2894,9 +2894,9 @@ en:
         paragraph_3: 'Minimum operating system requirements for installing the CloudWalk Framework:'
         pos_model: Model POS
       installing_vx805_and_vx820: To load the framework on terminals <strong>VX 805</strong> and <strong>VX 820</strong>, check out <a href='/en/framework/verifone-evo-vx805'>this guide</a>.
-      installing_vx805_and_vx820_intro: This guide will walk you through the process of installing the CloudWalk Framework on terminals Verifone <strong>VX 805</strong> and <strong>VX 820</strong>. Be aware of prerequisites and follow the installation process carefully.
-      introduction: This guide will walk you through the process of installing the CloudWalk Framework on terminals Verifone <strong>VX 520</strong> and <strong>VX 680</strong>. Be aware of prerequisites and follow the installation process carefully.
-      introduction_cable_terminals: This guide will walk you through the process of installing the CloudWalk Framework on terminals Verifone VX 805 and VX 820. Be aware of prerequisites and follow the installation process carefully.
+      installing_vx805_and_vx820_intro: This guide will walk you through the process of installing the CloudWalk Framework on terminals Verifone <strong>VX 805</strong> and <strong>VX 820</strong>. Be aware of the prerequisites and follow the installation process carefully.
+      introduction: This guide will walk you through the process of installing the CloudWalk Framework on terminals Verifone <strong>VX 520</strong> and <strong>VX 680</strong>. Be aware of the prerequisites and follow the installation process carefully.
+      introduction_cable_terminals: This guide will walk you through the process of installing the CloudWalk Framework on terminals Verifone VX 805 and VX 820. Be aware of the prerequisites and follow the installation process carefully.
       loading_the_framework:
         paragraph_1: To start charging, run <strong>carrega_na_flash.bat</strong> to load the certificates and the CloudWalk Framework.
         paragraph_2: 'The following DOS screen will appear:'
@@ -2969,7 +2969,7 @@ en:
         paragraph_2: Keep the operating system of your devices up to date. Devices with outdated operating system can be slow and may also have communication problems.
         paragraph_3: 'Minimum system requirements for installing the operating CloudWalk Framework:'
         pos_model: Model POS
-      introduction: This guide will walk you through the process of installing the CloudWalk Framework on terminals Verifone <strong>Vx 510</strong>, <strong>Vx 610</strong> and <strong>Vx 670</strong>. Be aware of prerequisites and follow the installation process carefully.
+      introduction: This guide will walk you through the process of installing the CloudWalk Framework on terminals Verifone <strong>Vx 510</strong>, <strong>Vx 610</strong> and <strong>Vx 670</strong>. Be aware of the prerequisites and follow the installation process carefully.
       loading_the_framework:
         paragraph_1: To start charging, run <strong>carrega_na_flash.bat</strong> to load the certificates and the CloudWalk Framework.
         paragraph_2: 'The following DOS screen will appear:'
@@ -3141,7 +3141,7 @@ en:
         paragraph_1: The transactions monitor displays all the operations that have been performed by all your devices. You just need to specify the record type in the search filters.
       interface:
         paragraph_1: 'To access the transactions monitor, just follow this procedure:'
-        paragraph_2: Click the menu <strong>Monitor transactions</strong>.
+        paragraph_2: Click the menu <strong>Transactions monitor</strong>.
         paragraph_3: Click the <strong>Filters</strong> button.
         paragraph_4: 'Specify the type of record:'
         paragraph_5: <strong>Requests -</strong> delimit the time interval of the query
@@ -3150,7 +3150,7 @@ en:
       table_of_contents:
         functionality: Functionality
         interface: Interface presentation
-      title: CloudWalk Manager - Monitor transactions
+      title: CloudWalk Manager - Transactions monitor
   guides:
     transactions_patterns:
       intro:
