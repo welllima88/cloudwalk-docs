@@ -2913,9 +2913,9 @@ en:
         paragraph_5: After loading all the files, the terminal will request to remove the stick.
         paragraph_6: Remove the pendrive and press Enter (green). The device will restart a few times, and then show the first launch setup.
       preparing_the_device:
-        paragraph_1: Unpack the CloudWalk Framework downloaded into directory of your choice.
-        paragraph_2: This directory must be local directory (eg C:\temp\dir), and not network directory (\\)
-        paragraph_3: 'Before performing any file, you must prepare your device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port on your computer and the <strong>RS 232</strong> port of the device as the image below:'
+        paragraph_1: Unpack the CloudWalk Framework from the choosen download directory.
+        paragraph_2: This directory must be local directory (e.g. C:\temp\dir), and not network directory (\\)
+        paragraph_3: 'Before performing any file, you must prepare your device to download the package. The first thing that should be checked is whether the charge cable is properly connected to the serial port on your computer and the <strong>RS 232</strong> port of the device as the image below:'
         paragraph_4: <strong>Attention!</strong>
         paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port on the PC, if it has two COM ports.
         paragraph_6: Another important point is that the COM1 port on your computer may be in use by another process which will cause an error in the loading of the CloudWalk Framework, and because the download is only possible through the COM1 port, it must be correctly configured in Windows.
@@ -2979,9 +2979,9 @@ en:
         paragraph_4: 'While the charge is made, the device displays the progress of the case:'
         paragraph_5: At the end of the charging process, the DOS screen will close and the device will restart a few times, and will then present the first launch setup.
       preparing_the_device:
-        paragraph_1: Unpack the CloudWalk Framework downloaded into directory of your choice.
-        paragraph_2: This directory must be a local directory (eg C:\temp\dir), and not a network directory (\\)
-        paragraph_3: 'Before performing any file, you must prepare the device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port on your computer and the <strong>RS 232</strong> port from the device as the image below:'
+        paragraph_1: Unpack the CloudWalk Framework downloaded in directory of your choice.
+        paragraph_2: This directory must be a local directory (eg C:\temp\dir), and not a network directory (\\).
+        paragraph_3: 'Before performing any file, you must prepare the device to download the package. The first thing that should be checked is whether the charge cable is properly connected to the serial port on your computer and the <strong>RS 232</strong> port or the device as the image below:'
         paragraph_4: <strong>Attention!</strong>
         paragraph_5: This step is the one with the highest rate of errors because many people connect the serial cable to the wrong port on the POS or the wrong port on the PC, if it has two COM ports.
         paragraph_6: Another important point is that the COM1 port on your computer may be in use by another process, causing error in the load time of the CloudWalk Framework, and how the download is only possible through COM1, it must be correctly configured in Windows.
@@ -3017,34 +3017,34 @@ en:
     pax_d200:
       title: CloudWalk Framework - PAX D200 (Windows)
       description: Step by step process of installing the CloudWalk Framework for PAX D200.
-      introduction: This guide will walk you through the process of installing the CloudWalk Framework on the terminal PAX <strong>D200</strong>. Be aware of prerequisites and follow the installation process carefully.
+      introduction: This guide will walk you through the process of installing the CloudWalk Framework on the terminal PAX D200. Be aware of the prerequisites and follow the installation process carefully.
       note: "Guide for Windows users: <a href='/en/framework/pax-d200'>PAX D200 Windows</a> <i class='fa fa-windows'></i>"
       loading_the_framework:
-        paragraph_1: To start charging, Open the TermAssist.
-        paragraph_2: 'With the device connected to the computer, go to the option <em>Setting</em>, select the option <strong>Serial Port</strong>, on the <em>Connection Mode</em> field.'
-        paragraph_3: 'Next on the field <em>Serial Port Setting</em> click on the refresh button and will be shown to which port your device is using'
+        paragraph_1: To start charging, O\open the TermAssist.
+        paragraph_2: 'With the device connected to the computer, select <em>Setting</em> and then select the option <strong>Serial Port</strong> in the <em>Connection Mode</em> field.'
+        paragraph_3: 'Next on the field <em>Serial Port Setting</em> click on the refresh icon and you will see which port your device is using'
         paragraph_4: 'After that, click on the <em>Play</em> button, to connect to the device'
-        paragraph_5: 'Now go to the <em>Installer</em> option, and click on <strong>Select Installation Files</strong>, select the framework file, as shown below:'
+        paragraph_5: 'Now go to the <em>Installer</em> option, click on <strong>Select Installation Files</strong> and select the framework file, as shown below:'
         paragraph_6: 'To proceed with the load click on the download button, according to the image below:'
       preparing_the_device:
-        paragraph_1: "Unpack the CloudWalk Framework downloaded into directory of your choice."
-        paragraph_2: This directory must be a local directory (eg C:\temp\dir), and not a network directory (\\)
-        paragraph_3: 'Before performing any file, you must prepare the device to download the package. The first point that should be checked is whether the charge cable is properly connected to the serial port of your computer and the <strong>USB</strong> port from the device'
-        paragraph_4: "Enter on the device's main menu, to do that, turn on the device and keep pressing repeatedly the key <strong>2</strong>, the device will stay in the following screen:"
+        paragraph_1: "Unpack the CloudWalk Framework downloaded in directory of your choice."
+        paragraph_2: This directory must be a local directory (eg C:\temp\dir), and not a network directory (\\).
+        paragraph_3: 'Before selecting any file, you must prepare the device to download the package. The first thing that should be checked is whether the charge cable is properly connected to the serial port of your computer and the USB port of the device.'
+        paragraph_4: "Enter the device's main menu. To achieve this, turn on the device, repeatedly press the number <strong>2</strong> key and the device will enter the following screen:"
       prerequisites:
-        cable: <strong>Cable:</strong>Cable USB 5 pins.
-        operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, Seven, etc)
+        cable: <strong>Cable:</strong> 5 pin USB.
+        operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or higher (Vista, 7, etc.)
         linux: <strong>Operating System:</strong> Ubuntu/Debian
-        software: "<strong>TermAssist:</strong> Available at <a href='https://dl.cloudwalk.io/util/term-assist.zip'>https://dl.cloudwalk.io/util/term-assist.zip</a>"
-        cltool: "<strong>XCB:</strong> Available at <a href='https://dl.cloudwalk.io/util/xcb-with-driver.zip'>https://dl.cloudwalk.io/util/xcb-with-driver.zip</a>"
+        software: "<strong>TermAssist:</strong> Available at <a href='https://dl.cloudwalk.io/util/term-assist.zip' target='blank' class='external'>https://dl.cloudwalk.io/util/term-assist.zip</a>"
+        cltool: "<strong>XCB:</strong> Available at <a href='https://dl.cloudwalk.io/util/xcb-with-driver.zip' target='blank' class='external'>https://dl.cloudwalk.io/util/xcb-with-driver.zip</a>"
       table_of_contents:
         loading_the_framework: Loading the framework on the device
         preparing_the_device: Preparing the device
         prerequisites: Prerequisites
       linux:
         title: CloudWalk Framework - PAX D200 (Linux)
-        note: "Guide for Linux users: <a href='/en/framework/pax-d200-linux'>PAX D200 Linux</a> <i class='fa fa-linux'></i>"
-        path: This directory must be a local directory (eg ~/temp/), and not a network directory.
+        note: "Guide for Linux users: <a href='/en/framework/pax-d200-linux' target='blank' class='external'>PAX D200 Linux</a> <i class='fa fa-linux'></i>"
+        path: This directory must be a local directory (eg ~/temp/), and not a network directory  (\\).
         step_1: "Before issuing XCB commands, it is helpful to know what emulator/device instances are connected to the XCB server. You can generate a list of attached emulators/devices using the devices command:"
         step_2: "Use the serial mode to connect the emulator or device"
         step_3: "Install the application package:"

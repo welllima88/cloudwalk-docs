@@ -48,13 +48,13 @@
 
 <ol>
   <li><%= I18n.t("framework.pax_d200.linux.step_1") %></li>
-  <pre><code>$ xcb devices</code></pre>
+  <%= embed_posxml_code("8a6387f97fe9a4639175") %>
   <hr/>
   <li><%= I18n.t("framework.pax_d200.linux.step_2") %></li>
-  <pre><code>xcb connect com:/dev/ttyS0</code></pre>
+  <%= embed_posxml_code("2c2fdefa1af007f4d096") %>
   <hr/>
   <li><%= I18n.t("framework.pax_d200.linux.step_3") %></li>
-  <pre><code>xcb installer aip ~/temp/WalkFramework.aip</code></pre>
+  <%= embed_posxml_code("158ce0d70019a463619f") %>
   <hr/>
 </ol>
 
