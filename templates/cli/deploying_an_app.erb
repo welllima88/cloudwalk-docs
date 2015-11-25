@@ -1,5 +1,98 @@
 <% content_for :docs_description do %>
-  <meta name="docs:description" content="CloudWalk CLI">
+  <meta name="docs:description" content="<%= I18n.t('cli.deploying_an_app.description') %>">
 <% end %>
 
-<h1>Deploying an app</h1>
+<h1><%= I18n.t("cli.deploying_an_app.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#pre-requisites"><%= I18n.t("cli.deploying_an_app.table_of_contents.prerequisites") %></a></li>
+  <li><a href="#deploying-with-git"><%= I18n.t("cli.deploying_an_app.table_of_contents.deploying_with_git") %></a></li>
+</ol>
+
+<p><%= I18n.t("cli.deploying_an_app.introduction") %></p>
+
+<h2 id="pre-requisites"><%= I18n.t("cli.deploying_an_app.table_of_contents.prerequisites") %></h2>
+
+<ol>
+  <li><%= I18n.t("cli.deploying_an_app.prerequisites.previous_step") %></li>
+</ol>
+
+<h2 id="deploying-with-git"><%= I18n.t("cli.deploying_an_app.table_of_contents.deploying_with_git") %></h2>
+
+<p><%= I18n.t("cli.deploying_an_app.deploying_with_git.paragraph_1") %></p>
+
+<p><%= I18n.t("cli.deploying_an_app.deploying_with_git.paragraph_2") %></p>
+
+<pre>
+git commit -a -m "Initial POC"
+</pre>
+
+<p><%= I18n.t("cli.deploying_an_app.deploying_with_git.paragraph_3") %></p>
+
+<pre>
+git push
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 417 bytes | 0 bytes/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: -----> Initializing building process
+remote: Previous HEAD position was 71a4c21... Change post body message.
+remote: HEAD is now at f4f0d82... Update simplehttp remote.
+remote: -----> Launching application builder at 01e049ab-e0da-49fd-b27b-1ff91a1ebfbb/http-test 001x
+remote: -----> Building application http-test
+remote: Fetching gem metadata from https://rubygems.org/
+remote: .
+remote: .
+remote: .
+remote: .
+remote:
+remote: Fetching version metadata from https://rubygems.org/
+remote: .
+remote: .
+remote:
+remote: Fetching https://github.com/cloudwalkio/da_funk.git
+remote:
+remote: Fetching https://github.com/cloudwalkio/simplehttp.git
+remote: Using rake 10.4.2
+remote:
+remote: Installing cloudwalk_handshake 0.4.5
+remote:
+remote: Using bundler 1.10.6
+remote:
+remote: Installing yard 0.8.7.6
+remote:
+remote: Using da_funk 0.4.13 from https://github.com/cloudwalkio/da_funk.git (at master)
+remote:
+remote: Using simplehttp 0.4.1 from https://github.com/cloudwalkio/simplehttp.git (at master)
+remote:
+remote: Bundle complete! 3 Gemfile dependencies, 6 gems now installed.
+remote:
+remote: Use `bundle show [gemname]` to see where a bundled gem is installed.
+remote:
+remote: env mrbc -g -o ./out/http-test/main.mrb lib/main.rb
+remote:   adding: cloudwalk_handshake.mrb
+remote:  (deflated 60%)
+remote:
+remote:   adding: da_funk.mrb
+remote:  (deflated 66%)
+remote:
+remote:   adding: main.mrb
+remote:  (deflated 43%)
+remote:   adding: simplehttp.mrb
+remote:  (deflated 60%)
+remote:
+remote: -----> Application http-test built
+remote: -----> Deploying application http-test ... done
+remote: -----> Application deployed successfully!
+To git@git.cloudwalk.io:http-test.git
+   71a4c21..f4f0d82  master -> master
+</pre>
+
+<p><%= I18n.t("cli.deploying_an_app.deploying_with_git.paragraph_4") %></p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.cli.customizing_an_app"), "cli/customizing-an-app") %>
+  </li>
+</ul>

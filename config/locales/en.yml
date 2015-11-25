@@ -96,6 +96,20 @@ en:
         paragraph_2: "If you are a Ruby developer, this is the code you might expect:"
         paragraph_3: "By putting that code inside the <span class='code'>Main.call</span> method, before the <span class='code'>true</span> at the end, a name will be asked, and after that the name will be displayed in the next line."
         paragraph_4: "Try it yourself! Make the changes, run <span class='code'>rake</span> and then <span class='code'>cloudwalk emulate</span>. The <strong>main.rb</strong> file should end up like this:"
+    deploying_an_app:
+      title: "Deploying an app"
+      description: "Learn how to deploy a Ruby application with the CloudWalk CLI"
+      introduction: "This guide will walk you through the process of deploying a Ruby application with the CloudWalk CLI. Be aware of prerequisites and follow the installation process carefully."
+      table_of_contents:
+        prerequisites: "Prerequisites"
+        deploying_with_git: "Deploying with Git"
+      prerequisites:
+        previous_step: "This guide assumes that you have the CloudWalk CLI installed and a working Ruby application"
+      deploying_with_git:
+        paragraph_1: "When an app is created, it is initialized with a default structure to make it easy to see a proof of concept working, however this skeleton has not yet being pushed to CloudWalk."
+        paragraph_2: "Considering the application previously created and customized (cloud-walking-1), let's commit the changes:"
+        paragraph_3: "The code that is available in the repo was already added to the history of changes (just not pushed), so simply run <span class='code'>git push</span> - the output will be something around these lines:"
+        paragraph_4: "Once it finishes, the application will be built and deployed!"
   api:
     description: Description
     method: Method and URL format
