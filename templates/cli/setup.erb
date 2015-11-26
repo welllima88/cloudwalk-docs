@@ -17,7 +17,7 @@
 <p><strong><%= I18n.t("cli.setup.for_windows_users") %></strong></p>
 
 <ol>
-  <li><%= I18n.t("cli.setup.prerequisites.installer") %> <a href="https://dl.cloudwalk.io/cli/setup.exe" target="_blank" class='external'>https://dl.cloudwalk.io/cli/setup.exe</a></li>
+  <li><%= I18n.t("cli.setup.prerequisites.installer") %> <a href="https://dl.cloudwalk.io/cli/install.exe" target="_blank" class='external'>https://dl.cloudwalk.io/cli/install.exe</a></li>
 </ol>
 
 <p><strong><%= I18n.t("cli.setup.for_windows_unix_like") %></strong></p>
@@ -97,9 +97,10 @@ Logged in as <span style="color:#0ad">your-email@domain.com.
     <td><b>cloudwalk users</b></td>
     <td><%= I18n.t("cli.setup.commands.users") %></td>
   </tr>
-</tbody></table>
+  </tbody>
+</table>
 
-<p class="note">The full list of commands is available if you run <strong>cloudwalk</strong> without any other additional command.</p>
+<p class="note"><%= I18n.t("cli.setup.commands.note") %></p>
 
 <ul class="pager">
   <li class="next">

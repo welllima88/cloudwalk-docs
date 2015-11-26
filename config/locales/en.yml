@@ -31,8 +31,8 @@ en:
         installer: "Download the installer at:"
         more_info: "more information at:"
       installing:
-        paragraph_1: "Assuming that you have already downloaded the install package (<a href='https://dl.cloudwalk.io/cli/setup.exe' target='_blank' class='external'>setup.exe</a>), simply double-click the file and follow the setup instructions."
-        paragraph_2: "Assuming that you have already installed <a href='http://git-scm.com/book/en/v2/Getting-Started-Installing-Git' target='_blank' class='external'>Git</a> and <a href='https://www.ruby-lang.org/en/documentation/installation' target='_blank' class='external'>Ruby</a>, enter the following on the terminal:"
+        paragraph_1: "Assuming that you have already downloaded the install package (<a href='https://dl.cloudwalk.io/cli/install.exe' target='_blank' class='external'>setup.exe</a>), simply double-click the file and follow the setup instructions."
+        paragraph_2: "Assuming that you have already installed <a href='http://git-scm.com/book/en/v2/Getting-Started-Installing-Git' target='_blank' class='external'>Git</a> and <a href='https://www.ruby-lang.org/en/documentation/installation' target='_blank' class='external'>Ruby</a>, enter the following on the terminal (bash):"
         paragraph_3: "Once installed, you can use <span class='code'>cloudwalk</span> from your command line interface. In case you do not have a CloudWalk account, you can create one as follows:"
         paragraph_4: "Simply answer the questions and login with:"
         paragraph_5: "After accessing your account, you should be able to run more commands, such as:"
@@ -44,6 +44,7 @@ en:
         key: "Manage your SSH keys (add and remove them)."
         logs: "View application logs in real-time."
         users: "List users within your account."
+        note: "The full list of commands is available if you run <strong>cloudwalk</strong> without any other additional command."
     creating_a_new_app:
       title: "CloudWalk CLI - Creating a new app"
       description: "Learn how to create a new Ruby application with the CloudWalk CLI"
