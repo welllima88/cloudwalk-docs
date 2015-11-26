@@ -2584,7 +2584,6 @@ pt-BR:
       prerequisites:
         internet_access: "<strong>Computador com acesso à internet:</strong> Necessário para cadastrar o número lógico e liberar o dispositivo no serviço CloudWalk"
         framework: "<strong>CloudWalk Framework:</strong> Dispositivo com CloudWalk Framework devidamente instalado"
-        paragraph_1: "Para instalar o <strong>CloudWalk Framework</strong> no dispositivo, acesse e siga atentamente as instruções dos links à seguir, de acordo com o modelo desejado: <strong><a href='verifone-evo'>Verifone EVO</a></strong>, <strong><a href='verifone-verix'>Verifone Verix</a></strong>, <strong><a href='ingenico-telium-1'>Ingenico Telium 1</a></strong>, <strong><a href='/pt-BR/framework/ingenico-telium-2'>Ingenico Telium 2</a></strong>"
       table_of_contents:
         prerequisites: "Pré-requisitos"
         language_settings: "Preferência de idioma"
@@ -2924,22 +2923,22 @@ pt-BR:
     pax_d200:
       title: CloudWalk Framework - PAX D200 (Windows)
       description: Processo passo a passo de instalação do CloudWalk Framework no terminal PAX D200.
-      introduction: Este guia o conduzirá através do processo de instalação do CloudWalk Framework em terminais PAX <strong>D200</strong>. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
+      introduction: Este guia o conduzirá através do processo de instalação do CloudWalk Framework em terminais PAX D200. Atente-se aos pré-requisitos e siga o processo de instalação com atenção.
       note: "Guia para usuários Windows: <a href='/pt-BR/framework/pax-d200'>PAX D200 Windows</a> <i class='fa fa-windows'></i>"
       loading_the_framework:
-        paragraph_1: 'Para dar início ao processo de carga. Inicie o TermAssist.'
+        paragraph_1: 'Para iniciar o processo de carga, abra o TermAssist'
         paragraph_2: 'Com o dispositivo conectado no computador, vá na opção <em>Setting</em> selecione a opção <strong>Serial Port</strong> no campo <em>Connection Mode</em>'
         paragraph_3: 'Em seguida no campo <em>Serial Port Setting</em> clique no botão atualizar e aparecerá a qual porta seu dispositivo se encontra.'
         paragraph_4: 'Feito isso clique no botão <em>Play</em> para se conectar ao dispositivo.'
-        paragraph_5: 'Agora vá até a opção <em>Installer</em> clique em <strong>Select Installation Files</strong>, selecione o arquivo do framework conforme demonstrado abaixo:'
+        paragraph_5: 'Agora vá até a opção <em>Installer</em> e clique em <strong>Select Installation Files</strong>, selecione o arquivo do framework conforme demonstrado abaixo:'
         paragraph_6: 'Para prosseguir com a carga clique no botão para download, conforme a figura abaixo:'
       preparing_the_device:
-        paragraph_1: Descompacte o pacote do CloudWalk Framework baixado em um diretório de sua preferência.
+        paragraph_1: Descompacte o pacote do CloudWalk Framework baixado em um diretório de sua preferência
         paragraph_2: Este diretório precisa ser um diretório local (por exemplo C:\temp\dir), e não um diretório de rede (\\)
-        paragraph_3: 'Antes de executar qualquer arquivo, é necessário preparar o terminal para o download da carga. O primeiro ponto que deve ser verificado é se o cabo de carga está devidamente conectado na porta USB do seu computador e na porta <strong>USB</strong> do terminal'
-        paragraph_4: 'Entre no menu principal do aparelho, para isso ao ligar o aparelho aperte repetidamente a tecla <strong>2</strong>, o terminal permanecerá na seguinte tela:'
+        paragraph_3: 'Antes de executar qualquer coisa (clique duplo), é necessário preparar o terminal para o download da carga. O primeiro ponto que deve ser verificado é se o cabo de carga está devidamente conectado na porta USB do seu computador e na porta USB do terminal'
+        paragraph_4: 'Entre no menu principal do dispositivo. Ligue o aparelho e aperte repetidamente a tecla <strong>2</strong>, e a seguinte tela será exibida:'
       prerequisites:
-        cable: <strong>Cabo:</strong> Cabo USB padrão 5 pinos.
+        cable: <strong>Cabo:</strong> Cabo USB padrão 5 pinos
         operating_system: <strong>Sistema operacional:</strong> Microsoft Windows XP SP3 ou superior (Vista, Seven, etc)
         linux: <strong>Sistema operacional:</strong> Ubuntu/Debian
         software: "<strong>TermAssist:</strong> Disponível em <a href='https://dl.cloudwalk.io/util/term-assist.zip'>https://dl.cloudwalk.io/util/term-assist.zip</a>"
