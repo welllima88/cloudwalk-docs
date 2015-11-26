@@ -407,13 +407,21 @@ h2.command-header{
 /* POS Box */
 .pos{
   width: 310px;
+  height: 200px;
   letter-spacing: 2.5px;
   margin: 25px 0;
+  border: 8px solid #888;
+  background-color: #FFFAEB;
+  color: #333;
 }
 
 .pos pre{
   margin: 8px 0 0 5px;
   line-height:1.2;
+  border: none;
+  background-color: #FFFAEB;
+  color: #333;
+  font-size: 19px;
 }
 
 .pos div{
@@ -437,36 +445,6 @@ h2.command-header{
 
 /* Models */
 .models {color: #999; margin-top: 5px; }
-
-.verix, .evo{
-  height: 200px;
-  border: 8px solid #292626;
-  background-color: #FFFAEB;
-  color: #333;
-}
-
-.verix pre, .evo pre{
-  border: none;
-  background-color: #FFFAEB;
-  color: #333;
-  font-size: 19px;
-}
-
-.pax{
-  height: 200px;
-  border: 8px solid #DCDCDC;
-  background-color: #F5F5F5;
-  text-shadow: #B0E0E6 1px 1px 1px;
-  color: #333;
-}
-
-.pax pre{
-  border: none;
-  background-color: #F5F5F5;
-  text-shadow: #B0E0E6 1px 1px 1px;
-  color: #4682B4;
-  font-size: 19px;
-}
 
 /* Note */
 p.note {
