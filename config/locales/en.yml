@@ -550,7 +550,7 @@ en:
     http:
       description: One way to establish communication between the CloudWalk service and a host authorizer is through HTTP. Example of use, configuring the device, compiling the application, configuring the CloudWalk Manager, testing the communication.
       pos_setup:
-        paragraph_1: This guide assumes that your device already has the CloudWalk Framework properly <strong>installed and configured</strong>, and that the device serial number is already registered on CloudWalk Manager.
+        paragraph_1: This guide assumes that your device already has the WALK Framework properly installed and configured, and that the device serial number is already registered on WALK Manager.
         paragraph_2: If you are unsure of the steps above, please refer to <a href='/en/framework/configuration'>%{configuration}</a>
       sample:
         list:
@@ -573,7 +573,7 @@ en:
         paragraph_2: 'Press the green button and the process of downloading will start:'
         paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
-        paragraph_5: Check the device communication setup, cables and internet connection.
+        paragraph_5: Be sure to carefully review each of the steps above and check the device communication setup, cables and internet connection..
         paragraph_6: 'Several tools and services can help you to test the return of the requests. An example is <a href="http://hurl.it" target="_blank" class="external">hurl.it</a>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
@@ -589,22 +589,22 @@ en:
       manager_setup:
         associate_logical_number:
           header: Associate the logical number
-          paragraph_1: 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (Verifone) or <strong>F</strong> (Telium). The following screen will appear:'
-          paragraph_2: 'Then select the option <strong>1 LOGICAL NUMBER</strong> and enter the newly registered logical number (0001):'
-          paragraph_3: After entering the logical number, press enter (green).
+          paragraph_1: 'The next step is to associate the device with the newly created logical number.</br>Press <strong>F1</strong> (Verifone) or <strong>F</strong> (Ingenico) and enter the default password (55555). The following screen will appear:'
+          paragraph_2: 'Select option <strong>1 CLOUDWALK</strong> and this will open the following menu:'
+          paragraph_3: 'Select option <strong>1 LOGICAL NUMBERS</strong> and enter the logical number registered in the previous step:'
+          paragraph_4: After entering the logical number, press enter (green).
         create_application:
           list:
-            item_1: Login to your <a href="https://manager.cloudwalk.io/" target="_blank" class='command'>CloudWalk Manager</a> account
-            item_10: A message indicating that the application was successfully registered should be be shown
-            item_11: Copy the POSXML source code below, click <strong>Edit source code</strong>, paste the previously copied code and click on <strong>Compile</strong>
-            item_2: 'Select the first option: <strong>Applications</strong>'
-            item_3: 'Click the button: <strong>New application</strong>'
-            item_4: 'Fill in the application name, for example: <strong>httpapp</strong>'
-            item_5: Fill in the application description, for example <strong>Test with HTTP</strong>
-            item_6: Fill in the authorizer with the URL <strong>http://http-echo.cloudwalk.io</strong>
-            item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
-            item_8: Fill <strong>HTTP</strong> in the display name in POS
-            item_9: 'Click the button: <strong>Register application</strong>'
+            item_1: Login to your <a href="https://manager.cloudwalk.io/" target="_blank" class='command'>WALK Manager</a> account
+            item_9: A message indicating that the application was successfully registered should be be shown
+            item_10: Copy the POSXML source code below. Click <strong>Edit source code</strong> and paste the copied code into the editor. Click on <strong>Deploy</strong>, the fourth icon from the bottom on the left.
+            item_2: Select <strong>Apps</strong> from the left menu bar
+            item_3: 'Click the button <strong>New application</strong>'
+            item_4: 'Enter a name for your application in the Name field under Application details, for example: <strong>httpapp</strong>'
+            item_5: Fill in the application description in the Description field, for example <strong>Test with HTTP</strong>
+            item_6: Fill <strong>HTTP</strong> in the Label field to be displayed on the POS application list
+            item_7: Fill in the Endpoint field with the URL <strong>http://http-echo.cloudwalk.io</strong>
+            item_8: 'Click the button: <strong>Register application</strong>'
           posxml:
             comment_01: "The preconnect command attempts to connect the device on CloudWalk"
             comment_02: "Performs the transaction after connecting"
@@ -615,26 +615,26 @@ en:
         create_group:
           header: Register a group
           list:
-            item_1: 'Select the option: <strong>Groups</strong>'
-            item_2: Click the button <strong>New Group</strong>
+            item_1: 'Select <strong>Groups</strong> from the left menu bar'
+            item_2: Click on the button <strong>New Group</strong>
             item_3: 'Fill in the group name, for example: <strong>GROUP TEST</strong>'
-            item_4: Click the button <strong>Register group</strong>
-            item_5: Then click the button <strong>Update group</strong>
-            item_6: Select the application previously registered by clicking the checkbox
-            item_7: Click the button <strong>Update group's applications</strong>
+            item_4: Click on the button <strong>Register group</strong>
+            item_5: Next click on the button <strong>Update group</strong>
+            item_6: Select the application previously registered by clicking the checkbox next to it from the list of application names
+            item_7: Click on the button <strong>Update group applications</strong>
         create_logical_number:
           header: Register logical number
           list:
-            item_1: 'Select the option: <strong>Logical Numbers</strong>'
-            item_2: Click the button <strong>New logical number</strong>
+            item_1: 'Select the option: <strong>Logical Numbers</strong> from the left menu bar'
+            item_2: Click on the button <strong>New logical number</strong>
             item_3: Fill in a logical number, for example <strong>0001</strong>
-            item_4: Select the previously registered group (GROUP TEST) and click the button <strong>Register logical number</strong>
+            item_4: Select the previously registered group (GROUP TEST) and click on the button <strong>Register logical number</strong>
           paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow these steps:'
-        paragraph_1: 'The last step is to configure the CloudWalk Manager. Follow the procedure:'
+        paragraph_1: 'The last step is to configure the CloudWalk Manager. Follows the procedure:'
     tcp:
       description: One way to establish communication between the CloudWalk service and a host authorizer is through TCP/IP. Example of use, configuring the device, compiling the application, configuring the CloudWalk Manager, testing the communication.
       pos_setup:
-        paragraph_1: This guide assumes that your device already has the CloudWalk Framework properly <strong>installed and configured</strong>, and that the device serial number is already registered on CloudWalk Manager.
+        paragraph_1: This guide assumes that your device already has the CloudWalk Framework properly installed and configured, and that the device serial number is already registered on CloudWalk Manager.
         paragraph_2: If you are unsure of the steps above, please refer to <a href='/en/framework/configuration'>%{configuration}</a>
       sample:
         list:
@@ -657,7 +657,7 @@ en:
         paragraph_2: 'Press the green button and the process of downloading will start:'
         paragraph_3: 'At the end of the process, the following message appears:'
         paragraph_4: After downloading the application and pressing the green button, the application will be executed.
-        paragraph_5: Check the device communication setup, cables and internet connection.
+        paragraph_5: Be sure to carefully review each of the steps above and check the device communication setup, cables and internet connection..
         paragraph_6: 'Several tools and services can help you to test the return of the requests. An example is <strong>telnet</strong>, which offers a very simple interface, as can be seen below:'
         run_application: 2. Application execution
         testing_post_request: Testing your request
@@ -673,22 +673,22 @@ en:
       manager_setup:
         associate_logical_number:
           header: Associate the logical number
-          paragraph_1: 'The next step is to associate the device with the newly created logical number, by pressing <strong>F1</strong> (Verifone) or <strong>F</strong> (Telium). The following screen will appear:'
-          paragraph_2: 'Then select the option <strong>1 LOGICAL NUMBER</strong> and enter the newly registered logical number (0001):'
-          paragraph_3: After entering the logical number, press enter (green).
+          paragraph_1: 'The next step is to associate the device with the newly created logical number.</br>Press <strong>F1</strong> (Verifone) or <strong>F</strong> (Ingenico) and enter the default password (55555). The following screen will appear:'
+          paragraph_2: 'Select option <strong>1 CLOUDWALK</strong> and this will open the following menu:'
+          paragraph_3: 'Select option <strong>1 LOGICAL NUMBERS</strong> and enter the logical number registered in the previous step:'
+          paragraph_4: After entering the logical number, press enter (green).
         create_application:
           list:
-            item_1: Login to your <a href="https://manager.cloudwalk.io/" target="_blank" class='command'>CloudWalk Manager</a> account
-            item_10: A message indicating that the application was successfully registered should be be shown
-            item_11: Copy the POSXML source code below, click <strong>Edit source code</strong>, paste the previously copied code and click on <strong>Compile</strong>
-            item_2: 'Select the first option: <strong>Applications</strong>'
-            item_3: Click the button <strong>New application</strong>
-            item_4: 'Fill in the application name, for example: <strong>tcpapp</strong>'
-            item_5: Fill in the application description, for example <strong>Test with TCP IP</strong>
-            item_6: Fill in the authorizer with the URL <strong>tcp://tcp-echo.cloudwalk.io:8000</strong>
-            item_7: Mark <strong>Yes</strong> on the 'Application should be displayed in the menu of services?'
-            item_8: Fill <strong>TCP IP</strong> in the display name in POS
-            item_9: Click the button <strong>Register application</strong>
+            item_1: Login to your <a href="https://manager.cloudwalk.io/" target="_blank" class='command'>WALK Manager</a> account
+            item_9: A message indicating that the application was successfully registered should be be shown
+            item_10: Copy the POSXML source code below. Click <strong>Edit source code</strong> and paste the copied code into the editor. Click on <strong>Deploy</strong>, the fourth icon from the bottom on the left.
+            item_2: Select <strong>Apps</strong> from the left menu bar
+            item_3: Click on the button <strong>New application</strong>
+            item_4: 'Enter a name for your application in the Name field under Application details, for example: <strong>tcpapp</strong>'
+            item_5: Fill in the application description in the Description field, for example <strong>Test with TCP IP</strong>
+            item_6: Fill <strong>TCP IP</strong> in the Label field to be displayed on the POS application list
+            item_7: Fill in the Endpoint field with the URL <strong>tcp://tcp-echo.cloudwalk.io:8000</strong>
+            item_8: Click the button <strong>Register application</strong>
           posxml:
             comment_01: "The preconnect command attempts to connect the device on CloudWalk"
             comment_02: "Performs the transaction after connecting"
@@ -699,22 +699,22 @@ en:
         create_group:
           header: Register a group
           list:
-            item_1: 'Select the option: <strong>Groups</strong>'
-            item_2: Click the button <strong>New Group</strong>
+            item_1: 'Select <strong>Groups</strong> from the left menu bar'
+            item_2: Click on the button <strong>New Group</strong>
             item_3: 'Fill in the group name, for example: <strong>GROUP TEST</strong>'
-            item_4: Click the button <strong>Register group</strong>
-            item_5: Then click the button <strong>Update group</strong>
-            item_6: Select the application previously registered by clicking the checkbox
-            item_7: Click the button <strong>Update group's applications</strong>
+            item_4: Click on the button <strong>Register group</strong>
+            item_5: Next click on the button <strong>Update group</strong>
+            item_6: Select the application previously registered by clicking the checkbox next to it from the list of application names
+            item_7: Click on the button <strong>Update group applications</strong>
         create_logical_number:
           header: Register logical number
           list:
-            item_1: 'Select the option: <strong>Logical Numbers</strong>'
-            item_2: Click the button <strong>New logical number</strong>
+            item_1: 'Select the option: <strong>Logical Numbers</strong> from the left menu bar'
+            item_2: Click on the button <strong>New logical number</strong>
             item_3: Fill in a logical number, for example <strong>0001</strong>
-            item_4: Select the previously registered group (GROUP TEST) and click the button <strong>Register logical number</strong>
+            item_4: Select the previously registered group (GROUP TEST) and click on the button <strong>Register logical number</strong>
           paragraph_1: 'Every device must have a logical number, which is the device identification on CloudWalk. To configure the logical number, follow these steps:'
-        paragraph_1: 'The last step is to configure the CloudWalk Manager. Follow the procedure:'
+        paragraph_1: 'The last step is to configure the CloudWalk Manager. Follows the procedure:'
   introduction:
     ide:
       description: The CloudWalk IDE enables the application development for mobile devices using POSXML language.
@@ -808,10 +808,10 @@ en:
     framework:
       approved_devices:
         cloudwalk_reader: CloudWalk devices
-        paragraph_1: The component CloudWalk Framework, which is installed on devices, differs between various lines of equipment, since each device has its own specifications. If the equipment you want to use does not appear on the list below, <a href='https://www.cloudwalk.io/contact'>contact us</a>, because we might consider the approval of it.
+        paragraph_1: The component CloudWalk Framework, which is installed on devices, differs between various lines of equipment, since each device has its own specifications. If the equipment you want to use does not appear on the list below, <a href='https://www.cloudwalk.io/contact'>contact us</a>, because we may consider approving it.
         paragraph_2: 'Currently, the following devices are approved by the CloudWalk Framework:'
       contactless:
-        paragraph_1: 'CloudWalk also offers the possibility to use the contactless technology on all devices with built-in native contactless, and also works through the pinpads <strong>1000 SE CTLS</strong> (Verifone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
+        paragraph_1: 'CloudWalk also offers the possibility to use contactless technology on all devices with built-in native contactless, and also works through the pinpads <strong>1000 SE CTLS</strong> (Verifone) and <strong>IPP220 CTLS / IPP320 CTLS</strong> (Ingenico).'
       description: 'The CloudWalk Framework is a virtual machine that has the ability to interpret the commands of the POSXML language. Currently, the following devices are approved by the CloudWalk Framework: Verifone Verix Line, Verifone Evo Line, Ingenico Telium 2 Line.'
       overview:
         paragraph_1: The CloudWalk Framework, installed directly on the device, is a virtual machine that has the ability to interpret the commands of the POSXML language.
@@ -3384,17 +3384,17 @@ en:
       device:
         question_1: "How do I setup the device communication?"
         answer_1:
-          paragraph_1: "There's an interactive wizard that will guide you through the whole setup process:"
+          paragraph_1: "There is an interactive wizard that will guide you through the whole setup process:"
           paragraph_2: "First, press the device <strong>Function</strong> button (<span class='code'>F</span> for Ingenico, <span class='code'>F1</span> for Verifone);"
           paragraph_3: "Enter the password (default is <span class='code'>55555</span>);"
           paragraph_4: "On the setup menu, select the option <strong>DEVICE SETTINGS</strong>;"
           paragraph_5: "Then select the option <strong>COMMUNICATION</strong>;"
-          paragraph_6: "Now you can choose the communication type and fill in the requested information."
-        question_2: "Can I add new files (images, text, etc) to a device?"
+          paragraph_6: "Now you can choose the communication type and fill in the required information."
+        question_2: "Can I add new files (images, text, etc.) to a device?"
         answer_2:
           paragraph_1: "Yes. This process can be done in four steps:"
           paragraph_2: "Go to the <a href='https://manager.cloudwalk.io/files'>File management</a> section and upload the files;"
-          paragraph_3: "Go to the <a href='https://manager.cloudwalk.io/apps/posxml'>Application management</a> and <strong>edit</strong> the application that will make use of those files;"
+          paragraph_3: "Go to the <a href='https://manager.cloudwalk.io/apps/posxml'>Application management</a> section and <strong>edit</strong> the application that will make use of those files;"
           paragraph_4: "Check the files on the <strong>Application files</strong> list and update the app;"
           paragraph_5: "Now, assuming that your device is associated with the app that you've just added the files, you can update your device and the new files will be downloaded."
         question_3: "How do I clean a device?"
@@ -3403,13 +3403,13 @@ en:
           paragraph_2: "Enter the password (default is <span class='code'>55555</span>);"
           paragraph_3: "On the setup menu, select the option <strong>CLOUDWALK</strong>;"
           paragraph_4: "Then select the option <strong>DELETE APPS</strong>."
-        question_4: "What is the best suitable device for my needs?"
-        answer_4: "That depends on the project, but in general, before purchasing a device, make sure that it meets the project requirements. For example, if mobility is an important factor, a device with <strong>GPRS</strong> should be considered. It's also necessary to be sure that the device is compatible with CloudWalk."
+        question_4: "What is the most suitable device for my needs?"
+        answer_4: "That depends on the project, but in general, before purchasing a device, make sure that it meets the project requirements. For example, if mobility is an important factor, a device with <strong>GPRS</strong> should be considered. It's also necessary to ensure that the device is compatible with CloudWalk."
         question_5: "Which devices are compatible with CloudWalk?"
         answer_5: "Check out the <a href='https://docs.cloudwalk.io/en/introduction/framework#approved-devices'>approved devices list</a>."
         question_6: "Is it possible to have many applications on the same device?"
         answer_6:
-          paragraph_1: "Yes, that's perfectly possible, since CloudWalk devices are prepared to handle any amount of POSXML applications. If a device was configured to have access to a single application, when the <strong>green</strong> button is pressed, that application is automatically started. However, if the device have access to multiple applications, when the <strong>green</strong> button is pressed, a menu listing all the applications is displayed, so you can choose one of them to start."
+          paragraph_1: "Yes, that's perfectly possible, since CloudWalk devices are prepared to handle multiple POSXML applications. If a device was configured to have access to a single application, when the <strong>green</strong> button is pressed, that application is automatically started. However, if the device have access to multiple applications, when the <strong>green</strong> button is pressed, a menu listing all of the applications is displayed, so you can choose one of them to start."
           paragraph_2: "The <a href='https://manager.cloudwalk.io/groups'>Group management</a> section defines which applications should be accessible to a group. After configuring a group, any amount of logical numbers can be assigned to that group, through the <a href='https://manager.cloudwalk.io/logical-numbers'>Logical numbers</a> section."
         question_7: "How do I setup a basic integration between my device and an endpoint?"
         answer_7: "Check out the <a href='https://docs.cloudwalk.io/en/integration/http'>HTTP integration example</a>."
@@ -3426,7 +3426,7 @@ en:
           paragraph_5: "The serial number registration is done through the <a href='https://manager.cloudwalk.io/devices'>Device management</a> section."
         question_11: "How do I reset the certificate already installed on Verifone EVO terminals?"
         answer_11: "Get in touch with your POS terminal supplier and request a reset file, which then can be used to reset the certificate."
-        question_12: "What may be preventing the device to download a new file?"
+        question_12: "What may be preventing the device from downloading a new file?"
         answer_12:
           paragraph_1: "Check the following points:"
           paragraph_2: "If it's an application or module, certify that the deploy was successful;"
@@ -3452,7 +3452,7 @@ en:
         question_7: "Is there a sample bitmap.dat file for ISO8583 transactions?"
         answer_7: "Yes, there is a <a href='https://dl.dropboxusercontent.com/u/436039/cloudwalk/util/iso8583/bitmap.dat'>sample bitmap.dat file</a> which you can use as an entry point, but you should check and update the parameters and the type of each bit according to your ISO8583 host specification before downloading it to your devices."
         question_8: "Is there a comprehensive list of POSXML commands?"
-        answer_8: "Yes, there's a <a href='https://docs.cloudwalk.io/en/posxml/commands'>comprehensive list</a> of POSXML commands. However, if you are having a hard time to figure out how to tackle a specific situation, <a href='https://www.cloudwalk.io/contact'>drop us a note</a> and we will help you out."
+        answer_8: "Yes, there is a <a href='https://docs.cloudwalk.io/en/posxml/commands'>comprehensive list</a> of POSXML commands. However, if you are having a hard time to figure out how to tackle a specific situation, <a href='https://www.cloudwalk.io/contact'>drop us a note</a> and we will help you out."
         question_9: "How do I set a custom background image on my device home screen?"
         answer_9:
           paragraph_1: "Due the diversity of all CloudWalk supported devices, to use a custom background image, it is necessary to follow a set of rules in order to achieve the best results for a given device."

@@ -440,16 +440,14 @@ h2.command-header{
 
 .verix, .evo{
   height: 200px;
-  border: 8px solid #597F3F;
-  background-color: #709D52;
-  text-shadow: #94BF77 1px 1px 1px;
+  border: 8px solid #292626;
+  background-color: #FFFAEB;
   color: #333;
 }
 
 .verix pre, .evo pre{
   border: none;
-  background-color: #709D52;
-  text-shadow: #94BF77 1px 1px 1px;
+  background-color: #FFFAEB;
   color: #333;
   font-size: 19px;
 }
