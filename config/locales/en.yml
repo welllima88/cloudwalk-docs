@@ -69,7 +69,7 @@ en:
     customizing_an_app:
       title: "CloudWalk CLI - Customizing an app"
       description: "Learn how to customize a Ruby application with the CloudWalk CLI"
-      introduction: "This guide will walk you through the process of customizing a Ruby application with the CloudWalk CLI. Be aware of the prerequisites and follow the installation process carefully."
+      introduction: "This guide will walk you through the process of customizing a Ruby application with the CloudWalk CLI. Be aware of the prerequisites and follow all the steps carefully."
       table_of_contents:
         prerequisites: "Prerequisites"
         settings: "Settings"
