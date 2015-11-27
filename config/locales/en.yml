@@ -48,7 +48,7 @@ en:
     creating_a_new_app:
       title: "CloudWalk CLI - Creating a new app"
       description: "Learn how to create a new Ruby application with the CloudWalk CLI"
-      introduction: "This guide will walk you through the process of creating and emulating a new Ruby application using the CloudWalk CLI. Be aware of the prerequisites and follow the installation process carefully."
+      introduction: "This guide will walk you through the process of creating and emulating a new Ruby application using the CloudWalk CLI. Be aware of the prerequisites and follow all the steps carefully."
       table_of_contents:
         prerequisites: "Prerequisites"
         creating_the_new_app: "Creating the new app"
