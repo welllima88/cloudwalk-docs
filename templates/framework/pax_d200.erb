@@ -1,0 +1,80 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('framework.pax_d200.description') %>">
+<% end %>
+
+<h1><%= I18n.t("framework.pax_d200.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#pre-requisites"><%= I18n.t("framework.pax_d200.table_of_contents.prerequisites") %></a></li>
+  <li><a href="#preparing-the-device"><%= I18n.t("framework.pax_d200.table_of_contents.preparing_the_device") %></a></li>
+  <li><a href="#loading-the-framework"><%= I18n.t("framework.pax_d200.table_of_contents.loading_the_framework") %></a></li>
+  <li><a href="#first-launch"><%= I18n.t("framework.first_launch.title") %></a></li>
+</ol>
+
+<p class="note"><%= I18n.t("framework.pax_d200.linux.note") %></p>
+
+<p><%= I18n.t("framework.pax_d200.introduction") %></p>
+
+<h2 id="pre-requisites"><%= I18n.t("framework.pax_d200.table_of_contents.prerequisites") %></h2>
+
+<ol>
+  <li><%= I18n.t("framework.pax_d200.prerequisites.operating_system") %></li>
+  <li><%= I18n.t("framework.pax_d200.prerequisites.cable") %></li>
+  <li><%= I18n.t("framework.pax_d200.prerequisites.software")%></li>
+  <li><%= I18n.t("framework.package.select") %></li>
+</ol>
+
+<%= partial :'framework/package', :locals => { :device_brand => "pax", :device_model => "d200", :device_interface => "default", :device_signature => "none" } %>
+
+<h2 id="preparing-the-device"><%= I18n.t("framework.pax_d200.table_of_contents.preparing_the_device") %></h2>
+
+<ol>
+  <li><%= I18n.t("framework.pax_d200.preparing_the_device.paragraph_1") %></li>
+  <li><%= I18n.t("framework.pax_d200.preparing_the_device.paragraph_2") %></li>
+  <li><%= I18n.t("framework.pax_d200.preparing_the_device.paragraph_3") %></li>
+  <li><%= I18n.t("framework.pax_d200.preparing_the_device.paragraph_4") %></li>
+</ol>
+
+<div class="pos">
+<pre>
+      MAIN MENU
+
+1. System Config
+2. Module Test
+3. Terminal Info
+4. PED
+</pre>
+</div>
+
+<h2 id="loading-the-framework"><%= I18n.t("framework.pax_d200.table_of_contents.loading_the_framework") %></h2>
+
+<ol>
+  <li><%= I18n.t("framework.pax_d200.loading_the_framework.paragraph_1") %></li>
+  <li><%= I18n.t("framework.pax_d200.loading_the_framework.paragraph_2") %></li>
+  <li><%= I18n.t("framework.pax_d200.loading_the_framework.paragraph_3") %></li>
+  <li><%= I18n.t("framework.pax_d200.loading_the_framework.paragraph_4") %></li>
+</ol>
+
+<img src="/img/pax-d200/term_assist-step1.jpg" class="img-tutorial img-polaroid" alt="PAX D200" />
+
+<ol start="5">
+  <li><%= I18n.t("framework.pax_d200.loading_the_framework.paragraph_5") %></li>
+</ol>
+
+<img src="/img/pax-d200/term_assist-step2.jpg" class="img-tutorial img-polaroid" alt="PAX D200" />
+
+<ol start="6">
+  <li><%= I18n.t("framework.pax_d200.loading_the_framework.paragraph_6") %></li>
+</ol>
+
+<img src="/img/pax-d200/term_assist-step3.jpg" class="img-tutorial img-polaroid" alt="PAX D200" />
+
+<h2 id="first-launch"><%= I18n.t("framework.first_launch.title") %></h2>
+
+<p><%= I18n.t("framework.first_launch.after_install") %></p>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to(I18n.t("menu.framework.first_launch") + " &rarr;", "framework/first-launch") %>
+  </li>
+</ul>

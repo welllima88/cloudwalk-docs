@@ -1,0 +1,124 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('framework.ingenico_telium_1.description') %>">
+<% end %>
+
+<h1><%= I18n.t("framework.ingenico_telium_1.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#pre-requisites"><%= I18n.t("framework.ingenico_telium_1.table_of_contents.prerequisites") %></a></li>
+  <li><a href="#wiping-the-pos"><%= I18n.t("framework.ingenico_telium_1.table_of_contents.wiping_the_device") %></a></li>
+  <li><a href="#preparing-the-pendrive"><%= I18n.t("framework.ingenico_telium_1.table_of_contents.preparing_the_pendrive") %></a></li>
+  <li><a href="#loading-the-framework"><%= I18n.t("framework.ingenico_telium_1.table_of_contents.loading_the_framework") %></a></li>
+  <li><a href="#troubleshooting"><%= I18n.t("troubleshooting") %></a></li>
+  <li><a href="#first-launch"><%= I18n.t("framework.first_launch.title") %></a></li>
+</ol>
+
+<p><%= I18n.t("framework.ingenico_telium_1.introduction") %></p>
+
+<p class="note"><%= I18n.t("framework.ingenico_telium_1.deprecated") %></p>
+
+<h2 id="pre-requisites"><%= I18n.t("framework.ingenico_telium_1.table_of_contents.prerequisites") %></h2>
+
+<ol>
+  <li><%= I18n.t("framework.ingenico_telium_1.prerequisites.operating_system") %></li>
+  <li><%= I18n.t("framework.ingenico_telium_1.prerequisites.pendrive") %></li>
+  <li><%= I18n.t("framework.ingenico_telium_1.prerequisites.adapter") %></li>
+  <li><%= I18n.t("framework.package.select") %></li>
+</ol>
+
+<%= partial :'framework/package', :locals => { :device_brand => "ingenico", :device_model => "telium-1", :device_interface => "default", :device_signature => check_param(@params, "signature", ["paytec", "tefti"]) } %>
+
+<h2 id="wiping-the-pos"><%= I18n.t("framework.ingenico_telium_1.table_of_contents.wiping_the_device") %></h2>
+
+<p><%= I18n.t("framework.ingenico_telium_1.wiping_the_device.paragraph_1") %></p>
+
+<div class="pos">
+<pre>
+---
+
+U44
+</pre>
+</div>
+
+<p><%= I18n.t("framework.ingenico_telium_1.wiping_the_device.paragraph_2") %></p>
+
+<div class="pos">
+<pre>
+Download menu
+Diagnosis menu
+&gt;&gt;Delete menu&lt;&lt;
+Parameters menu
+</pre>
+</div>
+
+<p><%= I18n.t("framework.ingenico_telium_1.wiping_the_device.paragraph_3") %></p>
+
+<div class="pos">
+<pre>
+&gt;&gt;Delete application&lt;&lt;
+Delete library
+Delete Data file
+</pre>
+</div>
+
+<p><%= I18n.t("framework.ingenico_telium_1.wiping_the_device.paragraph_4") %></p>
+
+<p class="note"><%= I18n.t("framework.ingenico_telium_1.wiping_the_device.paragraph_5") %></p>
+
+<h2 id="preparing-the-pendrive"><%= I18n.t("framework.ingenico_telium_1.table_of_contents.preparing_the_pendrive") %></h2>
+
+<p><%= I18n.t("framework.ingenico_telium_1.preparing_the_pendrive.paragraph_1") %></p>
+
+<ol>
+  <li><%= I18n.t("framework.ingenico_telium_1.preparing_the_pendrive.paragraph_2") %></li>
+  <li><%= I18n.t("framework.ingenico_telium_1.preparing_the_pendrive.paragraph_3") %></li>
+  <li><%= I18n.t("framework.ingenico_telium_1.preparing_the_pendrive.paragraph_4") %></li>
+  <li><%= I18n.t("framework.ingenico_telium_1.preparing_the_pendrive.paragraph_5") %></li>
+</ol>
+
+<h2 id="loading-the-framework"><%= I18n.t("framework.ingenico_telium_1.table_of_contents.loading_the_framework") %></h2>
+
+<p><%= I18n.t("framework.ingenico_telium_1.loading_the_framework.paragraph_1") %></p>
+
+<img src="/img/ingenico-telium-1/sagem_eft930s.png" class="img-tutorial img-polaroid" alt="Ingenico Telium 1 EFT930S USB" />
+
+<p><%= I18n.t("framework.ingenico_telium_1.loading_the_framework.paragraph_2") %></p>
+
+<ol>
+  <li><%= I18n.t("framework.ingenico_telium_1.loading_the_framework.paragraph_3") %></li>
+  <li><%= I18n.t("framework.ingenico_telium_1.loading_the_framework.paragraph_4") %></li>
+  <li><%= I18n.t("framework.ingenico_telium_1.loading_the_framework.paragraph_5") %></li>
+</ol>
+
+<p><%= I18n.t("framework.ingenico_telium_1.loading_the_framework.paragraph_6") %></p>
+
+<div class="pos">
+<pre>
+WALK
+Software activate
+
+</pre>
+</div>
+
+<p><%= I18n.t("framework.ingenico_telium_1.loading_the_framework.paragraph_7") %></p>
+
+<h2 id="troubleshooting"><%= I18n.t("troubleshooting") %></h2>
+
+<h3><%= I18n.t("framework.ingenico_telium_1.troubleshooting.one.title") %></h3>
+<ol>
+  <li><%= I18n.t("framework.ingenico_telium_1.troubleshooting.one.paragraph_1") %></li>
+  <li><%= I18n.t("framework.ingenico_telium_1.troubleshooting.one.paragraph_2") %></li>
+</ol>
+
+<h3><%= I18n.t("framework.ingenico_telium_1.troubleshooting.two.title") %></h3>
+<p><%= I18n.t("framework.ingenico_telium_1.troubleshooting.two.paragraph_1") %></p>
+
+<h2 id="first-launch"><%= I18n.t("framework.first_launch.title") %></h2>
+
+<p><%= I18n.t("framework.first_launch.after_install") %></p>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to(I18n.t("menu.framework.first_launch") + " &rarr;", "framework/first-launch") %>
+  </li>
+</ul>

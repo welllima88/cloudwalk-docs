@@ -56,7 +56,7 @@ Additional information:
   - Alternate text (`alt`): A short and descriptive text (I18n'ed, when necessary)
   - CSS: The class `img-polaroid` should be used
 
-Example: [https://docs.cloudwalk.io/en/development-environment/overview](https://docs.cloudwalk.io/en/development-environment/overview)
+Example: [https://docs.cloudwalk.io/en/ide/overview](https://docs.cloudwalk.io/en/ide/overview)
 
 #### Image internationalization
 
@@ -65,7 +65,7 @@ Just like texts, images with text should also be internationalizationed (two dif
 Example:
 
 ```erb
-<img src="/img/<%= I18n.locale %>/walk-manager/api-token.png" class="img-polaroid" alt="Developer API" />
+<img src="/img/<%= I18n.locale %>/manager/api-token.png" class="img-polaroid" alt="Developer API" />
 ```
 
 The above definition can result on two different paths: Portuguese (`/img/pt-BR/...`) or English (`/img/en/...`).

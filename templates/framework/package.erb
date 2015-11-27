@@ -1,35 +1,36 @@
 <div class="package">
   <div>
-    <label class="control-label" for="brand"><%= I18n.t("walk_framework.package.device.brand") %></label>
+    <label class="control-label" for="brand"><%= I18n.t("framework.package.device.brand") %></label>
     <select name="brand" id="brand" class="input-medium">
       <%= option_select "verifone", "Verifone", device_brand %>
       <%= option_select "ingenico", "Ingenico", device_brand %>
+      <%= option_select "pax", "PAX", device_brand %>
     </select>
   </div>
 
   <div>
-    <label class="control-label" for="model"><%= I18n.t("walk_framework.package.device.model") %></label>
+    <label class="control-label" for="model"><%= I18n.t("framework.package.device.model") %></label>
     <select name="model" id="model" class="input-medium">
 
     </select>
   </div>
 
   <div id="signature-container" class="disabled">
-    <label class="control-label" for="signature"><%= I18n.t("walk_framework.package.device.signature") %></label>
+    <label class="control-label" for="signature"><%= I18n.t("framework.package.device.signature") %></label>
     <select name="signature" id="signature" class="input-medium" disabled>
       <%= option_select "none", "", device_signature %>
-      <%= option_select "paytec", I18n.t("walk_framework.package.supplier.paytec"), device_signature %>
-      <%= option_select "tefti", I18n.t("walk_framework.package.supplier.tefti"), device_signature %>
-      <%= option_select "bin", I18n.t("walk_framework.package.supplier.other"), device_signature %>
+      <%= option_select "paytec", I18n.t("framework.package.supplier.paytec"), device_signature %>
+      <%= option_select "tefti", I18n.t("framework.package.supplier.tefti"), device_signature %>
+      <%= option_select "bin", I18n.t("framework.package.supplier.other"), device_signature %>
     </select>
   </div>
 
   <br/>
 
-  <p><%= I18n.t("walk_framework.package.selected") %> <span id="package-info"></span></p>
+  <p><%= I18n.t("framework.package.selected") %> <span id="package-info"></span></p>
   <br/>
-  <a href="#" id="file-request" class="btn btn-success"><%= I18n.t("walk_framework.package.download") %></a>
-  <a href="#" id="open-guide" class="btn btn-info" style="display: none"><%= I18n.t("walk_framework.package.open_url") %></a>
+  <a href="#" id="file-request" class="btn btn-success"><%= I18n.t("framework.package.download") %></a>
+  <a href="#" id="open-guide" class="btn btn-info" style="display: none"><%= I18n.t("framework.package.open_url") %></a>
   <p class="models">Modelos suportados: Vx 510, Vx 610 e Vx 670</p>
 </div>
 
@@ -111,7 +112,9 @@
     if(sbrand == 'verifone'){
       $('#model').append(new Option('Evo', 'evo'));
       $('#model').append(new Option('Verix', 'verix'));
-    } else {
+    } else if (sbrand == 'pax') {
+      $('#model').append(new Option('D200', 'd200'));
+    }else {
       $('#model').append(new Option('Telium 1', 'telium-1'));
       $('#model').append(new Option('Telium 2', 'telium-2'));
     }
@@ -135,23 +138,26 @@
   }
 
   function set_models_list(){
-    var list = '<%= I18n.t("walk_framework.package.models.list") %>';
+    var list = '<%= I18n.t("framework.package.models.list") %>';
 
     switch($('#model').val()){
     case 'verix':
-      list += '<%= I18n.t("walk_framework.package.models.verix") %>';
+      list += '<%= I18n.t("framework.package.models.verix") %>';
       break;
     case 'evo':
       if(interface == 'usb')
-        list += '<%= I18n.t("walk_framework.package.models.evo_usb") %>';
+        list += '<%= I18n.t("framework.package.models.evo_usb") %>';
       else
-        list += '<%= I18n.t("walk_framework.package.models.evo_serial") %>';
+        list += '<%= I18n.t("framework.package.models.evo_serial") %>';
       break;
     case 'telium-1':
-      list += '<%= I18n.t("walk_framework.package.models.telium_1") %>';
+      list += '<%= I18n.t("framework.package.models.telium_1") %>';
       break;
     case 'telium-2':
-      list += '<%= I18n.t("walk_framework.package.models.telium_2") %>';
+      list += '<%= I18n.t("framework.package.models.telium_2") %>';
+      break;
+    case 'd200':
+      list += '<%= I18n.t("framework.package.models.d200") %>'
       break;
     }
 
@@ -163,9 +169,9 @@
       return;
 
     if(sbrand == 'ingenico' && ssignature != 'none'){
-      return '/<%= I18n.locale %>/walk-framework/' + sbrand + '-' + smodel + '?signature=' + ssignature;
+      return '/<%= I18n.locale %>/framework/' + sbrand + '-' + smodel + '?signature=' + ssignature;
     } else {
-      return '/<%= I18n.locale %>/walk-framework/' + sbrand + '-' + smodel;
+      return '/<%= I18n.locale %>/framework/' + sbrand + '-' + smodel;
     }
   }
 
@@ -209,13 +215,16 @@
   function signature_info(package){
     switch($('#signature').val()){
     case 'tefti':
-      return package + ' <%= I18n.t("walk_framework.package.with_signature") %> ' + 'TEFTI (Brasil)';
+      return package + ' <%= I18n.t("framework.package.with_signature") %> ' + 'TEFTI (Brasil)';
       break;
     case 'paytec':
-      return package + ' <%= I18n.t("walk_framework.package.with_signature") %> ' + 'Paytec (Brasil)';
+      return package + ' <%= I18n.t("framework.package.with_signature") %> ' + 'Paytec (Brasil)';
+      break;
+    case 'pax':
+      return package + ' <%= I18n.t("ramework.package.with_signature") %> ' + 'PAX (Brasil)';
       break;
     default:
-      return '<%= I18n.t("walk_framework.package.binary") %> ' + package + ' (<%= I18n.t("walk_framework.package.unsigned") %>)';
+      return '<%= I18n.t("framework.package.binary") %> ' + package + ' (<%= I18n.t("framework.package.unsigned") %>)';
     }
   }
 

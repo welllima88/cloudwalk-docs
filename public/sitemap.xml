@@ -10,15 +10,15 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/introduction/walk-framework</loc>
+  <loc>https://docs.cloudwalk.io/en/introduction/framework</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/introduction/walk-manager</loc>
+  <loc>https://docs.cloudwalk.io/en/introduction/manager</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/introduction/development-environment</loc>
+  <loc>https://docs.cloudwalk.io/en/introduction/ide</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -30,63 +30,71 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-framework/verifone-evo</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/verifone-evo</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-framework/verifone-verix</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/verifone-verix</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-framework/ingenico-telium-1</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/ingenico-telium-1</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-framework/ingenico-telium-2</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/ingenico-telium-2</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-framework/first-launch</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/pax-d200</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-framework/configuration</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/pax-d200-linux</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-manager/apps</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/first-launch</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-manager/devices</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/configuration</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-manager/logical-numbers</loc>
+  <loc>https://docs.cloudwalk.io/en/manager/apps</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-manager/groups</loc>
+  <loc>https://docs.cloudwalk.io/en/manager/devices</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-manager/assets</loc>
+  <loc>https://docs.cloudwalk.io/en/manager/logical-numbers</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-manager/push-notifications</loc>
+  <loc>https://docs.cloudwalk.io/en/manager/groups</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-manager/transactions-monitor</loc>
+  <loc>https://docs.cloudwalk.io/en/manager/assets</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/development-environment/overview</loc>
+  <loc>https://docs.cloudwalk.io/en/manager/push-notifications</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/development-environment/emulator</loc>
+  <loc>https://docs.cloudwalk.io/en/manager/transactions-monitor</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://docs.cloudwalk.io/en/ide/overview</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://docs.cloudwalk.io/en/ide/emulator</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -190,11 +198,11 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-framework/verifone-evo-vx805</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/verifone-evo-vx805</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/en/walk-framework/configuration/change-password</loc>
+  <loc>https://docs.cloudwalk.io/en/framework/configuration/change-password</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -718,15 +726,15 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/introduction/walk-framework</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/introduction/framework</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/introduction/walk-manager</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/introduction/manager</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/introduction/development-environment</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/introduction/ide</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -738,63 +746,71 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-framework/verifone-evo</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/verifone-evo</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-framework/verifone-verix</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/verifone-verix</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-framework/ingenico-telium-1</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/ingenico-telium-1</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-framework/ingenico-telium-2</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/ingenico-telium-2</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-framework/first-launch</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/pax-d200</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-framework/configuration</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/pax-d200-linux</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-manager/apps</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/first-launch</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-manager/devices</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/configuration</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-manager/logical-numbers</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/manager/apps</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-manager/groups</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/manager/devices</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-manager/assets</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/manager/logical-numbers</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-manager/push-notifications</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/manager/groups</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-manager/transactions-monitor</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/manager/assets</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/development-environment/overview</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/manager/push-notifications</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/development-environment/emulator</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/manager/transactions-monitor</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://docs.cloudwalk.io/pt-BR/ide/overview</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://docs.cloudwalk.io/pt-BR/ide/emulator</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
@@ -898,11 +914,11 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-framework/verifone-evo-vx805</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/verifone-evo-vx805</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://docs.cloudwalk.io/pt-BR/walk-framework/configuration/change-password</loc>
+  <loc>https://docs.cloudwalk.io/pt-BR/framework/configuration/change-password</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>

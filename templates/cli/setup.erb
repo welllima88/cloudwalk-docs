@@ -1,0 +1,109 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('cli.setup.description') %>">
+<% end %>
+
+<h1><%= I18n.t("cli.setup.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#pre-requisites"><%= I18n.t("cli.setup.table_of_contents.prerequisites") %></a></li>
+  <li><a href="#installing"><%= I18n.t("cli.setup.table_of_contents.installing") %></a></li>
+  <li><a href="#commands"><%= I18n.t("cli.setup.table_of_contents.commands") %></a></li>
+</ol>
+
+<p><%= I18n.t("cli.setup.introduction") %></p>
+
+<h2 id="pre-requisites"><%= I18n.t("cli.setup.table_of_contents.prerequisites") %></h2>
+
+<p><strong><%= I18n.t("cli.setup.for_windows_users") %></strong></p>
+
+<ol>
+  <li><%= I18n.t("cli.setup.prerequisites.installer") %> <a href="https://dl.cloudwalk.io/cli/install.exe" target="_blank" class='external'>https://dl.cloudwalk.io/cli/install.exe</a></li>
+</ol>
+
+<p><strong><%= I18n.t("cli.setup.for_windows_unix_like") %></strong></p>
+
+<ol>
+  <li>Git - <%= I18n.t("cli.setup.prerequisites.more_info") %> <a href="http://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank" class='external'>http://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></li>
+  <li>Ruby - <%= I18n.t("cli.setup.prerequisites.more_info") %> <a href="https://www.ruby-lang.org/en/documentation/installation" target="_blank" class='external'>https://www.ruby-lang.org/en/documentation/installation</a></li>
+</ol>
+
+<h2 id="installing"><%= I18n.t("cli.setup.table_of_contents.installing") %></h2>
+
+<p><strong><%= I18n.t("cli.setup.for_windows_users") %></strong></p>
+
+<p><%= I18n.t("cli.setup.installing.paragraph_1") %></p>
+
+<p><strong><%= I18n.t("cli.setup.for_windows_unix_like") %></strong></p>
+
+<p><%= I18n.t("cli.setup.installing.paragraph_2") %></p>
+
+<%= embed_posxml_code("fc9b434965e6274ed7fa") %>
+
+<hr>
+
+<p><%= I18n.t("cli.setup.installing.paragraph_3") %></p>
+
+<pre><code><b>$ cloudwalk signup</b>
+Welcome!
+You're about to create a new cloudwalk account.
+Please answer the following questions...
+Your name (optional): Mr Tester
+Your email: your-email@domain.com
+Your password:
+Success!
+Now access your account with <span style="color:#0ad">cloudwalk login</span>
+</code></pre>
+
+<p><%= I18n.t("cli.setup.installing.paragraph_4") %></p>
+
+<pre><code><b>$ cloudwalk login</b>
+Enter your email: your-email@domain.com
+Enter your password:
+Logged in as <span style="color:#0ad">your-email@domain.com.
+</span></code></pre>
+
+<h2 id="commands"><%= I18n.t("cli.setup.table_of_contents.commands") %></h2>
+
+<p><%= I18n.t("cli.setup.installing.paragraph_5") %></p>
+<br>
+
+<table class="table table-hover">
+  <tbody>
+  <tr>
+    <td style="width:20%"><b>cloudwalk logout</b></td>
+    <td><%= I18n.t("cli.setup.commands.logout") %></td>
+  </tr>
+  <tr>
+    <td><b>cloudwalk apps</b></td>
+    <td><%= I18n.t("cli.setup.commands.apps") %></td>
+  </tr>
+  <tr>
+    <td><b>cloudwalk app</b></td>
+    <td><%= I18n.t("cli.setup.commands.app") %></td>
+  </tr>
+  <tr>
+    <td><b>cloudwalk keys</b></td>
+    <td><%= I18n.t("cli.setup.commands.keys") %></td>
+  </tr>
+  <tr>
+    <td><b>cloudwalk key</b></td>
+    <td><%= I18n.t("cli.setup.commands.key") %></td>
+  </tr>
+  <tr>
+    <td><b>cloudwalk logs</b></td>
+    <td><%= I18n.t("cli.setup.commands.logs") %></td>
+  </tr>
+  <tr>
+    <td><b>cloudwalk users</b></td>
+    <td><%= I18n.t("cli.setup.commands.users") %></td>
+  </tr>
+  </tbody>
+</table>
+
+<p class="note"><%= I18n.t("cli.setup.commands.note") %></p>
+
+<ul class="pager">
+  <li class="next">
+    <%= link_to(I18n.t("menu.cli.creating_a_new_app") + " &rarr;", "cli/creating-a-new-app") %>
+  </li>
+</ul>

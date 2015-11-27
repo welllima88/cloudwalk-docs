@@ -1,0 +1,34 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('introduction.manager.description') %>">
+<% end %>
+
+<h1><%= I18n.t("introduction.manager.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#overview"><%= I18n.t("introduction.manager.table_of_contents.overview") %></a></li>
+  <li><a href="#api"><%= I18n.t("introduction.manager.table_of_contents.api") %></a></li>
+  <li><a href="#how-to-access"><%= I18n.t("introduction.manager.table_of_contents.how_to_access") %></a></li>
+</ol>
+
+<h2 id="overview"><%= I18n.t("introduction.manager.table_of_contents.overview") %></h2>
+
+<p><%= I18n.t("introduction.manager.overview.paragraph_1") %></p>
+
+<h2 id="api"><%= I18n.t("introduction.manager.table_of_contents.api") %></h2>
+
+<p><%= I18n.t("introduction.manager.api.paragraph_1") %></p>
+
+<p><%= I18n.t("introduction.manager.api.paragraph_2") %> <%= link_to("Developer API", "api/overview") %>.</p>
+
+<h2 id="how-to-access"><%= I18n.t("introduction.manager.table_of_contents.how_to_access") %></h2>
+
+<p><%= I18n.t("introduction.manager.how_to_access.paragraph_1") %></p>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.understanding_the_service.framework"), "introduction/framework") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("menu.understanding_the_service.ide") + " &rarr;", "introduction/ide") %>
+  </li>
+</ul>

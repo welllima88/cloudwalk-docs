@@ -1,0 +1,162 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t('cli.customizing_an_app.description') %>">
+<% end %>
+
+<h1><%= I18n.t("cli.customizing_an_app.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#pre-requisites"><%= I18n.t("cli.customizing_an_app.table_of_contents.prerequisites") %></a></li>
+  <li><a href="#settings"><%= I18n.t("cli.customizing_an_app.table_of_contents.settings") %></a></li>
+  <li><a href="#source-code"><%= I18n.t("cli.customizing_an_app.table_of_contents.source_code") %></a></li>
+  <li><a href="#hello-world"><%= I18n.t("cli.customizing_an_app.table_of_contents.hello_world") %></a></li>
+</ol>
+
+<p><%= I18n.t("cli.customizing_an_app.introduction") %></p>
+
+<h2 id="pre-requisites"><%= I18n.t("cli.customizing_an_app.table_of_contents.prerequisites") %></h2>
+
+<ol>
+  <li><%= I18n.t("cli.customizing_an_app.prerequisites.previous_step") %> <%= link_to(I18n.t("menu.cli.creating_a_new_app"), "cli/creating-a-new-app") %></li>
+</ol>
+
+<h2 id="settings"><%= I18n.t("cli.customizing_an_app.table_of_contents.settings") %></h2>
+
+<p><%= I18n.t("cli.customizing_an_app.settings.paragraph_1") %></p>
+
+<pre><code><b>$ cloudwalk apps</b>
+Apps for tester@cloudwalk.io (tester@cloudwalk.io):
+Id              Name
+123             cloud-walking-1
+</code></pre>
+
+<p><%= I18n.t("cli.customizing_an_app.settings.paragraph_2") %></p>
+
+<pre><code><b>$ cloudwalk app edit cloud-walking-1</b>
+Getting the app details... <span style="color:#0d0">OK</span>
+Please specify the new values or click enter to keep the current ones.
+Authorizer's URL:
+Description: Test Application
+Name [cloud-walking-1]:
+POS Display Label:
+Updating the app <span style="color:#0ad">cloud-walking-1</span>... <span style="color:#0d0">OK</span>
+The application <span style="color:#0ad">cloud-walking-1</span> was updated.
+</code></pre>
+
+<p><%= I18n.t("cli.customizing_an_app.settings.paragraph_3") %></p>
+
+<pre><code><b>$ cloudwalk app show cloud-walking-1</b>
+Details of the app cloud-walking-1:
+
+id                      123
+name                    cloud-walking-1
+description             Test Application
+authorizer_url
+displayable             false
+pos_display_label
+crc                     1921
+size                    235
+bytecode
+updated_at              2015-02-05T11:30:50.172-02:00
+created_at              2015-02-05T11:30:04.404-02:00
+created_by              1
+created_via             api
+</code></pre>
+
+<h2 id="source-code"><%= I18n.t("cli.customizing_an_app.table_of_contents.source_code") %></h2>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_1") %></p>
+
+<pre><code><b>require</b> <span style="color:#0ad">'simplehttp'</span>
+
+<b>class</b> Main &lt; Device
+  <b>def</b> self.call
+    puts <span style="color:#0ad">"Hello CloudWalk!"</span>
+    getc
+    <span style="color:#0d0">true</span>
+  <b>end</b>
+
+  <b>def</b> self.foo
+    <span style="color:#0d0">:foo</span>
+  <b>end</b>
+
+  <b>def</b> self.version
+    <span style="color:#0ad">"0.0.1"</span>
+  <b>end</b>
+<b>end</b>
+</code></pre>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_2") %></p>
+
+<h3>require 'simplehttp'</h3>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_3") %></p>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_4") %></p>
+
+<h3>class Main < Device</h3>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_5") %></p>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_6") %></p>
+
+<h3>def self.call</h3>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_7") %></p>
+
+<h3>puts "Card..."</h3>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_8") %></p>
+
+<h3>getc</h3>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_9") %></p>
+
+<h3>true</h3>
+
+<p><%= I18n.t("cli.customizing_an_app.source_code.paragraph_10") %></p>
+
+<h2 id="hello-world"><%= I18n.t("cli.customizing_an_app.table_of_contents.hello_world") %></h2>
+
+<p><%= I18n.t("cli.customizing_an_app.hello_world.paragraph_1") %></p>
+
+<p><%= I18n.t("cli.customizing_an_app.hello_world.paragraph_2") %></p>
+
+<pre><code>puts <span style="color:#0ad">"Hello World! What's your name?"</span>
+name = gets
+name = name[<span style="color:#0d0">0</span>..-<span style="color:#0d0">2</span>] <span style="color:#999"># Removing the new line</span>
+puts <span style="color:#0ad">"Hello <span style="color:#a0d">#{name}</span>!!!"</span>
+</code></pre>
+
+<p><%= I18n.t("cli.customizing_an_app.hello_world.paragraph_3") %></p>
+
+<p><%= I18n.t("cli.customizing_an_app.hello_world.paragraph_4") %></p>
+
+<pre><code><b>require</b> <span style="color:#0ad">'simplehttp'</span>
+
+<b>class</b> Main &lt; Device
+  <b>def</b> self.call
+    puts <span style="color:#0ad">"Hello World! What's your name?"</span>
+    name = gets
+    name = name[<span style="color:#0d0">0</span>..-<span style="color:#0d0">2</span>] <span style="color:#999"># Removing the new line</span>
+    puts <span style="color:#0ad">"Hello <span style="color:#a0d">#{name}</span>!!!"</span>
+    <span style="color:#0d0">true</span>
+  <b>end</b>
+
+  <b>def</b> self.foo
+    <span style="color:#0d0">:foo</span>
+  <b>end</b>
+
+  <b>def</b> self.version
+    <span style="color:#0ad">"0.0.1"</span>
+  <b>end</b>
+<b>end</b>
+</code></pre>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.cli.creating_a_new_app"), "cli/creating-a-new-app") %>
+  </li>
+  <li class="next">
+    <%= link_to(I18n.t("menu.cli.deploying_an_app") + " &rarr;", "cli/deploying-an-app") %>
+  </li>
+</ul>
