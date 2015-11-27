@@ -100,7 +100,7 @@ en:
     deploying_an_app:
       title: "CloudWalk CLI - Deploying an app"
       description: "Learn how to deploy a Ruby application with the CloudWalk CLI"
-      introduction: "This guide will walk you through the process of deploying a Ruby application with the CloudWalk CLI. Be aware of the prerequisites and follow the installation process carefully."
+      introduction: "This guide will walk you through the process of deploying a Ruby application with the CloudWalk CLI. Be aware of the prerequisites and follow all the steps carefully."
       table_of_contents:
         prerequisites: "Prerequisites"
         deploying_with_git: "Deploying with Git"

@@ -100,19 +100,19 @@ pt-BR:
         paragraph_3: "Ao colocar esse código dentro do método <span class='code'>Main.call</span>, antes do <span class='code'>true</span> no final, a aplicação irá perguntar por um nome, e depois disso o nome será exibido na linha seguinte."
         paragraph_4: "Teste você mesmo! Faça as mudanças, execute <span class='code'>rake</span> e depois <span class='code'>cloudwalk emulate</span>. O arquivo <strong>main.rb</strong> deve ficar mais ou menos assim:"
     deploying_an_app:
-      title: "CloudWalk CLI - Deploying an app"
-      description: "Learn how to deploy a Ruby application with the CloudWalk CLI"
-      introduction: "This guide will walk you through the process of deploying a Ruby application with the CloudWalk CLI. Be aware of the prerequisites and follow the installation process carefully."
+      title: "CloudWalk CLI - Publicando uma app"
+      description: "Aprenda como publicar uma aplicação Ruby com a CloudWalk CLI"
+      introduction: "Este guia o conduzirá através do processo de publicação de uma aplicação Ruby através da CloudWalk CLI. Atente-se aos pré-requisitos e siga todos os passos com atenção."
       table_of_contents:
-        prerequisites: "Prerequisites"
-        deploying_with_git: "Deploying with Git"
+        prerequisites: "Pré-requisitos"
+        deploying_with_git: "Publicando com o Git"
       prerequisites:
-        previous_step: "This guide assumes that you have the CloudWalk CLI installed and a working Ruby application"
+        previous_step: "Este guia assume que você tem a CloudWalk CLI instalada e uma aplicação Ruby funcional"
       deploying_with_git:
-        paragraph_1: "When an app is created, it is initialized with a default structure to make it easy to see a proof of concept working, however this skeleton has not yet being pushed to CloudWalk."
-        paragraph_2: "Considering the application previously created and customized (cloud-walking-1), let's commit the changes:"
-        paragraph_3: "The code that is available in the repo was already added to the history of changes (just not pushed), so simply run <span class='code'>git push</span> - the output will look something like this:"
-        paragraph_4: "Once it finishes, the application will be built and deployed!"
+        paragraph_1: "Quando uma aplicação é criada, ela é inicializada com uma estrutura padrão, para facilitar a construção de provas de conceito, entretanto esta estrutura ainda não foi publicada na CloudWalk."
+        paragraph_2: "Baseado na aplicação previamente criada e customizada (cloud-walking-1), vamos então fazer o <em>commit</em> das alterações:"
+        paragraph_3: "O código disponível no repositório foi adicionado ao histórico de mudanças (mas ainda não foi publicado), execute então o comando para fazer a publicação: <span class='code'>git push</span>"
+        paragraph_4: "No final deste processo, a aplicação estará publicada!"
   api:
     description: Descrição
     method: Método e formato da URL
