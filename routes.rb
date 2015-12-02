@@ -83,7 +83,7 @@ class Routes
       # readcard
       "getcardvariable", "system.readcard", "system.inputtransaction",
       # ui
-      "menu", "menuwithheader", "displaybitmap", "display", "cleandisplay", "system.gettouchscreen",
+      "menu", "menuwithheader", "displaybitmap", "display", "cleandisplay", "system.gettouchscreen", "system.gettouchscreenkeyboard",
       # print
       "print", "printbig", "printbitmap", "printbarcode", "checkpaperout", "paperfeed",
       # input

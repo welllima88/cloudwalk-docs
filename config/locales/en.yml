@@ -2061,6 +2061,16 @@ en:
           parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/>1: display was pressed<br/> 0: display was not pressed'
         paragraph_2: In the example above, the command <strong>system.gettouchscreen</strong> will return in iXaxis the X coordinate and in iYaxis the Y coordinate of the point pressed on the display.
         paragraph_3: The while loop is to ensure that the display will continue to listen for a display press.
+      system_gettouchscreenkeyboard:
+        description: Wait for a TOUCHSCREEN or KEYBOARD event
+        paragraph_1: The command <span class='code'>system.gettouchscreenkeyboard</span> allows you to wait for a TOUCHSCREEN or KEYBOARD event.
+        parameters:
+          parameter_1: <strong>axisx</strong> <span class='data-type'>[integer]</span><br/>X-axis coordinate of the display, where the display was pressed.
+          parameter_2: <strong>axisy</strong> <span class='data-type'>[integer]</span><br/>Y-axis coordinate of the display, where the display was pressed.
+          parameter_3: <strong>variablekey</strong> <span class='data-type'>[string]</span><br/>The value of the key that was pressed.
+          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<br/>1: display was pressed<br/> 0: display was not pressed<br/> 2: keyboard key pressed<br/> 3: timeout'
+        paragraph_2: In the example above, the command <strong>system.gettouchscreenkeyboard</strong> will return in iX the X coordinate and in iY the Y coordinate of the point pressed on the display. If the user pressed the keyboard, the command will return in sKey the value of the keyboard key pressed.
+        paragraph_3: The command will return -1 in the event of a timeout.
       system_info:
         description: Gets device information (MAC Address, SIM ID, etc)
         paragraph_1: The command <span class='code'>system.info</span> is used to return information from the device.
