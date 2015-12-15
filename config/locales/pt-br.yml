@@ -31,8 +31,8 @@ pt-BR:
         installer: "Baixe o instalador disponível em:"
         more_info: "mais informações em:"
       installing:
-        paragraph_1: "Assumindo que o pacote de instalação (<a href='https://dl.cloudwalk.io/cli/install.exe' target='_blank' class='external'>setup.exe</a>) já foi baixado, basta clicar duas vezes no arquivo e seguir as instruções de instalação."
-        paragraph_2: "Assumindo que você já instalou o <a href='http://git-scm.com/book/en/v2/Getting-Started-Installing-Git' target='_blank' class='external'>Git</a> e o <a href='https://www.ruby-lang.org/en/documentation/installation' target='_blank' class='external'>Ruby</a>, digite no terminal (bash):"
+        paragraph_1: "Assumindo que o pacote de instalação (<a href='https://dl.cloudwalk.io/cli/install.exe' class='external'>setup.exe</a>) já foi baixado, basta clicar duas vezes no arquivo e seguir as instruções de instalação."
+        paragraph_2: "Assumindo que você já instalou o <a href='http://git-scm.com/book/en/v2/Getting-Started-Installing-Git' class='external'>Git</a> e o <a href='https://www.ruby-lang.org/en/documentation/installation' class='external'>Ruby</a>, digite no terminal (bash):"
         paragraph_3: "Ao finalizar a instalação, o comando <span class='code'>cloudwalk</span> estará disponível na interface de linha de comando. Caso você não tenha uma conta CloudWalk, você pode criar uma da seguinte forma:"
         paragraph_4: "Basta responder as perguntas e fazer o login:"
         paragraph_5: "Após acessar sua conta, comandos adicionais poderão ser executados:"
@@ -55,15 +55,15 @@ pt-BR:
         emulating: "Emulando"
       prerequisites:
         cli_is_installed: "A CloudWalk CLI esteja devidamente instalada"
-        git_is_configured: "O Git esteja configurado. Não tem certeza? Confira o seguinte artigo: <a href='https://help.github.com/articles/set-up-git' target='_blank' class='external'>https://help.github.com/articles/set-up-git</a>"
+        git_is_configured: "O Git esteja configurado. Não tem certeza? Confira o seguinte artigo: <a href='https://help.github.com/articles/set-up-git' class='external'>https://help.github.com/articles/set-up-git</a>"
       creating_the_new_app:
         paragraph_1: "Assuming that the CloudWalk CLI is installed and that Git is properly configure, let's run <span class='code'>cloudwalk app create</span>:"
         paragraph_1: "Assumindo que a CloudWalk CLI está instalada e que o Git está configurado, execute o comando <span class='code'>cloudwalk app create</span>:"
         paragraph_2: "Vamos entender exatamente o que ocorreu:"
         paragraph_3: "Sua chave SSH em <code>~/.ssh/id_rsa.pub</code> foi automaticamente adicionada na sua conta"
         paragraph_4: "Um nome randômico foi definido, já que um nome não foi especificado (veja <span class='code'>cloudwalk help app create</span>)"
-        paragraph_5: "A new folder was created with the new app name filled with the <a href='https://github.com/cloudwalkio/cloudwalk-skeleton' target='blank' class='external'>default app's</a> contents"
-        paragraph_5: "Uma nova pasta foi criada com o nome da aplicação e preenchida com o conteúdo da <a href='https://github.com/cloudwalkio/cloudwalk-skeleton' target='blank' class='external'>aplicação padrão</a>"
+        paragraph_5: "A new folder was created with the new app name filled with the <a href='https://github.com/cloudwalkio/cloudwalk-skeleton' class='external'>default app's</a> contents"
+        paragraph_5: "Uma nova pasta foi criada com o nome da aplicação e preenchida com o conteúdo da <a href='https://github.com/cloudwalkio/cloudwalk-skeleton' class='external'>aplicação padrão</a>"
       emulating:
         paragraph_1: "Com a aplicação criada, é possível emular a execução utilizando um dos seguintes comandos da CLI:"
         emulate: "Executa aplicações <strong>com</strong> o emulador gráfico. Uma nova janela será aberta com um dispositvo virtual com tela, botões e impressora. Utilize <span class='code'>cloudwalk help emulate</span> para aprender mais sobre este comando."
@@ -87,7 +87,7 @@ pt-BR:
         paragraph_1: "Uma aplicação nova possui o seguinte código fonte no aqruivo <strong>lib/main.rb</strong>:"
         paragraph_2: "Este código descreve alguns pontos importantes sobre o desenvolvimento de uma aplicação. Confira detalhadamente:"
         paragraph_3: "Esta é a forma como as gems são adicionadas. Se é Ruby, tem que ter gems!"
-        paragraph_4: "A gem <strong>simplehttp</strong> foi adicionada no arquivo <strong>Gemfile</strong> na raiz do projeto, e também é <a href='https://github.com/cloudwalkio/simplehttp' target='blank' class='external'>open source</a>. Se você for um programador Ruby experiente, isto é tudo que você precisa saber para começar a desenvolver suas próprias gems!"
+        paragraph_4: "A gem <strong>simplehttp</strong> foi adicionada no arquivo <strong>Gemfile</strong> na raiz do projeto, e também é <a href='https://github.com/cloudwalkio/simplehttp' class='external'>open source</a>. Se você for um programador Ruby experiente, isto é tudo que você precisa saber para começar a desenvolver suas próprias gems!"
         paragraph_5: "Este é ponto onde a classe Main é definida. Todas aplicações devem possuir a classe Main."
         paragraph_6: "Perceba que não necessariamente ela precisa herdar a classe Device. Opcionalmente você pode utilizar métodos da classe Device incluindo o nome da classe, por exemplo, ao invés de escrever puts, você escreveria <strong>Device.puts</strong>."
         paragraph_7: "Função que é chamada sempre que a aplicação é executada. Todas aplicações devem definir esta função. Atente-se ao fato que esta função é executada dentro de um <strong>loop</strong>, então leve isto em consideração."
@@ -524,7 +524,7 @@ pt-BR:
         path: PATH
         variables: VARIÁVEIS
       introduction:
-        paragraph_1: 'É possível integrar aplicações CloudWalk escritas em POSXML com APIs <a href="https://pt.wikipedia.org/wiki/REST" class="external" target="blank">REST</a>. Para isso, passa-se para o comando <a href="/posxml/commands/network.send" class="command">network.send</a> uma string no seguinte formato:'
+        paragraph_1: 'É possível integrar aplicações CloudWalk escritas em POSXML com APIs <a href="https://pt.wikipedia.org/wiki/REST" class="external">REST</a>. Para isso, passa-se para o comando <a href="/posxml/commands/network.send" class="command">network.send</a> uma string no seguinte formato:'
         paragraph_2: O Switch do CloudWalk recebe a requisição enviada pelo comando <a href='/pt-BR/posxml/commands/network.send' class='command'>network.send</a> e faz uma requisição HTTP na url definida na aplicação configurada no <a href='https://manager.cloudwalk.io'>https://manager.cloudwalk.io</a>.
         paragraph_3: Para receber a resposta do Switch do CloudWalk, é necessário utilizar o comando <a href='/pt-BR/posxml/commands/network.receive' class='command'>network.receive</a> para receber os primeiros 4 bytes, que indicam o tamanho da mensagem, e em seguida fazer uma nova chamada com comando <a href='/pt-BR/posxml/commands/network.receive' class='command'>network.receive</a>, recebendo o restante da mensagem. Esta abordagem evita possíveis <em>timeouts</em> e longos períodos de espera para receber a resposta do servidor HTTP.
       posxml_sample:
@@ -557,7 +557,7 @@ pt-BR:
         paragraph_2: Caso não tenha certeza dos passos acima, confira a seção <a href='/pt-BR/framework/configuration'>%{configuration}</a>
       sample:
         list:
-          item_1: '<strong>Conta no CloudWalk Manager: </strong>Crie uma gratuitamente em <a href="https://manager.cloudwalk.io" class="external" target="_blank">https://manager.cloudwalk.io</a>'
+          item_1: '<strong>Conta no CloudWalk Manager: </strong>Crie uma gratuitamente em <a href="https://manager.cloudwalk.io" class="external">https://manager.cloudwalk.io</a>'
           item_2: '<strong>CloudWalk Framework: </strong> Dispositivo devidamente instalado e configurado'
           item_3: '<strong>Acesso à internet: </strong> É necessário que o dispositivo tenha acesso a internet (Ethernet, Dial ou GPRS)'
         paragraph_1: Para fins de teste, disponibilizamos um host autorizador pronto para ser utilizado. O autorizador é extremamente simples, utilizado exclusivamente para fins de testes.
@@ -641,7 +641,7 @@ pt-BR:
         paragraph_2: Caso não tenha certeza dos passos acima, confira a seção <a href='/pt-BR/framework/configuration'>%{configuration}</a>
       sample:
         list:
-          item_1: '<strong>Conta no CloudWalk Manager: </strong>Crie uma gratuitamente em <a href="https://manager.cloudwalk.io" class="external" target="_blank">https://manager.cloudwalk.io</a>'
+          item_1: '<strong>Conta no CloudWalk Manager: </strong>Crie uma gratuitamente em <a href="https://manager.cloudwalk.io" class="external">https://manager.cloudwalk.io</a>'
           item_2: '<strong>CloudWalk Framework: </strong> Dispositivo devidamente instalado e configurado'
           item_3: '<strong>Acesso à internet: </strong> É necessário que o dispositivo tenha acesso a internet (Ethernet, Dial ou GPRS)'
         paragraph_1: Para fins de teste, disponibilizamos um host autorizador pronto para ser utilizado. O autorizador é extremamente simples, utilizado exclusivamente para fins de testes.
@@ -747,7 +747,7 @@ pt-BR:
       skeleton:
         paragraph_1: A CLI permite a criação de novas aplicações, que serão baseadas no <strong>cloudwalk-skeleton</strong>, que também é uma estrutura <a href='https://github.com/cloudwalkio/cloudwalk-skeleton'>open source</a>, e pode também ser útil para outros projetos. Seja criativo!
       mruby:
-        paragraph_1: Ruby é uma linguagem moderna, orientada a objetos e com várias características elegantes, com uma grande e entusiasmada comunidade para apoiar novas ideias, inclusive as suas! A linguagem Ruby é muito pesada para operar um terminal POS, e por este motivo, utilizamos <a href='http://www.mruby.org' class='external' target='blank'>MRuby</a>, que é uma versão reduzida do Ruby, destinada ao uso em sistemas embarcados.
+        paragraph_1: Ruby é uma linguagem moderna, orientada a objetos e com várias características elegantes, com uma grande e entusiasmada comunidade para apoiar novas ideias, inclusive as suas! A linguagem Ruby é muito pesada para operar um terminal POS, e por este motivo, utilizamos <a href='http://www.mruby.org' class='external'>MRuby</a>, que é uma versão reduzida do Ruby, destinada ao uso em sistemas embarcados.
     index:
       description: Open Payment Platform as a Service
       title: "Seja bem vindo!"
@@ -758,10 +758,10 @@ pt-BR:
         paragraph_1: "Veja como é fácil começar a utilizar a plataforma CloudWalk! Siga os passos abaixo e você terá uma simples aplicação rodando em um emulador, se comunicando com o nosso servidor (autorizador) de testes."
         h3_1: "1. Crie uma conta gratuita"
         paragraph_2: "Primeiramente, crie uma conta gratuita, a qual lhe permitirá conhecer todos os componentes da plataforma:"
-        paragraph_3: "<a href='https://manager.cloudwalk.io/users/sign_up' target='blank' class='external'>https://manager.cloudwalk.io/users/sign_up</a>"
+        paragraph_3: "<a href='https://manager.cloudwalk.io/users/sign_up' class='external'>https://manager.cloudwalk.io/users/sign_up</a>"
         h3_2: "2. Crie sua primeira aplicação"
         paragraph_4: "Agora que você já criou sua conta gratuita, você já pode criar a sua primeira aplicação:"
-        paragraph_5: "<a href='https://manager.cloudwalk.io/apps/posxml/new' target='blank' class='external'>https://manager.cloudwalk.io/apps/posxml/new</a>"
+        paragraph_5: "<a href='https://manager.cloudwalk.io/apps/posxml/new' class='external'>https://manager.cloudwalk.io/apps/posxml/new</a>"
         paragraph_6: "Vamos simplificar e criar uma aplicação que simplesmente envia uma string para o nosso servidor de testes (autorizador), que vai então retornar um eco."
         form:
           application_type_lbl: "Tipo de aplicação"
@@ -788,7 +788,7 @@ pt-BR:
         item_3: O <strong>Autorizador</strong> valida os dados e envia uma resposta ao <strong>Serviço CloudWalk</strong>;
         item_4: Por fim o <strong>Serviço CloudWalk</strong> repassa a resposta ao <strong>Dispositivo</strong>.
       more_info:
-        paragraph_1: O serviço CloudWalk é extremamente flexível quanto à comunicação entre os terminais POS e o autorizador. Aplicações financeiras utilizam por padrão o protocolo de comunicação <a href='http://pt.wikipedia.org/wiki/ISO_8583' target="blank" class="external">ISO 8583</a>, porém outros padrões podem ser utilizados.
+        paragraph_1: O serviço CloudWalk é extremamente flexível quanto à comunicação entre os terminais POS e o autorizador. Aplicações financeiras utilizam por padrão o protocolo de comunicação <a href='http://pt.wikipedia.org/wiki/ISO_8583' class="external">ISO 8583</a>, porém outros padrões podem ser utilizados.
         paragraph_2: A validação de transações é um passo importante, porque permite que um Emissor consiga verificar se o modo de pagamento utilizado é autêntico e se os dados (valor, data da transação, entre outros) recebidos pelo autorizador são os mesmos dados utilizados pelo meio de pagamento durante a realização da operação no dispositivo.
         paragraph_3: Além da validação dos dados gerados pela forma de pagamento, um autorizador também pode assinar a mensagem de resposta (por exemplo, “transação autorizada”) antes de enviá-la para o dispositivo. Assim, não só o autorizador pode autenticar o POS mas o POS também pode autenticar seu Emissor, o que garante ainda mais segurança ao longo deste processo.
         paragraph_4: O serviço CloudWalk oferece todas as ferramentas necessárias para o desenvolvimento de aplicações para os principais modelos de terminais POS do mercado, porém não desenvolve ou disponibiliza servidores de autorização.
@@ -800,7 +800,7 @@ pt-BR:
     posxml:
       description: Linguagem de programação usada para criar aplicações para um dispositivo.
       more_info:
-        paragraph_1: Saiba mais sobre a linguagem <a href='http://pt.wikipedia.org/wiki/POSXML' target='_blank' class='external'>POSXML</a> na Wikipedia!
+        paragraph_1: Saiba mais sobre a linguagem <a href='http://pt.wikipedia.org/wiki/POSXML' class='external'>POSXML</a> na Wikipedia!
       overview:
         paragraph_1: POSXML é o nome dado à linguagem de programação criada pela Plano Bê, destinada ao desenvolvimento de aplicativos para dispositivos móveis. A linguagem POSXML é formada por um conjunto de instruções, comandos e funções que a torna uma poderosa ferramenta de desenvolvimento de aplicativos.
         paragraph_2: Baseada na estrutura XML (acrônimo para eXtensible Markup Language), a linguagem POSXML é de fácil aprendizado, possui recursos matemáticos e recursos gráficos poderosos que permitem a criação de interfaces gráficas animadas, com ícones e animações.
@@ -1022,10 +1022,10 @@ pt-BR:
       displaybitmap:
         description: Exibe um bitmap monocromático no display do dispositivo
         paragraph_1: O comando <span class='code'>displaybitmap</span> é utilizado exibir um bitmap.
-        paragraph_2: No exemplo acima, será alterado a imagem referente ao plano de fundo da aplicação principal do dispositivo. Para exibir uma imagem no formato .bmp (bitmap monocromático) utilizando o comando <strong>displaybitmap</strong>, é necessário baixar o respectivo arquivo usando o comando <a href='downloadfile' class='command'>downloadfile</a>. O campo <strong>filename</strong>, deve conter o nome da imagem que ficará armazenada no dispositivo, já no campo <strong>remotepath</strong>, deve ser informado o nome da imagem ou arquivo armazenado no <a href='https://manager.cloudwalk.io' class='external' target='_blank'>CloudWalk Manager</a>.
+        paragraph_2: No exemplo acima, será alterado a imagem referente ao plano de fundo da aplicação principal do dispositivo. Para exibir uma imagem no formato .bmp (bitmap monocromático) utilizando o comando <strong>displaybitmap</strong>, é necessário baixar o respectivo arquivo usando o comando <a href='downloadfile' class='command'>downloadfile</a>. O campo <strong>filename</strong>, deve conter o nome da imagem que ficará armazenada no dispositivo, já no campo <strong>remotepath</strong>, deve ser informado o nome da imagem ou arquivo armazenado no <a href='https://manager.cloudwalk.io' class='external'>CloudWalk Manager</a>.
         paragraph_3: Neste caso não é preciso utilizar o comando <a href='display' class='command'>display</a> para exibir a imagem.
         paragraph_4: A variável <strong>iReturn</strong> irá armazenar o resultado do comando.
-        paragraph_5: 'As dimensões da imagem que será exibida, devem ser alinhados de acordo com a especificação e modelo do dispositvo utilizado. Confira uma imagem exemplo: <a href="http://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp" class="external" target="_blank">CloudWalk_Wallpaper</a>'
+        paragraph_5: 'As dimensões da imagem que será exibida, devem ser alinhados de acordo com a especificação e modelo do dispositvo utilizado. Confira uma imagem exemplo: <a href="http://dl.dropboxusercontent.com/u/436039/CLOUDWALK/img/walk.bmp" class="external">CloudWalk_Wallpaper</a>'
         parameters:
           parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variável que irá receber o retorno do comando.<ul><li>-2: bitmap não é monocromático</li><li>-1: tamanho de bitmap inválido</li><li>0: bitmap não encontrado</li><li>1: bitmap exibido com sucesso</li></ul>'
           parameter_2: <strong>filename</strong> <span class='data-type'>[string]</span><br/>Nome do arquivo, com extensão.
@@ -1057,7 +1057,7 @@ pt-BR:
         paragraph_6: A linguagem POSXML é <strong>case-sensitive</strong>, existindo diferença entre letras maiúsculas e minúsculas.
       emv_adddata:
         description: Adiciona parâmetros ao processo EMV
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_10: Para tipo <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
         table_3:
             table_row_1: Status da comunicação com o Host</br>0 - Comunicação bem sucedida</br>1 – Falha na comunicação com o host.
@@ -1109,13 +1109,13 @@ pt-BR:
           parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Retorno do comando, onde: <br/><ul><li>0: OK</li><li>-1: Erro. Tipo, chave ou valor não existe.</li></ul>'
       emv_cleanstructures:
         description: Limpa todos os parâmetros de entrada e saída
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>emv.cleanstructures</span> é utilizado para limpar as estruturas de entrada de dados e busca de informação. É necessário a execução em todo inicio de transação.
         paragraph_3: No exemplo acima, o primeiro comando a ser executado é o <span class='code'>emv.cleanstructures</span>, para limpar as estruturas de dados para a nova transação, em seguida, o comando <a href='emv.adddata' class='command'>emv.adddata</a> é executado para passagem dos parâmetros para o <em>Kernel EMV</em>, e o comando <a href='emv.inittransaction' class='command'>emv.inittransaction</a> dá inicio a transação.
         paragraph_4: O comando <a href='if' class='command'>if</a> deve ser utilizado para avaliar o retorno dos comandos. No processo de desenvolvimento de uma aplicação, os comandos <a href='inttostring' class='command'>inttostring</a> e <a href='print' class='command'>print</a> podem ser usados para processo de <strong>DEBUG</strong> e auxílio do programador.
       emv_finishtransaction:
         description: Finaliza a execução do processo EMV
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>emv.finishtransaction</span> finaliza o processamento de cartão com chip, caso <a href='emv.processtransaction' class='command'>emv.processtransaction</a> tenha requerido aprovação online ou caso a transação já tenha sido aprovada offline.
         paragraph_3: Uma transação negada em <a href='emv.processtransaction' class='command'>emv.processtransaction</a> não requer uma chamada desta instrução.
         paragraph_4: No exemplo acima, foi usado o comando <a href='emv.adddata' class='command'>emv.adddata</a> para passagem de parâmetros para o <em>Kernel EMV</em>.
@@ -1124,7 +1124,7 @@ pt-BR:
           parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/><ul><li>0: OK</li><li>11: Parâmetro inválido passado em <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Operação de inserção/passagem do cartão ou escolha de aplicação cancelada pelo usuário</li><li>15: Biblioteca EMV não iniciada</li><li>16: Erro interno</li><li>20: Timestamp do dispositivo não bate com o do parâmetro passado em <em>emv.adddata</em></li><li>40: Erro na execução</li><li>41: Erro de leitura do cartão</li><li>43: Cartão retirado no meio da operação</li></ul>'
       emv_getinfo:
         description: Retorna parâmetros de informação após execução de processo EMV
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_10: Para tipo <em><strong>'finish'</strong> &lt;emv.finishtransaction/&gt;</em>
         table_3:
           table_row_1: Decisão tomada</br>0 - Aprovado</br>1 - Negado pelo cartão</br>2 - Negado pelo host
@@ -1205,7 +1205,7 @@ pt-BR:
           parameter_3: <strong>value</strong> <span class='data-type'>[string]</span><br/>Variável que irá armazenar o valor do parâmetro que será retornado pelo <em>Kernel EMV</em>.
       emv_inittransaction:
         description: Inicializa o processo EMV com os parâmetros inseridos
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>emv.inittransaction</span> inicia o processamento EMV com um cartão, seja ele magnético ou com chip. Neste momento, a biblioteca EMV pedirá a <strong>inserção/passagem</strong> do cartão para escolha e inicialização da aplicação EMV no smartcard, a resposta são os dados do cartão para análise da aplicação no dispositivo.
         paragraph_3: Esta instrução utiliza o timeout na operação de inserção de cartão e escolha de aplicação, caso este tenha sido definido em <a href='emv.settimeout' class='command'>emv.settimeout</a>.
         paragraph_4: No exemplo acima, o comando <a href='emv.cleanstructures' class='command'>emv.cleanstructures</a> foi utilizado para limpar as estruturas de dados, e o comando <a href='emv.adddata' class='command'>emv.adddata</a> foi utilizado para passar parâmetros para o <em>Kernel EMV</em>.
@@ -1214,7 +1214,7 @@ pt-BR:
           parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/><ul><li>0: OK</li><li>11: Parâmetro inválido passado em <em>emv.addata</em></li><li>12: Timeout</li><li>13: Operação de inserção/passagem do cartão ou escolha de aplicação cancelada pelo usuário</li><li>15: Biblioteca EMV não iniciada</li></ul>'
       emv_loadtables:
         description: Carrega tabelas EMV e PKI de arquivo por adquirente
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>emv.loadtables</span> é utilizado para carregar as tabelas de configurações para cada aplicação EMV por rede adquirente.
         paragraph_3: O carregamento das tabelas deve ser feito na inicialização do dispositivo. Para carregar um tabela, deve ser enviado para o dispositivo um arquivo com um padrão de nome mais o número da rede adquirente.
         paragraph_4: No exemplo acima, o comando <a href='emv.open' class='command'>emv.open</a> é utilizado para inicializar a biblioteca EMV, e em seguida o comando <a href='if' class='command'>if</a> é utilizado para avaliar o resultado da operação.
@@ -1226,7 +1226,7 @@ pt-BR:
           parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/><ul><li>0: OK </li><li>10: Problema na inicialização das tabelas</li><li>15: Biblioteca EMV não iniciada</li><li>16: Erro interno</li><li>21: Erro ao tentar armazenar registros</li><li>30: Erro de comunicação, porta serial do PIN-Pad provavelmente esta ocupada</li></ul>'
       emv_open:
         description: Inicializa a biblioteca EMV
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>emv.open</span> é utilizado para inicializar a biblioteca EMV, alocando os recursos de hardware e software necessários ao funcionamento do conjunto Kernel EMV do equipamento. A chamada bem sucedida deste comando é pré-requisito para todas as outras chamadas da biblioteca.
         paragraph_3: No exemplo acima, o comando <span class='code'>emv.open</span> foi utilizado para inicializar da biblioteca EMV do dispositivo. Como o retorno do comando é um <a href='integervariable' class='command'>integervariable</a>, utiliza-se o comando <a href='inttostring' class='command'>inttostring</a> para converter a variável para <a href='stringvariable' class='command'>stringvariable</a> e exibi-la em seguida com o comando <a href='display' class='command'>display</a>.
         parameters:
@@ -1237,7 +1237,7 @@ pt-BR:
           parameter_5: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/> Retorno do comando, onde: <br/><ul><li>0: OK</li><li>14: Biblioteca já inicializada</li><li>16: Erro</li></ul>'
       emv_processtransaction:
         description: Inicia a execução do processo EMV
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>emv.processtransaction</span> continua o processo de tratamento de cartões com chip. Caso a instrução <a href='emv.inittransaction' class='command'>emv.inittransaction</a> tenha reportado a passagem de um cartão magnético esta instrução não devera ser chamada.
         paragraph_3: Este comando utiliza timeout na captura de PIN caso este tenha sido definido em <a href='emv.settimeout' class='command'>emv.settimeout</a>.
         paragraph_4: No exemplo acima, foi usado o comando <a href='emv.adddata' class='command'>emv.adddata</a> para passagem de parâmetros para o <em>Kernel EMV</em>.
@@ -1247,7 +1247,7 @@ pt-BR:
           parameter_2: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/><ul><li>0: OK</li><li>11: Parâmetro inválido passado em <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Operação de inserção/passagem do cartão ou escolha de aplicação cancelada pelo usuário</li><li>15: Bilioteca EMV não iniciada</li><li>16: Erro interno</li><li>19: Ausência de dado mandatório para a montagem do campo 55, ou dado mandatório não está acessivel (se esse o caso, passe a tag em baOptionalTags)</li><li>31: Erro de comunicação com o PIN-Pad</li><li>40: Erro na execução</li><li>43: Cartão retirado no meio da operação</li></ul>'
       emv_removecard:
         description: Aguarda remoção do cartão
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>emv.removecard</span> aguarda a remoção do cartão com chip. Aconselha-se sempre o uso deste comando ao final do fluxo de operação, seja ele bem ou mal sucedido.
         paragraph_3: Este comando utiliza timeout para a retirada do cartão, caso este tenha sido definido em <a href='emv.settimeout' class='command'>emv.settimeout</a>.
         paragraph_4: No exemplo acima, foi usado o comando <a href='emv.adddata' class='command'>emv.adddata</a> para passagem de parâmetros para o <em>Kernel EMV</em>.
@@ -1256,7 +1256,7 @@ pt-BR:
           parameter_1: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variável que irá armazenar o retorno do comando, onde:<br/><ul><li>0: OK</li><li>11: Parâmetro inválido passado em <em>emv.adddata</em></li><li>12: Timeout</li><li>13: Operação de inserção/passagem do cartão ou escolha de aplicação cancelada pelo usuário</li><li>15: Bilioteca EMV não iniciada</li></ul>'
       emv_settimeout:
         description: Define Timeout (em segundos) da biblioteca de processos EMV
-        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external' target='blank'>EMV</a> é necessário para utilização deste comando.
+        paragraph_1: O conhecimento da norma <a href='http://www.emvco.com' class='external'>EMV</a> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>emv.settimeout</span> é utilizado para definir o timeout para ser utilizado por comandos bloqueantes.
         paragraph_3: Esse timeout pode ser alterado antes da chamada de cada instrução, ou seja, esta instrução pode ser chamado diversas vezes durante o ciclo de uma transação.
         paragraph_4: No exemplo acima, o comando <span class='code'>emv.settimeout</span> é executado passando para o parâmetro <em><strong>seconds</strong></em> 10 segundos, ou seja, quando a próxima instrução <a href='emv.inittransaction' class='commands'>emv.inittransaction</a> for executada, o terminal irá aguardar durante 10 segundos até que o usuário insira ou passe o cartão.
@@ -1532,7 +1532,7 @@ pt-BR:
         paragraph_1: O conhecimento da norma <strong>ISO-8583</strong> é necessário para utilização deste comando.
         paragraph_2: O comando <span class='code'>iso8583.initfieldtable</span> irá iniciar a tabela de campos ISO8583 de acordo com os campos especificados no arquivo definido no parâmetro <strong>filename</strong>. Este comando deve ser executado antes de iniciar o trabalho com mensagens ISO8583.
         paragraph_3: 'No exemplo acima, foram criadas duas funções:'
-        paragraph_4: 1. <strong>downloadBitmap</strong> que realiza o download do arquivo <span class='code'>bitmap.dat</span> contendo o mapa de bits. O arquivo precisa estar armazenado no repositório de <a href='/pt-BR/manager/assets'>arquivos</a> no <a href='https://manager.cloudwalk.io' class='external' target='_blank'>CloudWalk Manager</a>.
+        paragraph_4: 1. <strong>downloadBitmap</strong> que realiza o download do arquivo <span class='code'>bitmap.dat</span> contendo o mapa de bits. O arquivo precisa estar armazenado no repositório de <a href='/pt-BR/manager/assets'>arquivos</a> no <a href='https://manager.cloudwalk.io' class='external'>CloudWalk Manager</a>.
         paragraph_5: 2. <strong>startEngineISO8583</strong> que inicia a tabela utilizando o comando <span class='code'>iso8583.initfieldtable</span>.
         paragraph_6: Caso o download do arquivo tenha sido completado com sucesso, é definido 1 no parâmetro bitmap do arquivo <span class='code'>params.dat</span>, apenas para indicar que o arquivo esta presente no dispositivo, caso contrário será apresentado uma mensagem de erro, baseado no respectivo retorno do comando e fechará a aplicação após pressionar a tecla Enter.
         paragraph_7: Após baixar e verificar a existência do arquivo bitmap.dat, será executada a função <strong>startEngineISO8583</strong>. A função referencia o comando <span class='code'>iso8583.initfieldtable</span> para iniciar a tabela. Caso o valor retornado na variável <strong>iReturn</strong> for <strong>0</strong>, a tabela foi iniciada com sucesso; caso contrário, o erro <strong>-802</strong> será apresentado, indicando falha na inicialização da tabela de mapa de bits.
@@ -2715,8 +2715,8 @@ pt-BR:
         paragraph_1: 'Após selecionar o idioma (assumindo que você tenha selecionado <strong>Português</strong>), a seguinte tela será exibida:'
         paragraph_2: 'Este passo é importante, pois para que um dispositivo tenha acesso ao serviço CloudWalk, é necessário que o número de série do mesmo seja cadastrado no CloudWalk Manager. Pressione <strong>OK</strong> para passar para a próxima tela:'
         paragraph_3: 'O número <strong>123-456-789</strong> representa o número de série do dispositivo (fictício), e deverá ser utilizado na tela de liberação de dispositivos no CloudWalk Manager. Siga então o seguinte procedimento:'
-        paragraph_4: Acesse o CloudWalk Manager em <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
-        paragraph_5: Acesse o menu <a href='https://manager.cloudwalk.io/devices' target='_blank' class='external'>Dispositivos</a>
+        paragraph_4: Acesse o CloudWalk Manager em <a href='https://manager.cloudwalk.io' class='external'>https://manager.cloudwalk.io</a>
+        paragraph_5: Acesse o menu <a href='https://manager.cloudwalk.io/devices' class='external'>Dispositivos</a>
         paragraph_6: Clique no botão <strong>Liberar um novo dispositivo</strong>
         paragraph_7: Informe o número de série exatamente como exibido na tela do dispositivo (ou impresso) e clique no botão <strong>Liberar acesso</strong>
         paragraph_8: "É necessário informar todos os números, letras e demais caracteres, <strong>exatamente</strong> como exibido na tela do dispositivo."
@@ -2742,8 +2742,8 @@ pt-BR:
             line_7: "PRECISA DE AJUDA?\n"
             line_8: "www.cloudwalk.io/2"
         paragraph_1: "O segundo passo refere-se ao cadastramento do número lógico do dispositivo:"
-        paragraph_2: Acesse o CloudWalk Manager em <a href='https://manager.cloudwalk.io' target='_blank' class='external'>https://manager.cloudwalk.io</a>
-        paragraph_3: Acesse o menu <a href='https://manager.cloudwalk.io/logical_numbers' target='_blank' class='external'>Números lógicos</a>
+        paragraph_2: Acesse o CloudWalk Manager em <a href='https://manager.cloudwalk.io' class='external'>https://manager.cloudwalk.io</a>
+        paragraph_3: Acesse o menu <a href='https://manager.cloudwalk.io/logical_numbers' class='external'>Números lógicos</a>
         paragraph_4: Clique no botão <strong>Novo número lógico</strong>
         paragraph_5: Informe o número lógico (por exemplo 0001) e clique no botão <strong>Cadastrar número lógico</strong>
       step_3:
@@ -2859,7 +2859,7 @@ pt-BR:
         paragraph_8: 'Ao finalizar, o terminal irá exibir a seguinte tela:'
         paragraph_9: Em seguida será apresentado a tela de configuração da primeira execução.
       preparing_the_pendrive:
-        macosx: <strong>Usuários Mac OS X:</strong> Para evitar problemas com arquivos ocultos no momento de descompactar o pacote do CloudWalk Framework, recomenda-se que o aplicativo gratuito <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external' target='_blank'>iZip Archiver</a> seja utilizado para descompactar o pacote.
+        macosx: <strong>Usuários Mac OS X:</strong> Para evitar problemas com arquivos ocultos no momento de descompactar o pacote do CloudWalk Framework, recomenda-se que o aplicativo gratuito <a href='https://itunes.apple.com/br/app/izip-archiver/id478738838' class='external'>iZip Archiver</a> seja utilizado para descompactar o pacote.
         paragraph_1: 'Para montar a carga do CloudWalk Framework no pendrive, siga o seguinte procedimento:'
         paragraph_2: Conecte o pendrive no computador
         paragraph_3: Formate o pendrive
