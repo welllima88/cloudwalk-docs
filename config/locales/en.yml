@@ -866,11 +866,11 @@ en:
       deploying_an_app: Deploying an app
     guides:
       group_name: Guides
-      patterns: "Transaction patterns"
+      patterns: "Transaction Patterns"
       emulator_card_swipe: "Emulator Card Swipe"
       emulator_serial_ports: "Emulator Serial Ports"
-      using_http_headers: "Using HTTP headers"
-      dynamic_button_configuration: "Dynamic Button Configuration"
+      using_http_headers: "Using HTTP Headers"
+      dynamic_button_configuration: "Dynamic Key Configuration"
     help:
       group_name: Help
       faq: "Frequently Asked Questions"
@@ -3202,7 +3202,7 @@ en:
   guides:
     transactions_patterns:
       intro:
-        title: "Transaction patterns"
+        title: "Transaction Patterns"
         description: "Learn about your transaction patterns automatically identified by our service."
         table_of_contents:
           introduction: "Introduction"
@@ -3375,7 +3375,7 @@ en:
         paragraph_1: "Finally, there are some buttons under the ports that allow you to change the order of ports and remove them. The icons are pretty intuitive, so let's see them in action:"
         img_1_alt: "Moving and deleting ports"
     using_http_headers:
-      title: "Using HTTP headers"
+      title: "Using HTTP Headers"
       description: "Learn how to use HTTP headers with POSXML"
       table_of_contents:
         introduction: "Introduction"
@@ -3386,29 +3386,29 @@ en:
         paragraph_1: "The sample application builds the HTTP request <span class='code'>buffer</span> (method, headers, path and payload), converts the <span class='code'>buffer</span> to hexadecimal and send it to the host, through the command <a href='/en/posxml/commands/network.send' class='command'>network.send</a>. After that, 4 bytes are requested, related to the size of the answer, through the command <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a>, and after a validation, the complete answer is requested."
         note: "Watch out the spaces, because some variables will be concatenated!"
     dynamic_button_configuration:
-      title: "Dynamic Button Configuration"
-      description: "Learn how to..."
+      title: "Dynamic Key Configuration"
+      description: "Using the dynamic key configuration."
       table_of_contents:
         introduction: "Introduction"
         default_configuration: "Default configuration"
         dynamic_configuration: "Dynamic configuration"
         app_sample: "Sample application"
       introduction:
-        paragraph_1: "The POS terminal has default keys to perform actions like: open the application list or execute the application if only one exists. The paperfeed key is used to send a signal that the printer will add a blank line and is also the key to open the cloudwalk configuration menu. If you want to change the default keys in order to customize the behavior of the terminal you can follow the steps below."
+        paragraph_1: "The POS terminal has default keys to perform actions like: open the application list or execute the application if only one exists. The <em>paperfeed</em> key is used to send a signal that the printer will add a blank line and is also the key to open the cloudwalk configuration menu. If you want to change the default keys in order to customize the behavior of the terminal you can follow the steps below."
       default_configuration:
         paragraph_1: "Below are the default keys for each device:</br></br><b>executeapp</b> = null</br><b>appname</b> = null</br><b>enter</b> = KEY_ENTER"
         paragraph_2: "Terminal model"
         paragraph_3: "paperfeed"
         paragraph_4: "cloudwalkconfig"
       dynamic_configuration:
-        paragraph_1: "Edit the <em>keys.dat</em> file to customize your layout:</br></br><b>paperfeed</b> = add a blank line on the paper</br><b>enter</b> = execute your application, if you have more than one it will list the apps</br><b>cloudwalkconfig</b> = enter cloudwalk configuration menu</br>
+        paragraph_1: "Edit the <em>keys.dat</em> file to customize your layout:</br></br><b>paperfeed</b> = add a blank line on the paper</br><b>enter</b> = execute your application, if you have more than one it will list the apps</br><b>cloudwalkconfig</b> = enter CloudWalk configuration menu</br>
         </br>If you want to set it a a key to execute one application in particular you can edit the paramters below, with the name of the application alongside the key that will execute it.</br>
         </br><b>executeapp</b> = Key to execute application
         </br><b>appname</b> = application name
         </br></br>Example:"
         paragraph_2: "And if you want to go back to the default option you just have to delete the <em>keys.dat</em> file."
       app_sample:
-        paragraph_1: "- - - Insert description of the sample application here (basically, to explain what is happening in the code below). - - -"
+        paragraph_1: "The following example can be used to test the dynamic key configuration:"
   help:
     faq:
       description: "The most frequently asked questions about CloudWalk"

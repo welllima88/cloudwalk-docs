@@ -872,6 +872,7 @@ pt-BR:
       emulator_card_swipe: "Cartões no emulador"
       emulator_serial_ports: "Portas seriais no emulador"
       using_http_headers: "Utilizando headers HTTP"
+      dynamic_button_configuration: "Configuração dinâmica de teclas"
     help:
       group_name: Ajuda
       faq: "Perguntas Frequentes"
@@ -3376,6 +3377,30 @@ pt-BR:
       app_sample:
         paragraph_1: "A aplicação de exemplo monta o <span class='code'>buffer</span> com a requisição HTTP (método, cabeçalhos, caminho e payload), converte o <span class='code'>buffer</span> para hexadecimal e o envia para o host, através do comando <a href='/pt-BR/posxml/commands/network.send' class='command'>network.send</a>. Em seguida, são requisitados 4 bytes, referente ao tamanho da resposta, através do comando <a href='/pt-BR/posxml/commands/network.receive' class='command'>network.receive</a>, e após a validação, a resposta completa é requisitada."
         note: "Atente-se aos espaços, pois algumas variáveis serão concatenadas!"
+    dynamic_button_configuration:
+      title: "Utilizando configuração dinâmica de teclas"
+      description: "Utilizando configuração dinâmica de teclas"
+      table_of_contents:
+        introduction: "Introdução"
+        default_configuration: "Configuração padrão"
+        dynamic_configuration: "Configuração dinâmica"
+        app_sample: "Exemplo da aplicação"
+      introduction:
+        paragraph_1: "O terminal POS possui teclas padrão para executar ações como: abrir a lista de aplicações ou executar uma aplicação caso a mesma exista. A tecla <em>paperfeed</em> é utilizada para mandar um sinal à impressora e adicionar uma linha em branco e uma tecla para abrir o menu de configurações CloudWalk. Caso desejar alterar estas teclas para customizar o comportamento do terminal você deve seguir os passos abaixo:"
+      default_configuration:
+        paragraph_1: "Abaixo estão as teclas padrão para cada dispositivo:</br></br><b>executeapp</b> = null</br><b>appname</b> = null</br><b>enter</b> = KEY_ENTER"
+        paragraph_2: "Modelo de terminal"
+        paragraph_3: "paperfeed"
+        paragraph_4: "cloudwalkconfig"
+      dynamic_configuration:
+        paragraph_1: "Edite o arquivo <em>keys.dat</em> para customizar o layout:</br></br><b>paperfeed</b> = adiciona uma linha em branco ao papel.</br><b>enter</b> = executa sua aplicação, caso houver mais de uma será mostrada uma lista de aplicações.</br><b>cloudwalkconfig</b> = entra no menu de configuração CloudWalk.</br>
+        </br>Se desejar vincular uma tecla para executar uma aplicação em particular, você pode editar os parametros abaixo, como nome da aplicação juntamente com a tecla que a executará.</br>
+        </br><b>executeapp</b> = tecla para executar a aplicação
+        </br><b>appname</b> = nome da aplicação
+        </br></br>Exemplo:"
+        paragraph_2: "E se desejar voltar as configurações padrão basta deletar o arquivo <em>keys.dat</em> file."
+      app_sample:
+        paragraph_1: "O exemplo a seguir pode ser usado para testar a configurações de teclas dinâmicas:"
   help:
     faq:
       description: "As perguntas mais frequentes sobre o serviço CloudWalk"
