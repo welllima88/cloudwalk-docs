@@ -69,6 +69,7 @@ class Routes
       { "url" => "guides/emulator-card-swipe",                           "view_path" => "guides/emulator_card_swipe"},
       { "url" => "guides/emulator-serial-ports",                         "view_path" => "guides/emulator_serial_ports"},
       { "url" => "guides/using-http-headers",                            "view_path" => "guides/using_http_headers"},
+      { "url" => "guides/dynamic-button-configuration",                  "view_path" => "guides/dynamic_button_configuration"},
       # Help
       { "url" => "help/faq",                                             "view_path" => "help/faq"},
       # POSXML apps changelog

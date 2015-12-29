@@ -1,0 +1,92 @@
+<% content_for :docs_description do %>
+  <meta name="docs:description" content="<%= I18n.t("guides.dynamic_button_configuration.description") %>">
+<% end %>
+
+<h1><%= I18n.t("guides.dynamic_button_configuration.title") %></h1>
+
+<ol class="table-of-contents">
+  <li><a href="#introduction"><%= I18n.t("guides.dynamic_button_configuration.table_of_contents.introduction") %></a></li>
+  <li><a href="#default-configuration"><%= I18n.t("guides.dynamic_button_configuration.table_of_contents.default_configuration") %></a></li>
+  <li><a href="#dynamic-configuration"><%= I18n.t("guides.dynamic_button_configuration.table_of_contents.dynamic_configuration") %></a></li>
+  <li><a href="#app-sample"><%= I18n.t("guides.dynamic_button_configuration.table_of_contents.app_sample") %></a></li>
+</ol>
+
+<h2 id="introduction"><%= I18n.t("guides.dynamic_button_configuration.table_of_contents.introduction") %></h2>
+
+<p><%= I18n.t("guides.dynamic_button_configuration.introduction.paragraph_1") %></p>
+
+<h2 id="default-configuration"><%= I18n.t("guides.dynamic_button_configuration.table_of_contents.default_configuration") %></h2>
+
+<p><%= I18n.t("guides.dynamic_button_configuration.default_configuration.paragraph_1") %></p>
+
+<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th><%= I18n.t("guides.dynamic_button_configuration.default_configuration.paragraph_3") %></th>
+      <th><%= I18n.t("guides.dynamic_button_configuration.default_configuration.paragraph_4") %></th>
+      <th><%= I18n.t("guides.dynamic_button_configuration.default_configuration.paragraph_2") %></th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr>
+        <td>KEY_EXTRA4</td>
+        <td>KEY_EXTRA1</td>
+        <td>Verifone VX510, VX570</td>
+      </tr>
+      <tr>
+        <td>KEY_EXTRA4</td>
+        <td>KEY_EXTRA1</td>
+        <td>Verifone VX610, VX670</td>
+      </tr>
+      <tr>
+        <td>KEY_EXTRA7</td>
+        <td>KEY_EXTRA5</td>
+        <td>Verifone VX680</td>
+      </tr>
+      <tr>
+        <td>KEY_EXTRA5</td>
+        <td>KEY_EXTRA9</td>
+        <td>Verifone VX675</td>
+      </tr>
+      <tr>
+        <td>null</td>
+        <td>KEY_EXTRA5</td>
+        <td>Verifone VX820</td>
+      </tr>
+      <tr>
+        <td>KEY_EXTRA5</td>
+        <td>KEY_EXTRA7</td>
+        <td>Verifone VX685</td>
+      </tr>
+      <tr>
+        <td>KEY_EXTRA1</td>
+        <td>KEY_EXTRA7</td>
+        <td>Ingenico iCT220, iCT250</td>
+      </tr>
+      <tr>
+        <td>KEY_EXTRA1</td>
+        <td>KEY_EXTRA7</td>
+        <td>Ingenico iWL220, iWL250, iWL280</td>
+      </tr>
+    </tbody>
+</table>
+
+<h2 id="dynamic-configuration"><%= I18n.t("guides.dynamic_button_configuration.table_of_contents.dynamic_configuration") %></h2>
+
+<p><%= I18n.t("guides.dynamic_button_configuration.dynamic_configuration.paragraph_1") %></p>
+
+<%= embed_posxml_code("ccd08c536367e1ea1e44", true) %>
+
+<p><%= I18n.t("guides.dynamic_button_configuration.dynamic_configuration.paragraph_2") %></p>
+
+<h2 id="app-sample"><%= I18n.t("guides.dynamic_button_configuration.table_of_contents.app_sample") %></h2>
+
+<p><%= I18n.t("guides.dynamic_button_configuration.app_sample.paragraph_1") %></p>
+
+<%= embed_posxml_code("d8dd8a35c6ac4e0ccde0") %>
+
+<ul class="pager">
+  <li class="previous">
+    <%= link_to("&larr; " + I18n.t("menu.guides.using_http_headers"), "guides/using-http-headers") %>
+  </li>
+</ul>
