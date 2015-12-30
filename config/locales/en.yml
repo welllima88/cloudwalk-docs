@@ -870,7 +870,7 @@ en:
       emulator_card_swipe: "Emulator Card Swipe"
       emulator_serial_ports: "Emulator Serial Ports"
       using_http_headers: "Using HTTP Headers"
-      dynamic_button_configuration: "Dynamic Key Configuration"
+      dynamic_key_configuration: "Dynamic Key Configuration"
     help:
       group_name: Help
       faq: "Frequently Asked Questions"
@@ -3385,7 +3385,7 @@ en:
       app_sample:
         paragraph_1: "The sample application builds the HTTP request <span class='code'>buffer</span> (method, headers, path and payload), converts the <span class='code'>buffer</span> to hexadecimal and send it to the host, through the command <a href='/en/posxml/commands/network.send' class='command'>network.send</a>. After that, 4 bytes are requested, related to the size of the answer, through the command <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a>, and after a validation, the complete answer is requested."
         note: "Watch out the spaces, because some variables will be concatenated!"
-    dynamic_button_configuration:
+    dynamic_key_configuration:
       title: "Dynamic Key Configuration"
       description: "Using the dynamic key configuration."
       table_of_contents:
