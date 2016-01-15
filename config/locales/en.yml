@@ -1044,7 +1044,7 @@ en:
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
           parameter_2: <strong>key</strong> <span class='data-type'>[string]</span><br/>Key.
-          parameter_3: <strong>value</strong> <span class='data-type'>[integer]</span><br/>New value for the key.
+          parameter_3: <strong>value</strong> <span class='data-type'>[integer or string]</span><br/>New value for the key.
       else:
         description: Logical condition in a block of the if statement
         paragraph_1: The <span class='code'>else</span> statement is used to specify a condition contrary to the <span class='code'>if</span> statement in an POSXML application. Other commands can be used within an <span class='code'>else</span> block, and these commands are executed if the logical expression of the <span class='code'>if</span> statement is not true.
@@ -1285,11 +1285,11 @@ en:
         description: Opens a file for reading or writing
         paragraph_1: The command <span class='code'>file.open</span> is used to open a file for reading or writing.
         paragraph_2: In the example above, the file <strong>test.txt</strong> has been downloaded using the command <a href='downloadfile' class='command'>downloadfile</a>. The file <strong>test.txt</strong> has been opened for reading (<strong>r</strong>) by the command <a href='file.open' class='command'>file.open</a>.
-        paragraph_3: The command <a href='display' class='command'>display</a> will display <strong>-1</strong>.
+        paragraph_3: The command <a href='display' class='command'>display</a> will display a return <strong>> 0</strong>.
         parameters:
           parameter_1: <strong>filename</strong> <span class='data-type'>[string]</span><br/>File name.
           parameter_2: '<strong>mode</strong> <span class="data-type">[string]</span><br/><ul><li>r: Read</li><li>w: Write</li><li>a: Append</li></ul>'
-          parameter_3: '<strong>variablehandle</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<ul><li>-1: Could not open file</li><li>>-1: Open file</li></ul>'
+          parameter_3: '<strong>variablehandle</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<ul><li>-1: Could not open file</li><li>>= 0: File opened</li></ul>'
       file_read:
         description: Reads a file that was previously opened by file.open
         paragraph_1: The command <span class='code'>file.read</span> is used to read an open file.
@@ -1327,7 +1327,7 @@ en:
         parameters:
           parameter_1: <strong>dir</strong> <span class='data-type'>[string]</span><br/>Directory which is going to be checked, that can be I or F (Verifone).
           parameter_2: <strong>listfilename</strong> <span class='data-type'>[string]</span><br/>Name of the file that will store the name and size of the files in the specified directory.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[inteiro]</span><br/>Variable that will store the return code, where:<ul><li>0: File list created</li><li>-1: Empty directory</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<ul><li>0: File list created</li><li>-1: Empty directory</li></ul>'
       filesystem_renamefile:
         description: Rename a file
         paragraph_1: The command <span class='code'>filesystem.renamefile</span> is used to rename a file.
@@ -1335,7 +1335,7 @@ en:
         parameters:
           parameter_1: <strong>oldname</strong> <span class='data-type'>[string]</span><br/>Current name of the file.
           parameter_2: <strong>newname</strong> <span class='data-type'>[string]</span><br/>New name, that will replace the current one.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[inteiro]</span><br/>Variable that will store the return code, where:<ul><li>0: File was renamed</li><li>-1: File does not exist</li></ul>'
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[integer]</span><br/>Variable that will store the return code, where:<ul><li>0: File was renamed</li><li>-1: File does not exist</li></ul>'
       filesystem_space:
         description: Checks the space (free and used) and the number of files in memory
         paragraph_1: This command does not work on <strong>Telium</strong> terminals
@@ -1737,7 +1737,7 @@ en:
           parameter_1: <strong>ipek</strong> <span class='data-type'>[string]</span> Initial key in the format <strong>hex ascii 16</strong> or <strong>32</strong> characters.
           parameter_2: <strong>ksn</strong> <span class='data-type'>[string]</span> Initial KSN in the format <strong>hex ascii 20</strong> characters.
           parameter_3: '<strong>type</strong> <span class="data-type">[integer]</span> Type of algorithm used in the encryption, which can be: <br/><ul><li>0: DES</li><li>1: 3DES</li></ul>'
-          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[inteiro]</span> Return of the command, where: <br/><ul><li>0: OK</li><li>-1: Error</li></ul>'
+          parameter_4: '<strong>variablereturn</strong> <span class="data-type">[integer]</span> Return of the command, where: <br/><ul><li>0: OK</li><li>-1: Error</li></ul>'
       pinpad_open:
         description: Enables communication with the external or internal pinpad
         paragraph_1: The command <span class='code'>pinpad.open</span> is used to enable communication with an external or the internal pinpad.
