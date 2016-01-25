@@ -367,7 +367,7 @@ en:
           search_by_multiple_params: Find transactions by multiple parameters
           search_by_serial_number: Find transactions by serial number
           search_by_app_name: Find transactions by app name
-          search_by_app_date: Find transactions by date
+          search_by_date: Find transactions by date
           search_by_status: Find transactions by status
           search_by_transaction_type: Find transactions by type
         title: Developer API - Transactions
