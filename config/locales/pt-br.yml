@@ -354,6 +354,10 @@ pt-BR:
         search_by_app_name:
           paragraph_1: Retorna um array com todas as transações que possuem o <strong>nome da aplicação</strong> definido no parâmetro <span class='code'>&app_name</span>.
           app_name: nome da aplicação
+        search_by_date:
+          paragraph_1: Retorna um array com todas as transações dentro do intervalo de data definido nos parâmetros <span class='code'>&since</span> e <span class='code'>&until</span>.
+          since: data inicial
+          until: data final
         search_by_status:
           paragraph_1: Retorna um array com todas as transações que possuem o <strong>status</strong> definido no parâmetro <span class='code'>&status</span>.
         search_by_transaction_type:
@@ -365,6 +369,7 @@ pt-BR:
           search_by_multiple_params: Consulta por múltiplos parâmetros
           search_by_serial_number: Consulta por número de série
           search_by_app_name: Consulta por nome da aplicação
+          search_by_date: Consulta por data
           search_by_status: Consulta por status
           search_by_transaction_type: Consulta por tipo de registro
         title: Developer API - Transações

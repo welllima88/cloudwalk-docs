@@ -352,6 +352,10 @@ en:
         search_by_app_name:
           paragraph_1: Return an array with all transactions with the <strong>app name</strong> defined on parameter <span class='code'>&app_name</span>.
           app_name: app name
+        search_by_date:
+          paragraph_1: Return an array with all transactions within the interval defined on parameters <span class='code'>&since</span> and <span class='code'>&until</span>.
+          since: inicial date
+          until: final date
         search_by_status:
           paragraph_1: Return an array with all transactions with the <strong>status</strong> defined on parameter <span class='code'>&status</span>.
         search_by_transaction_type:
@@ -363,6 +367,7 @@ en:
           search_by_multiple_params: Find transactions by multiple parameters
           search_by_serial_number: Find transactions by serial number
           search_by_app_name: Find transactions by app name
+          search_by_app_date: Find transactions by date
           search_by_status: Find transactions by status
           search_by_transaction_type: Find transactions by type
         title: Developer API - Transactions
