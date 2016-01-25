@@ -351,6 +351,9 @@ pt-BR:
           paragraph_1: Retorna um array com todas as transações que possuem o <strong>número de série</strong> definido no parâmetro <span class='code'>&serial_number</span>.
           paragraph_2: Também é possível consultar transações de um <strong>número lógico</strong> específico, bastando para isso definir o parâmetro <span class='code'>&logical_number</span>
           serial_number: número de série
+        search_by_app_name:
+          paragraph_1: Retorna um array com todas as transações que possuem o <strong>nome da aplicação</strong> definido no parâmetro <span class='code'>&app_name</span>.
+          app_name: nome da aplicação
         search_by_status:
           paragraph_1: Retorna um array com todas as transações que possuem o <strong>status</strong> definido no parâmetro <span class='code'>&status</span>.
         search_by_transaction_type:
@@ -361,6 +364,7 @@ pt-BR:
           index: Listagem de todas transações
           search_by_multiple_params: Consulta por múltiplos parâmetros
           search_by_serial_number: Consulta por número de série
+          search_by_app_name: Consulta por nome da aplicação
           search_by_status: Consulta por status
           search_by_transaction_type: Consulta por tipo de registro
         title: Developer API - Transações

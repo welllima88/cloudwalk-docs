@@ -10,6 +10,7 @@
   <li><a href="#search-by-status"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_status") %></a></li>
   <li><a href="#search-by-transaction-type"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_transaction_type") %></a></li>
   <li><a href="#search-by-serial-number"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_serial_number") %></a></li>
+  <li><a href="#search-by-app-name"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_app_name") %></a></li>
   <li><a href="#search-by-multiple-params"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_multiple_params") %></a></li>
 </ol>
 
@@ -383,6 +384,75 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <p class="note"><%= I18n.t("api.v1.transactions.search_by_serial_number.paragraph_2") %></p>
 
+<h2 id="search-by-app-name"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_app_name") %></h2>
+
+<p><%= I18n.t("api.v1.transactions.search_by_app_name.paragraph_1") %></p>
+
+<h3><%= I18n.t("api.method") %></h3>
+
+<pre><code>GET https://api.cloudwalk.io/<%= I18n.t("api.version") %>/transactions?access_token={token}&app_name={<%= I18n.t("api.v1.transactions.search_by_app_name.app_name") %>}</code></pre>
+
+<h3><%= I18n.t("api.sample") %></h3>
+
+<ul id="search-by-app-name-view-tab" class="nav nav-tabs">
+  <li class="active"><a href="#search-by-app-name-tab1">cURL</a></li>
+  <li><a href="#search-by-app-name-tab2">Ruby</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane active" id="search-by-app-name-tab1">
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/transactions?access_token=$TOKEN&app_name=main.posxml"</code></pre>
+</div>
+
+<div class="tab-pane" id="search-by-app-name-tab2">
+<pre><code data-language="ruby">require 'net/http'
+
+token = 'API_TOKEN'
+
+uri = URI("https://api.cloudwalk.io/v1/transactions?access_token=#{token}&app_name=main.posxml")
+
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri.request_uri)
+
+res = http.request(request)
+
+puts "Response #{res.code} #{res.message}: #{res.body}"
+</code></pre>
+</div>
+</div>
+
+<h3><%= I18n.t("api.response") %></h3>
+
+<pre><code data-language="javascript">{
+   "pagination":{
+      "page":1,
+      "total_pages":1,
+      "entries":1,
+      "total_entries":1
+   },
+   "transactions":[
+      {
+         "transaction":{
+            "id":63154,
+            "transaction_type":"switch",
+            "serial_number":"510-520-530",
+            "logical_number":"1122",
+            "app_name":"main.posxml",
+            "detail":"",
+            "framework_version":"3.80",
+            "status":"success",
+            "sent":"null",
+            "received":"null",
+            "started_at":"2015-02-04T14:21:11Z",
+            "finished_at":"2015-02-04T14:21:14Z"
+         }
+      }
+   ]
+}
+</code></pre>
+
 <h2 id="search-by-multiple-params"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_multiple_params") %></h2>
 
 <p><%= I18n.t("api.v1.transactions.search_by_multiple_params.paragraph_1") %></p>
@@ -464,6 +534,9 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
   $('#search-by-serial-number-view-tab a:first').tab('show');
   $('#search-by-serial-number-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
+
+  $('#search-by-app-name-view-tab a:first').tab('show');
+  $('#search-by-app-name-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });
 
   $('#search-by-multiple-params-view-tab a:first').tab('show');
   $('#search-by-multiple-params-view-tab a').click(function (e) { e.preventDefault(); $(this).tab('show'); });

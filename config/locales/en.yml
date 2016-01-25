@@ -349,6 +349,9 @@ en:
           paragraph_1: Return an array with all transactions with the <strong>serial number</strong> defined on parameter <span class='code'>&serial_number</span>.
           paragraph_2: It is also possible to search for transactions of a specific <strong>logical number</strong> by defining the parameter <span class='code'>&logical_number</span>
           serial_number: serial number
+        search_by_app_name:
+          paragraph_1: Return an array with all transactions with the <strong>app name</strong> defined on parameter <span class='code'>&app_name</span>.
+          app_name: app name
         search_by_status:
           paragraph_1: Return an array with all transactions with the <strong>status</strong> defined on parameter <span class='code'>&status</span>.
         search_by_transaction_type:
@@ -359,6 +362,7 @@ en:
           index: List of all transactions
           search_by_multiple_params: Find transactions by multiple parameters
           search_by_serial_number: Find transactions by serial number
+          search_by_app_name: Find transactions by app name
           search_by_status: Find transactions by status
           search_by_transaction_type: Find transactions by type
         title: Developer API - Transactions
