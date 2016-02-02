@@ -3386,19 +3386,31 @@ pt-BR:
         dynamic_configuration: "Configuração dinâmica"
         app_sample: "Exemplo da aplicação"
       introduction:
-        paragraph_1: "O terminal POS possui teclas padrão para executar ações como: abrir a lista de aplicações ou executar uma aplicação caso a mesma exista. A tecla <em>paperfeed</em> é utilizada para mandar um sinal à impressora e adicionar uma linha em branco e uma tecla para abrir o menu de configurações CloudWalk. Caso desejar alterar estas teclas para customizar o comportamento do terminal você deve seguir os passos abaixo:"
+        paragraph_1: "O terminal POS possui 4 teclas padronizadas que estão prontamente configuradas para executar as seguintes ações por padrão:
+<ul><li>enter key - abre uma lista de aplicações ou executa uma aplicação se existir apenas uma</li>
+<li>papered key - adiciona uma linha em branco</li>
+<li>cloudwalkconfig key - entra no menu de configuração da CloudWalk</li>
+<li>optional key - executa automaticamente uma aplicação selecionada</li></ul></br>
+Esse guia ilustra as teclas padrão para cada um dos terminais suportados pela CloudWalk, além de explicar como personalizar e modificar a configuração padrão para obter o máximo de seu terminal POS e de sua aplicação. Continue lendo para aprender mais e testar você mesmo!"
       default_configuration:
-        paragraph_1: "Abaixo estão as teclas padrão para cada dispositivo:</br></br><b>executeapp</b> = null</br><b>appname</b> = null</br><b>enter</b> = KEY_ENTER"
+        paragraph_1: "Abaixo estão as teclas padrão para cada dispositivo."
+        paragraph_4: "cloudwalkconfig"
         paragraph_2: "Modelo de terminal"
         paragraph_3: "paperfeed"
-        paragraph_4: "cloudwalkconfig"
+        paragraph_5: "enter"
+        paragraph_6: "appname"
+        paragraph_7: "executeapp"
       dynamic_configuration:
-        paragraph_1: "Edite o arquivo <em>keys.dat</em> para customizar o layout:</br></br><b>paperfeed</b> = adiciona uma linha em branco ao papel.</br><b>enter</b> = executa sua aplicação, caso houver mais de uma será mostrada uma lista de aplicações.</br><b>cloudwalkconfig</b> = entra no menu de configuração CloudWalk.</br>
-        </br>Se desejar vincular uma tecla para executar uma aplicação em particular, você pode editar os parametros abaixo, como nome da aplicação juntamente com a tecla que a executará.</br>
-        </br><b>executeapp</b> = tecla para executar a aplicação
-        </br><b>appname</b> = nome da aplicação
-        </br></br>Exemplo:"
+        paragraph_1: "Edite o arquivo <em>keys.dat</em> para customizar o layout:"
         paragraph_2: "E se desejar voltar as configurações padrão basta deletar o arquivo <em>keys.dat</em> file."
+        paragraph_3: "chave"
+        paragraph_4: "açao"
+        paragraph_5: "Exemplo:"
+        paragraph_6: "tecla para adicionar uma linha em branco no papel"
+        paragraph_7: "tecla para executar sua aplicação, se você tiver mais de uma aplicação mostra uma lista com todas elas"
+        paragraph_8: "tecla para entrar no menu de configuração da CloudWalk"
+        paragraph_9: "tecla para executar a aplicação"
+        paragraph_10: "nome da aplicação"
       app_sample:
         paragraph_1: "O exemplo a seguir pode ser usado para testar a configurações de teclas dinâmicas:"
   help:

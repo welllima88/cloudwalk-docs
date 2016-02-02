@@ -3394,19 +3394,31 @@ en:
         dynamic_configuration: "Dynamic configuration"
         app_sample: "Sample application"
       introduction:
-        paragraph_1: "The POS terminal has default keys to perform actions like: open the application list or execute the application if only one exists. The <em>paperfeed</em> key is used to send a signal that the printer will add a blank line and is also the key to open the cloudwalk configuration menu. If you want to change the default keys in order to customize the behavior of the terminal you can follow the steps below."
+        paragraph_1: "The POS terminal has 4 default keys that are readily configured to perform the following default actions:
+<ul><li>enter key -  open an application list or execute an application if only one exists</li>
+<li>papered key -  add a blank line</li>
+<li>cloudwalkconfig key - enter the CloudWalk configuration menu</li>
+<li>optional key - execute a chosen application automatically</li></ul></br>
+This guide illustrates the default keys for each of the CloudWalk supported POS terminals, and also outlines how to customise and change the default configuration to get the most out of your POS terminal and application. Please read on to learn more and try it out for yourself!"
       default_configuration:
-        paragraph_1: "Below are the default keys for each device:</br></br><b>executeapp</b> = null</br><b>appname</b> = null</br><b>enter</b> = KEY_ENTER"
+        paragraph_1: "Below are the default keys for each device."
+        paragraph_4: "cloudwalkconfig"
         paragraph_2: "Terminal model"
         paragraph_3: "paperfeed"
-        paragraph_4: "cloudwalkconfig"
+        paragraph_5: "enter"
+        paragraph_6: "appname"
+        paragraph_7: "executeapp"
       dynamic_configuration:
-        paragraph_1: "Edit the <em>keys.dat</em> file to customize your layout:</br></br><b>paperfeed</b> = add a blank line on the paper</br><b>enter</b> = execute your application, if you have more than one it will list the apps</br><b>cloudwalkconfig</b> = enter CloudWalk configuration menu</br>
-        </br>If you want to set it a a key to execute one application in particular you can edit the paramters below, with the name of the application alongside the key that will execute it.</br>
-        </br><b>executeapp</b> = Key to execute application
-        </br><b>appname</b> = application name
-        </br></br>Example:"
+        paragraph_1: "Edit the <em>keys.dat</em> file to customize your layout:</br>"
         paragraph_2: "And if you want to go back to the default option you just have to delete the <em>keys.dat</em> file."
+        paragraph_3: "key"
+        paragraph_4: "action"
+        paragraph_5: "Example:"
+        paragraph_6: "key to add a blank line on the paper"
+        paragraph_7: "key to execute your application, if you have more than one it will list the apps"
+        paragraph_8: "key to enter the CloudWalk configuration menu"
+        paragraph_9: "key to execute the application"
+        paragraph_10: "application name"
       app_sample:
         paragraph_1: "The following example can be used to test the dynamic key configuration:"
   help:
