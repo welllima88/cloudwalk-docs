@@ -1711,7 +1711,7 @@ en:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the external PIN-Pad's display.
       pinpad_getkey:
         description: Captures a key that is pressed on the external pinpad
-        paragraph_1: The command <span class='code'>pinpad.getkey</span> is used to capture a key that is pressed on the external pinpad.
+        paragraph_1: The command <span class='code'>pinpad.getkey</span> is used to capture a key that is pressed on the external pinpad and show a message on the <strong>external pinpad</strong> display.
         paragraph_2: In the example above, a connection is opened to the <strong>external PIN-Pad</strong> with the command <a href='pinpad.open' class='command'>pinpad.open</a>; after that the command <span class='code'>pinpad.getkey</span> is executed.
         paragraph_3: The PIN-Pad waits for 10 minutes and if no action is taken, <strong>-1</strong> is returned and stored in the variable <strong><em>sKey</em></strong>. If a key is pressed before 10 minutes (the configured timeout), the pressed key value is returned.
         paragraph_4: After that, the PIN-Pad is disconnected with the command <a href='pinpad.close' class='command'>pinpad.close</a> and the result is displayed through the command <a href='display' class='command'>display</a>.
@@ -1720,7 +1720,7 @@ en:
         parameters:
           parameter_1: <strong>message</strong> <span class='data-type'>[string]</span> Message that will be displayed on the external PIN-Pad.
           parameter_2: <strong>timeout</strong> <span class='data-type'>[integer]</span> Timeout in seconds that the statement should wait before resuming the execution.
-          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[string]</span> Return of the command, where: <br/><ul><li>-1: Timeout was reached and no action was taken</li></ul> If an action is taken, the PIN-Pad key that was pressed is returned: <strong>KEY_ENTER, KEY_CANCEL, KEY_CLEAR, KEY_EXTRAS</strong>.'
+          parameter_3: '<strong>variablereturn</strong> <span class="data-type">[string]</span> Return of the command, where: <br/><ul><li>-1: Timeout was reached and no action was taken</li><li>KEY_CANCEL: Red key pressed </li><li>KEY_CLEAR: Yellow key pressed</li><li>KEY_ENTER: Green key pressed</li></ul> The numeric keyboard and extras keys are <strong>disabled</strong> on pinpad.getkey command execution.'
       pinpad_getpindukpt:
         description: Catches a PIN and encrypts it using DUKPT standard
         paragraph_1: The command <span class='code'>pinpad.getpindukpt</span> is used to capture a PIN and encrypts using standard DUKPT.
