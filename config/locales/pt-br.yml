@@ -57,12 +57,10 @@ pt-BR:
         cli_is_installed: "A CloudWalk CLI esteja devidamente instalada"
         git_is_configured: "O Git esteja configurado. Não tem certeza? Confira o seguinte artigo: <a href='https://help.github.com/articles/set-up-git' class='external'>https://help.github.com/articles/set-up-git</a>"
       creating_the_new_app:
-        paragraph_1: "Assuming that the CloudWalk CLI is installed and that Git is properly configure, let's run <span class='code'>cloudwalk app create</span>:"
         paragraph_1: "Assumindo que a CloudWalk CLI está instalada e que o Git está configurado, execute o comando <span class='code'>cloudwalk app create</span>:"
         paragraph_2: "Vamos entender exatamente o que ocorreu:"
         paragraph_3: "Sua chave SSH em <code>~/.ssh/id_rsa.pub</code> foi automaticamente adicionada na sua conta"
         paragraph_4: "Um nome randômico foi definido, já que um nome não foi especificado (veja <span class='code'>cloudwalk help app create</span>)"
-        paragraph_5: "A new folder was created with the new app name filled with the <a href='https://github.com/cloudwalkio/cloudwalk-skeleton' class='external'>default app's</a> contents"
         paragraph_5: "Uma nova pasta foi criada com o nome da aplicação e preenchida com o conteúdo da <a href='https://github.com/cloudwalkio/cloudwalk-skeleton' class='external'>aplicação padrão</a>"
       emulating:
         paragraph_1: "Com a aplicação criada, é possível emular a execução utilizando um dos seguintes comandos da CLI:"
