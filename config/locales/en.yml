@@ -882,6 +882,7 @@ en:
     help:
       group_name: Help
       faq: "Frequently Asked Questions"
+      errors: "Platform errors list"
     integration:
       advanced_http: REST HTTP
       architecture: Service architecture
@@ -3384,6 +3385,9 @@ en:
         paragraph_1: "The sample application builds the HTTP request <span class='code'>buffer</span> (method, headers, path and payload), converts the <span class='code'>buffer</span> to hexadecimal and send it to the host, through the command <a href='/en/posxml/commands/network.send' class='command'>network.send</a>. After that, 4 bytes are requested, related to the size of the answer, through the command <a href='/en/posxml/commands/network.receive' class='command'>network.receive</a>, and after a validation, the complete answer is requested."
         note: "Watch out the spaces, because some variables will be concatenated!"
   help:
+    errors:
+      description: "Common CloudWalk POS errors"
+      title: "Platform errors list"
     faq:
       description: "The most frequently asked questions about CloudWalk"
       title: "Frequently Asked Questions about CloudWalk"

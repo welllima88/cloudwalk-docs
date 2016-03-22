@@ -71,6 +71,7 @@ class Routes
       { "url" => "guides/using-http-headers",                            "view_path" => "guides/using_http_headers"},
       # Help
       { "url" => "help/faq",                                             "view_path" => "help/faq"},
+      { "url" => "help/errors",                                          "view_path" => "help/errors"},
       # POSXML apps changelog
       { "url" => "apps/globalpayments",                                  "view_path" => "apps/globalpayments"},
     ]

@@ -884,6 +884,7 @@ pt-BR:
     help:
       group_name: Ajuda
       faq: "Perguntas Frequentes"
+      errors: "Listagem de erros"
     integration:
       advanced_http: REST HTTP
       architecture: Arquitetura do serviço
@@ -3386,6 +3387,9 @@ pt-BR:
         paragraph_1: "A aplicação de exemplo monta o <span class='code'>buffer</span> com a requisição HTTP (método, cabeçalhos, caminho e payload), converte o <span class='code'>buffer</span> para hexadecimal e o envia para o host, através do comando <a href='/pt-BR/posxml/commands/network.send' class='command'>network.send</a>. Em seguida, são requisitados 4 bytes, referente ao tamanho da resposta, através do comando <a href='/pt-BR/posxml/commands/network.receive' class='command'>network.receive</a>, e após a validação, a resposta completa é requisitada."
         note: "Atente-se aos espaços, pois algumas variáveis serão concatenadas!"
   help:
+    errors:
+      description: "Erros comuns da plataforma CloudWalk"
+      title: "Listagem de erros"
     faq:
       description: "As perguntas mais frequentes sobre o serviço CloudWalk"
       title: "Perguntas frequentes sobre a CloudWalk"
