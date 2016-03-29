@@ -2937,7 +2937,8 @@ en:
         paragraph_3: Format the pendrive (format FAT32)
         paragraph_4: 'Unzip the downloaded CloudWalk Framework package'
         paragraph_5: 'Copy the file: verifone_evo_usb/lib_cless/model(VX 520 or VX 680)/<strong>VERIFONE.zip</strong> to the pendrive (on root)'
-        paragraph_6: 'Repeat the process with the file: verifone_evo_usb/cw_framework_version/<strong>VERIFONE.zip</strong>'
+        paragraph_6: 'Connect the USB pendrive to the POS and after being recognized select the option Yes'
+        paragraph_7: 'Wait for the files to load, remove the pendrive and repeat the process with the file: verifone_evo_usb/framework/<strong>VERIFONE.zip</strong>, replacing the one copied on step 4 and repeat step 5'
       prerequisites:
         cable: <strong>Charge cable:</strong> USB or Serial
         operating_system: <strong>Operating System:</strong> Microsoft Windows XP SP3 or later.
