@@ -2896,6 +2896,8 @@ pt-BR:
         two:
           title: "Qual é a senha do menu de configuração?"
           paragraph_1: "Se o seu dispositivo está solicitando uma senha, esta senha foi previamente definida por alguém. Por favor, entre em contato com o seu fornecedor de POS."
+    verifone_evo_vx805:
+      description: Processo passo a passo de instalação do CloudWalk Framework em terminais Verifone VX 805.
     verifone_evo:
       description: Processo passo a passo de instalação do CloudWalk Framework em terminais Verifone VX 520 e VX 680.
       identify_os:

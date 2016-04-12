@@ -2896,6 +2896,8 @@ en:
         two:
           title: "What is the setup menu password?"
           paragraph_1: "If your device is requesting a password to access the setup menu, this password was previously set by someone. Please get in touch with your the POS supplier."
+    verifone_evo_vx805:
+      description: Step by step process of installing the CloudWalk Framework for Verifone VX 805.
     verifone_evo:
       description: Step by step process of installing the CloudWalk Framework for Verifone VX 520 and VX 680.
       identify_os:
