@@ -2830,7 +2830,7 @@ pt-BR:
         paragraph_2: Conecte o pendrive no computador
         paragraph_3: Formate o pendrive
         paragraph_4: Extraia o pacote do CloudWalk Framework baixado no inicio deste tutorial
-        sparagraph_5: Na pasta descompactada você irá encontrar uma pasta chamada 'CloudCloudWalk Framework', copie a pasta chamada TELIUM que se encontra nela para o pendrive
+        paragraph_5: Na pasta descompactada abra a pasta 'Framework' e copie a pasta TELIUM para o pendrive
       prerequisites:
         adapter: <strong>Adaptador USB:</strong> Necessário para fazer a instalação, é possível conseguir com o seu fornecedor.
         operating_system: <strong>Sistema operacional:</strong> Microsoft Windows XP SP3 ou superior (Vista, Seven, etc)
@@ -2874,7 +2874,7 @@ pt-BR:
         paragraph_2: Conecte o pendrive no computador
         paragraph_3: Formate o pendrive
         paragraph_4: Extraia o pacote do CloudWalk Framework baixado no inicio deste tutorial
-        paragraph_5: Na pasta descompactada você irá encontrar uma pasta chamada 'CloudCloudWalk Framework', copie a pasta chamada TELIUM que se encontra nela para o pendrive
+        paragraph_5: Na pasta descompactada abra a pasta 'Framework' e copie a pasta TELIUM para o pendrive
       prerequisites:
         adapter: <strong>Adaptador USB:</strong> Necessário somente para fazer a instalação no IWL220, IWL250 e IWL280
         operating_system: <strong>Sistema operacional:</strong> Microsoft Windows XP SP3 ou superior (Vista, Seven, etc)
