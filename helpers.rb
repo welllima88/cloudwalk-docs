@@ -13,42 +13,6 @@ module Helpers
     "<h3 class='anchor' id='#{text.to_url}'>#{toc_item(text)}</h3>"
   end
 
-  def embed_posxml_code(gist_id, ignore_emulation=false)
-    @dom_counter = @dom_counter.to_i + 1
-
-    # Create the button
-    markup = "<span id='copy-snippet-#{@dom_counter}' class='btn btn-small btn-clipboard'><span class='fa fa-clipboard'></span> #{I18n.t("copy")}</span>"
-
-    # Create the hidden <pre> element that will contain the source code
-    markup << "<pre data-display-element='#code-snippet-#{@dom_counter}' class='snippet hidden'>"
-    markup << fetch_gist(gist_id)
-    markup << "</pre>"
-
-    # Create the <code> element that will receive the content of the
-    # previous <pre> element, which will then apply the syntax highlight
-    markup << "<pre><code id='code-snippet-#{@dom_counter}' data-language='html'></code></pre>"
-
-    # The argument ignore_emulation will be used in the future later to ignore
-    # snippets that won't be emulated on the IDE
-  end
-
-  def fetch_gist(gist_id)
-    require 'open-uri'
-
-    # All the gists are stored on the user posxml
-    gist_path = "https://gist.githubusercontent.com/posxml/#{gist_id}/raw"
-
-    begin
-      res = open(gist_path)
-      raise unless res.status[0] == "200"
-
-      # Replace html symbols
-      res.string.gsub("<", "&lt;").gsub(">", "&gt;")
-    rescue
-      "<!-- It was not possible to fetch this snippet -->\n\n#{gist_path}"
-    end
-  end
-
   def is_group_active?(group)
     "in" if group == request.path_info.split("/")[2]
   end

@@ -38,8 +38,6 @@ describe Docs do
   end
 
   it "should have a page for every navigation item" do
-    Docs.any_instance.stubs(:fetch_gist).returns("")
-
     Routes.navigation.each do |nav|
       get "/en/#{nav["url"]}"
       assert last_response.ok?, "URL /#{nav["url"]} failed (view: #{nav["view_path"]})"
@@ -47,8 +45,6 @@ describe Docs do
   end
 
   it "should have a page for every command item" do
-    Docs.any_instance.stubs(:fetch_gist).returns("")
-
     Routes.commands.each do |command|
       get "/en/posxml/commands/#{command}"
       assert last_response.ok?, "Command #{command} failed"
@@ -174,13 +170,5 @@ describe Docs do
     end
 
     assert result.empty?, "Found some english internal links in file config/locales/pt-br.yml:\n#{result}To fix this you should change /en/ prefix to /pt-BR/."
-  end
-
-  it "should retrieve a gist from github" do
-    assert fetch_gist("89d6af783a0a503afb80") == "OK"
-  end
-
-  it "should not retrieve a gist from github" do
-    assert fetch_gist("89d6af783a0a503afb88").include?("It was not possible to fetch this snippet")
   end
 end
