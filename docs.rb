@@ -10,6 +10,7 @@ require "i18n/backend/fallbacks"
 require "rack-ssl-enforcer"
 require "rack/protection"
 require 'rack/csrf'
+require 'secure_headers'
 require 'tilt/erb'
 require "json"
 require "pony"
@@ -45,6 +46,31 @@ class Docs < Sinatra::Base
                                :path => '/',
                                :expire_after => 2592000, # In seconds
                                :secret => ENV['SESSION_SECRET'] if production?
+
+    use SecureHeaders::Middleware
+
+    SecureHeaders::Configuration.default do |c|
+      c.hsts = 'max-age=631152000; includeSubdomains; preload'
+      c.x_frame_options = 'DENY'
+      c.x_content_type_options = 'nosniff'
+      c.x_xss_protection = '1; mode=block'
+      c.x_download_options = 'noopen'
+      c.x_permitted_cross_domain_policies = 'none'
+      c.csp = {
+        default_src: %w('self'),
+        frame_src: %w('self' www.youtube.com),
+        font_src: %w('self' maxcdn.bootstrapcdn.com),
+        img_src: %w('self'),
+        media_src: %w('self'),
+        object_src: %w('self'),
+        script_src: %w('self' gist.github.com),
+        style_src: %w('self' maxcdn.bootstrapcdn.com assets-cdn.github.com),
+        base_uri: %w('self'),
+        child_src: %w('self'),
+        form_action: %w('self'),
+        frame_ancestors: %w('none')
+      }
+    end
 
     set :views, File.dirname(__FILE__) + '/templates'
 
