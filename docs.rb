@@ -104,6 +104,14 @@ class Docs < Sinatra::Base
     end
   end
 
+  # Discontinued
+  paths = ['framework/verifone-verix', 'framework/ingenico-telium-1']
+
+  paths.each do |path|
+    get "/#{path}" do redirect '/', 301 end
+    get "/:locale/#{path}" do redirect '/', 301 end
+  end
+
   # POSXML commands
   Routes.commands.each do |command|
     get "/posxml/commands/#{command}" do redirect "/#{I18n.locale}/posxml/commands/#{command}", 301 end

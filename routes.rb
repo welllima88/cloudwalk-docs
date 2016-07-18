@@ -12,8 +12,6 @@ class Routes
       # CloudWalk Framework
       { "url" => "framework/verifone-evo",                               "view_path" => "framework/verifone_evo"},
       { "url" => "framework/verifone-evo-vx805",                         "view_path" => "framework/verifone_evo_vx805"},
-      { "url" => "framework/verifone-verix",                             "view_path" => "framework/verifone_verix"},
-      { "url" => "framework/ingenico-telium-1",                          "view_path" => "framework/ingenico_telium_1"},
       { "url" => "framework/ingenico-telium-2",                          "view_path" => "framework/ingenico_telium_2"},
       { "url" => "framework/pax-d200",                                   "view_path" => "framework/pax_d200"},
       { "url" => "framework/pax-d200-linux",                             "view_path" => "framework/pax_d200_linux"},
