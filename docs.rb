@@ -58,7 +58,6 @@ class Docs < Sinatra::Base
       c.x_permitted_cross_domain_policies = 'none'
       c.csp = {
         default_src: %w('self'),
-        frame_src: %w('self' www.youtube.com),
         font_src: %w('self' maxcdn.bootstrapcdn.com),
         img_src: %w('self'),
         media_src: %w('self'),
@@ -66,7 +65,7 @@ class Docs < Sinatra::Base
         script_src: %w('self' 'unsafe-inline' gist.github.com),
         style_src: %w('self' 'unsafe-inline' maxcdn.bootstrapcdn.com assets-cdn.github.com),
         base_uri: %w('self'),
-        child_src: %w('self'),
+        child_src: %w('self' www.youtube.com),
         form_action: %w('self'),
         frame_ancestors: %w('none')
       }
