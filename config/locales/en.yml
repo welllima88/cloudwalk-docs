@@ -338,6 +338,7 @@ en:
             status: 'Record status: Success <span class="code">success</span>, Processing <span class="code">running</span> or Error <span class="code">fail</span>'
             sent: Information sent to the host
             received: Information received from the host
+            parsed: Parsed transaction data (financial applications only)
             transaction_type: 'Record type: Release <span class="code">company</span>, Transaction <span class="code">switch</span> or Download <span class="code">get_asset</span>'
           paragraph_1: 'A transaction have the following attributes:'
         description: The transaction records have some acronyms in fields transaction_type, status and received. Check out the definition of all acronyms.
@@ -361,6 +362,8 @@ en:
         search_by_transaction_type:
           paragraph_1: Return an array with all transactions with the <strong>record type</strong> defined on parameter <span class='code'>&transaction_type</span>.
           transaction_type: record type
+        parsed_data:
+          paragraph_1: "Financial transactions generally use specific protocols such as ISO8583 or ISO20022. To simplify analysis, the data is parsed into the column <strong>parsed</strong>, as shown below:"
         table_of_contents:
           attributes: Transaction attributes
           index: List of all transactions
@@ -370,6 +373,7 @@ en:
           search_by_date: Find transactions by date
           search_by_status: Find transactions by status
           search_by_transaction_type: Find transactions by type
+          parsed_data: Parsed transaction data
         title: Developer API - Transactions
       parameters:
         attributes:

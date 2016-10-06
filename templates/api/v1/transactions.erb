@@ -13,6 +13,7 @@
   <li><a href="#search-by-app-name"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_app_name") %></a></li>
   <li><a href="#search-by-date"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_date") %></a></li>
   <li><a href="#search-by-multiple-params"><%= I18n.t("api.v1.transactions.table_of_contents.search_by_multiple_params") %></a></li>
+  <li><a href="#parsed-data"><%= I18n.t("api.v1.transactions.table_of_contents.parsed_data") %></a></li>
 </ol>
 
 <h2 id="attributes"><%= I18n.t("api.v1.transactions.table_of_contents.attributes") %></h2>
@@ -77,6 +78,11 @@
       <td>received</td>
       <td>String</td>
       <td><%= I18n.t("api.v1.transactions.attributes.list.received") %></td>
+    </tr>
+    <tr>
+      <td>parsed</td>
+      <td>Object</td>
+      <td><%= I18n.t("api.v1.transactions.attributes.list.parsed") %></td>
     </tr>
     <tr>
       <td>started_at</td>
@@ -148,12 +154,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "logical_number":"1116",
             "app_name":"main.posxml",
             "detail":"",
-            "framework_version":"3.80",
+            "framework_version":"4.04",
             "status":"success",
             "sent":"null",
             "received":"null",
-            "started_at":"2015-02-04T14:38:55Z",
-            "finished_at":"2015-02-04T14:38:56Z"
+            "parsed":"null",
+            "started_at":"2016-10-04T14:38:55Z",
+            "finished_at":"2016-10-04T14:38:56Z"
          }
       },
       {
@@ -164,12 +171,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "logical_number":"1116",
             "app_name":"main.posxml",
             "detail":"",
-            "framework_version":"3.80",
+            "framework_version":"4.04",
             "status":"success",
             "sent":"null",
             "received":"null",
-            "started_at":"2015-02-04T14:37:56Z",
-            "finished_at":"2015-02-04T14:37:57Z"
+            "parsed":"null",
+            "started_at":"2016-10-04T14:37:56Z",
+            "finished_at":"2016-10-04T14:37:57Z"
          }
       }
    ]
@@ -233,12 +241,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "logical_number":"1116",
             "app_name":"main.posxml",
             "detail":"",
-            "framework_version":"3.80",
+            "framework_version":"4.04",
             "status":"fail",
             "sent":"null",
             "received":"null",
-            "started_at":"2015-02-04T13:17:12Z",
-            "finished_at":"2015-02-04T13:17:14Z"
+            "parsed":"null",
+            "started_at":"2016-10-04T13:17:12Z",
+            "finished_at":"2016-10-04T13:17:14Z"
          }
       }
    ]
@@ -302,12 +311,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "logical_number":"1234",
             "app_name":"main.posxml",
             "detail":"",
-            "framework_version":"3.80",
+            "framework_version":"4.04",
             "status":"success",
             "sent":"null",
             "received":"null",
-            "started_at":"2015-02-04T13:18:32Z",
-            "finished_at":"2015-02-04T13:18:37Z"
+            "parsed":"null",
+            "started_at":"2016-10-04T13:18:32Z",
+            "finished_at":"2016-10-04T13:18:37Z"
          }
       }
    ]
@@ -371,12 +381,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "logical_number":"1122",
             "app_name":"main.posxml",
             "detail":"",
-            "framework_version":"3.80",
+            "framework_version":"4.04",
             "status":"success",
             "sent":"null",
             "received":"null",
-            "started_at":"2015-02-04T14:21:11Z",
-            "finished_at":"2015-02-04T14:21:14Z"
+            "parsed":"null",
+            "started_at":"2016-10-04T14:21:11Z",
+            "finished_at":"2016-10-04T14:21:14Z"
          }
       }
    ]
@@ -442,12 +453,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "logical_number":"1122",
             "app_name":"main.posxml",
             "detail":"",
-            "framework_version":"3.80",
+            "framework_version":"4.04",
             "status":"success",
             "sent":"null",
             "received":"null",
-            "started_at":"2015-02-04T14:21:11Z",
-            "finished_at":"2015-02-04T14:21:14Z"
+            "parsed":"null",
+            "started_at":"2016-10-04T14:21:11Z",
+            "finished_at":"2016-10-04T14:21:14Z"
          }
       }
    ]
@@ -471,7 +483,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 <div class="tab-content">
 <div class="tab-pane active" id="search-by-date-tab1">
-<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/transactions?access_token=$TOKEN&since=2015-02-03&until=2015-02-04"</code></pre>
+<pre><code>$ curl -X GET "https://api.cloudwalk.io/v1/transactions?access_token=$TOKEN&since=2016-10-03&until=2016-10-04"</code></pre>
 </div>
 
 <div class="tab-pane" id="search-by-date-tab2">
@@ -479,7 +491,7 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
 
 token = 'API_TOKEN'
 
-uri = URI("https://api.cloudwalk.io/v1/transactions?access_token=#{token}&since=2015-02-03&until=2015-02-04")
+uri = URI("https://api.cloudwalk.io/v1/transactions?access_token=#{token}&since=2016-10-03&until=2016-10-04")
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
@@ -511,12 +523,13 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "logical_number":"1122",
             "app_name":"main.posxml",
             "detail":"",
-            "framework_version":"3.80",
+            "framework_version":"4.04",
             "status":"success",
             "sent":"null",
             "received":"null",
-            "started_at":"2015-02-04T14:21:11Z",
-            "finished_at":"2015-02-04T14:21:14Z"
+            "parsed":"null",
+            "started_at":"2016-10-04T14:21:11Z",
+            "finished_at":"2016-10-04T14:21:14Z"
          }
       }
    ]
@@ -580,15 +593,47 @@ puts "Response #{res.code} #{res.message}: #{res.body}"
             "logical_number":"1122",
             "app_name":"main.posxml",
             "detail":"",
-            "framework_version":"3.80",
+            "framework_version":"4.04",
             "status":"fail",
             "sent":"null",
             "received":"null",
-            "started_at":"2015-02-04T15:38:01Z",
-            "finished_at":"2015-02-04T15:38:04Z"
+            "parsed":"null",
+            "started_at":"2016-10-04T15:38:01Z",
+            "finished_at":"2016-10-04T15:38:04Z"
          }
       }
    ]
+}
+</code></pre>
+
+<h2 id="parsed-data"><%= I18n.t("api.v1.transactions.table_of_contents.parsed_data") %></h2>
+
+<p><%= I18n.t("api.v1.transactions.parsed_data.paragraph_1") %></p>
+
+<pre><code data-language="javascript">{
+  acquirer: 'acquirer-name',
+  type: 'sale',                // Other options: cancellation, refund, etc
+  status: 'approved',          // Other options: denied
+  status_reason: '0111',       // Authorizer response code
+  capture_method: 'emv',       // Other options: magnetic-stripe, contactless, etc
+  amount: 10000,               // Transaction amount in cents
+  payment_method: 'debit',     // Other options: credit
+  installment: {
+    type: null,                // Other options: merchant, issuer, etc
+    quantity: null             // Other options: 1, 2, 3, etc
+  },
+  nsu: '123456789',            // CloudWalk NSU, generated on the application
+  nsu_reference: '111222333',  // When present, represents the NSU of the transaction being cancelled
+  authorization_code: '123',   // Host authorization code
+  transaction_id: '987654321', // Host transaction ID (or NSU from host)
+  card: {
+    holder_name: 'JOHN SMITH', // When present
+    brand: 'mastercard',       // Other options: visa, amex, etc
+    expiration_date: '0221',   // Month (2 bytes) and Year (2 bytes)
+    first_digits: '516230',    // First 6 digits (PCI compliance)
+    last_digits: '0948'        // Last 4 digits (PCI compliance)
+  },
+  metadata: {}                 // Some sort of acquirer specific information
 }
 </code></pre>
 

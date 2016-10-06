@@ -338,6 +338,7 @@ pt-BR:
             status: 'Status do registro: Sucesso <span class="code">success</span>, Processando <span class="code">running</span> ou Falha <span class="code">fail</span>'
             sent: Informação enviada para o host
             received: Informação recebida do host
+            parsed: Dados parseados da transação (somente aplicações financeiras)
             transaction_type: 'Tipo de registro: Liberação <span class="code">company</span>, Transação <span class="code">switch</span> ou Download <span class="code">get_asset</span>'
           paragraph_1: 'Os seguintes atributos compõe uma transação:'
         description: Os registros de transação possuem algumas siglas, nos campos transaction_type, status e received. Confira a definição de todas as siglas.
@@ -361,6 +362,8 @@ pt-BR:
         search_by_transaction_type:
           paragraph_1: Retorna um array com todas as transações que possuem o <strong>tipo de registro</strong> definido no parâmetro <span class='code'>&transaction_type</span>.
           transaction_type: tipo de registro
+        parsed_data:
+          paragraph_1: "Transações financeiras geralmente utilizam protocolos específicos como ISO8583 ou ISO20022. Para simplificar possíveis análises, os dados são parseados na coluna <strong>parsed</strong>, conforme o exemplo abaixo:"
         table_of_contents:
           attributes: Atributos de uma transação
           index: Listagem de todas transações
@@ -370,6 +373,7 @@ pt-BR:
           search_by_date: Consulta por data
           search_by_status: Consulta por status
           search_by_transaction_type: Consulta por tipo de registro
+          parsed_data: Dados parseados da transação
         title: Developer API - Transações
       parameters:
         attributes:
